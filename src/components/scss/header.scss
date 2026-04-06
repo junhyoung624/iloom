@@ -1,0 +1,210 @@
+@use "../../App.scss" as g;
+
+header {
+    padding: 10px 70px;
+    position: fixed;
+    width: 100%;
+    background: transparent;
+
+
+
+    .header-inner {
+        @include g.myFlex($gap: null);
+
+        .main-logo {
+            img {
+                display: block;
+            }
+        }
+    }
+
+    .header-inner-scroll {
+
+        .header-inner {
+            @include g.myFlex($gap: null);
+
+            .main-logo {
+                img {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .header-right {
+        .gnb-list {
+            @include g.myFlex($gap: 20px);
+
+            .user-btn {
+                border: none;
+                background: none;
+                cursor: pointer;
+            }
+        }
+    }
+
+    &.active {
+        background: #fff;
+    }
+}
+
+
+.main-menu-wrap {
+    position: fixed;
+    display: none;
+    top: 56px;
+    left: 0;
+    /* height: 0px; */
+    height: 670px;
+    background: rgba(34, 33, 33, 0.8);
+    width: 100%;
+    transition: 0.3s;
+
+    &.active {
+        display: block;
+
+
+    }
+
+    .main-tab-menu {
+        @include g.myFlex($gap: 20px, $jc: space-evenly);
+
+        margin-top: 50px;
+        color: #fff;
+        font-size: 20px;
+
+        li {
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                display: block;
+                width: 0%;
+                height: 3px;
+                background: #fff;
+                top: 32px;
+                transition: 0.3s;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            &:hover::after {
+                width: 100%;
+            }
+
+            &:hover a {
+                font-weight: bold;
+            }
+        }
+    }
+
+    .main-menu {
+        margin-top: 60px;
+        /* height: 0;
+    overflow: hidden; */
+        transition: 0.5s;
+        color: #fff;
+        font-size: 20px;
+
+    }
+
+
+
+}
+
+.main-menu-wrap-scroll {
+    position: fixed;
+    display: none;
+    top: 56px;
+    left: 0;
+    /* height: 0px; */
+    height: 670px;
+    background: #fff;
+    width: 100%;
+    transition: 0.3s;
+
+    .main-tab-menu {
+        @include g.myFlex($gap: 20px, $jc: space-evenly);
+
+        margin-top: 50px;
+        color: #000;
+        font-size: 20px;
+
+        li {
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                display: block;
+                width: 0%;
+                height: 3px;
+                background: #000;
+                top: 32px;
+                transition: 0.5s;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            &:hover::after {
+                width: 100%;
+            }
+
+            &:hover a {
+                font-weight: bold;
+            }
+        }
+    }
+
+    &.active {
+        /* background: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); */
+        display: block;
+
+
+    }
+
+    .main-menu {
+        margin-top: 60px;
+        /* height: 0;
+         overflow: hidden; */
+        transition: 0.3s;
+        font-size: 20px;
+        color: #000;
+
+    }
+
+
+
+}
+
+.login {
+    padding-top: 60px
+}
+
+.user-menu-wrap {
+    position: fixed;
+    height: 100vh;
+    background: #fff;
+    right: -9999px;
+    width: 27%;
+    z-index: 100;
+
+    .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        cursor: pointer;
+        transition: 0.3s;
+
+        img {
+            width: 30px;
+        }
+    }
+
+    &.active {
+        right: 0;
+        transition: 0.3s;
+    }
+}
