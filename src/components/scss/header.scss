@@ -6,28 +6,17 @@ header {
     top: 0;
     width: 100%;
     background: transparent;
-
-
+    z-index: 1000;
 
     .header-inner {
         @include g.myFlex($gap: null);
 
         .main-logo {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
             img {
                 display: block;
-            }
-        }
-    }
-
-    .header-inner-scroll {
-
-        .header-inner {
-            @include g.myFlex($gap: null);
-
-            .main-logo {
-                img {
-                    display: block;
-                }
             }
         }
     }
@@ -46,25 +35,53 @@ header {
 
     &.active {
         background: #fff;
+        .header-inner{
+            .main-logo{
+                img{
+                    filter:invert(1);
+                }
+            }
+        }
+        img{
+            filter:invert(1)
+        }
     }
 }
 
+header.active+.main-menu-wrap {
+    background: #fff;
+
+    .main-tab-menu {
+        li {
+            a {
+                color: #000;
+            }
+        }
+    }
+
+    .main-menu {
+        li{ 
+            a {
+                color: #000;
+            }
+        }
+    }
+    color: #000;
+}
 
 .main-menu-wrap {
     position: fixed;
-    display: none;
-    top: 56px;
+    // display: none;
+    top: 0px;
     left: 0;
     /* height: 0px; */
-    height: 670px;
+    height: 730px;
     background: rgba(34, 33, 33, 0.8);
     width: 100%;
-    transition: 0.3s;
+    padding-top: 60px;
 
     &.active {
         display: block;
-
-
     }
 
     .main-tab-menu {
@@ -101,21 +118,30 @@ header {
     }
 
     .main-menu {
-        margin-top: 60px;
+        margin-top: 30px;
         /* height: 0;
-    overflow: hidden; */
+        overflow: hidden; */
         transition: 0.5s;
         color: #fff;
         font-size: 20px;
         position: relative;
+        margin-left: 100px;
+        font-weight: 300;
 
         li {
 
-            border: 1px solid;
-            line-height: 2;
+            line-height: 2.7;
 
             &:hover .sub {
                 display: block;
+            }
+
+            a {
+                display: block;
+                padding: 0 40px;
+                &:hover {
+                    font-weight: bold;
+                }
             }
 
             .sub {
@@ -124,6 +150,7 @@ header {
                 left: 300px;
                 top: 0;
                 z-index: 100;
+                height: 500px;
 
                 li {
 
@@ -134,10 +161,6 @@ header {
 
                     }
 
-                    a {
-                        display: block;
-                        padding: 0 30px;
-                    }
 
                     .third {
                         position: absolute;
@@ -145,6 +168,13 @@ header {
                         left: 300px;
                         top: 0;
                         width: 250px;
+                        height: 500px;
+
+                        li {
+                            &:hover {
+                                font-weight: bold;
+                            }
+                        }
                     }
                 }
             }
@@ -208,22 +238,28 @@ header {
     }
 
     .main-menu {
-        margin-top: 60px;
+        margin-top: 30px;
         /* height: 0;
-         overflow: hidden; */
-        transition: 0.3s;
-        font-size: 20px;
+    overflow: hidden; */
+        transition: 0.5s;
         color: #000;
+        font-size: 20px;
         position: relative;
+        margin-left: 90px;
 
         li {
 
-            border: 1px solid;
-            line-height: 2;
+            line-height: 2.7;
 
             &:hover .sub {
                 display: block;
             }
+
+
+
+            // &:first-child .sub {
+            //     display: block;
+            // }
 
             .sub {
                 position: absolute;
@@ -231,6 +267,7 @@ header {
                 left: 300px;
                 top: 0;
                 z-index: 100;
+                height: 500px;
 
                 li {
 
@@ -252,6 +289,7 @@ header {
                         left: 300px;
                         top: 0;
                         width: 250px;
+                        height: 500px;
                     }
                 }
             }
@@ -269,7 +307,7 @@ header {
     background: #fff;
     right: -9999px;
     width: 27%;
-    z-index: 100;
+    z-index: 9999;
 
     .close-btn {
         position: absolute;

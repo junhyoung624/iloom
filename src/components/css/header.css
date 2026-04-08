@@ -1,29 +1,21 @@
-footer {
-  width: 100%;
-  height: 200px;
-  background: red;
-}
-
 header {
   padding: 10px 70px;
   position: fixed;
   width: 100%;
   background: transparent;
+  z-index: 1000;
 }
 header .header-inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+header .header-inner .main-logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
 header .header-inner .main-logo img {
-  display: block;
-}
-header .header-inner-scroll .header-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-header .header-inner-scroll .header-inner .main-logo img {
   display: block;
 }
 header .header-right .gnb-list {
@@ -40,17 +32,35 @@ header .header-right .gnb-list .user-btn {
 header.active {
   background: #fff;
 }
+header.active .header-inner .main-logo img {
+  filter: invert(1);
+}
+header.active img {
+  filter: invert(1);
+}
+
+header.active + .main-menu-wrap {
+  background: #fff;
+}
+header.active + .main-menu-wrap .main-tab-menu li a {
+  color: #000;
+}
+header.active + .main-menu-wrap .main-menu li a {
+  color: #000;
+}
+header.active + .main-menu-wrap {
+  color: #000;
+}
 
 .main-menu-wrap {
   position: fixed;
-  display: none;
-  top: 56px;
+  top: 0px;
   left: 0;
   /* height: 0px; */
-  height: 670px;
+  height: 730px;
   background: rgba(34, 33, 33, 0.8);
   width: 100%;
-  transition: 0.3s;
+  padding-top: 60px;
 }
 .main-menu-wrap.active {
   display: block;
@@ -86,20 +96,28 @@ header.active {
   font-weight: bold;
 }
 .main-menu-wrap .main-menu {
-  margin-top: 60px;
+  margin-top: 30px;
   /* height: 0;
   overflow: hidden; */
   transition: 0.5s;
   color: #fff;
   font-size: 20px;
   position: relative;
+  margin-left: 100px;
+  font-weight: 300;
 }
 .main-menu-wrap .main-menu li {
-  border: 1px solid;
-  line-height: 2;
+  line-height: 2.7;
 }
 .main-menu-wrap .main-menu li:hover .sub {
   display: block;
+}
+.main-menu-wrap .main-menu li a {
+  display: block;
+  padding: 0 40px;
+}
+.main-menu-wrap .main-menu li a:hover {
+  font-weight: bold;
 }
 .main-menu-wrap .main-menu li .sub {
   position: absolute;
@@ -107,6 +125,7 @@ header.active {
   left: 300px;
   top: 0;
   z-index: 100;
+  height: 500px;
 }
 .main-menu-wrap .main-menu li .sub li {
   width: 300px;
@@ -114,16 +133,16 @@ header.active {
 .main-menu-wrap .main-menu li .sub li:hover .third {
   display: block;
 }
-.main-menu-wrap .main-menu li .sub li a {
-  display: block;
-  padding: 0 30px;
-}
 .main-menu-wrap .main-menu li .sub li .third {
   position: absolute;
   display: none;
   left: 300px;
   top: 0;
   width: 250px;
+  height: 500px;
+}
+.main-menu-wrap .main-menu li .sub li .third li:hover {
+  font-weight: bold;
 }
 
 .main-menu-wrap-scroll {
@@ -173,17 +192,17 @@ header.active {
   display: block;
 }
 .main-menu-wrap-scroll .main-menu {
-  margin-top: 60px;
+  margin-top: 30px;
   /* height: 0;
-   overflow: hidden; */
-  transition: 0.3s;
-  font-size: 20px;
+  overflow: hidden; */
+  transition: 0.5s;
   color: #000;
+  font-size: 20px;
   position: relative;
+  margin-left: 90px;
 }
 .main-menu-wrap-scroll .main-menu li {
-  border: 1px solid;
-  line-height: 2;
+  line-height: 2.7;
 }
 .main-menu-wrap-scroll .main-menu li:hover .sub {
   display: block;
@@ -194,6 +213,7 @@ header.active {
   left: 300px;
   top: 0;
   z-index: 100;
+  height: 500px;
 }
 .main-menu-wrap-scroll .main-menu li .sub li {
   width: 300px;
@@ -211,6 +231,7 @@ header.active {
   left: 300px;
   top: 0;
   width: 250px;
+  height: 500px;
 }
 
 .login {
@@ -223,7 +244,7 @@ header.active {
   background: #fff;
   right: -9999px;
   width: 27%;
-  z-index: 100;
+  z-index: 9999;
 }
 .user-menu-wrap .close-btn {
   position: absolute;
