@@ -1,7 +1,30 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { useProductStore } from '../store/useProductStore'
 
-const HeaderInner = ({ onEnter, userClick}) => {
+const HeaderInner = ({ onEnter, userClick }) => {
+    const { menus } = useProductStore();
+
+    const [lastScroll, setLastScroll] = useState(false);
+      useEffect(() => {
+        let lastScrollY = window.scrollY;
+    
+        const AddMenuScroll = () => {
+          const currentScrollY = window.scrollY;
+          if (currentScrollY === 0) {
+            setLastScroll(false)
+          } else if (currentScrollY > lastScrollY) {
+            setLastScroll(false)
+          } else {
+            setLastScroll(true)
+          }
+          lastScrollY = currentScrollY;
+        }
+    
+        window.addEventListener("scroll", AddMenuScroll);
+      return () => window.removeEventListener("scroll", AddMenuScroll);
+      },[])
+
     return (
         <>
             <div className="header-inner-wrap">
@@ -33,7 +56,17 @@ const HeaderInner = ({ onEnter, userClick}) => {
                 </div>
             </div>
 
+            <ul className={`scroll-menu ${lastScroll ? "active" : ""}`}>
+                {menus.map(menu => (
+                    <li>
+                        <Link to={menu.link}>
+                            {menu.name}
+                        </Link>
+                    </li>
+                ))}
+            </ul>
 
+            
         </>
     )
 }
