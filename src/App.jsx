@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import './App.scss'
 import Header from './components/Header'
-import Footer from './components/Footer'
+
 import { Route, Routes } from 'react-router-dom'
 import Home from './components/Home'
 import Login from './components/Login'
@@ -16,21 +16,22 @@ import StoreInfo from './pages/StoreInfo'
 import Event from './pages/Event'
 import Notice from './pages/Notice'
 import CompanyInfo from './pages/CompanyInfo'
+import Footer from './components/Footer'
 
 // 메인 페이지
 function App() {
-  const {onfetchItems, onMakeMenu} = useProductStore();
+  const { onfetchItems, onMakeMenu } = useProductStore();
 
-  useEffect(()=>{
+  useEffect(() => {
     onfetchItems();
     onMakeMenu();
-  },[onfetchItems, onMakeMenu])
+  }, [onfetchItems, onMakeMenu])
   return (
     <>
       <Header />
       <Routes>
-        <Route path="/" element={<Home />}/>
-        <Route path="/login" element={<Login />}/>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/member" element={<Member />} />
 
         <Route path="/new-product" element={<NewProduct />} />
