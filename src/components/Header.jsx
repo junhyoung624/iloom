@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import MainMenu from './MainMenu'
 import HeaderInner from './HeaderInner'
-import HeaderScroll from './HeaderScroll'
 import UserMenu from './UserMenu'
 import "./scss/header.scss"
 import { useProductStore } from '../store/useProductStore'
@@ -11,7 +10,7 @@ import { useProductStore } from '../store/useProductStore'
 const Header = () => {
 
   // 메뉴 불러오기
-  const {menus} = useProductStore();
+  const { menus } = useProductStore();
 
   const [isScroll, setScroll] = useState(false);
 
@@ -37,14 +36,18 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [Home])
 
+  
+
 
   const [isHover, setHover] = useState(false);
   const handleEnter = () => {
     setHover(true)
+    console.log("hover", isHover)
   }
 
   const handleLeave = () => {
     setHover(false)
+    console.log("out", isHover)
   }
 
   const [scrollHover, setScrollHover] = useState(false);
@@ -67,32 +70,24 @@ const Header = () => {
   }
   return (
     <>
-      <header style={{ background: isScroll ? "#fff" : isHover ? "rgba(34, 33, 33, 0.8)" : "transparent" }}>
-        {isScroll ?
-          <HeaderScroll
-            onScrollEnter={scrollEnter}
-            userClick={handleClick}
-          />
-          :
-          <HeaderInner
-            onEnter={handleEnter}
-            userClick={handleClick}
-          />}
+      <header className={isScroll ? "active" : ""}>
+        <HeaderInner
+          onEnter={handleEnter}
+          userClick={handleClick}
+           />
       </header>
 
 
-      <div
-        className={`main-menu-wrap ${isHover ? "active" : ""} `}
-        onMouseLeave={handleLeave}>
-        <MainMenu menus={menus}/>
-      </div>
-      <div
+      {isHover && <MainMenu menus={menus} onSend={handleLeave} />}
+
+
+      {/* <div
         className={`main-menu-wrap-scroll ${scrollHover ? "active" : ""}`}
         onMouseLeave={scrollLeave}>
         <MainMenu menus={menus}/>
-      </div>
+      </div> */}
       <div className={`user-menu-wrap ${userMenu ? "active" : ""}`}>
-        <UserMenu userClose={closeBtn}/>
+        <UserMenu userClose={closeBtn} />
       </div>
     </>
   )

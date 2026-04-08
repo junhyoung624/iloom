@@ -2,7 +2,8 @@ import React from 'react'
 
 const NewProduct = () => {
   return (
-    <div>NewProduct
+    <div className='sub-page-wrap' style={{textAlign: "center"}}>
+      NewProduct
       NewProduct
       NewProduct
       NewProduct
