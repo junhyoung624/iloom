@@ -92,6 +92,38 @@ header.active {
   transition: 0.5s;
   color: #fff;
   font-size: 20px;
+  position: relative;
+}
+.main-menu-wrap .main-menu li {
+  border: 1px solid;
+  line-height: 2;
+}
+.main-menu-wrap .main-menu li:hover .sub {
+  display: block;
+}
+.main-menu-wrap .main-menu li .sub {
+  position: absolute;
+  display: none;
+  left: 300px;
+  top: 0;
+  z-index: 100;
+}
+.main-menu-wrap .main-menu li .sub li {
+  width: 300px;
+}
+.main-menu-wrap .main-menu li .sub li:hover .third {
+  display: block;
+}
+.main-menu-wrap .main-menu li .sub li a {
+  display: block;
+  padding: 0 30px;
+}
+.main-menu-wrap .main-menu li .sub li .third {
+  position: absolute;
+  display: none;
+  left: 300px;
+  top: 0;
+  width: 250px;
 }
 
 .main-menu-wrap-scroll {
@@ -147,6 +179,38 @@ header.active {
   transition: 0.3s;
   font-size: 20px;
   color: #000;
+  position: relative;
+}
+.main-menu-wrap-scroll .main-menu li {
+  border: 1px solid;
+  line-height: 2;
+}
+.main-menu-wrap-scroll .main-menu li:hover .sub {
+  display: block;
+}
+.main-menu-wrap-scroll .main-menu li .sub {
+  position: absolute;
+  display: none;
+  left: 300px;
+  top: 0;
+  z-index: 100;
+}
+.main-menu-wrap-scroll .main-menu li .sub li {
+  width: 300px;
+}
+.main-menu-wrap-scroll .main-menu li .sub li:hover .third {
+  display: block;
+}
+.main-menu-wrap-scroll .main-menu li .sub li a {
+  display: block;
+  padding: 0 30px;
+}
+.main-menu-wrap-scroll .main-menu li .sub li .third {
+  position: absolute;
+  display: none;
+  left: 300px;
+  top: 0;
+  width: 250px;
 }
 
 .login {
