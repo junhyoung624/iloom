@@ -5,9 +5,14 @@ import HeaderInner from './HeaderInner'
 import HeaderScroll from './HeaderScroll'
 import UserMenu from './UserMenu'
 import "./scss/header.scss"
+import { useProductStore } from '../store/useProductStore'
 
 // header
 const Header = () => {
+
+  // 메뉴 불러오기
+  const {menus} = useProductStore();
+
   const [isScroll, setScroll] = useState(false);
 
   const location = useLocation();
@@ -79,12 +84,12 @@ const Header = () => {
       <div
         className={`main-menu-wrap ${isHover ? "active" : ""} `}
         onMouseLeave={handleLeave}>
-        <MainMenu />
+        <MainMenu menus={menus}/>
       </div>
       <div
         className={`main-menu-wrap-scroll ${scrollHover ? "active" : ""}`}
         onMouseLeave={scrollLeave}>
-        <MainMenu />
+        <MainMenu menus={menus}/>
       </div>
       <div className={`user-menu-wrap ${userMenu ? "active" : ""}`}>
         <UserMenu userClose={closeBtn}/>
