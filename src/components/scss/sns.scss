@@ -1,0 +1,57 @@
+.sns {
+    overflow: hidden;
+
+    .inner {
+        width: 1400px;
+        margin: 0 auto;
+    }
+
+    .title-box {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .sns-swiper-wrap {
+        padding-left: calc((100vw - 1400px) / 2);
+        margin-bottom: 300px;
+    }
+
+    .mySwiper {
+        width: 100%;
+        overflow: visible;
+    }
+
+    // .swiper-slide {
+    //     height: 333px;
+    //     aspect-ratio: 9 / 16;
+    //     overflow: hidden;
+    // }
+
+    video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+}
+
+.sns-swiper-wrap {
+    position: relative;
+}
+
+.swiper-button-next {
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    right: 100px;
+    z-index: 111;
+}
+
+.swiper-button-prev {
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: -100px;
+    z-index: 111;
+    rotate: calc(180deg);
+}
