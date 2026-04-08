@@ -6,6 +6,7 @@ import Series from './Series'
 
 
 
+
 const Home = () => {
   return (
     <div className='main-video'>
