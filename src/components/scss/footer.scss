@@ -1,0 +1,101 @@
+footer {
+    background: #fff;
+
+
+    .footer-inner {
+        max-width: 100%;
+        display: flex;
+
+
+
+        .footer-left {
+            width: 32%;
+            padding: 80px 0 60px 130px;
+            border-top: 0.7px solid #000;
+        }
+
+        .footer-center {
+            width: 45%;
+            padding: 80px 0 60px 125px;
+            border-left: 0.7px solid #000;
+            border-top: 0.7px solid #000;
+        }
+
+        .footer-right {
+            width: 23%;
+            padding: 80px 130px 60px 0;
+            border-top: 0.7px solid #000;
+        }
+
+        .footer-logo img {
+            display: block;
+            max-width: 280px;
+        }
+
+        .footer-slogan {
+            margin-top: 50px;
+        }
+
+        .footer-sns {
+            display: flex;
+            gap: 10px;
+            margin-top: 40px;
+
+
+            img {
+                width: 45px;
+            }
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 32px;
+            padding-top: 40px;
+
+            a {
+                font-weight: 700;
+            }
+        }
+
+        .footer-copy {
+            margin-top: 32px;
+        }
+
+        .footer-certifications {
+            display: flex;
+            gap: 10px;
+            justify-content: flex-end;
+            width: auto;
+
+            img {
+                height: 40px;
+                width: auto;
+                display: block;
+                object-fit: contain;
+            }
+        }
+
+        .footer-inquiry-links {
+            margin-top: 40px;
+            text-align: right;
+            text-decoration: underline;
+
+            a {
+                font-weight: 700;
+            }
+        }
+
+        .footer-customer {
+            display: flex;
+            justify-content: flex-end;
+            gap: 24px;
+            margin-top: 28px;
+            font-size: 26px;
+        }
+
+        .footer-hours {
+            margin-top: 20px;
+            text-align: right;
+        }
+    }
+}
