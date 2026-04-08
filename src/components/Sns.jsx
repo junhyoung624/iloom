@@ -24,6 +24,7 @@ export default function Sns() {
                     slidesPerView={6}
                     className="mySwiper"
                 >
+                    {/* <SwiperSlide><video src="./images/video/sns-video01.mp4" controls /></SwiperSlide>
                     <SwiperSlide><video src="./images/video/sns-video01.mp4" controls /></SwiperSlide>
                     <SwiperSlide><video src="./images/video/sns-video01.mp4" controls /></SwiperSlide>
                     <SwiperSlide><video src="./images/video/sns-video01.mp4" controls /></SwiperSlide>
@@ -32,8 +33,7 @@ export default function Sns() {
                     <SwiperSlide><video src="./images/video/sns-video01.mp4" controls /></SwiperSlide>
                     <SwiperSlide><video src="./images/video/sns-video01.mp4" controls /></SwiperSlide>
                     <SwiperSlide><video src="./images/video/sns-video01.mp4" controls /></SwiperSlide>
-                    <SwiperSlide><video src="./images/video/sns-video01.mp4" controls /></SwiperSlide>
-                    <SwiperSlide><video src="./images/video/sns-video01.mp4" controls /></SwiperSlide>
+                    <SwiperSlide><video src="./images/video/sns-video01.mp4" controls /></SwiperSlide> */}
                 </Swiper>
             </div>
         </section>
