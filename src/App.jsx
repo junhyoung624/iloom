@@ -17,6 +17,7 @@ import Event from './pages/Event'
 import Notice from './pages/Notice'
 import CompanyInfo from './pages/CompanyInfo'
 import Footer from './components/Footer'
+import ContentDetailPage from './pages/ContentDetailPage'
 
 // 메인 페이지
 function App() {
@@ -37,6 +38,7 @@ function App() {
         <Route path="/new-product" element={<NewProduct />} />
         <Route path="/best-seller" element={<BestSeller />} />
         <Route path="/magazine" element={<Magazine />} />
+        <Route path="/magazine/:id" element={<ContentDetailPage />} />
         <Route path="/series" element={<Series />} />
         <Route path="/store-info" element={<StoreInfo />} />
         <Route path="/event" element={<Event />} />

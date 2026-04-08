@@ -36,20 +36,18 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [Home])
 
-  const AddMenuScroll = () => {
-
-  }
+  
 
 
   const [isHover, setHover] = useState(false);
   const handleEnter = () => {
     setHover(true)
-    console.log("hover",isHover)
+    console.log("hover", isHover)
   }
 
   const handleLeave = () => {
     setHover(false)
-    console.log("out",isHover)
+    console.log("out", isHover)
   }
 
   const [scrollHover, setScrollHover] = useState(false);
@@ -75,7 +73,8 @@ const Header = () => {
       <header className={isScroll ? "active" : ""}>
         <HeaderInner
           onEnter={handleEnter}
-          userClick={handleClick} />
+          userClick={handleClick}
+           />
       </header>
 
 

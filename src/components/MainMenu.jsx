@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
-const MainMenu = ({ menus,onSend }) => {
+const MainMenu = ({ menus, onSend }) => {
 
   const tabMenu = [
     { key: "new-product", label: "신제품" },
@@ -54,7 +54,18 @@ const MainMenu = ({ menus,onSend }) => {
           </li>
         ))}
       </ul>
-    </div>
+
+      <div className="menu-img-wrap">
+          <div className="img-box">
+            <img src="./images/menu-img.png" alt="" />
+          </div>
+          <div className="text-box">
+            <p>가장 개인적인 공간을 위한, 가장 특별한 선택</p>
+            <img src="./images/logo-icon/main-logo-white.png" alt="" />
+            <p className='magazine-button'><Link to="/magazine">매거진 보러가기</Link></p>
+          </div>
+        </div>
+      </div>
   )
 }
 
