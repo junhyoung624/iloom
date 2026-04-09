@@ -1,57 +1,64 @@
 .sns {
+    padding: 100px 0;
     overflow: hidden;
 
     .inner {
-        width: 1400px;
+        width: 1440px;
         margin: 0 auto;
     }
 
     .title-box {
         text-align: center;
         margin-bottom: 40px;
+
+        h1 {
+            font-size: 40px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        h3 {
+            font-size: 18px;
+            font-weight: 400;
+            color: #666;
+        }
     }
 
-    .sns-swiper-wrap {
-        padding-left: calc((100vw - 1400px) / 2);
-        margin-bottom: 300px;
+    .sns-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 20px;
     }
 
-    .mySwiper {
+    .video-card {
+        position: relative;
         width: 100%;
-        overflow: visible;
+        overflow: hidden;
+        cursor: pointer;
+        background: #111;
+        transition: transform 0.3s ease;
     }
 
-    // .swiper-slide {
-    //     height: 333px;
-    //     aspect-ratio: 9 / 16;
-    //     overflow: hidden;
-    // }
+    .video-card:hover {
+        transform: translateY(-6px);
+    }
 
-    video {
+    .video-card video {
         width: 100%;
-        height: 100%;
+        aspect-ratio: 9 / 16;
         object-fit: cover;
         display: block;
     }
-}
 
-.sns-swiper-wrap {
-    position: relative;
-}
+    .video-card .dim {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.28);
+        transition: opacity 0.3s ease;
+        pointer-events: none;
+    }
 
-.swiper-button-next {
-    color: #fff;
-    position: absolute;
-    top: 50%;
-    right: 100px;
-    z-index: 111;
-}
-
-.swiper-button-prev {
-    color: #fff;
-    position: absolute;
-    top: 50%;
-    left: -100px;
-    z-index: 111;
-    rotate: calc(180deg);
+    .video-card:hover .dim {
+        opacity: 0;
+    }
 }

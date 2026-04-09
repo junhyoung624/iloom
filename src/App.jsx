@@ -18,6 +18,7 @@ import Notice from './pages/Notice'
 import CompanyInfo from './pages/CompanyInfo'
 import Footer from './components/Footer'
 import ContentDetailPage from './pages/ContentDetailPage'
+import ScrollTop from './components/ScrollTop'
 
 // 메인 페이지
 function App() {
@@ -29,12 +30,12 @@ function App() {
   }, [onfetchItems, onMakeMenu])
   return (
     <>
+      <ScrollTop />
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/member" element={<Member />} />
-
         <Route path="/new-product" element={<NewProduct />} />
         <Route path="/best-seller" element={<BestSeller />} />
         <Route path="/magazine" element={<Magazine />} />
