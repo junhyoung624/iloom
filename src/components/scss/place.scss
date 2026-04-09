@@ -1,0 +1,161 @@
+.place {
+    overflow: hidden;
+
+    .inner {
+        width: 1400px;
+        margin: 0 auto;
+    }
+
+    .title-box {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .place-swiper-wrap {
+        padding-left: calc((100vw - 1400px) / 2);
+    }
+
+    .mySwiper {
+        width: 100%;
+        overflow: visible;
+
+        .swiper-slide {
+            width: 345px !important;
+        }
+    }
+
+    .place-item {
+        position: relative;
+
+        a {
+            position: relative;
+            display: block;
+            width: 345px;
+            height: 530px;
+            overflow: hidden;
+
+            &::after {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: rgba(0, 0, 0, 0);
+                transition: 0.3s;
+                z-index: 1;
+            }
+
+            &:hover::after {
+                background: rgba(0, 0, 0, 0.4);
+            }
+
+            &:hover .place-message {
+                opacity: 1;
+                transform: translate(-50%, 0);
+            }
+
+            &:hover button {
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        img {
+            width: 345px;
+            height: 530px;
+            object-fit: cover;
+            display: block;
+        }
+
+        p {
+            position: absolute;
+            left: 50%;
+            top: 48%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            font-size: 36px;
+            font-weight: 600;
+            width: 100%;
+            text-align: center;
+            z-index: 2;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        .place-message {
+            position: absolute;
+            left: 50%;
+            top: 70%;
+            transform: translate(-50%, 10px);
+            color: #d7d7d7;
+            font-size: 16px;
+            font-weight: 400;
+            width: 100%;
+            text-align: center;
+            z-index: 2;
+            opacity: 0;
+            transition: 0.3s;
+            margin: 0;
+            white-space: nowrap;
+        }
+
+        button {
+            width: 300px;
+            position: absolute;
+            left: 50%;
+            top: 88%;
+            transform: translate(-50%, -30%);
+            color: #fff;
+            font-weight: 400;
+            text-align: center;
+            background: transparent;
+            border: 1.3px solid #fff;
+            font-size: 18px;
+            padding: 12px 0;
+            transition: 0.3s;
+            z-index: 2;
+            cursor: pointer;
+
+            &:hover {
+                background: #030303;
+                color: #fff;
+                border: 1.3px solid #030303;
+            }
+        }
+    }
+}
+
+.swiper-button-next {
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    right: 100px;
+    z-index: 111;
+}
+
+.swiper-button-prev {
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: -100px;
+    z-index: 111;
+    transform: rotate(180deg);
+}
+
+.sns-swiper-wrap {
+    position: relative;
+}
+
+.swiper-button-next {
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    right: 100px;
+    z-index: 111;
+}
+
+.swiper-button-prev {
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: -100px;
+    z-index: 111;
+    rotate: calc(180deg);
+}
