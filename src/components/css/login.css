@@ -1,0 +1,184 @@
+@charset "UTF-8";
+.member-wrap {
+  text-align: center;
+  width: 600px;
+  margin: 0 auto;
+  padding: 150px 0;
+}
+.member-wrap p {
+  text-align: left;
+}
+.member-wrap input {
+  display: block;
+  width: 100%;
+  line-height: 50px;
+  margin-bottom: 20px;
+}
+.member-wrap input[type=submit],
+.member-wrap button {
+  display: block;
+  width: 100%;
+  line-height: 50px;
+  background: #303030;
+  color: #fff;
+  margin-top: 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
+.member-wrap button {
+  display: block;
+  width: 100%;
+  line-height: 50px;
+}
+
+.login-wrap {
+  padding: 150px 0;
+}
+.login-wrap h1 {
+  text-align: center;
+  margin-bottom: 60px;
+  font-size: 28px;
+}
+.login-wrap .inner {
+  display: flex;
+  gap: 100px;
+}
+.login-wrap .login-left,
+.login-wrap .login-right {
+  flex: 1;
+}
+.login-wrap .login-left .pass,
+.login-wrap .login-right .pass {
+  text-align: center;
+  text-decoration: underline;
+}
+.login-wrap .login-left h2,
+.login-wrap .login-right h2 {
+  margin-bottom: 30px;
+  font-size: 20px;
+  text-align: center;
+}
+.login-wrap .login-left .web-login-wrap,
+.login-wrap .login-right .web-login-wrap {
+  position: relative;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login-wrap .login-left .web-login-wrap .web-login,
+.login-wrap .login-right .web-login-wrap .web-login {
+  border: none;
+  background: none;
+}
+.login-wrap .login-left form p,
+.login-wrap .login-right form p {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+.login-wrap .login-left form input,
+.login-wrap .login-right form input {
+  width: 100%;
+  height: 45px;
+  padding: 0 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+}
+.login-wrap .login-left form label,
+.login-wrap .login-right form label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+}
+.login-wrap .login-left form label input[type=checkbox],
+.login-wrap .login-right form label input[type=checkbox] {
+  width: auto;
+  margin: 0;
+}
+.login-wrap .login-left form .phone,
+.login-wrap .login-right form .phone {
+  display: flex;
+  gap: 10px;
+}
+.login-wrap .login-left form .phone input,
+.login-wrap .login-right form .phone input {
+  flex: 1;
+  height: 45px;
+  margin-bottom: 15px;
+}
+.login-wrap .login-left form .phone button,
+.login-wrap .login-right form .phone button {
+  width: 120px;
+  height: 45px;
+  background: #fff;
+  color: #000;
+  border: 1px solid;
+}
+.login-wrap .login-left form button,
+.login-wrap .login-right form button {
+  width: 100%;
+  height: 45px;
+  background: #333;
+  color: #fff;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.login-wrap .login-left form,
+.login-wrap .login-right form {
+  /* 하단 버튼 2개 */
+}
+.login-wrap .login-left form button:nth-of-type(2),
+.login-wrap .login-left form button:nth-of-type(3),
+.login-wrap .login-right form button:nth-of-type(2),
+.login-wrap .login-right form button:nth-of-type(3) {
+  width: calc(50% - 5px);
+  background: #fff;
+  color: #333;
+  display: inline-block;
+  border: 1px solid;
+}
+.login-wrap .login-left form button:nth-of-type(2),
+.login-wrap .login-right form button:nth-of-type(2) {
+  margin-right: 10px;
+}
+.login-wrap .login-left form .radio-wrap,
+.login-wrap .login-right form .radio-wrap {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+.login-wrap .login-left form .radio-wrap label,
+.login-wrap .login-right form .radio-wrap label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.login-wrap .login-left form .radio-wrap input[type=radio],
+.login-wrap .login-right form .radio-wrap input[type=radio] {
+  width: auto;
+  margin: 0;
+}
+.login-wrap .login-left,
+.login-wrap .login-right {
+  /* 간편 로그인 */
+}
+.login-wrap .login-left > p,
+.login-wrap .login-right > p {
+  margin: 30px 0 10px;
+  font-size: 14px;
+}
+.login-wrap .login-left button[type=button],
+.login-wrap .login-right button[type=button] {
+  width: 45px;
+  height: 45px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.login-wrap .login-left button[type=button] img,
+.login-wrap .login-right button[type=button] img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}

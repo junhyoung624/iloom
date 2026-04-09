@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import { ProductData } from "../data/product.Data";
+import { ProductData } from "../data/productData";
 
 export const useProductStore = create((set, get) => ({
 

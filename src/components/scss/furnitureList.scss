@@ -1,0 +1,32 @@
+.furniture-list {
+    margin: 60px;
+
+    ul {
+        display: flex;
+        justify-content: space-between;
+
+        .furniture-item {
+            a {
+                display: block;
+
+                &:hover p {
+                    color: #303030;
+                    font-weight: 500;
+                }
+            }
+        }
+
+        img {
+            width: 173px;
+        }
+
+        p {
+            text-align: center;
+            font-size: 20px;
+            font-weight: 400;
+            color: #969696;
+            transition: 0.3s;
+
+        }
+    }
+}
