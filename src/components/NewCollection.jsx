@@ -15,8 +15,15 @@ export default function NewCollection() {
                         <Link className='btn'>지금 만나보기</Link>
                     </div>
                 </div>
-                <div>
-
+                <div className="item-wrap">
+                    <div className="series">응앳</div>
+                    <div className="item-card">
+                        <img src="" alt="" />
+                        <h1></h1>
+                        <h2></h2>
+                        <span></span>
+                        <p></p>
+                    </div>
                 </div>
             </div>
         </section>
