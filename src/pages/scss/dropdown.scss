@@ -1,0 +1,26 @@
+.drop-down-wrap {
+    align-items: center;
+    background: yellow;
+    margin: 10px 0;
+    height: fit-content;
+
+
+    .select-wrap {
+
+        // width: 100%;
+        width: 235px;
+        height: inherit;
+        align-items: center;
+        // transform: translateY(15%);
+
+    }
+
+}
+
+
+
+.option-item {
+    // height: 55px;
+    appearance: none;
+    height: 55px;
+}
