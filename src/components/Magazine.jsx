@@ -6,6 +6,7 @@ import { iloomList } from "../data/magazine";
 export default function Magazine() {
     const magazineItems = iloomList.filter((item) => item.category === "매거진");
 
+
     return (
         <section className="magazine">
             <div className="inner">
