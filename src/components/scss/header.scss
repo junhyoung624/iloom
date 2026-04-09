@@ -26,10 +26,26 @@ header {
         .gnb-list {
             @include g.myFlex($gap: 20px);
 
-            .user-btn {
-                border: none;
-                background: none;
-                cursor: pointer;
+            li {
+                position: relative;
+                .user-btn {
+                    border: none;
+                    background: none;
+                    cursor: pointer;
+                }
+
+                .cart-num {
+                    position: absolute;
+                    top: -5px;
+                    right: -8px;
+                    background: #fff;
+                    width: 20px;
+                    height: 20px;
+                    font-weight: bold;
+                    text-align: center;
+                    line-height: 20px;
+                    border-radius: 50%;
+                }
             }
         }
     }
@@ -47,6 +63,12 @@ header {
 
         img {
             filter: invert(1)
+        }
+
+        .gnb-list {
+            .cart-num {
+                filter: invert(1)
+            }
         }
     }
 }
@@ -92,7 +114,7 @@ header.active+.main-menu-wrap {
         @include g.myFlex($gap: 20px, $jc: space-evenly);
 
         margin-top: 50px;
-        color: #fff;
+
         font-size: 20px;
 
         li {
@@ -117,6 +139,10 @@ header.active+.main-menu-wrap {
 
             &:hover a {
                 font-weight: bold;
+            }
+
+            a {
+                color: #fff;
             }
         }
     }
@@ -143,6 +169,7 @@ header.active+.main-menu-wrap {
             a {
                 display: block;
                 padding: 0 40px;
+                color: #fff;
 
                 &:hover {
                     font-weight: bold;
@@ -188,6 +215,7 @@ header.active+.main-menu-wrap {
 
 
     .menu-img-wrap {
+
         // position: relative;
         .img-box {
             position: absolute;
@@ -195,14 +223,14 @@ header.active+.main-menu-wrap {
             bottom: 50px;
 
             &::after {
-            content: "";
-            display: block;
-            position: absolute;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(180deg,rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
-        }
+                content: "";
+                display: block;
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+            }
         }
 
         .text-box {
@@ -227,7 +255,7 @@ header.active+.main-menu-wrap {
             }
         }
 
-        
+
     }
 }
 
@@ -265,7 +293,7 @@ header.active+.main-menu-wrap {
 .scroll-menu {
     position: absolute;
     display: none;
-    background: #fff;
+    background: #F9F9F9;
     width: 100%;
     top: 50px;
     left: 0;
