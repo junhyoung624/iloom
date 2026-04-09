@@ -5,6 +5,7 @@ header {
   background: transparent;
   z-index: 1000;
 }
+
 header .header-inner {
   display: flex;
   justify-content: space-between;
@@ -18,17 +19,20 @@ header .header-inner .main-logo {
 header .header-inner .main-logo img {
   display: block;
 }
+
 header .header-right .gnb-list {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 20px;
 }
+
 header .header-right .gnb-list .user-btn {
   border: none;
   background: none;
   cursor: pointer;
 }
+
 header.active {
   background: #fff;
 }
@@ -62,9 +66,11 @@ header.active + .main-menu-wrap {
   width: 100%;
   padding-top: 60px;
 }
+
 .main-menu-wrap.active {
   display: block;
 }
+
 .main-menu-wrap .main-tab-menu {
   display: flex;
   justify-content: space-evenly;
@@ -74,9 +80,11 @@ header.active + .main-menu-wrap {
   color: #fff;
   font-size: 20px;
 }
+
 .main-menu-wrap .main-tab-menu li {
   position: relative;
 }
+
 .main-menu-wrap .main-tab-menu li::after {
   content: "";
   position: absolute;
@@ -89,12 +97,15 @@ header.active + .main-menu-wrap {
   left: 50%;
   transform: translateX(-50%);
 }
+
 .main-menu-wrap .main-tab-menu li:hover::after {
   width: 100%;
 }
+
 .main-menu-wrap .main-tab-menu li:hover a {
   font-weight: bold;
 }
+
 .main-menu-wrap .main-menu {
   margin-top: 30px;
   /* height: 0;
@@ -106,9 +117,11 @@ header.active + .main-menu-wrap {
   margin-left: 100px;
   font-weight: 300;
 }
+
 .main-menu-wrap .main-menu li {
   line-height: 2.7;
 }
+
 .main-menu-wrap .main-menu li:hover .sub {
   display: block;
 }
@@ -127,9 +140,11 @@ header.active + .main-menu-wrap {
   z-index: 100;
   height: 500px;
 }
+
 .main-menu-wrap .main-menu li .sub li {
   width: 300px;
 }
+
 .main-menu-wrap .main-menu li .sub li:hover .third {
   display: block;
 }
@@ -188,6 +203,7 @@ header.active + .main-menu-wrap {
   width: 27%;
   z-index: 9999;
 }
+
 .user-menu-wrap .close-btn {
   position: absolute;
   top: 10px;
@@ -195,9 +211,11 @@ header.active + .main-menu-wrap {
   cursor: pointer;
   transition: 0.3s;
 }
+
 .user-menu-wrap .close-btn img {
   width: 30px;
 }
+
 .user-menu-wrap.active {
   right: 0;
   transition: 0.3s;
