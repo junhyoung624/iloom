@@ -26,6 +26,7 @@ export const ProductData = [
       "iloom-images/bedroom/bed/standard-bed/HBA501101_SP_2.jpg"
     ]
   },
+  
   {
     "id": "HBA501501",
     "series": "바젤 심플리화이트",

@@ -1,11 +1,11 @@
 header {
   padding: 10px 70px;
   position: fixed;
+  top: 0;
   width: 100%;
   background: transparent;
   z-index: 1000;
 }
-
 header .header-inner {
   display: flex;
   justify-content: space-between;
@@ -19,20 +19,32 @@ header .header-inner .main-logo {
 header .header-inner .main-logo img {
   display: block;
 }
-
 header .header-right .gnb-list {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 20px;
 }
-
-header .header-right .gnb-list .user-btn {
+header .header-right .gnb-list li {
+  position: relative;
+}
+header .header-right .gnb-list li .user-btn {
   border: none;
   background: none;
   cursor: pointer;
 }
-
+header .header-right .gnb-list li .cart-num {
+  position: absolute;
+  top: -5px;
+  right: -8px;
+  background: #fff;
+  width: 20px;
+  height: 20px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 20px;
+  border-radius: 50%;
+}
 header.active {
   background: #fff;
 }
@@ -40,6 +52,9 @@ header.active .header-inner .main-logo img {
   filter: invert(1);
 }
 header.active img {
+  filter: invert(1);
+}
+header.active .gnb-list .cart-num {
   filter: invert(1);
 }
 
@@ -66,25 +81,20 @@ header.active + .main-menu-wrap {
   width: 100%;
   padding-top: 60px;
 }
-
 .main-menu-wrap.active {
   display: block;
 }
-
 .main-menu-wrap .main-tab-menu {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   gap: 20px;
   margin-top: 50px;
-  color: #fff;
   font-size: 20px;
 }
-
 .main-menu-wrap .main-tab-menu li {
   position: relative;
 }
-
 .main-menu-wrap .main-tab-menu li::after {
   content: "";
   position: absolute;
@@ -97,15 +107,15 @@ header.active + .main-menu-wrap {
   left: 50%;
   transform: translateX(-50%);
 }
-
 .main-menu-wrap .main-tab-menu li:hover::after {
   width: 100%;
 }
-
 .main-menu-wrap .main-tab-menu li:hover a {
   font-weight: bold;
 }
-
+.main-menu-wrap .main-tab-menu li a {
+  color: #fff;
+}
 .main-menu-wrap .main-menu {
   margin-top: 30px;
   /* height: 0;
@@ -117,17 +127,16 @@ header.active + .main-menu-wrap {
   margin-left: 100px;
   font-weight: 300;
 }
-
 .main-menu-wrap .main-menu li {
   line-height: 2.7;
 }
-
 .main-menu-wrap .main-menu li:hover .sub {
   display: block;
 }
 .main-menu-wrap .main-menu li a {
   display: block;
   padding: 0 40px;
+  color: #fff;
 }
 .main-menu-wrap .main-menu li a:hover {
   font-weight: bold;
@@ -140,11 +149,9 @@ header.active + .main-menu-wrap {
   z-index: 100;
   height: 500px;
 }
-
 .main-menu-wrap .main-menu li .sub li {
   width: 300px;
 }
-
 .main-menu-wrap .main-menu li .sub li:hover .third {
   display: block;
 }
@@ -203,7 +210,6 @@ header.active + .main-menu-wrap {
   width: 27%;
   z-index: 9999;
 }
-
 .user-menu-wrap .close-btn {
   position: absolute;
   top: 10px;
@@ -211,11 +217,9 @@ header.active + .main-menu-wrap {
   cursor: pointer;
   transition: 0.3s;
 }
-
 .user-menu-wrap .close-btn img {
   width: 30px;
 }
-
 .user-menu-wrap.active {
   right: 0;
   transition: 0.3s;
@@ -224,7 +228,7 @@ header.active + .main-menu-wrap {
 .scroll-menu {
   position: absolute;
   display: none;
-  background: #fff;
+  background: #F9F9F9;
   width: 100%;
   top: 50px;
   left: 0;

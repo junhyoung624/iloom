@@ -43,10 +43,11 @@ const HeaderInner = ({ onEnter, userClick }) => {
                                 <Link to="/"><img src="./images/logo-icon/search-white.png" alt="" /></Link>
                             </li>
                             <li >
-                                <button className='user-btn' onClick={userClick}><img src="./images/logo-icon/user-white.png" alt="" /></button>
+                                {/* <button className='user-btn' onClick={userClick}><img src="./images/logo-icon/user-white.png" alt="" /></button> */}
+                                <Link to="/login"><img src="./images/logo-icon/user-white.png" alt="" /></Link>
                             </li>
                             <li>
-                                <Link to="/member">
+                                <Link to="/cartr">
                                     <img src="./images/logo-icon/cart-white.png" alt="" />
                                     <span className="cart-num">0</span>
                                 </Link>
