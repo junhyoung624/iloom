@@ -1,16 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Select from 'react-select';
+import "../scss/dropdown.scss";
 
+export default function DropDown({ data, selected, value, placeholder }) {
 
-export default function DropDown({ data }) {
+    //const optionList = data.map(item => ({ value: item.value, label: item.label }));
+    //console.log("option list : ", optionList);
+    const handleChange = (option) => {
+
+        selected(option);
+    }
     return (
-        <div>
-            <select name="selectedArea1">
-                {
-                    data.map((item) => (
-                        <option value={item.name}>{item.name}</option>
-                    ))
-                }
-            </select>
+        <div className="drop-down-wrap">
+            <Select
+                className="select-wrap"
+                options={data}
+                value={value}
+                placeholder={placeholder}
+                onChange={handleChange}
+                isSearchable={false} />
         </div>
     );
 }

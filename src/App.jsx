@@ -20,6 +20,8 @@ import Footer from './components/Footer'
 import ContentDetailPage from './pages/ContentDetailPage'
 import ScrollTop from './components/ScrollTop'
 import Cart from './pages/Cart'
+import CompanyPage from './pages/CompanyPage'
+import QuickMenu from './components/QuickMenu'
 
 // 메인 페이지
 function App() {
@@ -48,7 +50,9 @@ function App() {
         <Route path="/event" element={<Event />} />
         <Route path="/notice" element={<Notice />} />
         <Route path="/company-info" element={<CompanyInfo />} />
+        <Route path='/companypage' element={<CompanyPage />} />
       </Routes>
+      <QuickMenu />
       <Footer />
     </>
   )

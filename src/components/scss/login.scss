@@ -97,7 +97,7 @@
             label {
                 @include g.myFlex($gap: 6px, $jc: null);
                 font-size: 14px;
-      
+
                 input[type="checkbox"] {
                     width: auto;
                     margin: 0;
@@ -132,22 +132,24 @@
                 cursor: pointer;
             }
 
-            /* 하단 버튼 2개 */
-            button:nth-of-type(2),
-            button:nth-of-type(3) {
-                width: calc(50% - 5px);
-                background: #fff;
-                color: #333;
-                display: inline-block;
-                border: 1px solid;
+            .login-under {
+                @include g.myFlex($gap: 10px, $jc: null);
+                .new-member {
+                    text-align: center;
+                    display: block;
+                    padding: 10px 30px;
+                    border: 1px solid;
+                    flex: 1;
+                }
+
+                .search-id-pass {
+                    text-align: center;
+                    display: block;
+                    padding: 10px 30px;
+                    border: 1px solid;
+                    flex: 1;
+                }
             }
-
-            button:nth-of-type(2) {
-                margin-right: 10px;
-            }
-
-
-
 
             .radio-wrap {
                 display: flex;
