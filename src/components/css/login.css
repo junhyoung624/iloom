@@ -124,23 +124,27 @@
   margin-bottom: 10px;
   cursor: pointer;
 }
-.login-wrap .login-left form,
-.login-wrap .login-right form {
-  /* 하단 버튼 2개 */
+.login-wrap .login-left form .login-under,
+.login-wrap .login-right form .login-under {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
-.login-wrap .login-left form button:nth-of-type(2),
-.login-wrap .login-left form button:nth-of-type(3),
-.login-wrap .login-right form button:nth-of-type(2),
-.login-wrap .login-right form button:nth-of-type(3) {
-  width: calc(50% - 5px);
-  background: #fff;
-  color: #333;
-  display: inline-block;
+.login-wrap .login-left form .login-under .new-member,
+.login-wrap .login-right form .login-under .new-member {
+  text-align: center;
+  display: block;
+  padding: 10px 30px;
   border: 1px solid;
+  flex: 1;
 }
-.login-wrap .login-left form button:nth-of-type(2),
-.login-wrap .login-right form button:nth-of-type(2) {
-  margin-right: 10px;
+.login-wrap .login-left form .login-under .search-id-pass,
+.login-wrap .login-right form .login-under .search-id-pass {
+  text-align: center;
+  display: block;
+  padding: 10px 30px;
+  border: 1px solid;
+  flex: 1;
 }
 .login-wrap .login-left form .radio-wrap,
 .login-wrap .login-right form .radio-wrap {
