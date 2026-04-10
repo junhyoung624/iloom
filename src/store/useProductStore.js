@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import { ProductData } from "../data/productData";
+import { productData } from "../data/productData";
 
 export const useProductStore = create((set, get) => ({
 
@@ -9,7 +9,7 @@ export const useProductStore = create((set, get) => ({
     onfetchItems: async () => {
         const existing = get().items;
         if (existing.length > 0) return;
-        set({items: ProductData})
+        set({items: productData})
     },
 
     // 메뉴 
