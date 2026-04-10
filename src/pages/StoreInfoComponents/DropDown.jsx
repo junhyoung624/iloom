@@ -1,24 +1,22 @@
 import React, { useState } from 'react';
 import Select from 'react-select';
 import "../scss/dropdown.scss";
-// import "../scss/storeInfo.scss";
 
-export default function DropDown({ data, selected }) {
-    const [selectedOption, setSelectedOption] = useState("");
+export default function DropDown({ data, selected, value, placeholder }) {
 
-    const optionList = data.map(item => ({ value: item.name, label: item.name }));
-    // console.log("option list : ", optionList);
-    const handleChange = (e) => {
-        setSelectedOption(e.value);
-        console.log(selectedOption);
-        selected(selectedOption);
+    //const optionList = data.map(item => ({ value: item.value, label: item.label }));
+    //console.log("option list : ", optionList);
+    const handleChange = (option) => {
+
+        selected(option);
     }
     return (
         <div className="drop-down-wrap">
             <Select
                 className="select-wrap"
-                options={optionList}
-                placeholder={optionList[0].value}
+                options={data}
+                value={value}
+                placeholder={placeholder}
                 onChange={handleChange}
                 isSearchable={false} />
         </div>
