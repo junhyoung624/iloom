@@ -20,7 +20,7 @@
 }
 
 .store-control {
-    width: 430px;
+    width: 550px;
 }
 
 .tab {
@@ -93,4 +93,23 @@
 
 .location {
     display: flex;
+    width: 100%;
+    //background: #ddd;
+    justify-content: space-evenly;
+    padding: auto 0;
+
 }
+
+
+// .select-wrap {
+
+//     // width: 100%;
+//     width: 235px;
+//     height: 55px;
+// }
+
+// .option-item {
+//     // height: 55px;
+//     appearance: none;
+//     height: 55px;
+// }

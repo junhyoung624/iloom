@@ -1,0 +1,42 @@
+.quick-menu-wrap {
+    position: fixed;
+    right: 120px;
+    bottom: 80px;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+}
+
+.quick-btn {
+    display: block;
+    width: 90px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: transparent;
+    line-height: 0;
+    cursor: pointer;
+
+    img {
+        display: block;
+        width: 100%;
+    }
+}
+
+.top-btn {
+    transition: transform 0.25s ease;
+}
+
+.top-btn:hover {
+    transform: translateY(-4px);
+}
+
+.chat-bot-btn {
+    transition: transform 0.25s ease;
+}
+
+.chat-bot-btn:hover {
+    transform: translateY(-4px);
+}
