@@ -6,24 +6,24 @@ const HeaderInner = ({ onEnter, userClick }) => {
     const { menus } = useProductStore();
 
     const [lastScroll, setLastScroll] = useState(false);
-      useEffect(() => {
+    useEffect(() => {
         let lastScrollY = window.scrollY;
-    
+
         const AddMenuScroll = () => {
-          const currentScrollY = window.scrollY;
-          if (currentScrollY === 0) {
-            setLastScroll(false)
-          } else if (currentScrollY > lastScrollY) {
-            setLastScroll(false)
-          } else {
-            setLastScroll(true)
-          }
-          lastScrollY = currentScrollY;
+            const currentScrollY = window.scrollY;
+            if (currentScrollY === 0) {
+                setLastScroll(false)
+            } else if (currentScrollY > lastScrollY) {
+                setLastScroll(false)
+            } else {
+                setLastScroll(true)
+            }
+            lastScrollY = currentScrollY;
         }
-    
+
         window.addEventListener("scroll", AddMenuScroll);
-      return () => window.removeEventListener("scroll", AddMenuScroll);
-      },[])
+        return () => window.removeEventListener("scroll", AddMenuScroll);
+    }, [])
 
     return (
         <>
@@ -67,7 +67,7 @@ const HeaderInner = ({ onEnter, userClick }) => {
                 ))}
             </ul>
 
-            
+
         </>
     )
 }

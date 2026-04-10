@@ -114,7 +114,7 @@ export default function Notice() {
                 실시간으로 편리하게 해결하실 수 있습니다.
               </p>
               <Link
-                to="https://letus-gptbot.bizmsg.io/jsp/gpt/chat/stg.jsp?encrypt=wQMwhuf0ibWqGD6cVscRrlCkbd93_P6Z1qLULigUQE2aTsMcf2D50y101mi2GD2_&inRoute=ILOOM"
+                to="https://letus-gptbot.bizmsg.io/jsp/gpt/chat/stg.jsp?encrypt=RX9vsR5ATu8kHdU3b7CGUDPkHNmzhDEuD52sBYXzIS7Ih0NsVLh3iQi9_j-1QkQ-&inRoute=ILOOM"
                 className="chat-bot-btn"
               >
                 AI 챗봇 상담하기 ▶
