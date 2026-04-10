@@ -74,6 +74,7 @@ const Header = () => {
         <HeaderInner
           onEnter={handleEnter}
           userClick={handleClick}
+          isHover={isHover}
            />
       </header>
 

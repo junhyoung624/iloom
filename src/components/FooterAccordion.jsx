@@ -3,14 +3,13 @@ import { Link } from 'react-router-dom';
 import "./scss/footeraccordion.scss";
 
 const menuData = [
-    { title: "About", items: "회사소개", link: "company" },
+    { title: "About", items: "회사소개", link: "companypage" },
     { title: "About", items: "매장안내", link: "stores" },
-    { title: "About", items: "인재채용", link: "careers" },
-    { title: "Support", items: "고객지원", link: "support" },
-    { title: "Support", items: "서비스센터", link: "service" },
+    { title: "Support", items: "고객지원", link: "notice" },
+    { title: "Support", items: "서비스센터", link: "https://cs.iloom.com/" },
     { title: "Info", items: "이용약관", link: "terms" },
     { title: "Info", items: "개인정보처리방침", link: "privacy" },
-    { title: "Info", items: "윤리신고센터", link: "ethics" },
+    { title: "Info", items: "윤리신고센터", link: "https://www.kbei.org/whistle/center/?code=fursysgroup" },
 ];
 
 export default function FooterAccordion() {
@@ -20,20 +19,18 @@ export default function FooterAccordion() {
         return menuData.reduce((acc, cur) => {
             const found = acc.find((group) => group.title === cur.title);
 
+            const newItem = {
+                label: cur.items,
+                link: cur.link,
+                isExternal: cur.link.startsWith("http"),
+            };
+
             if (found) {
-                found.children.push({
-                    label: cur.items,
-                    link: cur.link,
-                });
+                found.children.push(newItem);
             } else {
                 acc.push({
                     title: cur.title,
-                    children: [
-                        {
-                            label: cur.items,
-                            link: cur.link,
-                        },
-                    ],
+                    children: [newItem],
                 });
             }
 
@@ -80,7 +77,17 @@ export default function FooterAccordion() {
                                 <ul>
                                     {menu.children.map((item) => (
                                         <li key={item.link}>
-                                            <Link to={`/${item.link}`}>{item.label}</Link>
+                                            {item.isExternal ? (
+                                                <a
+                                                    href={item.link}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                >
+                                                    {item.label}
+                                                </a>
+                                            ) : (
+                                                <Link to={`/${item.link}`}>{item.label}</Link>
+                                            )}
                                         </li>
                                     ))}
                                 </ul>

@@ -1,29 +1,31 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useProductStore } from '../store/useProductStore'
+import { useAuthStore } from '../store/useAuthStore';
 
-const HeaderInner = ({ onEnter, userClick }) => {
+const HeaderInner = ({ onEnter, userClick, isHover }) => {
     const { menus } = useProductStore();
+    const { user } = useAuthStore();
 
     const [lastScroll, setLastScroll] = useState(false);
-      useEffect(() => {
+    useEffect(() => {
         let lastScrollY = window.scrollY;
-    
+
         const AddMenuScroll = () => {
-          const currentScrollY = window.scrollY;
-          if (currentScrollY === 0) {
-            setLastScroll(false)
-          } else if (currentScrollY > lastScrollY) {
-            setLastScroll(false)
-          } else {
-            setLastScroll(true)
-          }
-          lastScrollY = currentScrollY;
+            const currentScrollY = window.scrollY;
+            if (currentScrollY === 0) {
+                setLastScroll(false)
+            } else if (currentScrollY > lastScrollY) {
+                setLastScroll(false)
+            } else {
+                setLastScroll(true)
+            }
+            lastScrollY = currentScrollY;
         }
-    
+
         window.addEventListener("scroll", AddMenuScroll);
-      return () => window.removeEventListener("scroll", AddMenuScroll);
-      },[])
+        return () => window.removeEventListener("scroll", AddMenuScroll);
+    }, [])
 
     return (
         <>
@@ -39,25 +41,47 @@ const HeaderInner = ({ onEnter, userClick }) => {
                     </h1>
                     <div className="header-right">
                         <ul className="gnb-list">
-                            <li>
-                                <Link to="/"><img src="./images/logo-icon/search-white.png" alt="" /></Link>
-                            </li>
-                            <li >
-                                {/* <button className='user-btn' onClick={userClick}><img src="./images/logo-icon/user-white.png" alt="" /></button> */}
-                                <Link to="/login"><img src="./images/logo-icon/user-white.png" alt="" /></Link>
-                            </li>
-                            <li>
-                                <Link to="/cartr">
-                                    <img src="./images/logo-icon/cart-white.png" alt="" />
-                                    <span className="cart-num">0</span>
-                                </Link>
-                            </li>
+                            {user ? (
+                                <>
+                                    <li>
+                                        <Link to="/"><img src="./images/logo-icon/search-white.png" alt="" /></Link>
+                                    </li>
+                                    <li >
+                                        <button className='user-btn' onClick={userClick}>
+                                            <img src="./images/logo-icon/user-white.png" alt="" />
+                                            <span>{user.name}</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <Link to="/cart">
+                                            <img src="./images/logo-icon/cart-white.png" alt="" />
+                                            <span className="cart-num">0</span>
+                                        </Link>
+                                    </li>
+                                </>
+                            ) : (
+                                <>
+                                    <li>
+                                        <Link to="/"><img src="./images/logo-icon/search-white.png" alt="" /></Link>
+                                    </li>
+                                    <li >
+                                        {/* <button className='user-btn' onClick={userClick}><img src="./images/logo-icon/user-white.png" alt="" /></button> */}
+                                        <Link to="/login"><img src="./images/logo-icon/user-white.png" alt="" /></Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/cart">
+                                            <img src="./images/logo-icon/cart-white.png" alt="" />
+                                            <span className="cart-num">0</span>
+                                        </Link>
+                                    </li>
+                                </>
+                            )}
                         </ul>
                     </div>
                 </div>
             </div>
 
-            <ul className={`scroll-menu ${lastScroll ? "active" : ""}`}>
+            <ul className={`scroll-menu ${isHover ? "" : lastScroll ? "active" : ""}`}>
                 {menus.map(menu => (
                     <li>
                         <Link to={menu.link}>
@@ -67,7 +91,7 @@ const HeaderInner = ({ onEnter, userClick }) => {
                 ))}
             </ul>
 
-            
+
         </>
     )
 }
