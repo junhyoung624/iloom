@@ -7,6 +7,7 @@ import Series from './Series'
 import FurnitureList from './FurnitureList'
 import Place from './Place'
 import NewCollection from './NewCollection'
+import SpaceCoordi from './SpaceCoordi'
 import Popup from '../pages/EventPopup'
 
 
@@ -21,6 +22,7 @@ const Home = () => {
       <BestSellerSection />
       <NewCollection />
       <Place />
+      <SpaceCoordi />
       <Series />
       <Sns />
       <Magazine />
