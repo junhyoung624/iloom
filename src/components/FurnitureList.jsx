@@ -17,7 +17,7 @@ export default function FurnitureList() {
             <div className="inner">
                 <ul>
                     {FurnitureList.map((item, id) => (
-                        <li>
+                        <li key={id}>
                             <div className='furniture-item'>
                                 <Link to={`/furniture/${item.id}`}>
                                     <img src={item.image} alt={item.key} />
