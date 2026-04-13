@@ -33,7 +33,7 @@ h1 {
 
         >a>img {
             width: 100%;
-            height: 100%;
+            aspect-ratio: 3 /4;
             object-fit: cover;
         }
     }
@@ -59,6 +59,8 @@ h1 {
     }
 
     .product-info {
+        padding-left: 30px;
+
         .serise {
             font-size: 18px;
             font-weight: 700;
