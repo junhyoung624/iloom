@@ -16776,7 +16776,7 @@ export const productData = [
     "series": "거울도어",
     "name": "거울도어 450폭 좌/우, 500폭 좌/우",
     "material": "",
-    "price": "172,000,177,000",
+    "price": "172,000",
     "options": [],
     "originalCategory": "옷장",
     "category2": "옷장/붙박이장",

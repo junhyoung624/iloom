@@ -1,9 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import "./scss/newcollection.scss"
+import { productData } from '../data/productData'
 
 
 export default function NewCollection() {
+    const newItems = productData.filter((item) => item.new === true)
+        .slice(0, 10);
     return (
         <section className='new-collection'>
             <div className="inner">
@@ -16,14 +19,15 @@ export default function NewCollection() {
                     </div>
                 </div>
                 <div className="item-wrap">
-                    <div className="series">응앳</div>
-                    <div className="item-card">
-                        <img src="" alt="" />
-                        <h1></h1>
-                        <h2></h2>
-                        <span></span>
-                        <p></p>
-                    </div>
+                    {newItems.map((item) => (
+                        <div className="item-card" key={item.id}>
+                            <img src={item.productImages[0]} alt={item.name} />
+                            <div className="series">{item.series}</div>
+                            <h1>{item.name}</h1>
+                            <h2>{item.category3}</h2>
+                            <span>{item.price}원</span>
+                        </div>
+                    ))}
                 </div>
             </div>
         </section>
