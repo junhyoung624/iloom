@@ -7,17 +7,16 @@ import 'swiper/css/navigation'
 import "./scss/series.scss"
 import { productData } from '../data/productData'
 
-const tabs = ["아르지안", "하이프", "헤이즐R", "코모", "플로코"]
+const tabs = ["에디", "하이프", "레마", "코모"]
 
 export default function Series() {
-    const [activeTab, setActiveTab] = useState("아르지안")
+    const [activeTab, setActiveTab] = useState("에디")
 
     const seriesList = [
-        { id: "1", key: "아르지안", image: "./images/series/arjian.jpg" },
+        { id: "1", key: "에디", image: "./images/series/eddi.jpg" },
         { id: "2", key: "하이프", image: "./images/series/Hype.jpg" },
-        { id: "3", key: "헤이즐R", image: "./images/series/hazelr.jpg" },
+        { id: "3", key: "레마", image: "./images/series/rema.jpg" },
         { id: "4", key: "코모", image: "./images/series/como.jpg" },
-        { id: "5", key: "플로코", image: "./images/series/floco.jpg" },
     ]
 
     const seriesItem = productData.filter((item) => item.series === activeTab).slice(0, 10);

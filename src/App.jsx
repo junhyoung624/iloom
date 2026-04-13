@@ -23,6 +23,8 @@ import Cart from './pages/Cart'
 import CompanyPage from './pages/CompanyPage'
 import QuickMenu from './components/QuickMenu'
 import Order from './pages/Order'
+import ProductList from './components/ProductList'
+import Search from './components/Search'
 
 // 메인 페이지
 function App() {
@@ -38,12 +40,12 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path='/search' element={<Search />} />
         <Route path="/login" element={<Login />} />
         <Route path="/member" element={<Member />} />
         <Route path="/cart" element={<Cart />} />
-
         <Route path="/order" element={<Order />} />
-
+        <Route path='/product-list' element={<ProductList />} />
         <Route path="/new-product" element={<NewProduct />} />
         <Route path="/best-seller" element={<BestSeller />} />
         <Route path="/magazine" element={<Magazine />} />
