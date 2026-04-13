@@ -7,21 +7,33 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
 
-  const { onLogin, onGoogleLogin } = useAuthStore();
+  const { onLogin, onGoogleLogin, onKakaoLogin, onNaverLogin } = useAuthStore();
   const navigate = useNavigate();
 
   // 기본 이메일 로그인
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-      onLogin(email, pass);
-      navigate("/")
+      const result = await onLogin(email, pass);
+      if (result) navigate("/")
   }
 
-  const handleGoogleLogin = () => {
+  const handleGoogleLogin = async () => {
     console.log("구글로그인시도");
-    onGoogleLogin();
-    navigate("/")
+    const result = await onGoogleLogin();
+    if (result) navigate("/")
   }
+
+  const handleKakaoLogin = async () => {
+    console.log("카카오 로그인 시도");
+    const result = await onKakaoLogin();
+    if (result) navigate("/");
+  }
+
+  // 네이버 로그인
+  const handleNaverLogin = () => {
+    onNaverLogin();
+  }
+
   return (
     <div className="login-wrap">
       <h1>회원 로그인</h1>
@@ -53,8 +65,8 @@ const Login = () => {
           <p style={{ textAlign: "center" }}>간편로그인</p>
           <div className="web-login-wrap">
             <button type='button' className='web-login' onClick={handleGoogleLogin}><img src="./images/logo-icon/google-icon.png" alt="" /></button>
-            <button type='button' className='web-login'><img src="./images/logo-icon/kakao-icon.png" alt="" /></button>
-            <button type='button' className='web-login'><img src="./images/logo-icon/naver-icon.png" alt="" /></button>
+            <button type='button' className='web-login' onClick={handleKakaoLogin}><img src="./images/logo-icon/kakao-icon.png" alt="" /></button>
+            <button type='button' className='web-login' onClick={handleNaverLogin}><img src="./images/logo-icon/naver-icon.png" alt="" /></button>
           </div>
         </div>
         <div className="login-right">

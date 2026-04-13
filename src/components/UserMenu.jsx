@@ -3,7 +3,7 @@ import { useAuthStore } from '../store/useAuthStore'
 import { Link } from 'react-router-dom';
 
 
-const UserMenu = ({ userClose }) => {
+const UserMenu = ({ userClose, userMenu}) => {
   const mypage = [
     { link: "/order", name: '주문/배송' },
     { link: "/wish", name: '위시리스트' },
@@ -25,7 +25,7 @@ const UserMenu = ({ userClose }) => {
       <p className='user-name'><strong>{user?.name}</strong> 님 환영합니다!</p>
       <p className='close-btn' onClick={userClose}><img src="./images/logo-icon/close-btn-black.png" alt="" /></p>
 
-      <button className='logout-btn' onClick={onLogout}>
+      <button className='logout-btn' onClick={onLogout } >
         로그아웃
       </button>
 
