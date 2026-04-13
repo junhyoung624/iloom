@@ -99,21 +99,11 @@
     // border: 2px solid #ddd;
 }
 
-.price-tag {
-    //content: "";
-    //background: yellow;
+
+
+.price-tag-active {
     position: relative;
-    // width: 200px;
-    //width: 300px;
-    //width: 100%;
-    //position: absolute;
-    // top: -0.125rem;
-    // transform: translateX(-50%) translateX(-1rem) translateY(-100%);
-    // left: -0.125rem;
-    // right: -0.125rem;
-    // bottom: -0.125rem;
-    //background: yellow;
-    // opacity: 50%;
+    display: none;
 }
 
 .tag-inner {

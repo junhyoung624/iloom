@@ -9,8 +9,19 @@ export default function ImageWithTags() {
     const currentObject = spaceCoordiData.filter((item) => item.tab === selectedTab);
     const currentProductList = currentObject[0].products;
 
-    const handleTagPosition = (input) => {
+    const [shopBtn, setShopBtn] = useState(false);
 
+    const handleTabBtn = (tab) => {
+        console.log("tab btn in");
+        setSelectedTab(tab);
+        setShopBtn(false);
+    }
+
+    const handleShopBtn = () => {
+        console.log("btn in");
+
+        setShopBtn(!shopBtn);
+        console.log(shopBtn);
     }
 
     console.log(tab_menu);
@@ -21,7 +32,7 @@ export default function ImageWithTags() {
                     {
                         tab_menu.map((tab, id) =>
                             <li key={id}
-                                onClick={() => setSelectedTab(tab)}>{tab}</li>
+                                onClick={() => handleTabBtn(tab)}>{tab}</li>
                         )
                     }
                 </ul>
@@ -38,7 +49,7 @@ export default function ImageWithTags() {
                                     <div className="dot-area">
                                         {/* dot {item.position.x} {item.position.y} */}
                                     </div>
-                                    <div className="price-tag">
+                                    <div className={shopBtn ? "price-tag-active" : "price-tag-hidden"} >
                                         {/* price tag area */}
                                         <div className="tag-inner"
                                             style={{ position: "absolute", transform: `${item.tag_position_code}` }}>
@@ -62,7 +73,8 @@ export default function ImageWithTags() {
                             )
                         }
                     </ul>
-                    <div className="shop-btn-area">
+                    <div className="shop-btn-area"
+                        onClick={handleShopBtn}>
                         <img src="./images/spaceCoordi/shop-btn.png" alt="." />
                     </div>
                 </div>
