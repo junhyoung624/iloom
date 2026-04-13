@@ -73,6 +73,21 @@ header.active .header-right .gnb-list li .user-btn span {
 header.active + .main-menu-wrap {
   background: #fff;
 }
+header.active + .main-menu-wrap .main-tab-menu li::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0%;
+  height: 3px;
+  background: #303030;
+  top: 32px;
+  transition: 0.3s;
+  left: 50%;
+  transform: translateX(-50%);
+}
+header.active + .main-menu-wrap .main-tab-menu li:hover::after {
+  width: 100%;
+}
 header.active + .main-menu-wrap .main-tab-menu li a {
   color: #000;
 }
@@ -261,6 +276,24 @@ header.active + .main-menu-wrap {
   line-height: 2.5;
   margin-left: 80px;
   color: #303030;
+}
+.user-menu-wrap .info-list li a {
+  position: relative;
+}
+.user-menu-wrap .info-list li a::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0%;
+  height: 1px;
+  background: #303030;
+  top: 32px;
+  transition: 0.3s;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.user-menu-wrap .info-list li a:hover::after {
+  width: 100%;
 }
 .user-menu-wrap .info-list .info-sub-list {
   font-size: 16px;

@@ -28,6 +28,7 @@ header {
 
             li {
                 position: relative;
+
                 .user-btn {
                     border: none;
                     background: none;
@@ -35,13 +36,14 @@ header {
 
                     span {
                         position: absolute;
-                        width: 50px;;
+                        width: 50px;
+                        ;
                         text-align: center;
                         bottom: -17px;
                         left: 50%;
                         transform: translateX(-50%);
                         color: #fff;
-                        
+
                     }
                 }
 
@@ -101,6 +103,24 @@ header.active+.main-menu-wrap {
 
     .main-tab-menu {
         li {
+
+            &::after {
+                content: "";
+                position: absolute;
+                display: block;
+                width: 0%;
+                height: 3px;
+                background: #303030;
+                top: 32px;
+                transition: 0.3s;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            &:hover::after {
+                width: 100%;
+            }
+
             a {
                 color: #000;
             }
@@ -295,11 +315,12 @@ header.active+.main-menu-wrap {
     right: -9999px;
     width: 27%;
     z-index: 9999;
-    border: 1px solid #ddd; 
+    border: 1px solid #ddd;
 
     .user-img {
         margin-top: 155px;
         margin-left: 60px;
+
         img {
             width: 170px;
         }
@@ -310,6 +331,7 @@ header.active+.main-menu-wrap {
         font-weight: 500;
         margin-top: 100px;
         margin-left: 70px;
+
         strong {
             font-size: 45px;
             font-weight: bold;
@@ -338,6 +360,30 @@ header.active+.main-menu-wrap {
         line-height: 2.5;
         margin-left: 80px;
         color: #303030;
+
+        li {
+            
+
+            a {
+                position: relative;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    display: block;
+                    width: 0%;
+                    height: 1px;
+                    background: #303030;
+                    top: 32px;
+                    transition: 0.3s;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+
+                &:hover::after {
+                    width: 100%;
+                }
+            }
+        }
 
         .info-sub-list {
             font-size: 16px;

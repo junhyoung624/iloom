@@ -1,6 +1,6 @@
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, updateProfile } from "firebase/auth";
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import { create } from "zustand";
-import { auth, db } from "../firebase/firebase";
+import { auth, db, googleProvider } from "../firebase/firebase";
 import { doc, getDoc, setDoc } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
 export const useAuthStore = create((set, get) => ({
@@ -62,11 +62,43 @@ export const useAuthStore = create((set, get) => ({
                 }
             })
         }
-        catch (err){
+        catch (err) {
             alert("로그인 실패" + err.message)
         }
     },
 
+
+    onGoogleLogin: async () => {
+        try {
+            const result = await signInWithPopup(auth, googleProvider);
+            console.log("구글 로그인", result);
+            const user = result.user;
+
+            // firebase 저장
+            const userRef = doc(db, "people", user.uid)
+            // 이미 회원인지 체크
+            const userDoc = await getDoc(userRef)
+            // 회원이 아니면 새로운 정보로 회원가입하기
+            if (!userDoc.exists()) {
+                const userInfo = {
+                    uid: user.uid,
+                    email: user.email,
+                    name: user.displayName,
+                    phone: user.phoneNumber
+                }
+                await setDoc(userRef, userInfo)
+
+                set({ user: userInfo })
+            }
+            else {
+                set({ user: userDoc.data() })
+            }
+        }
+        catch (err) {
+            alert(err.message);
+
+        }
+    },
 
 
     onLogout: async () => {
