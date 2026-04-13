@@ -19,15 +19,20 @@ export default function NewCollection() {
                     </div>
                 </div>
                 <div className="item-wrap">
+
                     {newItems.map((item) => (
+
                         <div className="item-card" key={item.id}>
-                            <img src={item.productImages[1]} alt={item.name} />
-                            <div className="series">{item.series}</div>
-                            <h1>{item.name}</h1>
-                            <h2>{item.category3}</h2>
-                            <span>{item.price}원</span>
+                            <Link>
+                                <img src={`/images/${item.productImages[0]}`} alt={item.name} />
+                                <div className="series">{item.series}</div>
+                                <h1>{item.name}</h1>
+                                <h2>{item.category3}</h2>
+                                <span>{item.price}원</span>
+                            </Link>
                         </div>
                     ))}
+
                 </div>
             </div>
         </section>
