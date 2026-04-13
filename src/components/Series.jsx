@@ -7,14 +7,14 @@ import 'swiper/css/navigation'
 import "./scss/series.scss"
 import { productData } from '../data/productData'
 
-const tabs = ["아르지안", "멘디", "헤이즐R", "코모", "플로코"]
+const tabs = ["아르지안", "하이프", "헤이즐R", "코모", "플로코"]
 
 export default function Series() {
     const [activeTab, setActiveTab] = useState("아르지안")
 
     const seriesList = [
         { id: "1", key: "아르지안", image: "./images/series/arjian.jpg" },
-        { id: "2", key: "멘디", image: "./images/series/mendy.jpg" },
+        { id: "2", key: "하이프", image: "./images/series/Hype.jpg" },
         { id: "3", key: "헤이즐R", image: "./images/series/hazelr.jpg" },
         { id: "4", key: "코모", image: "./images/series/como.jpg" },
         { id: "5", key: "플로코", image: "./images/series/floco.jpg" },
