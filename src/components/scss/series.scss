@@ -131,7 +131,66 @@
     }
 }
 
+.series-name {
+    padding: 10px 18px;
+    border: none;
+    background: transparent;
+    color: #888;
+    cursor: pointer;
+    position: relative;
+    font-size: 18px;
+    margin-top: 100px;
+}
+
+.series-name::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #111;
+    margin: 6px auto 0;
+    transition: 0.3s;
+}
+
+.series-name.active {
+    color: #111;
+    font-weight: 700;
+}
+
+.series-name.active::after {
+    width: 100%;
+}
+
 .item-card-wrap {
+    max-width: 1440px;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    padding: 200px 0;
+
+    img {
+        width: 283px;
+    }
+
+    .series {
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    h1 {
+        font-size: 16px;
+        color: #606060;
+    }
+
+    h2 {
+        font-size: 13px;
+        color: #909090;
+    }
+
+    span {
+        font-size: 16px;
+        font-weight: 600;
+        color: #CA1230;
+    }
 }

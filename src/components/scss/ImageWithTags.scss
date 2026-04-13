@@ -26,6 +26,26 @@
 // .dot-area {
 //     background: black;
 // }
+.dot-area {
+    //will-change: opacity, visibility;
+    box-sizing: border-box;
+    // transition: border-color 250ms ease-in-out, opacity 250ms ease-in-out, visibility 250ms ease-in-out;
+    // transform: translateX(-1rem) translateY(-1rem) scale(0.999);
+    // padding: 0;
+    width: 1.3rem;
+    height: 1.3rem;
+    border: 2px solid; // background-clip: padding-box;
+    position: absolute;
+    // background-color: #ddd;
+    // opacity: 0;
+    // //visibility: hidden;
+    border-radius: 64px;
+    line-height: .5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.55);
+}
 
 
 .dot-area::after {
@@ -34,18 +54,46 @@
     display: block;
     background: white;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.55);
-    width: .75rem;
-    height: .75rem;
+    width: .65rem;
+    height: .65rem;
     border-radius: 64px;
     transition: transform 250ms ease-in-out;
+
+}
+
+.dot-area:hover::after {
+    width: .45rem;
+    height: .45rem;
+}
+
+.dot-area:hover::before {
+    top: -0.7rem;
+    left: -0.7rem;
+    right: -0.7rem;
+    bottom: -0.7rem;
 }
 
 .dot-area::before {
     content: "";
     position: absolute;
-    top: -0.5rem;
-    left: -0.5rem;
-    right: -0.5rem;
-    bottom: -0.5rem;
+    top: -0.6rem;
+    left: -0.6rem;
+    right: -0.6rem;
+    bottom: -0.6rem;
     display: block;
+
+    // background: black;
+    // opacity: 50%;
+    // border-radius: 50%;
+    // border: 2px solid #ddd;
+}
+
+.price-tag::before {
+    content: "";
+    position: absolute;
+    top: -0.125rem;
+    left: -0.125rem;
+    right: -0.125rem;
+    bottom: -0.125rem;
+    // background: yellow;
 }
