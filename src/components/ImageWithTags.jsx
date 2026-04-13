@@ -29,9 +29,16 @@ export default function ImageWithTags() {
                     <ul>
                         {
                             currentProductList.map((item, id) =>
-                                <li key={id}>
-                                    <div className="dot-area"
-                                        style={{ position: "absolute", left: `${item.position.x / 1440 * 100}%`, top: `${item.position.y / 799 * 100}%` }}>dot {item.position.x} {item.position.y}</div>
+                                <li key={id}
+                                    style={{ position: "absolute", left: `${item.position.x / 1440 * 100}%`, top: `${item.position.y / 799 * 100}%` }}>
+                                    <div className="dot-area">
+                                        {/* dot {item.position.x} {item.position.y} */}
+                                    </div>
+                                    <div className="price-tag">
+                                        {/* price tag area */}
+                                        <div className="img-info">img</div>
+                                        <div className="txt-info">txt info</div>
+                                    </div>
                                 </li>
                             )
                         }
