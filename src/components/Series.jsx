@@ -7,7 +7,7 @@ import 'swiper/css/navigation'
 import "./scss/series.scss"
 import { productData } from '../data/productData'
 
-const tabs = ["아르지안", "멘디", "헤이즐R", "앤트레디션", "플로코"]
+const tabs = ["아르지안", "멘디", "헤이즐R", "코모", "플로코"]
 
 export default function Series() {
     const [activeTab, setActiveTab] = useState("아르지안")
