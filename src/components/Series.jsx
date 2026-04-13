@@ -16,7 +16,7 @@ export default function Series() {
         { id: "1", key: "아르지안", image: "./images/series/arjian.jpg" },
         { id: "2", key: "멘디", image: "./images/series/mendy.jpg" },
         { id: "3", key: "헤이즐R", image: "./images/series/hazelr.jpg" },
-        { id: "4", key: "앤트레디션", image: "./images/series/antredition.jpg" },
+        { id: "4", key: "코모", image: "./images/series/como.jpg" },
         { id: "5", key: "플로코", image: "./images/series/floco.jpg" },
     ]
 
@@ -76,14 +76,14 @@ export default function Series() {
 
                     <div className="item-card-wrap">
 
-                        {seriesItem.map((item) => (
+                        {seriesItem.map((item, index) => (
                             <Link
                                 to={`/product/${item.id}`}
                                 className="item-card"
-                                key={item.id}
+                                key={`${item.id}-${index}`}
                             >
                                 <div>
-                                    <img src={item.productImages[0]} alt={item.name} />
+                                    <img src={item.productImages[1]} alt={item.name} />
                                     <div className="series-label">{item.series}</div>
                                     <h1>{item.name}</h1>
                                     <h2>{item.category3}</h2>
