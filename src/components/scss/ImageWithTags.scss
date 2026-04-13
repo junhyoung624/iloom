@@ -1,5 +1,51 @@
 .shoppable-area-wrap {
+    position: relative;
     background: yellowgreen;
+    border: 2px solid blue;
     max-width: 1440px;
     margin: 0 auto;
+
+    //margin: 10px;
+    .tab-menu-list {
+        display: flex;
+        justify-content: space-evenly;
+
+        li {
+            background: yellow;
+        }
+    }
+}
+
+.dot-and-box-wrap {
+    //position: relative;
+    top: 0;
+    left: 0;
+    background: goldenrod;
+}
+
+// .dot-area {
+//     background: black;
+// }
+
+
+.dot-area::after {
+    content: "";
+    position: relative;
+    display: block;
+    background: white;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.55);
+    width: .75rem;
+    height: .75rem;
+    border-radius: 64px;
+    transition: transform 250ms ease-in-out;
+}
+
+.dot-area::before {
+    content: "";
+    position: absolute;
+    top: -0.5rem;
+    left: -0.5rem;
+    right: -0.5rem;
+    bottom: -0.5rem;
+    display: block;
 }

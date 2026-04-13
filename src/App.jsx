@@ -22,6 +22,7 @@ import ScrollTop from './components/ScrollTop'
 import Cart from './pages/Cart'
 import CompanyPage from './pages/CompanyPage'
 import QuickMenu from './components/QuickMenu'
+import Order from './pages/Order'
 
 // 메인 페이지
 function App() {
@@ -40,6 +41,8 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/member" element={<Member />} />
         <Route path="/cart" element={<Cart />} />
+
+        <Route path="/order" element={<Order />} />
 
         <Route path="/new-product" element={<NewProduct />} />
         <Route path="/best-seller" element={<BestSeller />} />

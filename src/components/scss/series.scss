@@ -115,3 +115,23 @@
     z-index: 111;
     rotate: calc(180deg);
 }
+
+.item-wrap {
+
+
+    .tab-menu {
+
+
+        button {
+            width: 60px;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+        }
+    }
+}
+
+.item-card-wrap {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}

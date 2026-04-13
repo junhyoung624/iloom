@@ -1,17 +1,18 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import MainMenu from './MainMenu'
 import HeaderInner from './HeaderInner'
 import UserMenu from './UserMenu'
 import "./scss/header.scss"
 import { useProductStore } from '../store/useProductStore'
+import { useAuthStore } from '../store/useAuthStore'
 
 // header
 const Header = () => {
 
   // 메뉴 불러오기
   const { menus } = useProductStore();
-
+  const {user} = useAuthStore();
   const [isScroll, setScroll] = useState(false);
 
   const location = useLocation();
@@ -50,6 +51,7 @@ const Header = () => {
     console.log("out", isHover)
   }
 
+  // 헤더 스크롤
   const [scrollHover, setScrollHover] = useState(false);
   const scrollEnter = () => {
     setScrollHover(true)
@@ -59,7 +61,16 @@ const Header = () => {
     setScrollHover(false)
   }
 
+  // userMenu 
   const [userMenu, setUserMenu] = useState(false);
+  const userLogin = useRef(null);
+  
+  useEffect(() => {
+    if (!userLogin.current && user) {
+      setUserMenu(true);
+    }
+    userLogin.current = user;
+  }, [user]);
 
   const handleClick = () => {
     setUserMenu(true)
