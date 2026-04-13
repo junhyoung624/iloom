@@ -2581,40 +2581,7 @@ export const productData = [
     ],
     "ranking": 222
   },
-  {
-    "id": "HB571106",
-    "series": "어바니",
-    "name": "어바니 모션베드 SS",
-    "material": "",
-    "price": "1,809,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "A481A",
-          "A480A"
-        ]
-      }
-    ],
-    "originalCategory": "침실",
-    "category2": "침대",
-    "category3": "모션베드",
-    "productImages": [
-      "/images/iloom_images/bedroom/bed/HB571106_A480A_2.png",
-      "/images/iloom_images/bedroom/bed/HB571106_A481A_1.jpg",
-      "/images/iloom_images/bedroom/bed/HB571106_A481A_3.png"
-    ],
-    "mdPick": false,
-    "new": true,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20240611/_3bf9e56b-54a4-45c0-9a19-e72103b74d6a.jpg",
-      "https://www.iloom.com/upload/contents/20240611/_4653afd1-8306-4ace-9081-be04608b498b.jpg",
-      "https://www.iloom.com/upload/contents/20240611/_46bb67d3-62a9-42eb-9472-be72e6651e10.jpg",
-      "https://www.iloom.com/upload/contents/20240611/_ce96500f-e747-45df-b2a1-c075316db891.jpg"
-    ],
-    "ranking": 1528
-  },
+
   {
     "id": "HB571107",
     "series": "어바니",

@@ -221,6 +221,7 @@ header.active + .main-menu-wrap {
 }
 .main-menu-wrap .menu-img-wrap .text-box .magazine-button a {
   display: block;
+  color: #fff;
   padding: 10px 80px;
   border: 1px solid;
   text-align: center;

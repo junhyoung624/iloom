@@ -1,18 +1,22 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useProductStore } from '../store/useProductStore'
-import { useAuthStore } from '../store/useAuthStore';
+import { useAuthStore } from '../store/useAuthStore'
+import "./scss/headerinner.scss"
+import SearchDropdown from './SearchDropdown'
 
 const HeaderInner = ({ onEnter, userClick, isHover }) => {
-    const { menus } = useProductStore();
-    const { user } = useAuthStore();
+    const { menus } = useProductStore()
+    const { user } = useAuthStore()
+    const [isSearchOpen, setIsSearchOpen] = useState(false)
+    const [lastScroll, setLastScroll] = useState(false)
+    const searchRef = useRef(null)
 
-    const [lastScroll, setLastScroll] = useState(false);
     useEffect(() => {
-        let lastScrollY = window.scrollY;
+        let lastScrollY = window.scrollY
 
         const AddMenuScroll = () => {
-            const currentScrollY = window.scrollY;
+            const currentScrollY = window.scrollY
             if (currentScrollY === 0) {
                 setLastScroll(false)
             } else if (currentScrollY > lastScrollY) {
@@ -20,33 +24,56 @@ const HeaderInner = ({ onEnter, userClick, isHover }) => {
             } else {
                 setLastScroll(true)
             }
-            lastScrollY = currentScrollY;
+            lastScrollY = currentScrollY
         }
 
-        window.addEventListener("scroll", AddMenuScroll);
-        return () => window.removeEventListener("scroll", AddMenuScroll);
+        window.addEventListener("scroll", AddMenuScroll)
+        return () => window.removeEventListener("scroll", AddMenuScroll)
     }, [])
+
+    useEffect(() => {
+        const handleClickOutside = (e) => {
+            if (searchRef.current && !searchRef.current.contains(e.target)) {
+                setIsSearchOpen(false)
+            }
+        }
+
+        document.addEventListener("mousedown", handleClickOutside)
+        return () => document.removeEventListener("mousedown", handleClickOutside)
+    }, [])
+
+    const handleSearchToggle = () => {
+        setIsSearchOpen((prev) => !prev)
+    }
 
     return (
         <>
-            <div className="header-inner-wrap">
+            <div className="header-inner-wrap" ref={searchRef}>
                 <div className="header-inner">
                     <div className="header-left">
                         <div className="ham-btn" onMouseEnter={onEnter}>
                             <img src="./images/logo-icon/ham-white.png" alt="ham-btn" />
                         </div>
                     </div>
+
                     <h1 className="main-logo">
                         <Link to="/"><img src="./images/logo-icon/main-logo-white.png" alt="" /></Link>
                     </h1>
+
                     <div className="header-right">
                         <ul className="gnb-list">
                             {user ? (
                                 <>
                                     <li>
-                                        <Link to="/"><img src="./images/logo-icon/search-white.png" alt="" /></Link>
+                                        <button
+                                            type="button"
+                                            className="icon-btn"
+                                            onClick={handleSearchToggle}
+                                        >
+                                            <img src="./images/logo-icon/search-white.png" alt="search" />
+                                        </button>
                                     </li>
-                                    <li >
+                                    <li>
                                         <button className='user-btn' onClick={userClick}>
                                             <img src="./images/logo-icon/user-white.png" alt="" />
                                             <span>{user.name}</span>
@@ -62,10 +89,15 @@ const HeaderInner = ({ onEnter, userClick, isHover }) => {
                             ) : (
                                 <>
                                     <li>
-                                        <Link to="/"><img src="./images/logo-icon/search-white.png" alt="" /></Link>
+                                        <button
+                                            type="button"
+                                            className="icon-btn"
+                                            onClick={handleSearchToggle}
+                                        >
+                                            <img src="./images/logo-icon/search-white.png" alt="search" />
+                                        </button>
                                     </li>
-                                    <li >
-                                        {/* <button className='user-btn' onClick={userClick}><img src="./images/logo-icon/user-white.png" alt="" /></button> */}
+                                    <li>
                                         <Link to="/login"><img src="./images/logo-icon/user-white.png" alt="" /></Link>
                                     </li>
                                     <li>
@@ -79,6 +111,10 @@ const HeaderInner = ({ onEnter, userClick, isHover }) => {
                         </ul>
                     </div>
                 </div>
+
+                <div className={`search-dropdown ${isSearchOpen ? "active" : ""}`}>
+                    <SearchDropdown />
+                </div>
             </div>
 
             <ul className={`scroll-menu ${isHover ? "" : lastScroll ? "active" : ""}`}>
@@ -90,8 +126,6 @@ const HeaderInner = ({ onEnter, userClick, isHover }) => {
                     </li>
                 ))}
             </ul>
-
-
         </>
     )
 }

@@ -59,42 +59,41 @@ export default function Best() {
           <h1>iloom best seller</h1>
           <h2>일룸의 베스트 상품을 만나보세요</h2>
         </div>
-      </div>
 
-      <div className="best-swiper-wrap">
-        <Swiper
-          navigation={true}
-          modules={[Navigation]}
-          slidesPerView={3}
-          spaceBetween={30}
-          loop={true}
-          className="mySwiper"
-        >
-          {bestList.map((item) => (
-            <SwiperSlide key={item.id}>
-              <div className="best-item">
-                <Link to={`/best/${item.id}`}>
-                  <img src={item.image} alt={item.key} />
-                </Link>
-                <ul className="product-list">
-                  {item.product.map((rel) => (
-                    <li key={rel.id}>
-                      <Link to={`/product/${rel.id}`}>
-                        <img src={rel.image} alt={rel.name} />
-                        <div className="product-info">
-                          <p className='serise'>{rel.serise}</p>
-                          <p className='name'>{rel.name}</p>
-                          <p className='price'>{rel.price}</p>
-                        </div>
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+        <div className="best-swiper-wrap">
+          <Swiper
+            navigation={true}
+            modules={[Navigation]}
+            slidesPerView={3}
+            spaceBetween={30}
+            loop={true}
+            className="mySwiper"
+          >
+            {bestList.map((item) => (
+              <SwiperSlide key={item.id}>
+                <div className="best-item">
+                  <Link to={`/best/${item.id}`}>
+                    <img src={item.image} alt={item.key} />
+                  </Link>
+                  <ul className="product-list">
+                    {item.product.map((rel) => (
+                      <li key={rel.id}>
+                        <Link to={`/product/${rel.id}`}>
+                          <img src={rel.image} alt={rel.name} />
+                          <div className="product-info">
+                            <p className='serise'>{rel.serise}</p>
+                            <p className='name'>{rel.name}</p>
+                            <p className='price'>{rel.price}</p>
+                          </div>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
       </div>
     </section>
   )
