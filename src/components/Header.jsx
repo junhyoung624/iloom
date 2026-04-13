@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import MainMenu from './MainMenu'
 import HeaderInner from './HeaderInner'
@@ -51,6 +51,7 @@ const Header = () => {
     console.log("out", isHover)
   }
 
+  // 헤더 스크롤
   const [scrollHover, setScrollHover] = useState(false);
   const scrollEnter = () => {
     setScrollHover(true)
@@ -60,7 +61,16 @@ const Header = () => {
     setScrollHover(false)
   }
 
+  // userMenu 
   const [userMenu, setUserMenu] = useState(false);
+  const userLogin = useRef(null);
+  
+  useEffect(() => {
+    if (!userLogin.current && user) {
+      setUserMenu(true);
+    }
+    userLogin.current = user;
+  }, [user]);
 
   const handleClick = () => {
     setUserMenu(true)
@@ -88,7 +98,7 @@ const Header = () => {
         onMouseLeave={scrollLeave}>
         <MainMenu menus={menus}/>
       </div> */}
-      <div className={`user-menu-wrap ${user ? userMenu ? "active" : "" : ""}`}>
+      <div className={`user-menu-wrap ${userMenu ? "active" : ""}`}>
         <UserMenu userClose={closeBtn} />
       </div>
     </>
