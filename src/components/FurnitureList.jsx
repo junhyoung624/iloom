@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 export default function FurnitureList() {
 
     const FurnitureList = [
-        { id: "1", key: "쇼파", image: "./images/furnitureList/FList01.png" },
+        { id: "1", key: "소파", image: "./images/furnitureList/FList01.png" },
         { id: "2", key: "의자", image: "./images/furnitureList/FList02.png" },
         { id: "3", key: "테이블", image: "./images/furnitureList/FList03.png" },
         { id: "4", key: "침대", image: "./images/furnitureList/FList04.png" },
@@ -17,7 +17,7 @@ export default function FurnitureList() {
             <div className="inner">
                 <ul>
                     {FurnitureList.map((item, id) => (
-                        <li>
+                        <li key={id}>
                             <div className='furniture-item'>
                                 <Link to={`/furniture/${item.id}`}>
                                     <img src={item.image} alt={item.key} />
