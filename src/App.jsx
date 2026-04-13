@@ -23,14 +23,18 @@ import Cart from './pages/Cart'
 import CompanyPage from './pages/CompanyPage'
 import QuickMenu from './components/QuickMenu'
 import Order from './pages/Order'
+import MyPage from './pages/MyPage'
+import { useAuthStore } from './store/useAuthStore'
 
 // 메인 페이지
 function App() {
   const { onfetchItems, onMakeMenu } = useProductStore();
+  const { initAuth } = useAuthStore()
 
   useEffect(() => {
     onfetchItems();
     onMakeMenu();
+    initAuth()
   }, [onfetchItems, onMakeMenu])
   return (
     <>
@@ -54,6 +58,7 @@ function App() {
         <Route path="/notice" element={<Notice />} />
         <Route path="/company-info" element={<CompanyInfo />} />
         <Route path='/companypage' element={<CompanyPage />} />
+        <Route path='/mypage' element={<MyPage />} />
       </Routes>
       <QuickMenu />
       <Footer />
