@@ -9,15 +9,22 @@
             a {
                 display: block;
 
-                &:hover p {
-                    color: #303030;
-                    font-weight: 500;
+                &:hover {
+                    p {
+                        color: #303030;
+                        font-weight: 500;
+                    }
+
+                    img {
+                        transform: translateY(-5px);
+                    }
                 }
             }
         }
 
         img {
             width: 173px;
+            transition: transform 0.3s ease;
         }
 
         p {
