@@ -64,13 +64,25 @@ const Header = () => {
   // userMenu 
   const [userMenu, setUserMenu] = useState(false);
   const userLogin = useRef(null);
+  const loginMenu = useRef(false);
   
   useEffect(() => {
     if (!userLogin.current && user) {
       setUserMenu(true);
+      loginMenu.current = true;
+    } else {
+      setUserMenu(false)
     }
     userLogin.current = user;
   }, [user]);
+
+  useEffect(()=>{
+    if (loginMenu.current) {
+      loginMenu.current = false;
+      return;
+    }
+    setUserMenu(false)
+  },[location.pathname])
 
   const handleClick = () => {
     setUserMenu(true)
@@ -99,7 +111,7 @@ const Header = () => {
         <MainMenu menus={menus}/>
       </div> */}
       <div className={`user-menu-wrap ${userMenu ? "active" : ""}`}>
-        <UserMenu userClose={closeBtn} />
+        <UserMenu userClose={closeBtn} userMenu={userMenu}/>
       </div>
     </>
   )
