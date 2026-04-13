@@ -25,6 +25,7 @@ import QuickMenu from './components/QuickMenu'
 import Order from './pages/Order'
 import ProductList from './components/ProductList'
 import Search from './components/Search'
+import OAuth from './pages/OAuth'
 
 // 메인 페이지
 function App() {
@@ -46,6 +47,9 @@ function App() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/order" element={<Order />} />
         <Route path='/product-list' element={<ProductList />} />
+
+        <Route path="/oauth" element={<OAuth />} />
+
         <Route path="/new-product" element={<NewProduct />} />
         <Route path="/best-seller" element={<BestSeller />} />
         <Route path="/magazine" element={<Magazine />} />
