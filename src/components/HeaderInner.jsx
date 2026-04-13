@@ -82,8 +82,8 @@ const HeaderInner = ({ onEnter, userClick, isHover }) => {
             </div>
 
             <ul className={`scroll-menu ${isHover ? "" : lastScroll ? "active" : ""}`}>
-                {menus.map(menu => (
-                    <li>
+                {menus.map((menu, index) => (
+                    <li key={`${menu.key}-${index}`}>
                         <Link to={menu.link}>
                             {menu.name}
                         </Link>

@@ -33,16 +33,14 @@ const UserMenu = ({ userClose }) => {
 
       <ul className="info-list">
         {mypage.map((p, id) => (
-          
           <li key={id}>
-            <Link to={`${p.link}`}>
-            {p.name}
-            </Link>
+            <Link to={p.link}>{p.name}</Link>
+
             {p.sub && (
               <ul className='info-sub-list'>
-                {p.sub.map((sub, id) => (
-                  <li key={id}>
-                    <Link>{sub.name}</Link>
+                {p.sub.map((sub, subId) => (
+                  <li key={subId}>
+                    <Link to={sub.link}>{sub.name}</Link>
                   </li>
                 ))}
               </ul>
