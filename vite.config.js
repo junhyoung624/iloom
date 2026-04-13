@@ -8,4 +8,13 @@ export default defineConfig({
     react(),
     babel({ presets: [reactCompilerPreset()] })
   ],
+  server: {
+    proxy: {
+      '/naver-api': {
+        target: 'https://openapi.naver.com',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/naver-api/, ''),
+      }
+    }
+  }
 })
