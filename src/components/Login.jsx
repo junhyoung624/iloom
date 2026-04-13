@@ -7,7 +7,7 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
 
-  const { onLogin } = useAuthStore();
+  const { onLogin, onGoogleLogin } = useAuthStore();
   const navigate = useNavigate();
 
   // 기본 이메일 로그인
@@ -15,7 +15,12 @@ const Login = () => {
     e.preventDefault();
       onLogin(email, pass);
       navigate("/")
+  }
 
+  const handleGoogleLogin = () => {
+    console.log("구글로그인시도");
+    onGoogleLogin();
+    navigate("/")
   }
   return (
     <div className="login-wrap">
@@ -47,7 +52,7 @@ const Login = () => {
 
           <p style={{ textAlign: "center" }}>간편로그인</p>
           <div className="web-login-wrap">
-            <button type='button' className='web-login'><img src="./images/logo-icon/google-icon.png" alt="" /></button>
+            <button type='button' className='web-login' onClick={handleGoogleLogin}><img src="./images/logo-icon/google-icon.png" alt="" /></button>
             <button type='button' className='web-login'><img src="./images/logo-icon/kakao-icon.png" alt="" /></button>
             <button type='button' className='web-login'><img src="./images/logo-icon/naver-icon.png" alt="" /></button>
           </div>
