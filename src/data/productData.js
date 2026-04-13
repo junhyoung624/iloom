@@ -11998,29 +11998,7 @@ export const productData = [
     "BestSeller": false,
     "detailImg": []
   },
-  {
-    "id": "IGB0008A",
-    "series": "그립 (SP)",
-    "name": "그립 (SP) 3단 서랍옷장 도어 900폭/1000폭",
-    "material": "",
-    "price": "219,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "SP"
-        ]
-      }
-    ],
-    "originalCategory": "옷장",
-    "category2": "옷장/붙박이장",
-    "category3": "액세서리",
-    "productImages": [],
-    "mdPick": false,
-    "new": true,
-    "BestSeller": false,
-    "detailImg": []
-  },
+  
   {
     "id": "IGB11A",
     "series": "그립 (SP)",
