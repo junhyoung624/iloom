@@ -73,18 +73,20 @@ export default function Best() {
           {bestList.map((item) => (
             <SwiperSlide key={item.id}>
               <div className="best-item">
-                <Link to={`/bestseller`}>
+                <Link to={`/best/${item.id}`}>
                   <img src={item.image} alt={item.key} />
                 </Link>
                 <ul className="product-list">
                   {item.product.map((rel) => (
                     <li key={rel.id}>
-                      <img src={rel.image} alt={rel.name} />
-                      <div className="product-info">
-                        <p className='serise'>{rel.serise}</p>
-                        <p className='name'>{rel.name}</p>
-                        <p className='price'>{rel.price}</p>
-                      </div>
+                      <Link to={`/product/${rel.id}`}>
+                        <img src={rel.image} alt={rel.name} />
+                        <div className="product-info">
+                          <p className='serise'>{rel.serise}</p>
+                          <p className='name'>{rel.name}</p>
+                          <p className='price'>{rel.price}</p>
+                        </div>
+                      </Link>
                     </li>
                   ))}
                 </ul>
