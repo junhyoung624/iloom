@@ -9,6 +9,10 @@ export default function ImageWithTags() {
     const currentObject = spaceCoordiData.filter((item) => item.tab === selectedTab);
     const currentProductList = currentObject[0].products;
 
+    const handleTagPosition = (input) => {
+
+    }
+
     console.log(tab_menu);
     return (
         <div className='shoppable-area-wrap'>
@@ -36,15 +40,33 @@ export default function ImageWithTags() {
                                     </div>
                                     <div className="price-tag">
                                         {/* price tag area */}
-                                        <div className="img-info">img</div>
-                                        <div className="txt-info">txt info</div>
+                                        <div className="tag-inner"
+                                            style={{ position: "absolute", transform: `${item.tag_position_code}` }}>
+                                            <div className="img-info">
+                                                <img src={item.src} alt="." />
+                                            </div>
+                                            <div className="txt-info">
+                                                <p className='item-name'>{item.name}</p>
+                                                <p className='item-subname'>{item.subName}</p>
+                                                <p className='item-price'>{item.price}</p>
+                                            </div>
+                                            <div className="button-area">
+                                                <p>::</p>
+                                            </div>
+                                        </div>
+
                                     </div>
+
                                 </li>
+
                             )
                         }
                     </ul>
+                    <div className="shop-btn-area">
+                        <img src="./images/spaceCoordi/shop-btn.png" alt="." />
+                    </div>
                 </div>
-            </Link>
+            </Link >
 
             {/* 제품 개수만큼 map 돌려서 li생성 */}
 
@@ -57,6 +79,6 @@ export default function ImageWithTags() {
                     </li>
                 </ul>
             </div> */}
-        </div>
+        </div >
     );
 }

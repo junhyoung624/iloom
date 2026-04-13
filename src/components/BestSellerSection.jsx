@@ -59,6 +59,7 @@ export default function Best() {
           <h1>iloom best seller</h1>
           <h2>일룸의 베스트 상품을 만나보세요</h2>
         </div>
+      </div>
 
         <div className="best-swiper-wrap">
           <Swiper
