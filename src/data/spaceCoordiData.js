@@ -16,7 +16,7 @@ export const spaceCoordiData = [
     {
         id: 2,
         tab: "tab2",
-        space_image_url: "../../public/images/spaceCoordi/bedroom/bedroom_coordi.png",
+        space_image_url: "./images/spaceCoordi/bedroom/bedroom_coordi.png",
         products: [
             //id, name, price,image_url,position : {x : , y : },
             {
@@ -66,7 +66,7 @@ export const spaceCoordiData = [
     {
         id: 3,
         tab: "tab3",
-        space_image_url: "../../public/images/spaceCoordi/diningroom/dining_coordi.png",
+        space_image_url: "./images/spaceCoordi/diningroom/dining_coordi.png",
         products: [
             //id, name, price,image_url,position : {x : , y : },
             {
