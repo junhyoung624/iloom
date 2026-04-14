@@ -3,7 +3,12 @@ import DropDown from './DropDown';
 import { store_region } from '../../data/storeRegionCode';
 
 
-export default function LocationSearch() {
+export default function LocationSearch(
+    selectedRegion,
+    setSelectedRegion,
+    selectedSubRegion,
+    setSelectedSubRegion,
+    storeRegion,) {
 
     const first_option_arr = store_region.map((item) => ({
         value: item.code,
@@ -11,25 +16,32 @@ export default function LocationSearch() {
         sub_region: item.sub_region,
     }));
 
-    const [selectedArea_1, setSelectedArea_1] = useState(first_option_arr[0]);
-    const [selectedArea_2, setSelectedArea_2] = useState(null);
+    const selectedArea1 =
+        first_option_arr.find((item) => item.value === selectedRegion) ||
+        first_option_arr[0];
+
+    // const [selectedArea_1, setSelectedArea_1] = useState(first_option_arr[0]);
+    // const [selectedArea_2, setSelectedArea_2] = useState(null);
 
     const second_option_arr =
-        selectedArea_1?.sub_region?.map((item) => ({
+        selectedArea1?.sub_region?.map((item) => ({
             value: item,
             label: item
         })) || [];
 
 
+    const selectedArea2 =
+        second_option_arr.find((item) => item.value === selectedSubRegion) || null;
+
+
     const getSelected_1 = (selected) => {
-        setSelectedArea_1(selected);
-        console.log("selected area 1", selectedArea_1);
-        setSelectedArea_2(null);
+        setSelectedRegion(selected.value);
+        setSelectedSubRegion("시/군/구");
 
 
     }
     const getSelected_2 = (selected) => {
-        setSelectedArea_2(selected);
+        setSelectedSubRegion(selected.value);
     }
     return (
         <div className="store-location-search">
@@ -41,7 +53,7 @@ export default function LocationSearch() {
                         <DropDown
                             data={first_option_arr}
                             selected={getSelected_1}
-                            value={selectedArea_1}
+                            value={selectedArea1}
                             placeholder="시/도" />
                     </div>
                     <div className="selector area2">
@@ -49,7 +61,7 @@ export default function LocationSearch() {
                         <DropDown
                             data={second_option_arr}
                             selected={getSelected_2}
-                            value={selectedArea_2}
+                            value={selectedArea2}
                             placeholder="시/군/구" />
                     </div>
                 </div>
