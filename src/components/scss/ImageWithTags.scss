@@ -214,7 +214,11 @@
 
     .button-area {
         margin: auto 5px;
-        background: blanchedalmond;
+        //background: blanchedalmond;
+
+        .tag_arrow_btn:hover {
+            transform: scale(1.2);
+        }
     }
 
     // position: absolute;

@@ -110,7 +110,13 @@ export default function ImageWithTags() {
                                                         <p className='item-price'>{item.price}</p>
                                                     </div>
                                                     <div className="button-area">
-                                                        <p>::</p>
+                                                        {/* <p>::</p> */}
+
+                                                        <Link
+
+                                                            to={`product/${item.id}`}><p className='tag_arrow_btn'><img src="./images/spaceCoordi/pricetag_icon/arrow.png" alt="." /></p></Link>
+
+
                                                     </div>
                                                 </div>
 
