@@ -1,6 +1,6 @@
-.header-inner-wrap {
-    position: relative;
-}
+// .header-inner-wrap {
+//     position: relative;
+// }
 
 .gnb-list {
     .icon-btn {
@@ -17,7 +17,7 @@
 
 .search-dropdown {
     position: absolute;
-    top: 50px;
+    top: 0px;
     left: 50%;
     transform: translateX(-50%);
     width: 100vw;
