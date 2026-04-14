@@ -30,6 +30,7 @@ import ProductList from './components/ProductList'
 import Search from './components/Search'
 import OAuth from './pages/OAuth'
 import SubPage from './pages/SubPage'
+import SearchPage from './pages/SearchPage'
 import NaverCallback from './pages/NaverCallback'
 
 // 메인 페이지
@@ -53,6 +54,7 @@ function App() {
         <Route path="/member" element={<Member />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/order" element={<Order />} />
+        <Route path="/searchpage" element={<SearchPage />} />
         {/* <Route path='/product-list' element={<ProductList />} /> */}
         <Route path='/:originalCategory' element={<SubPage />} />
         <Route path='/:originalCategory/:category2' element={<SubPage />} />

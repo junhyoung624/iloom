@@ -10,17 +10,23 @@
 
     input {
         flex: 1;
-        height: 52px;
+        height: 50px;
         padding: 0 16px;
         border: none;
         background: #fff;
         font-size: 16px;
         outline: none;
+        margin-left: 240px;
+        margin-bottom: 20px;
+
+        color: #030303;
+        font-size: 30px;
+        font-weight: 700;
     }
 
     button {
         width: 90px;
-        height: 52px;
+        height: 50px;
         border: none;
         background: #111;
         color: #fff;
@@ -63,6 +69,12 @@
             font-weight: 700;
         }
     }
+}
+
+.no-result {
+    font-size: 18px;
+    color: #999;
+    padding: 12px 0;
 }
 
 .cate-right {
