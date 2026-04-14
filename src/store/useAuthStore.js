@@ -1,7 +1,7 @@
-import { createUserWithEmailAndPassword, onAuthStateChanged, linkWithPopup, unlink, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
+import { createUserWithEmailAndPassword, onAuthStateChanged, linkWithPopup, unlink, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile, deleteUser } from "firebase/auth";
 import { create } from "zustand";
 import { auth, db, googleProvider } from "../firebase/firebase";
-import { doc, getDoc, setDoc, updateDoc } from "firebase/firestore";
+import { deleteDoc, doc, getDoc, setDoc, updateDoc } from "firebase/firestore";
 
 // import { useNavigate } from "react-router-dom";
 export const useAuthStore = create((set, get) => ({
@@ -27,6 +27,11 @@ export const useAuthStore = create((set, get) => ({
                         birth: userInfo?.birth,
                         gender: userInfo?.gender,
                         address: userInfo?.address,
+                        socials: userInfo?.socials || {
+                            google: { email: "", linked: false },
+                            kakao: { email: "", linked: false },
+                            naver: { email: "", linked: false },
+                        },
                         providers: u.providerData.map(p => p.providerId)
                     }
                 })
@@ -110,8 +115,8 @@ export const useAuthStore = create((set, get) => ({
     onGoogleLogin: async () => {
         try {
             const result = await signInWithPopup(auth, googleProvider);
-            console.log("구글 로그인", result);
             const user = result.user;
+            const googleEmail = user.email;
 
             // firebase 저장
             const userRef = doc(db, "people", user.uid)
@@ -123,30 +128,38 @@ export const useAuthStore = create((set, get) => ({
                     uid: user.uid,
                     email: user.email,
                     name: user.displayName,
-                    phone: user.phoneNumber
-                }
-                await setDoc(userRef, userInfo)
+                    phone: user.phoneNumber,
+                    socials: {
+                        google: { email: googleEmail, linked: true },
+                        kakao: { email: "", linked: false },
+                        naver: { email: "", linked: false },
+                    }
+                };
+                await setDoc(userRef, userInfo);
                 set({
                     user: {
                         ...userInfo,
                         providers: user.providerData.map(p => p.providerId)
                     }
-                })
-            }
-            else {
+                });
+            } else {
+                await updateDoc(userRef, {
+                    "socials.google": { email: googleEmail, linked: true }
+                });
                 set({
                     user: {
                         ...userDoc.data(),
-                        googleEmail: user.email,
+                        socials: {
+                            ...userDoc.data().socials,
+                            google: { email: googleEmail, linked: true }
+                        },
                         providers: user.providerData.map(p => p.providerId)
                     }
-                })
+                });
             }
             return true;
-        }
-        catch (err) {
+        } catch (err) {
             alert(err.message);
-
         }
     },
 
@@ -165,7 +178,6 @@ export const useAuthStore = create((set, get) => ({
 
     onKakaoLogin: async () => {
         try {
-
             // 1 카카오 SDK 초기화
             if (!window.Kakao.isInitialized()) {
                 window.Kakao.init('15ae98903af08e0b25e2d43e5b601235');
@@ -189,6 +201,7 @@ export const useAuthStore = create((set, get) => ({
 
             // 4 사용자 정보 가공
             const uid = res.id.toString();
+            const kakaoEmail = res.kakao_account?.email || '';
             const kakaoUser = {
                 uid,
                 email: res.kakao_account?.email || '',
@@ -205,22 +218,59 @@ export const useAuthStore = create((set, get) => ({
             const userDoc = await getDoc(userRef);
 
             if (!userDoc.exists()) {
-                await setDoc(userRef, kakaoUser);
-                console.log(' 신규 카카오 회원 Firestore에 등록 완료');
+                await setDoc(userRef, {
+                    ...kakaoUser,
+                    socials: {
+                        google: { email: "", linked: false },
+                        kakao: { email: kakaoEmail, linked: true },
+                        naver: { email: "", linked: false },
+                    }
+                });
             } else {
-                console.log('기존 카카오 회원 Firestore 데이터 있음');
+                await updateDoc(userRef, {
+                    "socials.kakao": { email: kakaoEmail, linked: true }
+                });
             }
 
-            // 6 Zustand 상태 업데이트
-            set({ user: kakaoUser });
+            const currentUser = get().user;
+            if (currentUser) {
+                const currentUserRef = doc(db, 'people', currentUser.uid);
+                await updateDoc(currentUserRef, {
+                    "socials.kakao": { email: kakaoEmail, linked: true }
+                });
+            } else {
+                set({ user: { ...kakaoUser, socials: { kakao: { email: kakaoEmail, linked: true } } } })
+            }
 
-            alert(`${kakaoUser.nickname}님, 카카오 로그인 성공! `);
+            alert(`${kakaoUser.nickname}님, 카카오 로그인 성공!`);
             return true;
         }
         catch (err) {
-            console.error(' 카카오 로그인 중 오류:', err)
-            alert(err.message)
+            console.error(' 카카오 로그인 중 오류:', err);
+            alert(err.message);
         }
+
+        const currentUser = get().user
+
+        if (currentUser) {
+            const currentUserRef = doc(db, 'people', currentUser.uid)
+            await updateDoc(currentUserRef, {
+                "socials.kakao": { email: kakaoUser.email, linked: true }
+            })
+            set({
+                user: {
+                    ...currentUser,
+                    socials: {
+                        ...currentUser?.socials,
+                        kakao: { email: kakaoUser.email, linked: true }
+                    }
+                }
+            })
+        } else {
+            set({ user: kakaoUser })
+        }
+        alert(`${kakaoUser.nickname}님, 카카오 연동 완료!`)
+        return true
     },
 
 
@@ -261,7 +311,26 @@ export const useAuthStore = create((set, get) => ({
                 await setDoc(userRef, naverUser);
             }
 
-            set({ user: naverUser });
+            const currentUser = get().user
+            if (currentUser) {
+                const currentUserRef = doc(db, 'people', currentUser.uid)
+                await updateDoc(currentUserRef, {
+                    "socials.naver": { email: profile.email || '', linked: true }
+                })
+                set({
+                    user: {
+                        ...currentUser,
+                        socials: {
+                            ...currentUser?.socials,
+                            naver: { email: profile.email || '', linked: true }
+                        }
+                    }
+                })
+            } else {
+                set({ user: naverUser })
+            }
+
+            return true
 
         } catch (err) {
             console.error('네이버 콜백 오류:', err);
@@ -269,37 +338,145 @@ export const useAuthStore = create((set, get) => ({
         }
     },
 
-
-
-
-    // 구글 가입, 탈퇴
-    onSocialLink: async () => {
+    // 소셜 연동
+    onSocialLink: async (provider) => {
         try {
-            await linkWithPopup(auth.currentUser, googleProvider)
-            alert("구글 가입 완료")
-            set({
-                user: {
-                    ...get().user,
-                    providers: auth.currentUser.providerData.map(p => p.providerId)
+            const u = get().user
+            if (!u) {
+                alert("로그인이 필요합니다")
+                return
+            }
+            const userRef = doc(db, "people", u.uid)
+            if (provider === "google") {
+                if (!auth.currentUser) {
+                    alert("로그인이 필요합니다")
+                    return
                 }
-            })
+                await linkWithPopup(auth.currentUser, googleProvider)
+                const googleEmail = auth.currentUser.providerData
+                    .find(p => p.providerId === "google.com")?.email
+
+                await updateDoc(userRef, {
+                    "socials.google": { email: googleEmail, linked: true }
+                })
+                set({
+                    user: {
+                        ...get().user,
+                        socials: {
+                            ...get().user?.socials,
+                            google: { email: googleEmail, linked: true }
+                        }
+                    }
+                })
+            } else if (provider === "kakao") {
+                if (!window.Kakao.isInitialized()) {
+                    window.Kakao.init('15ae98903af08e0b25e2d43e5b601235')
+                }
+                const authObj = await new Promise((resolve, reject) => {
+                    window.Kakao.Auth.login({
+                        scope: 'profile_nickname',
+                        success: resolve,
+                        fail: reject,
+                    })
+                })
+                const res = await window.Kakao.API.request({ url: '/v2/user/me' })
+                const kakaoEmail = res.kakao_account?.email || ''
+
+                await updateDoc(userRef, {
+                    "socials.kakao": { email: kakaoEmail, linked: true }
+                })
+                set({
+                    user: {
+                        ...get().user,
+                        socials: {
+                            ...get().user?.socials,
+                            kakao: { email: kakaoEmail, linked: true }
+                        }
+                    }
+                })
+            } else if (provider === "naver") {
+                const clientId = import.meta.env.VITE_NAVER_CLIENT_ID
+                const callbackUrl = encodeURIComponent(import.meta.env.VITE_NAVER_CALLBACK_URL)
+                const state = Math.random().toString(36).substring(2)
+                window.location.href = `https://nid.naver.com/oauth2.0/authorize?response_type=token&client_id=${clientId}&redirect_uri=${callbackUrl}&state=${state}`
+            }
+            alert(`${provider} 연동 완료!`)
         } catch (err) {
-            alert("가입 실패 :" + err.message)
+            alert("연동실패:" + err.message)
         }
     },
 
-    onSocialUnlink: async (providerId) => {
+    onSocialUnlink: async (provider) => {
         try {
-            await unlink(auth.currentUser, providerId)
-            alert("탈퇴 완료!")
+            const u = get().user
+            const userRef = doc(db, "people", u.uid)
+
+            if (provider === "google") {
+                await unlink(auth.currentUser, "google.com")
+            }
+
+            await updateDoc(userRef, {
+                [`socials.${provider}`]: { email: "", linked: false }
+            })
+
             set({
                 user: {
                     ...get().user,
-                    providers: auth.currentUser.providerData.map(p => p.providerId)
+                    socials: {
+                        ...get().user?.socials,
+                        [provider]: { email: "", linked: false }
+                    }
                 }
             })
+            alert(`${provider} 연동 해제 완료`)
         } catch (err) {
             alert("탈퇴 실패:" + err.message)
+        }
+    },
+
+    onKakaoUnlink: () => {
+        set({
+            user: {
+                ...get().user,
+                provider: null
+            }
+        })
+    },
+
+    onNaverUnlink: () => {
+        set({
+            user: {
+                ...get().user,
+                provider: null
+            }
+        })
+    },
+
+    // 회원탈퇴
+    onDeleteAccount: async () => {
+        try {
+            const u = get().user
+            const userRef = doc(db, "people", u.uid)
+
+            await deleteDoc(userRef)
+
+            if (auth.currentUser) {
+                await deleteUser(auth.currentUser)
+            }
+
+            if (u.provider === "kakao" && window.Kakao?.isInitialized()) {
+                await new Promise((resolve) => {
+                    window.Kakao.API.request({
+                        url: '/v1/user/unlink',
+                        success: resolve,
+                    })
+                })
+            }
+            set({ user: null })
+            return true
+        } catch (err) {
+            alert("탈퇴 실패:" + err.message)
+            return false
         }
     }
 }));

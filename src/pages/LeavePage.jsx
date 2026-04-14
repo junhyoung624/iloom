@@ -4,10 +4,9 @@ import { Link, useLocation, useNavigate } from 'react-router-dom'
 import "./scss/mypage.scss"
 
 export default function LeavePage() {
-    const { user, onLogout } = useAuthStore()
+    const { user, onDeleteAccount } = useAuthStore()
     const [isChecked, setIsChecked] = useState(false)
     const navigate = useNavigate()
-    const location = useLocation()
 
     const handleLeave = async () => {
         if (!isChecked) {
@@ -15,9 +14,11 @@ export default function LeavePage() {
             return
         }
         if (window.confirm("정말 탈퇴하시겠습니까?")) {
-            await onLogout()
-            alert("탈퇴가 완료되었습니다.")
-            navigate("/")
+            const result = await onDeleteAccount()
+            if (result) {
+                alert("탈퇴가 완료되었습니다.")
+                navigate("/")
+            }
         }
     }
 
