@@ -13,22 +13,24 @@ export default function FurnitureList() {
         { id: "6", key: "조명", image: "./images/furnitureList/FList06.png" },
     ]
     return (
-        <div className='furniture-list'>
-            <div className="inner">
-                <ul>
-                    {FurnitureList.map((item, id) => (
-                        <li key={id}>
-                            <div className='furniture-item'>
-                                <Link to={`/furniture/${item.id}`}>
-                                    <img src={item.image} alt={item.key} />
-                                    <p>{item.key}</p>
-                                </Link>
-                            </div>
-                        </li>
-                    ))}
+        <section>
+            <div className='furniture-list'>
+                <div className="inner">
+                    <ul>
+                        {FurnitureList.map((item, id) => (
+                            <li key={id}>
+                                <div className='furniture-item'>
+                                    <Link to={`/furniture/${item.id}`}>
+                                        <img src={item.image} alt={item.key} />
+                                        <p>{item.key}</p>
+                                    </Link>
+                                </div>
+                            </li>
+                        ))}
 
-                </ul>
+                    </ul>
+                </div>
             </div>
-        </div>
+        </section>
     )
 }

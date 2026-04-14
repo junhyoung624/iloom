@@ -4,8 +4,7 @@ import { persist } from "zustand/middleware";
 
 export const useProductStore = create(persist((set, get) => ({
 
-
-    //상품 변수, 메서드
+   //상품 변수, 메서드
     items: [],
     //메뉴를 저장할 변수
     menus: [],
