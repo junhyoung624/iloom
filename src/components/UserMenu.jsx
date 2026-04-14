@@ -35,7 +35,6 @@ const UserMenu = ({ userClose }) => {
         {mypage.map((p, id) => (
           <li key={id}>
             <Link to={`${p.link}`}>{p.name}</Link>
-            <Link to={p.link}>{p.name}</Link>
 
             {
               p.sub && (
