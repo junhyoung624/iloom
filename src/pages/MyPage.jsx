@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 import { useAuthStore } from '../store/useAuthStore'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import "./scss/mypage.scss"
 
 export default function MyPage() {
-    const { user, onUpdate, onSocialLink, onSocialUnlink } = useAuthStore()
+    const navigate = useNavigate()
+    const { user, onUpdate, onSocialLink, onSocialUnlink, onKakaoLogin, onNaverLogin, onKakaoUnlink, onNaverUnlink } = useAuthStore()
     const [isOpen, setIsOpen] = useState(false)
     const [isAgreeOpen, setIsAgreeOpen] = useState(false)
 
@@ -29,8 +30,21 @@ export default function MyPage() {
         }
     }
 
-    const isLinked = (providerId) => {
-        return user?.providers?.includes(providerId)
+    const isLinked = (provider) => {
+        return user?.socials?.[provider]?.linked === true
+    }
+
+    const handleUnlink = async (provider) => {
+        const linkedCount = ['google', 'kakao', 'naver']
+            .filter(p => user?.socials?.[p]?.linked === true).length
+
+        if (linkedCount <= 1) {
+            if (window.confirm("마지막 연동 계정입니다. 회원탈퇴 페이지로 이동할까요?")) {
+                navigate("/leavepage")
+            }
+            return
+        }
+        await onSocialUnlink(provider)
     }
 
     const location = useLocation()
@@ -110,9 +124,9 @@ export default function MyPage() {
                             <div className="sns-item">
                                 <img src="./images/mypage/google.png" alt="google" />
                                 <div>
-                                    <p>{isLinked("google.com") ? `${user?.googleEmail} 가입` : "미가입"}</p>
-                                    {isLinked("google.com")
-                                        ? <button onClick={() => onSocialUnlink("google.com")}>탈퇴하기</button>
+                                    <p>{isLinked("google") ? `${user?.socials?.google?.email} 가입` : "미가입"}</p>
+                                    {isLinked("google")
+                                        ? <button onClick={() => handleUnlink("google")}>탈퇴하기</button>
                                         : <button onClick={() => onSocialLink("google")}>가입하기</button>
                                     }
                                 </div>
@@ -121,18 +135,28 @@ export default function MyPage() {
                             {/* 카카오 */}
                             <div className="sns-item">
                                 <img src="./images/mypage/kakao.png" alt="kakao" />
-                                <div>
-                                    <p>미가입</p>
-                                    <button disabled>가입하기</button>
+                                <div className="sns-info">
+                                    <p>
+                                        {isLinked("kakao")
+                                            ? user?.socials?.kakao?.email
+                                                ? `${user.socials.kakao.email} 가입`
+                                                : "카카오 가입"
+                                            : "미가입"}
+                                    </p>
+                                    {isLinked("kakao")
+                                        ? <button onClick={() => handleUnlink("kakao")}>탈퇴하기</button>
+                                        : <button onClick={() => onSocialLink("kakao")}>가입하기</button>}
                                 </div>
                             </div>
 
                             {/* 네이버 */}
                             <div className="sns-item">
                                 <img src="./images/mypage/naver.png" alt="naver" />
-                                <div>
-                                    <p>미가입</p>
-                                    <button disabled>가입하기</button>
+                                <div className="sns-info">
+                                    <p>{isLinked("naver") ? `${user?.socials?.naver?.email} 가입` : "미가입"}</p>
+                                    {isLinked("naver")
+                                        ? <button onClick={() => handleUnlink("naver")}>탈퇴하기</button>
+                                        : <button onClick={() => onSocialLink("naver")}>가입하기</button>}
                                 </div>
                             </div>
                         </div>

@@ -1,22 +1,18 @@
 .new-collection {
     width: 100%;
 
-    .inner {
-        width: 100%;
-        max-width: 100%;
-        margin: 0;
-    }
-
     .thumbnail {
         position: relative;
         width: 100%;
+
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
     }
 
-    .thumbnail img {
-        display: block;
-        width: 100%;
-        height: auto;
-    }
+
 
     .text-box {
         position: absolute;
@@ -54,39 +50,5 @@
         }
 
     }
-}
 
-
-.item-wrap {
-    max-width: 1440px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 20px;
-    padding: 200px 0;
-
-    img {
-        width: 283px;
-    }
-
-    .series {
-        font-size: 20px;
-        font-weight: 600;
-    }
-
-    h1 {
-        font-size: 16px;
-        color: #606060;
-    }
-
-    h2 {
-        font-size: 13px;
-        color: #909090;
-    }
-
-    span {
-        font-size: 16px;
-        font-weight: 600;
-        color: #CA1230;
-    }
 }
