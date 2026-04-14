@@ -3,7 +3,7 @@ import { useAuthStore } from '../store/useAuthStore'
 import { Link } from 'react-router-dom';
 
 
-const UserMenu = ({ userClose, userMenu}) => {
+const UserMenu = ({ userClose }) => {
   const mypage = [
     { link: "/order", name: '주문/배송' },
     { link: "/wish", name: '위시리스트' },
@@ -11,7 +11,7 @@ const UserMenu = ({ userClose, userMenu}) => {
       link: "/mypage", name: '내 정보관리',
       sub: [
         { link: "/mypage", name: "회원정보 수정" },
-        { link: "/mypage", name: "회원 탈퇴" },
+        { link: "/mypage/leavepage", name: "회원 탈퇴" },
       ]
     }
   ]
@@ -25,7 +25,7 @@ const UserMenu = ({ userClose, userMenu}) => {
       <p className='user-name'><strong>{user?.name}</strong> 님 환영합니다!</p>
       <p className='close-btn' onClick={userClose}><img src="./images/logo-icon/close-btn-black.png" alt="" /></p>
 
-      <button className='logout-btn' onClick={onLogout } >
+      <button className='logout-btn' onClick={onLogout}>
         로그아웃
       </button>
 
@@ -34,21 +34,23 @@ const UserMenu = ({ userClose, userMenu}) => {
       <ul className="info-list">
         {mypage.map((p, id) => (
           <li key={id}>
-            <Link to={p.link}>{p.name}</Link>
+            <Link to={`${p.link}`}>{p.name}</Link>
 
-            {p.sub && (
-              <ul className='info-sub-list'>
-                {p.sub.map((sub, subId) => (
-                  <li key={subId}>
-                    <Link to={sub.link}>{sub.name}</Link>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </li>
+            {
+              p.sub && (
+                <ul className='info-sub-list'>
+                  {p.sub.map((sub, subId) => (
+                    <li key={subId}>
+                      <Link to={sub.link}>{sub.name}</Link>
+                    </li>
+                  ))}
+                </ul>
+              )
+            }
+          </li >
         ))}
-      </ul>
-    </div>
+      </ul >
+    </div >
   )
 }
 
