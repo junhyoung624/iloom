@@ -1,7 +1,8 @@
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, updateProfile, GoogleAuthProvider, linkWithPopup, unlink, onAuthStateChanged } from "firebase/auth";
+import { createUserWithEmailAndPassword, onAuthStateChanged, linkWithPopup, unlink, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import { create } from "zustand";
-import { auth, db } from "../firebase/firebase";
+import { auth, db, googleProvider } from "../firebase/firebase";
 import { doc, getDoc, setDoc, updateDoc } from "firebase/firestore";
+
 import { useNavigate } from "react-router-dom";
 export const useAuthStore = create((set, get) => ({
 
@@ -85,6 +86,7 @@ export const useAuthStore = create((set, get) => ({
                     email: u.email,
                     name: userInfo.name,
                     phone: userInfo.phone,
+                    providers: u.providerData.map(p => p.providerId)
                 }
             })
         }
@@ -99,25 +101,66 @@ export const useAuthStore = create((set, get) => ({
         set({ user: null })
     },
 
+    // 구글로그인
+    onGoogleLogin: async () => {
+        try {
+            const result = await signInWithPopup(auth, googleProvider);
+            console.log("구글 로그인", result);
+            const user = result.user;
+
+            // firebase 저장
+            const userRef = doc(db, "people", user.uid)
+            // 이미 회원인지 체크
+            const userDoc = await getDoc(userRef)
+            // 회원이 아니면 새로운 정보로 회원가입하기
+            if (!userDoc.exists()) {
+                const userInfo = {
+                    uid: user.uid,
+                    email: user.email,
+                    name: user.displayName,
+                    phone: user.phoneNumber
+                }
+                await setDoc(userRef, userInfo)
+                set({
+                    user: {
+                        ...userInfo,
+                        providers: user.providerData.map(p => p.providerId)
+                    }
+                })
+            }
+            else {
+                set({
+                    user: {
+                        ...userDoc.data(),
+                        googleEmail: user.email,
+                        providers: user.providerData.map(p => p.providerId)
+                    }
+                })
+            }
+        }
+        catch (err) {
+            alert(err.message);
+
+        }
+    },
+
     // 업데이트
-    onUpdate: async ({ birth, gender, address }) => {
+    onUpdate: async ({ birth, gender, address, email, phone }) => {
         const u = get().user
         const userRef = doc(db, "people", u.uid)
 
-        await updateDoc(userRef, { birth, gender, address })
+        await updateDoc(userRef, { birth, gender, address, email, phone })
 
         set({
-            user: { ...get().user, birth, gender, address }
+            user: { ...get().user, birth, gender, address, email, phone }
         })
     },
 
     // 구글 가입, 탈퇴
-    onSocialLink: async (providerName) => {
+    onSocialLink: async () => {
         try {
-            const provider = new GoogleAuthProvider()
-            await linkWithPopup(auth.currentUser, provider)
+            await linkWithPopup(auth.currentUser, googleProvider)
             alert("구글 가입 완료")
-
             set({
                 user: {
                     ...get().user,
@@ -125,7 +168,22 @@ export const useAuthStore = create((set, get) => ({
                 }
             })
         } catch (err) {
-            alert("탈퇴 실패 :" + err.message)
+            alert("가입 실패 :" + err.message)
+        }
+    },
+
+    onSocialUnlink: async (providerId) => {
+        try {
+            await unlink(auth.currentUser, providerId)
+            alert("탈퇴 완료!")
+            set({
+                user: {
+                    ...get().user,
+                    providers: auth.currentUser.providerData.map(p => p.providerId)
+                }
+            })
+        } catch (err) {
+            alert("탈퇴 실패:" + err.message)
         }
     }
 }));

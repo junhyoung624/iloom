@@ -25,6 +25,7 @@ import QuickMenu from './components/QuickMenu'
 import Order from './pages/Order'
 import MyPage from './pages/MyPage'
 import { useAuthStore } from './store/useAuthStore'
+import LeavePage from './pages/LeavePage'
 
 // 메인 페이지
 function App() {
@@ -35,7 +36,7 @@ function App() {
     onfetchItems();
     onMakeMenu();
     initAuth()
-  }, [onfetchItems, onMakeMenu])
+  }, [])
   return (
     <>
       <ScrollTop />
@@ -59,6 +60,7 @@ function App() {
         <Route path="/company-info" element={<CompanyInfo />} />
         <Route path='/companypage' element={<CompanyPage />} />
         <Route path='/mypage' element={<MyPage />} />
+        <Route path='/leavepage' element={<LeavePage />} />
       </Routes>
       <QuickMenu />
       <Footer />

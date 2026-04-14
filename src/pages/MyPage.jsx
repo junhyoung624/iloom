@@ -6,6 +6,7 @@ import "./scss/mypage.scss"
 export default function MyPage() {
     const { user, onUpdate, onSocialLink, onSocialUnlink } = useAuthStore()
     const [isOpen, setIsOpen] = useState(false)
+    const [isAgreeOpen, setIsAgreeOpen] = useState(false)
 
     const [form, setForm] = useState({
         birth: user?.birth || "",
@@ -20,8 +21,12 @@ export default function MyPage() {
     }
 
     const handleSave = async () => {
-        await onUpdate(form)
-        setIsOpen(false)
+        try {
+            await onUpdate(form)
+            setIsOpen(false)
+        } catch (err) {
+            console.log("저장 실패:", err)
+        }
     }
 
     const isLinked = (providerId) => {
@@ -38,7 +43,7 @@ export default function MyPage() {
                         <li><Link to="/order">주문/배송</Link></li>
                         <li><Link to="/wishlist">위시리스트</Link></li>
                         <li className={location.pathname === "/mypage" ? "active" : ""}><Link to="/mypage">회원 정보 수정</Link></li>
-                        <li><Link to="/mypage/leave">회원 탈퇴</Link></li>
+                        <li><Link to="/leavepage">회원 탈퇴</Link></li>
                     </ul>
                 </aside>
 
@@ -58,9 +63,7 @@ export default function MyPage() {
                                 <div className="info-item">
                                     <label>생년월일</label>
                                     <div className="birth-box">
-                                        <p>{user?.birthYear || "미입력"}년</p>
-                                        <p>{user?.birthMonth || "미입력"}월</p>
-                                        <p>{user?.birthDay || "미입력"}일</p>
+                                        <p>{user?.birth || "미입력"}</p>
                                         <div className="gender-box">
                                             <label>
                                                 <input type="radio"
@@ -88,9 +91,7 @@ export default function MyPage() {
                                 <div className="info-item">
                                     <label>전화번호</label>
                                     <div className="phone-box">
-                                        <p>{user?.phone1 || "미입력"}</p>
-                                        <p>{user?.phone2 || "미입력"}</p>
-                                        <p>{user?.phone3 || "미입력"}</p>
+                                        <p>{user?.phone || "미입력"}</p>
                                     </div>
                                 </div>
 
@@ -109,7 +110,7 @@ export default function MyPage() {
                             <div className="sns-item">
                                 <img src="./images/mypage/google.png" alt="google" />
                                 <div>
-                                    <p>{isLinked("google.com") ? "구글가입" : "미가입"}</p>
+                                    <p>{isLinked("google.com") ? `${user?.googleEmail} 가입` : "미가입"}</p>
                                     {isLinked("google.com")
                                         ? <button onClick={() => onSocialUnlink("google.com")}>탈퇴하기</button>
                                         : <button onClick={() => onSocialLink("google")}>가입하기</button>
@@ -150,7 +151,7 @@ export default function MyPage() {
                                 </p>
                                 <p className="notice">※ 정보수신에 동의하지 않으셔도 정상적인 서비스 이용이 가능합니다.</p>
                             </div>
-                            <button className="agree-btn">동의 내용보기</button>
+                            <button className="agree-btn" onClick={() => setIsAgreeOpen(true)}>동의 내용보기</button>
                         </div>
                     </div>
                 </div>
@@ -191,6 +192,49 @@ export default function MyPage() {
                         <div className="modal-btns">
                             <button onClick={() => setIsOpen(false)}>취소</button>
                             <button onClick={handleSave}>저장</button>
+                        </div>
+                    </div>
+                </div>
+            )}
+
+            {/* 동의내용팝업 */}
+            {isAgreeOpen && (
+                <div className="modal-overlay" onClick={() => setIsAgreeOpen(false)}>
+                    <div className="modal" onClick={(e) => e.stopPropagation()}>
+                        <h3>개인정보 수집 및 이용동의</h3>
+
+                        <div className="agree-detail">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>수집 항목</th>
+                                        <th>수집 목적</th>
+                                        <th>보유 기간</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>이름, 이메일, 전화번호</td>
+                                        <td>회원 서비스 제공 및 본인 확인</td>
+                                        <td>회원 탈퇴 시까지</td>
+                                    </tr>
+                                    <tr>
+                                        <td>구매 내역, 배송지 정보</td>
+                                        <td>주문 및 배송 처리</td>
+                                        <td>5년</td>
+                                    </tr>
+                                    <tr>
+                                        <td>이메일, 휴대폰 번호</td>
+                                        <td>마케팅 정보 발송</td>
+                                        <td>동의 철회 시까지</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p className="agree-notice">※ 위 동의를 거부할 권리가 있으며, 동의 거부 시에도 기본 서비스 이용이 가능합니다. 단, 마케팅 정보 수신이 제한될 수 있습니다.</p>
+                        </div>
+
+                        <div className="modal-btns">
+                            <button onClick={() => setIsAgreeOpen(false)}>닫기</button>
                         </div>
                     </div>
                 </div>

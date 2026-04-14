@@ -11,7 +11,7 @@ const UserMenu = ({ userClose }) => {
       link: "/mypage", name: '내 정보관리',
       sub: [
         { link: "/mypage", name: "회원정보 수정" },
-        { link: "/mypage", name: "회원 탈퇴" },
+        { link: "/mypage/leavepage", name: "회원 탈퇴" },
       ]
     }
   ]
@@ -35,18 +35,22 @@ const UserMenu = ({ userClose }) => {
         {mypage.map((p, id) => (
           <li key={id}>
             <Link to={`${p.link}`}>{p.name}</Link>
-            {p.sub && (
-              <ul className='info-sub-list'>
-                {p.sub.map((sub, subId) => (
-                  <li key={subId}>
-                    <Link to={sub.link}>{sub.name}</Link>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </li>
+            <Link to={p.link}>{p.name}</Link>
+
+            {
+              p.sub && (
+                <ul className='info-sub-list'>
+                  {p.sub.map((sub, subId) => (
+                    <li key={subId}>
+                      <Link to={sub.link}>{sub.name}</Link>
+                    </li>
+                  ))}
+                </ul>
+              )
+            }
+          </li >
         ))}
-      </ul>
+      </ul >
     </div >
   )
 }
