@@ -228,7 +228,7 @@ export const spaceCoordiData = [
                 price: "579,000원",
                 position: { x: 620, y: 502 },
                 //tag_position: "top",
-                tag_position_code: "translateY(-100%) translateY(-0.2rem)",
+                tag_position_code: "translateX(1.5rem) translateY(-1.5rem)",
                 //url:
                 src: "./images/spaceCoordi/libraryroom/products/table_brown.png",
                 default: false,
@@ -240,7 +240,7 @@ export const spaceCoordiData = [
                 price: "89,000원",
                 position: { x: 427, y: 435 },
                 //tag_position: "bottom",
-                tag_position_code: "translateY(1.5rem)",
+                tag_position_code: "translateX(-50%) translateY(1.5rem)",
                 //url:
                 src: "./images/spaceCoordi/libraryroom/products/bookshelf.png",
                 default: false,
@@ -264,7 +264,7 @@ export const spaceCoordiData = [
                 price: "749,000원",
                 position: { x: 774, y: 355 },
                 //tag_position: "bottom",
-                tag_position_code: "translateY(1.5rem)",
+                tag_position_code: "translateX(1.5rem) translateY(-1.5rem)",
                 //url:
                 src: "./images/spaceCoordi/libraryroom/products/chair.png",
                 default: false,
