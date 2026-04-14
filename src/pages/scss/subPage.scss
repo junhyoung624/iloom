@@ -1,0 +1,16 @@
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    li {
+        .img-box {
+            background: blue;
+            aspect-ratio: 1/1;
+        
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}

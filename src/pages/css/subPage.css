@@ -1,0 +1,12 @@
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.product-list li .img-box {
+  background: blue;
+  aspect-ratio: 1/1;
+}
+.product-list li .img-box img {
+  width: 100%;
+  height: 100%;
+}

@@ -23,18 +23,24 @@ import Cart from './pages/Cart'
 import CompanyPage from './pages/CompanyPage'
 import QuickMenu from './components/QuickMenu'
 import Order from './pages/Order'
+import MyPage from './pages/MyPage'
+import { useAuthStore } from './store/useAuthStore'
+import LeavePage from './pages/LeavePage'
 import ProductList from './components/ProductList'
 import Search from './components/Search'
 import OAuth from './pages/OAuth'
+import SubPage from './pages/SubPage'
 
 // 메인 페이지
 function App() {
   const { onfetchItems, onMakeMenu } = useProductStore();
+  const { initAuth } = useAuthStore()
 
   useEffect(() => {
     onfetchItems();
     onMakeMenu();
-  }, [onfetchItems, onMakeMenu])
+    initAuth()
+  }, [])
   return (
     <>
       <ScrollTop />
@@ -46,7 +52,10 @@ function App() {
         <Route path="/member" element={<Member />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/order" element={<Order />} />
-        <Route path='/product-list' element={<ProductList />} />
+        {/* <Route path='/product-list' element={<ProductList />} /> */}
+        <Route path='/:originalCategory' element={<SubPage />} />
+        <Route path='/:originalCategory/:category2' element={<SubPage />} />
+        <Route path='/:originalCategory/:category2/:category3' element={<SubPage />} />
 
         <Route path="/oauth" element={<OAuth />} />
 
@@ -60,6 +69,8 @@ function App() {
         <Route path="/notice" element={<Notice />} />
         <Route path="/company-info" element={<CompanyInfo />} />
         <Route path='/companypage' element={<CompanyPage />} />
+        <Route path='/mypage' element={<MyPage />} />
+        <Route path='/leavepage' element={<LeavePage />} />
       </Routes>
       <QuickMenu />
       <Footer />

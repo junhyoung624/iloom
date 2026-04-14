@@ -6,7 +6,7 @@ header {
     top: 0;
     width: 100%;
     background: transparent;
-    z-index: 1001;
+    z-index: 1002;
 
     .header-inner {
         @include g.myFlex($gap: null);
@@ -319,7 +319,7 @@ header.active+.main-menu-wrap {
     border: 1px solid #ddd;
 
     .user-img {
-        margin-top: 155px;
+        margin-top: 50px;
         margin-left: 60px;
 
         img {
@@ -340,10 +340,11 @@ header.active+.main-menu-wrap {
     }
 
     .line {
-        width: 160px;
+        width: 300px;
         border: 1px solid;
         margin: 0 auto;
-        margin-top: 80px;
+        margin-top: 100px;
+        margin-left: 80px;
     }
 
     .logout-btn {
@@ -363,10 +364,11 @@ header.active+.main-menu-wrap {
         color: #303030;
 
         li {
-            
+
 
             a {
                 position: relative;
+
                 &::after {
                     content: "";
                     position: absolute;
@@ -421,7 +423,7 @@ header.active+.main-menu-wrap {
     padding: 10px;
     border-top: 1px solid;
     border-bottom: 1px solid;
-    z-index: 1000;
+    z-index: 999;
 
     &.active {
         @include g.myFlex($jc: center, $gap: 50px);
@@ -431,5 +433,36 @@ header.active+.main-menu-wrap {
         &:hover {
             font-weight: bold;
         }
+    }
+}
+
+.user-menu-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s ease;
+    z-index: 9998;
+
+    &.active {
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
+
+.user-menu-wrap {
+    position: fixed;
+    top: 0;
+    right: -9999px;
+    height: 100vh;
+    width: 27%;
+    background: #fff;
+    z-index: 9999;
+    border: 1px solid #ddd;
+
+    &.active {
+        right: 0;
+        transition: 0.3s;
     }
 }
