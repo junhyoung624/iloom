@@ -2,7 +2,7 @@
 export const spaceCoordiData = [
     {
         id: 1,
-        tab: "tab1",
+        tab: "거실",
         space_image_url: "./images/spaceCoordi/livingroom/livingroom_coordi.png",
         products: [
             //id, name, price,image_url,position : {x : , y : },
@@ -34,7 +34,7 @@ export const spaceCoordiData = [
                 subName: "소파테이블 800폭",
                 price: "279,000원",
                 position: { x: 888, y: 618 },
-                tag_position_code: "translateX(1.5rem) translateY(-1.5rem)",
+                tag_position_code: "translateX(-50%) translateY(1.5rem)",
                 //url:
                 src: "./images/spaceCoordi/livingroom/products/table.png",
                 default: false,
@@ -44,8 +44,8 @@ export const spaceCoordiData = [
                 name: "앤트레디션",
                 subName: "코모 포터블 조명 (Como SC53 Portable)",
                 price: "오프라인 전용",
-                position: { x: 777, y: 385 },
-                tag_position_code: "translateY(1.5rem)",
+                position: { x: 777, y: 400 },
+                tag_position_code: "translateX(1.5rem) translateY(-1.5rem)",
                 //url:
                 src: "./images/spaceCoordi/livingroom/products/light.png",
                 default: false,
@@ -69,7 +69,7 @@ export const spaceCoordiData = [
 
     {
         id: 2,
-        tab: "tab2",
+        tab: "침실",
         space_image_url: "./images/spaceCoordi/bedroom/bedroom_coordi.png",
         products: [
             //id, name, price,image_url,position : {x : , y : },
@@ -135,7 +135,7 @@ export const spaceCoordiData = [
     },
     {
         id: 3,
-        tab: "tab3",
+        tab: "주방",
         space_image_url: "./images/spaceCoordi/diningroom/dining_coordi.png",
         products: [
             //id, name, price,image_url,position : {x : , y : },
@@ -205,7 +205,7 @@ export const spaceCoordiData = [
     },
     {
         id: 4,
-        tab: "tab4",
+        tab: "서재",
         space_image_url: "./images/spaceCoordi/libraryroom/library_coordi.png",
         products: [
             //id, name, price,image_url,position : {x : , y : },
