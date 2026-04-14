@@ -48,7 +48,14 @@ const HeaderInner = ({ onEnter, userClick, isHover }) => {
 
     return (
         <>
-            <div className="header-inner-wrap" ref={searchRef}>
+            <div
+                className={`search-overlay ${isSearchOpen ? "active" : ""}`}
+                onClick={() => setIsSearchOpen(false)}
+            />
+            <div
+                className={`header-inner-wrap ${isSearchOpen ? "search-open" : ""}`}
+                ref={searchRef}
+            >
                 <div className="header-inner">
                     <div className="header-left">
                         <div className="ham-btn" onMouseEnter={onEnter}>

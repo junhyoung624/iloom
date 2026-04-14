@@ -363,10 +363,11 @@ header.active+.main-menu-wrap {
         color: #303030;
 
         li {
-            
+
 
             a {
                 position: relative;
+
                 &::after {
                     content: "";
                     position: absolute;

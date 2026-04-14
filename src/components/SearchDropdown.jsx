@@ -8,15 +8,15 @@ export default function SearchDropdown() {
     const [activeMenu, setActiveMenu] = useState("md")
 
     const mdItems = useMemo(() => {
-        return items.filter(item => item.mdPick).slice(0, 5)
+        return items.filter(item => item.mdPick).slice(0, 7)
     }, [items])
 
     const bestItems = useMemo(() => {
-        return items.filter(item => item.BestSeller).slice(0, 5)
+        return items.filter(item => item.BestSeller).slice(0, 7)
     }, [items])
 
     const newItems = useMemo(() => {
-        return items.filter(item => item.new).slice(0, 5)
+        return items.filter(item => item.new).slice(0, 7)
     }, [items])
 
     const mdPickCount = useMemo(() => {

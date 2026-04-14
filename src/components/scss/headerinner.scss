@@ -1,5 +1,39 @@
 .header-inner-wrap {
     position: relative;
+    z-index: 30;
+
+    &.search-open {
+        background: #fff;
+        width: 100%;
+
+
+        .main-logo img {
+            content: url("./images/logo-icon/main-logo-black.png");
+        }
+
+        .ham-btn img {
+            content: url("./images/logo-icon/ham-black.png");
+        }
+
+        .gnb-list {
+            .icon-btn img {
+                content: url("./images/logo-icon/search-black.png");
+            }
+
+            .user-btn img {
+                content: url("./images/logo-icon/user-black.png");
+            }
+
+            a img {
+                content: url("./images/logo-icon/cart-black.png");
+            }
+        }
+
+        .user-btn span,
+        .cart-num {
+            color: #111;
+        }
+    }
 }
 
 .gnb-list {
@@ -15,6 +49,21 @@
     }
 }
 
+.search-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s ease;
+    z-index: 10;
+
+    &.active {
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
+
 .search-dropdown {
     position: absolute;
     top: 50px;
@@ -24,7 +73,7 @@
     background: #fff;
     max-height: 0;
     overflow: hidden;
-    transition: 0.3s ease;
+    transition: 0.5s ease;
     opacity: 0;
     pointer-events: none;
     z-index: 20;
