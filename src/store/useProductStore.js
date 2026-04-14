@@ -24,9 +24,6 @@ export const useProductStore = create(persist((set, get) => ({
     onSetSort: (type, order = "asc") =>
         set({ sortType: type, sortOrder: order }),
 
-    // 상품 
-    items: [],
-
     onfetchItems: async () => {
         const existing = get().items;
         if (existing.length > 0) return;

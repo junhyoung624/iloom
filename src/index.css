@@ -13,8 +13,12 @@ a {
     text-decoration: none;
 }
 
-img, video {
+img,
+video {
     max-width: 100%;
     vertical-align: middle;
 }
 
+html {
+    scrollbar-gutter: stable;
+}
