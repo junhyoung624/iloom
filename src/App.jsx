@@ -31,6 +31,7 @@ import Search from './components/Search'
 import OAuth from './pages/OAuth'
 import SubPage from './pages/SubPage'
 import SearchPage from './pages/SearchPage'
+import NaverCallback from './pages/NaverCallback'
 
 // 메인 페이지
 function App() {
@@ -73,6 +74,7 @@ function App() {
         <Route path='/companypage' element={<CompanyPage />} />
         <Route path='/mypage' element={<MyPage />} />
         <Route path='/leavepage' element={<LeavePage />} />
+        <Route path='/naver-callback' element={<NaverCallback />} />
       </Routes>
       <QuickMenu />
       <Footer />
