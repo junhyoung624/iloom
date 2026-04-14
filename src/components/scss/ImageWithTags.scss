@@ -75,6 +75,7 @@
     // width: .45rem;
     // height: .45rem;
     transform: scale(0.8);
+
 }
 
 // .dot-area:hover::before {
@@ -103,7 +104,27 @@
 
 .price-tag-active {
     position: relative;
+    display: block;
+
+}
+
+.price-tag-hidden {
+    position: relative;
     display: none;
+}
+
+.dot-active {
+    display: block;
+}
+
+.dot-inactive {
+    display: none;
+}
+
+.shop-btn-active {
+    opacity: 0.9;
+    // border: 1px solid black;
+    // border-radius: 50%;
 }
 
 .tag-inner {
