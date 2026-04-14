@@ -1,15 +1,99 @@
-.product-list {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+@use "../../App.scss" as g;
 
-    li {
-        .img-box {
-            background: blue;
-            aspect-ratio: 1/1;
-        
-            img {
+.sub-page {
+    h1 {
+        text-align: center;
+        margin-top: 80px;
+    }
+
+    .sub-product-list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        text-align: center;
+        gap: 30px;
+        padding: 130px 0;
+
+        li {
+            .product-img-box {
+                aspect-ratio: 1/1;
                 width: 100%;
-                height: 100%;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .product-text-box {
+
+                .sub-series-name {
+                    color: #606060;
+                    font-size: 18px;
+                    font-weight: 600;
+                    margin-top: 30px;
+                }
+
+                .product-name {
+                    font-weight: 400;
+                    font-size: 16px;
+                    color: #606060;
+                    margin-bottom: 15px;
+                }
+
+                .price {
+                    font-size: 16px;
+                    font-weight: 600;
+                    color: #CA1230;
+                }
+            }
+        }
+    }
+
+    .sub-tab {
+        @include g.myFlex($jc: center);
+        margin-top: 20px
+    }
+
+    .third-tab {
+        @include g.myFlex($jc: center);
+        margin-top: 20px
+    }
+
+    .sub-line {
+        border: 1px solid #c9c9c9;
+        margin-top: 130px;
+    }
+
+    .md-pick-wrap {
+        text-align: center;
+        margin-top: 90px;
+
+        h2 {
+            margin: 0;
+        }
+
+        .md-pick {
+            @include g.myFlex();
+
+
+            .sub-series-name {
+                color: #606060;
+                font-size: 18px;
+                font-weight: 600;
+                margin-top: 30px;
+            }
+
+            .product-name {
+                font-weight: 400;
+                font-size: 16px;
+                color: #606060;
+                margin-bottom: 15px;
+            }
+
+            .price {
+                font-size: 16px;
+                font-weight: 600;
+                color: #CA1230;
             }
         }
     }
