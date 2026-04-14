@@ -1,0 +1,487 @@
+.mypage {
+    .inner {
+        display: flex;
+        gap: 60px;
+        width: 1440px;
+        margin: 0 auto;
+        padding: 80px 0;
+    }
+
+    .sidebar {
+        width: 180px;
+        flex-shrink: 0;
+        text-align: left;
+
+        ul {
+            padding: 0;
+            margin: 0;
+
+            li {
+                padding: 14px 0;
+
+                a {
+                    font-size: 18px;
+                    color: #808080;
+
+                    &:hover {
+                        color: #303030;
+                    }
+                }
+
+                &.active {
+                    display: inline-block;
+                    border-bottom: 2px solid #303030;
+
+                    a {
+                        font-weight: 700;
+                        color: #303030
+                    }
+                }
+            }
+        }
+    }
+
+    .content {
+        flex: 1;
+
+        h2 {
+            font-size: 32px;
+            font-weight: 700;
+            text-align: center;
+            margin-top: 45px;
+            color: #303030;
+        }
+
+        h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin: 20px 15px;
+            color: #808080;
+            text-align: left;
+        }
+    }
+
+    .info-section {
+        margin-bottom: 45px;
+
+        .info-box {
+            display: flex;
+            border: 1px solid #c9c9c9;
+            gap: 90px;
+            padding: 32px;
+        }
+
+        .profile {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+            gap: 5px;
+            width: 200px;
+            flex-shrink: 0;
+            padding-left: 50px;
+
+            p {
+                font-size: 24px;
+                font-weight: 500;
+            }
+
+            strong {
+                font-size: 40px;
+                font-weight: 700;
+                padding-bottom: 25px;
+            }
+
+            button {
+                display: inline-block;
+                border: none;
+                border-bottom: 2px solid #c9c9c9;
+                background: none;
+                font-size: 16px;
+                font-weight: 600;
+                color: #c9c9c9;
+                text-align: left;
+
+                &:hover {
+                    color: #808080;
+                    border-bottom: 2px solid #808080;
+                }
+            }
+        }
+
+        .info-view {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto;
+            gap: 40px 60px;
+            flex: 1;
+            align-content: center;
+
+            .info-item {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                >label {
+                    font-size: 14px;
+                    font-weight: 600;
+                    color: #808080;
+                    text-align: left;
+                }
+
+                p {
+                    font-size: 12px;
+                    color: #c9c9c9;
+                    font-weight: 400;
+                    border: 1px solid #c9c9c9;
+                    background: #fbfbfb;
+                    padding: 12px 16px;
+                    margin: 0;
+                    text-align: left;
+                }
+            }
+
+            .birth-box {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+
+                p {
+                    flex: 1;
+                }
+
+                .gender-box {
+                    display: flex;
+                    gap: 10px;
+                    margin-left: 20px;
+                }
+
+                label {
+                    display: flex;
+                    align-items: center;
+                    gap: 4px;
+                    font-size: 12px;
+                    color: #c9c9c9;
+                    cursor: default;
+                }
+            }
+        }
+
+        .phone-box {
+            display: flex;
+            gap: 8px;
+
+            p {
+                flex: 1;
+            }
+        }
+    }
+}
+
+// SNS
+.sns-section {
+    margin-bottom: 45px;
+
+    .sns-box {
+        display: flex;
+        gap: 40px;
+        padding: 35px;
+        border: 1px solid #c9c9c9;
+    }
+
+    .sns-item {
+        display: flex;
+        gap: 30px;
+        align-items: center;
+        flex: 1;
+
+        img {
+            width: 55px;
+            height: 55px;
+
+        }
+
+        p {
+            color: #808080;
+            font-size: 16px;
+        }
+
+        button {
+            display: inline-block;
+            border: none;
+            background: none;
+            border-bottom: 1px solid #c9c9c9;
+            color: #c9c9c9;
+            font-size: 10px;
+            cursor: pointer;
+
+
+            &:hover {
+                color: #808080;
+                border-bottom: 1px solid #808080;
+            }
+
+            &:disabled {
+                color: #c9c9c9;
+                border-bottom: 1px solid #c9c9c9;
+                cursor: default;
+            }
+        }
+    }
+}
+
+// 선택 동의항목
+.agree-section {
+    margin-bottom: 45px;
+
+    .agree-box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px;
+        border: 1px solid #c9c9c9;
+    }
+
+    .agree-content {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 16px;
+            font-weight: 500;
+            color: #303030;
+            cursor: pointer;
+        }
+
+        .marketing {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 14px;
+            color: #808080;
+        }
+
+        .notice {
+            margin-top: 15px;
+            font-size: 12px;
+            font-weight: 500;
+            color: #c80a1e;
+        }
+    }
+
+    .agree-btn {
+        width: 245px;
+        padding: 10px 15px;
+        font-size: 16px;
+        color: #303030;
+        border: 1px solid #303030;
+        background: none;
+        cursor: pointer;
+
+        &:hover {
+            background: #303030;
+            color: #fff;
+        }
+    }
+}
+
+// 팝업
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.modal {
+    background: #fff;
+    padding: 40px;
+    width: 500px;
+
+    h3 {
+        font-size: 18px;
+        color: #303030;
+        font-weight: 700;
+        margin-bottom: 30px;
+    }
+
+    .form-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 16px;
+
+        >label:first-child {
+            width: 100px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #303030;
+            flex-direction: 0;
+        }
+
+        input[type="text"],
+        input[type="email"] {
+            flex: 1;
+            padding: 10px 12px;
+            border: 1px solid #c9c9c9;
+            font-size: 14px;
+        }
+
+        input[type="radio"] {
+            cursor: pointer;
+        }
+    }
+
+    .modal-btns {
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+        margin-top: 30px;
+
+        button {
+            padding: 10px 12px;
+            font-size: 12px;
+            cursor: pointer;
+
+            &:first-child {
+                background: #fff;
+                border: 1px solid #c9c9c9;
+                color: #303030;
+
+                &:hover {
+                    background: #f5f5f5;
+                }
+            }
+
+            &:last-child {
+                background: #303030;
+                color: #fff;
+                border: none;
+
+                &:hover {
+                    background: #555;
+                }
+            }
+        }
+    }
+}
+
+// 동의팝업
+.agree-detail {
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 16px;
+        font-size: 12px;
+
+
+        th {
+            background: #f5f5f5;
+            padding: 10px;
+            border: 1px solid #c9c9c9;
+            font-weight: 600;
+            color: #303030;
+        }
+
+        td {
+            padding: 10px;
+            border: 1px solid #c9c9c9;
+            color: #808080;
+        }
+    }
+
+    .agree-notice {
+        font-size: 11px;
+        color: #c80a1e;
+    }
+}
+
+// 회원탈퇴페이지
+h2 {
+    margin-bottom: 45px;
+}
+
+.leave-section {
+    .leave-box {
+        border: 1px solid #c9c9c9;
+        padding: 32px;
+        margin-bottom: 24px;
+
+        h3 {
+            font-size: 16px;
+            font-weight: 700;
+            color: #303030;
+            margin-bottom: 25px;
+        }
+
+        .leave-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            padding-left: 20px;
+            margin-bottom: 30px;
+
+            li {
+                font-size: 14px;
+                color: #808080;
+            }
+        }
+    }
+
+    .leave-confirm {
+        margin-bottom: 32px;
+
+        label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            color: #303030;
+            cursor: pointer;
+        }
+    }
+
+    .leave-btns {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+
+        button {
+            width: 160px;
+            padding: 14px 0;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        .cancel-btn {
+            background: #fff;
+            border: 1px solid #c9c9c9;
+            color: #303030;
+
+            &:hover {
+                background: #303030;
+                color: #fff;
+            }
+        }
+
+        .leave-btn {
+            background: #303030;
+            color: #fff;
+            border: none;
+
+            &:hover {
+                background: #808080;
+            }
+        }
+    }
+}

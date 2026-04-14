@@ -23,7 +23,6 @@ export const useAuthStore = create((set, get) => ({
                         email: u.email,
                         name: userInfo?.name,
                         phone: userInfo?.phone,
-
                         birth: userInfo?.birth,
                         gender: userInfo?.gender,
                         address: userInfo?.address,
@@ -35,9 +34,6 @@ export const useAuthStore = create((set, get) => ({
             }
         })
     },
-
-
-
 
     // 회원가입
     onMember: async ({ uname, email, password, phone }) => {
