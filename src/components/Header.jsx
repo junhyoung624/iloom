@@ -6,13 +6,14 @@ import UserMenu from './UserMenu'
 import "./scss/header.scss"
 import { useProductStore } from '../store/useProductStore'
 import { useAuthStore } from '../store/useAuthStore'
+import SearchDropdown from './SearchDropdown'
 
 // header
 const Header = () => {
 
   // 메뉴 불러오기
   const { menus } = useProductStore();
-  const {user} = useAuthStore();
+  const { user } = useAuthStore();
   const [isScroll, setScroll] = useState(false);
 
   const location = useLocation();
@@ -37,7 +38,7 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [Home])
 
-  
+
 
 
   const [isHover, setHover] = useState(false);
@@ -65,7 +66,7 @@ const Header = () => {
   const [userMenu, setUserMenu] = useState(false);
   const userLogin = useRef(null);
   const loginMenu = useRef(false);
-  
+
   useEffect(() => {
     if (!userLogin.current && user) {
       setUserMenu(true);
@@ -76,13 +77,13 @@ const Header = () => {
     userLogin.current = user;
   }, [user]);
 
-  useEffect(()=>{
+  useEffect(() => {
     if (loginMenu.current) {
       loginMenu.current = false;
       return;
     }
     setUserMenu(false)
-  },[location.pathname])
+  }, [location.pathname])
 
   const handleClick = () => {
     setUserMenu(true)
@@ -91,18 +92,47 @@ const Header = () => {
   const closeBtn = () => {
     setUserMenu(false)
   }
+
+  //////////////////////////////////////
+  const [isSearchOpen, setIsSearchOpen] = useState(false)
+
+  useEffect(() => {
+    if (isSearchOpen) {
+      document.documentElement.style.overflow = "hidden"
+    } else {
+      document.documentElement.style.overflow = ""
+    }
+
+    return () => {
+      document.documentElement.style.overflow = ""
+    }
+  }, [isSearchOpen])
+
+  const handleSearchToggle = () => {
+    setIsSearchOpen((prev) => !prev)
+  }
+
+  const handleSearchClose = () => {
+    setIsSearchOpen(false)
+  }
+
   return (
     <>
-      <header className={isScroll ? "active" : ""}>
+      <header className={isScroll || isSearchOpen ? "active" : ""}>
         <HeaderInner
           onEnter={handleEnter}
           userClick={handleClick}
           isHover={isHover}
-           />
-      </header>
+          isSearchOpen={isSearchOpen}
+          searchClick={handleSearchToggle}
+        />
+      </header >
 
 
-      {isHover && <MainMenu menus={menus} onSend={handleLeave} />}
+      {isHover && <MainMenu menus={menus} onSend={handleLeave} />
+      }
+
+
 
 
       {/* <div
@@ -110,8 +140,20 @@ const Header = () => {
         onMouseLeave={scrollLeave}>
         <MainMenu menus={menus}/>
       </div> */}
+      <div
+        className={`user-menu-overlay ${userMenu ? "active" : ""}`}
+        onClick={closeBtn}
+      />
+
       <div className={`user-menu-wrap ${userMenu ? "active" : ""}`}>
-        <UserMenu userClose={closeBtn} userMenu={userMenu}/>
+        <UserMenu userClose={closeBtn} userMenu={userMenu} />
+      </div>
+
+      <div
+        className={`search-overlay ${isSearchOpen ? "active" : ""}`}
+        onClick={handleSearchClose}
+      >
+        <SearchDropdown isSearchOpen={isSearchOpen} />
       </div>
     </>
   )
