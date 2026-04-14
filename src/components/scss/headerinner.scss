@@ -1,0 +1,64 @@
+.header-inner-wrap {
+    position: relative;
+}
+
+.gnb-list {
+    .icon-btn {
+        border: none;
+        background: transparent;
+        padding: 0;
+        cursor: pointer;
+
+        img {
+            display: block;
+        }
+    }
+}
+
+.search-dropdown {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    background: #fff;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.3s ease;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 20;
+
+    &.active {
+        max-height: 1500px;
+        padding: 24px 40px;
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .search-box {
+        max-width: 1200px;
+        margin: 0 auto;
+
+        .search-tab {
+            display: flex;
+            gap: 12px;
+
+            input {
+                flex: 1;
+                height: 48px;
+                padding: 0 16px;
+                border: 1px solid #ddd;
+                font-size: 16px;
+            }
+
+            button {
+                width: 100px;
+                border: none;
+                background: #111;
+                color: #fff;
+                cursor: pointer;
+            }
+        }
+    }
+}

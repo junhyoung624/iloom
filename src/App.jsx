@@ -26,6 +26,9 @@ import Order from './pages/Order'
 import MyPage from './pages/MyPage'
 import { useAuthStore } from './store/useAuthStore'
 import LeavePage from './pages/LeavePage'
+import ProductList from './components/ProductList'
+import Search from './components/Search'
+import OAuth from './pages/OAuth'
 
 // 메인 페이지
 function App() {
@@ -43,11 +46,14 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path='/search' element={<Search />} />
         <Route path="/login" element={<Login />} />
         <Route path="/member" element={<Member />} />
         <Route path="/cart" element={<Cart />} />
-
         <Route path="/order" element={<Order />} />
+        <Route path='/product-list' element={<ProductList />} />
+
+        <Route path="/oauth" element={<OAuth />} />
 
         <Route path="/new-product" element={<NewProduct />} />
         <Route path="/best-seller" element={<BestSeller />} />

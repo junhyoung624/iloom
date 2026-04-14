@@ -1,7 +1,28 @@
 import { create } from "zustand";
 import { productData } from "../data/productData";
+import { persist } from "zustand/middleware";
 
-export const useProductStore = create((set, get) => ({
+export const useProductStore = create(persist((set, get) => ({
+
+
+    //상품 변수, 메서드
+    items: [],
+    //메뉴를 저장할 변수
+    menus: [],
+    //search 서브 페이지내에서의 
+    searchWord: "",
+    onSetSearchWord: (word) => set({ searchWord: word }),
+    // 전체 search
+    searchWordAll: "",
+    onSetSearchWordAll: (word) => set({ searchWordAll: word }),
+
+    //정렬
+    //정렬의 종류를 체크할 변수
+    sortType: "",
+    //정렬의 차순을 저장할 변수 기본오름
+    sortOrder: "asc",
+    onSetSort: (type, order = "asc") =>
+        set({ sortType: type, sortOrder: order }),
 
     // 상품 
     items: [],
@@ -48,4 +69,4 @@ export const useProductStore = create((set, get) => ({
     },
 
 
-}))
+})))
