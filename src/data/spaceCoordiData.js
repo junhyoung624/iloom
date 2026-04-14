@@ -2,7 +2,7 @@
 export const spaceCoordiData = [
     {
         id: 1,
-        tab: "tab1",
+        tab: "거실",
         space_image_url: "./images/spaceCoordi/livingroom/livingroom_coordi.png",
         products: [
             //id, name, price,image_url,position : {x : , y : },
@@ -11,7 +11,7 @@ export const spaceCoordiData = [
                 name: "모타",
                 subName: "콘솔장 1800폭",
                 price: "499,000원",
-                position: { x: 1152, y: 521 },
+                position: { x: 1152, y: 530 },
                 tag_position_code: "translateY(1.5rem)",
                 //url:
                 src: "./images/spaceCoordi/livingroom/products/console.png",
@@ -22,7 +22,7 @@ export const spaceCoordiData = [
                 name: "세르크",
                 subName: "1200폭 콘솔형 책장(온라인몰 전용)",
                 price: "239,000원",
-                position: { x: 657, y: 492 },
+                position: { x: 657, y: 495 },
                 tag_position_code: "translateX(1.5rem) translateY(-1.5rem)",
                 //url:
                 src: "./images/spaceCoordi/livingroom/products/lp.png",
@@ -33,8 +33,8 @@ export const spaceCoordiData = [
                 name: "테누토",
                 subName: "소파테이블 800폭",
                 price: "279,000원",
-                position: { x: 888, y: 618 },
-                tag_position_code: "translateX(1.5rem) translateY(-1.5rem)",
+                position: { x: 888, y: 625 },
+                tag_position_code: "translateX(-50%) translateY(1.5rem)",
                 //url:
                 src: "./images/spaceCoordi/livingroom/products/table.png",
                 default: false,
@@ -44,8 +44,8 @@ export const spaceCoordiData = [
                 name: "앤트레디션",
                 subName: "코모 포터블 조명 (Como SC53 Portable)",
                 price: "오프라인 전용",
-                position: { x: 777, y: 385 },
-                tag_position_code: "translateY(1.5rem)",
+                position: { x: 777, y: 425 },
+                tag_position_code: "translateX(1.5rem) translateY(-1.5rem)",
                 //url:
                 src: "./images/spaceCoordi/livingroom/products/light.png",
                 default: false,
@@ -69,7 +69,7 @@ export const spaceCoordiData = [
 
     {
         id: 2,
-        tab: "tab2",
+        tab: "침실",
         space_image_url: "./images/spaceCoordi/bedroom/bedroom_coordi.png",
         products: [
             //id, name, price,image_url,position : {x : , y : },
@@ -89,7 +89,7 @@ export const spaceCoordiData = [
                 name: "모니스W",
                 subName: "책상 800폭 식탁 1800폭",
                 price: "199,000원",
-                position: { x: 664, y: 371 },
+                position: { x: 664, y: 400 },
                 tag_position_code: "translateX(1.5rem) translateY(-1.5rem)",
                 //url:
                 src: "./images/spaceCoordi/bedroom/products/table.png",
@@ -111,7 +111,7 @@ export const spaceCoordiData = [
                 name: "무브",
                 subName: "2인 소파(우,패브릭)(온라인몰 전용)",
                 price: "630,000원",
-                position: { x: 1197, y: 463 },
+                position: { x: 1197, y: 490 },
                 tag_position_code: "translateY(1.5rem)",
                 //url:
                 src: "./images/spaceCoordi/bedroom/products/sofa.png",
@@ -123,7 +123,7 @@ export const spaceCoordiData = [
                 name: "앤트레디션",
                 subName: "세타고 포터블 조명 (Setago JH27 Portable)",
                 price: "오프라인 전용",
-                position: { x: 456, y: 300 },
+                position: { x: 456, y: 340 },
                 tag_position_code: "translateX(-100%) translateX(-0.5rem) translateY(-1.5rem)",
                 //url:
                 src: "./images/spaceCoordi/bedroom/products/light.png",
@@ -135,7 +135,7 @@ export const spaceCoordiData = [
     },
     {
         id: 3,
-        tab: "tab3",
+        tab: "주방",
         space_image_url: "./images/spaceCoordi/diningroom/dining_coordi.png",
         products: [
             //id, name, price,image_url,position : {x : , y : },
@@ -144,7 +144,7 @@ export const spaceCoordiData = [
                 name: "세타플러스",
                 subName: "의자 (인조가죽,1EA)",
                 price: "195,000원",
-                position: { x: 738, y: 546 },
+                position: { x: 738, y: 565 },
                 //tag_position: "bottom",
                 tag_position_code: "translateY(1.5rem)",
                 //url:
@@ -156,7 +156,7 @@ export const spaceCoordiData = [
                 name: "스트라토",
                 subName: "원목 식탁 1800폭",
                 price: "1,190,000원",
-                position: { x: 539, y: 443 },
+                position: { x: 539, y: 460 },
                 //tag_position: "top",
                 tag_position_code: "translateY(-100%) translateY(-0.2rem)",
                 //url:
@@ -168,7 +168,7 @@ export const spaceCoordiData = [
                 name: "레마",
                 subName: "높은 주방식기장 (유리도어)",
                 price: "579,000원",
-                position: { x: 202, y: 400 },
+                position: { x: 202, y: 410 },
                 //tag_position: "bottom",
                 tag_position_code: "translateY(1.5rem)",
                 //url:
@@ -180,7 +180,7 @@ export const spaceCoordiData = [
                 name: "프리스토",
                 subName: "1000폭 전시장(조명)",
                 price: "579,000원",
-                position: { x: 1019, y: 171 },
+                position: { x: 1019, y: 220 },
                 //tag_position: "left",
                 tag_position_code: "translateX(-100%) translateX(-0.5rem) translateY(-1.5rem)",
                 //url:
@@ -192,7 +192,7 @@ export const spaceCoordiData = [
                 name: "구스토",
                 subName: "800폭 높은 팬트리장",
                 price: "629,000원",
-                position: { x: 1125, y: 323 },
+                position: { x: 1125, y: 350 },
                 //tag_position: "bottom",
                 tag_position_code: "translateY(1.5rem)",
                 //url:
@@ -205,7 +205,7 @@ export const spaceCoordiData = [
     },
     {
         id: 4,
-        tab: "tab4",
+        tab: "서재",
         space_image_url: "./images/spaceCoordi/libraryroom/library_coordi.png",
         products: [
             //id, name, price,image_url,position : {x : , y : },
@@ -214,7 +214,7 @@ export const spaceCoordiData = [
                 name: "에디",
                 subName: "6단 800폭 책장",
                 price: "229,000원",
-                position: { x: 642, y: 123 },
+                position: { x: 642, y: 140 },
                 //tag_position: "bottom",
                 tag_position_code: "translateY(1.5rem)",
                 //url:
@@ -226,9 +226,9 @@ export const spaceCoordiData = [
                 name: "케플러클래식",
                 subName: "책상 1500폭",
                 price: "579,000원",
-                position: { x: 620, y: 502 },
+                position: { x: 620, y: 510 },
                 //tag_position: "top",
-                tag_position_code: "translateY(-100%) translateY(-0.2rem)",
+                tag_position_code: "translateX(1.5rem) translateY(-1.5rem)",
                 //url:
                 src: "./images/spaceCoordi/libraryroom/products/table_brown.png",
                 default: false,
@@ -238,9 +238,9 @@ export const spaceCoordiData = [
                 name: "에디",
                 subName: "2단 600폭 깊은책장",
                 price: "89,000원",
-                position: { x: 427, y: 435 },
+                position: { x: 427, y: 460 },
                 //tag_position: "bottom",
-                tag_position_code: "translateY(1.5rem)",
+                tag_position_code: "translateX(-50%) translateY(1.5rem)",
                 //url:
                 src: "./images/spaceCoordi/libraryroom/products/bookshelf.png",
                 default: false,
@@ -250,9 +250,9 @@ export const spaceCoordiData = [
                 name: "엘바",
                 subName: "패밀리테이블 1800폭",
                 price: "379,000원",
-                position: { x: 185, y: 464 },
+                position: { x: 185, y: 480 },
                 //tag_position: "left",
-                tag_position_code: "translateX(-100%) translateX(-0.5rem) translateY(-1.5rem)",
+                tag_position_code: "translateX(-50%) translateY(-100%) translateY(-0.2rem)",
                 //url:
                 src: "./images/spaceCoordi/libraryroom/products/table_white.png",
                 default: false,
@@ -262,9 +262,9 @@ export const spaceCoordiData = [
                 name: "지엘",
                 subName: "천연가죽 의자",
                 price: "749,000원",
-                position: { x: 774, y: 355 },
+                position: { x: 774, y: 390 },
                 //tag_position: "bottom",
-                tag_position_code: "translateY(1.5rem)",
+                tag_position_code: "translateX(1.5rem) translateY(-1.5rem)",
                 //url:
                 src: "./images/spaceCoordi/libraryroom/products/chair.png",
                 default: false,

@@ -59,7 +59,7 @@ export default function Series() {
                 </div>
 
                 <div className="item">
-                    <div className="tab-menu">
+                    <div className="tab-btn-menu">
                         {tabs.map((tab) => (
                             <button
                                 type="button"
@@ -74,7 +74,6 @@ export default function Series() {
                     </div>
 
                     <div className="item-card-wrap">
-
                         {seriesItem.map((item, index) => (
                             <Link
                                 to={`/product/${item.id}`}
@@ -83,9 +82,9 @@ export default function Series() {
                             >
                                 <div>
                                     <img src={item.productImages[1]} alt={item.name} />
-                                    <div className="series-label">{item.series}</div>
+                                    <div className="series-name">{item.series}</div>
+
                                     <h1>{item.name}</h1>
-                                    <h2>{item.category3}</h2>
                                     <span>{item.price}원</span>
                                 </div>
                             </Link>
