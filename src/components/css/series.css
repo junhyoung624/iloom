@@ -1,0 +1,159 @@
+.series {
+  width: 100%;
+  overflow: hidden;
+  padding: 100px 0;
+}
+.series .inner {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.series .title-box {
+  margin-bottom: 40px;
+}
+.series .title-box h1 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.series .title-box h3 {
+  font-size: 18px;
+  font-weight: 400;
+  color: #666;
+}
+.series .img-slide-wrap {
+  width: 100%;
+  overflow: hidden;
+}
+.series .mySwiper {
+  width: 100%;
+  overflow: visible;
+}
+.series .swiper-slide {
+  height: auto;
+}
+.series .series-card {
+  overflow: hidden;
+  background: #fff;
+  position: relative;
+}
+.series .img-box {
+  width: 100%;
+  height: 520px;
+  overflow: hidden;
+}
+.series .img-box img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+.series .text-box {
+  position: absolute;
+  left: 30px;
+  bottom: 50px;
+  z-index: 10;
+  color: #fff;
+}
+.series .text-box h2 {
+  text-align: left;
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 320px;
+}
+.series .text-box a {
+  text-decoration: none;
+}
+.series .text-box button {
+  border: 1.3px solid #fff;
+  padding: 15px 40px;
+  background: transparent;
+  font-size: 16px;
+  cursor: pointer;
+  color: #fff;
+  transition: 0.3s;
+}
+.series .text-box button:hover {
+  border: 1.3px solid #030303;
+  background: #030303;
+}
+
+.sns-swiper-wrap {
+  position: relative;
+}
+
+.swiper-button-next {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  right: 100px;
+  z-index: 111;
+}
+
+.swiper-button-prev {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: -100px;
+  z-index: 111;
+  rotate: 180deg;
+}
+
+.item {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.item .tab-btn-menu {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+}
+.item .tab-btn-menu button {
+  width: auto;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  flex: 0 0 auto;
+}
+
+.series-name {
+  display: inline-block;
+  border: none;
+  background: transparent;
+  color: #888;
+  cursor: pointer;
+  position: relative;
+  font-size: 18px;
+  margin-top: 100px;
+}
+
+.series-name::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 0;
+  height: 2px;
+  background: #111;
+  transition: 0.3s;
+}
+
+.series-name.active {
+  color: #111;
+  font-weight: 700;
+}
+
+.series-name.active::after {
+  width: 100%;
+}
+
+.item-card-wrap {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 50px;
+  padding: 130px 0;
+}
