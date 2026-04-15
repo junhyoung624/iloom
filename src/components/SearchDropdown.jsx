@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { useProductStore } from '../store/useProductStore'
 import "./scss/searchdropdown.scss"
 
-export default function SearchDropdown({ isSearchOpen }) {
+export default function SearchDropdown({ isSearchOpen, setIsSearchOpen }) {
     const { items, searchWordAll, onSetSearchWordAll } = useProductStore()
     const [activeMenu, setActiveMenu] = useState("md")
     const [hoveredItem, setHoveredItem] = useState(null)
@@ -32,6 +32,13 @@ export default function SearchDropdown({ isSearchOpen }) {
         return items.filter((item) => item.new).slice(0, 8)
     }, [items])
 
+    const handleKeyDown = (e) => {
+        if (e.key === "Enter") {
+            handleSearchAll()
+        }
+    }
+
+
     const currentItems =
         activeMenu === "md"
             ? mdItems
@@ -39,14 +46,28 @@ export default function SearchDropdown({ isSearchOpen }) {
                 ? bestItems
                 : newItems
 
-    const displayItems = isSearching ? cateItems : currentItems
+    useEffect(() => {
+        if (isSearching) {
+            setHoveredItem(cateItems[0] || null)
+        } else {
+            setHoveredItem(currentItems[0] || null)
+        }
+    }, [isSearching, cateItems, currentItems])
 
     useEffect(() => {
-        setHoveredItem(displayItems[0] || null)
-    }, [displayItems])
+        if (!isSearchOpen) {
+            onSetSearchWordAll("")
+        }
+    }, [isSearchOpen, onSetSearchWordAll])
 
     const handleSearchAll = () => {
-        navigate("/searchpage")
+        const keyword = searchWordAll.trim()
+
+        if (!keyword) return
+
+        setIsSearchOpen(false)
+        navigate(`/searchpage?keyword=${encodeURIComponent(keyword)}`)
+        onSetSearchWordAll("")
     }
 
     return (
@@ -61,8 +82,9 @@ export default function SearchDropdown({ isSearchOpen }) {
                         placeholder="검색어를 입력하세요"
                         value={searchWordAll}
                         onChange={(e) => onSetSearchWordAll(e.target.value)}
+                        onKeyDown={handleKeyDown}
                     />
-                    <button type="button" onClick={handleSearchAll}>
+                    <button type="button" onClick={handleSearchAll} >
                         검색
                     </button>
                 </div>
@@ -100,8 +122,8 @@ export default function SearchDropdown({ isSearchOpen }) {
 
                     <div className="cate-right">
                         <div className="keyword-list-wrap">
-                            <div className="keyword-list">
-                                {displayItems.map((item) => (
+                            <div className="keyword-list" key={isSearching ? keyword : activeMenu}>
+                                {!isSearching && currentItems.map((item) => (
                                     <Link
                                         to={`/product/${item.id}`}
                                         key={item.id}
@@ -112,9 +134,21 @@ export default function SearchDropdown({ isSearchOpen }) {
                                     </Link>
                                 ))}
 
-                                {isSearching && displayItems.length === 0 && (
+                                {isSearching && cateItems.map((item) => (
+                                    <Link
+                                        to={`/product/${item.id}`}
+                                        key={item.id}
+                                        className={`keyword-item ${hoveredItem?.id === item.id ? "active" : ""}`}
+                                        onMouseEnter={() => setHoveredItem(item)}
+                                    >
+                                        <span>{item.name}</span>
+                                    </Link>
+                                ))}
+
+                                {isSearching && cateItems.length === 0 && (
                                     <div className="no-result">
-                                        검색 결과가 없습니다.
+                                        <img src="./images/logo-icon/iconmonstr-error-lined.svg" alt="" />
+                                        검색 결과가 없습니다
                                     </div>
                                 )}
                             </div>
