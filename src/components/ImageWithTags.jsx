@@ -110,6 +110,7 @@ export default function ImageWithTags() {
                                                         <p className='item-price'>{item.price}</p>
                                                     </div>
                                                     <div className="button-area">
+
                                                         {/* <p>::</p> */}
 
                                                         <Link

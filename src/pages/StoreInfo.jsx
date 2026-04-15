@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import "./scss/storeInfo.scss"
+//import "./scss/StoreKakaoMap.scss"
 import InfoBody from './StoreInfoComponents/InfoBody'
 import InfoHeader from './StoreInfoComponents/InfoHeader'
 import { storeInfoData } from '../data/storeInfoData'
 import { store_region } from '../data/storeRegionCode'
+import StoreKakaoMap from './StoreInfoComponents/StoreKakaoMap'
 
 //store info 안에
 //모든 상태 보관
@@ -17,6 +19,9 @@ const StoreInfo = () => {
   const [keyword, setKeyword] = useState("");
   const [selectedStoreId, setSelectedStoreId] = useState(null);
 
+
+  //const control_header = document.querySelector(".control-header").offsetHeight;
+  //console.log("control-header : ", control_header);
   const newStoreInfo = storeInfoData.map((store) => ({
     ...store,
     latitude: Number(store.latitude),
@@ -42,7 +47,7 @@ const StoreInfo = () => {
 
     return matchKeyword && matchRegion && matchSubRegion;
   });
-
+  console.log(filteredStoreInfo);
   const selectedStore =
     filteredStoreInfo.find((store) => store.id === selectedStoreId) || null;
 
@@ -67,26 +72,37 @@ const StoreInfo = () => {
       <div className="store-info-main">
         <div className="store-control">
           {/* Info header : 검색 입력값 변경 이벤트 전달 */}
-          <InfoHeader selectedSearch={selectedSearch}
-            setSelectedSearch={setSelectedSearch}
-            keyword={keyword}
-            setKeyword={setKeyword}
-            selectedRegion={selectedRegion}
-            setSelectedRegion={setSelectedRegion}
-            selectedSubRegion={selectedSubRegion}
-            setSelectedSubRegion={setSelectedSubRegion}
-            storeRegion={store_region}
-          />
+          <div className="control-header">
+            <InfoHeader
+              selectedSearch={selectedSearch}
+              setSelectedSearch={setSelectedSearch}
+              keyword={keyword}
+              setKeyword={setKeyword}
+              selectedRegion={selectedRegion}
+              setSelectedRegion={setSelectedRegion}
+              selectedSubRegion={selectedSubRegion}
+              setSelectedSubRegion={setSelectedSubRegion}
+              storeRegion={store_region}
+            />
+          </div>
+
           {/* Info body : 왼쪽 매장 리스트 렌더링, 클릭한 매장 선택 */}
-          <InfoBody
-            stores={filteredStoreInfo}
-            selectedStoreId={selectedStoreId}
-            setSelectedStoreId={setSelectedStoreId} />
+          <div className="control-body">
+            <InfoBody
+              stores={filteredStoreInfo}
+              selectedStoreId={selectedStoreId}
+              setSelectedStoreId={setSelectedStoreId} />
+          </div>
+
         </div>
         <div className="store-map">
-          map section
+
           {/* 필터링된 매장 마커 표시 */}
           {/* 마커 클릭시 선택된 매장으로 이동 */}
+          <StoreKakaoMap
+            stores={filteredStoreInfo}
+            selectedStore={selectedStore}
+            setSelectedStoreId={setSelectedStoreId} />
         </div>
       </div>
 

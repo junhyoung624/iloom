@@ -124,6 +124,7 @@ const Header = () => {
           userClick={handleClick}
           isHover={isHover}
           isSearchOpen={isSearchOpen}
+          setIsSearchOpen={setIsSearchOpen}
           searchClick={handleSearchToggle}
         />
       </header >
@@ -153,7 +154,8 @@ const Header = () => {
         className={`search-overlay ${isSearchOpen ? "active" : ""}`}
         onClick={handleSearchClose}
       >
-        <SearchDropdown isSearchOpen={isSearchOpen} />
+        <SearchDropdown isSearchOpen={isSearchOpen}
+          setIsSearchOpen={setIsSearchOpen} />
       </div>
     </>
   )

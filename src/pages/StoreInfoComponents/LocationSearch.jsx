@@ -3,14 +3,14 @@ import DropDown from './DropDown';
 import { store_region } from '../../data/storeRegionCode';
 
 
-export default function LocationSearch(
+export default function LocationSearch({
     selectedRegion,
     setSelectedRegion,
     selectedSubRegion,
     setSelectedSubRegion,
-    storeRegion,) {
+    storeRegion, }) {
 
-    const first_option_arr = store_region.map((item) => ({
+    const first_option_arr = storeRegion.map((item) => ({
         value: item.code,
         label: item.name,
         sub_region: item.sub_region,
@@ -35,12 +35,16 @@ export default function LocationSearch(
 
 
     const getSelected_1 = (selected) => {
+        console.log(selected);
+        if (!selected) return;
         setSelectedRegion(selected.value);
         setSelectedSubRegion("시/군/구");
 
 
     }
     const getSelected_2 = (selected) => {
+        if (!selected) return;
+        console.log(selected);
         setSelectedSubRegion(selected.value);
     }
     return (
