@@ -1,0 +1,35 @@
+.store-list-item-wrap {
+    padding: 10px;
+}
+
+.store-item-top {
+    color: #808080;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.store-item-main {
+    .store-main-info {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 15px;
+    }
+
+    .store-sub-info {
+        color: #808080;
+        font-size: 20px;
+        gap: 10px;
+
+        .addr {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .phone {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+    }
+}
