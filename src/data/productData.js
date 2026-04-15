@@ -285,7 +285,7 @@ export const productData = [
     ],
     "originalCategory": "침실",
     "category2": "수납장",
-    "category3": "수납장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/bedroom/storage/HBA50H08R_SP_1.png",
       "/images/iloom_images/bedroom/storage/HBA50H08R_SP_2.png"
@@ -326,7 +326,7 @@ export const productData = [
     ],
     "originalCategory": "침실",
     "category2": "수납장",
-    "category3": "수납장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/bedroom/storage/HBA50H08L_SP_1.png",
       "/images/iloom_images/bedroom/storage/HBA50H08L_SP_2.png"
@@ -367,7 +367,7 @@ export const productData = [
     ],
     "originalCategory": "침실",
     "category2": "수납장",
-    "category3": "수납장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/bedroom/storage/IPS0000A_SP_1.jpg",
       "/images/iloom_images/bedroom/storage/IPS0000A_SP_2.png"
@@ -414,7 +414,7 @@ export const productData = [
     ],
     "originalCategory": "침실",
     "category2": "수납장",
-    "category3": "수납장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/bedroom/storage/IPS0001A_SP_1.jpg",
       "/images/iloom_images/bedroom/storage/IPS0001A_SP_2.png"
@@ -560,7 +560,7 @@ export const productData = [
     ],
     "originalCategory": "침실",
     "category2": "화장대",
-    "category3": "화장대",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/bedroom/vanity/HDA500811_SP_1.png",
       "/images/iloom_images/bedroom/vanity/HDA500811_SP_2.png"
@@ -609,7 +609,7 @@ export const productData = [
     ],
     "originalCategory": "침실",
     "category2": "수납장",
-    "category3": "수납장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/bedroom/storage/HAA100401_a_GYM_3.png",
       "/images/iloom_images/bedroom/storage/HAA100401_a_GYM_3.png",
@@ -924,7 +924,7 @@ export const productData = [
     ],
     "originalCategory": "침실",
     "category2": "수납장",
-    "category3": "수납장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/bedroom/storage/HBA51H08R_UW_1.png",
       "/images/iloom_images/bedroom/storage/HBA51H08R_UW_2.png"
@@ -968,7 +968,7 @@ export const productData = [
     ],
     "originalCategory": "침실",
     "category2": "수납장",
-    "category3": "수납장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/bedroom/storage/HBA51H08L_UW_1.jpg",
       "/images/iloom_images/bedroom/storage/HBA51H08L_UW_2.png"
@@ -995,44 +995,6 @@ export const productData = [
       "https://www.iloom.com/upload/contents/20230531/_aee491a1-fd82-4912-886c-b59184522ac3.jpg"
     ],
     "ranking": 550
-  },
-  {
-    "id": "HPA500821",
-    "series": "바젤 어반월넛",
-    "name": "바젤 어반월넛 2단 서랍장 800폭",
-    "material": "",
-    "price": "239,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "UW"
-        ]
-      }
-    ],
-    "originalCategory": "침실",
-    "category2": "수납장",
-    "category3": "서랍장",
-    "productImages": [
-      "/images/iloom_images/bedroom/storage/HPA500821_a_SP_1.jpg",
-      "/images/iloom_images/bedroom/storage/HPA500821_a_SP_2.png",
-      "/images/iloom_images/bedroom/storage/HPA500821_a_SP_3.png",
-      "/images/iloom_images/bedroom/storage/HPA500821_b_UW_1.jpg",
-      "/images/iloom_images/bedroom/storage/HPA500821_b_UW_2.png",
-      "/images/iloom_images/bedroom/storage/HPA500821_b_UW_3.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20240314/_5c8c820e-2f7a-452a-b613-dba93cebf0f6.jpg",
-      "https://www.iloom.com/upload/contents/20240314/_0894e17d-c54e-4773-895b-6ffb913fed75.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_01bd0ec4-816a-4f06-a8e4-f923c377730c.jpg",
-      "https://www.iloom.com/upload/contents/20250701/_ec5a6659-4934-4104-aa95-d3b489e94a8f.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_2aff35a0-5f7a-4eba-aa22-e24155ccbcd0.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_f0dd8e9e-fa26-4d30-9950-808b12b4a1d0.jpg"
-    ],
-    "ranking": 935
   },
   {
     "id": "HPA510831",
@@ -1120,7 +1082,7 @@ export const productData = [
     ],
     "originalCategory": "침실",
     "category2": "화장대",
-    "category3": "화장대",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/bedroom/vanity/HDA510811_UW_1.jpg",
       "/images/iloom_images/bedroom/vanity/HDA510811_UW_2.png"
@@ -1138,52 +1100,6 @@ export const productData = [
       "https://www.iloom.com/upload/contents/20230601/_0ff11a3e-7d6b-4964-a92b-44501d4fe2a6.jpg"
     ],
     "ranking": 182
-  },
-  {
-    "id": "HAA100401",
-    "series": "바젤 어반월넛",
-    "name": "바젤 어반월넛 원형 사이드 테이블 400폭",
-    "material": "",
-    "price": "99,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "SP",
-          "SE",
-          "GYM",
-          "UW"
-        ]
-      }
-    ],
-    "originalCategory": "침실",
-    "category2": "수납장",
-    "category3": "수납장",
-    "productImages": [
-      "/images/iloom_images/bedroom/storage/HAA100401_a_GYM_3.png",
-      "/images/iloom_images/bedroom/storage/HAA100401_a_GYM_3.png",
-      "/images/iloom_images/bedroom/storage/HAA100401_a_SE_2.png",
-      "/images/iloom_images/bedroom/storage/HAA100401_a_SP_1.jpg",
-      "/images/iloom_images/bedroom/storage/HAA100401_a_SP_4.png",
-      "/images/iloom_images/bedroom/storage/HAA100401_b_GYM_3.png",
-      "/images/iloom_images/bedroom/storage/HAA100401_b_GYM_3.png",
-      "/images/iloom_images/bedroom/storage/HAA100401_b_SE_2.png",
-      "/images/iloom_images/bedroom/storage/HAA100401_b_SP_1.jpg",
-      "/images/iloom_images/bedroom/storage/HAA100401_b_UW_4.png",
-      "/images/iloom_images/bedroom/storage/HAA100401_c_GYM_2.png",
-      "/images/iloom_images/bedroom/storage/HAA100401_c_SP_1.jpg",
-      "/images/iloom_images/bedroom/storage/HAA100401_c_SP_3.png",
-      "/images/iloom_images/bedroom/storage/HAA100401_c_SP_3.png",
-      "/images/iloom_images/bedroom/storage/HAA100401_c_SP_4.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20210119/_205c2e4a-5eb3-4015-a663-542ca19cfd80.jpg",
-      "https://www.iloom.com/upload/contents/20210121/_f6a9b45c-cff1-4ac2-929a-c0ceaa583883.jpg"
-    ],
-    "ranking": 539
   },
   {
     "id": "IBF0015A",
@@ -1283,7 +1199,7 @@ export const productData = [
     ],
     "originalCategory": "침실",
     "category2": "수납장",
-    "category3": "수납장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/bedroom/storage/IVP0001A_5K1L_1.png",
       "/images/iloom_images/bedroom/storage/IVP0001A_5K1L_2.png"
@@ -1410,7 +1326,7 @@ export const productData = [
     ],
     "originalCategory": "침실",
     "category2": "수납장",
-    "category3": "수납장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/bedroom/storage/IDY40AN00A_BKM_2.png",
       "/images/iloom_images/bedroom/storage/IDY40AN00A_GY_1.jpg",
@@ -1518,7 +1434,7 @@ export const productData = [
     ],
     "originalCategory": "침실",
     "category2": "수납장",
-    "category3": "수납장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/bedroom/storage/HCS7800BF_3T1L_1.jpg",
       "/images/iloom_images/bedroom/storage/HCS7800BF_3T1L_3.png",
@@ -1556,7 +1472,7 @@ export const productData = [
     ],
     "originalCategory": "침실",
     "category2": "수납장",
-    "category3": "수납장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/bedroom/storage/HPA101201_GYMGYM_1.jpg",
       "/images/iloom_images/bedroom/storage/HPA101201_GYMGYM_2.png",
@@ -1622,7 +1538,7 @@ export const productData = [
     ],
     "originalCategory": "침실",
     "category2": "화장대",
-    "category3": "화장대",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/bedroom/vanity/HPA101203_GYMGYM_1.jpg",
       "/images/iloom_images/bedroom/vanity/HPA101203_GYMGYM_2.png",
@@ -2064,7 +1980,7 @@ export const productData = [
     ],
     "originalCategory": "침실",
     "category2": "수납장",
-    "category3": "수납장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/bedroom/storage/IDU0000A_BKC_3.png",
       "/images/iloom_images/bedroom/storage/IDU0000A_NCC_2.png",
@@ -2104,7 +2020,7 @@ export const productData = [
     ],
     "originalCategory": "침실",
     "category2": "수납장",
-    "category3": "수납장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/bedroom/storage/IDU0001A_BKC_2.png",
       "/images/iloom_images/bedroom/storage/IDU0001A_SP_1.jpg",
@@ -2333,7 +2249,7 @@ export const productData = [
     ],
     "originalCategory": "침실",
     "category2": "수납장",
-    "category3": "수납장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/bedroom/storage/HP311231_LDGYM_1.jpg",
       "/images/iloom_images/bedroom/storage/HP311231_LDGYM_2.png"
@@ -2416,7 +2332,7 @@ export const productData = [
     "options": [],
     "originalCategory": "침실",
     "category2": "수납장",
-    "category3": "수납장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/bedroom/storage/HP311621_a__1.jpg",
       "/images/iloom_images/bedroom/storage/HP311621_a_default_2.png",
@@ -2581,7 +2497,6 @@ export const productData = [
     ],
     "ranking": 222
   },
-
   {
     "id": "HB571107",
     "series": "어바니",
@@ -2706,86 +2621,6 @@ export const productData = [
       "https://www.iloom.com/upload/contents/20240611/_1671ff74-486a-4470-b1da-e131cbdbdd9a.jpg"
     ],
     "ranking": 1089
-  },
-  {
-    "id": "IDU0000A",
-    "series": "업",
-    "name": "업 리프트업테이블 600폭(라운드상판)",
-    "material": "",
-    "price": "249,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "SP",
-          "NCC",
-          "BKC",
-          "UW"
-        ]
-      }
-    ],
-    "originalCategory": "침실",
-    "category2": "수납장",
-    "category3": "수납장",
-    "productImages": [
-      "/images/iloom_images/bedroom/storage/IDU0000A_BKC_3.png",
-      "/images/iloom_images/bedroom/storage/IDU0000A_NCC_2.png",
-      "/images/iloom_images/bedroom/storage/IDU0000A_SP_1.jpg",
-      "/images/iloom_images/bedroom/storage/IDU0000A_SP_5.png",
-      "/images/iloom_images/bedroom/storage/IDU0000A_UW_4.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20230712/_e80f87f9-96d6-4d0f-9961-0074fcb0f426.jpg",
-      "https://www.iloom.com/upload/contents/20230712/_52c912c8-99eb-4515-9fbf-6ef6925412b5.jpg",
-      "https://www.iloom.com/upload/contents/20230712/_5c2e9e13-86e7-472d-8ba3-700f1ea9b207.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_3c4b9d3a-c03d-41f3-9797-fe0fe95bf7d2.jpg",
-      "https://www.iloom.com/upload/contents/20230712/_f66fb4f6-329e-4b0d-bb2d-e4d8b82fa3d1.gif",
-      "https://www.iloom.com/upload/contents/20230712/_2d08b155-454f-48e2-bcd7-3b671eb6d78e.jpg",
-      "https://www.iloom.com/upload/contents/20250619/_9082a0d8-37c8-43e0-b814-932dd640d106.jpg",
-      "https://www.iloom.com/upload/contents/20230712/_967902b8-59d1-442b-891a-cc3a7c37a814.jpg"
-    ],
-    "ranking": 333
-  },
-  {
-    "id": "IDU0001A",
-    "series": "업",
-    "name": "업 리프트업테이블 500폭(원형상판)",
-    "material": "",
-    "price": "249,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "SP",
-          "BKC"
-        ]
-      }
-    ],
-    "originalCategory": "침실",
-    "category2": "수납장",
-    "category3": "수납장",
-    "productImages": [
-      "/images/iloom_images/bedroom/storage/IDU0001A_BKC_2.png",
-      "/images/iloom_images/bedroom/storage/IDU0001A_SP_1.jpg",
-      "/images/iloom_images/bedroom/storage/IDU0001A_SP_3.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20230712/_3da7da10-bc85-446d-90e1-dac309b6e380.jpg",
-      "https://www.iloom.com/upload/contents/20230712/_cf14c62a-3ae9-430e-8273-203ad431e3c2.jpg",
-      "https://www.iloom.com/upload/contents/20230712/_719ee85a-c932-45eb-ade0-a8b6c522ed2b.jpg",
-      "https://www.iloom.com/upload/contents/20230712/_03806198-1b72-4277-836f-a731ffc7d20c.jpg",
-      "https://www.iloom.com/upload/contents/20230712/_930e2e61-4255-4ee3-95de-2b1f00dab428.gif",
-      "https://www.iloom.com/upload/contents/20230712/_7e276bf8-2302-496d-a886-c88411230dc3.jpg",
-      "https://www.iloom.com/upload/contents/20250619/_b2ac0e37-1303-4d4b-8aad-c92b6e7d1a6a.jpg",
-      "https://www.iloom.com/upload/contents/20230712/_52a462c9-bf74-45c8-a6d6-f32f99c0811a.jpg"
-    ],
-    "ranking": 1413
   },
   {
     "id": "HP570421",
@@ -2940,7 +2775,7 @@ export const productData = [
     ],
     "originalCategory": "침실",
     "category2": "화장대",
-    "category3": "화장대",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/bedroom/vanity/HD571832_CGDIO_1.jpg",
       "/images/iloom_images/bedroom/vanity/HD571832_CGDIO_3.png",
@@ -3280,86 +3115,6 @@ export const productData = [
       "https://www.iloom.com/upload/contents/20230921/_090c464c-f56a-4762-af0a-572167999ee4.jpg"
     ],
     "ranking": 548
-  },
-  {
-    "id": "IDU0000A",
-    "series": "업",
-    "name": "업 리프트업테이블 600폭(라운드상판)",
-    "material": "",
-    "price": "249,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "SP",
-          "NCC",
-          "BKC",
-          "UW"
-        ]
-      }
-    ],
-    "originalCategory": "침실",
-    "category2": "수납장",
-    "category3": "수납장",
-    "productImages": [
-      "/images/iloom_images/bedroom/storage/IDU0000A_BKC_3.png",
-      "/images/iloom_images/bedroom/storage/IDU0000A_NCC_2.png",
-      "/images/iloom_images/bedroom/storage/IDU0000A_SP_1.jpg",
-      "/images/iloom_images/bedroom/storage/IDU0000A_SP_5.png",
-      "/images/iloom_images/bedroom/storage/IDU0000A_UW_4.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20230712/_e80f87f9-96d6-4d0f-9961-0074fcb0f426.jpg",
-      "https://www.iloom.com/upload/contents/20230712/_52c912c8-99eb-4515-9fbf-6ef6925412b5.jpg",
-      "https://www.iloom.com/upload/contents/20230712/_5c2e9e13-86e7-472d-8ba3-700f1ea9b207.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_3c4b9d3a-c03d-41f3-9797-fe0fe95bf7d2.jpg",
-      "https://www.iloom.com/upload/contents/20230712/_f66fb4f6-329e-4b0d-bb2d-e4d8b82fa3d1.gif",
-      "https://www.iloom.com/upload/contents/20230712/_2d08b155-454f-48e2-bcd7-3b671eb6d78e.jpg",
-      "https://www.iloom.com/upload/contents/20250619/_9082a0d8-37c8-43e0-b814-932dd640d106.jpg",
-      "https://www.iloom.com/upload/contents/20230712/_967902b8-59d1-442b-891a-cc3a7c37a814.jpg"
-    ],
-    "ranking": 1447
-  },
-  {
-    "id": "IDU0001A",
-    "series": "업",
-    "name": "업 리프트업테이블 500폭(원형상판)",
-    "material": "",
-    "price": "249,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "SP",
-          "BKC"
-        ]
-      }
-    ],
-    "originalCategory": "침실",
-    "category2": "수납장",
-    "category3": "수납장",
-    "productImages": [
-      "/images/iloom_images/bedroom/storage/IDU0001A_BKC_2.png",
-      "/images/iloom_images/bedroom/storage/IDU0001A_SP_1.jpg",
-      "/images/iloom_images/bedroom/storage/IDU0001A_SP_3.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20230712/_3da7da10-bc85-446d-90e1-dac309b6e380.jpg",
-      "https://www.iloom.com/upload/contents/20230712/_cf14c62a-3ae9-430e-8273-203ad431e3c2.jpg",
-      "https://www.iloom.com/upload/contents/20230712/_719ee85a-c932-45eb-ade0-a8b6c522ed2b.jpg",
-      "https://www.iloom.com/upload/contents/20230712/_03806198-1b72-4277-836f-a731ffc7d20c.jpg",
-      "https://www.iloom.com/upload/contents/20230712/_930e2e61-4255-4ee3-95de-2b1f00dab428.gif",
-      "https://www.iloom.com/upload/contents/20230712/_7e276bf8-2302-496d-a886-c88411230dc3.jpg",
-      "https://www.iloom.com/upload/contents/20250619/_b2ac0e37-1303-4d4b-8aad-c92b6e7d1a6a.jpg",
-      "https://www.iloom.com/upload/contents/20230712/_52a462c9-bf74-45c8-a6d6-f32f99c0811a.jpg"
-    ],
-    "ranking": 42
   },
   {
     "id": "IBL0014A",
@@ -3917,7 +3672,7 @@ export const productData = [
     ],
     "originalCategory": "침실",
     "category2": "수납장",
-    "category3": "수납장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/bedroom/storage/IPL0000A_HW_1.jpg",
       "/images/iloom_images/bedroom/storage/IPL0000A_HW_3.png",
@@ -3997,7 +3752,7 @@ export const productData = [
     ],
     "originalCategory": "침실",
     "category2": "화장대",
-    "category3": "화장대",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/bedroom/vanity/IJL0000A_HW_1.jpg",
       "/images/iloom_images/bedroom/vanity/IJL0000A_HW_3.png",
@@ -4157,50 +3912,6 @@ export const productData = [
     "ranking": 1404
   },
   {
-    "id": "HAA100401",
-    "series": "그라나다",
-    "name": "그라나다 사이드 테이블 400폭",
-    "material": "",
-    "price": "99,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "SP",
-          "GYM"
-        ]
-      }
-    ],
-    "originalCategory": "침실",
-    "category2": "수납장",
-    "category3": "수납장",
-    "productImages": [
-      "/images/iloom_images/bedroom/storage/HAA100401_a_GYM_3.png",
-      "/images/iloom_images/bedroom/storage/HAA100401_a_GYM_3.png",
-      "/images/iloom_images/bedroom/storage/HAA100401_a_SE_2.png",
-      "/images/iloom_images/bedroom/storage/HAA100401_a_SP_1.jpg",
-      "/images/iloom_images/bedroom/storage/HAA100401_a_SP_4.png",
-      "/images/iloom_images/bedroom/storage/HAA100401_b_GYM_3.png",
-      "/images/iloom_images/bedroom/storage/HAA100401_b_GYM_3.png",
-      "/images/iloom_images/bedroom/storage/HAA100401_b_SE_2.png",
-      "/images/iloom_images/bedroom/storage/HAA100401_b_SP_1.jpg",
-      "/images/iloom_images/bedroom/storage/HAA100401_b_UW_4.png",
-      "/images/iloom_images/bedroom/storage/HAA100401_c_GYM_2.png",
-      "/images/iloom_images/bedroom/storage/HAA100401_c_SP_1.jpg",
-      "/images/iloom_images/bedroom/storage/HAA100401_c_SP_3.png",
-      "/images/iloom_images/bedroom/storage/HAA100401_c_SP_3.png",
-      "/images/iloom_images/bedroom/storage/HAA100401_c_SP_4.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20210119/_205c2e4a-5eb3-4015-a663-542ca19cfd80.jpg",
-      "https://www.iloom.com/upload/contents/20210121/_f6a9b45c-cff1-4ac2-929a-c0ceaa583883.jpg"
-    ],
-    "ranking": 818
-  },
-  {
     "id": "HPA100401",
     "series": "그라나다",
     "name": "그라나다 협탁 400폭",
@@ -4233,135 +3944,6 @@ export const productData = [
       "https://www.iloom.com/upload/contents/20210122/_a717f286-1cd8-4bb2-b0ed-073bd223cb39.jpg"
     ],
     "ranking": 1389
-  },
-  {
-    "id": "HPA101201",
-    "series": "그라나다",
-    "name": "그라나다 와이드체스트 1200폭",
-    "material": "",
-    "price": "399,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "GYMGYM"
-        ]
-      }
-    ],
-    "originalCategory": "침실",
-    "category2": "수납장",
-    "category3": "수납장",
-    "productImages": [
-      "/images/iloom_images/bedroom/storage/HPA101201_GYMGYM_1.jpg",
-      "/images/iloom_images/bedroom/storage/HPA101201_GYMGYM_2.png",
-      "/images/iloom_images/bedroom/storage/HPA101201_GYMGYM_3.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20220725/_613c163c-c753-43d8-82cd-a9d9d02f337f.jpg",
-      "https://www.iloom.com/upload/contents/20220725/_95bb52cf-cbb8-4cba-97d1-e29a629b9e04.jpg",
-      "https://www.iloom.com/upload/contents/20210120/_92275ed4-d561-4c6e-b973-04ffda8de5e7.jpg",
-      "https://www.iloom.com/upload/contents/20220725/_f6f5ebc0-1464-4b54-999c-4ddcc6d2d63e.jpg"
-    ],
-    "ranking": 702
-  },
-  {
-    "id": "HPA101202",
-    "series": "그라나다",
-    "name": "그라나다 와이드체스트 1200폭 (거울형)",
-    "material": "",
-    "price": "521,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "GYMGYM"
-        ]
-      }
-    ],
-    "originalCategory": "침실",
-    "category2": "화장대",
-    "category3": "거울•액세서리",
-    "productImages": [
-      "/images/iloom_images/bedroom/vanity/HPA101202_GYMGYM_1.jpg",
-      "/images/iloom_images/bedroom/vanity/HPA101202_GYMGYM_2.png",
-      "/images/iloom_images/bedroom/vanity/HPA101202_GYMGYM_3.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20220725/_0cf1511a-006b-41f0-b748-249b9cfbc0b0.jpg",
-      "https://www.iloom.com/upload/contents/20220725/_70407751-add3-470b-bb0b-e1e89a7d5054.jpg",
-      "https://www.iloom.com/upload/contents/20220725/_505665c3-ef83-4a1f-89fe-d90abb3d7378.jpg",
-      "https://www.iloom.com/upload/contents/20220725/_bb17cb2b-0d73-438d-bee4-afccc8ef7afc.jpg"
-    ],
-    "ranking": 1448
-  },
-  {
-    "id": "HPA101203",
-    "series": "그라나다",
-    "name": "그라나다 와이드체스트 1200폭 (화장대형)",
-    "material": "",
-    "price": "534,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "GYMGYM"
-        ]
-      }
-    ],
-    "originalCategory": "침실",
-    "category2": "화장대",
-    "category3": "화장대",
-    "productImages": [
-      "/images/iloom_images/bedroom/vanity/HPA101203_GYMGYM_1.jpg",
-      "/images/iloom_images/bedroom/vanity/HPA101203_GYMGYM_2.png",
-      "/images/iloom_images/bedroom/vanity/HPA101203_GYMGYM_3.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20210120/_fe93db37-010d-408a-ac49-33424f30ed9e.jpg",
-      "https://www.iloom.com/upload/contents/20220725/_3d251917-5336-48ae-9ec4-038c123be25f.jpg",
-      "https://www.iloom.com/upload/contents/20220725/_6005414a-a888-4812-bb76-9e7b060a3ddf.jpg"
-    ],
-    "ranking": 1444
-  },
-  {
-    "id": "HDA100801",
-    "series": "그라나다",
-    "name": "그라나다 데스크 800폭",
-    "material": "",
-    "price": "329,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "GYMGYM"
-        ]
-      }
-    ],
-    "originalCategory": "침실",
-    "category2": "침대",
-    "category3": "일반침대",
-    "productImages": [
-      "/images/iloom_images/bedroom/bed/HDA100801_GYMGYM_1.jpg",
-      "/images/iloom_images/bedroom/bed/HDA100801_GYMGYM_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20220725/_f5506d15-26ed-4219-b2e1-f105d025980d.jpg",
-      "https://www.iloom.com/upload/contents/20220725/_69a0c2fc-dd4a-4548-8de6-ecfc7360984d.jpg",
-      "https://www.iloom.com/upload/contents/20220725/_81178ce7-e36c-4db1-b02d-30320bcb4dec.jpg"
-    ],
-    "ranking": 1022
   },
   {
     "id": "HSVA004",
@@ -4397,76 +3979,6 @@ export const productData = [
       "https://www.iloom.com/upload/contents/20190102/_5e912b7c-0df4-4b20-92d9-9c0ccee486b5.jpg"
     ],
     "ranking": 994
-  },
-  {
-    "id": "IDY40AN00A",
-    "series": "론다",
-    "name": "론다 매거진랙 사이드 테이블",
-    "material": "",
-    "price": "160,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "GY",
-          "BKM"
-        ]
-      }
-    ],
-    "originalCategory": "침실",
-    "category2": "수납장",
-    "category3": "수납장",
-    "productImages": [
-      "/images/iloom_images/bedroom/storage/IDY40AN00A_BKM_2.png",
-      "/images/iloom_images/bedroom/storage/IDY40AN00A_GY_1.jpg",
-      "/images/iloom_images/bedroom/storage/IDY40AN00A_GY_3.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20241128/_d615ba0d-89eb-4002-9dda-c8d264b4a7b0.jpg",
-      "https://www.iloom.com/upload/contents/20231120/_e7241d12-5ba2-4430-9585-abe77254f8b5.jpg",
-      "https://www.iloom.com/upload/contents/20231120/_54916d0f-9bfc-4d38-9aba-6453ed231a5e.jpg",
-      "https://www.iloom.com/upload/contents/20250619/_8a98a0b6-3328-4f7f-a4fd-d3add6ce553b.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_63f291fd-c600-4d25-abb7-779e8f726a53.jpg"
-    ],
-    "ranking": 1603
-  },
-  {
-    "id": "IDE0000A",
-    "series": "론다",
-    "name": "론다 사이드테이블 400폭",
-    "material": "",
-    "price": "160,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "GYM",
-          "BKC"
-        ]
-      }
-    ],
-    "originalCategory": "침실",
-    "category2": "수납장",
-    "category3": "협탁•사이드테이블",
-    "productImages": [
-      "/images/iloom_images/bedroom/storage/IDE0000A_BKC_2.png",
-      "/images/iloom_images/bedroom/storage/IDE0000A_GYM_1.jpg",
-      "/images/iloom_images/bedroom/storage/IDE0000A_GYM_3.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20241128/_46554b08-3e24-4fde-9ac0-58bf8fed3b61.jpg",
-      "https://www.iloom.com/upload/contents/20231120/_f58d28ba-4e7c-4427-817b-0e5faba95f35.jpg",
-      "https://www.iloom.com/upload/contents/20231120/_fb8d3afd-4f33-4a1b-bf73-50fc7d278b00.jpg",
-      "https://www.iloom.com/upload/contents/20250619/_07c713ba-b492-4df2-996a-bd045d2d4d12.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_a3430d20-a884-422d-8698-d9f76af00ecd.jpg"
-    ],
-    "ranking": 1009
   },
   {
     "id": "HBA401100",
@@ -4614,40 +4126,6 @@ export const productData = [
       "https://www.iloom.com/upload/contents/20220117/_f76e0d3e-acbd-4e8a-adc3-1c60f422804a.jpg"
     ],
     "ranking": 772
-  },
-  {
-    "id": "HA00G01EEU",
-    "series": "반트",
-    "name": "반트 원형 멀티조명(거치형)",
-    "material": "",
-    "price": "32,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "GY"
-        ]
-      }
-    ],
-    "originalCategory": "침실",
-    "category2": "침대",
-    "category3": "일반침대",
-    "productImages": [
-      "/images/iloom_images/bedroom/bed/HA00G01EEU_GY_1.png",
-      "/images/iloom_images/bedroom/bed/HA00G01EEU_GY_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20220117/_75828356-a096-426e-9471-f53b43a675b6.jpg",
-      "https://www.iloom.com/upload/contents/20220117/_5acee03c-18f7-4ab4-8e18-22eac7981a47.jpg",
-      "https://www.iloom.com/upload/contents/20220117/_a4527f02-7a8c-4e42-853f-16a7a839c3c4.jpg",
-      "https://www.iloom.com/upload/contents/20220117/_41a0ce19-b363-490e-bb54-a0d529b2967b.jpg",
-      "https://www.iloom.com/upload/contents/20220117/_8571532a-bc67-4e2a-9f9d-d8f1b224a26f.jpg",
-      "https://www.iloom.com/upload/contents/20220117/_f76e0d3e-acbd-4e8a-adc3-1c60f422804a.jpg"
-    ],
-    "ranking": 803
   },
   {
     "id": "HBA401120",
@@ -4908,7 +4386,7 @@ export const productData = [
     "options": [],
     "originalCategory": "침실",
     "category2": "화장대",
-    "category3": "화장대",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/bedroom/vanity/HSYA0006_a__1.jpg",
       "/images/iloom_images/bedroom/vanity/HSYA0006_a_default_2.png",
@@ -5114,7 +4592,7 @@ export const productData = [
     ],
     "originalCategory": "침실",
     "category2": "수납장",
-    "category3": "수납장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/bedroom/storage/HP900641R_FIVGYM_2.png",
       "/images/iloom_images/bedroom/storage/HP900641R_NCCBGM_1.jpg",
@@ -5153,7 +4631,7 @@ export const productData = [
     ],
     "originalCategory": "침실",
     "category2": "화장대",
-    "category3": "화장대",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/bedroom/vanity/HD910841_FIVGYM_2.png",
       "/images/iloom_images/bedroom/vanity/HD910841_NCCBGM_1.jpg",
@@ -5191,7 +4669,7 @@ export const productData = [
     ],
     "originalCategory": "침실",
     "category2": "화장대",
-    "category3": "화장대",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/bedroom/vanity/HD900811_FIVGYM_2.png",
       "/images/iloom_images/bedroom/vanity/HD900811_NCCBGM_1.jpg",
@@ -5507,7 +4985,7 @@ export const productData = [
     ],
     "originalCategory": "침실",
     "category2": "화장대",
-    "category3": "화장대",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/bedroom/vanity/HD701013N_SP_1.png",
       "/images/iloom_images/bedroom/vanity/HD701013N_SP_1.png",
@@ -5521,180 +4999,6 @@ export const productData = [
       "https://www.iloom.com/upload/contents/20220114/_4d6073ef-0171-4fcd-a354-18004f592861.jpg"
     ],
     "ranking": 680
-  },
-  {
-    "id": "ITY40AN00A",
-    "series": "론다",
-    "name": "론다 원형 스툴(패브릭)",
-    "material": "패브릭",
-    "price": "150,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "5K1L",
-          "5M2"
-        ]
-      }
-    ],
-    "originalCategory": "침실",
-    "category2": "화장대",
-    "category3": "화장대의자•스툴",
-    "productImages": [
-      "/images/iloom_images/bedroom/vanity/ITY40AN00A_a_5K1L_1.jpg",
-      "/images/iloom_images/bedroom/vanity/ITY40AN00A_a_5K1L_3.png",
-      "/images/iloom_images/bedroom/vanity/ITY40AN00A_a_5M2_2.png",
-      "/images/iloom_images/bedroom/vanity/ITY40AN00A_b_5M2_1.png",
-      "/images/iloom_images/bedroom/vanity/ITY40AN00A_b_5M2_1.png",
-      "/images/iloom_images/bedroom/vanity/ITY40AN00A_b_5M2_2.png",
-      "/images/iloom_images/bedroom/vanity/ITY40AN00A_b_5M2_3.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20241128/_8bf03e6b-5685-4893-8012-1b3a79c531da.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_ef6a44ed-9b72-4458-945b-c8370417a58d.jpg",
-      "https://www.iloom.com/upload/contents/20260119/_5cb4ddfb-532f-4025-a3ec-19149f467ce8.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_5f4245ab-6a07-4110-80a9-d56275ec6139.jpg",
-      "https://www.iloom.com/upload/contents/20250619/_f6e910a7-d5cb-4159-b402-0706a2246557.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_c43069a2-bd39-43e9-bd92-85bf828689f1.jpg"
-    ],
-    "ranking": 46
-  },
-  {
-    "id": "HU00R01EL",
-    "series": "메이",
-    "name": "메이 라운드 사각거울 800폭(거치대형)",
-    "material": "",
-    "price": "79,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "GYM"
-        ]
-      }
-    ],
-    "originalCategory": "침실",
-    "category2": "화장대",
-    "category3": "거울•액세서리",
-    "productImages": [
-      "/images/iloom_images/bedroom/vanity/HU00R01EL_a_GYM_1.jpg",
-      "/images/iloom_images/bedroom/vanity/HU00R01EL_a_GYM_2.png",
-      "/images/iloom_images/bedroom/vanity/HU00R01EL_b_GYM_1.jpg",
-      "/images/iloom_images/bedroom/vanity/HU00R01EL_b_GYM_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20200117/_71ea1e57-7ec6-4513-acab-1768868d4a5d.jpg",
-      "https://www.iloom.com/upload/contents/20200117/_3845e28e-e623-44f1-895c-9e7ac77c2d41.jpg"
-    ],
-    "ranking": 1559
-  },
-  {
-    "id": "HU00R00EL",
-    "series": "메이",
-    "name": "메이 라운드 사각거울 800폭(브라켓형)",
-    "material": "",
-    "price": "79,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "GYM"
-        ]
-      }
-    ],
-    "originalCategory": "침실",
-    "category2": "화장대",
-    "category3": "거울•액세서리",
-    "productImages": [
-      "/images/iloom_images/bedroom/vanity/HU00R00EL_a_GYM_1.jpg",
-      "/images/iloom_images/bedroom/vanity/HU00R00EL_a_GYM_2.png",
-      "/images/iloom_images/bedroom/vanity/HU00R00EL_b_GYM_1.jpg",
-      "/images/iloom_images/bedroom/vanity/HU00R00EL_b_GYM_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20180410/_c5bdabe4-8095-41c0-802b-4d8835c57044.jpg",
-      "https://www.iloom.com/upload/contents/20180412/_dfd2d1bf-6cbb-4ad5-ae2b-579eb2426f8f.jpg"
-    ],
-    "ranking": 928
-  },
-  {
-    "id": "HA72R10AU",
-    "series": "메이",
-    "name": "메이 라운드 사각거울 1000폭(거치대형)",
-    "material": "",
-    "price": "99,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "GYM"
-        ]
-      }
-    ],
-    "originalCategory": "침실",
-    "category2": "화장대",
-    "category3": "거울•액세서리",
-    "productImages": [
-      "/images/iloom_images/bedroom/vanity/HA72R10AU_a_GYM_1.jpg",
-      "/images/iloom_images/bedroom/vanity/HA72R10AU_a_GYM_2.png",
-      "/images/iloom_images/bedroom/vanity/HA72R10AU_b_GYM_1.jpg",
-      "/images/iloom_images/bedroom/vanity/HA72R10AU_b_GYM_2.png",
-      "/images/iloom_images/bedroom/vanity/HA72R10AU_c_GYM_1.jpg",
-      "/images/iloom_images/bedroom/vanity/HA72R10AU_c_GYM_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20200117/_971746a0-d7e7-4de2-ab17-bf8220a8da0b.jpg",
-      "https://www.iloom.com/upload/contents/20200117/_763e33cd-d93a-4c1f-9682-552fb52a9eec.jpg"
-    ],
-    "ranking": 470
-  },
-  {
-    "id": "HA72R10EU",
-    "series": "메이",
-    "name": "메이 라운드 사각거울 1000폭(브라켓형)",
-    "material": "",
-    "price": "99,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "GYM"
-        ]
-      }
-    ],
-    "originalCategory": "침실",
-    "category2": "화장대",
-    "category3": "거울•액세서리",
-    "productImages": [
-      "/images/iloom_images/bedroom/vanity/HA72R10EU_a_GYM_1.png",
-      "/images/iloom_images/bedroom/vanity/HA72R10EU_a_GYM_2.jpg",
-      "/images/iloom_images/bedroom/vanity/HA72R10EU_a_GYM_3.png",
-      "/images/iloom_images/bedroom/vanity/HA72R10EU_b_GYM_1.png",
-      "/images/iloom_images/bedroom/vanity/HA72R10EU_b_GYM_2.jpg",
-      "/images/iloom_images/bedroom/vanity/HA72R10EU_b_GYM_3.png",
-      "/images/iloom_images/bedroom/vanity/HA72R10EU_c_GYM_1.png",
-      "/images/iloom_images/bedroom/vanity/HA72R10EU_c_GYM_2.jpg",
-      "/images/iloom_images/bedroom/vanity/HA72R10EU_c_GYM_3.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20200117/_804b0a55-12e2-4615-bc83-512adf42a43a.jpg"
-    ],
-    "ranking": 1749
   },
   {
     "id": "HB721001",
@@ -6771,7 +6075,7 @@ export const productData = [
     ],
     "originalCategory": "침실",
     "category2": "수납장",
-    "category3": "수납장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/bedroom/storage/IAP23AA01A_a_GY_1.jpg",
       "/images/iloom_images/bedroom/storage/IAP23AA01A_a_GY_3.png",
@@ -6808,7 +6112,7 @@ export const productData = [
     ],
     "originalCategory": "침실",
     "category2": "수납장",
-    "category3": "수납장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/bedroom/storage/IBG20AW00A_A441D_2.png",
       "/images/iloom_images/bedroom/storage/IBG20AW00A_A4810_1.png",
@@ -7753,7 +7057,7 @@ export const productData = [
     ],
     "originalCategory": "침실",
     "category2": "수납장",
-    "category3": "수납장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/bedroom/storage/IBG0003A_2Z2_1.png",
       "/images/iloom_images/bedroom/storage/IBG0003A_2Z2_2.png"
@@ -7772,42 +7076,6 @@ export const productData = [
     "ranking": 441
   },
   {
-    "id": "IAP23AA01A",
-    "series": "쿠시노 코지",
-    "name": "쿠시노 코지 가드수납함 230폭(쿠션용)",
-    "material": "",
-    "price": "10,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "GY",
-          "IV"
-        ]
-      }
-    ],
-    "originalCategory": "침실",
-    "category2": "수납장",
-    "category3": "수납장",
-    "productImages": [
-      "/images/iloom_images/bedroom/storage/IAP23AA01A_a_GY_1.jpg",
-      "/images/iloom_images/bedroom/storage/IAP23AA01A_a_GY_3.png",
-      "/images/iloom_images/bedroom/storage/IAP23AA01A_a_IV_2.png",
-      "/images/iloom_images/bedroom/storage/IAP23AA01A_b_GY_1.jpg",
-      "/images/iloom_images/bedroom/storage/IAP23AA01A_b_GY_3.png",
-      "/images/iloom_images/bedroom/storage/IAP23AA01A_b_IV_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20230525/_4762aeaf-2f30-40aa-99bd-5dde3d0655c3.jpg",
-      "https://www.iloom.com/upload/contents/20230525/_8b8d55ca-9c32-4160-aa91-5b05d1f129a8.jpg",
-      "https://www.iloom.com/upload/contents/20230525/_45d38499-c0c6-40d0-bd1d-43d531331a2d.jpg"
-    ],
-    "ranking": 1496
-  },
-  {
     "id": "IBG20AW01A",
     "series": "쿠시노 코지",
     "name": "쿠시노 코지 벽가드 2000폭(아쿠아클린)",
@@ -7823,7 +7091,7 @@ export const productData = [
     ],
     "originalCategory": "침실",
     "category2": "수납장",
-    "category3": "수납장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/bedroom/storage/IBG20AW01A_2Z2_1.jpg",
       "/images/iloom_images/bedroom/storage/IBG20AW01A_2Z2_2.png"
@@ -7838,39 +7106,6 @@ export const productData = [
       "https://www.iloom.com/upload/contents/20230912/_6f756775-ce7e-4f4f-a95e-9b4362630ed4.jpg"
     ],
     "ranking": 1623
-  },
-  {
-    "id": "HB72U00ECU",
-    "series": "쿠시노 코지",
-    "name": "쿠시노 코지 패밀리침대 연결브라켓 (2ea)",
-    "material": "",
-    "price": "7,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "IIV"
-        ]
-      }
-    ],
-    "originalCategory": "침실",
-    "category2": "침대",
-    "category3": "패밀리침대",
-    "productImages": [
-      "/images/iloom_images/bedroom/bed/HB72U00ECU_a_IIV_1.png",
-      "/images/iloom_images/bedroom/bed/HB72U00ECU_a_IIV_2.png",
-      "/images/iloom_images/bedroom/bed/HB72U00ECU_b_IIV_1.png",
-      "/images/iloom_images/bedroom/bed/HB72U00ECU_b_IIV_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20210324/_2b7a4d96-9c7c-410f-8954-82c087e309d0.jpg",
-      "https://www.iloom.com/upload/contents/20210324/_935b59a8-2de9-442d-ada4-18dc5986a41a.jpg",
-      "https://www.iloom.com/upload/contents/20210324/_8a592676-6f15-4fa3-b77b-789d43f239ff.jpg"
-    ],
-    "ranking": 1588
   },
   {
     "id": "IBF0038A",
@@ -8744,7 +7979,7 @@ export const productData = [
     ],
     "originalCategory": "침실",
     "category2": "수납장",
-    "category3": "수납장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/bedroom/storage/IBG0023A_2V2L_1.png",
       "/images/iloom_images/bedroom/storage/IBG0023A_2V2L_2.png"
@@ -8763,42 +7998,6 @@ export const productData = [
     "ranking": 1527
   },
   {
-    "id": "IAP23AA01A",
-    "series": "쿠시노 코지",
-    "name": "쿠시노 코지 가드수납함 230폭(쿠션용)",
-    "material": "",
-    "price": "10,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "GY",
-          "IV"
-        ]
-      }
-    ],
-    "originalCategory": "침실",
-    "category2": "수납장",
-    "category3": "수납장",
-    "productImages": [
-      "/images/iloom_images/bedroom/storage/IAP23AA01A_a_GY_1.jpg",
-      "/images/iloom_images/bedroom/storage/IAP23AA01A_a_GY_3.png",
-      "/images/iloom_images/bedroom/storage/IAP23AA01A_a_IV_2.png",
-      "/images/iloom_images/bedroom/storage/IAP23AA01A_b_GY_1.jpg",
-      "/images/iloom_images/bedroom/storage/IAP23AA01A_b_GY_3.png",
-      "/images/iloom_images/bedroom/storage/IAP23AA01A_b_IV_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20230525/_4762aeaf-2f30-40aa-99bd-5dde3d0655c3.jpg",
-      "https://www.iloom.com/upload/contents/20230525/_8b8d55ca-9c32-4160-aa91-5b05d1f129a8.jpg",
-      "https://www.iloom.com/upload/contents/20230525/_45d38499-c0c6-40d0-bd1d-43d531331a2d.jpg"
-    ],
-    "ranking": 615
-  },
-  {
     "id": "IBG20AW02A",
     "series": "쿠시노 코지",
     "name": "쿠시노 코지 벽가드 2000폭(실리콘패브릭)",
@@ -8814,7 +8013,7 @@ export const productData = [
     ],
     "originalCategory": "침실",
     "category2": "수납장",
-    "category3": "수납장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/bedroom/storage/IBG20AW02A_2V2L_1.png",
       "/images/iloom_images/bedroom/storage/IBG20AW02A_2V2L_2.png"
@@ -8829,39 +8028,6 @@ export const productData = [
       "https://www.iloom.com/upload/contents/20251027/_c850a23b-e317-4265-bb31-f717bd39e6df.jpg"
     ],
     "ranking": 404
-  },
-  {
-    "id": "HB72U00ECU",
-    "series": "쿠시노 코지",
-    "name": "쿠시노 코지 패밀리침대 연결브라켓 (2ea)",
-    "material": "",
-    "price": "7,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "IIV"
-        ]
-      }
-    ],
-    "originalCategory": "침실",
-    "category2": "침대",
-    "category3": "패밀리침대",
-    "productImages": [
-      "/images/iloom_images/bedroom/bed/HB72U00ECU_a_IIV_1.png",
-      "/images/iloom_images/bedroom/bed/HB72U00ECU_a_IIV_2.png",
-      "/images/iloom_images/bedroom/bed/HB72U00ECU_b_IIV_1.png",
-      "/images/iloom_images/bedroom/bed/HB72U00ECU_b_IIV_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20210324/_2b7a4d96-9c7c-410f-8954-82c087e309d0.jpg",
-      "https://www.iloom.com/upload/contents/20210324/_935b59a8-2de9-442d-ada4-18dc5986a41a.jpg",
-      "https://www.iloom.com/upload/contents/20210324/_8a592676-6f15-4fa3-b77b-789d43f239ff.jpg"
-    ],
-    "ranking": 189
   },
   {
     "id": "HP720516",
@@ -9004,7 +8170,7 @@ export const productData = [
     ],
     "originalCategory": "침실",
     "category2": "화장대",
-    "category3": "화장대",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/bedroom/vanity/HD21Y050L_OS_1.png",
       "/images/iloom_images/bedroom/vanity/HD21Y050L_OS_1.png",
@@ -9019,76 +8185,6 @@ export const productData = [
       "https://www.iloom.com/upload/contents/20180131/_a5648ea3-5fac-44a1-a52f-c5759555c92a.jpg"
     ],
     "ranking": 469
-  },
-  {
-    "id": "HA72R10AU",
-    "series": "쿠시노",
-    "name": "쿠시노 라운드 사각거울 1000폭(거치대형)",
-    "material": "",
-    "price": "99,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "GYM"
-        ]
-      }
-    ],
-    "originalCategory": "침실",
-    "category2": "화장대",
-    "category3": "거울•액세서리",
-    "productImages": [
-      "/images/iloom_images/bedroom/vanity/HA72R10AU_a_GYM_1.jpg",
-      "/images/iloom_images/bedroom/vanity/HA72R10AU_a_GYM_2.png",
-      "/images/iloom_images/bedroom/vanity/HA72R10AU_b_GYM_1.jpg",
-      "/images/iloom_images/bedroom/vanity/HA72R10AU_b_GYM_2.png",
-      "/images/iloom_images/bedroom/vanity/HA72R10AU_c_GYM_1.jpg",
-      "/images/iloom_images/bedroom/vanity/HA72R10AU_c_GYM_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20200117/_971746a0-d7e7-4de2-ab17-bf8220a8da0b.jpg",
-      "https://www.iloom.com/upload/contents/20200117/_763e33cd-d93a-4c1f-9682-552fb52a9eec.jpg"
-    ],
-    "ranking": 489
-  },
-  {
-    "id": "HA72R10EU",
-    "series": "쿠시노",
-    "name": "쿠시노 라운드 사각거울 1000폭(브라켓형)",
-    "material": "",
-    "price": "99,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "GYM"
-        ]
-      }
-    ],
-    "originalCategory": "침실",
-    "category2": "화장대",
-    "category3": "거울•액세서리",
-    "productImages": [
-      "/images/iloom_images/bedroom/vanity/HA72R10EU_a_GYM_1.png",
-      "/images/iloom_images/bedroom/vanity/HA72R10EU_a_GYM_2.jpg",
-      "/images/iloom_images/bedroom/vanity/HA72R10EU_a_GYM_3.png",
-      "/images/iloom_images/bedroom/vanity/HA72R10EU_b_GYM_1.png",
-      "/images/iloom_images/bedroom/vanity/HA72R10EU_b_GYM_2.jpg",
-      "/images/iloom_images/bedroom/vanity/HA72R10EU_b_GYM_3.png",
-      "/images/iloom_images/bedroom/vanity/HA72R10EU_c_GYM_1.png",
-      "/images/iloom_images/bedroom/vanity/HA72R10EU_c_GYM_2.jpg",
-      "/images/iloom_images/bedroom/vanity/HA72R10EU_c_GYM_3.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20200117/_804b0a55-12e2-4615-bc83-512adf42a43a.jpg"
-    ],
-    "ranking": 6
   },
   {
     "id": "IDE0005A",
@@ -9184,45 +8280,6 @@ export const productData = [
       "https://www.iloom.com/upload/contents/20180131/_960e16b5-dc07-4154-bb03-ac484482db09.jpg"
     ],
     "ranking": 1320
-  },
-  {
-    "id": "ITY40AN00A",
-    "series": "론다",
-    "name": "론다 원형 스툴",
-    "material": "",
-    "price": "150,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "5M2"
-        ]
-      }
-    ],
-    "originalCategory": "침실",
-    "category2": "화장대",
-    "category3": "화장대의자•스툴",
-    "productImages": [
-      "/images/iloom_images/bedroom/vanity/ITY40AN00A_a_5K1L_1.jpg",
-      "/images/iloom_images/bedroom/vanity/ITY40AN00A_a_5K1L_3.png",
-      "/images/iloom_images/bedroom/vanity/ITY40AN00A_a_5M2_2.png",
-      "/images/iloom_images/bedroom/vanity/ITY40AN00A_b_5M2_1.png",
-      "/images/iloom_images/bedroom/vanity/ITY40AN00A_b_5M2_1.png",
-      "/images/iloom_images/bedroom/vanity/ITY40AN00A_b_5M2_2.png",
-      "/images/iloom_images/bedroom/vanity/ITY40AN00A_b_5M2_3.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20241128/_8bf03e6b-5685-4893-8012-1b3a79c531da.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_ef6a44ed-9b72-4458-945b-c8370417a58d.jpg",
-      "https://www.iloom.com/upload/contents/20260119/_5cb4ddfb-532f-4025-a3ec-19149f467ce8.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_5f4245ab-6a07-4110-80a9-d56275ec6139.jpg",
-      "https://www.iloom.com/upload/contents/20250619/_f6e910a7-d5cb-4159-b402-0706a2246557.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_c43069a2-bd39-43e9-bd92-85bf828689f1.jpg"
-    ],
-    "ranking": 461
   },
   {
     "id": "IBS0011A",
@@ -9443,7 +8500,7 @@ export const productData = [
     ],
     "originalCategory": "침실",
     "category2": "수납장",
-    "category3": "수납장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/bedroom/storage/IVP0006A_SO_1.jpg",
       "/images/iloom_images/bedroom/storage/IVP0006A_SO_2.png"
@@ -9483,7 +8540,7 @@ export const productData = [
     ],
     "originalCategory": "침실",
     "category2": "수납장",
-    "category3": "수납장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/bedroom/storage/IVP0007A_SO_1.jpg",
       "/images/iloom_images/bedroom/storage/IVP0007A_SO_2.png"
@@ -9523,7 +8580,7 @@ export const productData = [
     ],
     "originalCategory": "침실",
     "category2": "수납장",
-    "category3": "수납장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/bedroom/storage/IVP0008A_SO_1.jpg",
       "/images/iloom_images/bedroom/storage/IVP0008A_SO_2.png"
@@ -9563,7 +8620,7 @@ export const productData = [
     ],
     "originalCategory": "침실",
     "category2": "수납장",
-    "category3": "수납장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/bedroom/storage/IVP0009A_SO_1.jpg",
       "/images/iloom_images/bedroom/storage/IVP0009A_SO_2.png"
@@ -9603,7 +8660,7 @@ export const productData = [
     ],
     "originalCategory": "침실",
     "category2": "수납장",
-    "category3": "수납장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/bedroom/storage/IVP0010A_SO_1.jpg",
       "/images/iloom_images/bedroom/storage/IVP0010A_SO_2.png"
@@ -9741,74 +8798,6 @@ export const productData = [
     "ranking": 176
   },
   {
-    "id": "IDY40AN00A",
-    "series": "론다",
-    "name": "론다 매거진랙 사이드 테이블",
-    "material": "",
-    "price": "160,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "BKM"
-        ]
-      }
-    ],
-    "originalCategory": "침실",
-    "category2": "수납장",
-    "category3": "수납장",
-    "productImages": [
-      "/images/iloom_images/bedroom/storage/IDY40AN00A_BKM_2.png",
-      "/images/iloom_images/bedroom/storage/IDY40AN00A_GY_1.jpg",
-      "/images/iloom_images/bedroom/storage/IDY40AN00A_GY_3.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20241128/_d615ba0d-89eb-4002-9dda-c8d264b4a7b0.jpg",
-      "https://www.iloom.com/upload/contents/20231120/_e7241d12-5ba2-4430-9585-abe77254f8b5.jpg",
-      "https://www.iloom.com/upload/contents/20231120/_54916d0f-9bfc-4d38-9aba-6453ed231a5e.jpg",
-      "https://www.iloom.com/upload/contents/20250619/_8a98a0b6-3328-4f7f-a4fd-d3add6ce553b.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_63f291fd-c600-4d25-abb7-779e8f726a53.jpg"
-    ],
-    "ranking": 462
-  },
-  {
-    "id": "IDE0000A",
-    "series": "론다",
-    "name": "론다 사이드테이블 400폭",
-    "material": "",
-    "price": "160,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "BKC"
-        ]
-      }
-    ],
-    "originalCategory": "침실",
-    "category2": "수납장",
-    "category3": "협탁•사이드테이블",
-    "productImages": [
-      "/images/iloom_images/bedroom/storage/IDE0000A_BKC_2.png",
-      "/images/iloom_images/bedroom/storage/IDE0000A_GYM_1.jpg",
-      "/images/iloom_images/bedroom/storage/IDE0000A_GYM_3.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20241128/_46554b08-3e24-4fde-9ac0-58bf8fed3b61.jpg",
-      "https://www.iloom.com/upload/contents/20231120/_f58d28ba-4e7c-4427-817b-0e5faba95f35.jpg",
-      "https://www.iloom.com/upload/contents/20231120/_fb8d3afd-4f33-4a1b-bf73-50fc7d278b00.jpg",
-      "https://www.iloom.com/upload/contents/20250619/_07c713ba-b492-4df2-996a-bd045d2d4d12.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_a3430d20-a884-422d-8698-d9f76af00ecd.jpg"
-    ],
-    "ranking": 701
-  },
-  {
     "id": "HLC0E04EL",
     "series": "리타",
     "name": "리타 사이드테이블(낮은형)",
@@ -9882,48 +8871,6 @@ export const productData = [
       "https://www.iloom.com/upload/contents/20190121/_c573f36f-e0db-44dd-ba0c-64a2860b5a59.jpg"
     ],
     "ranking": 908
-  },
-  {
-    "id": "IPP10BV00A",
-    "series": "그립",
-    "name": "그립 3단 서랍장 1000폭",
-    "material": "",
-    "price": "399,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "SO",
-          "SP"
-        ]
-      }
-    ],
-    "originalCategory": "침실",
-    "category2": "수납장",
-    "category3": "서랍장",
-    "productImages": [
-      "/images/iloom_images/bedroom/storage/IPP10BV00A_a_SO_1.jpg",
-      "/images/iloom_images/bedroom/storage/IPP10BV00A_a_SO_3.png",
-      "/images/iloom_images/bedroom/storage/IPP10BV00A_a_SP_2.png",
-      "/images/iloom_images/bedroom/storage/IPP10BV00A_b_SO_1.jpg",
-      "/images/iloom_images/bedroom/storage/IPP10BV00A_b_SO_3.png",
-      "/images/iloom_images/bedroom/storage/IPP10BV00A_b_SP_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20231218/_0719216f-9979-4cb3-90d5-4391cfc9ef19.jpg",
-      "https://www.iloom.com/upload/contents/20241021/_a6715465-69b4-4c8b-84e5-6b6010952928.jpg",
-      "https://www.iloom.com/upload/contents/20240207/_079e5852-84b6-4b98-b61b-48a87e7f0f85.jpg",
-      "https://www.iloom.com/upload/contents/20240206/_f433c5e9-c621-49e1-8c01-0474af1adb88.gif",
-      "https://www.iloom.com/upload/contents/20240903/_e3cbc779-cd3b-4c7f-bd97-83e6fda9b81d.jpg",
-      "https://www.iloom.com/upload/contents/20231218/_e8251dda-9210-442c-87c9-3a2bff42f07c.jpg",
-      "https://www.iloom.com/upload/contents/20231218/_2ad91f2d-e39d-4625-b6fe-a09464dfb5b7.jpg",
-      "https://www.iloom.com/upload/contents/20250619/_350598c1-9216-4a07-a67f-a0acfe7a967b.jpg",
-      "https://www.iloom.com/upload/contents/20231218/_688d2f61-5dee-4660-9851-60bb62371b77.jpg"
-    ],
-    "ranking": 638
   },
   {
     "id": "IPP80BV01A",
@@ -10002,45 +8949,6 @@ export const productData = [
       "https://www.iloom.com/upload/contents/20240326/_fe71440e-60c1-475d-a784-c710ae7f97df.jpg"
     ],
     "ranking": 52
-  },
-  {
-    "id": "IPP80BV02A",
-    "series": "그립",
-    "name": "그립 5단 서랍장 800폭",
-    "material": "",
-    "price": "489,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "SO",
-          "SP"
-        ]
-      }
-    ],
-    "originalCategory": "침실",
-    "category2": "수납장",
-    "category3": "서랍장",
-    "productImages": [
-      "/images/iloom_images/bedroom/storage/IPP80BV02A_SO_1.jpg",
-      "/images/iloom_images/bedroom/storage/IPP80BV02A_SO_3.png",
-      "/images/iloom_images/bedroom/storage/IPP80BV02A_SP_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20231218/_8d94c96b-6277-407b-bca6-d8e73e6a5498.jpg",
-      "https://www.iloom.com/upload/contents/20241021/_5e544ff0-0c65-45f4-967d-23abad09db1f.jpg",
-      "https://www.iloom.com/upload/contents/20240207/_88a4c482-2053-43f1-bb7b-19f59ca28f99.jpg",
-      "https://www.iloom.com/upload/contents/20240206/_3e8e4f16-29ff-4794-81c5-915a9435f120.gif",
-      "https://www.iloom.com/upload/contents/20240903/_5c36f024-f403-45d0-accd-c628429f3759.jpg",
-      "https://www.iloom.com/upload/contents/20231218/_493db7f2-69d7-405e-8f9c-a275894f539a.jpg",
-      "https://www.iloom.com/upload/contents/20231218/_805cfb0a-812e-40e8-895e-3cdf26a83cd6.jpg",
-      "https://www.iloom.com/upload/contents/20250619/_93b82ed1-9462-4e03-bffc-0f9d021abe58.jpg",
-      "https://www.iloom.com/upload/contents/20231218/_1bb5a868-86cb-4634-853b-481bf6e44527.jpg"
-    ],
-    "ranking": 493
   },
   {
     "id": "IPP10BW00A",
@@ -10205,9 +9113,9 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "드레스룸",
+    "originalCategory": "옷장",
     "category2": "드레스룸",
-    "category3": "드레스룸",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dressroom/IFO0002A_OAT_2.png",
       "/images/iloom_images/dressroom/IFO0002A_OAT_2.png",
@@ -10246,9 +9154,9 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "드레스룸",
+    "originalCategory": "옷장",
     "category2": "드레스룸",
-    "category3": "드레스룸",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dressroom/IFO0003A_OAT_2.png",
       "/images/iloom_images/dressroom/IFO0003A_SP_1.jpg",
@@ -10285,9 +9193,9 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "드레스룸",
+    "originalCategory": "옷장",
     "category2": "드레스룸",
-    "category3": "드레스룸",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dressroom/IFO0004A_OAT_2.png",
       "/images/iloom_images/dressroom/IFO0004A_SP_1.jpg",
@@ -10324,9 +9232,9 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "드레스룸",
+    "originalCategory": "옷장",
     "category2": "드레스룸",
-    "category3": "드레스룸",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dressroom/IFO0005A_OAT_2.png",
       "/images/iloom_images/dressroom/IFO0005A_SP_1.jpg",
@@ -10363,9 +9271,9 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "드레스룸",
+    "originalCategory": "옷장",
     "category2": "드레스룸",
-    "category3": "드레스룸",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dressroom/IFO0006A_OAT_2.png",
       "/images/iloom_images/dressroom/IFO0006A_SP_1.jpg",
@@ -10402,9 +9310,9 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "드레스룸",
+    "originalCategory": "옷장",
     "category2": "드레스룸",
-    "category3": "드레스룸",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dressroom/IFO0007A_OAT_2.png",
       "/images/iloom_images/dressroom/IFO0007A_SP_1.jpg",
@@ -10441,9 +9349,9 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "드레스룸",
+    "originalCategory": "옷장",
     "category2": "드레스룸",
-    "category3": "드레스룸",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dressroom/IFO0008A_OAT_2.png",
       "/images/iloom_images/dressroom/IFO0008A_SP_1.jpg",
@@ -10480,9 +9388,9 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "드레스룸",
+    "originalCategory": "옷장",
     "category2": "드레스룸",
-    "category3": "드레스룸",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dressroom/IFS0001A_OAT_2.png",
       "/images/iloom_images/dressroom/IFS0001A_SP_1.jpg",
@@ -10519,9 +9427,9 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "드레스룸",
+    "originalCategory": "옷장",
     "category2": "드레스룸",
-    "category3": "드레스룸",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dressroom/IFS0002A_OAT_2.png",
       "/images/iloom_images/dressroom/IFS0002A_SP_1.jpg",
@@ -10558,9 +9466,9 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "드레스룸",
+    "originalCategory": "옷장",
     "category2": "드레스룸",
-    "category3": "드레스룸",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dressroom/IFM0003A_OAT_2.png",
       "/images/iloom_images/dressroom/IFM0003A_SP_1.jpg",
@@ -10597,9 +9505,9 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "드레스룸",
+    "originalCategory": "옷장",
     "category2": "드레스룸",
-    "category3": "드레스룸",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dressroom/IFM0002A_OAT_2.png",
       "/images/iloom_images/dressroom/IFM0002A_SP_1.jpg",
@@ -10636,9 +9544,9 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "드레스룸",
+    "originalCategory": "옷장",
     "category2": "드레스룸",
-    "category3": "드레스룸",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dressroom/IFO0001A_OAT_2.png",
       "/images/iloom_images/dressroom/IFO0001A_SP_1.jpg",
@@ -10675,9 +9583,9 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "드레스룸",
+    "originalCategory": "옷장",
     "category2": "드레스룸",
-    "category3": "드레스룸",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dressroom/IFO0009A_OAT_2.png",
       "/images/iloom_images/dressroom/IFO0009A_SP_1.jpg",
@@ -10714,9 +9622,9 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "드레스룸",
+    "originalCategory": "옷장",
     "category2": "드레스룸",
-    "category3": "드레스룸",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dressroom/IFO0010A_OAT_2.png",
       "/images/iloom_images/dressroom/IFO0010A_SP_1.jpg",
@@ -10753,9 +9661,9 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "드레스룸",
+    "originalCategory": "옷장",
     "category2": "드레스룸",
-    "category3": "드레스룸",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dressroom/IFT0002A_OAT_2.png",
       "/images/iloom_images/dressroom/IFT0002A_SP_1.jpg",
@@ -10791,9 +9699,9 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "드레스룸",
+    "originalCategory": "옷장",
     "category2": "드레스룸",
-    "category3": "드레스룸",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dressroom/IFI0014A_OAT_2.png",
       "/images/iloom_images/dressroom/IFI0014A_SP_1.jpg",
@@ -10830,9 +9738,9 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "드레스룸",
+    "originalCategory": "옷장",
     "category2": "드레스룸",
-    "category3": "드레스룸",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dressroom/IFI0013A_OAT_2.png",
       "/images/iloom_images/dressroom/IFI0013A_SP_1.jpg",
@@ -10869,9 +9777,9 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "드레스룸",
+    "originalCategory": "옷장",
     "category2": "드레스룸",
-    "category3": "드레스룸",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dressroom/IPC0001A_OAT_2.png",
       "/images/iloom_images/dressroom/IPC0001A_SP_1.jpg",
@@ -10907,9 +9815,9 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "드레스룸",
+    "originalCategory": "옷장",
     "category2": "드레스룸",
-    "category3": "드레스룸",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dressroom/IPC0002A_OAT_2.png",
       "/images/iloom_images/dressroom/IPC0002A_SP_1.jpg",
@@ -10945,9 +9853,9 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "드레스룸",
+    "originalCategory": "옷장",
     "category2": "드레스룸",
-    "category3": "드레스룸",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dressroom/IPC0003A_OAT_2.png",
       "/images/iloom_images/dressroom/IPC0003A_SP_1.jpg",
@@ -10979,9 +9887,9 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "드레스룸",
+    "originalCategory": "옷장",
     "category2": "드레스룸",
-    "category3": "드레스룸",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dressroom/IFH00AQ00A_OAT_2.png",
       "/images/iloom_images/dressroom/IFH00AQ00A_SP_1.jpg",
@@ -11012,9 +9920,9 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "드레스룸",
+    "originalCategory": "옷장",
     "category2": "드레스룸",
-    "category3": "드레스룸",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dressroom/HYC8080P_5J1_1.jpg",
       "/images/iloom_images/dressroom/HYC8080P_5J1_2.png"
@@ -11044,9 +9952,9 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "드레스룸",
+    "originalCategory": "옷장",
     "category2": "드레스룸",
-    "category3": "드레스룸",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dressroom/HYC8081P_5J1_1.jpg",
       "/images/iloom_images/dressroom/HYC8081P_5J1_2.png"
@@ -11076,9 +9984,9 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "드레스룸",
+    "originalCategory": "옷장",
     "category2": "드레스룸",
-    "category3": "드레스룸",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dressroom/HYC8082P_5J1_1.jpg",
       "/images/iloom_images/dressroom/HYC8082P_5J1_2.png",
@@ -11104,9 +10012,9 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "드레스룸",
+    "originalCategory": "옷장",
     "category2": "드레스룸",
-    "category3": "드레스룸",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dressroom/HYC8083P_5J1_1.jpg",
       "/images/iloom_images/dressroom/HYC8083P_5J1_2.png",
@@ -11133,9 +10041,9 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "드레스룸",
+    "originalCategory": "옷장",
     "category2": "드레스룸",
-    "category3": "드레스룸",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dressroom/IFW0021B_OAT_2.png",
       "/images/iloom_images/dressroom/IFW0021B_SP_1.jpg",
@@ -11175,9 +10083,9 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "드레스룸",
+    "originalCategory": "옷장",
     "category2": "드레스룸",
-    "category3": "드레스룸",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dressroom/IFW0022B_OAT_2.png",
       "/images/iloom_images/dressroom/IFW0022B_SP_1.jpg",
@@ -11217,9 +10125,9 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "드레스룸",
+    "originalCategory": "옷장",
     "category2": "드레스룸",
-    "category3": "드레스룸",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dressroom/IFW0023B_OAT_2.png",
       "/images/iloom_images/dressroom/IFW0023B_SP_1.jpg",
@@ -11259,9 +10167,9 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "드레스룸",
+    "originalCategory": "옷장",
     "category2": "드레스룸",
-    "category3": "드레스룸",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dressroom/IFW0024B_OAT_2.png",
       "/images/iloom_images/dressroom/IFW0024B_SP_1.jpg",
@@ -11298,9 +10206,9 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "드레스룸",
+    "originalCategory": "옷장",
     "category2": "드레스룸",
-    "category3": "드레스룸",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dressroom/IFW0025B_OAT_2.png",
       "/images/iloom_images/dressroom/IFW0025B_SP_1.jpg",
@@ -11337,9 +10245,9 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "드레스룸",
+    "originalCategory": "옷장",
     "category2": "드레스룸",
-    "category3": "드레스룸",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dressroom/IFI0009B_OAT_2.png",
       "/images/iloom_images/dressroom/IFI0009B_SP_1.jpg",
@@ -11376,9 +10284,9 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "드레스룸",
+    "originalCategory": "옷장",
     "category2": "드레스룸",
-    "category3": "드레스룸",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dressroom/IFI0010B_OAT_2.png",
       "/images/iloom_images/dressroom/IFI0010B_SP_1.jpg",
@@ -11414,9 +10322,9 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "드레스룸",
+    "originalCategory": "옷장",
     "category2": "드레스룸",
-    "category3": "드레스룸",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dressroom/IGG0003A_WCS_1.jpg",
       "/images/iloom_images/dressroom/IGG0003A_WCS_2.png"
@@ -11441,9 +10349,9 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "드레스룸",
+    "originalCategory": "옷장",
     "category2": "드레스룸",
-    "category3": "드레스룸",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dressroom/IGG0005A_WCS_1.jpg",
       "/images/iloom_images/dressroom/IGG0005A_WCS_2.png"
@@ -11473,9 +10381,9 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "드레스룸",
+    "originalCategory": "옷장",
     "category2": "드레스룸",
-    "category3": "드레스룸",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dressroom/IGB0000A_OAT_2.png",
       "/images/iloom_images/dressroom/IGB0000A_SP_1.jpg",
@@ -11504,9 +10412,9 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "드레스룸",
+    "originalCategory": "옷장",
     "category2": "드레스룸",
-    "category3": "드레스룸",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dressroom/IGB0001A_OAT_2.png",
       "/images/iloom_images/dressroom/IGB0001A_SP_1.jpg",
@@ -11536,7 +10444,7 @@ export const productData = [
     ],
     "originalCategory": "옷장",
     "category2": "옷장•붙박이장",
-    "category3": "옷장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_1.png",
       "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_2.png",
@@ -11650,909 +10558,6 @@ export const productData = [
     "ranking": 1580
   },
   {
-    "id": "HYA2190N",
-    "series": "그립 (SO)",
-    "name": "그립 (SO) 엔드측판 일반형(2EA)",
-    "material": "",
-    "price": "129,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "SO"
-        ]
-      }
-    ],
-    "originalCategory": "옷장",
-    "category2": "옷장•붙박이장",
-    "category3": "옷장",
-    "productImages": [
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_NCC_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_NCC_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_FIV_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_GYM_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_IV_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_NCC_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_OATP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_SPP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_SP_5.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [],
-    "ranking": 560
-  },
-  {
-    "id": "HYA2190N",
-    "series": "리디 (SPP)",
-    "name": "리디 (SPP) 엔드측판 일반형(2EA)",
-    "material": "",
-    "price": "129,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "SPP"
-        ]
-      }
-    ],
-    "originalCategory": "옷장",
-    "category2": "옷장•붙박이장",
-    "category3": "옷장",
-    "productImages": [
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_NCC_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_NCC_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_FIV_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_GYM_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_IV_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_NCC_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_OATP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_SPP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_SP_5.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [],
-    "ranking": 234
-  },
-  {
-    "id": "HYA2190N",
-    "series": "리디 (OATP)",
-    "name": "리디 (OATP) 엔드측판 일반형(2EA)",
-    "material": "",
-    "price": "129,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "OATP"
-        ]
-      }
-    ],
-    "originalCategory": "옷장",
-    "category2": "옷장•붙박이장",
-    "category3": "옷장",
-    "productImages": [
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_NCC_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_NCC_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_FIV_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_GYM_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_IV_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_NCC_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_OATP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_SPP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_SP_5.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [],
-    "ranking": 693
-  },
-  {
-    "id": "HYA2190N",
-    "series": "스톤W (NGYS)",
-    "name": "스톤W (NGYS) 엔드측판 일반형(2EA)",
-    "material": "",
-    "price": "129,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "NGYS"
-        ]
-      }
-    ],
-    "originalCategory": "옷장",
-    "category2": "옷장•붙박이장",
-    "category3": "옷장",
-    "productImages": [
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_NCC_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_NCC_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_FIV_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_GYM_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_IV_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_NCC_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_OATP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_SPP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_SP_5.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [],
-    "ranking": 587
-  },
-  {
-    "id": "HYA2190N",
-    "series": "스톤W (WGYS)",
-    "name": "스톤W (WGYS) 엔드측판 일반형(2EA)",
-    "material": "",
-    "price": "129,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "GYM"
-        ]
-      }
-    ],
-    "originalCategory": "옷장",
-    "category2": "옷장•붙박이장",
-    "category3": "옷장",
-    "productImages": [
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_NCC_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_NCC_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_FIV_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_GYM_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_IV_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_NCC_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_OATP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_SPP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_SP_5.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [],
-    "ranking": 1230
-  },
-  {
-    "id": "HYA2190N",
-    "series": "프레임 (SPP)",
-    "name": "프레임 (SPP) 엔드측판 일반형(2EA)",
-    "material": "",
-    "price": "129,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "SPP"
-        ]
-      }
-    ],
-    "originalCategory": "옷장",
-    "category2": "옷장•붙박이장",
-    "category3": "옷장",
-    "productImages": [
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_NCC_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_NCC_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_FIV_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_GYM_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_IV_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_NCC_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_OATP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_SPP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_SP_5.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [],
-    "ranking": 255
-  },
-  {
-    "id": "HYA2190N",
-    "series": "프레임 (OATP)",
-    "name": "프레임 (OATP) 엔드측판 일반형(2EA)",
-    "material": "",
-    "price": "129,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "OATP"
-        ]
-      }
-    ],
-    "originalCategory": "옷장",
-    "category2": "옷장•붙박이장",
-    "category3": "옷장",
-    "productImages": [
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_NCC_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_NCC_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_FIV_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_GYM_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_IV_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_NCC_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_OATP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_SPP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_SP_5.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [],
-    "ranking": 1546
-  },
-  {
     "id": "HWB1D09S",
     "series": "솔리드(SP)",
     "name": "솔리드(SP) 심플 옷장도어 900폭/1000폭",
@@ -12577,135 +10582,6 @@ export const productData = [
     "BestSeller": false,
     "detailImg": [],
     "ranking": 536
-  },
-  {
-    "id": "HYA2190N",
-    "series": "솔리드(SP)",
-    "name": "솔리드(SP) 엔드측판 일반형(2EA)",
-    "material": "",
-    "price": "129,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "SP"
-        ]
-      }
-    ],
-    "originalCategory": "옷장",
-    "category2": "옷장•붙박이장",
-    "category3": "옷장",
-    "productImages": [
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_NCC_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_NCC_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_FIV_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_GYM_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_IV_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_NCC_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_OATP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_SPP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_SP_5.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [],
-    "ranking": 102
   },
   {
     "id": "HWA0D04LS",
@@ -12768,324 +10644,6 @@ export const productData = [
     "ranking": 1602
   },
   {
-    "id": "HYA2190N",
-    "series": "솔리드(IVA)",
-    "name": "솔리드(IVA) 엔드측판 일반형(2EA)",
-    "material": "",
-    "price": "129,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "IV"
-        ]
-      }
-    ],
-    "originalCategory": "옷장",
-    "category2": "옷장•붙박이장",
-    "category3": "옷장",
-    "productImages": [
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_NCC_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_NCC_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_FIV_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_GYM_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_IV_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_NCC_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_OATP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_SPP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_SP_5.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [],
-    "ranking": 1318
-  },
-  {
-    "id": "HWA0D04LS",
-    "series": "솔리드(GYA)",
-    "name": "솔리드(GYA) 옷장도어 450폭 좌/우, 500폭 좌/우",
-    "material": "",
-    "price": "138,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "GYA"
-        ]
-      }
-    ],
-    "originalCategory": "옷장",
-    "category2": "옷장•붙박이장",
-    "category3": "액세서리",
-    "productImages": [
-      "/images/iloom_images/wardrobe/wardrobe/HWA0D04LS_a_IVA_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HWA0D04LS_a_IVA_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HWA0D04LS_b_GYA_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HWA0D04LS_b_GYA_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [],
-    "ranking": 382
-  },
-  {
-    "id": "HWA0D09S",
-    "series": "솔리드(GYA)",
-    "name": "솔리드(GYA) 옷장도어 900폭/1000폭",
-    "material": "",
-    "price": "276,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "GYA"
-        ]
-      }
-    ],
-    "originalCategory": "옷장",
-    "category2": "옷장•붙박이장",
-    "category3": "액세서리",
-    "productImages": [
-      "/images/iloom_images/wardrobe/wardrobe/HWA0D09S_a_IVA_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HWA0D09S_a_IVA_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HWA0D09S_a_IVA_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HWA0D09S_b_GYA_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HWA0D09S_b_GYA_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HWA0D09S_b_GYA_3.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [],
-    "ranking": 480
-  },
-  {
-    "id": "HYA2190N",
-    "series": "솔리드(GYA)",
-    "name": "솔리드(GYA) 엔드측판 일반형(2EA)",
-    "material": "",
-    "price": "129,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "GYM"
-        ]
-      }
-    ],
-    "originalCategory": "옷장",
-    "category2": "옷장•붙박이장",
-    "category3": "옷장",
-    "productImages": [
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_NCC_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_NCC_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_FIV_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_GYM_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_IV_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_NCC_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_OATP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_SPP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_SP_5.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [],
-    "ranking": 342
-  },
-  {
     "id": "HWB0D04LL",
     "series": "솔리드(WGYS)",
     "name": "솔리드(WGYS) 옷장도어(스톤) 450폭 좌/우, 500폭 좌/우",
@@ -13137,135 +10695,6 @@ export const productData = [
     "BestSeller": false,
     "detailImg": [],
     "ranking": 82
-  },
-  {
-    "id": "HYA2190N",
-    "series": "솔리드(WGYS)",
-    "name": "솔리드(WGYS) 엔드측판 일반형(2EA)",
-    "material": "",
-    "price": "129,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "GYM"
-        ]
-      }
-    ],
-    "originalCategory": "옷장",
-    "category2": "옷장•붙박이장",
-    "category3": "옷장",
-    "productImages": [
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_NCC_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_NCC_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_FIV_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_GYM_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_IV_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_NCC_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_OATP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_SPP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_SP_5.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [],
-    "ranking": 1597
   },
   {
     "id": "HW90D04LL",
@@ -13333,136 +10762,6 @@ export const productData = [
       "https://www.iloom.com/upload/contents/20171020/_a8b8bbfe-25b2-46d5-bb92-8d8b7c6a88dd.jpg"
     ],
     "ranking": 203
-  },
-  {
-    "id": "HYA2190N",
-    "series": "미엘",
-    "name": "미엘 엔드측판 일반형(2EA)",
-    "material": "",
-    "price": "129,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "FIV",
-          "NCC"
-        ]
-      }
-    ],
-    "originalCategory": "옷장",
-    "category2": "옷장•붙박이장",
-    "category3": "옷장",
-    "productImages": [
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_NCC_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_NCC_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_FIV_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_GYM_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_IV_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_NCC_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_OATP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_SPP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_SP_5.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [],
-    "ranking": 1076
   },
   {
     "id": "HW91D04LL",
@@ -13536,136 +10835,6 @@ export const productData = [
       "https://www.iloom.com/upload/contents/20171018/_f32249e6-3fa9-4c33-aa15-d25311bc1051.jpg"
     ],
     "ranking": 834
-  },
-  {
-    "id": "HYA2190N",
-    "series": "미엘갤러리",
-    "name": "미엘갤러리 엔드측판 일반형(2EA)",
-    "material": "",
-    "price": "129,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "FIV",
-          "NCC"
-        ]
-      }
-    ],
-    "originalCategory": "옷장",
-    "category2": "옷장•붙박이장",
-    "category3": "옷장",
-    "productImages": [
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_NCC_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_NCC_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_FIV_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_GYM_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_IV_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_NCC_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_OATP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_SPP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_SP_5.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [],
-    "ranking": 1337
   },
   {
     "id": "HWD0D09G",
@@ -13848,90 +11017,6 @@ export const productData = [
     "ranking": 1663
   },
   {
-    "id": "HWA0D20SLS",
-    "series": "슬라이딩 (GYA)",
-    "name": "슬라이딩 (GYA) 슬라이딩 도어 2문형 2000폭(인도어-좌/우)",
-    "material": "",
-    "price": "670,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "GYA"
-        ]
-      }
-    ],
-    "originalCategory": "옷장",
-    "category2": "옷장•붙박이장",
-    "category3": "액세서리",
-    "productImages": [
-      "/images/iloom_images/wardrobe/wardrobe/HWA0D20SLS_a_IVA_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HWA0D20SLS_a_IVA_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HWA0D20SLS_a_IVA_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HWA0D20SLS_b_GYA_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HWA0D20SLS_b_GYA_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HWA0D20SLS_b_GYA_3.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20190218/_312c1dba-6837-4fce-b510-a747a5f24fdc.jpg",
-      "https://www.iloom.com/upload/contents/20190218/_c77f8fb5-606d-44d7-8d01-17b9a017747b.jpg",
-      "https://www.iloom.com/upload/contents/20190218/_68df46cb-6d7b-4c45-8cc8-c0920746c441.jpg",
-      "https://www.iloom.com/upload/contents/20190218/_203ebc6d-f497-44aa-a853-694cf4ddfcd8.jpg",
-      "https://www.iloom.com/upload/contents/20190218/_ef33019a-0be8-4e57-9c6e-0079807dff51.jpg"
-    ],
-    "ranking": 970
-  },
-  {
-    "id": "HWA0D30SS",
-    "series": "슬라이딩 (GYA)",
-    "name": "슬라이딩 (GYA) 슬라이딩 도어 3문형 3000폭",
-    "material": "",
-    "price": "1,014,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "GYA"
-        ]
-      }
-    ],
-    "originalCategory": "옷장",
-    "category2": "옷장•붙박이장",
-    "category3": "액세서리",
-    "productImages": [
-      "/images/iloom_images/wardrobe/wardrobe/HWA0D30SS_a_IVA_1.jpg",
-      "/images/iloom_images/wardrobe/wardrobe/HWA0D30SS_a_IVA_1.jpg",
-      "/images/iloom_images/wardrobe/wardrobe/HWA0D30SS_a_IVA_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HWA0D30SS_a_IVA_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HWA0D30SS_b_GYA_1.jpg",
-      "/images/iloom_images/wardrobe/wardrobe/HWA0D30SS_b_GYA_1.jpg",
-      "/images/iloom_images/wardrobe/wardrobe/HWA0D30SS_b_GYA_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HWA0D30SS_b_GYA_3.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20231121/_299424d6-6e1e-4f10-a009-46ed52524f92.jpg",
-      "https://www.iloom.com/upload/contents/20240924/_f308fb1b-4b44-4a12-bf54-7a6132cb19f5.jpg",
-      "https://www.iloom.com/upload/contents/20240104/_9f791935-d606-4a9c-83b0-1696f6dde955.jpg",
-      "https://www.iloom.com/upload/contents/20240104/_43b3946b-03d0-430b-8ccc-68a3f5f0819f.jpg",
-      "https://www.iloom.com/upload/contents/20231121/_de936123-573e-4991-bfad-bff1f890de87.jpg",
-      "https://www.iloom.com/upload/contents/20240522/_bbea6468-8fc4-46cc-aa23-81d2aecae7e8.jpg",
-      "https://www.iloom.com/upload/contents/20240326/_90a42a48-68e6-4713-9887-29b5a1469461.jpg",
-      "https://www.iloom.com/upload/contents/20240507/_f967694c-5ff1-4fe1-9cea-e6a018c94cc7.jpg",
-      "https://www.iloom.com/upload/contents/20250108/_0051b3c5-1d40-419f-9a0f-bab6bd136d9b.jpg",
-      "https://www.iloom.com/upload/contents/20240522/_6b268ba1-e02e-4079-a0ea-cf7ad42b69a3.jpg",
-      "https://www.iloom.com/upload/contents/20231121/_4c04154a-a2f6-48ed-8e9f-6dc024e86404.jpg",
-      "https://www.iloom.com/upload/contents/20260102/_4e0ebf3d-1d86-4fa4-9aba-b6df26a95ee5.jpg",
-      "https://www.iloom.com/upload/contents/20231121/_4d0dae16-4c95-412f-8c0b-1edd4374a9e1.jpg"
-    ],
-    "ranking": 1154
-  },
-  {
     "id": "HWB0D30SS",
     "series": "슬라이딩 스톤 (NGYS)",
     "name": "슬라이딩 스톤 (NGYS) 슬라이딩 도어 3문형 3000폭(스톤)",
@@ -13979,53 +11064,6 @@ export const productData = [
     "ranking": 16
   },
   {
-    "id": "HWB0D30SS",
-    "series": "슬라이딩 스톤 (WGYS)",
-    "name": "슬라이딩 스톤 (WGYS) 슬라이딩 도어 3문형 3000폭(스톤)",
-    "material": "",
-    "price": "1,059,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "WGYS"
-        ]
-      }
-    ],
-    "originalCategory": "옷장",
-    "category2": "옷장•붙박이장",
-    "category3": "액세서리",
-    "productImages": [
-      "/images/iloom_images/wardrobe/wardrobe/HWB0D30SS_a_NGYS_1.jpg",
-      "/images/iloom_images/wardrobe/wardrobe/HWB0D30SS_a_NGYS_1.jpg",
-      "/images/iloom_images/wardrobe/wardrobe/HWB0D30SS_a_NGYS_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HWB0D30SS_a_NGYS_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HWB0D30SS_b_WGYS_1.jpg",
-      "/images/iloom_images/wardrobe/wardrobe/HWB0D30SS_b_WGYS_1.jpg",
-      "/images/iloom_images/wardrobe/wardrobe/HWB0D30SS_b_WGYS_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HWB0D30SS_b_WGYS_3.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20231121/_f143f1f9-26d3-49b9-8c5c-45acdbe98867.jpg",
-      "https://www.iloom.com/upload/contents/20240924/_d1bfcf81-52d2-40e9-8aa1-363cc139233d.jpg",
-      "https://www.iloom.com/upload/contents/20240104/_89718477-c1b1-4d85-8523-329171c51dae.jpg",
-      "https://www.iloom.com/upload/contents/20240104/_24490f04-ee27-4dca-86e0-8b28df71e43a.jpg",
-      "https://www.iloom.com/upload/contents/20231121/_d6fa93b6-8eec-4222-a1eb-fc4203b0ce82.jpg",
-      "https://www.iloom.com/upload/contents/20240522/_ecf3046e-9f0f-4b64-9f06-9874512087a3.jpg",
-      "https://www.iloom.com/upload/contents/20231121/_2ed11a82-1d4c-469c-ac08-96b87c923751.jpg",
-      "https://www.iloom.com/upload/contents/20231121/_d6c33d38-3377-4c0f-b8b1-58c258798985.jpg",
-      "https://www.iloom.com/upload/contents/20250108/_3eace8e6-be13-47af-a47e-9f5020d276ab.jpg",
-      "https://www.iloom.com/upload/contents/20240522/_4c98a6a7-7f02-42ff-a1cf-c8a1f4d456de.jpg",
-      "https://www.iloom.com/upload/contents/20231121/_9d8afe56-0290-447a-8fd3-b64ea74c4c3d.jpg",
-      "https://www.iloom.com/upload/contents/20260102/_63131126-d74c-4346-8881-05f9274651bf.jpg",
-      "https://www.iloom.com/upload/contents/20231121/_55844d6e-c0ee-47f2-b1a0-89c958960db7.jpg"
-    ],
-    "ranking": 164
-  },
-  {
     "id": "HWC0D30SS",
     "series": "슬라이딩 믹스 (WGYAS)",
     "name": "슬라이딩 믹스 (WGYAS) 슬라이딩 도어 3문형 3000폭(스톤 믹스)",
@@ -14069,7 +11107,7 @@ export const productData = [
     ],
     "originalCategory": "옷장",
     "category2": "옷장•붙박이장",
-    "category3": "옷장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/wardrobe/wardrobe/HYC991A_DGC_1.png",
       "/images/iloom_images/wardrobe/wardrobe/HYC991A_DGC_3.png",
@@ -14109,7 +11147,7 @@ export const productData = [
     ],
     "originalCategory": "옷장",
     "category2": "옷장•붙박이장",
-    "category3": "옷장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/wardrobe/wardrobe/HYC911A_DGC_1.png",
       "/images/iloom_images/wardrobe/wardrobe/HYC911A_DGC_3.png",
@@ -14149,13 +11187,13 @@ export const productData = [
     ],
     "originalCategory": "옷장",
     "category2": "옷장•붙박이장",
-    "category3": "옷장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/wardrobe/wardrobe/HYC992A_DGC_1.png",
       "/images/iloom_images/wardrobe/wardrobe/HYC992A_DGC_3.png",
       "/images/iloom_images/wardrobe/wardrobe/HYC992A_GYC_2.png"
     ],
-    "mdPick": true,
+    "mdPick": false,
     "new": true,
     "BestSeller": false,
     "detailImg": [
@@ -14189,7 +11227,7 @@ export const productData = [
     ],
     "originalCategory": "옷장",
     "category2": "옷장•붙박이장",
-    "category3": "옷장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/wardrobe/wardrobe/HYC912A_DGC_1.png",
       "/images/iloom_images/wardrobe/wardrobe/HYC912A_DGC_3.png",
@@ -14389,7 +11427,7 @@ export const productData = [
     ],
     "originalCategory": "옷장",
     "category2": "옷장•붙박이장",
-    "category3": "옷장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/wardrobe/wardrobe/HYC992B_DGC_1.png",
       "/images/iloom_images/wardrobe/wardrobe/HYC992B_DGC_3.png",
@@ -14429,7 +11467,7 @@ export const productData = [
     ],
     "originalCategory": "옷장",
     "category2": "옷장•붙박이장",
-    "category3": "옷장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/wardrobe/wardrobe/HYC912B_DGC_1.png",
       "/images/iloom_images/wardrobe/wardrobe/HYC912B_DGC_3.png",
@@ -14469,7 +11507,7 @@ export const productData = [
     ],
     "originalCategory": "옷장",
     "category2": "옷장•붙박이장",
-    "category3": "옷장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/wardrobe/wardrobe/HYC992C_DGC_1.png",
       "/images/iloom_images/wardrobe/wardrobe/HYC992C_DGC_3.png",
@@ -14509,7 +11547,7 @@ export const productData = [
     ],
     "originalCategory": "옷장",
     "category2": "옷장•붙박이장",
-    "category3": "옷장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/wardrobe/wardrobe/HYC912C_DGC_1.png",
       "/images/iloom_images/wardrobe/wardrobe/HYC912C_DGC_3.png",
@@ -14549,7 +11587,7 @@ export const productData = [
     ],
     "originalCategory": "옷장",
     "category2": "옷장•붙박이장",
-    "category3": "옷장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/wardrobe/wardrobe/HYC992D_DGC_1.png",
       "/images/iloom_images/wardrobe/wardrobe/HYC992D_DGC_3.png",
@@ -14589,7 +11627,7 @@ export const productData = [
     ],
     "originalCategory": "옷장",
     "category2": "옷장•붙박이장",
-    "category3": "옷장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/wardrobe/wardrobe/HYC912D_DGC_1.png",
       "/images/iloom_images/wardrobe/wardrobe/HYC912D_DGC_3.png",
@@ -14629,7 +11667,7 @@ export const productData = [
     ],
     "originalCategory": "옷장",
     "category2": "옷장•붙박이장",
-    "category3": "옷장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/wardrobe/wardrobe/HYC991C_DGC_1.png",
       "/images/iloom_images/wardrobe/wardrobe/HYC991C_DGC_3.png",
@@ -14669,7 +11707,7 @@ export const productData = [
     ],
     "originalCategory": "옷장",
     "category2": "옷장•붙박이장",
-    "category3": "옷장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/wardrobe/wardrobe/HYC911C_DGC_1.png",
       "/images/iloom_images/wardrobe/wardrobe/HYC911C_DGC_3.png",
@@ -14709,7 +11747,7 @@ export const productData = [
     ],
     "originalCategory": "옷장",
     "category2": "옷장•붙박이장",
-    "category3": "옷장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/wardrobe/wardrobe/HYC941A_DGC_1.png",
       "/images/iloom_images/wardrobe/wardrobe/HYC941A_DGC_3.png",
@@ -14749,7 +11787,7 @@ export const productData = [
     ],
     "originalCategory": "옷장",
     "category2": "옷장•붙박이장",
-    "category3": "옷장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/wardrobe/wardrobe/HYC951A_DGC_1.png",
       "/images/iloom_images/wardrobe/wardrobe/HYC951A_DGC_3.png",
@@ -14930,183 +11968,6 @@ export const productData = [
       "https://www.iloom.com/upload/contents/20211026/_a167973f-8771-4e89-a64f-9f7788192ab2.jpg"
     ],
     "ranking": 170
-  },
-  {
-    "id": "HW900801",
-    "series": "미엘",
-    "name": "미엘 미니옷장 800폭",
-    "material": "",
-    "price": "499,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "NCCBGM",
-          "FIVBGM"
-        ]
-      }
-    ],
-    "originalCategory": "옷장",
-    "category2": "옷장•붙박이장",
-    "category3": "옷장",
-    "productImages": [
-      "/images/iloom_images/bedroom/bed/HW900801_a_FIVGYM_2.png",
-      "/images/iloom_images/bedroom/bed/HW900801_a_NCCBGM_1.jpg",
-      "/images/iloom_images/bedroom/bed/HW900801_a_NCCBGM_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HW900801_b_FIVBGM_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HW900801_b_NCCBGM_1.jpg",
-      "/images/iloom_images/wardrobe/wardrobe/HW900801_b_NCCBGM_1.jpg",
-      "/images/iloom_images/wardrobe/wardrobe/HW900801_b_NCCBGM_3.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250123/_18e1173b-717d-44d7-a0f8-32b706840898.jpg",
-      "https://www.iloom.com/upload/contents/20250123/_649cbb17-86d7-4f5e-8340-98725f56aa34.jpg",
-      "https://www.iloom.com/upload/contents/20250123/_37364410-481c-4aa5-89e0-1b08c32cb403.jpg",
-      "https://www.iloom.com/upload/contents/20250123/_ccd38a6b-e493-494e-a84e-91bd65ee2f36.jpg",
-      "https://www.iloom.com/upload/contents/20250701/_50b05a93-cd12-4f80-9cf7-11dce4401418.jpg",
-      "https://www.iloom.com/upload/contents/20250123/_27f2219b-eaaf-49f1-9c55-58c6fb531783.jpg"
-    ],
-    "ranking": 579
-  },
-  {
-    "id": "HYA2190N",
-    "series": "컬렉트",
-    "name": "컬렉트 엔드측판 일반형(2EA)",
-    "material": "",
-    "price": "109,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "NCC",
-          "FIV",
-          "IV",
-          "GYM",
-          "SP",
-          "SPP",
-          "OATP",
-          "NGYS",
-          "SO"
-        ]
-      }
-    ],
-    "originalCategory": "옷장",
-    "category2": "옷장•붙박이장",
-    "category3": "옷장",
-    "productImages": [
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_a_SP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_b_SO_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_c_SPP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_d_OATP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_e_NGYS_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_f_GYM_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_g_SPP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_h_OATP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_i_SP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_j_IV_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_k_GYM_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_l_GYM_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_FIV_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_m_NCC_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_5.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_FIV_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_n_NCC_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_FIV_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_GYM_4.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_IV_3.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_NCC_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_OATP_7.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_SPP_6.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYA2190N_o_SP_5.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [],
-    "ranking": 1339
   },
   {
     "id": "IFC00CT00A",
@@ -15370,7 +12231,7 @@ export const productData = [
     ],
     "originalCategory": "키즈",
     "category2": "침대",
-    "category3": "침대",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/kids-room/bed/IBB0004A_NK_2.png",
       "/images/iloom_images/kids-room/bed/IBB0004A_OATK_1.jpg",
@@ -15413,7 +12274,7 @@ export const productData = [
     ],
     "originalCategory": "키즈",
     "category2": "침대",
-    "category3": "침대",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/kids-room/bed/IBB0005A_NK_2.png",
       "/images/iloom_images/kids-room/bed/IBB0005A_OATK_1.jpg",
@@ -15456,7 +12317,7 @@ export const productData = [
     ],
     "originalCategory": "키즈",
     "category2": "침대",
-    "category3": "침대",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/kids-room/bed/IBB0006A_NK_2.png",
       "/images/iloom_images/kids-room/bed/IBB0006A_OATK_1.jpg",
@@ -15499,7 +12360,7 @@ export const productData = [
     ],
     "originalCategory": "키즈",
     "category2": "침대",
-    "category3": "침대",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/kids-room/bed/IBB0010A_NK_2.png",
       "/images/iloom_images/kids-room/bed/IBB0010A_OATK_1.jpg",
@@ -15542,7 +12403,7 @@ export const productData = [
     ],
     "originalCategory": "키즈",
     "category2": "침대",
-    "category3": "침대",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/kids-room/bed/IBB0011A_NK_2.png",
       "/images/iloom_images/kids-room/bed/IBB0011A_OATK_1.jpg",
@@ -15585,7 +12446,7 @@ export const productData = [
     ],
     "originalCategory": "키즈",
     "category2": "침대",
-    "category3": "침대",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/kids-room/bed/IBB0012A_NK_2.png",
       "/images/iloom_images/kids-room/bed/IBB0012A_OATK_1.jpg",
@@ -15890,7 +12751,7 @@ export const productData = [
     ],
     "originalCategory": "키즈",
     "category2": "침대",
-    "category3": "침대",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/kids-room/bed/IBL0010A_NK_2.png",
       "/images/iloom_images/kids-room/bed/IBL0010A_OATK_1.jpg",
@@ -15969,7 +12830,7 @@ export const productData = [
     ],
     "originalCategory": "키즈",
     "category2": "액세서리",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/kids-room/accessories/IMF11AA01A_A472L_1.jpg",
       "/images/iloom_images/kids-room/accessories/IMF11AA01A_A472L_2.png"
@@ -16228,7 +13089,7 @@ export const productData = [
     ],
     "originalCategory": "키즈",
     "category2": "액세서리",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/kids-room/accessories/IBL00CN04A_XX_1.png",
       "/images/iloom_images/kids-room/accessories/IBL00CN04A_XX_1.png",
@@ -16264,7 +13125,7 @@ export const productData = [
     ],
     "originalCategory": "키즈",
     "category2": "액세서리",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/kids-room/accessories/IBA0005A_NK_2.png",
       "/images/iloom_images/kids-room/accessories/IBA0005A_OATK_1.png",
@@ -16299,7 +13160,7 @@ export const productData = [
     ],
     "originalCategory": "키즈",
     "category2": "액세서리",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/kids-room/accessories/IBL00CN05A_XX_1.png",
       "/images/iloom_images/kids-room/accessories/IBL00CN05A_XX_1.png",
@@ -16335,7 +13196,7 @@ export const productData = [
     ],
     "originalCategory": "키즈",
     "category2": "수납장",
-    "category3": "수납장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/kids-room/storage/ICP0000A_NKOAT_2.jpg",
       "/images/iloom_images/kids-room/storage/ICP0000A_OAT_1.jpg",
@@ -16382,7 +13243,7 @@ export const productData = [
     ],
     "originalCategory": "키즈",
     "category2": "수납장",
-    "category3": "수납장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/kids-room/storage/ICP0001A_NKOATHY_2.jpg",
       "/images/iloom_images/kids-room/storage/ICP0001A_OATHY_1.png",
@@ -16430,7 +13291,7 @@ export const productData = [
     ],
     "originalCategory": "키즈",
     "category2": "수납장",
-    "category3": "수납장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/kids-room/storage/ICP0002A_NKOAT_2.jpg",
       "/images/iloom_images/kids-room/storage/ICP0002A_OAT_1.jpg",
@@ -16477,7 +13338,7 @@ export const productData = [
     ],
     "originalCategory": "키즈",
     "category2": "수납장",
-    "category3": "수납장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/kids-room/storage/ICP0003A_NKOAT_2.jpg",
       "/images/iloom_images/kids-room/storage/ICP0003A_OAT_1.png",
@@ -16524,7 +13385,7 @@ export const productData = [
     ],
     "originalCategory": "키즈",
     "category2": "수납장",
-    "category3": "수납장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/kids-room/storage/ICP0004A_NKOATHY_2.jpg",
       "/images/iloom_images/kids-room/storage/ICP0004A_OATHY_1.png",
@@ -16571,7 +13432,7 @@ export const productData = [
     ],
     "originalCategory": "키즈",
     "category2": "수납장",
-    "category3": "수납장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/kids-room/storage/ICP0005A_NKOAT_2.jpg",
       "/images/iloom_images/kids-room/storage/ICP0005A_OAT_1.jpg",
@@ -16618,7 +13479,7 @@ export const productData = [
     ],
     "originalCategory": "키즈",
     "category2": "수납장",
-    "category3": "수납장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/kids-room/storage/ICS00CN00B_OATK_2.png",
       "/images/iloom_images/kids-room/storage/ICS00CN00B_OAT_1.jpg",
@@ -16653,7 +13514,7 @@ export const productData = [
     ],
     "originalCategory": "키즈",
     "category2": "액세서리",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/kids-room/accessories/IDP0002A_NKHY_2.png",
       "/images/iloom_images/kids-room/accessories/IDP0002A_OATHY_1.jpg",
@@ -16694,7 +13555,7 @@ export const productData = [
     ],
     "originalCategory": "키즈",
     "category2": "액세서리",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/kids-room/accessories/IDP0000A_NK_2.png",
       "/images/iloom_images/kids-room/accessories/IDP0000A_OAT_1.png",
@@ -16737,7 +13598,7 @@ export const productData = [
     ],
     "originalCategory": "키즈",
     "category2": "액세서리",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/kids-room/accessories/IDL0000A_NK_2.png",
       "/images/iloom_images/kids-room/accessories/IDL0000A_OAT_1.jpg",
@@ -16780,7 +13641,7 @@ export const productData = [
     ],
     "originalCategory": "키즈",
     "category2": "액세서리",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/kids-room/accessories/IDE0004A_CGN_2.png",
       "/images/iloom_images/kids-room/accessories/IDE0004A_HY_1.jpg",
@@ -16821,7 +13682,7 @@ export const productData = [
     ],
     "originalCategory": "키즈",
     "category2": "액세서리",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/kids-room/accessories/HSQE01N_OATBCY_2.png",
       "/images/iloom_images/kids-room/accessories/HSQE01N_OAT_1.jpg",
@@ -16861,7 +13722,7 @@ export const productData = [
     ],
     "originalCategory": "키즈",
     "category2": "액세서리",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/kids-room/accessories/HSQE02N_OATBCY_2.png",
       "/images/iloom_images/kids-room/accessories/HSQE02N_OAT_1.jpg",
@@ -16980,7 +13841,7 @@ export const productData = [
     ],
     "originalCategory": "키즈",
     "category2": "침대",
-    "category3": "침대",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/kids-room/bed/HSQE110_OAT_1.jpg",
       "/images/iloom_images/kids-room/bed/HSQE110_OAT_2.png"
@@ -17125,7 +13986,7 @@ export const productData = [
     ],
     "originalCategory": "키즈",
     "category2": "수납장",
-    "category3": "수납장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/kids-room/storage/HSQA0002_BCY_2.png",
       "/images/iloom_images/kids-room/storage/HSQA0002_OAT_1.jpg",
@@ -17160,7 +14021,7 @@ export const productData = [
     ],
     "originalCategory": "키즈",
     "category2": "액세서리",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/kids-room/accessories/HSQA0004_BCY_1.jpg",
       "/images/iloom_images/kids-room/accessories/HSQA0004_BCY_2.png"
@@ -17194,7 +14055,7 @@ export const productData = [
     ],
     "originalCategory": "키즈",
     "category2": "액세서리",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/kids-room/accessories/HSQA0005_BCY_1.jpg",
       "/images/iloom_images/kids-room/accessories/HSQA0005_BCY_2.png"
@@ -17228,7 +14089,7 @@ export const productData = [
     ],
     "originalCategory": "키즈",
     "category2": "액세서리",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/kids-room/accessories/ICS0000A_a_OAT_1.jpg",
       "/images/iloom_images/kids-room/accessories/ICS0000A_a_OAT_2.png",
@@ -17314,7 +14175,7 @@ export const productData = [
     ],
     "originalCategory": "키즈",
     "category2": "침대",
-    "category3": "침대",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/kids-room/bed/HSQE010N_OATBCY_2.png",
       "/images/iloom_images/kids-room/bed/HSQE010N_OAT_1.jpg",
@@ -17414,82 +14275,6 @@ export const productData = [
     "ranking": 252
   },
   {
-    "id": "HM50S10ECE",
-    "series": "코코",
-    "name": "코코 키즈 스프링 매트리스 (S)",
-    "material": "스프링",
-    "price": "419,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "S5G2A"
-        ]
-      }
-    ],
-    "originalCategory": "키즈",
-    "category2": "침대",
-    "category3": "매트리스",
-    "productImages": [
-      "/images/iloom_images/kids-room/bed/HM50S10ECE_S5G2A_1.jpg",
-      "/images/iloom_images/kids-room/bed/HM50S10ECE_S5G2A_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20231011/_b3f46996-d224-4d84-9ff2-15074d5f41ce.jpg",
-      "https://www.iloom.com/upload/contents/20220511/_8cece6c1-2997-4053-a960-8131b018ac95.jpg",
-      "https://www.iloom.com/upload/contents/20210517/_b8ab7e0a-6bb6-4088-8cf9-8b958e0ef176.jpg",
-      "https://www.iloom.com/upload/contents/20210517/_e0de9539-0337-4498-9984-84fd1b6d392c.jpg",
-      "https://www.iloom.com/upload/contents/20210521/_5e098ee0-a653-4cbb-903b-ac2b673f3e4a.jpg",
-      "https://www.iloom.com/upload/contents/20210521/_e31e9dce-d8b2-44ec-8bf7-93db0455cecc.jpg",
-      "https://www.iloom.com/upload/contents/20210520/_9821dbd8-4227-4806-8d65-24570120a853.jpg",
-      "https://www.iloom.com/upload/contents/20210520/_128d0466-ce47-4910-8dde-a3b6e283a18a.jpg"
-    ],
-    "ranking": 815
-  },
-  {
-    "id": "IMS10AC02A",
-    "series": "데일리 키즈",
-    "name": "데일리 키즈 키즈 매트리스 (S)",
-    "material": "",
-    "price": "299,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "9M2"
-        ]
-      }
-    ],
-    "originalCategory": "키즈",
-    "category2": "침대",
-    "category3": "매트리스",
-    "productImages": [
-      "/images/iloom_images/kids-room/bed/IMS10AC02A_a_9M2_1.jpg",
-      "/images/iloom_images/kids-room/bed/IMS10AC02A_a_9M2_2.png",
-      "/images/iloom_images/mattress/IMS10AC02A_b_9M2_1.jpg",
-      "/images/iloom_images/mattress/IMS10AC02A_b_9M2_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20230601/_c30d2acc-4131-4ae7-9808-b34216d3f993.jpg",
-      "https://www.iloom.com/upload/contents/20240912/_13d6acd6-c420-45c5-a837-ffe5f17a3a5b.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_62160d95-68f0-436c-801d-1bb964e9fbcd.jpg",
-      "https://www.iloom.com/upload/contents/20240912/_6101a005-781a-470a-a5a7-8f132c352c6b.jpg",
-      "https://www.iloom.com/upload/contents/20240912/_ca184a46-505e-433a-903b-3b405980d21a.jpg",
-      "https://www.iloom.com/upload/contents/20250619/_1ddc2a37-9d88-4496-a871-90d25a96f4b0.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_311c8873-3cef-4153-b86b-24d83016d860.jpg",
-      "https://www.iloom.com/upload/contents/20240724/_69abd459-432e-4587-8458-b0d7f1a6a932.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_f9ecb4ab-9e0c-4aed-b1f6-a4f2c7923581.jpg",
-      "https://www.iloom.com/upload/contents/20250428/_30528552-79f2-4535-bc8f-8b679aacd6c5.jpg"
-    ],
-    "ranking": 606
-  },
-  {
     "id": "HSAE01L",
     "series": "키니",
     "name": "키니 벙크베드(사다리형,좌)",
@@ -17506,7 +14291,7 @@ export const productData = [
     ],
     "originalCategory": "키즈",
     "category2": "액세서리",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/kids-room/accessories/HSAE01L_IVRM_1.png",
       "/images/iloom_images/kids-room/accessories/HSAE01L_IVRM_3.png",
@@ -17541,7 +14326,7 @@ export const productData = [
     ],
     "originalCategory": "키즈",
     "category2": "액세서리",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/kids-room/accessories/HSAE01R_IVRM_1.png",
       "/images/iloom_images/kids-room/accessories/HSAE01R_IVRM_3.png",
@@ -17646,7 +14431,7 @@ export const productData = [
     ],
     "originalCategory": "키즈",
     "category2": "액세서리",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/kids-room/accessories/HSAE02L_IVRM_1.png",
       "/images/iloom_images/kids-room/accessories/HSAE02L_IVRM_3.png",
@@ -17681,7 +14466,7 @@ export const productData = [
     ],
     "originalCategory": "키즈",
     "category2": "액세서리",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/kids-room/accessories/HSAE02R_IVRM_1.png",
       "/images/iloom_images/kids-room/accessories/HSAE02R_IVRM_3.png",
@@ -17785,7 +14570,7 @@ export const productData = [
     ],
     "originalCategory": "키즈",
     "category2": "침대",
-    "category3": "침대",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/kids-room/bed/HSAE03_IV_1.png",
       "/images/iloom_images/kids-room/bed/HSAE03_IV_2.png"
@@ -17816,7 +14601,7 @@ export const productData = [
     ],
     "originalCategory": "키즈",
     "category2": "액세서리",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/kids-room/accessories/HSAE001P_GYM_1.png",
       "/images/iloom_images/kids-room/accessories/HSAE001P_GYM_2.png"
@@ -17829,82 +14614,6 @@ export const productData = [
       "https://www.iloom.com/upload/contents/20220712/_c45f081b-18b6-4d0b-88d1-399bc90a1919.jpg"
     ],
     "ranking": 512
-  },
-  {
-    "id": "IMS11AC02A",
-    "series": "데일리 키즈",
-    "name": "데일리 키즈 키즈 매트리스 (SS)",
-    "material": "",
-    "price": "319,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "9M2"
-        ]
-      }
-    ],
-    "originalCategory": "키즈",
-    "category2": "침대",
-    "category3": "매트리스",
-    "productImages": [
-      "/images/iloom_images/kids-room/bed/IMS11AC02A_a_9M2_1.jpg",
-      "/images/iloom_images/kids-room/bed/IMS11AC02A_a_9M2_2.png",
-      "/images/iloom_images/mattress/IMS11AC02A_b_9M2_1.jpg",
-      "/images/iloom_images/mattress/IMS11AC02A_b_9M2_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20230601/_76abbe02-ba12-49a8-9354-7445a0fd0927.jpg",
-      "https://www.iloom.com/upload/contents/20240912/_b34ebe74-eac7-4acb-a877-985dd182f2a9.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_f9d8abbf-f32e-46ef-820b-91ac50943f06.jpg",
-      "https://www.iloom.com/upload/contents/20240912/_f770b3ec-aacb-4e8c-96de-a1d61959682d.jpg",
-      "https://www.iloom.com/upload/contents/20240912/_7754c2db-113a-471f-9317-addecb76bb3e.jpg",
-      "https://www.iloom.com/upload/contents/20250619/_5ade794c-52da-48a7-9ed5-4b1fcf594d5a.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_736c2348-aa7f-48b6-9cd8-e62c45b1aae1.jpg",
-      "https://www.iloom.com/upload/contents/20240724/_ab4597a4-a102-4b41-96e8-7ff872408648.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_82fc0246-8493-4054-a57b-aeb522fca50f.jpg",
-      "https://www.iloom.com/upload/contents/20250428/_2e445c1d-b3e2-4146-b840-b4becef2b643.jpg"
-    ],
-    "ranking": 1272
-  },
-  {
-    "id": "HM50S11ECE",
-    "series": "코코",
-    "name": "코코 키즈 스프링 매트리스 (SS)",
-    "material": "스프링",
-    "price": "469,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "S5G2A"
-        ]
-      }
-    ],
-    "originalCategory": "키즈",
-    "category2": "침대",
-    "category3": "매트리스",
-    "productImages": [
-      "/images/iloom_images/kids-room/bed/HM50S11ECE_S5G2A_1.jpg",
-      "/images/iloom_images/kids-room/bed/HM50S11ECE_S5G2A_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20231011/_9963c898-37e8-461c-9798-c12b943eeedf.jpg",
-      "https://www.iloom.com/upload/contents/20220511/_49f9c647-ab73-416f-95c3-8ebbdc82c412.jpg",
-      "https://www.iloom.com/upload/contents/20210521/_7ef85ed4-3e52-4c2d-b7fc-d03ddbed0eb8.jpg",
-      "https://www.iloom.com/upload/contents/20210521/_f261934c-5587-4365-a057-292e6e5e087c.jpg",
-      "https://www.iloom.com/upload/contents/20210521/_61e8bf9e-da64-472a-bc85-637a6980088b.jpg",
-      "https://www.iloom.com/upload/contents/20210521/_62f5dcae-d5fc-42e2-b796-7c22275d73f4.jpg",
-      "https://www.iloom.com/upload/contents/20210521/_6932603c-6486-4142-80ac-ffc01e0ebe43.jpg",
-      "https://www.iloom.com/upload/contents/20210521/_501572cd-ed9c-4c5f-926e-87aa1bc8ac57.jpg"
-    ],
-    "ranking": 59
   },
   {
     "id": "IBS0002A",
@@ -18066,7 +14775,7 @@ export const productData = [
     ],
     "originalCategory": "키즈",
     "category2": "침대",
-    "category3": "침대",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/kids-room/bed/IBS0005A_IV_1.jpg",
       "/images/iloom_images/kids-room/bed/IBS0005A_IV_2.png"
@@ -18212,82 +14921,6 @@ export const productData = [
     "ranking": 1052
   },
   {
-    "id": "IMS11AC02A",
-    "series": "데일리 키즈",
-    "name": "데일리 키즈 키즈 매트리스 (SS)",
-    "material": "",
-    "price": "319,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "9M2"
-        ]
-      }
-    ],
-    "originalCategory": "키즈",
-    "category2": "침대",
-    "category3": "매트리스",
-    "productImages": [
-      "/images/iloom_images/kids-room/bed/IMS11AC02A_a_9M2_1.jpg",
-      "/images/iloom_images/kids-room/bed/IMS11AC02A_a_9M2_2.png",
-      "/images/iloom_images/mattress/IMS11AC02A_b_9M2_1.jpg",
-      "/images/iloom_images/mattress/IMS11AC02A_b_9M2_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20230601/_76abbe02-ba12-49a8-9354-7445a0fd0927.jpg",
-      "https://www.iloom.com/upload/contents/20240912/_b34ebe74-eac7-4acb-a877-985dd182f2a9.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_f9d8abbf-f32e-46ef-820b-91ac50943f06.jpg",
-      "https://www.iloom.com/upload/contents/20240912/_f770b3ec-aacb-4e8c-96de-a1d61959682d.jpg",
-      "https://www.iloom.com/upload/contents/20240912/_7754c2db-113a-471f-9317-addecb76bb3e.jpg",
-      "https://www.iloom.com/upload/contents/20250619/_5ade794c-52da-48a7-9ed5-4b1fcf594d5a.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_736c2348-aa7f-48b6-9cd8-e62c45b1aae1.jpg",
-      "https://www.iloom.com/upload/contents/20240724/_ab4597a4-a102-4b41-96e8-7ff872408648.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_82fc0246-8493-4054-a57b-aeb522fca50f.jpg",
-      "https://www.iloom.com/upload/contents/20250428/_2e445c1d-b3e2-4146-b840-b4becef2b643.jpg"
-    ],
-    "ranking": 1644
-  },
-  {
-    "id": "HM50S11ECE",
-    "series": "코코",
-    "name": "코코 키즈 스프링 매트리스 (SS)",
-    "material": "스프링",
-    "price": "469,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "S5G2A"
-        ]
-      }
-    ],
-    "originalCategory": "키즈",
-    "category2": "침대",
-    "category3": "매트리스",
-    "productImages": [
-      "/images/iloom_images/kids-room/bed/HM50S11ECE_S5G2A_1.jpg",
-      "/images/iloom_images/kids-room/bed/HM50S11ECE_S5G2A_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20231011/_9963c898-37e8-461c-9798-c12b943eeedf.jpg",
-      "https://www.iloom.com/upload/contents/20220511/_49f9c647-ab73-416f-95c3-8ebbdc82c412.jpg",
-      "https://www.iloom.com/upload/contents/20210521/_7ef85ed4-3e52-4c2d-b7fc-d03ddbed0eb8.jpg",
-      "https://www.iloom.com/upload/contents/20210521/_f261934c-5587-4365-a057-292e6e5e087c.jpg",
-      "https://www.iloom.com/upload/contents/20210521/_61e8bf9e-da64-472a-bc85-637a6980088b.jpg",
-      "https://www.iloom.com/upload/contents/20210521/_62f5dcae-d5fc-42e2-b796-7c22275d73f4.jpg",
-      "https://www.iloom.com/upload/contents/20210521/_6932603c-6486-4142-80ac-ffc01e0ebe43.jpg",
-      "https://www.iloom.com/upload/contents/20210521/_501572cd-ed9c-4c5f-926e-87aa1bc8ac57.jpg"
-    ],
-    "ranking": 674
-  },
-  {
     "id": "IMS11AB01A",
     "series": "데일리 라이트",
     "name": "데일리 라이트 펌/미디엄 매트리스 (SS)",
@@ -18344,7 +14977,7 @@ export const productData = [
     ],
     "originalCategory": "키즈",
     "category2": "액세서리",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/kids-room/accessories/HSTE0011C_3W1_1.jpg",
       "/images/iloom_images/kids-room/accessories/HSTE0011C_3W1_4.png",
@@ -18381,7 +15014,7 @@ export const productData = [
     ],
     "originalCategory": "키즈",
     "category2": "액세서리",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/kids-room/accessories/HSNA1010_FY_2.png",
       "/images/iloom_images/kids-room/accessories/HSNA1010_GY_1.jpg",
@@ -18419,7 +15052,7 @@ export const productData = [
     ],
     "originalCategory": "키즈",
     "category2": "액세서리",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/kids-room/accessories/HSFS080_IVGY_1.jpg",
       "/images/iloom_images/kids-room/accessories/HSFS080_IVGY_4.png",
@@ -18589,7 +15222,7 @@ export const productData = [
     ],
     "originalCategory": "키즈",
     "category2": "액세서리",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/kids-room/accessories/HSFC083C_IV_1.jpg",
       "/images/iloom_images/kids-room/accessories/HSFC083C_IV_2.png"
@@ -18625,7 +15258,7 @@ export const productData = [
     ],
     "originalCategory": "키즈",
     "category2": "액세서리",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/home-library/bookshelf/HSPC1000P_c_2F1_1.jpg",
       "/images/iloom_images/home-library/bookshelf/HSPC1000P_c_2F1_3.png",
@@ -18673,7 +15306,7 @@ export const productData = [
     ],
     "originalCategory": "키즈",
     "category2": "액세서리",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/kids-room/accessories/HSLA0040H_GY_6.png",
       "/images/iloom_images/kids-room/accessories/HSLA0040H_HY_7.png",
@@ -18709,7 +15342,7 @@ export const productData = [
     ],
     "originalCategory": "키즈",
     "category2": "액세서리",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/kids-room/accessories/HSLA0040L_IV_1.png",
       "/images/iloom_images/kids-room/accessories/HSLA0040L_IV_2.png"
@@ -18738,7 +15371,7 @@ export const productData = [
     ],
     "originalCategory": "키즈",
     "category2": "액세서리",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/kids-room/accessories/HSLA0041_IV_1.jpg",
       "/images/iloom_images/kids-room/accessories/HSLA0041_IV_2.png"
@@ -18896,7 +15529,7 @@ export const productData = [
     ],
     "originalCategory": "키즈",
     "category2": "액세서리",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/kids-room/accessories/HSFS103_IVIVGY_4.png",
       "/images/iloom_images/kids-room/accessories/HSFS103_IVIVHY_5.png",
@@ -18937,7 +15570,7 @@ export const productData = [
     ],
     "originalCategory": "키즈",
     "category2": "수납장",
-    "category3": "수납장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/kids-room/storage/HSFP093_IVGYHY_6.png",
       "/images/iloom_images/kids-room/storage/HSFP093_IVIVGY_1.jpg",
@@ -19000,7 +15633,7 @@ export const productData = [
     ],
     "originalCategory": "키즈",
     "category2": "수납장",
-    "category3": "수납장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/kids-room/storage/HSFP143_a_IVIVGY_1.jpg",
       "/images/iloom_images/kids-room/storage/HSFP143_a_IVIVGY_6.png",
@@ -19053,7 +15686,7 @@ export const productData = [
     ],
     "originalCategory": "키즈",
     "category2": "액세서리",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/kids-room/accessories/HSFP191_IVGY_4.png",
       "/images/iloom_images/kids-room/accessories/HSFP191_IVHY_5.png",
@@ -19136,7 +15769,7 @@ export const productData = [
     ],
     "originalCategory": "키즈",
     "category2": "수납장",
-    "category3": "수납장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/kids-room/storage/HSFA162_IVIVGY_4.png",
       "/images/iloom_images/kids-room/storage/HSFA162_IVIVHY_5.png",
@@ -19206,7 +15839,7 @@ export const productData = [
     ],
     "originalCategory": "키즈",
     "category2": "액세서리",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/kids-room/accessories/HSFP0060_IV_1.jpg",
       "/images/iloom_images/kids-room/accessories/HSFP0060_IV_2.png"
@@ -19257,46 +15890,6 @@ export const productData = [
       "https://www.iloom.com/upload/contents/20230531/_cb1043a9-bba3-45c2-9eda-33f4078b97d6.jpg"
     ],
     "ranking": 894
-  },
-  {
-    "id": "ICS0000A",
-    "series": "에디키즈",
-    "name": "에디키즈 교구장 2단 1000폭",
-    "material": "",
-    "price": "175,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "IV",
-          "OAT"
-        ]
-      }
-    ],
-    "originalCategory": "키즈",
-    "category2": "액세서리",
-    "category3": "액세서리",
-    "productImages": [
-      "/images/iloom_images/kids-room/accessories/ICS0000A_a_OAT_1.jpg",
-      "/images/iloom_images/kids-room/accessories/ICS0000A_a_OAT_2.png",
-      "/images/iloom_images/kids-room/accessories/ICS0000A_a_OAT_3.png",
-      "/images/iloom_images/kids-room/accessories/ICS0000A_b_IV_1.jpg",
-      "/images/iloom_images/kids-room/accessories/ICS0000A_b_IV_3.png",
-      "/images/iloom_images/kids-room/accessories/ICS0000A_b_OAT_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20230531/_2adfdefc-6bb4-436d-a036-747dade57c5a.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_d76147ff-ec9a-4ce2-9d19-1588a67cb3a8.jpg",
-      "https://www.iloom.com/upload/contents/20230531/_49f4ff95-ebb5-44a2-9b24-ec43d0b03cdf.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_4d2d4780-c380-4b29-8de9-f1987e29c665.jpg",
-      "https://www.iloom.com/upload/contents/20240508/_a66f25e2-5602-44ce-b8cc-cbacf687bade.png",
-      "https://www.iloom.com/upload/contents/20250604/_1532fa35-70f7-4bfe-bbc0-b93898b8b07a.jpg",
-      "https://www.iloom.com/upload/contents/20230531/_400447db-68b9-483a-bea9-195927229a2c.jpg"
-    ],
-    "ranking": 253
   },
   {
     "id": "IBF0000A",
@@ -19474,7 +16067,7 @@ export const productData = [
     ],
     "originalCategory": "키즈",
     "category2": "침대",
-    "category3": "침대",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/kids-room/bed/IBB0000A_A443DIV_2.png",
       "/images/iloom_images/kids-room/bed/IBB0000A_A443DIV_2.png",
@@ -19520,7 +16113,7 @@ export const productData = [
     ],
     "originalCategory": "키즈",
     "category2": "침대",
-    "category3": "침대",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/kids-room/bed/IBS0000A_IV_1.jpg",
       "/images/iloom_images/kids-room/bed/IBS0000A_IV_2.png"
@@ -19556,7 +16149,7 @@ export const productData = [
     ],
     "originalCategory": "키즈",
     "category2": "침대",
-    "category3": "침대",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/kids-room/bed/IBS0001A_IV_1.jpg",
       "/images/iloom_images/kids-room/bed/IBS0001A_IV_2.png"
@@ -19592,7 +16185,7 @@ export const productData = [
     ],
     "originalCategory": "키즈",
     "category2": "침대",
-    "category3": "침대",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/kids-room/bed/IBA0002A_IV_1.jpg",
       "/images/iloom_images/kids-room/bed/IBA0002A_IV_2.png"
@@ -19626,7 +16219,7 @@ export const productData = [
     ],
     "originalCategory": "키즈",
     "category2": "침대",
-    "category3": "침대",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/kids-room/bed/IBA0003A_IV_1.jpg",
       "/images/iloom_images/kids-room/bed/IBA0003A_IV_2.png"
@@ -19680,121 +16273,6 @@ export const productData = [
       "https://www.iloom.com/upload/contents/20230525/_a0c3acf9-4d01-484d-95b4-58040ef3b871.jpg"
     ],
     "ranking": 422
-  },
-  {
-    "id": "IMS11AC02A",
-    "series": "데일리 키즈",
-    "name": "데일리 키즈 키즈 매트리스 (SS)",
-    "material": "",
-    "price": "319,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "9M2"
-        ]
-      }
-    ],
-    "originalCategory": "키즈",
-    "category2": "침대",
-    "category3": "매트리스",
-    "productImages": [
-      "/images/iloom_images/kids-room/bed/IMS11AC02A_a_9M2_1.jpg",
-      "/images/iloom_images/kids-room/bed/IMS11AC02A_a_9M2_2.png",
-      "/images/iloom_images/mattress/IMS11AC02A_b_9M2_1.jpg",
-      "/images/iloom_images/mattress/IMS11AC02A_b_9M2_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20230601/_76abbe02-ba12-49a8-9354-7445a0fd0927.jpg",
-      "https://www.iloom.com/upload/contents/20240912/_b34ebe74-eac7-4acb-a877-985dd182f2a9.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_f9d8abbf-f32e-46ef-820b-91ac50943f06.jpg",
-      "https://www.iloom.com/upload/contents/20240912/_f770b3ec-aacb-4e8c-96de-a1d61959682d.jpg",
-      "https://www.iloom.com/upload/contents/20240912/_7754c2db-113a-471f-9317-addecb76bb3e.jpg",
-      "https://www.iloom.com/upload/contents/20250619/_5ade794c-52da-48a7-9ed5-4b1fcf594d5a.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_736c2348-aa7f-48b6-9cd8-e62c45b1aae1.jpg",
-      "https://www.iloom.com/upload/contents/20240724/_ab4597a4-a102-4b41-96e8-7ff872408648.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_82fc0246-8493-4054-a57b-aeb522fca50f.jpg",
-      "https://www.iloom.com/upload/contents/20250428/_2e445c1d-b3e2-4146-b840-b4becef2b643.jpg"
-    ],
-    "ranking": 211
-  },
-  {
-    "id": "HM50S11ECE",
-    "series": "코코",
-    "name": "코코 키즈 스프링 매트리스 (SS)",
-    "material": "스프링",
-    "price": "469,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "S5G2A"
-        ]
-      }
-    ],
-    "originalCategory": "키즈",
-    "category2": "침대",
-    "category3": "매트리스",
-    "productImages": [
-      "/images/iloom_images/kids-room/bed/HM50S11ECE_S5G2A_1.jpg",
-      "/images/iloom_images/kids-room/bed/HM50S11ECE_S5G2A_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": true,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20231011/_9963c898-37e8-461c-9798-c12b943eeedf.jpg",
-      "https://www.iloom.com/upload/contents/20220511/_49f9c647-ab73-416f-95c3-8ebbdc82c412.jpg",
-      "https://www.iloom.com/upload/contents/20210521/_7ef85ed4-3e52-4c2d-b7fc-d03ddbed0eb8.jpg",
-      "https://www.iloom.com/upload/contents/20210521/_f261934c-5587-4365-a057-292e6e5e087c.jpg",
-      "https://www.iloom.com/upload/contents/20210521/_61e8bf9e-da64-472a-bc85-637a6980088b.jpg",
-      "https://www.iloom.com/upload/contents/20210521/_62f5dcae-d5fc-42e2-b796-7c22275d73f4.jpg",
-      "https://www.iloom.com/upload/contents/20210521/_6932603c-6486-4142-80ac-ffc01e0ebe43.jpg",
-      "https://www.iloom.com/upload/contents/20210521/_501572cd-ed9c-4c5f-926e-87aa1bc8ac57.jpg"
-    ],
-    "ranking": 15
-  },
-  {
-    "id": "IMS11AB01A",
-    "series": "데일리 라이트",
-    "name": "데일리 라이트 펌/미디엄 매트리스 (SS)",
-    "material": "",
-    "price": "370,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "9M1"
-        ]
-      }
-    ],
-    "originalCategory": "키즈",
-    "category2": "침대",
-    "category3": "매트리스",
-    "productImages": [
-      "/images/iloom_images/kids-room/bed/IMS11AB01A_a_9M1_1.jpg",
-      "/images/iloom_images/kids-room/bed/IMS11AB01A_a_9M1_2.png",
-      "/images/iloom_images/mattress/IMS11AB01A_b_9M1_1.jpg",
-      "/images/iloom_images/mattress/IMS11AB01A_b_9M1_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20230601/_18e6ff7e-f13e-46d3-b492-7339b36b73c9.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_d0640eb8-46a4-426f-92c6-d2d84df4ec61.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_009e5509-4b70-4e64-965f-602fc440cd82.jpg",
-      "https://www.iloom.com/upload/contents/20250311/_c092235f-b050-4444-92db-eb70529e9d29.jpg",
-      "https://www.iloom.com/upload/contents/20240903/_a9f9f959-eea9-4d36-93c0-75b09618bbee.jpg",
-      "https://www.iloom.com/upload/contents/20250619/_4fb8e52f-a2d0-4c1a-8b24-075edd7c8e27.jpg",
-      "https://www.iloom.com/upload/contents/20240724/_fbd91edb-c636-4d07-83f6-2a098cba2549.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_8f2a94f7-a475-4d62-9376-057c5b0af207.jpg",
-      "https://www.iloom.com/upload/contents/20250428/_aec5f3f0-1436-43a3-a3ad-18744e1f4b0d.jpg"
-    ],
-    "ranking": 1613
   },
   {
     "id": "HSFC580",
@@ -20038,7 +16516,7 @@ export const productData = [
     ],
     "originalCategory": "키즈",
     "category2": "액세서리",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/kids-room/accessories/IPK0001A_IVGY_1.jpg",
       "/images/iloom_images/kids-room/accessories/IPK0001A_IVGY_2.png"
@@ -20080,7 +16558,7 @@ export const productData = [
     ],
     "originalCategory": "키즈",
     "category2": "액세서리",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/kids-room/accessories/IPK0002A_IVIVGY_1.jpg",
       "/images/iloom_images/kids-room/accessories/IPK0002A_IVIVGY_6.png",
@@ -20146,7 +16624,7 @@ export const productData = [
     ],
     "originalCategory": "키즈",
     "category2": "침대",
-    "category3": "침대",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/kids-room/bed/HSLE01N_IVGY_5.png",
       "/images/iloom_images/kids-room/bed/HSLE01N_IVIVKP_3.png",
@@ -20194,7 +16672,7 @@ export const productData = [
     ],
     "originalCategory": "키즈",
     "category2": "침대",
-    "category3": "침대",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/kids-room/bed/HSLE02N_IVGY_5.png",
       "/images/iloom_images/kids-room/bed/HSLE02N_IVGY_5.png",
@@ -20240,7 +16718,7 @@ export const productData = [
     ],
     "originalCategory": "키즈",
     "category2": "침대",
-    "category3": "침대",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/kids-room/bed/HSLE110N_GY_4.png",
       "/images/iloom_images/kids-room/bed/HSLE110N_IV_1.jpg",
@@ -20281,7 +16759,7 @@ export const productData = [
     ],
     "originalCategory": "키즈",
     "category2": "침대",
-    "category3": "침대",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/kids-room/bed/HSLE001PN_GYM_4.png",
       "/images/iloom_images/kids-room/bed/HSLE001PN_IV_1.jpg",
@@ -20318,7 +16796,7 @@ export const productData = [
     ],
     "originalCategory": "키즈",
     "category2": "책상",
-    "category3": "책상",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/kids-room/desk/HSLD108_IVGY_3.png",
       "/images/iloom_images/kids-room/desk/HSLD108_IVKB_2.png",
@@ -20361,7 +16839,7 @@ export const productData = [
     ],
     "originalCategory": "키즈",
     "category2": "책상",
-    "category3": "책상",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/kids-room/desk/HSLD112H_IVGY_3.png",
       "/images/iloom_images/kids-room/desk/HSLD112H_IVKB_2.png",
@@ -20400,7 +16878,7 @@ export const productData = [
     ],
     "originalCategory": "키즈",
     "category2": "책상",
-    "category3": "책상",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/kids-room/desk/HSLD112AH_IVGY_3.png",
       "/images/iloom_images/kids-room/desk/HSLD112AH_IVKB_2.png",
@@ -20560,82 +17038,6 @@ export const productData = [
     "ranking": 1569
   },
   {
-    "id": "IMS10AC02A",
-    "series": "데일리 키즈",
-    "name": "데일리 키즈 키즈 매트리스 (S)",
-    "material": "",
-    "price": "299,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "9M2"
-        ]
-      }
-    ],
-    "originalCategory": "키즈",
-    "category2": "침대",
-    "category3": "매트리스",
-    "productImages": [
-      "/images/iloom_images/kids-room/bed/IMS10AC02A_a_9M2_1.jpg",
-      "/images/iloom_images/kids-room/bed/IMS10AC02A_a_9M2_2.png",
-      "/images/iloom_images/mattress/IMS10AC02A_b_9M2_1.jpg",
-      "/images/iloom_images/mattress/IMS10AC02A_b_9M2_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20230601/_c30d2acc-4131-4ae7-9808-b34216d3f993.jpg",
-      "https://www.iloom.com/upload/contents/20240912/_13d6acd6-c420-45c5-a837-ffe5f17a3a5b.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_62160d95-68f0-436c-801d-1bb964e9fbcd.jpg",
-      "https://www.iloom.com/upload/contents/20240912/_6101a005-781a-470a-a5a7-8f132c352c6b.jpg",
-      "https://www.iloom.com/upload/contents/20240912/_ca184a46-505e-433a-903b-3b405980d21a.jpg",
-      "https://www.iloom.com/upload/contents/20250619/_1ddc2a37-9d88-4496-a871-90d25a96f4b0.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_311c8873-3cef-4153-b86b-24d83016d860.jpg",
-      "https://www.iloom.com/upload/contents/20240724/_69abd459-432e-4587-8458-b0d7f1a6a932.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_f9ecb4ab-9e0c-4aed-b1f6-a4f2c7923581.jpg",
-      "https://www.iloom.com/upload/contents/20250428/_30528552-79f2-4535-bc8f-8b679aacd6c5.jpg"
-    ],
-    "ranking": 1356
-  },
-  {
-    "id": "HM50S10ECE",
-    "series": "코코",
-    "name": "코코 키즈 스프링 매트리스 (S)",
-    "material": "스프링",
-    "price": "419,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "S5G2A"
-        ]
-      }
-    ],
-    "originalCategory": "키즈",
-    "category2": "침대",
-    "category3": "매트리스",
-    "productImages": [
-      "/images/iloom_images/kids-room/bed/HM50S10ECE_S5G2A_1.jpg",
-      "/images/iloom_images/kids-room/bed/HM50S10ECE_S5G2A_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20231011/_b3f46996-d224-4d84-9ff2-15074d5f41ce.jpg",
-      "https://www.iloom.com/upload/contents/20220511/_8cece6c1-2997-4053-a960-8131b018ac95.jpg",
-      "https://www.iloom.com/upload/contents/20210517/_b8ab7e0a-6bb6-4088-8cf9-8b958e0ef176.jpg",
-      "https://www.iloom.com/upload/contents/20210517/_e0de9539-0337-4498-9984-84fd1b6d392c.jpg",
-      "https://www.iloom.com/upload/contents/20210521/_5e098ee0-a653-4cbb-903b-ac2b673f3e4a.jpg",
-      "https://www.iloom.com/upload/contents/20210521/_e31e9dce-d8b2-44ec-8bf7-93db0455cecc.jpg",
-      "https://www.iloom.com/upload/contents/20210520/_9821dbd8-4227-4806-8d65-24570120a853.jpg",
-      "https://www.iloom.com/upload/contents/20210520/_128d0466-ce47-4910-8dde-a3b6e283a18a.jpg"
-    ],
-    "ranking": 1203
-  },
-  {
     "id": "HSLC064N",
     "series": "팅클팝",
     "name": "팅클팝 600폭 4단 책장",
@@ -20782,7 +17184,7 @@ export const productData = [
     ],
     "originalCategory": "키즈",
     "category2": "수납장",
-    "category3": "수납장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/kids-room/storage/HSLA563_IVKP_1.jpg",
       "/images/iloom_images/kids-room/storage/HSLA563_IVKP_5.png",
@@ -20819,7 +17221,7 @@ export const productData = [
     ],
     "originalCategory": "키즈",
     "category2": "액세서리",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/kids-room/accessories/HSLA0050_IV_1.jpg",
       "/images/iloom_images/kids-room/accessories/HSLA0050_IV_4.png",
@@ -20851,7 +17253,7 @@ export const productData = [
     ],
     "originalCategory": "키즈",
     "category2": "액세서리",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/kids-room/accessories/HSLA0051_IV_1.jpg",
       "/images/iloom_images/kids-room/accessories/HSLA0051_IV_2.png"
@@ -20879,7 +17281,7 @@ export const productData = [
     ],
     "originalCategory": "키즈",
     "category2": "액세서리",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/kids-room/accessories/HSLC051W_KBKP_2.png",
       "/images/iloom_images/kids-room/accessories/HSLC051W_KRKS_1.jpg",
@@ -20904,7 +17306,7 @@ export const productData = [
     "options": [],
     "originalCategory": "키즈",
     "category2": "액세서리",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/kids-room/accessories/HCH2711A__1.jpg",
       "/images/iloom_images/kids-room/accessories/HCH2711A_default_2.png",
@@ -20975,7 +17377,7 @@ export const productData = [
     ],
     "originalCategory": "키즈",
     "category2": "액세서리",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/kids-room/accessories/HCH2200A_A441D_4.png",
       "/images/iloom_images/kids-room/accessories/HCH2200A_A441D_4.png",
@@ -21014,7 +17416,7 @@ export const productData = [
     ],
     "originalCategory": "키즈",
     "category2": "액세서리",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/kids-room/accessories/HCH2000AN_A440P_1.jpg",
       "/images/iloom_images/kids-room/accessories/HCH2000AN_A440P_2.png"
@@ -21048,7 +17450,7 @@ export const productData = [
     ],
     "originalCategory": "키즈",
     "category2": "액세서리",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/kids-room/accessories/ISY10BU00A_5D2_4.png",
       "/images/iloom_images/kids-room/accessories/ISY10BU00A_5D4L_1.jpg",
@@ -21089,7 +17491,7 @@ export const productData = [
     ],
     "originalCategory": "키즈",
     "category2": "액세서리",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/kids-room/accessories/HVCS4001A_A472L_1.jpg",
       "/images/iloom_images/kids-room/accessories/HVCS4001A_A472L_2.png"
@@ -21127,7 +17529,7 @@ export const productData = [
     ],
     "originalCategory": "키즈",
     "category2": "액세서리",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/kids-room/accessories/HVCS4002A_A440P_2.png",
       "/images/iloom_images/kids-room/accessories/HVCS4002A_A443D_1.jpg",
@@ -21166,7 +17568,7 @@ export const productData = [
     ],
     "originalCategory": "키즈",
     "category2": "액세서리",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/kids-room/accessories/HVCS4003A_A440P_2.png",
       "/images/iloom_images/kids-room/accessories/HVCS4003A_A444P_1.jpg",
@@ -21206,7 +17608,7 @@ export const productData = [
     ],
     "originalCategory": "키즈",
     "category2": "액세서리",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/kids-room/accessories/HCS4006A_A440P_1.jpg",
       "/images/iloom_images/kids-room/accessories/HCS4006A_A440P_4.png",
@@ -21245,7 +17647,7 @@ export const productData = [
     ],
     "originalCategory": "키즈",
     "category2": "액세서리",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/kids-room/accessories/HCS4016A_A441D_1.png",
       "/images/iloom_images/kids-room/accessories/HCS4016A_A441D_2.png"
@@ -21267,288 +17669,6 @@ export const productData = [
     "ranking": 93
   },
   {
-    "id": "HSLE02N",
-    "series": "팅클팝",
-    "name": "팅클팝 2층 침대(계단장형)",
-    "material": "",
-    "price": "2,513,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "IVGY"
-        ]
-      }
-    ],
-    "originalCategory": "키즈",
-    "category2": "침대",
-    "category3": "침대",
-    "productImages": [
-      "/images/iloom_images/kids-room/bed/HSLE02N_IVGY_5.png",
-      "/images/iloom_images/kids-room/bed/HSLE02N_IVGY_5.png",
-      "/images/iloom_images/kids-room/bed/HSLE02N_IVIVKP_3.png",
-      "/images/iloom_images/kids-room/bed/HSLE02N_IVIVKP_3.png",
-      "/images/iloom_images/kids-room/bed/HSLE02N_IVIVKS_4.png",
-      "/images/iloom_images/kids-room/bed/HSLE02N_IVIVKS_4.png",
-      "/images/iloom_images/kids-room/bed/HSLE02N_IVKP_1.jpg",
-      "/images/iloom_images/kids-room/bed/HSLE02N_IVKP_6.png",
-      "/images/iloom_images/kids-room/bed/HSLE02N_IVKR_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20210428/_36e702ab-a1cd-4338-8ac9-6fab7cb162f6.jpg",
-      "https://www.iloom.com/upload/contents/20210113/_b1e66dee-54e3-4ac5-b5e1-d3c77ab9b2d3.jpg",
-      "https://www.iloom.com/upload/contents/20200428/_060a788e-ece0-4678-99f2-00c256900a8a.jpg",
-      "https://www.iloom.com/upload/contents/20210428/_2c259247-c00b-41c5-aaac-4af8dd0c10ee.jpg",
-      "https://www.iloom.com/upload/contents/20200427/_c5069a88-621e-440f-a073-7d4943c48074.jpg",
-      "https://www.iloom.com/upload/contents/20210428/_70408a99-9f3f-4763-afb5-05e3d30c8c7f.jpg",
-      "https://www.iloom.com/upload/contents/20200506/_ce410fb1-6003-495a-9f09-fce76f71cdbc.jpg",
-      "https://www.iloom.com/upload/contents/20210428/_db58b095-67dc-43a9-af5d-9a5983d6eb2b.jpg",
-      "https://www.iloom.com/upload/contents/20200427/_4a22596d-58f8-4576-a5ea-0cc2ba9055a1.jpg"
-    ],
-    "ranking": 1164
-  },
-  {
-    "id": "HSLE01N",
-    "series": "팅클팝",
-    "name": "팅클팝 2층 침대(사다리형)",
-    "material": "",
-    "price": "2,353,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "IVGY"
-        ]
-      }
-    ],
-    "originalCategory": "키즈",
-    "category2": "침대",
-    "category3": "침대",
-    "productImages": [
-      "/images/iloom_images/kids-room/bed/HSLE01N_IVGY_5.png",
-      "/images/iloom_images/kids-room/bed/HSLE01N_IVIVKP_3.png",
-      "/images/iloom_images/kids-room/bed/HSLE01N_IVIVKS_4.png",
-      "/images/iloom_images/kids-room/bed/HSLE01N_IVIVKS_4.png",
-      "/images/iloom_images/kids-room/bed/HSLE01N_IVKP_1.png",
-      "/images/iloom_images/kids-room/bed/HSLE01N_IVKP_1.png",
-      "/images/iloom_images/kids-room/bed/HSLE01N_IVKP_6.png",
-      "/images/iloom_images/kids-room/bed/HSLE01N_IVKR_2.png",
-      "/images/iloom_images/kids-room/bed/HSLE01N_IVKR_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20180802/_de19ad8d-bf93-445b-b5d9-953f68977bfb.png",
-      "https://www.iloom.com/upload/contents/20210428/_9513b546-a42d-4152-ac99-df0c194af615.jpg",
-      "https://www.iloom.com/upload/contents/20210113/_914ca206-8495-4a06-8983-19d6145cf7f6.jpg",
-      "https://www.iloom.com/upload/contents/20200428/_b3038334-a4d5-44f9-bc82-ce1028b3544c.jpg",
-      "https://www.iloom.com/upload/contents/20210428/_c09723f7-8325-4dd4-9a8e-ba77a3cc09a5.jpg",
-      "https://www.iloom.com/upload/contents/20200427/_c5069a88-621e-440f-a073-7d4943c48074.jpg",
-      "https://www.iloom.com/upload/contents/20210428/_70408a99-9f3f-4763-afb5-05e3d30c8c7f.jpg",
-      "https://www.iloom.com/upload/contents/20200427/_9273c854-b4c6-4a68-94da-d66fbc61baa7.jpg",
-      "https://www.iloom.com/upload/contents/20200506/_4da03ad4-f541-4ab6-b376-2565994056eb.jpg",
-      "https://www.iloom.com/upload/contents/20210428/_32fdcee7-3b6f-4b13-80d6-d44ce2980d00.jpg"
-    ],
-    "ranking": 983
-  },
-  {
-    "id": "HSLE110N",
-    "series": "팅클팝",
-    "name": "팅클팝 1층 침대",
-    "material": "",
-    "price": "833,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "GY"
-        ]
-      }
-    ],
-    "originalCategory": "키즈",
-    "category2": "침대",
-    "category3": "침대",
-    "productImages": [
-      "/images/iloom_images/kids-room/bed/HSLE110N_GY_4.png",
-      "/images/iloom_images/kids-room/bed/HSLE110N_IV_1.jpg",
-      "/images/iloom_images/kids-room/bed/HSLE110N_IV_5.png",
-      "/images/iloom_images/kids-room/bed/HSLE110N_KB_3.png",
-      "/images/iloom_images/kids-room/bed/HSLE110N_KR_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20200506/_615ba268-c108-4c12-a036-1231578d3af8.jpg",
-      "https://www.iloom.com/upload/contents/20200427/_c5069a88-621e-440f-a073-7d4943c48074.jpg",
-      "https://www.iloom.com/upload/contents/20210428/_70408a99-9f3f-4763-afb5-05e3d30c8c7f.jpg",
-      "https://www.iloom.com/upload/contents/20200506/_dc9bda0f-5b0b-4110-9f19-a04f67adcd72.jpg",
-      "https://www.iloom.com/upload/contents/20210428/_f16d1fdd-2457-4244-a65d-d05d27c7f2f9.jpg",
-      "https://www.iloom.com/upload/contents/20220427/_f6cd28a3-21ea-4cd0-b280-e15e2ba40467.jpg",
-      "https://www.iloom.com/upload/contents/20171127/_f8cdd512-8a4c-40f6-b453-0d3057336214.jpg",
-      "https://www.iloom.com/upload/contents/20221222/_27439f9e-9601-413a-a553-3bf3cfbd050f.jpg"
-    ],
-    "ranking": 316
-  },
-  {
-    "id": "HSLE001PN",
-    "series": "팅클팝",
-    "name": "팅클팝 침대서랍",
-    "material": "",
-    "price": "73,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "GYM"
-        ]
-      }
-    ],
-    "originalCategory": "키즈",
-    "category2": "침대",
-    "category3": "침대",
-    "productImages": [
-      "/images/iloom_images/kids-room/bed/HSLE001PN_GYM_4.png",
-      "/images/iloom_images/kids-room/bed/HSLE001PN_IV_1.jpg",
-      "/images/iloom_images/kids-room/bed/HSLE001PN_IV_5.png",
-      "/images/iloom_images/kids-room/bed/HSLE001PN_IV_6.png",
-      "/images/iloom_images/kids-room/bed/HSLE001PN_KB_3.png",
-      "/images/iloom_images/kids-room/bed/HSLE001PN_KR_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20210203/_c1a60e48-bbdc-473b-8354-c03e3739352c.jpg",
-      "https://www.iloom.com/upload/contents/20210203/_23d585ba-9d9b-4153-9ed1-45d0b229d172.jpg",
-      "https://www.iloom.com/upload/contents/20210203/_a6aa1983-4d83-4e93-8be3-fd22b04c0f96.jpg",
-      "https://www.iloom.com/upload/contents/20210203/_c4db1ed4-d80f-4139-9aed-9ae2e27704e9.jpg"
-    ],
-    "ranking": 884
-  },
-  {
-    "id": "HSLD108",
-    "series": "팅클팝",
-    "name": "팅클팝 피넛형 좌식책상 800폭",
-    "material": "",
-    "price": "109,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "IVGY"
-        ]
-      }
-    ],
-    "originalCategory": "키즈",
-    "category2": "책상",
-    "category3": "책상",
-    "productImages": [
-      "/images/iloom_images/kids-room/desk/HSLD108_IVGY_3.png",
-      "/images/iloom_images/kids-room/desk/HSLD108_IVKB_2.png",
-      "/images/iloom_images/kids-room/desk/HSLD108_IVKR_1.jpg",
-      "/images/iloom_images/kids-room/desk/HSLD108_IVKR_4.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20171212/_dd3372af-b2fe-495d-8658-3ac63e1bc9db.jpg",
-      "https://www.iloom.com/upload/contents/20210428/_97579d1e-fab9-48ff-8a60-3e1781ce319d.jpg",
-      "https://www.iloom.com/upload/contents/20240717/_ae4589c7-7e36-4af6-99a7-5c50c59e9637.jpg",
-      "https://www.iloom.com/upload/contents/20201230/_75d6f107-e0be-418d-9fe5-b44369798948.jpg",
-      "https://www.iloom.com/upload/contents/20210428/_2fc0ee81-8117-4f48-8c2b-16ddf8f8723d.jpg",
-      "https://www.iloom.com/upload/contents/20171212/_b2505d44-5356-482e-a0e7-044c88b7919c.jpg",
-      "https://www.iloom.com/upload/contents/20171212/_3b68db51-bce3-4277-851a-00d1f4062a8c.jpg",
-      "https://www.iloom.com/upload/contents/20171212/_ae9a6f2f-e8b5-40c2-9513-52d9953b765a.jpg",
-      "https://www.iloom.com/upload/contents/20171212/_4a8d4393-79b6-4a8e-8bd2-57c43e5f478d.jpg",
-      "https://www.iloom.com/upload/contents/20171212/_9f5caf65-f255-4a5a-aa50-020b0282bd26.jpg",
-      "https://www.iloom.com/upload/contents/20171212/_74518661-a95a-4233-8c93-9aa7315189e5.jpg",
-      "https://www.iloom.com/upload/contents/20210428/_cc5dcf63-d93b-49de-bfc0-0b9724c1e5cb.jpg"
-    ],
-    "ranking": 71
-  },
-  {
-    "id": "HSLD112H",
-    "series": "팅클팝",
-    "name": "팅클팝 피넛형 그로잉책상 1200폭",
-    "material": "",
-    "price": "179,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "IVGY"
-        ]
-      }
-    ],
-    "originalCategory": "키즈",
-    "category2": "책상",
-    "category3": "책상",
-    "productImages": [
-      "/images/iloom_images/kids-room/desk/HSLD112H_IVGY_3.png",
-      "/images/iloom_images/kids-room/desk/HSLD112H_IVKB_2.png",
-      "/images/iloom_images/kids-room/desk/HSLD112H_IVKR_1.jpg",
-      "/images/iloom_images/kids-room/desk/HSLD112H_IVKR_4.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20171214/_5ae0581c-79d6-456d-9037-4df4d7b34669.jpg",
-      "https://www.iloom.com/upload/contents/20240717/_3b9ef97f-23e5-4b00-ac43-293887373119.jpg",
-      "https://www.iloom.com/upload/contents/20171213/_5360b66e-b80e-41dd-a72a-3ddce238419a.jpg",
-      "https://www.iloom.com/upload/contents/20171213/_5092ae9d-d805-4527-ae2d-17402fe70e0c.jpg",
-      "https://www.iloom.com/upload/contents/20210428/_aab92f16-7296-4d6b-84a9-5c39546c8935.jpg",
-      "https://www.iloom.com/upload/contents/20171213/_812cbae9-6808-4d0f-b2f3-2a59b6db3e8f.jpg",
-      "https://www.iloom.com/upload/contents/20171214/_6b980012-4578-49a0-a312-1b51d7a3f394.jpg",
-      "https://www.iloom.com/upload/contents/20201229/_02efbc33-29c8-4a28-a3a5-aa63e9964bfd.jpg"
-    ],
-    "ranking": 314
-  },
-  {
-    "id": "HSLD112AH",
-    "series": "팅클팝",
-    "name": "팅클팝 직사각형 그로잉책상 1200폭",
-    "material": "",
-    "price": "179,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "IVGY"
-        ]
-      }
-    ],
-    "originalCategory": "키즈",
-    "category2": "책상",
-    "category3": "책상",
-    "productImages": [
-      "/images/iloom_images/kids-room/desk/HSLD112AH_IVGY_3.png",
-      "/images/iloom_images/kids-room/desk/HSLD112AH_IVKB_2.png",
-      "/images/iloom_images/kids-room/desk/HSLD112AH_IVKR_1.jpg",
-      "/images/iloom_images/kids-room/desk/HSLD112AH_IVKR_4.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20210428/_050987c8-00af-4397-b452-8941efdc3897.jpg",
-      "https://www.iloom.com/upload/contents/20171214/_bb65225f-3301-4eff-842e-d64b7a1ac9e3.jpg",
-      "https://www.iloom.com/upload/contents/20180727/_47b4709f-cc5f-4393-8e94-d271aca9dd0b.jpg",
-      "https://www.iloom.com/upload/contents/20171214/_41321437-b74a-4218-954c-920b6fa6fb0f.jpg",
-      "https://www.iloom.com/upload/contents/20171214/_f03429f3-471b-4508-b93c-c0b9b1db8e70.jpg",
-      "https://www.iloom.com/upload/contents/20171214/_eb08df32-bba0-4902-9faa-9aaecf5602ed.jpg",
-      "https://www.iloom.com/upload/contents/20220427/_17f4289c-8856-46b1-97ce-4ebcc34477b8.jpg",
-      "https://www.iloom.com/upload/contents/20210428/_22e7ca06-bdf1-4873-ad88-2cb0e83d58d0.jpg"
-    ],
-    "ranking": 755
-  },
-  {
     "id": "IAL00GA00A",
     "series": "AGO",
     "name": "AGO 플립 펜던트 조명",
@@ -21564,7 +17684,7 @@ export const productData = [
     ],
     "originalCategory": "조명",
     "category2": "펜던트 조명",
-    "category3": "펜던트 조명",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/lighting/pendant-lighting/IAL00GA00A_L091_3.png",
       "/images/iloom_images/lighting/pendant-lighting/IAL00GA00A_L712_2.png",
@@ -21572,7 +17692,7 @@ export const productData = [
       "/images/iloom_images/lighting/pendant-lighting/IAL00GA00A_L754_1.jpg",
       "/images/iloom_images/lighting/pendant-lighting/IAL00GA00A_L754_4.png"
     ],
-    "mdPick": false,
+    "mdPick": true,
     "new": false,
     "BestSeller": false,
     "detailImg": [
@@ -21590,88 +17710,6 @@ export const productData = [
     "ranking": 244
   },
   {
-    "id": "IAL00GA00A",
-    "series": "AGO",
-    "name": "AGO 플립 펜던트 조명",
-    "material": "",
-    "price": "286,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "L712"
-        ]
-      }
-    ],
-    "originalCategory": "조명",
-    "category2": "펜던트 조명",
-    "category3": "펜던트 조명",
-    "productImages": [
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA00A_L091_3.png",
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA00A_L712_2.png",
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA00A_L754_1.jpg",
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA00A_L754_1.jpg",
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA00A_L754_4.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250605/_055a0c14-f111-42e4-bc0d-39fef34cb63b.jpg",
-      "https://www.iloom.com/upload/contents/20250519/_6d6f9231-4f50-46b0-b676-5a9a71d6c2a1.jpg",
-      "https://www.iloom.com/upload/contents/20250519/_7af2187a-7d15-43d1-ae02-57b4f426ec4a.jpg",
-      "https://www.iloom.com/upload/contents/20250519/_f3e0d8ba-5910-4186-aab7-cc8adffde4a0.jpg",
-      "https://www.iloom.com/upload/contents/20250604/_217de486-e7da-41c3-a338-57af854e2662.jpg",
-      "https://www.iloom.com/upload/contents/20250519/_95fd4560-a0df-45ac-bb04-b5d94bdd3ffc.jpg",
-      "https://www.iloom.com/upload/contents/20250519/_69956371-4fd7-41fe-bece-5a0be218a3ce.gif",
-      "https://www.iloom.com/upload/contents/20250519/_cbbed2cc-2dda-4c42-b2ea-85a7eb2fed16.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_fec76606-2c54-4287-99dc-c81a9498d106.jpg",
-      "https://www.iloom.com/upload/contents/20250929/_477f2a6a-a11f-4283-b52e-a3b0ec8421d1.jpg"
-    ],
-    "ranking": 1724
-  },
-  {
-    "id": "IAL00GA00A",
-    "series": "AGO",
-    "name": "AGO 플립 펜던트 조명",
-    "material": "",
-    "price": "286,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "L091"
-        ]
-      }
-    ],
-    "originalCategory": "조명",
-    "category2": "펜던트 조명",
-    "category3": "펜던트 조명",
-    "productImages": [
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA00A_L091_3.png",
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA00A_L712_2.png",
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA00A_L754_1.jpg",
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA00A_L754_1.jpg",
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA00A_L754_4.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250605/_055a0c14-f111-42e4-bc0d-39fef34cb63b.jpg",
-      "https://www.iloom.com/upload/contents/20250519/_6d6f9231-4f50-46b0-b676-5a9a71d6c2a1.jpg",
-      "https://www.iloom.com/upload/contents/20250519/_7af2187a-7d15-43d1-ae02-57b4f426ec4a.jpg",
-      "https://www.iloom.com/upload/contents/20250519/_f3e0d8ba-5910-4186-aab7-cc8adffde4a0.jpg",
-      "https://www.iloom.com/upload/contents/20250604/_217de486-e7da-41c3-a338-57af854e2662.jpg",
-      "https://www.iloom.com/upload/contents/20250519/_95fd4560-a0df-45ac-bb04-b5d94bdd3ffc.jpg",
-      "https://www.iloom.com/upload/contents/20250519/_69956371-4fd7-41fe-bece-5a0be218a3ce.gif",
-      "https://www.iloom.com/upload/contents/20250519/_cbbed2cc-2dda-4c42-b2ea-85a7eb2fed16.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_fec76606-2c54-4287-99dc-c81a9498d106.jpg",
-      "https://www.iloom.com/upload/contents/20250929/_477f2a6a-a11f-4283-b52e-a3b0ec8421d1.jpg"
-    ],
-    "ranking": 540
-  },
-  {
     "id": "IAL00GA01A",
     "series": "AGO",
     "name": "AGO 플립 플로어 조명",
@@ -21687,95 +17725,7 @@ export const productData = [
     ],
     "originalCategory": "조명",
     "category2": "플로어 조명",
-    "category3": "플로어 조명",
-    "productImages": [
-      "/images/iloom_images/lighting/floor-lighting/IAL00GA01A_L091_3.png",
-      "/images/iloom_images/lighting/floor-lighting/IAL00GA01A_L091_3.png",
-      "/images/iloom_images/lighting/floor-lighting/IAL00GA01A_L712_2.png",
-      "/images/iloom_images/lighting/floor-lighting/IAL00GA01A_L712_2.png",
-      "/images/iloom_images/lighting/floor-lighting/IAL00GA01A_L754_1.jpg",
-      "/images/iloom_images/lighting/floor-lighting/IAL00GA01A_L754_1.jpg",
-      "/images/iloom_images/lighting/floor-lighting/IAL00GA01A_L754_4.png",
-      "/images/iloom_images/lighting/floor-lighting/IAL00GA01A_L754_4.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250605/_25bc7a37-cc61-4d5b-bc45-45bf7e704075.jpg",
-      "https://www.iloom.com/upload/contents/20250519/_1ecdb003-84f4-43f7-8766-365cca1c13ed.jpg",
-      "https://www.iloom.com/upload/contents/20250519/_a0dd8a5d-ce99-4dc4-b625-4dd711a8c933.jpg",
-      "https://www.iloom.com/upload/contents/20250519/_c887c1f3-1378-43f9-95af-2505876b355a.jpg",
-      "https://www.iloom.com/upload/contents/20250604/_4a792d60-77cd-4507-b054-d3966646bf85.jpg",
-      "https://www.iloom.com/upload/contents/20250519/_5a513e23-1883-4d34-a3c1-2369c22c855f.jpg",
-      "https://www.iloom.com/upload/contents/20250519/_0b3a350f-cdbd-42dc-9d8a-162e9993b011.gif",
-      "https://www.iloom.com/upload/contents/20250519/_294871df-2bb1-4400-ad1c-68c7afd4326d.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_67db8e52-87e7-45ba-9e8a-be90fce9415f.jpg",
-      "https://www.iloom.com/upload/contents/20250929/_4ade1e46-efbb-40c8-af0f-b801c49a2791.jpg"
-    ],
-    "ranking": 185
-  },
-  {
-    "id": "IAL00GA01A",
-    "series": "AGO",
-    "name": "AGO 플립 플로어 조명",
-    "material": "",
-    "price": "429,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "L712"
-        ]
-      }
-    ],
-    "originalCategory": "조명",
-    "category2": "플로어 조명",
-    "category3": "플로어 조명",
-    "productImages": [
-      "/images/iloom_images/lighting/floor-lighting/IAL00GA01A_L091_3.png",
-      "/images/iloom_images/lighting/floor-lighting/IAL00GA01A_L091_3.png",
-      "/images/iloom_images/lighting/floor-lighting/IAL00GA01A_L712_2.png",
-      "/images/iloom_images/lighting/floor-lighting/IAL00GA01A_L712_2.png",
-      "/images/iloom_images/lighting/floor-lighting/IAL00GA01A_L754_1.jpg",
-      "/images/iloom_images/lighting/floor-lighting/IAL00GA01A_L754_1.jpg",
-      "/images/iloom_images/lighting/floor-lighting/IAL00GA01A_L754_4.png",
-      "/images/iloom_images/lighting/floor-lighting/IAL00GA01A_L754_4.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250605/_25bc7a37-cc61-4d5b-bc45-45bf7e704075.jpg",
-      "https://www.iloom.com/upload/contents/20250519/_1ecdb003-84f4-43f7-8766-365cca1c13ed.jpg",
-      "https://www.iloom.com/upload/contents/20250519/_a0dd8a5d-ce99-4dc4-b625-4dd711a8c933.jpg",
-      "https://www.iloom.com/upload/contents/20250519/_c887c1f3-1378-43f9-95af-2505876b355a.jpg",
-      "https://www.iloom.com/upload/contents/20250604/_4a792d60-77cd-4507-b054-d3966646bf85.jpg",
-      "https://www.iloom.com/upload/contents/20250519/_5a513e23-1883-4d34-a3c1-2369c22c855f.jpg",
-      "https://www.iloom.com/upload/contents/20250519/_0b3a350f-cdbd-42dc-9d8a-162e9993b011.gif",
-      "https://www.iloom.com/upload/contents/20250519/_294871df-2bb1-4400-ad1c-68c7afd4326d.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_67db8e52-87e7-45ba-9e8a-be90fce9415f.jpg",
-      "https://www.iloom.com/upload/contents/20250929/_4ade1e46-efbb-40c8-af0f-b801c49a2791.jpg"
-    ],
-    "ranking": 939
-  },
-  {
-    "id": "IAL00GA01A",
-    "series": "AGO",
-    "name": "AGO 플립 플로어 조명",
-    "material": "",
-    "price": "429,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "L091"
-        ]
-      }
-    ],
-    "originalCategory": "조명",
-    "category2": "플로어 조명",
-    "category3": "플로어 조명",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/lighting/floor-lighting/IAL00GA01A_L091_3.png",
       "/images/iloom_images/lighting/floor-lighting/IAL00GA01A_L091_3.png",
@@ -21801,7 +17751,7 @@ export const productData = [
       "https://www.iloom.com/upload/contents/20250605/_67db8e52-87e7-45ba-9e8a-be90fce9415f.jpg",
       "https://www.iloom.com/upload/contents/20250929/_4ade1e46-efbb-40c8-af0f-b801c49a2791.jpg"
     ],
-    "ranking": 729
+    "ranking": 185
   },
   {
     "id": "IAL00GA02A",
@@ -21819,7 +17769,7 @@ export const productData = [
     ],
     "originalCategory": "조명",
     "category2": "테이블 조명",
-    "category3": "테이블 조명",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/lighting/table-lighting/IAL00GA02A_L091_3.png",
       "/images/iloom_images/lighting/table-lighting/IAL00GA02A_L712_2.png",
@@ -21845,88 +17795,6 @@ export const productData = [
     "ranking": 1213
   },
   {
-    "id": "IAL00GA02A",
-    "series": "AGO",
-    "name": "AGO 플립 테이블 조명",
-    "material": "",
-    "price": "297,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "L712"
-        ]
-      }
-    ],
-    "originalCategory": "조명",
-    "category2": "테이블 조명",
-    "category3": "테이블 조명",
-    "productImages": [
-      "/images/iloom_images/lighting/table-lighting/IAL00GA02A_L091_3.png",
-      "/images/iloom_images/lighting/table-lighting/IAL00GA02A_L712_2.png",
-      "/images/iloom_images/lighting/table-lighting/IAL00GA02A_L754_1.jpg",
-      "/images/iloom_images/lighting/table-lighting/IAL00GA02A_L754_1.jpg",
-      "/images/iloom_images/lighting/table-lighting/IAL00GA02A_L754_4.png"
-    ],
-    "mdPick": true,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250605/_c91c88dc-0681-474d-8f1e-664563f46d58.jpg",
-      "https://www.iloom.com/upload/contents/20250519/_505bf272-a078-44ff-a442-c413d18cf362.jpg",
-      "https://www.iloom.com/upload/contents/20250519/_a6869bac-494a-43c2-b51a-f3cab28ff2af.jpg",
-      "https://www.iloom.com/upload/contents/20250519/_a36d2b95-fa01-452c-afed-e91a88e7f003.jpg",
-      "https://www.iloom.com/upload/contents/20250604/_fe19cded-cd27-4a59-9ec5-bed11d9cf131.jpg",
-      "https://www.iloom.com/upload/contents/20250519/_caef4d14-78a8-4894-82d4-7e25a1c84e97.jpg",
-      "https://www.iloom.com/upload/contents/20250519/_8b018c8c-2f2a-4922-b965-091f914297b5.gif",
-      "https://www.iloom.com/upload/contents/20250519/_9e990446-2ed2-49ec-9058-048700645123.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_f86a76cd-6798-4907-a212-84a3f615fb52.jpg",
-      "https://www.iloom.com/upload/contents/20250929/_ce87d0c7-f43b-4494-85d0-711861be3dd5.jpg"
-    ],
-    "ranking": 887
-  },
-  {
-    "id": "IAL00GA02A",
-    "series": "AGO",
-    "name": "AGO 플립 테이블 조명",
-    "material": "",
-    "price": "297,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "L091"
-        ]
-      }
-    ],
-    "originalCategory": "조명",
-    "category2": "테이블 조명",
-    "category3": "테이블 조명",
-    "productImages": [
-      "/images/iloom_images/lighting/table-lighting/IAL00GA02A_L091_3.png",
-      "/images/iloom_images/lighting/table-lighting/IAL00GA02A_L712_2.png",
-      "/images/iloom_images/lighting/table-lighting/IAL00GA02A_L754_1.jpg",
-      "/images/iloom_images/lighting/table-lighting/IAL00GA02A_L754_1.jpg",
-      "/images/iloom_images/lighting/table-lighting/IAL00GA02A_L754_4.png"
-    ],
-    "mdPick": false,
-    "new": true,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250605/_c91c88dc-0681-474d-8f1e-664563f46d58.jpg",
-      "https://www.iloom.com/upload/contents/20250519/_505bf272-a078-44ff-a442-c413d18cf362.jpg",
-      "https://www.iloom.com/upload/contents/20250519/_a6869bac-494a-43c2-b51a-f3cab28ff2af.jpg",
-      "https://www.iloom.com/upload/contents/20250519/_a36d2b95-fa01-452c-afed-e91a88e7f003.jpg",
-      "https://www.iloom.com/upload/contents/20250604/_fe19cded-cd27-4a59-9ec5-bed11d9cf131.jpg",
-      "https://www.iloom.com/upload/contents/20250519/_caef4d14-78a8-4894-82d4-7e25a1c84e97.jpg",
-      "https://www.iloom.com/upload/contents/20250519/_8b018c8c-2f2a-4922-b965-091f914297b5.gif",
-      "https://www.iloom.com/upload/contents/20250519/_9e990446-2ed2-49ec-9058-048700645123.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_f86a76cd-6798-4907-a212-84a3f615fb52.jpg",
-      "https://www.iloom.com/upload/contents/20250929/_ce87d0c7-f43b-4494-85d0-711861be3dd5.jpg"
-    ],
-    "ranking": 1197
-  },
-  {
     "id": "IAL00GA06A",
     "series": "AGO",
     "name": "AGO 프로브 플로어 조명",
@@ -21942,7 +17810,7 @@ export const productData = [
     ],
     "originalCategory": "조명",
     "category2": "플로어 조명",
-    "category3": "플로어 조명",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/lighting/floor-lighting/IAL00GA06A_DBK_1.jpg",
       "/images/iloom_images/lighting/floor-lighting/IAL00GA06A_DBK_2.png",
@@ -21979,7 +17847,7 @@ export const productData = [
     ],
     "originalCategory": "조명",
     "category2": "플로어 조명",
-    "category3": "플로어 조명",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/lighting/floor-lighting/IAL00GA07A_DBK_1.jpg",
       "/images/iloom_images/lighting/floor-lighting/IAL00GA07A_DBK_1.jpg",
@@ -22016,7 +17884,7 @@ export const productData = [
     ],
     "originalCategory": "조명",
     "category2": "펜던트 조명",
-    "category3": "펜던트 조명",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/lighting/pendant-lighting/IAL00GA12A_CHC_2.png",
       "/images/iloom_images/lighting/pendant-lighting/IAL00GA12A_GRY_3.png",
@@ -22041,126 +17909,6 @@ export const productData = [
     "ranking": 1000
   },
   {
-    "id": "IAL00GA12A",
-    "series": "AGO",
-    "name": "AGO 서커스 샹들리에 펜던트 조명 S",
-    "material": "",
-    "price": "640,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "CHC"
-        ]
-      }
-    ],
-    "originalCategory": "조명",
-    "category2": "펜던트 조명",
-    "category3": "펜던트 조명",
-    "productImages": [
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA12A_CHC_2.png",
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA12A_GRY_3.png",
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA12A_RAL_1.png",
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA12A_RAL_5.png",
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA12A_TRC_4.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250605/_90a0d0e4-b243-4590-9118-94f8ea0bc599.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_e8b75944-2acf-484d-b4d0-be171fc8435b.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_56b8a519-ce0d-444c-bc25-d94f7d49e169.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_0bbf35f8-9b43-4ae0-80ad-ce09462b6bbe.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_cfe9a701-54ac-4b0a-9365-9ce4fe687cf2.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_1ca88363-fd48-411c-97d3-1e76a094ed81.gif",
-      "https://www.iloom.com/upload/contents/20250605/_71250506-5f2e-42fe-93ea-d3db5489871d.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_af8eccc0-8abe-4deb-baaa-7ed40d494a82.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_d932cdf7-79bb-45c7-8f15-2f7700dff259.jpg"
-    ],
-    "ranking": 1571
-  },
-  {
-    "id": "IAL00GA12A",
-    "series": "AGO",
-    "name": "AGO 서커스 샹들리에 펜던트 조명 S",
-    "material": "",
-    "price": "640,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "GRY"
-        ]
-      }
-    ],
-    "originalCategory": "조명",
-    "category2": "펜던트 조명",
-    "category3": "펜던트 조명",
-    "productImages": [
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA12A_CHC_2.png",
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA12A_GRY_3.png",
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA12A_RAL_1.png",
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA12A_RAL_5.png",
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA12A_TRC_4.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250605/_90a0d0e4-b243-4590-9118-94f8ea0bc599.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_e8b75944-2acf-484d-b4d0-be171fc8435b.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_56b8a519-ce0d-444c-bc25-d94f7d49e169.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_0bbf35f8-9b43-4ae0-80ad-ce09462b6bbe.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_cfe9a701-54ac-4b0a-9365-9ce4fe687cf2.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_1ca88363-fd48-411c-97d3-1e76a094ed81.gif",
-      "https://www.iloom.com/upload/contents/20250605/_71250506-5f2e-42fe-93ea-d3db5489871d.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_af8eccc0-8abe-4deb-baaa-7ed40d494a82.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_d932cdf7-79bb-45c7-8f15-2f7700dff259.jpg"
-    ],
-    "ranking": 58
-  },
-  {
-    "id": "IAL00GA12A",
-    "series": "AGO",
-    "name": "AGO 서커스 샹들리에 펜던트 조명 S",
-    "material": "",
-    "price": "640,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "TRC"
-        ]
-      }
-    ],
-    "originalCategory": "조명",
-    "category2": "펜던트 조명",
-    "category3": "펜던트 조명",
-    "productImages": [
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA12A_CHC_2.png",
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA12A_GRY_3.png",
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA12A_RAL_1.png",
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA12A_RAL_5.png",
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA12A_TRC_4.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250605/_90a0d0e4-b243-4590-9118-94f8ea0bc599.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_e8b75944-2acf-484d-b4d0-be171fc8435b.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_56b8a519-ce0d-444c-bc25-d94f7d49e169.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_0bbf35f8-9b43-4ae0-80ad-ce09462b6bbe.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_cfe9a701-54ac-4b0a-9365-9ce4fe687cf2.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_1ca88363-fd48-411c-97d3-1e76a094ed81.gif",
-      "https://www.iloom.com/upload/contents/20250605/_71250506-5f2e-42fe-93ea-d3db5489871d.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_af8eccc0-8abe-4deb-baaa-7ed40d494a82.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_d932cdf7-79bb-45c7-8f15-2f7700dff259.jpg"
-    ],
-    "ranking": 663
-  },
-  {
     "id": "IAL00GA13A",
     "series": "AGO",
     "name": "AGO 서커스 샹들리에 펜던트 조명 L",
@@ -22176,7 +17924,7 @@ export const productData = [
     ],
     "originalCategory": "조명",
     "category2": "펜던트 조명",
-    "category3": "펜던트 조명",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/lighting/pendant-lighting/IAL00GA13A_CHC_2.png",
       "/images/iloom_images/lighting/pendant-lighting/IAL00GA13A_GRY_3.png",
@@ -22184,7 +17932,7 @@ export const productData = [
       "/images/iloom_images/lighting/pendant-lighting/IAL00GA13A_RAL_5.png",
       "/images/iloom_images/lighting/pendant-lighting/IAL00GA13A_TRC_4.png"
     ],
-    "mdPick": false,
+    "mdPick": true,
     "new": false,
     "BestSeller": false,
     "detailImg": [
@@ -22199,126 +17947,6 @@ export const productData = [
       "https://www.iloom.com/upload/contents/20250929/_e686900c-4c7d-4d70-b37f-dec833c20cc3.jpg"
     ],
     "ranking": 1513
-  },
-  {
-    "id": "IAL00GA13A",
-    "series": "AGO",
-    "name": "AGO 서커스 샹들리에 펜던트 조명 L",
-    "material": "",
-    "price": "930,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "CHC"
-        ]
-      }
-    ],
-    "originalCategory": "조명",
-    "category2": "펜던트 조명",
-    "category3": "펜던트 조명",
-    "productImages": [
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA13A_CHC_2.png",
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA13A_GRY_3.png",
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA13A_RAL_1.png",
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA13A_RAL_5.png",
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA13A_TRC_4.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": true,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250605/_88ce27c5-9bcb-4ea6-a262-a8346a42da75.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_d99ba980-6520-45c4-a570-83832710a8a5.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_38b25c48-8bbf-4b46-8e1f-0640119f8446.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_43817bba-724f-49f1-8fa6-792640b6081a.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_3d9f76b8-1662-4173-b19c-00337cbecebb.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_99d41855-9c7f-4aeb-a85b-98da6d1a89bb.gif",
-      "https://www.iloom.com/upload/contents/20250605/_4948da85-b380-4617-bcf4-739425b7bbd8.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_d16c4c9e-4858-4135-9274-b11f7f297849.jpg",
-      "https://www.iloom.com/upload/contents/20250929/_e686900c-4c7d-4d70-b37f-dec833c20cc3.jpg"
-    ],
-    "ranking": 187
-  },
-  {
-    "id": "IAL00GA13A",
-    "series": "AGO",
-    "name": "AGO 서커스 샹들리에 펜던트 조명 L",
-    "material": "",
-    "price": "930,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "GRY"
-        ]
-      }
-    ],
-    "originalCategory": "조명",
-    "category2": "펜던트 조명",
-    "category3": "펜던트 조명",
-    "productImages": [
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA13A_CHC_2.png",
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA13A_GRY_3.png",
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA13A_RAL_1.png",
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA13A_RAL_5.png",
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA13A_TRC_4.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250605/_88ce27c5-9bcb-4ea6-a262-a8346a42da75.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_d99ba980-6520-45c4-a570-83832710a8a5.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_38b25c48-8bbf-4b46-8e1f-0640119f8446.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_43817bba-724f-49f1-8fa6-792640b6081a.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_3d9f76b8-1662-4173-b19c-00337cbecebb.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_99d41855-9c7f-4aeb-a85b-98da6d1a89bb.gif",
-      "https://www.iloom.com/upload/contents/20250605/_4948da85-b380-4617-bcf4-739425b7bbd8.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_d16c4c9e-4858-4135-9274-b11f7f297849.jpg",
-      "https://www.iloom.com/upload/contents/20250929/_e686900c-4c7d-4d70-b37f-dec833c20cc3.jpg"
-    ],
-    "ranking": 1250
-  },
-  {
-    "id": "IAL00GA13A",
-    "series": "AGO",
-    "name": "AGO 서커스 샹들리에 펜던트 조명 L",
-    "material": "",
-    "price": "930,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "TRC"
-        ]
-      }
-    ],
-    "originalCategory": "조명",
-    "category2": "펜던트 조명",
-    "category3": "펜던트 조명",
-    "productImages": [
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA13A_CHC_2.png",
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA13A_GRY_3.png",
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA13A_RAL_1.png",
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA13A_RAL_5.png",
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA13A_TRC_4.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250605/_88ce27c5-9bcb-4ea6-a262-a8346a42da75.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_d99ba980-6520-45c4-a570-83832710a8a5.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_38b25c48-8bbf-4b46-8e1f-0640119f8446.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_43817bba-724f-49f1-8fa6-792640b6081a.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_3d9f76b8-1662-4173-b19c-00337cbecebb.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_99d41855-9c7f-4aeb-a85b-98da6d1a89bb.gif",
-      "https://www.iloom.com/upload/contents/20250605/_4948da85-b380-4617-bcf4-739425b7bbd8.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_d16c4c9e-4858-4135-9274-b11f7f297849.jpg",
-      "https://www.iloom.com/upload/contents/20250929/_e686900c-4c7d-4d70-b37f-dec833c20cc3.jpg"
-    ],
-    "ranking": 287
   },
   {
     "id": "IAL00GA03A",
@@ -22336,7 +17964,7 @@ export const productData = [
     ],
     "originalCategory": "조명",
     "category2": "조명",
-    "category3": "조명",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/lighting/lighting/IAL00GA03A_CTW_1.jpg",
       "/images/iloom_images/lighting/lighting/IAL00GA03A_CTW_1.jpg",
@@ -22374,7 +18002,7 @@ export const productData = [
     ],
     "originalCategory": "조명",
     "category2": "조명",
-    "category3": "조명",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/lighting/lighting/IAL00GA04A_CTW_1.jpg",
       "/images/iloom_images/lighting/lighting/IAL00GA04A_CTW_1.jpg",
@@ -22412,7 +18040,7 @@ export const productData = [
     ],
     "originalCategory": "조명",
     "category2": "플로어 조명",
-    "category3": "플로어 조명",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/lighting/floor-lighting/IAL00GA05A_CTW_1.jpg",
       "/images/iloom_images/lighting/floor-lighting/IAL00GA05A_CTW_1.jpg",
@@ -22450,7 +18078,7 @@ export const productData = [
     ],
     "originalCategory": "조명",
     "category2": "펜던트 조명",
-    "category3": "펜던트 조명",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/lighting/pendant-lighting/IAL00GA17A_BRR_4.png",
       "/images/iloom_images/lighting/pendant-lighting/IAL00GA17A_CHC_1.jpg",
@@ -22477,216 +18105,6 @@ export const productData = [
     "ranking": 1369
   },
   {
-    "id": "IAL00GA17A",
-    "series": "AGO",
-    "name": "AGO 벌룬 펜던트 조명",
-    "material": "",
-    "price": "528,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "EWH"
-        ]
-      }
-    ],
-    "originalCategory": "조명",
-    "category2": "펜던트 조명",
-    "category3": "펜던트 조명",
-    "productImages": [
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA17A_BRR_4.png",
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA17A_CHC_1.jpg",
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA17A_CHC_1.jpg",
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA17A_CHC_7.png",
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA17A_DKB_5.png",
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA17A_EWH_2.png",
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA17A_MGY_6.png",
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA17A_MTD_3.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250605/_fce4950a-b396-41a3-ba8b-63eb65313e41.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_0ed925b0-6196-4142-ae44-f191ac4d88bc.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_96aa439c-0b31-4d9c-b5ff-9a74e720f20e.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_92c8e19e-5597-4f4d-b2ee-355e05a8c810.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_9e4ee888-0426-4e3b-8e01-dfc8f6e1a821.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_fe69ba33-1006-4952-8ed5-3724acb2e36a.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_3fc5cf52-786f-43bb-a057-8d053a910a85.jpg",
-      "https://www.iloom.com/upload/contents/20250929/_1773ccf6-5fbb-4f69-bd30-6243070d6c00.jpg"
-    ],
-    "ranking": 1703
-  },
-  {
-    "id": "IAL00GA17A",
-    "series": "AGO",
-    "name": "AGO 벌룬 펜던트 조명",
-    "material": "",
-    "price": "528,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "MTD"
-        ]
-      }
-    ],
-    "originalCategory": "조명",
-    "category2": "펜던트 조명",
-    "category3": "펜던트 조명",
-    "productImages": [
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA17A_BRR_4.png",
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA17A_CHC_1.jpg",
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA17A_CHC_1.jpg",
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA17A_CHC_7.png",
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA17A_DKB_5.png",
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA17A_EWH_2.png",
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA17A_MGY_6.png",
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA17A_MTD_3.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250605/_fce4950a-b396-41a3-ba8b-63eb65313e41.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_0ed925b0-6196-4142-ae44-f191ac4d88bc.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_96aa439c-0b31-4d9c-b5ff-9a74e720f20e.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_92c8e19e-5597-4f4d-b2ee-355e05a8c810.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_9e4ee888-0426-4e3b-8e01-dfc8f6e1a821.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_fe69ba33-1006-4952-8ed5-3724acb2e36a.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_3fc5cf52-786f-43bb-a057-8d053a910a85.jpg",
-      "https://www.iloom.com/upload/contents/20250929/_1773ccf6-5fbb-4f69-bd30-6243070d6c00.jpg"
-    ],
-    "ranking": 232
-  },
-  {
-    "id": "IAL00GA17A",
-    "series": "AGO",
-    "name": "AGO 벌룬 펜던트 조명",
-    "material": "",
-    "price": "528,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "BRR"
-        ]
-      }
-    ],
-    "originalCategory": "조명",
-    "category2": "펜던트 조명",
-    "category3": "펜던트 조명",
-    "productImages": [
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA17A_BRR_4.png",
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA17A_CHC_1.jpg",
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA17A_CHC_1.jpg",
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA17A_CHC_7.png",
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA17A_DKB_5.png",
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA17A_EWH_2.png",
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA17A_MGY_6.png",
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA17A_MTD_3.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250605/_fce4950a-b396-41a3-ba8b-63eb65313e41.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_0ed925b0-6196-4142-ae44-f191ac4d88bc.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_96aa439c-0b31-4d9c-b5ff-9a74e720f20e.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_92c8e19e-5597-4f4d-b2ee-355e05a8c810.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_9e4ee888-0426-4e3b-8e01-dfc8f6e1a821.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_fe69ba33-1006-4952-8ed5-3724acb2e36a.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_3fc5cf52-786f-43bb-a057-8d053a910a85.jpg",
-      "https://www.iloom.com/upload/contents/20250929/_1773ccf6-5fbb-4f69-bd30-6243070d6c00.jpg"
-    ],
-    "ranking": 1566
-  },
-  {
-    "id": "IAL00GA17A",
-    "series": "AGO",
-    "name": "AGO 벌룬 펜던트 조명",
-    "material": "",
-    "price": "528,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "DKB"
-        ]
-      }
-    ],
-    "originalCategory": "조명",
-    "category2": "펜던트 조명",
-    "category3": "펜던트 조명",
-    "productImages": [
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA17A_BRR_4.png",
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA17A_CHC_1.jpg",
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA17A_CHC_1.jpg",
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA17A_CHC_7.png",
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA17A_DKB_5.png",
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA17A_EWH_2.png",
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA17A_MGY_6.png",
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA17A_MTD_3.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250605/_fce4950a-b396-41a3-ba8b-63eb65313e41.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_0ed925b0-6196-4142-ae44-f191ac4d88bc.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_96aa439c-0b31-4d9c-b5ff-9a74e720f20e.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_92c8e19e-5597-4f4d-b2ee-355e05a8c810.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_9e4ee888-0426-4e3b-8e01-dfc8f6e1a821.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_fe69ba33-1006-4952-8ed5-3724acb2e36a.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_3fc5cf52-786f-43bb-a057-8d053a910a85.jpg",
-      "https://www.iloom.com/upload/contents/20250929/_1773ccf6-5fbb-4f69-bd30-6243070d6c00.jpg"
-    ],
-    "ranking": 89
-  },
-  {
-    "id": "IAL00GA17A",
-    "series": "AGO",
-    "name": "AGO 벌룬 펜던트 조명",
-    "material": "",
-    "price": "528,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "MGY"
-        ]
-      }
-    ],
-    "originalCategory": "조명",
-    "category2": "펜던트 조명",
-    "category3": "펜던트 조명",
-    "productImages": [
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA17A_BRR_4.png",
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA17A_CHC_1.jpg",
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA17A_CHC_1.jpg",
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA17A_CHC_7.png",
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA17A_DKB_5.png",
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA17A_EWH_2.png",
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA17A_MGY_6.png",
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA17A_MTD_3.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250605/_fce4950a-b396-41a3-ba8b-63eb65313e41.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_0ed925b0-6196-4142-ae44-f191ac4d88bc.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_96aa439c-0b31-4d9c-b5ff-9a74e720f20e.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_92c8e19e-5597-4f4d-b2ee-355e05a8c810.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_9e4ee888-0426-4e3b-8e01-dfc8f6e1a821.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_fe69ba33-1006-4952-8ed5-3724acb2e36a.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_3fc5cf52-786f-43bb-a057-8d053a910a85.jpg",
-      "https://www.iloom.com/upload/contents/20250929/_1773ccf6-5fbb-4f69-bd30-6243070d6c00.jpg"
-    ],
-    "ranking": 794
-  },
-  {
     "id": "IAL00GA18A",
     "series": "AGO",
     "name": "AGO 모찌 포터블 조명",
@@ -22702,7 +18120,7 @@ export const productData = [
     ],
     "originalCategory": "조명",
     "category2": "포터블 조명",
-    "category3": "포터블 조명",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/lighting/portable-lighting/IAL00GA18A_EWH_1.png",
       "/images/iloom_images/lighting/portable-lighting/IAL00GA18A_EWH_5.png",
@@ -22726,123 +18144,6 @@ export const productData = [
     "ranking": 1051
   },
   {
-    "id": "IAL00GA18A",
-    "series": "AGO",
-    "name": "AGO 모찌 포터블 조명",
-    "material": "",
-    "price": "396,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "MTD"
-        ]
-      }
-    ],
-    "originalCategory": "조명",
-    "category2": "포터블 조명",
-    "category3": "포터블 조명",
-    "productImages": [
-      "/images/iloom_images/lighting/portable-lighting/IAL00GA18A_EWH_1.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00GA18A_EWH_5.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00GA18A_GRY_4.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00GA18A_MTD_2.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00GA18A_TRC_3.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250605/_dc4dbd9a-b7ad-4039-8193-a87728c3d810.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_1e0fdc6e-f341-4ea5-9c69-8328bbf647e4.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_1f4ba2f5-7eab-4e8c-9737-928a34af6feb.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_c5859644-8f96-4b03-92c5-e4263ced85c5.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_48bced81-47bf-4c5b-a5b1-4ca9ed8d6868.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_93d5d961-4164-467d-aaaa-07526774e320.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_1afae99b-2893-4995-91d1-f7783657c0f8.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_cea63ea5-5eae-4d7f-8b8b-e980ee57d09a.jpg"
-    ],
-    "ranking": 897
-  },
-  {
-    "id": "IAL00GA18A",
-    "series": "AGO",
-    "name": "AGO 모찌 포터블 조명",
-    "material": "",
-    "price": "396,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "TRC"
-        ]
-      }
-    ],
-    "originalCategory": "조명",
-    "category2": "포터블 조명",
-    "category3": "포터블 조명",
-    "productImages": [
-      "/images/iloom_images/lighting/portable-lighting/IAL00GA18A_EWH_1.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00GA18A_EWH_5.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00GA18A_GRY_4.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00GA18A_MTD_2.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00GA18A_TRC_3.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250605/_dc4dbd9a-b7ad-4039-8193-a87728c3d810.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_1e0fdc6e-f341-4ea5-9c69-8328bbf647e4.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_1f4ba2f5-7eab-4e8c-9737-928a34af6feb.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_c5859644-8f96-4b03-92c5-e4263ced85c5.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_48bced81-47bf-4c5b-a5b1-4ca9ed8d6868.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_93d5d961-4164-467d-aaaa-07526774e320.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_1afae99b-2893-4995-91d1-f7783657c0f8.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_cea63ea5-5eae-4d7f-8b8b-e980ee57d09a.jpg"
-    ],
-    "ranking": 1351
-  },
-  {
-    "id": "IAL00GA18A",
-    "series": "AGO",
-    "name": "AGO 모찌 포터블 조명",
-    "material": "",
-    "price": "396,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "GRY"
-        ]
-      }
-    ],
-    "originalCategory": "조명",
-    "category2": "포터블 조명",
-    "category3": "포터블 조명",
-    "productImages": [
-      "/images/iloom_images/lighting/portable-lighting/IAL00GA18A_EWH_1.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00GA18A_EWH_5.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00GA18A_GRY_4.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00GA18A_MTD_2.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00GA18A_TRC_3.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250605/_dc4dbd9a-b7ad-4039-8193-a87728c3d810.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_1e0fdc6e-f341-4ea5-9c69-8328bbf647e4.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_1f4ba2f5-7eab-4e8c-9737-928a34af6feb.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_c5859644-8f96-4b03-92c5-e4263ced85c5.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_48bced81-47bf-4c5b-a5b1-4ca9ed8d6868.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_93d5d961-4164-467d-aaaa-07526774e320.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_1afae99b-2893-4995-91d1-f7783657c0f8.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_cea63ea5-5eae-4d7f-8b8b-e980ee57d09a.jpg"
-    ],
-    "ranking": 227
-  },
-  {
     "id": "IAL00GA21A",
     "series": "AGO",
     "name": "AGO 모찌 펜던트 조명 S",
@@ -22861,7 +18162,7 @@ export const productData = [
     ],
     "originalCategory": "조명",
     "category2": "펜던트 조명",
-    "category3": "펜던트 조명",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/lighting/pendant-lighting/IAL00GA21A_CHC_1.jpg",
       "/images/iloom_images/lighting/pendant-lighting/IAL00GA21A_CHC_1.jpg",
@@ -22904,7 +18205,7 @@ export const productData = [
     ],
     "originalCategory": "조명",
     "category2": "펜던트 조명",
-    "category3": "펜던트 조명",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/lighting/pendant-lighting/IAL00GA22A_CHC_1.jpg",
       "/images/iloom_images/lighting/pendant-lighting/IAL00GA22A_CHC_1.jpg",
@@ -22945,7 +18246,7 @@ export const productData = [
     ],
     "originalCategory": "조명",
     "category2": "테이블 조명",
-    "category3": "테이블 조명",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/lighting/table-lighting/IAL00GA23A_BGD_5.png",
       "/images/iloom_images/lighting/table-lighting/IAL00GA23A_CHC_1.jpg",
@@ -22957,7 +18258,7 @@ export const productData = [
       "/images/iloom_images/lighting/table-lighting/IAL00GA23A_MGY_4.png",
       "/images/iloom_images/lighting/table-lighting/IAL00GA23A_MTD_6.png"
     ],
-    "mdPick": true,
+    "mdPick": false,
     "new": false,
     "BestSeller": false,
     "detailImg": [
@@ -22971,264 +18272,6 @@ export const productData = [
       "https://www.iloom.com/upload/contents/20250929/_476170fe-d790-4d8a-afb2-6b57774ab37c.jpg"
     ],
     "ranking": 578
-  },
-  {
-    "id": "IAL00GA23A",
-    "series": "AGO",
-    "name": "AGO 엘리 테이블 틸트 조명 S",
-    "material": "",
-    "price": "374,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "EWH"
-        ]
-      }
-    ],
-    "originalCategory": "조명",
-    "category2": "테이블 조명",
-    "category3": "테이블 조명",
-    "productImages": [
-      "/images/iloom_images/lighting/table-lighting/IAL00GA23A_BGD_5.png",
-      "/images/iloom_images/lighting/table-lighting/IAL00GA23A_CHC_1.jpg",
-      "/images/iloom_images/lighting/table-lighting/IAL00GA23A_CHC_1.jpg",
-      "/images/iloom_images/lighting/table-lighting/IAL00GA23A_CHC_8.png",
-      "/images/iloom_images/lighting/table-lighting/IAL00GA23A_DKB_7.png",
-      "/images/iloom_images/lighting/table-lighting/IAL00GA23A_EWH_2.png",
-      "/images/iloom_images/lighting/table-lighting/IAL00GA23A_GRY_3.png",
-      "/images/iloom_images/lighting/table-lighting/IAL00GA23A_MGY_4.png",
-      "/images/iloom_images/lighting/table-lighting/IAL00GA23A_MTD_6.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250605/_54486b25-bd82-4648-94a2-04d7af1beac7.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_e4cf8ca4-d634-4c79-9b13-e7e1dda926f9.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_c2486960-cc31-4fa9-a589-c7d373b704df.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_3c283574-cd15-49a9-8b93-7a7d56d58564.gif",
-      "https://www.iloom.com/upload/contents/20250605/_90aad615-2e7a-4ccf-befc-6d5efa11e3ec.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_fee903ae-4882-44e6-a1ca-863479da2873.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_762cf23e-790f-4eba-b918-e19fcfc0e2ce.jpg",
-      "https://www.iloom.com/upload/contents/20250929/_476170fe-d790-4d8a-afb2-6b57774ab37c.jpg"
-    ],
-    "ranking": 647
-  },
-  {
-    "id": "IAL00GA23A",
-    "series": "AGO",
-    "name": "AGO 엘리 테이블 틸트 조명 S",
-    "material": "",
-    "price": "374,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "GRY"
-        ]
-      }
-    ],
-    "originalCategory": "조명",
-    "category2": "테이블 조명",
-    "category3": "테이블 조명",
-    "productImages": [
-      "/images/iloom_images/lighting/table-lighting/IAL00GA23A_BGD_5.png",
-      "/images/iloom_images/lighting/table-lighting/IAL00GA23A_CHC_1.jpg",
-      "/images/iloom_images/lighting/table-lighting/IAL00GA23A_CHC_1.jpg",
-      "/images/iloom_images/lighting/table-lighting/IAL00GA23A_CHC_8.png",
-      "/images/iloom_images/lighting/table-lighting/IAL00GA23A_DKB_7.png",
-      "/images/iloom_images/lighting/table-lighting/IAL00GA23A_EWH_2.png",
-      "/images/iloom_images/lighting/table-lighting/IAL00GA23A_GRY_3.png",
-      "/images/iloom_images/lighting/table-lighting/IAL00GA23A_MGY_4.png",
-      "/images/iloom_images/lighting/table-lighting/IAL00GA23A_MTD_6.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250605/_54486b25-bd82-4648-94a2-04d7af1beac7.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_e4cf8ca4-d634-4c79-9b13-e7e1dda926f9.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_c2486960-cc31-4fa9-a589-c7d373b704df.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_3c283574-cd15-49a9-8b93-7a7d56d58564.gif",
-      "https://www.iloom.com/upload/contents/20250605/_90aad615-2e7a-4ccf-befc-6d5efa11e3ec.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_fee903ae-4882-44e6-a1ca-863479da2873.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_762cf23e-790f-4eba-b918-e19fcfc0e2ce.jpg",
-      "https://www.iloom.com/upload/contents/20250929/_476170fe-d790-4d8a-afb2-6b57774ab37c.jpg"
-    ],
-    "ranking": 1606
-  },
-  {
-    "id": "IAL00GA23A",
-    "series": "AGO",
-    "name": "AGO 엘리 테이블 틸트 조명 S",
-    "material": "",
-    "price": "374,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "MGY"
-        ]
-      }
-    ],
-    "originalCategory": "조명",
-    "category2": "테이블 조명",
-    "category3": "테이블 조명",
-    "productImages": [
-      "/images/iloom_images/lighting/table-lighting/IAL00GA23A_BGD_5.png",
-      "/images/iloom_images/lighting/table-lighting/IAL00GA23A_CHC_1.jpg",
-      "/images/iloom_images/lighting/table-lighting/IAL00GA23A_CHC_1.jpg",
-      "/images/iloom_images/lighting/table-lighting/IAL00GA23A_CHC_8.png",
-      "/images/iloom_images/lighting/table-lighting/IAL00GA23A_DKB_7.png",
-      "/images/iloom_images/lighting/table-lighting/IAL00GA23A_EWH_2.png",
-      "/images/iloom_images/lighting/table-lighting/IAL00GA23A_GRY_3.png",
-      "/images/iloom_images/lighting/table-lighting/IAL00GA23A_MGY_4.png",
-      "/images/iloom_images/lighting/table-lighting/IAL00GA23A_MTD_6.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250605/_54486b25-bd82-4648-94a2-04d7af1beac7.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_e4cf8ca4-d634-4c79-9b13-e7e1dda926f9.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_c2486960-cc31-4fa9-a589-c7d373b704df.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_3c283574-cd15-49a9-8b93-7a7d56d58564.gif",
-      "https://www.iloom.com/upload/contents/20250605/_90aad615-2e7a-4ccf-befc-6d5efa11e3ec.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_fee903ae-4882-44e6-a1ca-863479da2873.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_762cf23e-790f-4eba-b918-e19fcfc0e2ce.jpg",
-      "https://www.iloom.com/upload/contents/20250929/_476170fe-d790-4d8a-afb2-6b57774ab37c.jpg"
-    ],
-    "ranking": 463
-  },
-  {
-    "id": "IAL00GA23A",
-    "series": "AGO",
-    "name": "AGO 엘리 테이블 틸트 조명 S",
-    "material": "",
-    "price": "374,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "BGD"
-        ]
-      }
-    ],
-    "originalCategory": "조명",
-    "category2": "테이블 조명",
-    "category3": "테이블 조명",
-    "productImages": [
-      "/images/iloom_images/lighting/table-lighting/IAL00GA23A_BGD_5.png",
-      "/images/iloom_images/lighting/table-lighting/IAL00GA23A_CHC_1.jpg",
-      "/images/iloom_images/lighting/table-lighting/IAL00GA23A_CHC_1.jpg",
-      "/images/iloom_images/lighting/table-lighting/IAL00GA23A_CHC_8.png",
-      "/images/iloom_images/lighting/table-lighting/IAL00GA23A_DKB_7.png",
-      "/images/iloom_images/lighting/table-lighting/IAL00GA23A_EWH_2.png",
-      "/images/iloom_images/lighting/table-lighting/IAL00GA23A_GRY_3.png",
-      "/images/iloom_images/lighting/table-lighting/IAL00GA23A_MGY_4.png",
-      "/images/iloom_images/lighting/table-lighting/IAL00GA23A_MTD_6.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250605/_54486b25-bd82-4648-94a2-04d7af1beac7.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_e4cf8ca4-d634-4c79-9b13-e7e1dda926f9.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_c2486960-cc31-4fa9-a589-c7d373b704df.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_3c283574-cd15-49a9-8b93-7a7d56d58564.gif",
-      "https://www.iloom.com/upload/contents/20250605/_90aad615-2e7a-4ccf-befc-6d5efa11e3ec.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_fee903ae-4882-44e6-a1ca-863479da2873.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_762cf23e-790f-4eba-b918-e19fcfc0e2ce.jpg",
-      "https://www.iloom.com/upload/contents/20250929/_476170fe-d790-4d8a-afb2-6b57774ab37c.jpg"
-    ],
-    "ranking": 62
-  },
-  {
-    "id": "IAL00GA23A",
-    "series": "AGO",
-    "name": "AGO 엘리 테이블 틸트 조명 S",
-    "material": "",
-    "price": "374,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "MTD"
-        ]
-      }
-    ],
-    "originalCategory": "조명",
-    "category2": "테이블 조명",
-    "category3": "테이블 조명",
-    "productImages": [
-      "/images/iloom_images/lighting/table-lighting/IAL00GA23A_BGD_5.png",
-      "/images/iloom_images/lighting/table-lighting/IAL00GA23A_CHC_1.jpg",
-      "/images/iloom_images/lighting/table-lighting/IAL00GA23A_CHC_1.jpg",
-      "/images/iloom_images/lighting/table-lighting/IAL00GA23A_CHC_8.png",
-      "/images/iloom_images/lighting/table-lighting/IAL00GA23A_DKB_7.png",
-      "/images/iloom_images/lighting/table-lighting/IAL00GA23A_EWH_2.png",
-      "/images/iloom_images/lighting/table-lighting/IAL00GA23A_GRY_3.png",
-      "/images/iloom_images/lighting/table-lighting/IAL00GA23A_MGY_4.png",
-      "/images/iloom_images/lighting/table-lighting/IAL00GA23A_MTD_6.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250605/_54486b25-bd82-4648-94a2-04d7af1beac7.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_e4cf8ca4-d634-4c79-9b13-e7e1dda926f9.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_c2486960-cc31-4fa9-a589-c7d373b704df.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_3c283574-cd15-49a9-8b93-7a7d56d58564.gif",
-      "https://www.iloom.com/upload/contents/20250605/_90aad615-2e7a-4ccf-befc-6d5efa11e3ec.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_fee903ae-4882-44e6-a1ca-863479da2873.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_762cf23e-790f-4eba-b918-e19fcfc0e2ce.jpg",
-      "https://www.iloom.com/upload/contents/20250929/_476170fe-d790-4d8a-afb2-6b57774ab37c.jpg"
-    ],
-    "ranking": 722
-  },
-  {
-    "id": "IAL00GA23A",
-    "series": "AGO",
-    "name": "AGO 엘리 테이블 틸트 조명 S",
-    "material": "",
-    "price": "374,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "DKB"
-        ]
-      }
-    ],
-    "originalCategory": "조명",
-    "category2": "테이블 조명",
-    "category3": "테이블 조명",
-    "productImages": [
-      "/images/iloom_images/lighting/table-lighting/IAL00GA23A_BGD_5.png",
-      "/images/iloom_images/lighting/table-lighting/IAL00GA23A_CHC_1.jpg",
-      "/images/iloom_images/lighting/table-lighting/IAL00GA23A_CHC_1.jpg",
-      "/images/iloom_images/lighting/table-lighting/IAL00GA23A_CHC_8.png",
-      "/images/iloom_images/lighting/table-lighting/IAL00GA23A_DKB_7.png",
-      "/images/iloom_images/lighting/table-lighting/IAL00GA23A_EWH_2.png",
-      "/images/iloom_images/lighting/table-lighting/IAL00GA23A_GRY_3.png",
-      "/images/iloom_images/lighting/table-lighting/IAL00GA23A_MGY_4.png",
-      "/images/iloom_images/lighting/table-lighting/IAL00GA23A_MTD_6.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": true,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250605/_54486b25-bd82-4648-94a2-04d7af1beac7.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_e4cf8ca4-d634-4c79-9b13-e7e1dda926f9.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_c2486960-cc31-4fa9-a589-c7d373b704df.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_3c283574-cd15-49a9-8b93-7a7d56d58564.gif",
-      "https://www.iloom.com/upload/contents/20250605/_90aad615-2e7a-4ccf-befc-6d5efa11e3ec.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_fee903ae-4882-44e6-a1ca-863479da2873.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_762cf23e-790f-4eba-b918-e19fcfc0e2ce.jpg",
-      "https://www.iloom.com/upload/contents/20250929/_476170fe-d790-4d8a-afb2-6b57774ab37c.jpg"
-    ],
-    "ranking": 651
   },
   {
     "id": "IAL00GA28A",
@@ -23252,7 +18295,7 @@ export const productData = [
     ],
     "originalCategory": "조명",
     "category2": "펜던트 조명",
-    "category3": "펜던트 조명",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/lighting/pendant-lighting/IAL00GA28A_BGD_5.png",
       "/images/iloom_images/lighting/pendant-lighting/IAL00GA28A_BGD_5.png",
@@ -23296,7 +18339,7 @@ export const productData = [
     ],
     "originalCategory": "조명",
     "category2": "펜던트 조명",
-    "category3": "펜던트 조명",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/lighting/pendant-lighting/IAL00GA24A_EWH_1.jpg",
       "/images/iloom_images/lighting/pendant-lighting/IAL00GA24A_EWH_1.jpg",
@@ -23334,7 +18377,7 @@ export const productData = [
     ],
     "originalCategory": "조명",
     "category2": "포터블 조명",
-    "category3": "포터블 조명",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/lighting/portable-lighting/IAL00NT00A_ALU_5.png",
       "/images/iloom_images/lighting/portable-lighting/IAL00NT00A_BGY_4.png",
@@ -23359,166 +18402,6 @@ export const productData = [
     "ranking": 1287
   },
   {
-    "id": "IAL00NT00A",
-    "series": "&tradition",
-    "name": "&tradition 코모 포터블 조명",
-    "material": "",
-    "price": "320,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "BZD"
-        ]
-      }
-    ],
-    "originalCategory": "조명",
-    "category2": "포터블 조명",
-    "category3": "포터블 조명",
-    "productImages": [
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT00A_ALU_5.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT00A_BGY_4.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT00A_BZD_2.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT00A_RBD_3.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT00A_STB_1.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT00A_STB_6.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250605/_01ca6f86-d05d-4938-99ce-75c0cd871b4a.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_601002d2-50f5-4478-923a-964f5810cf0d.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_ba5c3ef8-9250-4df3-ad92-ae8771664057.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_a9d210ba-9d49-4310-8297-824d466046d9.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_b536d426-247b-4ea5-8e4d-6595fa01b739.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_c864c2ea-954f-48d7-9749-f5060768f700.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_0630486b-666c-4f41-9b9c-b832d8ea3a1f.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_fce66e14-eb2a-44b7-b83c-bb9e584ed09d.jpg"
-    ],
-    "ranking": 741
-  },
-  {
-    "id": "IAL00NT00A",
-    "series": "&tradition",
-    "name": "&tradition 코모 포터블 조명",
-    "material": "",
-    "price": "320,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "RBD"
-        ]
-      }
-    ],
-    "originalCategory": "조명",
-    "category2": "포터블 조명",
-    "category3": "포터블 조명",
-    "productImages": [
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT00A_ALU_5.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT00A_BGY_4.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT00A_BZD_2.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT00A_RBD_3.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT00A_STB_1.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT00A_STB_6.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250605/_01ca6f86-d05d-4938-99ce-75c0cd871b4a.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_601002d2-50f5-4478-923a-964f5810cf0d.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_ba5c3ef8-9250-4df3-ad92-ae8771664057.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_a9d210ba-9d49-4310-8297-824d466046d9.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_b536d426-247b-4ea5-8e4d-6595fa01b739.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_c864c2ea-954f-48d7-9749-f5060768f700.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_0630486b-666c-4f41-9b9c-b832d8ea3a1f.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_fce66e14-eb2a-44b7-b83c-bb9e584ed09d.jpg"
-    ],
-    "ranking": 1610
-  },
-  {
-    "id": "IAL00NT00A",
-    "series": "&tradition",
-    "name": "&tradition 코모 포터블 조명",
-    "material": "",
-    "price": "320,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "BGY"
-        ]
-      }
-    ],
-    "originalCategory": "조명",
-    "category2": "포터블 조명",
-    "category3": "포터블 조명",
-    "productImages": [
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT00A_ALU_5.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT00A_BGY_4.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT00A_BZD_2.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT00A_RBD_3.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT00A_STB_1.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT00A_STB_6.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250605/_01ca6f86-d05d-4938-99ce-75c0cd871b4a.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_601002d2-50f5-4478-923a-964f5810cf0d.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_ba5c3ef8-9250-4df3-ad92-ae8771664057.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_a9d210ba-9d49-4310-8297-824d466046d9.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_b536d426-247b-4ea5-8e4d-6595fa01b739.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_c864c2ea-954f-48d7-9749-f5060768f700.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_0630486b-666c-4f41-9b9c-b832d8ea3a1f.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_fce66e14-eb2a-44b7-b83c-bb9e584ed09d.jpg"
-    ],
-    "ranking": 1657
-  },
-  {
-    "id": "IAL00NT00A",
-    "series": "&tradition",
-    "name": "&tradition 코모 포터블 조명",
-    "material": "",
-    "price": "320,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "ALU"
-        ]
-      }
-    ],
-    "originalCategory": "조명",
-    "category2": "포터블 조명",
-    "category3": "포터블 조명",
-    "productImages": [
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT00A_ALU_5.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT00A_BGY_4.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT00A_BZD_2.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT00A_RBD_3.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT00A_STB_1.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT00A_STB_6.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250605/_01ca6f86-d05d-4938-99ce-75c0cd871b4a.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_601002d2-50f5-4478-923a-964f5810cf0d.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_ba5c3ef8-9250-4df3-ad92-ae8771664057.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_a9d210ba-9d49-4310-8297-824d466046d9.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_b536d426-247b-4ea5-8e4d-6595fa01b739.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_c864c2ea-954f-48d7-9749-f5060768f700.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_0630486b-666c-4f41-9b9c-b832d8ea3a1f.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_fce66e14-eb2a-44b7-b83c-bb9e584ed09d.jpg"
-    ],
-    "ranking": 72
-  },
-  {
     "id": "IAL00NT02A",
     "series": "&tradition",
     "name": "&tradition 세타고 포터블 조명",
@@ -23534,7 +18417,7 @@ export const productData = [
     ],
     "originalCategory": "조명",
     "category2": "포터블 조명",
-    "category3": "포터블 조명",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/lighting/portable-lighting/IAL00NT02A_MGP_2.png",
       "/images/iloom_images/lighting/portable-lighting/IAL00NT02A_NFR_1.png",
@@ -23557,82 +18440,6 @@ export const productData = [
     "ranking": 1345
   },
   {
-    "id": "IAL00NT02A",
-    "series": "&tradition",
-    "name": "&tradition 세타고 포터블 조명",
-    "material": "",
-    "price": "210,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "MGP"
-        ]
-      }
-    ],
-    "originalCategory": "조명",
-    "category2": "포터블 조명",
-    "category3": "포터블 조명",
-    "productImages": [
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT02A_MGP_2.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT02A_NFR_1.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT02A_NFR_4.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT02A_RTH_3.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250605/_9a5e7b86-4635-4c10-8817-eba9bd3035c0.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_56ebd364-1521-468f-b94a-02fa9ad20354.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_0f3b9593-83c0-4dbb-959f-fe0f7438897f.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_c693d74f-b1bf-4409-b393-4fa23797d5ec.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_ef9db5af-841b-4e75-a385-c5aa97ad8360.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_901fb6fd-512a-49bf-b964-15eafca5d8a5.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_8aaab3f7-eec0-4a6e-a62a-701122177113.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_0d70d592-8696-4f00-8c03-1e44efc8acee.jpg"
-    ],
-    "ranking": 1132
-  },
-  {
-    "id": "IAL00NT02A",
-    "series": "&tradition",
-    "name": "&tradition 세타고 포터블 조명",
-    "material": "",
-    "price": "210,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "RTH"
-        ]
-      }
-    ],
-    "originalCategory": "조명",
-    "category2": "포터블 조명",
-    "category3": "포터블 조명",
-    "productImages": [
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT02A_MGP_2.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT02A_NFR_1.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT02A_NFR_4.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT02A_RTH_3.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250605/_9a5e7b86-4635-4c10-8817-eba9bd3035c0.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_56ebd364-1521-468f-b94a-02fa9ad20354.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_0f3b9593-83c0-4dbb-959f-fe0f7438897f.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_c693d74f-b1bf-4409-b393-4fa23797d5ec.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_ef9db5af-841b-4e75-a385-c5aa97ad8360.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_901fb6fd-512a-49bf-b964-15eafca5d8a5.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_8aaab3f7-eec0-4a6e-a62a-701122177113.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_0d70d592-8696-4f00-8c03-1e44efc8acee.jpg"
-    ],
-    "ranking": 450
-  },
-  {
     "id": "IAL00NT03A",
     "series": "&tradition",
     "name": "&tradition 루카 포터블 조명",
@@ -23648,7 +18455,7 @@ export const productData = [
     ],
     "originalCategory": "조명",
     "category2": "포터블 조명",
-    "category3": "포터블 조명",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/lighting/portable-lighting/IAL00NT03A_BLK_1.jpg",
       "/images/iloom_images/lighting/portable-lighting/IAL00NT03A_BLK_1.jpg",
@@ -23685,7 +18492,7 @@ export const productData = [
     ],
     "originalCategory": "조명",
     "category2": "펜던트 조명",
-    "category3": "펜던트 조명",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/lighting/pendant-lighting/IAL00NT10A_IVW_1.jpg",
       "/images/iloom_images/lighting/pendant-lighting/IAL00NT10A_IVW_1.jpg",
@@ -23722,7 +18529,7 @@ export const productData = [
     ],
     "originalCategory": "조명",
     "category2": "펜던트 조명",
-    "category3": "펜던트 조명",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/lighting/pendant-lighting/IAL00NT11A_IVW_1.jpg",
       "/images/iloom_images/lighting/pendant-lighting/IAL00NT11A_IVW_1.jpg",
@@ -23760,7 +18567,7 @@ export const productData = [
     ],
     "originalCategory": "조명",
     "category2": "펜던트 조명",
-    "category3": "펜던트 조명",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/lighting/pendant-lighting/IAL00NT12A_IVW_1.png",
       "/images/iloom_images/lighting/pendant-lighting/IAL00NT12A_IVW_1.png",
@@ -23797,7 +18604,7 @@ export const productData = [
     ],
     "originalCategory": "조명",
     "category2": "플로어 조명",
-    "category3": "플로어 조명",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/lighting/floor-lighting/IAL00NT07A_BLK_1.jpg",
       "/images/iloom_images/lighting/floor-lighting/IAL00NT07A_BLK_1.jpg",
@@ -23822,46 +18629,6 @@ export const productData = [
     "ranking": 788
   },
   {
-    "id": "IAL00NT07A",
-    "series": "&tradition",
-    "name": "&tradition 트라이팟 플로어 조명",
-    "material": "",
-    "price": "1,250,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "MTE"
-        ]
-      }
-    ],
-    "originalCategory": "조명",
-    "category2": "플로어 조명",
-    "category3": "플로어 조명",
-    "productImages": [
-      "/images/iloom_images/lighting/floor-lighting/IAL00NT07A_BLK_1.jpg",
-      "/images/iloom_images/lighting/floor-lighting/IAL00NT07A_BLK_1.jpg",
-      "/images/iloom_images/lighting/floor-lighting/IAL00NT07A_BLK_3.png",
-      "/images/iloom_images/lighting/floor-lighting/IAL00NT07A_BLK_3.png",
-      "/images/iloom_images/lighting/floor-lighting/IAL00NT07A_MTE_2.png",
-      "/images/iloom_images/lighting/floor-lighting/IAL00NT07A_MTE_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250605/_b6da51ca-fba5-4946-ab15-716fae5a0112.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_292e7673-f9f4-425d-b281-ae77a839aa29.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_d33cf4f4-9bbb-4df3-a919-08bbdf282e01.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_992b9953-a583-4787-853f-9b9fc0d59b7c.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_40b02b70-f824-42a7-b450-b83173eeced3.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_059d92a0-cb44-4ea0-a91d-f9fab8efbcc5.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_7a3e1904-21ad-4d4f-836f-ad2ec831e299.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_e5199632-6bf2-4282-ab9f-0a6d40a56544.jpg"
-    ],
-    "ranking": 982
-  },
-  {
     "id": "IAL00NT05A",
     "series": "&tradition",
     "name": "&tradition 플라워팟 포터블 조명",
@@ -23877,7 +18644,7 @@ export const productData = [
     ],
     "originalCategory": "조명",
     "category2": "포터블 조명",
-    "category3": "포터블 조명",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_CBB_11.png",
       "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_DPM_7.png",
@@ -23910,534 +18677,6 @@ export const productData = [
     "ranking": 1468
   },
   {
-    "id": "IAL00NT05A",
-    "series": "&tradition",
-    "name": "&tradition 플라워팟 포터블 조명",
-    "material": "",
-    "price": "290,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "MTE"
-        ]
-      }
-    ],
-    "originalCategory": "조명",
-    "category2": "포터블 조명",
-    "category3": "포터블 조명",
-    "productImages": [
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_CBB_11.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_DPM_7.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_GBE_4.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_MBK_1.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_MBK_13.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_MEY_3.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_MTD_10.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_MTE_2.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_SGN_6.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_STB_5.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_SWB_12.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_TPK_9.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_VRD_8.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_VRD_8.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250605/_6353a3df-7100-4abc-866c-c61b44dae441.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_ed7e7b1b-5334-4f7d-97f9-ce58210b219d.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_451264d5-30bc-4b3c-91c4-5d66b98ab2cc.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_32b61dad-1340-420d-b35f-f10c5a3ec189.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_c8fbfce3-c490-46ca-9138-f8bc8ea771ef.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_84014e27-505a-41ae-935c-f9d240c2be42.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_fa09a6b7-7bf7-441b-be37-d8d1ed43f722.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_c19e27ca-605d-4c70-bb5e-916d0339978f.jpg"
-    ],
-    "ranking": 1093
-  },
-  {
-    "id": "IAL00NT05A",
-    "series": "&tradition",
-    "name": "&tradition 플라워팟 포터블 조명",
-    "material": "",
-    "price": "290,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "MEY"
-        ]
-      }
-    ],
-    "originalCategory": "조명",
-    "category2": "포터블 조명",
-    "category3": "포터블 조명",
-    "productImages": [
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_CBB_11.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_DPM_7.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_GBE_4.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_MBK_1.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_MBK_13.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_MEY_3.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_MTD_10.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_MTE_2.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_SGN_6.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_STB_5.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_SWB_12.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_TPK_9.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_VRD_8.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_VRD_8.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250605/_6353a3df-7100-4abc-866c-c61b44dae441.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_ed7e7b1b-5334-4f7d-97f9-ce58210b219d.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_451264d5-30bc-4b3c-91c4-5d66b98ab2cc.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_32b61dad-1340-420d-b35f-f10c5a3ec189.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_c8fbfce3-c490-46ca-9138-f8bc8ea771ef.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_84014e27-505a-41ae-935c-f9d240c2be42.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_fa09a6b7-7bf7-441b-be37-d8d1ed43f722.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_c19e27ca-605d-4c70-bb5e-916d0339978f.jpg"
-    ],
-    "ranking": 1100
-  },
-  {
-    "id": "IAL00NT05A",
-    "series": "&tradition",
-    "name": "&tradition 플라워팟 포터블 조명",
-    "material": "",
-    "price": "290,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "GBE"
-        ]
-      }
-    ],
-    "originalCategory": "조명",
-    "category2": "포터블 조명",
-    "category3": "포터블 조명",
-    "productImages": [
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_CBB_11.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_DPM_7.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_GBE_4.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_MBK_1.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_MBK_13.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_MEY_3.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_MTD_10.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_MTE_2.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_SGN_6.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_STB_5.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_SWB_12.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_TPK_9.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_VRD_8.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_VRD_8.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250605/_6353a3df-7100-4abc-866c-c61b44dae441.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_ed7e7b1b-5334-4f7d-97f9-ce58210b219d.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_451264d5-30bc-4b3c-91c4-5d66b98ab2cc.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_32b61dad-1340-420d-b35f-f10c5a3ec189.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_c8fbfce3-c490-46ca-9138-f8bc8ea771ef.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_84014e27-505a-41ae-935c-f9d240c2be42.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_fa09a6b7-7bf7-441b-be37-d8d1ed43f722.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_c19e27ca-605d-4c70-bb5e-916d0339978f.jpg"
-    ],
-    "ranking": 92
-  },
-  {
-    "id": "IAL00NT05A",
-    "series": "&tradition",
-    "name": "&tradition 플라워팟 포터블 조명",
-    "material": "",
-    "price": "290,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "STB"
-        ]
-      }
-    ],
-    "originalCategory": "조명",
-    "category2": "포터블 조명",
-    "category3": "포터블 조명",
-    "productImages": [
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_CBB_11.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_DPM_7.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_GBE_4.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_MBK_1.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_MBK_13.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_MEY_3.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_MTD_10.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_MTE_2.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_SGN_6.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_STB_5.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_SWB_12.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_TPK_9.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_VRD_8.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_VRD_8.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250605/_6353a3df-7100-4abc-866c-c61b44dae441.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_ed7e7b1b-5334-4f7d-97f9-ce58210b219d.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_451264d5-30bc-4b3c-91c4-5d66b98ab2cc.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_32b61dad-1340-420d-b35f-f10c5a3ec189.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_c8fbfce3-c490-46ca-9138-f8bc8ea771ef.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_84014e27-505a-41ae-935c-f9d240c2be42.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_fa09a6b7-7bf7-441b-be37-d8d1ed43f722.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_c19e27ca-605d-4c70-bb5e-916d0339978f.jpg"
-    ],
-    "ranking": 1255
-  },
-  {
-    "id": "IAL00NT05A",
-    "series": "&tradition",
-    "name": "&tradition 플라워팟 포터블 조명",
-    "material": "",
-    "price": "290,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "SGN"
-        ]
-      }
-    ],
-    "originalCategory": "조명",
-    "category2": "포터블 조명",
-    "category3": "포터블 조명",
-    "productImages": [
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_CBB_11.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_DPM_7.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_GBE_4.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_MBK_1.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_MBK_13.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_MEY_3.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_MTD_10.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_MTE_2.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_SGN_6.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_STB_5.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_SWB_12.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_TPK_9.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_VRD_8.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_VRD_8.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250605/_6353a3df-7100-4abc-866c-c61b44dae441.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_ed7e7b1b-5334-4f7d-97f9-ce58210b219d.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_451264d5-30bc-4b3c-91c4-5d66b98ab2cc.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_32b61dad-1340-420d-b35f-f10c5a3ec189.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_c8fbfce3-c490-46ca-9138-f8bc8ea771ef.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_84014e27-505a-41ae-935c-f9d240c2be42.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_fa09a6b7-7bf7-441b-be37-d8d1ed43f722.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_c19e27ca-605d-4c70-bb5e-916d0339978f.jpg"
-    ],
-    "ranking": 1707
-  },
-  {
-    "id": "IAL00NT05A",
-    "series": "&tradition",
-    "name": "&tradition 플라워팟 포터블 조명",
-    "material": "",
-    "price": "290,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "DPM"
-        ]
-      }
-    ],
-    "originalCategory": "조명",
-    "category2": "포터블 조명",
-    "category3": "포터블 조명",
-    "productImages": [
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_CBB_11.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_DPM_7.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_GBE_4.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_MBK_1.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_MBK_13.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_MEY_3.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_MTD_10.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_MTE_2.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_SGN_6.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_STB_5.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_SWB_12.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_TPK_9.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_VRD_8.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_VRD_8.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250605/_6353a3df-7100-4abc-866c-c61b44dae441.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_ed7e7b1b-5334-4f7d-97f9-ce58210b219d.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_451264d5-30bc-4b3c-91c4-5d66b98ab2cc.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_32b61dad-1340-420d-b35f-f10c5a3ec189.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_c8fbfce3-c490-46ca-9138-f8bc8ea771ef.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_84014e27-505a-41ae-935c-f9d240c2be42.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_fa09a6b7-7bf7-441b-be37-d8d1ed43f722.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_c19e27ca-605d-4c70-bb5e-916d0339978f.jpg"
-    ],
-    "ranking": 1181
-  },
-  {
-    "id": "IAL00NT05A",
-    "series": "&tradition",
-    "name": "&tradition 플라워팟 포터블 조명",
-    "material": "",
-    "price": "290,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "VRD"
-        ]
-      }
-    ],
-    "originalCategory": "조명",
-    "category2": "포터블 조명",
-    "category3": "포터블 조명",
-    "productImages": [
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_CBB_11.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_DPM_7.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_GBE_4.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_MBK_1.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_MBK_13.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_MEY_3.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_MTD_10.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_MTE_2.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_SGN_6.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_STB_5.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_SWB_12.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_TPK_9.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_VRD_8.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_VRD_8.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250605/_6353a3df-7100-4abc-866c-c61b44dae441.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_ed7e7b1b-5334-4f7d-97f9-ce58210b219d.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_451264d5-30bc-4b3c-91c4-5d66b98ab2cc.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_32b61dad-1340-420d-b35f-f10c5a3ec189.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_c8fbfce3-c490-46ca-9138-f8bc8ea771ef.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_84014e27-505a-41ae-935c-f9d240c2be42.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_fa09a6b7-7bf7-441b-be37-d8d1ed43f722.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_c19e27ca-605d-4c70-bb5e-916d0339978f.jpg"
-    ],
-    "ranking": 1316
-  },
-  {
-    "id": "IAL00NT05A",
-    "series": "&tradition",
-    "name": "&tradition 플라워팟 포터블 조명",
-    "material": "",
-    "price": "290,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "TPK"
-        ]
-      }
-    ],
-    "originalCategory": "조명",
-    "category2": "포터블 조명",
-    "category3": "포터블 조명",
-    "productImages": [
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_CBB_11.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_DPM_7.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_GBE_4.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_MBK_1.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_MBK_13.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_MEY_3.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_MTD_10.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_MTE_2.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_SGN_6.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_STB_5.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_SWB_12.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_TPK_9.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_VRD_8.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_VRD_8.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250605/_6353a3df-7100-4abc-866c-c61b44dae441.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_ed7e7b1b-5334-4f7d-97f9-ce58210b219d.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_451264d5-30bc-4b3c-91c4-5d66b98ab2cc.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_32b61dad-1340-420d-b35f-f10c5a3ec189.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_c8fbfce3-c490-46ca-9138-f8bc8ea771ef.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_84014e27-505a-41ae-935c-f9d240c2be42.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_fa09a6b7-7bf7-441b-be37-d8d1ed43f722.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_c19e27ca-605d-4c70-bb5e-916d0339978f.jpg"
-    ],
-    "ranking": 1380
-  },
-  {
-    "id": "IAL00NT05A",
-    "series": "&tradition",
-    "name": "&tradition 플라워팟 포터블 조명",
-    "material": "",
-    "price": "290,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "MTD"
-        ]
-      }
-    ],
-    "originalCategory": "조명",
-    "category2": "포터블 조명",
-    "category3": "포터블 조명",
-    "productImages": [
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_CBB_11.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_DPM_7.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_GBE_4.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_MBK_1.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_MBK_13.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_MEY_3.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_MTD_10.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_MTE_2.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_SGN_6.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_STB_5.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_SWB_12.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_TPK_9.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_VRD_8.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_VRD_8.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": true,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250605/_6353a3df-7100-4abc-866c-c61b44dae441.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_ed7e7b1b-5334-4f7d-97f9-ce58210b219d.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_451264d5-30bc-4b3c-91c4-5d66b98ab2cc.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_32b61dad-1340-420d-b35f-f10c5a3ec189.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_c8fbfce3-c490-46ca-9138-f8bc8ea771ef.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_84014e27-505a-41ae-935c-f9d240c2be42.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_fa09a6b7-7bf7-441b-be37-d8d1ed43f722.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_c19e27ca-605d-4c70-bb5e-916d0339978f.jpg"
-    ],
-    "ranking": 264
-  },
-  {
-    "id": "IAL00NT05A",
-    "series": "&tradition",
-    "name": "&tradition 플라워팟 포터블 조명",
-    "material": "",
-    "price": "290,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "CBB"
-        ]
-      }
-    ],
-    "originalCategory": "조명",
-    "category2": "포터블 조명",
-    "category3": "포터블 조명",
-    "productImages": [
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_CBB_11.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_DPM_7.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_GBE_4.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_MBK_1.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_MBK_13.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_MEY_3.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_MTD_10.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_MTE_2.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_SGN_6.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_STB_5.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_SWB_12.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_TPK_9.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_VRD_8.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_VRD_8.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250605/_6353a3df-7100-4abc-866c-c61b44dae441.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_ed7e7b1b-5334-4f7d-97f9-ce58210b219d.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_451264d5-30bc-4b3c-91c4-5d66b98ab2cc.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_32b61dad-1340-420d-b35f-f10c5a3ec189.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_c8fbfce3-c490-46ca-9138-f8bc8ea771ef.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_84014e27-505a-41ae-935c-f9d240c2be42.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_fa09a6b7-7bf7-441b-be37-d8d1ed43f722.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_c19e27ca-605d-4c70-bb5e-916d0339978f.jpg"
-    ],
-    "ranking": 1426
-  },
-  {
-    "id": "IAL00NT05A",
-    "series": "&tradition",
-    "name": "&tradition 플라워팟 포터블 조명",
-    "material": "",
-    "price": "290,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "SWB"
-        ]
-      }
-    ],
-    "originalCategory": "조명",
-    "category2": "포터블 조명",
-    "category3": "포터블 조명",
-    "productImages": [
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_CBB_11.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_DPM_7.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_GBE_4.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_MBK_1.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_MBK_13.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_MEY_3.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_MTD_10.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_MTE_2.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_SGN_6.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_STB_5.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_SWB_12.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_TPK_9.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_VRD_8.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT05A_VRD_8.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250605/_6353a3df-7100-4abc-866c-c61b44dae441.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_ed7e7b1b-5334-4f7d-97f9-ce58210b219d.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_451264d5-30bc-4b3c-91c4-5d66b98ab2cc.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_32b61dad-1340-420d-b35f-f10c5a3ec189.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_c8fbfce3-c490-46ca-9138-f8bc8ea771ef.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_84014e27-505a-41ae-935c-f9d240c2be42.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_fa09a6b7-7bf7-441b-be37-d8d1ed43f722.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_c19e27ca-605d-4c70-bb5e-916d0339978f.jpg"
-    ],
-    "ranking": 1727
-  },
-  {
     "id": "IAL00NT16A",
     "series": "&tradition",
     "name": "&tradition 플라워팟 포터블 조명",
@@ -24453,7 +18692,7 @@ export const productData = [
     ],
     "originalCategory": "조명",
     "category2": "포터블 조명",
-    "category3": "포터블 조명",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/lighting/portable-lighting/IAL00NT16A_BSP_1.jpg",
       "/images/iloom_images/lighting/portable-lighting/IAL00NT16A_BSP_1.jpg",
@@ -24476,44 +18715,6 @@ export const productData = [
     "ranking": 1143
   },
   {
-    "id": "IAL00NT16A",
-    "series": "&tradition",
-    "name": "&tradition 플라워팟 포터블 조명",
-    "material": "",
-    "price": "440,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "CRP"
-        ]
-      }
-    ],
-    "originalCategory": "조명",
-    "category2": "포터블 조명",
-    "category3": "포터블 조명",
-    "productImages": [
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT16A_BSP_1.jpg",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT16A_BSP_1.jpg",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT16A_BSP_3.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT16A_CRP_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250605/_e0b95e16-ab28-458c-a7c2-cd565debf020.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_6e080921-a335-4f12-bbb3-68cfbb91fa8d.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_dc357559-f4ec-4eff-96ae-d4dea97db294.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_767e2e03-5f2b-43af-9951-a18e376c8b7e.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_a3d25380-a53c-475f-bf25-b2302854262b.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_60458675-9b94-4bbf-b9e9-1930af667968.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_ecfd35a1-be58-49e2-935a-a6358a69d2ba.jpg",
-      "https://www.iloom.com/upload/contents/20250605/_e04b888e-c6c4-4353-8aa8-7f3cf5fb26b4.jpg"
-    ],
-    "ranking": 90
-  },
-  {
     "id": "IAL00NT14A",
     "series": "&tradition",
     "name": "&tradition 플라워팟 펜던트 조명 M",
@@ -24534,7 +18735,7 @@ export const productData = [
     ],
     "originalCategory": "조명",
     "category2": "펜던트 조명",
-    "category3": "펜던트 조명",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/lighting/pendant-lighting/IAL00NT14A_GBE_4.png",
       "/images/iloom_images/lighting/pendant-lighting/IAL00NT14A_GBE_4.png",
@@ -24582,7 +18783,7 @@ export const productData = [
     ],
     "originalCategory": "조명",
     "category2": "테이블 조명",
-    "category3": "테이블 조명",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/lighting/table-lighting/IAL0000A_GRB_5.png",
       "/images/iloom_images/lighting/table-lighting/IAL0000A_JBL_1.png",
@@ -24592,7 +18793,7 @@ export const productData = [
       "/images/iloom_images/lighting/table-lighting/IAL0000A_SKB_6.png",
       "/images/iloom_images/lighting/table-lighting/IAL0000A_TRW_2.png"
     ],
-    "mdPick": false,
+    "mdPick": true,
     "new": false,
     "BestSeller": false,
     "detailImg": [
@@ -24606,211 +18807,6 @@ export const productData = [
       "https://www.iloom.com/upload/contents/20250610/_5e0ca160-d34e-4f27-a2cf-79854427b950.jpg"
     ],
     "ranking": 919
-  },
-  {
-    "id": "IAL0000A",
-    "series": "Wastberg",
-    "name": "Wastberg 일 테이블 조명",
-    "material": "",
-    "price": "350,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "TRW"
-        ]
-      }
-    ],
-    "originalCategory": "조명",
-    "category2": "테이블 조명",
-    "category3": "테이블 조명",
-    "productImages": [
-      "/images/iloom_images/lighting/table-lighting/IAL0000A_GRB_5.png",
-      "/images/iloom_images/lighting/table-lighting/IAL0000A_JBL_1.png",
-      "/images/iloom_images/lighting/table-lighting/IAL0000A_JBL_7.png",
-      "/images/iloom_images/lighting/table-lighting/IAL0000A_LYW_3.png",
-      "/images/iloom_images/lighting/table-lighting/IAL0000A_PPR_4.png",
-      "/images/iloom_images/lighting/table-lighting/IAL0000A_SKB_6.png",
-      "/images/iloom_images/lighting/table-lighting/IAL0000A_TRW_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250610/_a1cf3009-38b7-488e-8b93-b5becbcdcb75.jpg",
-      "https://www.iloom.com/upload/contents/20250610/_a384a0b3-6445-498d-947d-686486e54300.jpg",
-      "https://www.iloom.com/upload/contents/20250610/_280c39cf-1513-4bee-abee-a5247978e0aa.jpg",
-      "https://www.iloom.com/upload/contents/20250610/_f9473ae8-02b1-45a9-a404-0771ba57a89c.jpg",
-      "https://www.iloom.com/upload/contents/20250610/_4af2bc8c-a708-41cd-a174-2c510f69f3ce.jpg",
-      "https://www.iloom.com/upload/contents/20250610/_5eb41656-7811-4962-8ffc-413133e17dbd.jpg",
-      "https://www.iloom.com/upload/contents/20250610/_3bbf1bae-91fa-4704-a8fc-eefea1da1b16.jpg",
-      "https://www.iloom.com/upload/contents/20250610/_5e0ca160-d34e-4f27-a2cf-79854427b950.jpg"
-    ],
-    "ranking": 1063
-  },
-  {
-    "id": "IAL0000A",
-    "series": "Wastberg",
-    "name": "Wastberg 일 테이블 조명",
-    "material": "",
-    "price": "350,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "LYW"
-        ]
-      }
-    ],
-    "originalCategory": "조명",
-    "category2": "테이블 조명",
-    "category3": "테이블 조명",
-    "productImages": [
-      "/images/iloom_images/lighting/table-lighting/IAL0000A_GRB_5.png",
-      "/images/iloom_images/lighting/table-lighting/IAL0000A_JBL_1.png",
-      "/images/iloom_images/lighting/table-lighting/IAL0000A_JBL_7.png",
-      "/images/iloom_images/lighting/table-lighting/IAL0000A_LYW_3.png",
-      "/images/iloom_images/lighting/table-lighting/IAL0000A_PPR_4.png",
-      "/images/iloom_images/lighting/table-lighting/IAL0000A_SKB_6.png",
-      "/images/iloom_images/lighting/table-lighting/IAL0000A_TRW_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250610/_a1cf3009-38b7-488e-8b93-b5becbcdcb75.jpg",
-      "https://www.iloom.com/upload/contents/20250610/_a384a0b3-6445-498d-947d-686486e54300.jpg",
-      "https://www.iloom.com/upload/contents/20250610/_280c39cf-1513-4bee-abee-a5247978e0aa.jpg",
-      "https://www.iloom.com/upload/contents/20250610/_f9473ae8-02b1-45a9-a404-0771ba57a89c.jpg",
-      "https://www.iloom.com/upload/contents/20250610/_4af2bc8c-a708-41cd-a174-2c510f69f3ce.jpg",
-      "https://www.iloom.com/upload/contents/20250610/_5eb41656-7811-4962-8ffc-413133e17dbd.jpg",
-      "https://www.iloom.com/upload/contents/20250610/_3bbf1bae-91fa-4704-a8fc-eefea1da1b16.jpg",
-      "https://www.iloom.com/upload/contents/20250610/_5e0ca160-d34e-4f27-a2cf-79854427b950.jpg"
-    ],
-    "ranking": 69
-  },
-  {
-    "id": "IAL0000A",
-    "series": "Wastberg",
-    "name": "Wastberg 일 테이블 조명",
-    "material": "",
-    "price": "350,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "PPR"
-        ]
-      }
-    ],
-    "originalCategory": "조명",
-    "category2": "테이블 조명",
-    "category3": "테이블 조명",
-    "productImages": [
-      "/images/iloom_images/lighting/table-lighting/IAL0000A_GRB_5.png",
-      "/images/iloom_images/lighting/table-lighting/IAL0000A_JBL_1.png",
-      "/images/iloom_images/lighting/table-lighting/IAL0000A_JBL_7.png",
-      "/images/iloom_images/lighting/table-lighting/IAL0000A_LYW_3.png",
-      "/images/iloom_images/lighting/table-lighting/IAL0000A_PPR_4.png",
-      "/images/iloom_images/lighting/table-lighting/IAL0000A_SKB_6.png",
-      "/images/iloom_images/lighting/table-lighting/IAL0000A_TRW_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250610/_a1cf3009-38b7-488e-8b93-b5becbcdcb75.jpg",
-      "https://www.iloom.com/upload/contents/20250610/_a384a0b3-6445-498d-947d-686486e54300.jpg",
-      "https://www.iloom.com/upload/contents/20250610/_280c39cf-1513-4bee-abee-a5247978e0aa.jpg",
-      "https://www.iloom.com/upload/contents/20250610/_f9473ae8-02b1-45a9-a404-0771ba57a89c.jpg",
-      "https://www.iloom.com/upload/contents/20250610/_4af2bc8c-a708-41cd-a174-2c510f69f3ce.jpg",
-      "https://www.iloom.com/upload/contents/20250610/_5eb41656-7811-4962-8ffc-413133e17dbd.jpg",
-      "https://www.iloom.com/upload/contents/20250610/_3bbf1bae-91fa-4704-a8fc-eefea1da1b16.jpg",
-      "https://www.iloom.com/upload/contents/20250610/_5e0ca160-d34e-4f27-a2cf-79854427b950.jpg"
-    ],
-    "ranking": 1712
-  },
-  {
-    "id": "IAL0000A",
-    "series": "Wastberg",
-    "name": "Wastberg 일 테이블 조명",
-    "material": "",
-    "price": "350,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "GRB"
-        ]
-      }
-    ],
-    "originalCategory": "조명",
-    "category2": "테이블 조명",
-    "category3": "테이블 조명",
-    "productImages": [
-      "/images/iloom_images/lighting/table-lighting/IAL0000A_GRB_5.png",
-      "/images/iloom_images/lighting/table-lighting/IAL0000A_JBL_1.png",
-      "/images/iloom_images/lighting/table-lighting/IAL0000A_JBL_7.png",
-      "/images/iloom_images/lighting/table-lighting/IAL0000A_LYW_3.png",
-      "/images/iloom_images/lighting/table-lighting/IAL0000A_PPR_4.png",
-      "/images/iloom_images/lighting/table-lighting/IAL0000A_SKB_6.png",
-      "/images/iloom_images/lighting/table-lighting/IAL0000A_TRW_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250610/_a1cf3009-38b7-488e-8b93-b5becbcdcb75.jpg",
-      "https://www.iloom.com/upload/contents/20250610/_a384a0b3-6445-498d-947d-686486e54300.jpg",
-      "https://www.iloom.com/upload/contents/20250610/_280c39cf-1513-4bee-abee-a5247978e0aa.jpg",
-      "https://www.iloom.com/upload/contents/20250610/_f9473ae8-02b1-45a9-a404-0771ba57a89c.jpg",
-      "https://www.iloom.com/upload/contents/20250610/_4af2bc8c-a708-41cd-a174-2c510f69f3ce.jpg",
-      "https://www.iloom.com/upload/contents/20250610/_5eb41656-7811-4962-8ffc-413133e17dbd.jpg",
-      "https://www.iloom.com/upload/contents/20250610/_3bbf1bae-91fa-4704-a8fc-eefea1da1b16.jpg",
-      "https://www.iloom.com/upload/contents/20250610/_5e0ca160-d34e-4f27-a2cf-79854427b950.jpg"
-    ],
-    "ranking": 704
-  },
-  {
-    "id": "IAL0000A",
-    "series": "Wastberg",
-    "name": "Wastberg 일 테이블 조명",
-    "material": "",
-    "price": "350,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "SKB"
-        ]
-      }
-    ],
-    "originalCategory": "조명",
-    "category2": "테이블 조명",
-    "category3": "테이블 조명",
-    "productImages": [
-      "/images/iloom_images/lighting/table-lighting/IAL0000A_GRB_5.png",
-      "/images/iloom_images/lighting/table-lighting/IAL0000A_JBL_1.png",
-      "/images/iloom_images/lighting/table-lighting/IAL0000A_JBL_7.png",
-      "/images/iloom_images/lighting/table-lighting/IAL0000A_LYW_3.png",
-      "/images/iloom_images/lighting/table-lighting/IAL0000A_PPR_4.png",
-      "/images/iloom_images/lighting/table-lighting/IAL0000A_SKB_6.png",
-      "/images/iloom_images/lighting/table-lighting/IAL0000A_TRW_2.png"
-    ],
-    "mdPick": false,
-    "new": true,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250610/_a1cf3009-38b7-488e-8b93-b5becbcdcb75.jpg",
-      "https://www.iloom.com/upload/contents/20250610/_a384a0b3-6445-498d-947d-686486e54300.jpg",
-      "https://www.iloom.com/upload/contents/20250610/_280c39cf-1513-4bee-abee-a5247978e0aa.jpg",
-      "https://www.iloom.com/upload/contents/20250610/_f9473ae8-02b1-45a9-a404-0771ba57a89c.jpg",
-      "https://www.iloom.com/upload/contents/20250610/_4af2bc8c-a708-41cd-a174-2c510f69f3ce.jpg",
-      "https://www.iloom.com/upload/contents/20250610/_5eb41656-7811-4962-8ffc-413133e17dbd.jpg",
-      "https://www.iloom.com/upload/contents/20250610/_3bbf1bae-91fa-4704-a8fc-eefea1da1b16.jpg",
-      "https://www.iloom.com/upload/contents/20250610/_5e0ca160-d34e-4f27-a2cf-79854427b950.jpg"
-    ],
-    "ranking": 1330
   },
   {
     "id": "IAL00WB00A",
@@ -24828,7 +18824,7 @@ export const productData = [
     ],
     "originalCategory": "조명",
     "category2": "포터블 조명",
-    "category3": "포터블 조명",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/lighting/portable-lighting/IAL00WB00A_BGY_1.jpg",
       "/images/iloom_images/lighting/portable-lighting/IAL00WB00A_BGY_1.jpg",
@@ -24854,170 +18850,6 @@ export const productData = [
     "ranking": 1306
   },
   {
-    "id": "IAL00WB00A",
-    "series": "Wastberg",
-    "name": "Wastberg 파로 포터블 조명",
-    "material": "",
-    "price": "350,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "GRW"
-        ]
-      }
-    ],
-    "originalCategory": "조명",
-    "category2": "포터블 조명",
-    "category3": "포터블 조명",
-    "productImages": [
-      "/images/iloom_images/lighting/portable-lighting/IAL00WB00A_BGY_1.jpg",
-      "/images/iloom_images/lighting/portable-lighting/IAL00WB00A_BGY_1.jpg",
-      "/images/iloom_images/lighting/portable-lighting/IAL00WB00A_BGY_6.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00WB00A_CHB_5.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00WB00A_GRW_2.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00WB00A_PUR_4.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00WB00A_TRG_3.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250609/_e7679b51-0c40-437a-8c95-cc3f7a5c4167.jpg",
-      "https://www.iloom.com/upload/contents/20250609/_4160cacf-30d6-4744-852f-22eb1da6ee4e.jpg",
-      "https://www.iloom.com/upload/contents/20250609/_b2db1c50-3295-486e-952c-dab1f565044a.jpg",
-      "https://www.iloom.com/upload/contents/20250609/_1a982980-500a-4905-8608-e4b1a7b73de6.jpg",
-      "https://www.iloom.com/upload/contents/20250609/_9a33471c-7bde-42fa-af79-5e48df1dbb4b.jpg",
-      "https://www.iloom.com/upload/contents/20250609/_ad52f46e-4128-4b37-b7b3-80d2aa5e5883.jpg",
-      "https://www.iloom.com/upload/contents/20250609/_7bdb389b-0dde-432e-8f2e-0b3f5ed54428.jpg",
-      "https://www.iloom.com/upload/contents/20250609/_91128eb4-a206-4ab6-a978-c4b43aa8bf13.jpg"
-    ],
-    "ranking": 717
-  },
-  {
-    "id": "IAL00WB00A",
-    "series": "Wastberg",
-    "name": "Wastberg 파로 포터블 조명",
-    "material": "",
-    "price": "350,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "TRG"
-        ]
-      }
-    ],
-    "originalCategory": "조명",
-    "category2": "포터블 조명",
-    "category3": "포터블 조명",
-    "productImages": [
-      "/images/iloom_images/lighting/portable-lighting/IAL00WB00A_BGY_1.jpg",
-      "/images/iloom_images/lighting/portable-lighting/IAL00WB00A_BGY_1.jpg",
-      "/images/iloom_images/lighting/portable-lighting/IAL00WB00A_BGY_6.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00WB00A_CHB_5.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00WB00A_GRW_2.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00WB00A_PUR_4.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00WB00A_TRG_3.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250609/_e7679b51-0c40-437a-8c95-cc3f7a5c4167.jpg",
-      "https://www.iloom.com/upload/contents/20250609/_4160cacf-30d6-4744-852f-22eb1da6ee4e.jpg",
-      "https://www.iloom.com/upload/contents/20250609/_b2db1c50-3295-486e-952c-dab1f565044a.jpg",
-      "https://www.iloom.com/upload/contents/20250609/_1a982980-500a-4905-8608-e4b1a7b73de6.jpg",
-      "https://www.iloom.com/upload/contents/20250609/_9a33471c-7bde-42fa-af79-5e48df1dbb4b.jpg",
-      "https://www.iloom.com/upload/contents/20250609/_ad52f46e-4128-4b37-b7b3-80d2aa5e5883.jpg",
-      "https://www.iloom.com/upload/contents/20250609/_7bdb389b-0dde-432e-8f2e-0b3f5ed54428.jpg",
-      "https://www.iloom.com/upload/contents/20250609/_91128eb4-a206-4ab6-a978-c4b43aa8bf13.jpg"
-    ],
-    "ranking": 903
-  },
-  {
-    "id": "IAL00WB00A",
-    "series": "Wastberg",
-    "name": "Wastberg 파로 포터블 조명",
-    "material": "",
-    "price": "350,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "PUR"
-        ]
-      }
-    ],
-    "originalCategory": "조명",
-    "category2": "포터블 조명",
-    "category3": "포터블 조명",
-    "productImages": [
-      "/images/iloom_images/lighting/portable-lighting/IAL00WB00A_BGY_1.jpg",
-      "/images/iloom_images/lighting/portable-lighting/IAL00WB00A_BGY_1.jpg",
-      "/images/iloom_images/lighting/portable-lighting/IAL00WB00A_BGY_6.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00WB00A_CHB_5.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00WB00A_GRW_2.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00WB00A_PUR_4.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00WB00A_TRG_3.png"
-    ],
-    "mdPick": true,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250609/_e7679b51-0c40-437a-8c95-cc3f7a5c4167.jpg",
-      "https://www.iloom.com/upload/contents/20250609/_4160cacf-30d6-4744-852f-22eb1da6ee4e.jpg",
-      "https://www.iloom.com/upload/contents/20250609/_b2db1c50-3295-486e-952c-dab1f565044a.jpg",
-      "https://www.iloom.com/upload/contents/20250609/_1a982980-500a-4905-8608-e4b1a7b73de6.jpg",
-      "https://www.iloom.com/upload/contents/20250609/_9a33471c-7bde-42fa-af79-5e48df1dbb4b.jpg",
-      "https://www.iloom.com/upload/contents/20250609/_ad52f46e-4128-4b37-b7b3-80d2aa5e5883.jpg",
-      "https://www.iloom.com/upload/contents/20250609/_7bdb389b-0dde-432e-8f2e-0b3f5ed54428.jpg",
-      "https://www.iloom.com/upload/contents/20250609/_91128eb4-a206-4ab6-a978-c4b43aa8bf13.jpg"
-    ],
-    "ranking": 1122
-  },
-  {
-    "id": "IAL00WB00A",
-    "series": "Wastberg",
-    "name": "Wastberg 파로 포터블 조명",
-    "material": "",
-    "price": "350,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "CHB"
-        ]
-      }
-    ],
-    "originalCategory": "조명",
-    "category2": "포터블 조명",
-    "category3": "포터블 조명",
-    "productImages": [
-      "/images/iloom_images/lighting/portable-lighting/IAL00WB00A_BGY_1.jpg",
-      "/images/iloom_images/lighting/portable-lighting/IAL00WB00A_BGY_1.jpg",
-      "/images/iloom_images/lighting/portable-lighting/IAL00WB00A_BGY_6.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00WB00A_CHB_5.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00WB00A_GRW_2.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00WB00A_PUR_4.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00WB00A_TRG_3.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250609/_e7679b51-0c40-437a-8c95-cc3f7a5c4167.jpg",
-      "https://www.iloom.com/upload/contents/20250609/_4160cacf-30d6-4744-852f-22eb1da6ee4e.jpg",
-      "https://www.iloom.com/upload/contents/20250609/_b2db1c50-3295-486e-952c-dab1f565044a.jpg",
-      "https://www.iloom.com/upload/contents/20250609/_1a982980-500a-4905-8608-e4b1a7b73de6.jpg",
-      "https://www.iloom.com/upload/contents/20250609/_9a33471c-7bde-42fa-af79-5e48df1dbb4b.jpg",
-      "https://www.iloom.com/upload/contents/20250609/_ad52f46e-4128-4b37-b7b3-80d2aa5e5883.jpg",
-      "https://www.iloom.com/upload/contents/20250609/_7bdb389b-0dde-432e-8f2e-0b3f5ed54428.jpg",
-      "https://www.iloom.com/upload/contents/20250609/_91128eb4-a206-4ab6-a978-c4b43aa8bf13.jpg"
-    ],
-    "ranking": 795
-  },
-  {
     "id": "IAL0001A",
     "series": "Wastberg",
     "name": "Wastberg 파스틸 테이블 조명",
@@ -25033,7 +18865,7 @@ export const productData = [
     ],
     "originalCategory": "조명",
     "category2": "테이블 조명",
-    "category3": "테이블 조명",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/lighting/table-lighting/IAL0001A_GPB_1.png",
       "/images/iloom_images/lighting/table-lighting/IAL0001A_GPB_5.png",
@@ -25055,123 +18887,6 @@ export const productData = [
       "https://www.iloom.com/upload/contents/20250610/_6574f358-8d09-48b5-88c6-536f1524239a.jpg"
     ],
     "ranking": 938
-  },
-  {
-    "id": "IAL0001A",
-    "series": "Wastberg",
-    "name": "Wastberg 파스틸 테이블 조명",
-    "material": "스틸",
-    "price": "590,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "SOW"
-        ]
-      }
-    ],
-    "originalCategory": "조명",
-    "category2": "테이블 조명",
-    "category3": "테이블 조명",
-    "productImages": [
-      "/images/iloom_images/lighting/table-lighting/IAL0001A_GPB_1.png",
-      "/images/iloom_images/lighting/table-lighting/IAL0001A_GPB_5.png",
-      "/images/iloom_images/lighting/table-lighting/IAL0001A_OVG_3.png",
-      "/images/iloom_images/lighting/table-lighting/IAL0001A_OXR_4.png",
-      "/images/iloom_images/lighting/table-lighting/IAL0001A_SOW_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250610/_53b8cb67-579d-45ef-a138-221e8f76cffd.jpg",
-      "https://www.iloom.com/upload/contents/20250610/_ade9ff8a-3e9c-43de-8e46-32ede4f74592.jpg",
-      "https://www.iloom.com/upload/contents/20250610/_71e3315e-3236-4430-a2ea-ce6d1ef1dd2c.jpg",
-      "https://www.iloom.com/upload/contents/20250610/_e27c6152-04c9-418e-a8a9-c2383af76379.jpg",
-      "https://www.iloom.com/upload/contents/20250610/_ac21d938-f34e-48c6-bc6f-9aeb9e6fa65d.jpg",
-      "https://www.iloom.com/upload/contents/20250610/_f50c4c5c-79fd-4336-877a-8d95b23bd0ba.jpg",
-      "https://www.iloom.com/upload/contents/20250610/_98ba294d-7a31-4c3b-a830-7deed7fa90f4.jpg",
-      "https://www.iloom.com/upload/contents/20250610/_6574f358-8d09-48b5-88c6-536f1524239a.jpg"
-    ],
-    "ranking": 119
-  },
-  {
-    "id": "IAL0001A",
-    "series": "Wastberg",
-    "name": "Wastberg 파스틸 테이블 조명",
-    "material": "스틸",
-    "price": "590,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "OVG"
-        ]
-      }
-    ],
-    "originalCategory": "조명",
-    "category2": "테이블 조명",
-    "category3": "테이블 조명",
-    "productImages": [
-      "/images/iloom_images/lighting/table-lighting/IAL0001A_GPB_1.png",
-      "/images/iloom_images/lighting/table-lighting/IAL0001A_GPB_5.png",
-      "/images/iloom_images/lighting/table-lighting/IAL0001A_OVG_3.png",
-      "/images/iloom_images/lighting/table-lighting/IAL0001A_OXR_4.png",
-      "/images/iloom_images/lighting/table-lighting/IAL0001A_SOW_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250610/_53b8cb67-579d-45ef-a138-221e8f76cffd.jpg",
-      "https://www.iloom.com/upload/contents/20250610/_ade9ff8a-3e9c-43de-8e46-32ede4f74592.jpg",
-      "https://www.iloom.com/upload/contents/20250610/_71e3315e-3236-4430-a2ea-ce6d1ef1dd2c.jpg",
-      "https://www.iloom.com/upload/contents/20250610/_e27c6152-04c9-418e-a8a9-c2383af76379.jpg",
-      "https://www.iloom.com/upload/contents/20250610/_ac21d938-f34e-48c6-bc6f-9aeb9e6fa65d.jpg",
-      "https://www.iloom.com/upload/contents/20250610/_f50c4c5c-79fd-4336-877a-8d95b23bd0ba.jpg",
-      "https://www.iloom.com/upload/contents/20250610/_98ba294d-7a31-4c3b-a830-7deed7fa90f4.jpg",
-      "https://www.iloom.com/upload/contents/20250610/_6574f358-8d09-48b5-88c6-536f1524239a.jpg"
-    ],
-    "ranking": 1061
-  },
-  {
-    "id": "IAL0001A",
-    "series": "Wastberg",
-    "name": "Wastberg 파스틸 테이블 조명",
-    "material": "스틸",
-    "price": "590,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "OXR"
-        ]
-      }
-    ],
-    "originalCategory": "조명",
-    "category2": "테이블 조명",
-    "category3": "테이블 조명",
-    "productImages": [
-      "/images/iloom_images/lighting/table-lighting/IAL0001A_GPB_1.png",
-      "/images/iloom_images/lighting/table-lighting/IAL0001A_GPB_5.png",
-      "/images/iloom_images/lighting/table-lighting/IAL0001A_OVG_3.png",
-      "/images/iloom_images/lighting/table-lighting/IAL0001A_OXR_4.png",
-      "/images/iloom_images/lighting/table-lighting/IAL0001A_SOW_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250610/_53b8cb67-579d-45ef-a138-221e8f76cffd.jpg",
-      "https://www.iloom.com/upload/contents/20250610/_ade9ff8a-3e9c-43de-8e46-32ede4f74592.jpg",
-      "https://www.iloom.com/upload/contents/20250610/_71e3315e-3236-4430-a2ea-ce6d1ef1dd2c.jpg",
-      "https://www.iloom.com/upload/contents/20250610/_e27c6152-04c9-418e-a8a9-c2383af76379.jpg",
-      "https://www.iloom.com/upload/contents/20250610/_ac21d938-f34e-48c6-bc6f-9aeb9e6fa65d.jpg",
-      "https://www.iloom.com/upload/contents/20250610/_f50c4c5c-79fd-4336-877a-8d95b23bd0ba.jpg",
-      "https://www.iloom.com/upload/contents/20250610/_98ba294d-7a31-4c3b-a830-7deed7fa90f4.jpg",
-      "https://www.iloom.com/upload/contents/20250610/_6574f358-8d09-48b5-88c6-536f1524239a.jpg"
-    ],
-    "ranking": 1498
   },
   {
     "id": "IDM0001A",
@@ -25216,49 +18931,7 @@ export const productData = [
     ],
     "ranking": 367
   },
-  {
-    "id": "IDM0002A",
-    "series": "업 모션",
-    "name": "업 모션 타원 테이블 1600폭 (LPM)",
-    "material": "LPM",
-    "price": "1,190,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "SP"
-        ]
-      }
-    ],
-    "originalCategory": "다이닝",
-    "category2": "식탁",
-    "category3": "리빙다이닝식탁",
-    "productImages": [
-      "/images/iloom_images/dining-room/dining-table/IDM0002A_SP_1.jpg",
-      "/images/iloom_images/dining-room/dining-table/IDM0002A_SP_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250205/_cbbb2bd5-6f01-490c-a7d0-466360409b04.jpg",
-      "https://www.iloom.com/upload/contents/20240528/_984978c2-b2b0-4efe-8c4b-2d5cbdc299ba.jpg",
-      "https://www.iloom.com/upload/contents/20231205/_e7de028e-7e7c-4485-aefa-6bd7ff2afe75.jpg",
-      "https://www.iloom.com/upload/contents/20241205/_e8b5817b-6c5a-41a4-ac57-fae9f2a38e2e.jpg",
-      "https://www.iloom.com/upload/contents/20250723/_048d3d4d-9523-4ea5-a7c3-f64d6290a3c3.jpg",
-      "https://www.iloom.com/upload/contents/20250723/_33114bac-b021-4d4a-8cde-5759f14541f4.gif",
-      "https://www.iloom.com/upload/contents/20250723/_3151455c-92c2-48e0-bffc-04a5e05bd1e2.jpg",
-      "https://www.iloom.com/upload/contents/20250424/_bf964c3f-6ff6-4a13-8e33-6b4aa8c839f1.jpg",
-      "https://www.iloom.com/upload/contents/20230531/_f8f09b49-90d5-4801-ade4-2c5daadae4e2.jpg",
-      "https://www.iloom.com/upload/contents/20230531/_446c344c-0d26-4aff-930d-ec438d148c74.jpg",
-      "https://www.iloom.com/upload/contents/20230531/_4ea2617c-c202-4b11-a1f8-22f8a15ee877.jpg",
-      "https://www.iloom.com/upload/contents/20230531/_40b1e4b7-4de7-4550-af9d-455f36f1940c.jpg",
-      "https://www.iloom.com/upload/contents/20230428/_37861277-84c6-4164-bd05-c2cfd1e1d5a5.jpg",
-      "https://www.iloom.com/upload/contents/20250724/_013ca646-5786-42f7-8557-a729e5cbaae5.jpg",
-      "https://www.iloom.com/upload/contents/20250512/_cb1435eb-f7cc-4a69-a53c-14093fa2eb00.jpg"
-    ],
-    "ranking": 1350
-  },
+  
   {
     "id": "IDM0003A",
     "series": "업 모션",
@@ -25302,69 +18975,7 @@ export const productData = [
     ],
     "ranking": 1614
   },
-  {
-    "id": "IDM0004A",
-    "series": "업 모션",
-    "name": "업 모션 타원 테이블 1600폭 (강화유리)",
-    "material": "강화유리, 유리",
-    "price": "1,390,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "SSP"
-        ]
-      }
-    ],
-    "originalCategory": "다이닝",
-    "category2": "식탁",
-    "category3": "리빙다이닝식탁",
-    "productImages": [
-      "/images/iloom_images/dining-room/dining-table/IDM0004A_SSP_1.jpg",
-      "/images/iloom_images/dining-room/dining-table/IDM0004A_SSP_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20260316/_c46129b2-a13a-45a6-bca7-4b23c171a23c.jpg",
-      "https://www.iloom.com/upload/contents/20260316/_21fefe06-fa5e-40b2-9409-06394651ea02.jpg",
-      "https://www.iloom.com/upload/contents/20260316/_17337907-91de-4c2f-8a9d-edae5df10114.jpg",
-      "https://www.iloom.com/upload/contents/20260316/_fc17929b-9185-4bd5-b237-ae1d31c93999.jpg",
-      "https://www.iloom.com/upload/contents/20260316/_b203b8e7-e01b-4c0a-982a-519d0e339089.jpg",
-      "https://www.iloom.com/upload/contents/20260316/_05588cda-05f1-496f-a607-5d923e5d69c2.jpg",
-      "https://www.iloom.com/upload/contents/20260316/_3af53b0e-9d83-4faa-be6d-01c1c3f5e9cd.jpg",
-      "https://www.iloom.com/upload/contents/20260316/_c3ffa1d3-622f-4bf5-a430-e5229c9778d1.jpg",
-      "https://www.iloom.com/upload/contents/20260316/_f6389633-e577-4b26-a21c-3a3ed9e6a09e.jpg",
-      "https://www.iloom.com/upload/contents/20260316/_75b9d371-183c-4f94-9111-bc1c992648d9.jpg",
-      "https://www.iloom.com/upload/contents/20260316/_67b6f7c3-567b-49c2-af0a-0b0b81cf9b49.jpg",
-      "https://www.iloom.com/upload/contents/20260316/_acbeded2-0d09-4810-9439-24a8339386fa.jpg",
-      "https://www.iloom.com/upload/contents/20260316/_776121a2-b7a6-411c-9fa0-ce4c8ff15323.jpg",
-      "https://www.iloom.com/upload/contents/20260316/_a35d9d35-fb2e-48d4-9eaa-9a051e65cf59.jpg",
-      "https://www.iloom.com/upload/contents/20260316/_86559b26-d129-4b0a-b261-224c156139aa.jpg",
-      "https://www.iloom.com/upload/contents/20260316/_e7777797-966d-4233-8e1d-4ed7e93e2b23.jpg",
-      "https://www.iloom.com/upload/contents/20260316/_c645755b-743c-4fb2-972b-f666d7855083.jpg",
-      "https://www.iloom.com/upload/contents/20260316/_2c036c65-927c-452a-b3f5-f107dbc839ec.jpg",
-      "https://www.iloom.com/upload/contents/20260316/_10e28053-ed10-4264-aa47-3fbc5ac24410.jpg",
-      "https://www.iloom.com/upload/contents/20260316/_5111859a-a1c5-4bef-9f0f-00181202d9fc.jpg",
-      "https://www.iloom.com/upload/contents/20260316/_3c98b273-9bff-4d45-932b-46b5084af3fa.jpg",
-      "https://www.iloom.com/upload/contents/20260316/_69c9fad9-62b1-4452-9be1-b09c020cc2c6.jpg",
-      "https://www.iloom.com/upload/contents/20260316/_290c597a-8e0d-493d-bb79-e23ea96143af.jpg",
-      "https://www.iloom.com/upload/contents/20260316/_53be32db-ce0c-460c-a0da-50f27893cfd8.jpg",
-      "https://www.iloom.com/upload/contents/20260316/_609718fa-00e0-4177-bf38-08e978eec06d.jpg",
-      "https://www.iloom.com/upload/contents/20260316/_aa15cd04-6fa0-44e5-a12d-0d739b64bc87.jpg",
-      "https://www.iloom.com/upload/contents/20260316/_37268afa-b8c9-4e3d-b763-5f20b532d858.jpg",
-      "https://www.iloom.com/upload/contents/20260316/_08c213fd-c26a-4600-bfa2-e4fddce31724.jpg",
-      "https://www.iloom.com/upload/contents/20260316/_50068e64-6114-4083-9597-7c4efb3b449c.jpg",
-      "https://www.iloom.com/upload/contents/20260316/_8a8dd2f7-3afe-4b3a-849b-651d217d1389.jpg",
-      "https://www.iloom.com/upload/contents/20260316/_70442799-4d55-4b27-8e1a-c7b9f026a5e2.jpg",
-      "https://www.iloom.com/upload/contents/20260316/_732e16cb-1865-4fad-a8d6-78a383d364b1.jpg",
-      "https://www.iloom.com/upload/contents/20260316/_6b78e467-d366-4fca-a173-8c0ca32e60d6.jpg",
-      "https://www.iloom.com/upload/contents/20260316/_825269a2-5ddb-4580-8e8f-cd167c8cc032.jpg",
-      "https://www.iloom.com/upload/contents/20260316/_ecf4a6ff-138c-4b03-8a10-63be078ce465.jpg"
-    ],
-    "ranking": 1649
-  },
+  
   {
     "id": "IDM0005A",
     "series": "업 모션",
@@ -27646,7 +21257,7 @@ export const productData = [
     ],
     "originalCategory": "다이닝",
     "category2": "식탁세트",
-    "category3": "식탁세트",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dining-room/dining-set/HTUD1200H_NCC451_1.jpg",
       "/images/iloom_images/dining-room/dining-set/HTUD1200H_NCC451_2.png",
@@ -27678,7 +21289,7 @@ export const productData = [
     ],
     "originalCategory": "다이닝",
     "category2": "식탁세트",
-    "category3": "식탁세트",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dining-room/dining-set/HTUD1201H_NCCBW_1.jpg",
       "/images/iloom_images/dining-room/dining-set/HTUD1201H_NCCBW_2.png",
@@ -27710,7 +21321,7 @@ export const productData = [
     ],
     "originalCategory": "다이닝",
     "category2": "식탁의자",
-    "category3": "식탁의자",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dining-room/dining-chair/ITY00CW01A_NRO_1.jpg",
       "/images/iloom_images/dining-room/dining-chair/ITY00CW01A_NRO_2.png"
@@ -27745,7 +21356,7 @@ export const productData = [
     ],
     "originalCategory": "다이닝",
     "category2": "식탁의자",
-    "category3": "식탁의자",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dining-room/dining-chair/ITY00BR00A_BNT_2.png",
       "/images/iloom_images/dining-room/dining-chair/ITY00BR00A_CZ_1.jpg",
@@ -27783,7 +21394,7 @@ export const productData = [
     ],
     "originalCategory": "다이닝",
     "category2": "식탁의자",
-    "category3": "식탁의자",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dining-room/dining-chair/HCH9003_3J3CZ_1.jpg",
       "/images/iloom_images/dining-room/dining-chair/HCH9003_3J3CZ_3.png",
@@ -27819,7 +21430,7 @@ export const productData = [
     ],
     "originalCategory": "다이닝",
     "category2": "식탁의자",
-    "category3": "식탁의자",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dining-room/dining-chair/HCH9003A_BNT_2.png",
       "/images/iloom_images/dining-room/dining-chair/HCH9003A_CZ_1.jpg",
@@ -27855,7 +21466,7 @@ export const productData = [
     ],
     "originalCategory": "다이닝",
     "category2": "식탁의자",
-    "category3": "식탁의자",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dining-room/dining-chair/ITY00AG01A_BNT_2.png",
       "/images/iloom_images/dining-room/dining-chair/ITY00AG01A_CZ_1.jpg",
@@ -27892,7 +21503,7 @@ export const productData = [
     ],
     "originalCategory": "다이닝",
     "category2": "식탁의자",
-    "category3": "식탁의자",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dining-room/dining-chair/ITY00CW00A_BK_2.png",
       "/images/iloom_images/dining-room/dining-chair/ITY00CW00A_NK_1.jpg",
@@ -27931,7 +21542,7 @@ export const productData = [
     ],
     "originalCategory": "다이닝",
     "category2": "식탁의자",
-    "category3": "식탁의자",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dining-room/dining-chair/ITY00CD00A_MWTBK_3.png",
       "/images/iloom_images/dining-room/dining-chair/ITY00CD00A_MWTCR_4.png",
@@ -27971,7 +21582,7 @@ export const productData = [
     ],
     "originalCategory": "다이닝",
     "category2": "식탁의자",
-    "category3": "식탁의자",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dining-room/dining-chair/HCH7100_A481_1.jpg",
       "/images/iloom_images/dining-room/dining-chair/HCH7100_A481_4.png",
@@ -28007,7 +21618,7 @@ export const productData = [
     ],
     "originalCategory": "다이닝",
     "category2": "식탁의자",
-    "category3": "식탁의자",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dining-room/dining-chair/HCH3001_BWWW_1.jpg",
       "/images/iloom_images/dining-room/dining-chair/HCH3001_BWWW_2.png",
@@ -28040,7 +21651,7 @@ export const productData = [
     ],
     "originalCategory": "다이닝",
     "category2": "식탁의자",
-    "category3": "식탁의자",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dining-room/dining-chair/HCH3001F_451LWG_1.jpg",
       "/images/iloom_images/dining-room/dining-chair/HCH3001F_451LWG_3.png",
@@ -28075,7 +21686,7 @@ export const productData = [
     ],
     "originalCategory": "다이닝",
     "category2": "식탁의자",
-    "category3": "식탁의자",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dining-room/dining-chair/HCH3001A_A491CT_1.jpg",
       "/images/iloom_images/dining-room/dining-chair/HCH3001A_A491CT_4.png",
@@ -28112,7 +21723,7 @@ export const productData = [
     ],
     "originalCategory": "다이닝",
     "category2": "식탁의자",
-    "category3": "식탁의자",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dining-room/dining-chair/HCH9001_3H5_1.jpg",
       "/images/iloom_images/dining-room/dining-chair/HCH9001_3H5_2.png"
@@ -28126,46 +21737,6 @@ export const productData = [
       "https://www.iloom.com/upload/contents/20190614/_c46addb9-08c8-480e-a5df-5e7270d599ac.jpg"
     ],
     "ranking": 778
-  },
-  {
-    "id": "HCH9002",
-    "series": "어바니",
-    "name": "어바니 원목 의자",
-    "material": "원목",
-    "price": "129,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "NBO",
-          "WBO"
-        ]
-      }
-    ],
-    "originalCategory": "다이닝",
-    "category2": "식탁의자",
-    "category3": "식탁의자",
-    "productImages": [
-      "/images/iloom_images/bedroom/vanity/HCH9002_a_NBO_2.png",
-      "/images/iloom_images/bedroom/vanity/HCH9002_a_WBO_1.jpg",
-      "/images/iloom_images/bedroom/vanity/HCH9002_a_WBO_3.png",
-      "/images/iloom_images/dining-room/dining-chair/HCH9002_b_NBO_1.jpg",
-      "/images/iloom_images/dining-room/dining-chair/HCH9002_b_NBO_3.png",
-      "/images/iloom_images/dining-room/dining-chair/HCH9002_b_WBO_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20200309/_13910d1a-0f0d-48e6-8fe0-ea37d26dc148.jpg",
-      "https://www.iloom.com/upload/contents/20200309/_85a0a2f0-bb4a-4761-b26b-aae5ce69b01d.jpg",
-      "https://www.iloom.com/upload/contents/20200309/_60d59d94-c588-4d85-8d3d-43ed1f511983.jpg",
-      "https://www.iloom.com/upload/contents/20200309/_4bb68ee9-e1ee-4f60-87d6-ab72457503b5.jpg",
-      "https://www.iloom.com/upload/contents/20200309/_64e2f0b5-6e3b-4e0d-90e7-a0a9692a77e6.jpg",
-      "https://www.iloom.com/upload/contents/20200309/_7210d128-8a7c-4ef6-8f18-00003a5ea93c.jpg",
-      "https://www.iloom.com/upload/contents/20200309/_13900df3-4862-45e2-abaf-66ac7d0a84f7.jpg"
-    ],
-    "ranking": 557
   },
   {
     "id": "HCH0014RP",
@@ -28186,7 +21757,7 @@ export const productData = [
     ],
     "originalCategory": "다이닝",
     "category2": "식탁의자",
-    "category3": "식탁의자",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dining-room/dining-chair/HCH0014RP_MGN_3.png",
       "/images/iloom_images/dining-room/dining-chair/HCH0014RP_MM_4.png",
@@ -28225,7 +21796,7 @@ export const productData = [
     ],
     "originalCategory": "다이닝",
     "category2": "식탁의자",
-    "category3": "식탁의자",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dining-room/dining-chair/HCH0014R_A491C_1.jpg",
       "/images/iloom_images/dining-room/dining-chair/HCH0014R_A491C_4.png",
@@ -28263,7 +21834,7 @@ export const productData = [
     ],
     "originalCategory": "다이닝",
     "category2": "식탁의자",
-    "category3": "식탁의자",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dining-room/dining-chair/HCH0009_A490L_3.png",
       "/images/iloom_images/dining-room/dining-chair/HCH0009_A491CH_1.jpg",
@@ -28299,7 +21870,7 @@ export const productData = [
     ],
     "originalCategory": "다이닝",
     "category2": "식탁의자",
-    "category3": "식탁의자",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dining-room/dining-chair/HCH0018S_A490LW_1.png",
       "/images/iloom_images/dining-room/dining-chair/HCH0018S_A490LW_3.png",
@@ -28336,7 +21907,7 @@ export const productData = [
     ],
     "originalCategory": "다이닝",
     "category2": "식탁의자",
-    "category3": "식탁의자",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dining-room/dining-chair/HCH0018A_A490LA_1.jpg",
       "/images/iloom_images/dining-room/dining-chair/HCH0018A_A490LA_3.png",
@@ -28374,7 +21945,7 @@ export const productData = [
     ],
     "originalCategory": "다이닝",
     "category2": "식탁의자",
-    "category3": "식탁의자",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dining-room/dining-chair/HCH0018F_161AA_1.jpg",
       "/images/iloom_images/dining-room/dining-chair/HCH0018F_161AA_3.png",
@@ -28410,7 +21981,7 @@ export const productData = [
     ],
     "originalCategory": "다이닝",
     "category2": "식탁의자",
-    "category3": "식탁의자",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dining-room/dining-chair/HXCH0114F_451AWG_2.png",
       "/images/iloom_images/dining-room/dining-chair/HXCH0114F_451WG_1.jpg",
@@ -28444,7 +22015,7 @@ export const productData = [
     ],
     "originalCategory": "다이닝",
     "category2": "식탁의자",
-    "category3": "식탁의자",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dining-room/dining-chair/IYX2401007_A491AA_1.jpg",
       "/images/iloom_images/dining-room/dining-chair/IYX2401007_A491AA_3.png",
@@ -28481,7 +22052,7 @@ export const productData = [
     ],
     "originalCategory": "다이닝",
     "category2": "식탁의자",
-    "category3": "식탁의자",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dining-room/dining-chair/IYX2401006_451AUA_1.jpg",
       "/images/iloom_images/dining-room/dining-chair/IYX2401006_451AUA_1.jpg",
@@ -28519,7 +22090,7 @@ export const productData = [
     ],
     "originalCategory": "다이닝",
     "category2": "식탁의자",
-    "category3": "식탁의자",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dining-room/dining-chair/HCH6000_451WW_1.jpg",
       "/images/iloom_images/dining-room/dining-chair/HCH6000_451WW_2.png",
@@ -28551,7 +22122,7 @@ export const productData = [
     ],
     "originalCategory": "다이닝",
     "category2": "식탁의자",
-    "category3": "식탁의자",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dining-room/dining-chair/HCH6001_BWWW_1.jpg",
       "/images/iloom_images/dining-room/dining-chair/HCH6001_BWWW_2.png",
@@ -28584,7 +22155,7 @@ export const productData = [
     ],
     "originalCategory": "다이닝",
     "category2": "식탁의자",
-    "category3": "식탁의자",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dining-room/dining-chair/ITY12AD00A_BNT_2.png",
       "/images/iloom_images/dining-room/dining-chair/ITY12AD00A_CZ_1.jpg",
@@ -28622,7 +22193,7 @@ export const productData = [
     ],
     "originalCategory": "다이닝",
     "category2": "식탁의자",
-    "category3": "식탁의자",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dining-room/dining-chair/ITY14AD00A_BNT_2.png",
       "/images/iloom_images/dining-room/dining-chair/ITY14AD00A_CZ_1.jpg",
@@ -28661,7 +22232,7 @@ export const productData = [
     ],
     "originalCategory": "다이닝",
     "category2": "식탁의자",
-    "category3": "식탁의자",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dining-room/dining-chair/HCH014B_A481C_1.jpg",
       "/images/iloom_images/dining-room/dining-chair/HCH014B_A481C_4.png",
@@ -28702,7 +22273,7 @@ export const productData = [
     ],
     "originalCategory": "다이닝",
     "category2": "식탁의자",
-    "category3": "식탁의자",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dining-room/dining-chair/HCH016B_A481C_1.jpg",
       "/images/iloom_images/dining-room/dining-chair/HCH016B_A481C_4.png",
@@ -28742,7 +22313,7 @@ export const productData = [
     ],
     "originalCategory": "다이닝",
     "category2": "식탁의자",
-    "category3": "식탁의자",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dining-room/dining-chair/HCH702B_CZ_1.png",
       "/images/iloom_images/dining-room/dining-chair/HCH702B_CZ_2.png"
@@ -28774,7 +22345,7 @@ export const productData = [
     ],
     "originalCategory": "다이닝",
     "category2": "식탁의자",
-    "category3": "식탁의자",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dining-room/dining-chair/HCH703B_CZ_1.jpg",
       "/images/iloom_images/dining-room/dining-chair/HCH703B_CZ_2.png"
@@ -28807,7 +22378,7 @@ export const productData = [
     ],
     "originalCategory": "다이닝",
     "category2": "식탁의자",
-    "category3": "식탁의자",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dining-room/dining-chair/ITL0002A_IV_2.png",
       "/images/iloom_images/dining-room/dining-chair/ITL0002A_NCC_1.jpg",
@@ -28843,7 +22414,7 @@ export const productData = [
     ],
     "originalCategory": "다이닝",
     "category2": "식탁의자",
-    "category3": "식탁의자",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dining-room/dining-chair/ITL0001A_IV_2.png",
       "/images/iloom_images/dining-room/dining-chair/ITL0001A_NCC_1.jpg",
@@ -29298,7 +22869,7 @@ export const productData = [
     ],
     "originalCategory": "다이닝",
     "category2": "식탁의자",
-    "category3": "식탁의자",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dining-room/dining-chair/IKP0004A_SO_1.jpg",
       "/images/iloom_images/dining-room/dining-chair/IKP0004A_SO_2.png"
@@ -29335,7 +22906,7 @@ export const productData = [
     ],
     "originalCategory": "다이닝",
     "category2": "식탁의자",
-    "category3": "식탁의자",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dining-room/dining-chair/IKB0005A_SO_1.jpg",
       "/images/iloom_images/dining-room/dining-chair/IKB0005A_SO_2.png",
@@ -29373,7 +22944,7 @@ export const productData = [
     ],
     "originalCategory": "다이닝",
     "category2": "식탁의자",
-    "category3": "식탁의자",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dining-room/dining-chair/HT40U03EEU_CR_1.png"
     ],
@@ -29399,7 +22970,7 @@ export const productData = [
     ],
     "originalCategory": "다이닝",
     "category2": "수납장",
-    "category3": "수납장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dining-room/storage/IKB0002A_SPSP_1.jpg",
       "/images/iloom_images/dining-room/storage/IKB0002A_SPSP_2.png"
@@ -29440,7 +23011,7 @@ export const productData = [
     ],
     "originalCategory": "다이닝",
     "category2": "수납장",
-    "category3": "수납장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dining-room/storage/IKB0001A_SPSP_1.jpg",
       "/images/iloom_images/dining-room/storage/IKB0001A_SPSP_2.png"
@@ -29482,7 +23053,7 @@ export const productData = [
     ],
     "originalCategory": "다이닝",
     "category2": "식탁의자",
-    "category3": "식탁의자",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dining-room/dining-chair/IKB0003A_SPKW_2.png",
       "/images/iloom_images/dining-room/dining-chair/IKB0003A_SPSP_1.jpg",
@@ -29524,7 +23095,7 @@ export const productData = [
     ],
     "originalCategory": "다이닝",
     "category2": "수납장",
-    "category3": "수납장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dining-room/storage/HCB1E90L_KW_2.png",
       "/images/iloom_images/dining-room/storage/HCB1E90L_SP_1.jpg",
@@ -29568,7 +23139,7 @@ export const productData = [
     ],
     "originalCategory": "다이닝",
     "category2": "수납장",
-    "category3": "수납장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dining-room/storage/HCB1E95L_KW_2.png",
       "/images/iloom_images/dining-room/storage/HCB1E95L_SP_1.jpg",
@@ -29610,7 +23181,7 @@ export const productData = [
     ],
     "originalCategory": "다이닝",
     "category2": "수납장",
-    "category3": "수납장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dining-room/storage/HCB1E10L_KW_2.png",
       "/images/iloom_images/dining-room/storage/HCB1E10L_SP_1.jpg",
@@ -29678,7 +23249,7 @@ export const productData = [
     ],
     "originalCategory": "다이닝",
     "category2": "식탁의자",
-    "category3": "식탁의자",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dining-room/dining-chair/HCB2E10L_SP_1.jpg",
       "/images/iloom_images/dining-room/dining-chair/HCB2E10L_SP_2.png"
@@ -29717,7 +23288,7 @@ export const productData = [
     ],
     "originalCategory": "다이닝",
     "category2": "식탁의자",
-    "category3": "식탁의자",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dining-room/dining-chair/IKP0003A_SPKW_2.png",
       "/images/iloom_images/dining-room/dining-chair/IKP0003A_SPSP_1.jpg",
@@ -29757,7 +23328,7 @@ export const productData = [
     ],
     "originalCategory": "다이닝",
     "category2": "식탁의자",
-    "category3": "식탁의자",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dining-room/dining-chair/IKP0002A_SPKW_2.png",
       "/images/iloom_images/dining-room/dining-chair/IKP0002A_SPSP_1.jpg",
@@ -29802,7 +23373,7 @@ export const productData = [
     ],
     "originalCategory": "다이닝",
     "category2": "식탁의자",
-    "category3": "식탁의자",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dining-room/dining-chair/IKP0001A_SPKW_2.png",
       "/images/iloom_images/dining-room/dining-chair/IKP0001A_SPSP_1.jpg",
@@ -29847,7 +23418,7 @@ export const productData = [
     ],
     "originalCategory": "다이닝",
     "category2": "식탁의자",
-    "category3": "식탁의자",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dining-room/dining-chair/HC60Y082E_CGDIO_1.jpg",
       "/images/iloom_images/dining-room/dining-chair/HC60Y082E_CGDIO_3.png",
@@ -29880,7 +23451,7 @@ export const productData = [
     ],
     "originalCategory": "다이닝",
     "category2": "식탁의자",
-    "category3": "식탁의자",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dining-room/dining-chair/HC60Y083E_CGDIO_1.jpg",
       "/images/iloom_images/dining-room/dining-chair/HC60Y083E_CGDIO_3.png",
@@ -29916,7 +23487,7 @@ export const productData = [
     ],
     "originalCategory": "다이닝",
     "category2": "식탁의자",
-    "category3": "식탁의자",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dining-room/dining-chair/HC60Y082H_CGDIO_1.jpg",
       "/images/iloom_images/dining-room/dining-chair/HC60Y082H_CGDIO_3.png",
@@ -29950,7 +23521,7 @@ export const productData = [
     ],
     "originalCategory": "다이닝",
     "category2": "식탁의자",
-    "category3": "식탁의자",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dining-room/dining-chair/HC60Y083H_CGDIO_1.jpg",
       "/images/iloom_images/dining-room/dining-chair/HC60Y083H_CGDIO_3.png",
@@ -29986,7 +23557,7 @@ export const productData = [
     ],
     "originalCategory": "다이닝",
     "category2": "식탁의자",
-    "category3": "식탁의자",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dining-room/dining-chair/HC60Y061E_CGDIO_1.jpg",
       "/images/iloom_images/dining-room/dining-chair/HC60Y061E_CGDIO_3.png",
@@ -30020,7 +23591,7 @@ export const productData = [
     ],
     "originalCategory": "다이닝",
     "category2": "식탁의자",
-    "category3": "식탁의자",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dining-room/dining-chair/HC60Y101HG_CGDIO_1.jpg",
       "/images/iloom_images/dining-room/dining-chair/HC60Y101HG_CGDIO_3.png",
@@ -30054,7 +23625,7 @@ export const productData = [
     ],
     "originalCategory": "다이닝",
     "category2": "식탁의자",
-    "category3": "식탁의자",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dining-room/dining-chair/HC60Y161_CGDIO_1.jpg",
       "/images/iloom_images/dining-room/dining-chair/HC60Y161_CGDIO_3.png",
@@ -31113,90 +24684,6 @@ export const productData = [
       "https://www.iloom.com/upload/contents/20230614/_e2d9dd03-066f-41e8-834a-c05c8260f7c7.jpg"
     ],
     "ranking": 563
-  },
-  {
-    "id": "HCS883FA",
-    "series": "밴쿠버",
-    "name": "밴쿠버 3.5인(패브릭)",
-    "material": "패브릭",
-    "price": "1,590,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "4U0",
-          "4U4L"
-        ]
-      }
-    ],
-    "originalCategory": "거실",
-    "category2": "소파",
-    "category3": "패브릭소파",
-    "productImages": [
-      "/images/iloom_images/living-room/sofa/HCS883FA_a_4U0_1.jpg",
-      "/images/iloom_images/living-room/sofa/HCS883FA_a_4U0_3.png",
-      "/images/iloom_images/living-room/sofa/HCS883FA_a_4U4L_2.png",
-      "/images/iloom_images/living-room/sofa/HCS883FA_b_4U0_3.png",
-      "/images/iloom_images/living-room/sofa/HCS883FA_b_4U4L_2.png",
-      "/images/iloom_images/living-room/sofa/HCS883FA_c_4U0_3.png",
-      "/images/iloom_images/living-room/sofa/HCS883FA_c_4U4L_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20240819/_d165fd7f-ec82-4422-a87d-d4740801d9e1.jpg",
-      "https://www.iloom.com/upload/contents/20251017/_23e6f70a-f4bb-4d00-8e98-ed2f6afe4bec.jpg",
-      "https://www.iloom.com/upload/contents/20240819/_e5e0f80d-0c0c-456e-b938-8598be3d3f21.jpg",
-      "https://www.iloom.com/upload/contents/20260327/_230a1d17-caeb-440c-a602-5b743b378085.jpg",
-      "https://www.iloom.com/upload/contents/20241029/_21154d43-a3a5-4aae-959f-3f8ba7d064bf.jpg",
-      "https://www.iloom.com/upload/contents/20240905/_0e38bf20-7e1d-4c2d-bff9-0168ffff64f1.jpg",
-      "https://www.iloom.com/upload/contents/20250721/_4822023a-7654-4b5b-b03c-b9de8c15e3d6.jpg",
-      "https://www.iloom.com/upload/contents/20230614/_e2d9dd03-066f-41e8-834a-c05c8260f7c7.jpg"
-    ],
-    "ranking": 1346
-  },
-  {
-    "id": "HCS883FA",
-    "series": "밴쿠버",
-    "name": "밴쿠버 4인(패브릭)",
-    "material": "패브릭",
-    "price": "1,790,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "4U0",
-          "4U4L"
-        ]
-      }
-    ],
-    "originalCategory": "거실",
-    "category2": "소파",
-    "category3": "패브릭소파",
-    "productImages": [
-      "/images/iloom_images/living-room/sofa/HCS883FA_a_4U0_1.jpg",
-      "/images/iloom_images/living-room/sofa/HCS883FA_a_4U0_3.png",
-      "/images/iloom_images/living-room/sofa/HCS883FA_a_4U4L_2.png",
-      "/images/iloom_images/living-room/sofa/HCS883FA_b_4U0_3.png",
-      "/images/iloom_images/living-room/sofa/HCS883FA_b_4U4L_2.png",
-      "/images/iloom_images/living-room/sofa/HCS883FA_c_4U0_3.png",
-      "/images/iloom_images/living-room/sofa/HCS883FA_c_4U4L_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20240819/_d165fd7f-ec82-4422-a87d-d4740801d9e1.jpg",
-      "https://www.iloom.com/upload/contents/20251017/_23e6f70a-f4bb-4d00-8e98-ed2f6afe4bec.jpg",
-      "https://www.iloom.com/upload/contents/20240819/_e5e0f80d-0c0c-456e-b938-8598be3d3f21.jpg",
-      "https://www.iloom.com/upload/contents/20260327/_230a1d17-caeb-440c-a602-5b743b378085.jpg",
-      "https://www.iloom.com/upload/contents/20241029/_21154d43-a3a5-4aae-959f-3f8ba7d064bf.jpg",
-      "https://www.iloom.com/upload/contents/20240905/_0e38bf20-7e1d-4c2d-bff9-0168ffff64f1.jpg",
-      "https://www.iloom.com/upload/contents/20250721/_4822023a-7654-4b5b-b03c-b9de8c15e3d6.jpg",
-      "https://www.iloom.com/upload/contents/20230614/_e2d9dd03-066f-41e8-834a-c05c8260f7c7.jpg"
-    ],
-    "ranking": 1480
   },
   {
     "id": "HCS880FA",
@@ -32644,37 +26131,6 @@ export const productData = [
       "https://www.iloom.com/upload/contents/20250530/_abf2ec11-0dd5-4adc-bd2b-102b5d281c0a.jpg"
     ],
     "ranking": 851
-  },
-  {
-    "id": "IDV0006A",
-    "series": "플로코",
-    "name": "플로코 사이드 테이블",
-    "material": "",
-    "price": "95,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "OAT"
-        ]
-      }
-    ],
-    "originalCategory": "거실",
-    "category2": "테이블",
-    "category3": "소파테이블",
-    "productImages": [
-      "/images/iloom_images/living-room/table/IDV0006A_OAT_1.jpg",
-      "/images/iloom_images/living-room/table/IDV0006A_OAT_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20251127/_502b0275-57a7-4b8c-9fbb-d28361153d77.jpg",
-      "https://www.iloom.com/upload/contents/20250520/_827774bf-74c1-4a68-b7f6-a8f0535b88c9.jpg",
-      "https://www.iloom.com/upload/contents/20250722/_30b36561-bf8e-4e46-8c6d-dd730358b3fe.jpg"
-    ],
-    "ranking": 1008
   },
   {
     "id": "ISY07DB00A",
@@ -42200,44 +35656,6 @@ export const productData = [
     "ranking": 1067
   },
   {
-    "id": "HCS7800BF",
-    "series": "루오바",
-    "name": "루오바 벤치(패브릭)",
-    "material": "패브릭",
-    "price": "270,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "3T1"
-        ]
-      }
-    ],
-    "originalCategory": "거실",
-    "category2": "소파",
-    "category3": "패브릭소파",
-    "productImages": [
-      "/images/iloom_images/bedroom/storage/HCS7800BF_3T1L_1.jpg",
-      "/images/iloom_images/bedroom/storage/HCS7800BF_3T1L_3.png",
-      "/images/iloom_images/bedroom/storage/HCS7800BF_3T1_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20230614/_400f6a53-60d8-425b-8b00-552e5cf20d72.jpg",
-      "https://www.iloom.com/upload/contents/20230614/_788c87f1-2275-43d9-b385-41973461eac8.jpg",
-      "https://www.iloom.com/upload/contents/20250821/_35ec21c0-c558-4fd3-81de-92eb3ff1c7bd.jpg",
-      "https://www.iloom.com/upload/contents/20230614/_d93b3057-612b-4c8c-9065-12d63d6ed2d3.jpg",
-      "https://www.iloom.com/upload/contents/20240513/_40554f83-fb93-4bf6-bd63-829542af0f07.jpg",
-      "https://www.iloom.com/upload/contents/20230614/_2e4a2be5-d359-48b2-9454-193cd067bfad.jpg",
-      "https://www.iloom.com/upload/contents/20250724/_2470fa45-dd62-4657-ad95-bcef4d6e11e5.jpg",
-      "https://www.iloom.com/upload/contents/20250227/_ce1ba761-c832-46d1-b12b-eb0d17d26317.jpg",
-      "https://www.iloom.com/upload/contents/20230614/_7449633d-77b3-477f-af7a-6d06129d0cc8.jpg"
-    ],
-    "ranking": 1678
-  },
-  {
     "id": "HCS782F",
     "series": "루오바",
     "name": "루오바 2인(패브릭)",
@@ -43372,98 +36790,6 @@ export const productData = [
     "ranking": 1654
   },
   {
-    "id": "HL10Y06TL",
-    "series": "타우 솔리드",
-    "name": "타우 솔리드 사이드테이블",
-    "material": "",
-    "price": "89,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "SOGY",
-          "FKFK",
-          "IVIIV"
-        ]
-      }
-    ],
-    "originalCategory": "거실",
-    "category2": "테이블",
-    "category3": "멀티테이블",
-    "productImages": [
-      "/images/iloom_images/living-room/table/HL10Y06TL_a_GYMGY_3.png",
-      "/images/iloom_images/living-room/table/HL10Y06TL_a_LDDG_1.jpg",
-      "/images/iloom_images/living-room/table/HL10Y06TL_a_LDDG_4.png",
-      "/images/iloom_images/living-room/table/HL10Y06TL_a_LDDG_5.png",
-      "/images/iloom_images/living-room/table/HL10Y06TL_a_LDDG_6.png",
-      "/images/iloom_images/living-room/table/HL10Y06TL_a_LDDG_7.png",
-      "/images/iloom_images/living-room/table/HL10Y06TL_a_OSBG_2.png",
-      "/images/iloom_images/living-room/table/HL10Y06TL_b_FKFK_2.png",
-      "/images/iloom_images/living-room/table/HL10Y06TL_b_IVIIV_3.png",
-      "/images/iloom_images/living-room/table/HL10Y06TL_b_SOGY_1.jpg",
-      "/images/iloom_images/living-room/table/HL10Y06TL_b_SOGY_4.png",
-      "/images/iloom_images/living-room/table/HL10Y06TL_b_SOGY_5.png",
-      "/images/iloom_images/living-room/table/HL10Y06TL_b_SOGY_6.png",
-      "/images/iloom_images/living-room/table/HL10Y06TL_b_SOGY_7.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20171207/_37459752-7cb9-4c66-ab70-717797230279.jpg",
-      "https://www.iloom.com/upload/contents/20171207/_83999667-a554-42c9-8bae-c00dcd86f837.jpg",
-      "https://www.iloom.com/upload/contents/20171207/_c54f0204-a8c4-4618-ab21-58e8ac03b584.jpg"
-    ],
-    "ranking": 559
-  },
-  {
-    "id": "HL14E06EL",
-    "series": "타우 솔리드",
-    "name": "타우 솔리드 사이드테이블(전면형)",
-    "material": "",
-    "price": "89,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "SOGY",
-          "FKFK",
-          "IVIIV"
-        ]
-      }
-    ],
-    "originalCategory": "거실",
-    "category2": "테이블",
-    "category3": "멀티테이블",
-    "productImages": [
-      "/images/iloom_images/living-room/table/HL14E06EL_a_GYMGY_3.png",
-      "/images/iloom_images/living-room/table/HL14E06EL_a_LDDG_1.png",
-      "/images/iloom_images/living-room/table/HL14E06EL_a_LDDG_1.png",
-      "/images/iloom_images/living-room/table/HL14E06EL_a_LDDG_4.png",
-      "/images/iloom_images/living-room/table/HL14E06EL_a_LDDG_5.png",
-      "/images/iloom_images/living-room/table/HL14E06EL_a_LDDG_6.png",
-      "/images/iloom_images/living-room/table/HL14E06EL_a_LDDG_7.png",
-      "/images/iloom_images/living-room/table/HL14E06EL_a_OSBG_2.png",
-      "/images/iloom_images/living-room/table/HL14E06EL_b_FKFK_2.png",
-      "/images/iloom_images/living-room/table/HL14E06EL_b_IVIIV_3.png",
-      "/images/iloom_images/living-room/table/HL14E06EL_b_SOGY_1.jpg",
-      "/images/iloom_images/living-room/table/HL14E06EL_b_SOGY_4.png",
-      "/images/iloom_images/living-room/table/HL14E06EL_b_SOGY_5.png",
-      "/images/iloom_images/living-room/table/HL14E06EL_b_SOGY_6.png",
-      "/images/iloom_images/living-room/table/HL14E06EL_b_SOGY_7.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20191212/_1d987263-2102-4e4e-9bd2-857e21952b89.jpg",
-      "https://www.iloom.com/upload/contents/20191212/_75ea76e9-27f2-4dfd-9725-ff5e0b975a9c.jpg",
-      "https://www.iloom.com/upload/contents/20191212/_d88d9009-d579-4a0c-bbc3-e5797ab8ed7d.jpg",
-      "https://www.iloom.com/upload/contents/20191212/_ca45683a-ab41-405c-ad2c-0840ab7031eb.jpg"
-    ],
-    "ranking": 392
-  },
-  {
     "id": "HLC0E04HL",
     "series": "리타 (Lita)",
     "name": "리타 (Lita) 사이드테이블(높은형)",
@@ -43493,81 +36819,6 @@ export const productData = [
       "https://www.iloom.com/upload/contents/20190402/_76a41a43-0d76-4cd1-afef-b11c00e3c8c3.jpg"
     ],
     "ranking": 814
-  },
-  {
-    "id": "HLC0E04EL",
-    "series": "리타 (Lita)",
-    "name": "리타 (Lita) 사이드테이블(낮은형)",
-    "material": "",
-    "price": "120,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "FK",
-          "HY",
-          "GYM",
-          "GG"
-        ]
-      }
-    ],
-    "originalCategory": "거실",
-    "category2": "테이블",
-    "category3": "멀티테이블",
-    "productImages": [
-      "/images/iloom_images/bedroom/storage/HLC0E04EL_a_FK_1.jpg",
-      "/images/iloom_images/bedroom/storage/HLC0E04EL_a_FK_5.png",
-      "/images/iloom_images/bedroom/storage/HLC0E04EL_a_GG_4.png",
-      "/images/iloom_images/bedroom/storage/HLC0E04EL_a_GYM_3.png",
-      "/images/iloom_images/bedroom/storage/HLC0E04EL_a_GYM_3.png",
-      "/images/iloom_images/bedroom/storage/HLC0E04EL_a_HY_2.png",
-      "/images/iloom_images/living-room/table/HLC0E04EL_b_FK_1.jpg",
-      "/images/iloom_images/living-room/table/HLC0E04EL_b_FK_5.png",
-      "/images/iloom_images/living-room/table/HLC0E04EL_b_GG_4.png",
-      "/images/iloom_images/living-room/table/HLC0E04EL_b_GYM_3.png",
-      "/images/iloom_images/living-room/table/HLC0E04EL_b_HY_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20190121/_77b36d63-082a-48b4-a5cc-d8dadaccf42f.jpg",
-      "https://www.iloom.com/upload/contents/20190402/_e37820b8-9534-47b5-a208-2111ba3e96cb.jpg",
-      "https://www.iloom.com/upload/contents/20190402/_a2d5a72d-5ec6-4df1-b020-172b41894c26.jpg"
-    ],
-    "ranking": 1622
-  },
-  {
-    "id": "HLC0E04HU",
-    "series": "리타 (Lita)",
-    "name": "리타 (Lita) 리타 사이드테이블(높은형,조명형)",
-    "material": "",
-    "price": "199,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "FK"
-        ]
-      }
-    ],
-    "originalCategory": "거실",
-    "category2": "테이블",
-    "category3": "멀티테이블",
-    "productImages": [
-      "/images/iloom_images/bedroom/storage/HLC0E04HU_a_FK_1.jpg",
-      "/images/iloom_images/bedroom/storage/HLC0E04HU_a_FK_2.png",
-      "/images/iloom_images/bedroom/storage/HLC0E04HU_a_FK_2.png",
-      "/images/iloom_images/living-room/table/HLC0E04HU_b_FK_1.jpg",
-      "/images/iloom_images/living-room/table/HLC0E04HU_b_FK_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20190121/_c573f36f-e0db-44dd-ba0c-64a2860b5a59.jpg"
-    ],
-    "ranking": 132
   },
   {
     "id": "HLC0E04EU",
@@ -43730,7 +36981,7 @@ export const productData = [
     ],
     "originalCategory": "거실",
     "category2": "거실장",
-    "category3": "거실장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/living-room/living-cabinet/HCF1D20HL_GYM_1.png",
       "/images/iloom_images/living-room/living-cabinet/HCF1D20HL_GYM_3.png",
@@ -43765,7 +37016,7 @@ export const productData = [
     ],
     "originalCategory": "거실",
     "category2": "거실장",
-    "category3": "거실장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/living-room/living-cabinet/HCF1D20LL_GYM_1.png",
       "/images/iloom_images/living-room/living-cabinet/HCF1D20LL_GYM_3.png",
@@ -43802,7 +37053,7 @@ export const productData = [
     ],
     "originalCategory": "거실",
     "category2": "거실장",
-    "category3": "거실장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/living-room/living-cabinet/HCF1P20HL_GYM_1.png",
       "/images/iloom_images/living-room/living-cabinet/HCF1P20HL_GYM_3.png",
@@ -43838,7 +37089,7 @@ export const productData = [
     ],
     "originalCategory": "거실",
     "category2": "거실장",
-    "category3": "거실장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/living-room/living-cabinet/HCF1P20LL_GYM_1.png",
       "/images/iloom_images/living-room/living-cabinet/HCF1P20LL_GYM_3.png",
@@ -43874,7 +37125,7 @@ export const productData = [
     ],
     "originalCategory": "거실",
     "category2": "수납장",
-    "category3": "수납장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/living-room/storage/HCF1P10HL_GYM_3.png"
     ],
@@ -43907,7 +37158,7 @@ export const productData = [
     ],
     "originalCategory": "거실",
     "category2": "수납장",
-    "category3": "수납장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/living-room/storage/HCF1P10LL_GYM_3.png"
     ],
@@ -43940,7 +37191,7 @@ export const productData = [
     ],
     "originalCategory": "거실",
     "category2": "수납장",
-    "category3": "수납장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/living-room/storage/HCF1D05HL_GYM_3.png"
     ],
@@ -43972,7 +37223,7 @@ export const productData = [
     ],
     "originalCategory": "거실",
     "category2": "수납장",
-    "category3": "수납장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/living-room/storage/HCF1D05LL_GYM_3.png"
     ],
@@ -44004,7 +37255,7 @@ export const productData = [
     ],
     "originalCategory": "거실",
     "category2": "거실장",
-    "category3": "거실장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/living-room/living-cabinet/HCF1T20EEG_SGY_1.png",
       "/images/iloom_images/living-room/living-cabinet/HCF1T20EEG_SMA_2.png"
@@ -44033,7 +37284,7 @@ export const productData = [
     ],
     "originalCategory": "거실",
     "category2": "거실장",
-    "category3": "거실장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/living-room/living-cabinet/HP60Y202L_FIVIV_1.jpg",
       "/images/iloom_images/living-room/living-cabinet/HP60Y202L_FIVIV_4.png",
@@ -44074,7 +37325,7 @@ export const productData = [
     ],
     "originalCategory": "거실",
     "category2": "거실장",
-    "category3": "거실장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/living-room/living-cabinet/HP60Y202G_FIVIV_1.jpg",
       "/images/iloom_images/living-room/living-cabinet/HP60Y202G_FIVIV_4.png",
@@ -44114,7 +37365,7 @@ export const productData = [
     ],
     "originalCategory": "거실",
     "category2": "수납장",
-    "category3": "수납장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/living-room/storage/HP60Y061L_BG_2.png",
       "/images/iloom_images/living-room/storage/HP60Y061L_FIVIV_1.jpg",
@@ -44147,7 +37398,7 @@ export const productData = [
     ],
     "originalCategory": "거실",
     "category2": "수납장",
-    "category3": "수납장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/living-room/storage/HP60Y061G_BG_2.png",
       "/images/iloom_images/living-room/storage/HP60Y061G_FIVIV_1.jpg",
@@ -44178,7 +37429,7 @@ export const productData = [
     ],
     "originalCategory": "거실",
     "category2": "거실장",
-    "category3": "거실장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/living-room/living-cabinet/HCF2D21HL_SP_1.png",
       "/images/iloom_images/living-room/living-cabinet/HCF2D21HL_SP_2.png"
@@ -44211,7 +37462,7 @@ export const productData = [
     ],
     "originalCategory": "거실",
     "category2": "거실장",
-    "category3": "거실장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/living-room/living-cabinet/HCF2D21LL_SP_1.png",
       "/images/iloom_images/living-room/living-cabinet/HCF2D21LL_SP_2.png"
@@ -44243,7 +37494,7 @@ export const productData = [
     ],
     "originalCategory": "거실",
     "category2": "거실장",
-    "category3": "거실장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/living-room/living-cabinet/HCF2P21HL_SP_1.png",
       "/images/iloom_images/living-room/living-cabinet/HCF2P21HL_SP_2.png"
@@ -44275,7 +37526,7 @@ export const productData = [
     ],
     "originalCategory": "거실",
     "category2": "거실장",
-    "category3": "거실장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/living-room/living-cabinet/HCF2P21LL_SP_1.png",
       "/images/iloom_images/living-room/living-cabinet/HCF2P21LL_SP_2.png"
@@ -44308,7 +37559,7 @@ export const productData = [
     ],
     "originalCategory": "거실",
     "category2": "거실장",
-    "category3": "거실장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/living-room/living-cabinet/HCF2D31HL_SP_1.png",
       "/images/iloom_images/living-room/living-cabinet/HCF2D31HL_SP_2.png"
@@ -44341,7 +37592,7 @@ export const productData = [
     ],
     "originalCategory": "거실",
     "category2": "거실장",
-    "category3": "거실장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/living-room/living-cabinet/HCF2D31LL_SP_1.png",
       "/images/iloom_images/living-room/living-cabinet/HCF2D31LL_SP_2.png"
@@ -44373,7 +37624,7 @@ export const productData = [
     ],
     "originalCategory": "거실",
     "category2": "거실장",
-    "category3": "거실장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/living-room/living-cabinet/HCF2P31HL_SP_1.png",
       "/images/iloom_images/living-room/living-cabinet/HCF2P31HL_SP_2.png"
@@ -44405,7 +37656,7 @@ export const productData = [
     ],
     "originalCategory": "거실",
     "category2": "거실장",
-    "category3": "거실장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/living-room/living-cabinet/HCF2P31LL_SP_1.png",
       "/images/iloom_images/living-room/living-cabinet/HCF2P31LL_SP_2.png"
@@ -44437,7 +37688,7 @@ export const productData = [
     ],
     "originalCategory": "거실",
     "category2": "거실장",
-    "category3": "거실장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/living-room/living-cabinet/HP62Y222E_SOAT_1.jpg",
       "/images/iloom_images/living-room/living-cabinet/HP62Y222E_SOAT_3.png",
@@ -44475,7 +37726,7 @@ export const productData = [
     ],
     "originalCategory": "거실",
     "category2": "거실장",
-    "category3": "거실장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/living-room/living-cabinet/HP62Y222U_SOAT_1.jpg",
       "/images/iloom_images/living-room/living-cabinet/HP62Y222U_SOAT_3.png",
@@ -44513,97 +37764,6 @@ export const productData = [
     "ranking": 68
   },
   {
-    "id": "HP62Y222E",
-    "series": "로타",
-    "name": "로타 거실장 2200폭(글라이더형)",
-    "material": "",
-    "price": "569,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "SPCZ"
-        ]
-      }
-    ],
-    "originalCategory": "거실",
-    "category2": "거실장",
-    "category3": "거실장",
-    "productImages": [
-      "/images/iloom_images/living-room/living-cabinet/HP62Y222E_SOAT_1.jpg",
-      "/images/iloom_images/living-room/living-cabinet/HP62Y222E_SOAT_3.png",
-      "/images/iloom_images/living-room/living-cabinet/HP62Y222E_SPCZ_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20231219/_b0f3642a-0a76-4887-95cc-87636a21b5f4.jpg",
-      "https://www.iloom.com/upload/contents/20250901/_8a56341f-ca80-4877-a25b-c72031552be5.jpg",
-      "https://www.iloom.com/upload/contents/20250901/_3d318da2-a07a-4713-8f6e-6ff00937cfed.jpg",
-      "https://www.iloom.com/upload/contents/20260219/_fc99b8c2-608a-4ca6-8aed-da5ee9da3096.jpg",
-      "https://www.iloom.com/upload/contents/20231219/_1c1990a2-f472-4007-bf0b-4e894c547bf5.gif",
-      "https://www.iloom.com/upload/contents/20231219/_251552de-057c-4e85-ba3c-f227b805a8be.jpg",
-      "https://www.iloom.com/upload/contents/20231219/_36d6bcf3-a579-442e-8379-862fa2ad5c6c.jpg",
-      "https://www.iloom.com/upload/contents/20260219/_b68da3be-f2c1-4c29-82d6-a3fd6e7d1c63.jpg",
-      "https://www.iloom.com/upload/contents/20250902/_7c264d1c-53cc-4dab-bb42-f1e341173f18.jpg"
-    ],
-    "ranking": 1458
-  },
-  {
-    "id": "HP62Y222U",
-    "series": "로타",
-    "name": "로타 거실장 2200폭(다리형)",
-    "material": "",
-    "price": "649,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "SPCZ"
-        ]
-      }
-    ],
-    "originalCategory": "거실",
-    "category2": "거실장",
-    "category3": "거실장",
-    "productImages": [
-      "/images/iloom_images/living-room/living-cabinet/HP62Y222U_SOAT_1.jpg",
-      "/images/iloom_images/living-room/living-cabinet/HP62Y222U_SOAT_3.png",
-      "/images/iloom_images/living-room/living-cabinet/HP62Y222U_SPCZ_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20260325/_f5df154a-6af1-40a4-889d-28739baec0b3.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_789d91fa-cdaa-417e-a08b-349cd67047f1.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_8a1f81cf-18ec-405d-af62-03ba55bc1d01.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_b4344d5b-d298-4acb-aab5-ccd770f4a393.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_a86c3c53-1126-4f06-8de1-9f2a8868614c.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_9d2e155c-e200-42dc-b026-89aa59dda03b.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_5d5c8d1d-0bcd-4ab7-9287-d3fe76913acc.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_a7f1b08f-f7a2-40ee-a969-7a482651687a.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_cb8e42d5-b788-4f58-9d89-53c206007c27.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_e9244ba4-b3a9-4f0b-a63e-3ac6603a5501.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_47d648ec-c5cf-4b44-b36c-7325fb223c02.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_09025514-9cc2-462b-9ebc-e1d0759aa383.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_7219cb81-fca0-47f9-8705-1835fa50f6ad.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_b0799c0f-5622-407b-a1f6-f0bb11addf34.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_b270793c-7248-47af-9c52-aee60fe716ba.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_9a36ee11-5511-49f4-9ec8-f648b0c0c115.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_c4af95fb-42d9-48eb-8178-4870fc903d46.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_8d575673-db20-47a7-b8ee-70e3a54393d4.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_59e42d45-1ce6-4a18-ac87-45399f10cb30.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_baef6057-c979-436e-a16b-52d85fb48696.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_e8a7be2c-b9f2-41a0-828a-7239440f27e3.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_14772538-dcb0-438d-97e4-d5e17fe79052.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_2ebc1287-0501-42af-958b-7aec8cda5634.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_9fd641b2-c6b2-476d-af22-1b602efa39a9.jpg"
-    ],
-    "ranking": 283
-  },
-  {
     "id": "HP62Y083E",
     "series": "로타",
     "name": "로타 사이드장 800폭(글라이더형)",
@@ -44619,7 +37779,7 @@ export const productData = [
     ],
     "originalCategory": "거실",
     "category2": "수납장",
-    "category3": "수납장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/living-room/storage/HP62Y083E_SOAT_1.jpg",
       "/images/iloom_images/living-room/storage/HP62Y083E_SOAT_2.png"
@@ -44655,7 +37815,7 @@ export const productData = [
     ],
     "originalCategory": "거실",
     "category2": "수납장",
-    "category3": "수납장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/living-room/storage/HP62Y083U_SOAT_1.jpg",
       "/images/iloom_images/living-room/storage/HP62Y083U_SOAT_2.png"
@@ -44930,7 +38090,7 @@ export const productData = [
     ],
     "originalCategory": "거실",
     "category2": "수납장",
-    "category3": "수납장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/living-room/storage/IAN04CB00A_BKM_1.jpg",
       "/images/iloom_images/living-room/storage/IAN04CB00A_BKM_5.png",
@@ -44972,7 +38132,7 @@ export const productData = [
     ],
     "originalCategory": "거실",
     "category2": "수납장",
-    "category3": "수납장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/living-room/storage/IAN06CB00A_BKM_1.jpg",
       "/images/iloom_images/living-room/storage/IAN06CB00A_BKM_5.png",
@@ -45014,7 +38174,7 @@ export const productData = [
     ],
     "originalCategory": "거실",
     "category2": "수납장",
-    "category3": "수납장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/living-room/storage/IAN08CB00A_BKM_1.jpg",
       "/images/iloom_images/living-room/storage/IAN08CB00A_BKM_5.png",
@@ -45056,7 +38216,7 @@ export const productData = [
     ],
     "originalCategory": "거실",
     "category2": "수납장",
-    "category3": "수납장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/living-room/storage/IAN10CB00A_BKM_1.png",
       "/images/iloom_images/living-room/storage/IAN10CB00A_BKM_5.png",
@@ -45098,7 +38258,7 @@ export const productData = [
     ],
     "originalCategory": "거실",
     "category2": "수납장",
-    "category3": "수납장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/living-room/storage/IAN00CB00A_BKM_1.jpg",
       "/images/iloom_images/living-room/storage/IAN00CB00A_BKM_5.png",
@@ -45138,7 +38298,7 @@ export const productData = [
     ],
     "originalCategory": "거실",
     "category2": "수납장",
-    "category3": "수납장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/living-room/storage/IAN00CB01A_BKM_1.jpg",
       "/images/iloom_images/living-room/storage/IAN00CB01A_BKM_5.png",
@@ -45176,7 +38336,7 @@ export const productData = [
     ],
     "originalCategory": "거실",
     "category2": "수납장",
-    "category3": "수납장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/living-room/storage/IAX00CB00A_BKM_1.jpg"
     ],
@@ -45205,7 +38365,7 @@ export const productData = [
     ],
     "originalCategory": "거실",
     "category2": "수납장",
-    "category3": "수납장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/living-room/storage/ICS0001A_SO_1.jpg",
       "/images/iloom_images/living-room/storage/ICS0001A_SO_3.png",
@@ -45244,7 +38404,7 @@ export const productData = [
     ],
     "originalCategory": "거실",
     "category2": "수납장",
-    "category3": "수납장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/living-room/storage/ICS0002A_SO_1.jpg",
       "/images/iloom_images/living-room/storage/ICS0002A_SO_3.png",
@@ -45283,7 +38443,7 @@ export const productData = [
     ],
     "originalCategory": "거실",
     "category2": "수납장",
-    "category3": "수납장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/living-room/storage/ICS0003A_SO_1.jpg",
       "/images/iloom_images/living-room/storage/ICS0003A_SO_3.png",
@@ -45322,7 +38482,7 @@ export const productData = [
     ],
     "originalCategory": "거실",
     "category2": "수납장",
-    "category3": "수납장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/living-room/storage/ICS0004A_SO_1.png",
       "/images/iloom_images/living-room/storage/ICS0004A_SO_3.png",
@@ -45361,7 +38521,7 @@ export const productData = [
     ],
     "originalCategory": "거실",
     "category2": "수납장",
-    "category3": "수납장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/living-room/storage/ICS0005A_SO_1.png",
       "/images/iloom_images/living-room/storage/ICS0005A_SO_3.png",
@@ -45400,7 +38560,7 @@ export const productData = [
     ],
     "originalCategory": "거실",
     "category2": "수납장",
-    "category3": "수납장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/living-room/storage/ICS0006A_SO_1.jpg",
       "/images/iloom_images/living-room/storage/ICS0006A_SO_3.png",
@@ -46295,7 +39455,7 @@ export const productData = [
     ],
     "originalCategory": "거실",
     "category2": "액세서리",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/living-room/accessories/ICS0014A_SO_1.jpg"
     ],
@@ -46365,7 +39525,7 @@ export const productData = [
     ],
     "originalCategory": "거실",
     "category2": "액세서리",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/living-room/accessories/ICS0016A_SO_1.jpg"
     ],
@@ -46401,7 +39561,7 @@ export const productData = [
     ],
     "originalCategory": "거실",
     "category2": "수납장",
-    "category3": "수납장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/living-room/storage/HC70H04EEF_3J1_1.jpg"
     ],
@@ -46435,7 +39595,7 @@ export const productData = [
     ],
     "originalCategory": "거실",
     "category2": "거실장",
-    "category3": "거실장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/living-room/living-cabinet/HC70Y16EL_IV_1.jpg"
     ],
@@ -46466,7 +39626,7 @@ export const productData = [
     ],
     "originalCategory": "거실",
     "category2": "거실장",
-    "category3": "거실장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/living-room/living-cabinet/HC70Y22EL_IV_1.jpg"
     ],
@@ -46495,7 +39655,7 @@ export const productData = [
     ],
     "originalCategory": "거실",
     "category2": "수납장",
-    "category3": "수납장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/living-room/storage/HC70Y18EL_CZSE_1.jpg"
     ],
@@ -46530,7 +39690,7 @@ export const productData = [
     ],
     "originalCategory": "거실",
     "category2": "수납장",
-    "category3": "수납장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/living-room/storage/HC70Y09EL_CZCZ_1.jpg"
     ],
@@ -46593,7 +39753,7 @@ export const productData = [
     ],
     "originalCategory": "거실",
     "category2": "수납장",
-    "category3": "수납장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/living-room/storage/HC80Y04EEW_CZ_1.jpg"
     ],
@@ -46623,7 +39783,7 @@ export const productData = [
     ],
     "originalCategory": "거실",
     "category2": "거실장",
-    "category3": "거실장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/living-room/living-cabinet/HP901201_FIVGYM_1.jpg"
     ],
@@ -46656,7 +39816,7 @@ export const productData = [
     ],
     "originalCategory": "거실",
     "category2": "거실장",
-    "category3": "거실장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/living-room/living-cabinet/HP61Y18EL_NCCDGS_1.jpg"
     ],
@@ -46668,84 +39828,6 @@ export const productData = [
       "https://www.iloom.com/upload/contents/20180406/_bb18e176-6987-4f29-ba81-b48ed798a086.jpg"
     ],
     "ranking": 681
-  },
-  {
-    "id": "HP311621",
-    "series": "아르지안",
-    "name": "아르지안 거실장 1600폭",
-    "material": "",
-    "price": "489,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "LDGYM"
-        ]
-      }
-    ],
-    "originalCategory": "거실",
-    "category2": "거실장",
-    "category3": "거실장",
-    "productImages": [
-      "/images/iloom_images/bedroom/storage/HP311621_a__1.jpg",
-      "/images/iloom_images/bedroom/storage/HP311621_a_default_2.png",
-      "/images/iloom_images/bedroom/storage/HP311621_a_default_3.png",
-      "/images/iloom_images/living-room/living-cabinet/HP311621_b_LDGYM_1.jpg",
-      "/images/iloom_images/living-room/living-cabinet/HP311621_b_LDGYM_2.png",
-      "/images/iloom_images/living-room/living-cabinet/HP311621_b_LDGYM_3.png",
-      "/images/iloom_images/living-room/living-cabinet/HP311621_c_OSGYM_1.jpg",
-      "/images/iloom_images/living-room/living-cabinet/HP311621_c_OSGYM_2.png",
-      "/images/iloom_images/living-room/living-cabinet/HP311621_c_OSGYM_3.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20171107/_2a362592-fdfc-4948-8d54-1d0b4ad1c180.jpg",
-      "https://www.iloom.com/upload/contents/20180727/_88cd0601-58a7-4a93-80e4-2650ce4dd290.jpg",
-      "https://www.iloom.com/upload/contents/20171107/_c55e350a-ff66-4a37-9153-0b7ebafc4cdc.jpg",
-      "https://www.iloom.com/upload/contents/20171107/_e711c49c-38cd-448b-8acf-6e2c8c0c0ab5.jpg"
-    ],
-    "ranking": 1172
-  },
-  {
-    "id": "HP311621",
-    "series": "아르지안",
-    "name": "아르지안 거실장 1600폭",
-    "material": "",
-    "price": "489,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "OSGYM"
-        ]
-      }
-    ],
-    "originalCategory": "거실",
-    "category2": "거실장",
-    "category3": "거실장",
-    "productImages": [
-      "/images/iloom_images/bedroom/storage/HP311621_a__1.jpg",
-      "/images/iloom_images/bedroom/storage/HP311621_a_default_2.png",
-      "/images/iloom_images/bedroom/storage/HP311621_a_default_3.png",
-      "/images/iloom_images/living-room/living-cabinet/HP311621_b_LDGYM_1.jpg",
-      "/images/iloom_images/living-room/living-cabinet/HP311621_b_LDGYM_2.png",
-      "/images/iloom_images/living-room/living-cabinet/HP311621_b_LDGYM_3.png",
-      "/images/iloom_images/living-room/living-cabinet/HP311621_c_OSGYM_1.jpg",
-      "/images/iloom_images/living-room/living-cabinet/HP311621_c_OSGYM_2.png",
-      "/images/iloom_images/living-room/living-cabinet/HP311621_c_OSGYM_3.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20171107/_2a362592-fdfc-4948-8d54-1d0b4ad1c180.jpg",
-      "https://www.iloom.com/upload/contents/20180727/_88cd0601-58a7-4a93-80e4-2650ce4dd290.jpg",
-      "https://www.iloom.com/upload/contents/20171107/_c55e350a-ff66-4a37-9153-0b7ebafc4cdc.jpg",
-      "https://www.iloom.com/upload/contents/20171107/_e711c49c-38cd-448b-8acf-6e2c8c0c0ab5.jpg"
-    ],
-    "ranking": 883
   },
   {
     "id": "HSWD010",
@@ -46887,511 +39969,6 @@ export const productData = [
       "https://www.iloom.com/upload/contents/20201110/_036ef8ac-a909-4c1a-a682-46099ff49026.jpg"
     ],
     "ranking": 200
-  },
-  {
-    "id": "HSFC123",
-    "series": "에디키즈",
-    "name": "에디키즈 1200폭 3단책장",
-    "material": "",
-    "price": "149,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "IV"
-        ]
-      }
-    ],
-    "originalCategory": "스터디",
-    "category2": "책장",
-    "category3": "책장",
-    "productImages": [
-      "/images/iloom_images/kids-room/storage/HSFC123_IV_1.jpg",
-      "/images/iloom_images/kids-room/storage/HSFC123_IV_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20260325/_30212905-a97f-4757-87fd-1dbc664455d6.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_f2c0d5b8-1d3f-43d3-8b90-9a01fc8dc7c2.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_250877c5-97b3-492d-99d6-fe5654517105.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_ed6da4d9-3f8c-4d10-b2c6-04f1c667ec31.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_7fb6a2e5-b132-41ac-8336-dc81285465d7.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_31f5f957-f250-4792-b8aa-3a4bea58352b.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_bbbec15b-aba0-47e9-8b7b-b20ccffe6f0b.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_3e9d97ac-bd2a-4620-9a5b-29206e99983e.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_e0df61a9-f08d-4df2-b08c-fb1a03a9a90c.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_705f950c-e144-40e0-bbac-1e27cdc77fc5.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_a21f9dac-037e-4780-bd7b-c9272ba4f2db.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_762e5426-7bde-48c1-aba8-c87851353b47.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_7adeddbd-8083-42d4-863d-2218066333f1.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_9ca42a5c-2ef7-4547-aae2-31091f31fbaa.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_64ca512f-2965-4a16-9ce5-34a418365ace.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_33fd99be-9927-4409-97fd-24d74b030a1f.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_3a4b0ee3-b826-49d3-a1b2-f1a0e29e09ce.jpg",
-      "https://www.iloom.com/upload/contents/20171219/_453473d9-acae-4647-8b0f-87caf9f7ea0e.jpg",
-      "https://www.iloom.com/upload/contents/20201223/_554fc06d-6a4b-47a4-ab1f-5951b72385b1.jpg",
-      "https://www.iloom.com/upload/contents/20201223/_eab90263-d564-4a47-9d29-ffaec3104733.jpg"
-    ],
-    "ranking": 105
-  },
-  {
-    "id": "HSFS123",
-    "series": "에디키즈",
-    "name": "에디키즈 슬라이딩 책장",
-    "material": "",
-    "price": "299,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "IVGYM"
-        ]
-      }
-    ],
-    "originalCategory": "스터디",
-    "category2": "책장",
-    "category3": "책장",
-    "productImages": [
-      "/images/iloom_images/kids-room/storage/HSFS123_IVGYM_1.jpg",
-      "/images/iloom_images/kids-room/storage/HSFS123_IVGYM_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20260325/_65f4b538-c217-4484-a5c4-e469293ed9f7.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_db8ab8db-9369-4435-b330-de2c350ffb84.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_7788d798-45f1-47c9-b230-6bb209f73ca4.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_88a2e450-fa97-468d-bb88-173a48bd54e2.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_0ee34f2c-c3bf-4985-8858-92a31ce1af4d.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_e9588419-bf76-49c6-bd0b-fcacac7878a1.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_01254749-4ad5-4497-a3b2-51c71863bafc.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_c9ea5ef4-99a5-472b-a868-0c0a24b80e58.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_f02e63ba-ce4b-4430-837f-58d169a938d4.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_76b65870-5552-4bc8-b8fa-8f9c4fa0e820.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_924de7a5-30c9-4372-8825-a6683dc81a50.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_0f785302-a6fb-4fee-8047-328679813975.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_d443d97b-6323-4fb6-9574-2b26fd6d58ec.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_c71a4005-8fe3-46bb-9282-fdbcfcb2a72a.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_8d667783-84f7-480a-9356-6e34dba02262.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_343c9adc-7409-4396-9833-99c9dca58b37.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_e4ded9f9-72d9-47e6-af86-63256046548a.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_607f11aa-2f1b-4c5a-a583-dd3ca05de962.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_6420eeca-3b34-4ced-8cad-d200164a8da1.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_2d7c2275-32d3-482b-9e43-c201d33903bf.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_29608fd4-2d7d-453f-8493-536c00445f6a.jpg",
-      "https://www.iloom.com/upload/contents/20201210/_f0f37992-f70e-452b-adee-95f864130876.jpg",
-      "https://www.iloom.com/upload/contents/20210428/_7acaf114-1958-43e1-8ea7-d3bb42a6f444.jpg",
-      "https://www.iloom.com/upload/contents/20201210/_6d8f802a-ca46-4a86-b316-506694b379c5.jpg",
-      "https://www.iloom.com/upload/contents/20201210/_ff8e0a98-c9e6-4123-a8e4-c7f56a3fbe57.jpg",
-      "https://www.iloom.com/upload/contents/20201223/_6fdcd5fa-07bd-44d3-ac15-4dbf658a25aa.jpg"
-    ],
-    "ranking": 696
-  },
-  {
-    "id": "HSFC083C",
-    "series": "에디키즈",
-    "name": "에디키즈 3단 코너장",
-    "material": "",
-    "price": "146,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "IV"
-        ]
-      }
-    ],
-    "originalCategory": "스터디",
-    "category2": "수납장",
-    "category3": "수납가구•액세서리",
-    "productImages": [
-      "/images/iloom_images/kids-room/accessories/HSFC083C_IV_1.jpg",
-      "/images/iloom_images/kids-room/accessories/HSFC083C_IV_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20191212/_3f4d2181-9d08-48f0-998e-079f5ab489db.jpg",
-      "https://www.iloom.com/upload/contents/20240509/_706ac310-61a9-45df-af3c-b4d4352f6c82.png",
-      "https://www.iloom.com/upload/contents/20191212/_577d55b4-bff9-44bf-8dd6-257ae4d13535.jpg",
-      "https://www.iloom.com/upload/contents/20191212/_6c8ef67d-a93d-4139-a8bc-73222d7929e1.jpg",
-      "https://www.iloom.com/upload/contents/20191212/_ff20ca05-c430-452d-9872-a93b7977004c.jpg",
-      "https://www.iloom.com/upload/contents/20191212/_052b9058-5fad-447c-902c-213d07941a6b.jpg",
-      "https://www.iloom.com/upload/contents/20191212/_7f39e3d5-260b-43e0-8d34-7e8f5b220a0c.jpg"
-    ],
-    "ranking": 1249
-  },
-  {
-    "id": "HSFP093",
-    "series": "에디키즈",
-    "name": "에디키즈 PL박스 수납장 3단 950폭",
-    "material": "",
-    "price": "179,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "IVIVGY",
-          "IVGYHY"
-        ]
-      }
-    ],
-    "originalCategory": "스터디",
-    "category2": "수납장",
-    "category3": "수납가구•액세서리",
-    "productImages": [
-      "/images/iloom_images/kids-room/storage/HSFP093_IVGYHY_6.png",
-      "/images/iloom_images/kids-room/storage/HSFP093_IVIVGY_1.jpg",
-      "/images/iloom_images/kids-room/storage/HSFP093_IVIVGY_7.png",
-      "/images/iloom_images/kids-room/storage/HSFP093_IVKPGY_3.png",
-      "/images/iloom_images/kids-room/storage/HSFP093_IVKPGY_3.png",
-      "/images/iloom_images/kids-room/storage/HSFP093_IVKPKR_4.png",
-      "/images/iloom_images/kids-room/storage/HSFP093_IVKSGY_2.png",
-      "/images/iloom_images/kids-room/storage/HSFP093_IVKSKB_5.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": true,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20260325/_1120af7b-7cf1-4518-b1f2-fb6af922613a.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_705f457e-ec75-4fa9-a89f-828b5ce5ae3f.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_74e455ab-cac3-4d6d-88d5-82d2f44e828e.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_e5a0ba68-91fb-43c5-9311-f29ea4421d41.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_14350acc-567a-4699-a4ac-07138f1cfcf2.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_fdac96f6-c869-4dd3-b11d-e5dbf55b4f33.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_1d6827c7-3ce7-4914-82e5-befaadd9be98.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_e8497600-0c79-4c00-930f-9009fc964704.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_1a8d3f1f-e747-431b-834b-a0e257d16abd.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_2b5b0a39-26fa-4a6a-8289-25bbb4d35508.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_a25b2df9-1116-4459-9987-6b5ec0327792.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_933a98eb-020d-46f4-9d0d-504690afb59b.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_5234718a-d9d5-474d-85cc-887b49077b3b.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_0e48b587-481f-4729-a446-07a4e070a10a.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_fb3354f8-3c69-4ba1-b96c-749abeab6209.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_4389798f-3731-437c-a7ea-6d83b0c9158e.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_f3bbecb5-f2f1-42e5-bb3b-0d42599da98d.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_29fc3a64-6e33-4174-a50a-0629414b4184.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_00ffb1a5-3a8f-405b-a53c-638148bb0f67.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_11a4e5f0-c8bb-4070-8885-99504dd97222.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_95b94e5d-a734-4bc3-817b-48b5adff2b61.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_8fbbe898-4eca-4f0c-8f83-e5735b3141db.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_a373ec76-69d1-40c2-a538-84fe8b78a7e9.jpg",
-      "https://www.iloom.com/upload/contents/20260325/_7a9d98ab-71de-4e44-8df9-cf85ca5d6297.jpg",
-      "https://www.iloom.com/upload/contents/20171219/_4106c4e7-d43f-41d5-a3a5-367aa4ed3cf6.jpg"
-    ],
-    "ranking": 785
-  },
-  {
-    "id": "HSFP143",
-    "series": "에디키즈",
-    "name": "에디키즈 PL박스 수납장 3단 1400폭",
-    "material": "",
-    "price": "259,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "IVIVGY",
-          "IVGYHY"
-        ]
-      }
-    ],
-    "originalCategory": "스터디",
-    "category2": "수납장",
-    "category3": "수납가구•액세서리",
-    "productImages": [
-      "/images/iloom_images/kids-room/storage/HSFP143_a_IVIVGY_1.jpg",
-      "/images/iloom_images/kids-room/storage/HSFP143_a_IVIVGY_6.png",
-      "/images/iloom_images/kids-room/storage/HSFP143_a_IVIVGY_6.png",
-      "/images/iloom_images/kids-room/storage/HSFP143_a_IVIVGY_7.png",
-      "/images/iloom_images/kids-room/storage/HSFP143_a_IVIVGY_7.png",
-      "/images/iloom_images/kids-room/storage/HSFP143_a_IVKPGY_3.png",
-      "/images/iloom_images/kids-room/storage/HSFP143_a_IVKPGY_3.png",
-      "/images/iloom_images/kids-room/storage/HSFP143_a_IVKPKR_4.png",
-      "/images/iloom_images/kids-room/storage/HSFP143_a_IVKPKR_4.png",
-      "/images/iloom_images/kids-room/storage/HSFP143_a_IVKSGY_2.png",
-      "/images/iloom_images/kids-room/storage/HSFP143_a_IVKSGY_2.png",
-      "/images/iloom_images/kids-room/storage/HSFP143_a_IVKSKB_5.png",
-      "/images/iloom_images/kids-room/storage/HSFP143_a_IVKSKB_5.png",
-      "/images/iloom_images/study-room/storage/HSFP143_b_IVGYHY_2.png",
-      "/images/iloom_images/study-room/storage/HSFP143_b_IVIVGY_1.jpg",
-      "/images/iloom_images/study-room/storage/HSFP143_b_IVIVGY_3.png",
-      "/images/iloom_images/study-room/storage/HSFP143_b_IVIVGY_4.png",
-      "/images/iloom_images/study-room/storage/HSFP143_b_IVIVGY_5.png",
-      "/images/iloom_images/study-room/storage/HSFP143_b_IVIVGY_6.png",
-      "/images/iloom_images/study-room/storage/HSFP143_b_IVIVGY_7.png"
-    ],
-    "mdPick": false,
-    "new": true,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20171220/_b0ef7586-4e6e-4ffb-937d-2464174e591c.jpg",
-      "https://www.iloom.com/upload/contents/20240509/_bda32e05-e06c-4cb9-95cb-0b3b1e64c16b.png",
-      "https://www.iloom.com/upload/contents/20171220/_b58de6f8-dd69-4b34-8f0c-7fa40f871575.jpg"
-    ],
-    "ranking": 1543
-  },
-  {
-    "id": "HSFM093",
-    "series": "에디키즈",
-    "name": "에디키즈 PL박스 수납책장 3단 950폭",
-    "material": "",
-    "price": "179,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "IVIVIV",
-          "IVIVGY",
-          "IVIVHY"
-        ]
-      }
-    ],
-    "originalCategory": "스터디",
-    "category2": "책장",
-    "category3": "책장액세서리",
-    "productImages": [
-      "/images/iloom_images/kids-room/storage/HSFM093_IVIVGY_4.png",
-      "/images/iloom_images/kids-room/storage/HSFM093_IVIVHY_5.png",
-      "/images/iloom_images/kids-room/storage/HSFM093_IVIVIV_1.jpg",
-      "/images/iloom_images/kids-room/storage/HSFM093_IVIVIV_6.png",
-      "/images/iloom_images/kids-room/storage/HSFM093_IVIVKB_3.png",
-      "/images/iloom_images/kids-room/storage/HSFM093_IVIVKR_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20171220/_d68ed337-ff4b-4de2-ade3-77645da20121.jpg",
-      "https://www.iloom.com/upload/contents/20240509/_0506758c-4d26-43a1-8a6e-9f082cd20dc9.png",
-      "https://www.iloom.com/upload/contents/20171220/_bf41acc7-7fe7-4b21-8c92-0eac55e78ede.jpg",
-      "https://www.iloom.com/upload/contents/20201210/_f1ea501b-f1f8-466d-95b7-24cd5673c16b.jpg",
-      "https://www.iloom.com/upload/contents/20201223/_54469442-5a79-4a9e-985b-feacc879f9d5.jpg",
-      "https://www.iloom.com/upload/contents/20201223/_5f4cfa05-1664-42a1-99e3-6b707c69c759.jpg"
-    ],
-    "ranking": 1372
-  },
-  {
-    "id": "HSFM143",
-    "series": "에디키즈",
-    "name": "에디키즈 PL박스 수납책장 3단 1400폭",
-    "material": "",
-    "price": "260,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "IVIVIV",
-          "IVIVGY",
-          "IVIVHY"
-        ]
-      }
-    ],
-    "originalCategory": "스터디",
-    "category2": "책장",
-    "category3": "책장액세서리",
-    "productImages": [
-      "/images/iloom_images/kids-room/storage/HSFM143_IVIVGY_4.png",
-      "/images/iloom_images/kids-room/storage/HSFM143_IVIVGY_4.png",
-      "/images/iloom_images/kids-room/storage/HSFM143_IVIVHY_5.png",
-      "/images/iloom_images/kids-room/storage/HSFM143_IVIVIV_1.jpg",
-      "/images/iloom_images/kids-room/storage/HSFM143_IVIVIV_6.png",
-      "/images/iloom_images/kids-room/storage/HSFM143_IVIVKB_3.png",
-      "/images/iloom_images/kids-room/storage/HSFM143_IVIVKR_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20171220/_9eb1109a-cf10-468d-9ba9-bf3f43f46db0.jpg",
-      "https://www.iloom.com/upload/contents/20240509/_5ac6eaf6-b70d-4b73-a84f-00a43dfebfe5.png",
-      "https://www.iloom.com/upload/contents/20171220/_57052e8e-58ee-4dec-ae7c-36785e641923.jpg",
-      "https://www.iloom.com/upload/contents/20171220/_b2b9f09e-5d11-48d7-8084-0b55e8b43b06.jpg",
-      "https://www.iloom.com/upload/contents/20201223/_97d3a0eb-77d5-4735-9657-bf610b2c1b61.jpg",
-      "https://www.iloom.com/upload/contents/20201223/_dac96a9a-f059-4d9d-8e57-07c378c3a874.jpg",
-      "https://www.iloom.com/upload/contents/20201223/_e8f62119-5598-4e67-b47c-7b4789cdf625.jpg"
-    ],
-    "ranking": 178
-  },
-  {
-    "id": "HSFM096",
-    "series": "에디키즈",
-    "name": "에디키즈 PL박스 수납책장 6단 950폭",
-    "material": "",
-    "price": "269,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "IVIVIV",
-          "IVIVGY",
-          "IVIVHY"
-        ]
-      }
-    ],
-    "originalCategory": "스터디",
-    "category2": "책장",
-    "category3": "책장액세서리",
-    "productImages": [
-      "/images/iloom_images/kids-room/storage/HSFM096_IVIVGY_4.png",
-      "/images/iloom_images/kids-room/storage/HSFM096_IVIVHY_5.png",
-      "/images/iloom_images/kids-room/storage/HSFM096_IVIVIV_1.jpg",
-      "/images/iloom_images/kids-room/storage/HSFM096_IVIVIV_6.png",
-      "/images/iloom_images/kids-room/storage/HSFM096_IVIVKB_3.png",
-      "/images/iloom_images/kids-room/storage/HSFM096_IVIVKR_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20171220/_db909494-0f81-43d1-9264-509ba8955737.jpg",
-      "https://www.iloom.com/upload/contents/20240509/_e3309651-a2af-433d-a67b-564dca728ac7.png",
-      "https://www.iloom.com/upload/contents/20171220/_fb3b2fbb-eb6a-406c-a202-24cf1d96f016.jpg",
-      "https://www.iloom.com/upload/contents/20201223/_0c401831-ffa6-4abe-940b-ec6f02325138.jpg",
-      "https://www.iloom.com/upload/contents/20201223/_3e1c3747-1e2c-4d99-acef-6f48c3fab9aa.jpg"
-    ],
-    "ranking": 698
-  },
-  {
-    "id": "HSLA0040H",
-    "series": "에디키즈",
-    "name": "에디키즈 높은 PL BOX 400폭",
-    "material": "",
-    "price": "4,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "IV",
-          "GY",
-          "HY"
-        ]
-      }
-    ],
-    "originalCategory": "스터디",
-    "category2": "수납장",
-    "category3": "수납가구•액세서리",
-    "productImages": [
-      "/images/iloom_images/kids-room/accessories/HSLA0040H_GY_6.png",
-      "/images/iloom_images/kids-room/accessories/HSLA0040H_HY_7.png",
-      "/images/iloom_images/kids-room/accessories/HSLA0040H_IV_1.png",
-      "/images/iloom_images/kids-room/accessories/HSLA0040H_IV_8.png",
-      "/images/iloom_images/kids-room/accessories/HSLA0040H_IV_9.png",
-      "/images/iloom_images/kids-room/accessories/HSLA0040H_KB_5.png",
-      "/images/iloom_images/kids-room/accessories/HSLA0040H_KP_2.png",
-      "/images/iloom_images/kids-room/accessories/HSLA0040H_KR_3.png",
-      "/images/iloom_images/kids-room/accessories/HSLA0040H_KS_4.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20180531/_8f1d489a-259e-4d4b-947a-389788cfac25.jpg"
-    ],
-    "ranking": 1118
-  },
-  {
-    "id": "HSLA0040L",
-    "series": "에디키즈",
-    "name": "에디키즈 낮은 PL BOX 400폭",
-    "material": "",
-    "price": "3,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "IV"
-        ]
-      }
-    ],
-    "originalCategory": "스터디",
-    "category2": "수납장",
-    "category3": "수납가구•액세서리",
-    "productImages": [
-      "/images/iloom_images/kids-room/accessories/HSLA0040L_IV_1.png",
-      "/images/iloom_images/kids-room/accessories/HSLA0040L_IV_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20190709/_6fea1e7a-f506-4347-b26e-3d5402a962f0.jpg"
-    ],
-    "ranking": 1431
-  },
-  {
-    "id": "HSLA0041",
-    "series": "에디키즈",
-    "name": "에디키즈 PL BOX 뚜껑 400폭",
-    "material": "",
-    "price": "3,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "IV"
-        ]
-      }
-    ],
-    "originalCategory": "스터디",
-    "category2": "수납장",
-    "category3": "수납가구•액세서리",
-    "productImages": [
-      "/images/iloom_images/kids-room/accessories/HSLA0041_IV_1.jpg",
-      "/images/iloom_images/kids-room/accessories/HSLA0041_IV_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [],
-    "ranking": 1492
-  },
-  {
-    "id": "HSPC1000P",
-    "series": "에디키즈",
-    "name": "에디키즈 패브릭 수납박스(2EA)",
-    "material": "패브릭",
-    "price": "17,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "2F1",
-          "2F2"
-        ]
-      }
-    ],
-    "originalCategory": "스터디",
-    "category2": "수납장",
-    "category3": "수납가구•액세서리",
-    "productImages": [
-      "/images/iloom_images/home-library/bookshelf/HSPC1000P_c_2F1_1.jpg",
-      "/images/iloom_images/home-library/bookshelf/HSPC1000P_c_2F1_3.png",
-      "/images/iloom_images/home-library/bookshelf/HSPC1000P_c_2F2_2.png",
-      "/images/iloom_images/kids-room/accessories/HSPC1000P_a_2F1_1.jpg",
-      "/images/iloom_images/kids-room/accessories/HSPC1000P_a_2F1_3.png",
-      "/images/iloom_images/kids-room/accessories/HSPC1000P_a_2F2_2.png",
-      "/images/iloom_images/study-room/storage/HSPC1000P_b_2F1_1.jpg",
-      "/images/iloom_images/study-room/storage/HSPC1000P_b_2F1_3.png",
-      "/images/iloom_images/study-room/storage/HSPC1000P_b_2F2_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20230601/_b7a45c15-326e-4d34-9e76-2cee763ee916.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_7081eb87-9bf9-4827-a2ad-015a4cee44e8.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_b833b3d9-a5df-48c9-aa64-da5fff5b014d.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_385b35fd-4899-42f9-b425-9e787f3f35c9.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_820feb8d-a024-44cd-a016-a642080c5a54.gif",
-      "https://www.iloom.com/upload/contents/20250722/_c7cabc62-7ac0-4dd3-9426-487071615641.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_f766798d-5a92-4a0f-8c56-1ecd4062ade6.jpg"
-    ],
-    "ranking": 419
   },
   {
     "id": "HSK121BS",
@@ -47549,7 +40126,7 @@ export const productData = [
     "productImages": [
       "/images/iloom_images/study-room/desk/HSK144BSA_IVRM_1.jpg"
     ],
-    "mdPick": true,
+    "mdPick": false,
     "new": false,
     "BestSeller": false,
     "detailImg": [
@@ -48691,84 +41268,6 @@ export const productData = [
     "ranking": 1057
   },
   {
-    "id": "HSAA0204R",
-    "series": "링키플러스",
-    "name": "링키플러스 다용도꽂이",
-    "material": "",
-    "price": "5,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "RM",
-          "TM",
-          "LU",
-          "GY"
-        ]
-      }
-    ],
-    "originalCategory": "스터디",
-    "category2": "수납장",
-    "category3": "수납가구•액세서리",
-    "productImages": [
-      "/images/iloom_images/study-room/storage/HSAA0204R_a_GY_1.jpg",
-      "/images/iloom_images/study-room/storage/HSAA0204R_b_RM_1.jpg",
-      "/images/iloom_images/study-room/storage/HSAA0204R_c_GY_1.jpg",
-      "/images/iloom_images/study-room/storage/HSAA0204R_d_DN_1.jpg",
-      "/images/iloom_images/study-room/storage/HSAA0204R_e_WW_1.jpg"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20241128/_ad3415fb-7816-45a9-ba33-2aa460cc28d6.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_eeb10346-b585-46b1-90de-5545a5e074b1.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_033513d5-3cad-43d9-9f93-095b87fc7b49.jpg",
-      "https://www.iloom.com/upload/contents/20250709/_d3e37e9b-eed1-40c0-8fa9-a89505214a8a.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_af913643-9097-4588-8d78-17f475977845.jpg"
-    ],
-    "ranking": 350
-  },
-  {
-    "id": "HSAA0202R",
-    "series": "링키플러스",
-    "name": "링키플러스 다용도선반",
-    "material": "",
-    "price": "5,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "RM",
-          "TM",
-          "LU",
-          "GY"
-        ]
-      }
-    ],
-    "originalCategory": "스터디",
-    "category2": "수납장",
-    "category3": "수납가구•액세서리",
-    "productImages": [
-      "/images/iloom_images/study-room/storage/HSAA0202R_a_GY_1.jpg",
-      "/images/iloom_images/study-room/storage/HSAA0202R_b_RM_1.jpg",
-      "/images/iloom_images/study-room/storage/HSAA0202R_c_GY_1.jpg",
-      "/images/iloom_images/study-room/storage/HSAA0202R_d_DN_1.jpg",
-      "/images/iloom_images/study-room/storage/HSAA0202R_e_WW_1.jpg"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20241128/_705d52d1-6b5e-4a3b-a959-7f0991be77ef.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_257e9656-e5fe-4df2-b019-73fab4fdf499.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_fb86f776-73c6-4404-8fba-3a14331384b7.jpg",
-      "https://www.iloom.com/upload/contents/20250709/_f0b66704-3a48-48fb-98ce-6a284ff2863d.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_9b218021-c44e-4da5-9362-0daab4e7e8a8.jpg"
-    ],
-    "ranking": 326
-  },
-  {
     "id": "HSAA0000",
     "series": "링키플러스",
     "name": "링키플러스 자석세트(4EA)",
@@ -49158,7 +41657,7 @@ export const productData = [
     ],
     "originalCategory": "스터디",
     "category2": "책장",
-    "category3": "책장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/study-room/bookshelf/HSKC066FR_IVRM_1.jpg"
     ],
@@ -49197,7 +41696,7 @@ export const productData = [
     ],
     "originalCategory": "스터디",
     "category2": "책장",
-    "category3": "책장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/study-room/bookshelf/HSKC086FR_IVRM_1.png"
     ],
@@ -50409,38 +42908,6 @@ export const productData = [
     "ranking": 365
   },
   {
-    "id": "HLA0401",
-    "series": "링키플러스",
-    "name": "링키플러스 액세서리박스",
-    "material": "",
-    "price": "49,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "IVRM",
-          "IVTM",
-          "IVLU",
-          "IVGY"
-        ]
-      }
-    ],
-    "originalCategory": "스터디",
-    "category2": "수납장",
-    "category3": "수납가구•액세서리",
-    "productImages": [
-      "/images/iloom_images/study-room/storage/HLA0401_IVRM_1.jpg"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20211206/_84a092e8-ddc0-438a-86ab-1a09befcd09d.jpg",
-      "https://www.iloom.com/upload/contents/20180322/_5f7e97e9-dac9-4424-b695-3c2cf8e18b6a.jpg"
-    ],
-    "ranking": 156
-  },
-  {
     "id": "HSKF0010N",
     "series": "링키플러스",
     "name": "링키플러스 스크린(책상연결형)",
@@ -50470,43 +42937,6 @@ export const productData = [
       "https://www.iloom.com/upload/contents/20220118/_b9a5ed57-800e-4112-8a65-0caf7ae06d28.jpg"
     ],
     "ranking": 1509
-  },
-  {
-    "id": "IAP23AA00A",
-    "series": "쿠시노",
-    "name": "쿠시노 가드수납함 230폭(목재용)",
-    "material": "",
-    "price": "10,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "GY",
-          "IV"
-        ]
-      }
-    ],
-    "originalCategory": "스터디",
-    "category2": "침대",
-    "category3": "침대액세서리",
-    "productImages": [
-      "/images/iloom_images/kids-room/bed/IAP23AA00A_a_GY_1.png",
-      "/images/iloom_images/kids-room/bed/IAP23AA00A_a_GY_3.png",
-      "/images/iloom_images/kids-room/bed/IAP23AA00A_a_IV_2.png",
-      "/images/iloom_images/study-room/bed/IAP23AA00A_b_GY_1.png",
-      "/images/iloom_images/study-room/bed/IAP23AA00A_b_GY_3.png",
-      "/images/iloom_images/study-room/bed/IAP23AA00A_b_IV_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250630/_33e936cc-e14b-4aea-909b-8bd5c5598efa.jpg",
-      "https://www.iloom.com/upload/contents/20230525/_d9c977f8-c293-43ca-97c3-67cc6f56be54.jpg",
-      "https://www.iloom.com/upload/contents/20230525/_51b20da1-4e1c-4ba1-baca-84cc76fe3421.jpg",
-      "https://www.iloom.com/upload/contents/20230525/_a0c3acf9-4d01-484d-95b4-58040ef3b871.jpg"
-    ],
-    "ranking": 1388
   },
   {
     "id": "HSKA0002",
@@ -50673,181 +43103,6 @@ export const productData = [
       "https://www.iloom.com/upload/contents/20250806/_c1f6c875-5c8f-4837-ac94-ec9bcff6d1c2.jpg"
     ],
     "ranking": 413
-  },
-  {
-    "id": "HSKA901N",
-    "series": "링키S",
-    "name": "링키S LED 책상조명(인출형)",
-    "material": "",
-    "price": "169,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "WW"
-        ]
-      }
-    ],
-    "originalCategory": "스터디",
-    "category2": "책상",
-    "category3": "일반책상•책상세트",
-    "productImages": [
-      "/images/iloom_images/study-room/desk/HSKA901N_a_WW_1.jpg",
-      "/images/iloom_images/study-room/desk/HSKA901N_b_WW_1.jpg",
-      "/images/iloom_images/study-room/desk/HSKA901N_c_WW_1.jpg"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250829/_16b4bd04-902c-4a84-b939-106689375465.jpg",
-      "https://www.iloom.com/upload/contents/20231109/_5235e7c4-c046-4fdd-a7ac-08e2f62620f5.jpg",
-      "https://www.iloom.com/upload/contents/20250806/_2f4203e0-2003-439e-9ca6-631d6df343ef.jpg",
-      "https://www.iloom.com/upload/contents/20231212/_0c85b5ff-9b4b-4be2-8053-bd00a2cd8ce5.jpg",
-      "https://www.iloom.com/upload/contents/20250709/_4f3b8a67-2f29-4b03-a39e-df468ac6382d.jpg",
-      "https://www.iloom.com/upload/contents/20250806/_67e45a03-7102-4adc-af59-e1b14e187e8e.jpg"
-    ],
-    "ranking": 207
-  },
-  {
-    "id": "HSKA0904N",
-    "series": "링키S",
-    "name": "링키S LED 책상조명(인출,각도조절형)",
-    "material": "",
-    "price": "249,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "XX"
-        ]
-      }
-    ],
-    "originalCategory": "스터디",
-    "category2": "책상",
-    "category3": "일반책상•책상세트",
-    "productImages": [
-      "/images/iloom_images/study-room/desk/HSKA0904N_a_XX_1.jpg",
-      "/images/iloom_images/study-room/desk/HSKA0904N_b_XX_1.jpg",
-      "/images/iloom_images/study-room/desk/HSKA0904N_c_XX_1.jpg"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250829/_468c889f-1792-494a-b19e-a8bf273452a3.jpg",
-      "https://www.iloom.com/upload/contents/20250513/_0448814a-8c96-4398-9652-36869bb9663b.jpg",
-      "https://www.iloom.com/upload/contents/20250806/_4f4288e1-5cbd-4328-a499-9999ff588423.jpg",
-      "https://www.iloom.com/upload/contents/20250513/_949845f3-85dd-4c66-94d1-31f920f97c82.jpg",
-      "https://www.iloom.com/upload/contents/20250709/_1f546902-e8f9-47b7-8d53-c452d4cb6b26.jpg",
-      "https://www.iloom.com/upload/contents/20250806/_c1f6c875-5c8f-4837-ac94-ec9bcff6d1c2.jpg"
-    ],
-    "ranking": 1082
-  },
-  {
-    "id": "HSAA0204R",
-    "series": "링키S",
-    "name": "링키S 다용도꽂이",
-    "material": "",
-    "price": "5,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "GY",
-          "RM"
-        ]
-      }
-    ],
-    "originalCategory": "스터디",
-    "category2": "수납장",
-    "category3": "수납가구•액세서리",
-    "productImages": [
-      "/images/iloom_images/study-room/storage/HSAA0204R_a_GY_1.jpg",
-      "/images/iloom_images/study-room/storage/HSAA0204R_b_RM_1.jpg",
-      "/images/iloom_images/study-room/storage/HSAA0204R_c_GY_1.jpg",
-      "/images/iloom_images/study-room/storage/HSAA0204R_d_DN_1.jpg",
-      "/images/iloom_images/study-room/storage/HSAA0204R_e_WW_1.jpg"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20241128/_ad3415fb-7816-45a9-ba33-2aa460cc28d6.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_eeb10346-b585-46b1-90de-5545a5e074b1.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_033513d5-3cad-43d9-9f93-095b87fc7b49.jpg",
-      "https://www.iloom.com/upload/contents/20250709/_d3e37e9b-eed1-40c0-8fa9-a89505214a8a.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_af913643-9097-4588-8d78-17f475977845.jpg"
-    ],
-    "ranking": 575
-  },
-  {
-    "id": "HSAA0202R",
-    "series": "링키S",
-    "name": "링키S 다용도선반",
-    "material": "",
-    "price": "5,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "GY",
-          "RM"
-        ]
-      }
-    ],
-    "originalCategory": "스터디",
-    "category2": "수납장",
-    "category3": "수납가구•액세서리",
-    "productImages": [
-      "/images/iloom_images/study-room/storage/HSAA0202R_a_GY_1.jpg",
-      "/images/iloom_images/study-room/storage/HSAA0202R_b_RM_1.jpg",
-      "/images/iloom_images/study-room/storage/HSAA0202R_c_GY_1.jpg",
-      "/images/iloom_images/study-room/storage/HSAA0202R_d_DN_1.jpg",
-      "/images/iloom_images/study-room/storage/HSAA0202R_e_WW_1.jpg"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20241128/_705d52d1-6b5e-4a3b-a959-7f0991be77ef.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_257e9656-e5fe-4df2-b019-73fab4fdf499.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_fb86f776-73c6-4404-8fba-3a14331384b7.jpg",
-      "https://www.iloom.com/upload/contents/20250709/_f0b66704-3a48-48fb-98ce-6a284ff2863d.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_9b218021-c44e-4da5-9362-0daab4e7e8a8.jpg"
-    ],
-    "ranking": 291
-  },
-  {
-    "id": "HSAA0000",
-    "series": "링키S",
-    "name": "링키S 자석세트(4EA)",
-    "material": "",
-    "price": "4,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "XX"
-        ]
-      }
-    ],
-    "originalCategory": "스터디",
-    "category2": "수납장",
-    "category3": "수납가구•액세서리",
-    "productImages": [
-      "/images/iloom_images/home-library/bookshelf/HSAA0000_d_XX_1.jpg",
-      "/images/iloom_images/study-room/storage/HSAA0000_a_XX_1.jpg",
-      "/images/iloom_images/study-room/storage/HSAA0000_b_XX_1.jpg",
-      "/images/iloom_images/study-room/storage/HSAA0000_c_XX_1.jpg"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20211210/_3265932c-0d9d-4a0e-9b28-fb59b00e2f54.jpg"
-    ],
-    "ranking": 243
   },
   {
     "id": "HSOD212",
@@ -51777,76 +44032,6 @@ export const productData = [
     "ranking": 1666
   },
   {
-    "id": "HSKA901N",
-    "series": "로이",
-    "name": "로이 LED 책상조명(인출형)",
-    "material": "",
-    "price": "169,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "WW"
-        ]
-      }
-    ],
-    "originalCategory": "스터디",
-    "category2": "책상",
-    "category3": "일반책상•책상세트",
-    "productImages": [
-      "/images/iloom_images/study-room/desk/HSKA901N_a_WW_1.jpg",
-      "/images/iloom_images/study-room/desk/HSKA901N_b_WW_1.jpg",
-      "/images/iloom_images/study-room/desk/HSKA901N_c_WW_1.jpg"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250829/_16b4bd04-902c-4a84-b939-106689375465.jpg",
-      "https://www.iloom.com/upload/contents/20231109/_5235e7c4-c046-4fdd-a7ac-08e2f62620f5.jpg",
-      "https://www.iloom.com/upload/contents/20250806/_2f4203e0-2003-439e-9ca6-631d6df343ef.jpg",
-      "https://www.iloom.com/upload/contents/20231212/_0c85b5ff-9b4b-4be2-8053-bd00a2cd8ce5.jpg",
-      "https://www.iloom.com/upload/contents/20250709/_4f3b8a67-2f29-4b03-a39e-df468ac6382d.jpg",
-      "https://www.iloom.com/upload/contents/20250806/_67e45a03-7102-4adc-af59-e1b14e187e8e.jpg"
-    ],
-    "ranking": 346
-  },
-  {
-    "id": "HSKA0904N",
-    "series": "로이",
-    "name": "로이 LED 책상조명(인출,각도조절형)",
-    "material": "",
-    "price": "249,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "XX"
-        ]
-      }
-    ],
-    "originalCategory": "스터디",
-    "category2": "책상",
-    "category3": "일반책상•책상세트",
-    "productImages": [
-      "/images/iloom_images/study-room/desk/HSKA0904N_a_XX_1.jpg",
-      "/images/iloom_images/study-room/desk/HSKA0904N_b_XX_1.jpg",
-      "/images/iloom_images/study-room/desk/HSKA0904N_c_XX_1.jpg"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250829/_468c889f-1792-494a-b19e-a8bf273452a3.jpg",
-      "https://www.iloom.com/upload/contents/20250513/_0448814a-8c96-4398-9652-36869bb9663b.jpg",
-      "https://www.iloom.com/upload/contents/20250806/_4f4288e1-5cbd-4328-a499-9999ff588423.jpg",
-      "https://www.iloom.com/upload/contents/20250513/_949845f3-85dd-4c66-94d1-31f920f97c82.jpg",
-      "https://www.iloom.com/upload/contents/20250709/_1f546902-e8f9-47b7-8d53-c452d4cb6b26.jpg",
-      "https://www.iloom.com/upload/contents/20250806/_c1f6c875-5c8f-4837-ac94-ec9bcff6d1c2.jpg"
-    ],
-    "ranking": 1284
-  },
-  {
     "id": "HSOC125DF",
     "series": "로이",
     "name": "로이 5단 책상장 1200폭 (모션용)",
@@ -52037,7 +44222,7 @@ export const productData = [
       "/images/iloom_images/study-room/desk/HSOC145DN_OSLU_4.png",
       "/images/iloom_images/study-room/desk/HSOC145DN_SPGY_6.png"
     ],
-    "mdPick": false,
+    "mdPick": true,
     "new": false,
     "BestSeller": false,
     "detailImg": [
@@ -52084,7 +44269,7 @@ export const productData = [
       "/images/iloom_images/study-room/desk/HSOC126DNA_OSLU_4.png",
       "/images/iloom_images/study-room/desk/HSOC126DNA_SPGY_6.png"
     ],
-    "mdPick": false,
+    "mdPick": true,
     "new": false,
     "BestSeller": false,
     "detailImg": [
@@ -52284,39 +44469,6 @@ export const productData = [
     "ranking": 889
   },
   {
-    "id": "HGA0202",
-    "series": "로이",
-    "name": "로이 데스크패드",
-    "material": "",
-    "price": "72,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "DN",
-          "LU",
-          "GY"
-        ]
-      }
-    ],
-    "originalCategory": "스터디",
-    "category2": "책상",
-    "category3": "일반책상•책상세트",
-    "productImages": [
-      "/images/iloom_images/study-room/desk/HGA0202_a_DN_1.jpg",
-      "/images/iloom_images/study-room/desk/HGA0202_b_DN_1.jpg"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20180322/_70ccace9-1bab-4dac-a85b-f5ab666ab6ad.jpg",
-      "https://www.iloom.com/upload/contents/20250728/_fd29e206-8ba8-4582-b669-bc52c3bcb3a1.jpg",
-      "https://www.iloom.com/upload/contents/20180427/_71c14fd2-36e7-4d24-9ccd-be27084febc7.jpg"
-    ],
-    "ranking": 1193
-  },
-  {
     "id": "IAH00AA00A",
     "series": "로이",
     "name": "로이 원형 손잡이 세트 (대GY,중BG,소RB)",
@@ -52344,146 +44496,6 @@ export const productData = [
     "ranking": 1750
   },
   {
-    "id": "HSAA0204R",
-    "series": "로이",
-    "name": "로이 다용도꽂이",
-    "material": "",
-    "price": "5,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "DN",
-          "LU",
-          "GY"
-        ]
-      }
-    ],
-    "originalCategory": "스터디",
-    "category2": "수납장",
-    "category3": "수납가구•액세서리",
-    "productImages": [
-      "/images/iloom_images/study-room/storage/HSAA0204R_a_GY_1.jpg",
-      "/images/iloom_images/study-room/storage/HSAA0204R_b_RM_1.jpg",
-      "/images/iloom_images/study-room/storage/HSAA0204R_c_GY_1.jpg",
-      "/images/iloom_images/study-room/storage/HSAA0204R_d_DN_1.jpg",
-      "/images/iloom_images/study-room/storage/HSAA0204R_e_WW_1.jpg"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20241128/_ad3415fb-7816-45a9-ba33-2aa460cc28d6.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_eeb10346-b585-46b1-90de-5545a5e074b1.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_033513d5-3cad-43d9-9f93-095b87fc7b49.jpg",
-      "https://www.iloom.com/upload/contents/20250709/_d3e37e9b-eed1-40c0-8fa9-a89505214a8a.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_af913643-9097-4588-8d78-17f475977845.jpg"
-    ],
-    "ranking": 827
-  },
-  {
-    "id": "HSAA0202R",
-    "series": "로이",
-    "name": "로이 다용도선반",
-    "material": "",
-    "price": "5,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "DN",
-          "LU",
-          "GY"
-        ]
-      }
-    ],
-    "originalCategory": "스터디",
-    "category2": "수납장",
-    "category3": "수납가구•액세서리",
-    "productImages": [
-      "/images/iloom_images/study-room/storage/HSAA0202R_a_GY_1.jpg",
-      "/images/iloom_images/study-room/storage/HSAA0202R_b_RM_1.jpg",
-      "/images/iloom_images/study-room/storage/HSAA0202R_c_GY_1.jpg",
-      "/images/iloom_images/study-room/storage/HSAA0202R_d_DN_1.jpg",
-      "/images/iloom_images/study-room/storage/HSAA0202R_e_WW_1.jpg"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20241128/_705d52d1-6b5e-4a3b-a959-7f0991be77ef.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_257e9656-e5fe-4df2-b019-73fab4fdf499.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_fb86f776-73c6-4404-8fba-3a14331384b7.jpg",
-      "https://www.iloom.com/upload/contents/20250709/_f0b66704-3a48-48fb-98ce-6a284ff2863d.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_9b218021-c44e-4da5-9362-0daab4e7e8a8.jpg"
-    ],
-    "ranking": 402
-  },
-  {
-    "id": "HSAA0000",
-    "series": "로이",
-    "name": "로이 자석세트(4EA)",
-    "material": "",
-    "price": "4,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "XX",
-          "GY"
-        ]
-      }
-    ],
-    "originalCategory": "스터디",
-    "category2": "수납장",
-    "category3": "수납가구•액세서리",
-    "productImages": [
-      "/images/iloom_images/home-library/bookshelf/HSAA0000_d_XX_1.jpg",
-      "/images/iloom_images/study-room/storage/HSAA0000_a_XX_1.jpg",
-      "/images/iloom_images/study-room/storage/HSAA0000_b_XX_1.jpg",
-      "/images/iloom_images/study-room/storage/HSAA0000_c_XX_1.jpg"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20211210/_3265932c-0d9d-4a0e-9b28-fb59b00e2f54.jpg"
-    ],
-    "ranking": 1013
-  },
-  {
-    "id": "HSKA0002",
-    "series": "로이",
-    "name": "로이 북엔드(2ea)",
-    "material": "",
-    "price": "4,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "IV"
-        ]
-      }
-    ],
-    "originalCategory": "스터디",
-    "category2": "수납장",
-    "category3": "수납가구•액세서리",
-    "productImages": [
-      "/images/iloom_images/home-library/bookshelf/HSKA0002_c_IV_1.jpg",
-      "/images/iloom_images/study-room/storage/HSKA0002_a_IV_1.jpg",
-      "/images/iloom_images/study-room/storage/HSKA0002_b_IV_1.jpg"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20180322/_edde7f6e-e797-4ae4-8875-573dafb41818.jpg",
-      "https://www.iloom.com/upload/contents/20180322/_d0603bf4-a2f8-4069-b048-10168d7a957a.jpg",
-      "https://www.iloom.com/upload/contents/20180322/_9dfa6db6-b50e-4c0e-9869-05e4b4eb8216.jpg"
-    ],
-    "ranking": 1225
-  },
-  {
     "id": "HSOC065",
     "series": "로이",
     "name": "로이 5단 책장 600폭",
@@ -52500,7 +44512,7 @@ export const productData = [
     ],
     "originalCategory": "스터디",
     "category2": "책장",
-    "category3": "책장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/study-room/bookshelf/HSOC065_OS_1.jpg",
       "/images/iloom_images/study-room/bookshelf/HSOC065_OS_3.png",
@@ -52541,7 +44553,7 @@ export const productData = [
     ],
     "originalCategory": "스터디",
     "category2": "책장",
-    "category3": "책장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/study-room/bookshelf/HSOC066_GU_1.jpg",
       "/images/iloom_images/study-room/bookshelf/HSOC066_GU_4.png",
@@ -52582,7 +44594,7 @@ export const productData = [
     ],
     "originalCategory": "스터디",
     "category2": "책장",
-    "category3": "책장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/study-room/bookshelf/HSOC085N_GU_1.jpg",
       "/images/iloom_images/study-room/bookshelf/HSOC085N_GU_4.png",
@@ -52623,7 +44635,7 @@ export const productData = [
     ],
     "originalCategory": "스터디",
     "category2": "책장",
-    "category3": "책장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/study-room/bookshelf/HSOC086_GU_1.jpg",
       "/images/iloom_images/study-room/bookshelf/HSOC086_GU_4.png",
@@ -53061,129 +45073,6 @@ export const productData = [
     "ranking": 464
   },
   {
-    "id": "IFM0000A",
-    "series": "로이",
-    "name": "로이 멀티장 600폭 (좌)",
-    "material": "",
-    "price": "429,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "GUGY",
-          "OSBG",
-          "OSGY",
-          "SPGY"
-        ]
-      }
-    ],
-    "originalCategory": "스터디",
-    "category2": "수납장",
-    "category3": "수납가구•액세서리",
-    "productImages": [
-      "/images/iloom_images/study-room/storage/IFM0000A_a_IVGY_1.jpg",
-      "/images/iloom_images/study-room/storage/IFM0000A_b_GUGY_1.jpg"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20240529/_015d2e90-8340-41e6-aa14-491edc45e4f2.jpg",
-      "https://www.iloom.com/upload/contents/20240522/_5011b12d-d538-403b-b072-af8a08dd45c3.jpg",
-      "https://www.iloom.com/upload/contents/20230531/_77a44b42-fdcf-4cdd-9ab7-2c2de316375c.jpg",
-      "https://www.iloom.com/upload/contents/20240328/_fef1901a-858b-40cd-8468-ec36529c76bc.jpg",
-      "https://www.iloom.com/upload/contents/20230901/_eacac561-4a2c-47e8-9c5f-16248ec97266.jpg",
-      "https://www.iloom.com/upload/contents/20230531/_c46ea75e-2bae-48a8-a1fd-b897f833b013.jpg",
-      "https://www.iloom.com/upload/contents/20240328/_ccf2d4fb-498d-4f9f-9d21-e106a9463448.jpg",
-      "https://www.iloom.com/upload/contents/20250709/_c18b0c5e-6c26-4736-8932-bc010fb89936.jpg",
-      "https://www.iloom.com/upload/contents/20230616/_5cbc0ddf-6446-470f-ae00-137027097fba.jpg",
-      "https://www.iloom.com/upload/contents/20231103/_d445ebb8-50f5-49a2-ad38-b934bffe85d3.jpg"
-    ],
-    "ranking": 739
-  },
-  {
-    "id": "IFM0001A",
-    "series": "로이",
-    "name": "로이 멀티장 600폭 (우)",
-    "material": "",
-    "price": "429,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "GUGY",
-          "OSBG",
-          "OSGY",
-          "SPGY"
-        ]
-      }
-    ],
-    "originalCategory": "스터디",
-    "category2": "수납장",
-    "category3": "수납가구•액세서리",
-    "productImages": [
-      "/images/iloom_images/study-room/storage/IFM0001A_a_IVGY_1.jpg",
-      "/images/iloom_images/study-room/storage/IFM0001A_b_GUGY_1.jpg"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20240529/_65ff093a-b33e-4dff-bdc1-0d7f32ea5c19.jpg",
-      "https://www.iloom.com/upload/contents/20240522/_a2e116de-9c64-4062-b155-0250a1c6e876.jpg",
-      "https://www.iloom.com/upload/contents/20230531/_d617bf46-e65c-49bc-838c-9d5a31ffba99.jpg",
-      "https://www.iloom.com/upload/contents/20240328/_2277ef93-cf30-4ea2-8097-81693c895ac5.jpg",
-      "https://www.iloom.com/upload/contents/20230901/_de33b9a3-f373-482a-a125-28e75fb0f8e7.jpg",
-      "https://www.iloom.com/upload/contents/20230531/_6bbfff59-8b7d-4bd6-8379-bc1c585d6b21.jpg",
-      "https://www.iloom.com/upload/contents/20240328/_171b7e69-47e0-438b-b3aa-d77ea0a4894a.jpg",
-      "https://www.iloom.com/upload/contents/20250709/_31708650-551c-400c-baf2-e19de0665261.jpg",
-      "https://www.iloom.com/upload/contents/20230616/_39357c70-bf5d-4ebf-b42e-5e309a6ec97c.jpg",
-      "https://www.iloom.com/upload/contents/20231103/_2446b251-218d-4f1b-a271-0995b6ca71ef.jpg"
-    ],
-    "ranking": 406
-  },
-  {
-    "id": "IFI0008A",
-    "series": "로이",
-    "name": "로이 사이드장 600폭",
-    "material": "",
-    "price": "190,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "GU",
-          "OS",
-          "SP"
-        ]
-      }
-    ],
-    "originalCategory": "스터디",
-    "category2": "수납장",
-    "category3": "수납가구•액세서리",
-    "productImages": [
-      "/images/iloom_images/study-room/storage/IFI0008A_a_IV_1.jpg",
-      "/images/iloom_images/study-room/storage/IFI0008A_b_GU_1.jpg"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20251117/_acd07dff-2752-438e-ba06-47f4c6059e9d.jpg",
-      "https://www.iloom.com/upload/contents/20240529/_850ecf3f-be07-4dd1-ab37-3d2277a21f20.jpg",
-      "https://www.iloom.com/upload/contents/20240522/_68542f78-54ae-4084-92d9-e9c8de3de1b3.jpg",
-      "https://www.iloom.com/upload/contents/20230531/_d282a216-26d0-481b-a302-706cd052b464.jpg",
-      "https://www.iloom.com/upload/contents/20240522/_173d595b-dbc1-443e-adfb-be953c87aa0d.jpg",
-      "https://www.iloom.com/upload/contents/20230531/_96ee1c7a-0d43-469a-9a04-3a3359fbca06.jpg",
-      "https://www.iloom.com/upload/contents/20230531/_4a12549a-d53b-4deb-87d0-adb8a00d683a.jpg",
-      "https://www.iloom.com/upload/contents/20240328/_3c758e9d-f55e-494b-8975-cc43c8518830.jpg",
-      "https://www.iloom.com/upload/contents/20250709/_7953a3c3-52ff-4b7d-aed2-d53aff089f13.jpg",
-      "https://www.iloom.com/upload/contents/20230531/_6a026a28-229c-4438-94f5-eb719f7dae3d.jpg",
-      "https://www.iloom.com/upload/contents/20231103/_43265561-251c-4238-a4f6-0a7d01b20ad9.jpg"
-    ],
-    "ranking": 1483
-  },
-  {
     "id": "IFI0001A",
     "series": "로이",
     "name": "로이 좁은장 400폭 (좌)",
@@ -53374,125 +45263,6 @@ export const productData = [
       "https://www.iloom.com/upload/contents/20231103/_5ffb9c64-65ae-410c-9722-f957635149ee.jpg"
     ],
     "ranking": 798
-  },
-  {
-    "id": "HSCC713",
-    "series": "로이",
-    "name": "로이 슬라이딩 옷장(2도어)",
-    "material": "",
-    "price": "849,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "GU",
-          "OS",
-          "SP"
-        ]
-      }
-    ],
-    "originalCategory": "스터디",
-    "category2": "수납장",
-    "category3": "옷장",
-    "productImages": [
-      "/images/iloom_images/study-room/storage/HSCC713_a_IV_1.jpg",
-      "/images/iloom_images/study-room/storage/HSCC713_b_GU_1.jpg"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20240529/_0ba91f93-211e-4827-ae54-1c725e37e8b9.jpg",
-      "https://www.iloom.com/upload/contents/20260102/_68d252a4-bc6a-4034-8ddc-fcb095857190.jpg",
-      "https://www.iloom.com/upload/contents/20231120/_f41c1f7b-618d-42d9-8c0d-91d893674bfd.jpg",
-      "https://www.iloom.com/upload/contents/20240522/_5bb613dd-2205-40d3-a5b3-13792f458f2b.jpg",
-      "https://www.iloom.com/upload/contents/20241017/_8cf92055-6e54-47ad-a200-6a6d94a5a24a.jpg",
-      "https://www.iloom.com/upload/contents/20250720/_f73ecb57-ded9-4d24-8493-dabcee08b39a.jpg",
-      "https://www.iloom.com/upload/contents/20240328/_751a0112-720c-4577-ab2a-0109a57e854d.jpg",
-      "https://www.iloom.com/upload/contents/20250709/_80f18666-724e-4385-9708-f736aae8734b.jpg",
-      "https://www.iloom.com/upload/contents/20250720/_a128e392-7dec-436c-9047-b9f05940e563.jpg",
-      "https://www.iloom.com/upload/contents/20231120/_14faef75-2eae-49fe-831e-157b66935ed2.jpg"
-    ],
-    "ranking": 881
-  },
-  {
-    "id": "HSCC713M",
-    "series": "로이",
-    "name": "로이 슬라이딩 옷장(2도어,거울형)",
-    "material": "",
-    "price": "949,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "GU",
-          "OS",
-          "SP"
-        ]
-      }
-    ],
-    "originalCategory": "스터디",
-    "category2": "수납장",
-    "category3": "옷장",
-    "productImages": [
-      "/images/iloom_images/study-room/storage/HSCC713M_a_IV_1.jpg",
-      "/images/iloom_images/study-room/storage/HSCC713M_b_GU_1.jpg"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20240529/_909dbd60-85d5-4b0d-a401-f1e2e841e358.jpg",
-      "https://www.iloom.com/upload/contents/20260105/_9a377c57-a8a4-4329-81dc-cab64d7b0892.jpg",
-      "https://www.iloom.com/upload/contents/20231120/_f517852c-4607-4e1e-b273-6fa42b568c22.jpg",
-      "https://www.iloom.com/upload/contents/20240522/_dd46a844-4285-4c4f-9fe1-8da1e19df46d.jpg",
-      "https://www.iloom.com/upload/contents/20241017/_cdf50637-527a-4c7c-b049-1b4f4ef40c11.jpg",
-      "https://www.iloom.com/upload/contents/20250720/_c0ea0661-b4e5-427a-bd74-76546e266ded.jpg",
-      "https://www.iloom.com/upload/contents/20240328/_4fb45c81-e53c-4df4-8de8-0a9d4f6c580a.jpg",
-      "https://www.iloom.com/upload/contents/20231120/_4418f474-37a7-4d06-90cf-3b0f7387341c.jpg",
-      "https://www.iloom.com/upload/contents/20250720/_c3f5cdeb-d92c-48b1-b5ac-991ec66756f7.jpg",
-      "https://www.iloom.com/upload/contents/20231120/_84c0c1de-509a-475b-883e-fc8289f7ba91.jpg"
-    ],
-    "ranking": 75
-  },
-  {
-    "id": "IFL0000A",
-    "series": "로이",
-    "name": "로이 슬라이딩옷장 1100폭 (2도어,서랍형)",
-    "material": "",
-    "price": "799,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "GU",
-          "OS",
-          "SP"
-        ]
-      }
-    ],
-    "originalCategory": "스터디",
-    "category2": "수납장",
-    "category3": "옷장",
-    "productImages": [
-      "/images/iloom_images/study-room/storage/IFL0000A_a_IV_1.jpg",
-      "/images/iloom_images/study-room/storage/IFL0000A_b_GU_1.jpg"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20240529/_eecc1e50-43f9-441c-8185-4872f7a2c960.jpg",
-      "https://www.iloom.com/upload/contents/20240522/_ef7efbb7-6951-499b-b698-8b77703a122b.jpg",
-      "https://www.iloom.com/upload/contents/20230531/_5cdf38fb-1e7f-4378-a9e7-72520a6effed.jpg",
-      "https://www.iloom.com/upload/contents/20240522/_a30841fb-2f5b-4951-9ebc-1aa4bd469609.jpg",
-      "https://www.iloom.com/upload/contents/20230531/_4a098222-038a-4e33-9a45-693b6eac5baa.jpg",
-      "https://www.iloom.com/upload/contents/20250709/_cab8f78b-7922-40a6-ae71-6756e1986a2c.jpg",
-      "https://www.iloom.com/upload/contents/20240328/_9d112acc-4957-46ad-b118-75b88bd8e014.jpg",
-      "https://www.iloom.com/upload/contents/20230616/_15892962-06cb-46b1-aeb2-d4def6cdb073.jpg",
-      "https://www.iloom.com/upload/contents/20231103/_c6cb7f03-2461-4ff8-95a8-a26c1e8dc377.jpg"
-    ],
-    "ranking": 1152
   },
   {
     "id": "HSOA040",
@@ -53723,180 +45493,6 @@ export const productData = [
       "https://www.iloom.com/upload/contents/20231103/_447d4167-f090-4924-a1bf-f3bf52ea884a.jpg"
     ],
     "ranking": 378
-  },
-  {
-    "id": "HSSE270",
-    "series": "로이",
-    "name": "로이 다리형 침대 (기본헤드)",
-    "material": "",
-    "price": "452,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "GUDN",
-          "GULU",
-          "OSDN",
-          "OSLU",
-          "OS",
-          "SP"
-        ]
-      }
-    ],
-    "originalCategory": "스터디",
-    "category2": "침대",
-    "category3": "일반침대",
-    "productImages": [
-      "/images/iloom_images/study-room/bed/HSSE270_a_IVRM_1.jpg",
-      "/images/iloom_images/study-room/bed/HSSE270_b_GUDN_1.jpg"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20240307/_f9135efe-f5a2-4070-885c-faaa7fea9d89.jpg",
-      "https://www.iloom.com/upload/contents/20251218/_27f3ce70-d2e9-4fe0-b319-042db821b3af.jpg",
-      "https://www.iloom.com/upload/contents/20231103/_1edbf3cc-fdc3-451b-a219-082ad82e344f.jpg",
-      "https://www.iloom.com/upload/contents/20240328/_80aff6e6-a6cf-4e38-84f4-17c83f24db44.jpg",
-      "https://www.iloom.com/upload/contents/20231103/_4562da2a-82a0-4c2b-8e99-d0ba998d5568.jpg",
-      "https://www.iloom.com/upload/contents/20240723/_ce8b4e4d-4b48-4bf1-80d6-7207bb78e704.jpg",
-      "https://www.iloom.com/upload/contents/20240328/_e55f22dc-fed6-46a0-8a32-23129ed351f5.jpg",
-      "https://www.iloom.com/upload/contents/20250709/_8ccf1c1b-4401-4299-8718-7fc92a28b9a7.jpg",
-      "https://www.iloom.com/upload/contents/20231103/_6457e9c1-6b32-4e7c-9226-a790e7df8980.jpg",
-      "https://www.iloom.com/upload/contents/20211206/_202ed05d-939e-477e-b882-e1b5d674c635.jpg",
-      "https://www.iloom.com/upload/contents/20230717/_a174ec70-590e-44f5-91a4-ffd4974e4672.jpg"
-    ],
-    "ranking": 1552
-  },
-  {
-    "id": "HSSE280",
-    "series": "로이",
-    "name": "로이 수납형 침대 (기본헤드)",
-    "material": "",
-    "price": "559,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "GUDN",
-          "GULU",
-          "OSDN",
-          "OSLU",
-          "OS",
-          "SP"
-        ]
-      }
-    ],
-    "originalCategory": "스터디",
-    "category2": "침대",
-    "category3": "수납침대",
-    "productImages": [
-      "/images/iloom_images/study-room/bed/HSSE280_a_IVRM_1.png",
-      "/images/iloom_images/study-room/bed/HSSE280_b_GUDN_1.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20240307/_40599ddf-8b0d-49bb-b38b-df066b8ea53c.jpg",
-      "https://www.iloom.com/upload/contents/20251218/_bab9565f-9bef-4721-8d9e-bbc937e4f028.jpg",
-      "https://www.iloom.com/upload/contents/20231103/_d8bcc984-3efd-44c6-a29d-e472c63ce190.jpg",
-      "https://www.iloom.com/upload/contents/20240328/_9650139c-453e-4ba9-b531-e187095be24e.jpg",
-      "https://www.iloom.com/upload/contents/20231103/_bc52c95a-1a95-4fef-9e7e-4c79a53d0e25.jpg",
-      "https://www.iloom.com/upload/contents/20240328/_3f94cdc6-c391-427e-af7c-a6935771cc25.jpg",
-      "https://www.iloom.com/upload/contents/20231212/_37597e54-abcf-4fd9-acd2-8fd5ed505dea.jpg",
-      "https://www.iloom.com/upload/contents/20250709/_99ec32dc-81a8-4672-a4be-2f2e0a270efe.jpg",
-      "https://www.iloom.com/upload/contents/20231103/_7420c61c-ac10-4af4-b39d-bd38af380664.jpg",
-      "https://www.iloom.com/upload/contents/20211206/_202ed05d-939e-477e-b882-e1b5d674c635.jpg",
-      "https://www.iloom.com/upload/contents/20230717/_a174ec70-590e-44f5-91a4-ffd4974e4672.jpg"
-    ],
-    "ranking": 381
-  },
-  {
-    "id": "HSSE280P",
-    "series": "로이",
-    "name": "로이 수납형 침대 (수납헤드)",
-    "material": "",
-    "price": "669,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "GUDN",
-          "GULU",
-          "OSDN",
-          "OSLU",
-          "OSGY",
-          "SPGY"
-        ]
-      }
-    ],
-    "originalCategory": "스터디",
-    "category2": "침대",
-    "category3": "수납침대",
-    "productImages": [
-      "/images/iloom_images/study-room/bed/HSSE280P_a_IVRM_1.jpg",
-      "/images/iloom_images/study-room/bed/HSSE280P_b_GUDN_1.jpg"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20240307/_39c192c2-3a3c-48bb-8f93-5709df5c9099.jpg",
-      "https://www.iloom.com/upload/contents/20251218/_1f53ec74-4e3d-4fc1-bab3-330489ee9660.jpg",
-      "https://www.iloom.com/upload/contents/20231103/_f0254627-408d-4342-b621-c338b96c3db4.jpg",
-      "https://www.iloom.com/upload/contents/20240328/_bd3a3e7d-9f0b-4693-b5a3-c228fe000c3b.jpg",
-      "https://www.iloom.com/upload/contents/20231103/_98dea87f-f032-47e7-ad0d-908164515731.jpg",
-      "https://www.iloom.com/upload/contents/20240328/_3892c661-e4e2-493d-97e9-5676dc84a6ca.jpg",
-      "https://www.iloom.com/upload/contents/20240328/_766544ff-ada1-4e4c-8a66-0b8891394cd7.jpg",
-      "https://www.iloom.com/upload/contents/20250709/_026053a9-7948-4b5a-add7-79af88e10306.jpg",
-      "https://www.iloom.com/upload/contents/20231103/_b06fcb6b-2463-4216-8f95-505f0ee538e7.jpg",
-      "https://www.iloom.com/upload/contents/20211206/_202ed05d-939e-477e-b882-e1b5d674c635.jpg"
-    ],
-    "ranking": 728
-  },
-  {
-    "id": "HSSE280PM",
-    "series": "로이",
-    "name": "로이 수납형 침대 (조명형수납헤드)",
-    "material": "",
-    "price": "739,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "GUDN",
-          "GULU",
-          "OSDN",
-          "OSLU",
-          "OSGY",
-          "SPGY"
-        ]
-      }
-    ],
-    "originalCategory": "스터디",
-    "category2": "침대",
-    "category3": "수납침대",
-    "productImages": [
-      "/images/iloom_images/study-room/bed/HSSE280PM_a_IVRM_1.jpg",
-      "/images/iloom_images/study-room/bed/HSSE280PM_b_GUDN_1.jpg"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20240307/_76cd5572-1c18-448c-a26c-e9825b2dc437.jpg",
-      "https://www.iloom.com/upload/contents/20251218/_de1dddac-5caa-44c2-b3e6-1278c90e906f.jpg",
-      "https://www.iloom.com/upload/contents/20231103/_6fb251a2-7e13-47f5-b811-87b6e23a0858.jpg",
-      "https://www.iloom.com/upload/contents/20240328/_25446c5e-f19a-48d9-b209-e7c8fa713bc3.jpg",
-      "https://www.iloom.com/upload/contents/20231103/_430f58c8-c7eb-457a-a662-ae1a3d343bb5.jpg",
-      "https://www.iloom.com/upload/contents/20240328/_bf160bca-417b-4a3e-bacf-b23c8927de52.jpg",
-      "https://www.iloom.com/upload/contents/20240328/_54e714e7-a3c2-4dc2-b226-61bb21cb275b.jpg",
-      "https://www.iloom.com/upload/contents/20250709/_a97cb5d2-d70b-4f28-b9b6-88360b4aba72.jpg",
-      "https://www.iloom.com/upload/contents/20231103/_6f41d9f5-9f21-4fa5-8d48-e3de270e9558.jpg",
-      "https://www.iloom.com/upload/contents/20211206/_202ed05d-939e-477e-b882-e1b5d674c635.jpg"
-    ],
-    "ranking": 714
   },
   {
     "id": "IBM0008A",
@@ -54172,40 +45768,6 @@ export const productData = [
     "ranking": 857
   },
   {
-    "id": "HSSE0000F",
-    "series": "로이",
-    "name": "로이 펠트주머니",
-    "material": "",
-    "price": "25,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "DN",
-          "LU"
-        ]
-      }
-    ],
-    "originalCategory": "스터디",
-    "category2": "수납장",
-    "category3": "수납가구•액세서리",
-    "productImages": [
-      "/images/iloom_images/study-room/storage/HSSE0000F_a_LU_1.jpg",
-      "/images/iloom_images/study-room/storage/HSSE0000F_b_DN_1.jpg"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20180419/_a7ec81c2-3649-44ae-80a8-f39026fa7560.jpg",
-      "https://www.iloom.com/upload/contents/20180419/_f53ed1e0-88d1-4871-a475-904796c0294e.jpg",
-      "https://www.iloom.com/upload/contents/20180419/_8fffa9d5-aada-42d8-b194-5200fb9e257e.jpg",
-      "https://www.iloom.com/upload/contents/20181211/_8388a49f-64e9-449d-8497-da3ae3951a13.jpg",
-      "https://www.iloom.com/upload/contents/20181211/_229040b0-c59e-4521-9069-964d024fddb2.jpg"
-    ],
-    "ranking": 764
-  },
-  {
     "id": "IBA0000A",
     "series": "로이",
     "name": "로이 베드테이블 (SS침대용)",
@@ -54244,66 +45806,6 @@ export const productData = [
       "https://www.iloom.com/upload/contents/20240705/_81a2bccd-717b-4e1f-9244-3ef0797d250a.jpg"
     ],
     "ranking": 418
-  },
-  {
-    "id": "HSSE2000FR",
-    "series": "로이",
-    "name": "로이 헤드쿠션",
-    "material": "",
-    "price": "80,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "A444A",
-          "A449P",
-          "A441D"
-        ]
-      }
-    ],
-    "originalCategory": "스터디",
-    "category2": "의자",
-    "category3": "의자액세서리",
-    "productImages": [
-      "/images/iloom_images/study-room/chair/HSSE2000FR_a_A443D_1.jpg",
-      "/images/iloom_images/study-room/chair/HSSE2000FR_b_A444A_1.jpg"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20230717/_bef115d0-3a37-4d50-91e8-3cf7b030cf05.jpg"
-    ],
-    "ranking": 1149
-  },
-  {
-    "id": "HSSE010G",
-    "series": "로이",
-    "name": "로이 쿠션형 침대가드",
-    "material": "",
-    "price": "109,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "A441D"
-        ]
-      }
-    ],
-    "originalCategory": "스터디",
-    "category2": "침대",
-    "category3": "침대액세서리",
-    "productImages": [
-      "/images/iloom_images/study-room/bed/HSSE010G_a_A441D_1.png",
-      "/images/iloom_images/study-room/bed/HSSE010G_b_A441D_1.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20211206/_8ada1451-ae98-4381-af25-8ab02b15419d.jpg"
-    ],
-    "ranking": 767
   },
   {
     "id": "IDL0002A",
@@ -55579,112 +47081,6 @@ export const productData = [
     "ranking": 315
   },
   {
-    "id": "HSGP0303",
-    "series": "뉴트",
-    "name": "뉴트 3단 책상 서랍",
-    "material": "",
-    "price": "119,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "WW"
-        ]
-      }
-    ],
-    "originalCategory": "스터디",
-    "category2": "책상",
-    "category3": "일반책상•책상세트",
-    "productImages": [
-      "/images/iloom_images/home-library/desk/HSGP0303_b_WW_1.png",
-      "/images/iloom_images/home-library/desk/HSGP0303_b_WW_2.png",
-      "/images/iloom_images/home-library/desk/HSGP0303_b_WW_3.png",
-      "/images/iloom_images/home-library/desk/HSGP0303_c_GYM_1.png",
-      "/images/iloom_images/home-library/desk/HSGP0303_c_GYM_2.png",
-      "/images/iloom_images/home-library/desk/HSGP0303_c_GYM_3.png",
-      "/images/iloom_images/study-room/desk/HSGP0303_a_WW_1.png",
-      "/images/iloom_images/study-room/desk/HSGP0303_a_WW_2.png",
-      "/images/iloom_images/study-room/desk/HSGP0303_a_WW_3.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250109/_e8f88281-9ad4-42c0-a525-1ecab35359d4.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_822ff278-0d21-448e-923f-f4f993d20c04.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_2866c52c-edff-4063-9253-7e76c470e24d.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_c7c70d6a-b0e9-4c36-8fd9-7445fd54be59.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_d81ea27b-05ac-47e9-9163-31d6f329aa84.jpg",
-      "https://www.iloom.com/upload/contents/20250709/_50c83076-44d5-4da0-99dc-489bc0013bbf.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_5d240c4c-d10b-42e3-a145-85cef1c6c93c.jpg"
-    ],
-    "ranking": 1561
-  },
-  {
-    "id": "IAY00AA00A",
-    "series": "뉴트",
-    "name": "뉴트 철제 북엔드",
-    "material": "",
-    "price": "15,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "WW"
-        ]
-      }
-    ],
-    "originalCategory": "스터디",
-    "category2": "수납장",
-    "category3": "수납가구•액세서리",
-    "productImages": [
-      "/images/iloom_images/study-room/storage/IAY00AA00A_WW_1.png",
-      "/images/iloom_images/study-room/storage/IAY00AA00A_WW_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20241128/_23815215-16dd-42c0-84bb-2d876d54859c.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_4284b720-1ca5-4151-9a0a-d24bb541c53d.jpg",
-      "https://www.iloom.com/upload/contents/20250709/_f5c1fc81-cd35-4fda-9df6-1ba6b63f28c6.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_778a9a59-b2aa-4c52-ae40-262790efba1f.jpg"
-    ],
-    "ranking": 765
-  },
-  {
-    "id": "IDU00AA05A",
-    "series": "뉴트",
-    "name": "뉴트 모니터암",
-    "material": "",
-    "price": "56,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "WW"
-        ]
-      }
-    ],
-    "originalCategory": "스터디",
-    "category2": "수납장",
-    "category3": "수납가구•액세서리",
-    "productImages": [
-      "/images/iloom_images/study-room/storage/IDU00AA05A_WW_1.jpg",
-      "/images/iloom_images/study-room/storage/IDU00AA05A_WW_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250106/_855c14c8-b161-435c-a028-3cfabc450969.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_4b896410-36fa-4a33-a6c2-09b2c0af0e67.jpg",
-      "https://www.iloom.com/upload/contents/20250709/_7abb2bc1-b86b-4b12-aaae-6db017ad77d3.jpg",
-      "https://www.iloom.com/upload/contents/20241203/_1f2bf145-ac8a-4e13-999a-49a67a7a0a7c.jpg"
-    ],
-    "ranking": 565
-  },
-  {
     "id": "IVH00AA00A",
     "series": "뉴트",
     "name": "뉴트 다용도걸이",
@@ -56013,80 +47409,6 @@ export const productData = [
       "https://www.iloom.com/upload/contents/20251113/_c41a944c-b487-4861-97ca-2f35b424932b.jpg"
     ],
     "ranking": 1169
-  },
-  {
-    "id": "HSGP0303",
-    "series": "뉴트",
-    "name": "뉴트 3단 책상 서랍",
-    "material": "",
-    "price": "119,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "WW"
-        ]
-      }
-    ],
-    "originalCategory": "스터디",
-    "category2": "책상",
-    "category3": "일반책상•책상세트",
-    "productImages": [
-      "/images/iloom_images/home-library/desk/HSGP0303_b_WW_1.png",
-      "/images/iloom_images/home-library/desk/HSGP0303_b_WW_2.png",
-      "/images/iloom_images/home-library/desk/HSGP0303_b_WW_3.png",
-      "/images/iloom_images/home-library/desk/HSGP0303_c_GYM_1.png",
-      "/images/iloom_images/home-library/desk/HSGP0303_c_GYM_2.png",
-      "/images/iloom_images/home-library/desk/HSGP0303_c_GYM_3.png",
-      "/images/iloom_images/study-room/desk/HSGP0303_a_WW_1.png",
-      "/images/iloom_images/study-room/desk/HSGP0303_a_WW_2.png",
-      "/images/iloom_images/study-room/desk/HSGP0303_a_WW_3.png"
-    ],
-    "mdPick": true,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250109/_e8f88281-9ad4-42c0-a525-1ecab35359d4.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_822ff278-0d21-448e-923f-f4f993d20c04.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_2866c52c-edff-4063-9253-7e76c470e24d.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_c7c70d6a-b0e9-4c36-8fd9-7445fd54be59.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_d81ea27b-05ac-47e9-9163-31d6f329aa84.jpg",
-      "https://www.iloom.com/upload/contents/20250709/_50c83076-44d5-4da0-99dc-489bc0013bbf.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_5d240c4c-d10b-42e3-a145-85cef1c6c93c.jpg"
-    ],
-    "ranking": 385
-  },
-  {
-    "id": "IDU00AA05A",
-    "series": "뉴트",
-    "name": "뉴트 모니터암",
-    "material": "",
-    "price": "56,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "WW"
-        ]
-      }
-    ],
-    "originalCategory": "스터디",
-    "category2": "수납장",
-    "category3": "수납가구•액세서리",
-    "productImages": [
-      "/images/iloom_images/study-room/storage/IDU00AA05A_WW_1.jpg",
-      "/images/iloom_images/study-room/storage/IDU00AA05A_WW_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250106/_855c14c8-b161-435c-a028-3cfabc450969.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_4b896410-36fa-4a33-a6c2-09b2c0af0e67.jpg",
-      "https://www.iloom.com/upload/contents/20250709/_7abb2bc1-b86b-4b12-aaae-6db017ad77d3.jpg",
-      "https://www.iloom.com/upload/contents/20241203/_1f2bf145-ac8a-4e13-999a-49a67a7a0a7c.jpg"
-    ],
-    "ranking": 1283
   },
   {
     "id": "IDM0013A",
@@ -57186,7 +48508,7 @@ export const productData = [
     ],
     "originalCategory": "스터디",
     "category2": "책장",
-    "category3": "책장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/study-room/bookshelf/ICB0001A_WW_1.jpg",
       "/images/iloom_images/study-room/bookshelf/ICB0001A_WW_2.png"
@@ -57228,7 +48550,7 @@ export const productData = [
     ],
     "originalCategory": "스터디",
     "category2": "책장",
-    "category3": "책장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/study-room/bookshelf/ICB0002A_WW_1.png",
       "/images/iloom_images/study-room/bookshelf/ICB0002A_WW_2.png"
@@ -57270,7 +48592,7 @@ export const productData = [
     ],
     "originalCategory": "스터디",
     "category2": "책장",
-    "category3": "책장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/study-room/bookshelf/ICB0003A_WW_1.jpg",
       "/images/iloom_images/study-room/bookshelf/ICB0003A_WW_2.png"
@@ -57312,7 +48634,7 @@ export const productData = [
     ],
     "originalCategory": "스터디",
     "category2": "책장",
-    "category3": "책장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/study-room/bookshelf/ICB0004A_WW_1.png",
       "/images/iloom_images/study-room/bookshelf/ICB0004A_WW_2.png"
@@ -57354,7 +48676,7 @@ export const productData = [
     ],
     "originalCategory": "스터디",
     "category2": "책장",
-    "category3": "책장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/study-room/bookshelf/ICB0005A_WW_1.jpg",
       "/images/iloom_images/study-room/bookshelf/ICB0005A_WW_2.png"
@@ -57396,7 +48718,7 @@ export const productData = [
     ],
     "originalCategory": "스터디",
     "category2": "책장",
-    "category3": "책장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/study-room/bookshelf/ICB0006A_WW_1.jpg",
       "/images/iloom_images/study-room/bookshelf/ICB0006A_WW_2.png"
@@ -57439,7 +48761,7 @@ export const productData = [
     ],
     "originalCategory": "스터디",
     "category2": "책장",
-    "category3": "책장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/study-room/bookshelf/ICB0007A_WWNK_2.png",
       "/images/iloom_images/study-room/bookshelf/ICB0007A_WWWW_1.jpg",
@@ -57484,7 +48806,7 @@ export const productData = [
     ],
     "originalCategory": "스터디",
     "category2": "책장",
-    "category3": "책장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/study-room/bookshelf/ICB0009A_WWNK_2.png",
       "/images/iloom_images/study-room/bookshelf/ICB0009A_WWWW_1.jpg",
@@ -57572,7 +48894,7 @@ export const productData = [
     ],
     "originalCategory": "스터디",
     "category2": "책장",
-    "category3": "책장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/study-room/bookshelf/ICB0008A_WWNK_2.png",
       "/images/iloom_images/study-room/bookshelf/ICB0008A_WWWW_1.jpg",
@@ -57616,7 +48938,7 @@ export const productData = [
     ],
     "originalCategory": "스터디",
     "category2": "책장",
-    "category3": "책장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/study-room/bookshelf/ICB0010A_WWNK_2.png",
       "/images/iloom_images/study-room/bookshelf/ICB0010A_WWWW_1.jpg",
@@ -57686,35 +49008,6 @@ export const productData = [
       "https://www.iloom.com/upload/contents/20241128/_51965ce6-0deb-422a-adb2-7324302be9c3.jpg"
     ],
     "ranking": 1264
-  },
-  {
-    "id": "ICD0024A",
-    "series": "뉴트",
-    "name": "뉴트 책장도어 2단 400폭",
-    "material": "",
-    "price": "45,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "WW",
-          "NK"
-        ]
-      }
-    ],
-    "originalCategory": "스터디",
-    "category2": "책장",
-    "category3": "책장액세서리",
-    "productImages": [
-      "/images/iloom_images/study-room/bookshelf/ICD0024A_NK_2.png",
-      "/images/iloom_images/study-room/bookshelf/ICD0024A_WW_1.png",
-      "/images/iloom_images/study-room/bookshelf/ICD0024A_WW_3.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [],
-    "ranking": 356
   },
   {
     "id": "ICD0025A",
@@ -57899,7 +49192,7 @@ export const productData = [
     ],
     "originalCategory": "스터디",
     "category2": "책장",
-    "category3": "책장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/study-room/bookshelf/ICB0013A_NK_2.png",
       "/images/iloom_images/study-room/bookshelf/ICB0013A_WW_1.jpg",
@@ -57993,7 +49286,7 @@ export const productData = [
     ],
     "originalCategory": "스터디",
     "category2": "책장",
-    "category3": "책장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/study-room/bookshelf/ICB0018A_NK_2.png",
       "/images/iloom_images/study-room/bookshelf/ICB0018A_WW_1.png",
@@ -58085,7 +49378,7 @@ export const productData = [
     ],
     "originalCategory": "스터디",
     "category2": "책장",
-    "category3": "책장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/study-room/bookshelf/ICB0024A_NK_2.png",
       "/images/iloom_images/study-room/bookshelf/ICB0024A_WW_1.jpg",
@@ -58125,7 +49418,7 @@ export const productData = [
     ],
     "originalCategory": "스터디",
     "category2": "책장",
-    "category3": "책장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/study-room/bookshelf/ICB0025A_NK_2.png",
       "/images/iloom_images/study-room/bookshelf/ICB0025A_WW_1.png",
@@ -58165,7 +49458,7 @@ export const productData = [
     ],
     "originalCategory": "스터디",
     "category2": "책장",
-    "category3": "책장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/study-room/bookshelf/ICB0017A_NK_2.png",
       "/images/iloom_images/study-room/bookshelf/ICB0017A_WW_1.jpg",
@@ -58208,7 +49501,7 @@ export const productData = [
     ],
     "originalCategory": "스터디",
     "category2": "책장",
-    "category3": "책장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/study-room/bookshelf/ICB0026A_NK_2.png",
       "/images/iloom_images/study-room/bookshelf/ICB0026A_WW_1.jpg",
@@ -58340,7 +49633,7 @@ export const productData = [
     ],
     "originalCategory": "스터디",
     "category2": "책장",
-    "category3": "책장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/study-room/bookshelf/IVP0011A_WW_1.jpg",
       "/images/iloom_images/study-room/bookshelf/IVP0011A_WW_2.png"
@@ -58384,7 +49677,7 @@ export const productData = [
     ],
     "originalCategory": "스터디",
     "category2": "책장",
-    "category3": "책장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/study-room/bookshelf/IVP0012A_WW_1.png",
       "/images/iloom_images/study-room/bookshelf/IVP0012A_WW_2.png"
@@ -60422,271 +51715,6 @@ export const productData = [
     "ranking": 685
   },
   {
-    "id": "IDU00AA05A",
-    "series": "뉴트",
-    "name": "뉴트 모니터암",
-    "material": "",
-    "price": "56,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "WW"
-        ]
-      }
-    ],
-    "originalCategory": "스터디",
-    "category2": "수납장",
-    "category3": "수납가구•액세서리",
-    "productImages": [
-      "/images/iloom_images/study-room/storage/IDU00AA05A_WW_1.jpg",
-      "/images/iloom_images/study-room/storage/IDU00AA05A_WW_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250106/_855c14c8-b161-435c-a028-3cfabc450969.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_4b896410-36fa-4a33-a6c2-09b2c0af0e67.jpg",
-      "https://www.iloom.com/upload/contents/20250709/_7abb2bc1-b86b-4b12-aaae-6db017ad77d3.jpg",
-      "https://www.iloom.com/upload/contents/20241203/_1f2bf145-ac8a-4e13-999a-49a67a7a0a7c.jpg"
-    ],
-    "ranking": 911
-  },
-  {
-    "id": "IVH00AA01A",
-    "series": "뉴트",
-    "name": "뉴트 메모보드",
-    "material": "",
-    "price": "15,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "WW"
-        ]
-      }
-    ],
-    "originalCategory": "스터디",
-    "category2": "수납장",
-    "category3": "수납가구•액세서리",
-    "productImages": [
-      "/images/iloom_images/study-room/storage/IVH00AA01A_WW_1.jpg",
-      "/images/iloom_images/study-room/storage/IVH00AA01A_WW_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20241128/_ce6c5da3-5997-4010-a562-da76de24296a.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_19ef61dd-f169-47c1-8afe-cadf8788382d.jpg",
-      "https://www.iloom.com/upload/contents/20250709/_a87bc7c0-a49a-4bdb-8e23-33abe655ceb3.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_6988e689-4ff3-4a0c-a2db-59eec77fa34b.jpg"
-    ],
-    "ranking": 212
-  },
-  {
-    "id": "IVA0000A",
-    "series": "뉴트",
-    "name": "뉴트 거치형 거울",
-    "material": "",
-    "price": "50,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "WW"
-        ]
-      }
-    ],
-    "originalCategory": "스터디",
-    "category2": "책상",
-    "category3": "책상액세서리",
-    "productImages": [
-      "/images/iloom_images/study-room/desk/IVA0000A_WW_1.jpg",
-      "/images/iloom_images/study-room/desk/IVA0000A_WW_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20241128/_dff19950-89fb-463c-bfe5-b504f33158e2.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_0bbf7aa2-c8f2-4dc8-9e84-22dae8161d54.jpg",
-      "https://www.iloom.com/upload/contents/20250709/_41c8bc70-8602-4c2d-908d-90256bbe6f3c.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_f12b3859-91a4-4f62-b465-fa631e7bc90e.jpg"
-    ],
-    "ranking": 521
-  },
-  {
-    "id": "IAY00AA00A",
-    "series": "뉴트",
-    "name": "뉴트 철제 북엔드",
-    "material": "",
-    "price": "15,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "WW"
-        ]
-      }
-    ],
-    "originalCategory": "스터디",
-    "category2": "수납장",
-    "category3": "수납가구•액세서리",
-    "productImages": [
-      "/images/iloom_images/study-room/storage/IAY00AA00A_WW_1.png",
-      "/images/iloom_images/study-room/storage/IAY00AA00A_WW_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20241128/_23815215-16dd-42c0-84bb-2d876d54859c.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_4284b720-1ca5-4151-9a0a-d24bb541c53d.jpg",
-      "https://www.iloom.com/upload/contents/20250709/_f5c1fc81-cd35-4fda-9df6-1ba6b63f28c6.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_778a9a59-b2aa-4c52-ae40-262790efba1f.jpg"
-    ],
-    "ranking": 1432
-  },
-  {
-    "id": "IVH00AA00A",
-    "series": "뉴트",
-    "name": "뉴트 다용도걸이",
-    "material": "",
-    "price": "5,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "WW"
-        ]
-      }
-    ],
-    "originalCategory": "스터디",
-    "category2": "수납장",
-    "category3": "수납가구•액세서리",
-    "productImages": [
-      "/images/iloom_images/study-room/storage/IVH00AA00A_WW_1.jpg",
-      "/images/iloom_images/study-room/storage/IVH00AA00A_WW_2.png"
-    ],
-    "mdPick": false,
-    "new": true,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20241128/_ff18c4b3-7de9-46d5-a043-0467f386298f.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_ce552b77-cc56-45bd-8549-75a1564a6c27.jpg",
-      "https://www.iloom.com/upload/contents/20250709/_0b5978bf-3c02-4ec1-be3a-8c5e7d92c62c.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_1968d9a7-bc71-43ce-83d9-80a9c00d9545.jpg"
-    ],
-    "ranking": 1535
-  },
-  {
-    "id": "HSAA0202R",
-    "series": "뉴트",
-    "name": "뉴트 다용도꽂이",
-    "material": "",
-    "price": "5,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "WW"
-        ]
-      }
-    ],
-    "originalCategory": "스터디",
-    "category2": "수납장",
-    "category3": "수납가구•액세서리",
-    "productImages": [
-      "/images/iloom_images/study-room/storage/HSAA0202R_a_GY_1.jpg",
-      "/images/iloom_images/study-room/storage/HSAA0202R_b_RM_1.jpg",
-      "/images/iloom_images/study-room/storage/HSAA0202R_c_GY_1.jpg",
-      "/images/iloom_images/study-room/storage/HSAA0202R_d_DN_1.jpg",
-      "/images/iloom_images/study-room/storage/HSAA0202R_e_WW_1.jpg"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20241128/_705d52d1-6b5e-4a3b-a959-7f0991be77ef.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_257e9656-e5fe-4df2-b019-73fab4fdf499.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_fb86f776-73c6-4404-8fba-3a14331384b7.jpg",
-      "https://www.iloom.com/upload/contents/20250709/_f0b66704-3a48-48fb-98ce-6a284ff2863d.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_9b218021-c44e-4da5-9362-0daab4e7e8a8.jpg"
-    ],
-    "ranking": 54
-  },
-  {
-    "id": "HSAA0204R",
-    "series": "뉴트",
-    "name": "뉴트 다용도선반",
-    "material": "",
-    "price": "5,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "WW"
-        ]
-      }
-    ],
-    "originalCategory": "스터디",
-    "category2": "수납장",
-    "category3": "수납가구•액세서리",
-    "productImages": [
-      "/images/iloom_images/study-room/storage/HSAA0204R_a_GY_1.jpg",
-      "/images/iloom_images/study-room/storage/HSAA0204R_b_RM_1.jpg",
-      "/images/iloom_images/study-room/storage/HSAA0204R_c_GY_1.jpg",
-      "/images/iloom_images/study-room/storage/HSAA0204R_d_DN_1.jpg",
-      "/images/iloom_images/study-room/storage/HSAA0204R_e_WW_1.jpg"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20241128/_ad3415fb-7816-45a9-ba33-2aa460cc28d6.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_eeb10346-b585-46b1-90de-5545a5e074b1.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_033513d5-3cad-43d9-9f93-095b87fc7b49.jpg",
-      "https://www.iloom.com/upload/contents/20250709/_d3e37e9b-eed1-40c0-8fa9-a89505214a8a.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_af913643-9097-4588-8d78-17f475977845.jpg"
-    ],
-    "ranking": 665
-  },
-  {
-    "id": "IHU00AA02A",
-    "series": "공통",
-    "name": "공통 플랫멀티탭 연장선 3구",
-    "material": "멀티탭",
-    "price": "24,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "WH"
-        ]
-      }
-    ],
-    "originalCategory": "스터디",
-    "category2": "수납장",
-    "category3": "수납가구•액세서리",
-    "productImages": [
-      "/images/iloom_images/study-room/storage/IHU00AA02A_WH_1.png",
-      "/images/iloom_images/study-room/storage/IHU00AA02A_WH_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20251215/_2855cd6e-0853-4e3d-943a-2cc430d98d31.jpg",
-      "https://www.iloom.com/upload/contents/20251215/_ddac6bf4-e3f7-473f-a448-0050e838da66.jpg",
-      "https://www.iloom.com/upload/contents/20251215/_013be090-7df6-4b18-8933-396dbc692561.jpg",
-      "https://www.iloom.com/upload/contents/20250507/_a7c6f1f6-3e5d-4582-886b-6f486d66d43a.jpg",
-      "https://www.iloom.com/upload/contents/20250507/_d27bfa42-7647-4c48-9f00-393711552d9e.jpg"
-    ],
-    "ranking": 121
-  },
-  {
     "id": "HSSE290F",
     "series": "다나",
     "name": "다나 모션베드 캐주얼(메모리폼,책상형)",
@@ -60925,7 +51953,7 @@ export const productData = [
     ],
     "originalCategory": "스터디",
     "category2": "책장",
-    "category3": "책장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/study-room/bookshelf/HSYC124_NCCGG_2.png",
       "/images/iloom_images/study-room/bookshelf/HSYC124_NCCGU_1.jpg",
@@ -60967,7 +51995,7 @@ export const productData = [
     ],
     "originalCategory": "스터디",
     "category2": "책장",
-    "category3": "책장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/study-room/bookshelf/HSYC126_NCCGG_2.png",
       "/images/iloom_images/study-room/bookshelf/HSYC126_NCCGU_1.png",
@@ -61012,7 +52040,7 @@ export const productData = [
     ],
     "originalCategory": "스터디",
     "category2": "책장",
-    "category3": "책장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/study-room/bookshelf/HSYC084_GG_3.png",
       "/images/iloom_images/study-room/bookshelf/HSYC084_GU_2.png",
@@ -61054,7 +52082,7 @@ export const productData = [
     ],
     "originalCategory": "스터디",
     "category2": "책장",
-    "category3": "책장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/study-room/bookshelf/HSYC086_GG_3.png",
       "/images/iloom_images/study-room/bookshelf/HSYC086_GU_2.png",
@@ -61176,53 +52204,6 @@ export const productData = [
       "https://www.iloom.com/upload/contents/20191125/_e736d9e0-68a1-475d-8db5-ee4bbf4d6021.jpg"
     ],
     "ranking": 276
-  },
-  {
-    "id": "HSYA0006",
-    "series": "다나",
-    "name": "다나 화장대",
-    "material": "",
-    "price": "229,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "NCC"
-        ]
-      }
-    ],
-    "originalCategory": "스터디",
-    "category2": "수납장",
-    "category3": "수납가구•액세서리",
-    "productImages": [
-      "/images/iloom_images/bedroom/vanity/HSYA0006_a__1.jpg",
-      "/images/iloom_images/bedroom/vanity/HSYA0006_a_default_2.png",
-      "/images/iloom_images/bedroom/vanity/HSYA0006_a_default_2.png",
-      "/images/iloom_images/bedroom/vanity/HSYA0006_a_default_3.png",
-      "/images/iloom_images/bedroom/vanity/HSYA0006_a_default_3.png",
-      "/images/iloom_images/bedroom/vanity/HSYA0006_a_default_4.png",
-      "/images/iloom_images/home-library/storage/HSYA0006_c_CZ_3.png",
-      "/images/iloom_images/home-library/storage/HSYA0006_c_CZ_3.png",
-      "/images/iloom_images/home-library/storage/HSYA0006_c_NCC_1.jpg",
-      "/images/iloom_images/home-library/storage/HSYA0006_c_NCC_4.png",
-      "/images/iloom_images/home-library/storage/HSYA0006_c_SP_2.png",
-      "/images/iloom_images/home-library/storage/HSYA0006_c_SP_2.png",
-      "/images/iloom_images/study-room/storage/HSYA0006_b_NCC_1.jpg",
-      "/images/iloom_images/study-room/storage/HSYA0006_b_NCC_2.png",
-      "/images/iloom_images/study-room/storage/HSYA0006_b_NCC_3.png",
-      "/images/iloom_images/study-room/storage/HSYA0006_b_NCC_4.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20191125/_dacef3ae-ea2d-4a89-aba2-67dd68c57d13.jpg",
-      "https://www.iloom.com/upload/contents/20191125/_33c6e7ed-b5aa-4b6b-951e-69ae3844a932.jpg",
-      "https://www.iloom.com/upload/contents/20191125/_82342479-40ea-46f5-bf98-1c4ae58415ce.jpg",
-      "https://www.iloom.com/upload/contents/20191125/_e97602c1-6385-4509-9d13-2b247a079767.jpg",
-      "https://www.iloom.com/upload/contents/20191125/_049ea38b-8f2d-4ac6-8f83-e5dad8885eca.jpg"
-    ],
-    "ranking": 1273
   },
   {
     "id": "HVCH3510KHLN",
@@ -62147,8 +53128,8 @@ export const productData = [
       }
     ],
     "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "헤이븐 매트리스",
+    "category2": "헤이븐 매트리스",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/mattress/IMS11HV00A_3M1_1.jpg",
       "/images/iloom_images/mattress/IMS11HV00A_3M1_2.png"
@@ -62193,8 +53174,8 @@ export const productData = [
       }
     ],
     "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "헤이븐 매트리스",
+    "category2": "헤이븐 매트리스",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/mattress/IMS15HV00A_3M1_1.jpg",
       "/images/iloom_images/mattress/IMS15HV00A_3M1_2.png"
@@ -62239,8 +53220,8 @@ export const productData = [
       }
     ],
     "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "헤이븐 매트리스",
+    "category2": "헤이븐 매트리스",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/mattress/IMS16HV00A_3M1_1.jpg",
       "/images/iloom_images/mattress/IMS16HV00A_3M1_2.png"
@@ -62285,8 +53266,8 @@ export const productData = [
       }
     ],
     "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "헤이븐 매트리스",
+    "category2": "헤이븐 매트리스",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/mattress/IMS18HV00A_3M1_1.jpg",
       "/images/iloom_images/mattress/IMS18HV00A_3M1_2.png"
@@ -62331,8 +53312,8 @@ export const productData = [
       }
     ],
     "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "헤이븐 매트리스",
+    "category2": "헤이븐 매트리스",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/mattress/IMS11HV01A_3M1_1.jpg",
       "/images/iloom_images/mattress/IMS11HV01A_3M1_2.png"
@@ -62377,8 +53358,8 @@ export const productData = [
       }
     ],
     "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "헤이븐 매트리스",
+    "category2": "헤이븐 매트리스",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/mattress/IMS15HV01A_3M1_1.jpg",
       "/images/iloom_images/mattress/IMS15HV01A_3M1_2.png"
@@ -62423,8 +53404,8 @@ export const productData = [
       }
     ],
     "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "헤이븐 매트리스",
+    "category2": "헤이븐 매트리스",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/mattress/IMS16HV01A_3M1_1.jpg",
       "/images/iloom_images/mattress/IMS16HV01A_3M1_2.png"
@@ -62469,8 +53450,8 @@ export const productData = [
       }
     ],
     "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "헤이븐 매트리스",
+    "category2": "헤이븐 매트리스",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/mattress/IMS18HV01A_3M1_1.jpg",
       "/images/iloom_images/mattress/IMS18HV01A_3M1_2.png"
@@ -62515,8 +53496,8 @@ export const productData = [
       }
     ],
     "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "헤이븐 매트리스",
+    "category2": "헤이븐 매트리스",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/mattress/IMS11HV02A_3M1_1.jpg",
       "/images/iloom_images/mattress/IMS11HV02A_3M1_2.png"
@@ -62561,8 +53542,8 @@ export const productData = [
       }
     ],
     "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "헤이븐 매트리스",
+    "category2": "헤이븐 매트리스",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/mattress/IMS15HV02A_3M1_1.jpg",
       "/images/iloom_images/mattress/IMS15HV02A_3M1_2.png"
@@ -62607,8 +53588,8 @@ export const productData = [
       }
     ],
     "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "헤이븐 매트리스",
+    "category2": "헤이븐 매트리스",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/mattress/IMS16HV02A_3M1_1.jpg",
       "/images/iloom_images/mattress/IMS16HV02A_3M1_2.png"
@@ -62653,8 +53634,8 @@ export const productData = [
       }
     ],
     "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "헤이븐 매트리스",
+    "category2": "헤이븐 매트리스",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/mattress/IMS18HV02A_3M1_1.jpg",
       "/images/iloom_images/mattress/IMS18HV02A_3M1_2.png"
@@ -62699,8 +53680,8 @@ export const productData = [
       }
     ],
     "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "헤이븐 매트리스",
+    "category2": "헤이븐 매트리스",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/mattress/IMP11HV00A_1M3_1.jpg",
       "/images/iloom_images/mattress/IMP11HV00A_1M3_2.png"
@@ -62736,8 +53717,8 @@ export const productData = [
       }
     ],
     "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "헤이븐 매트리스",
+    "category2": "헤이븐 매트리스",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/mattress/IMP15HV00A_1M3_1.jpg",
       "/images/iloom_images/mattress/IMP15HV00A_1M3_2.png"
@@ -62773,8 +53754,8 @@ export const productData = [
       }
     ],
     "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "헤이븐 매트리스",
+    "category2": "헤이븐 매트리스",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/mattress/IMP16HV00A_1M3_1.jpg",
       "/images/iloom_images/mattress/IMP16HV00A_1M3_2.png"
@@ -62810,8 +53791,8 @@ export const productData = [
       }
     ],
     "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "헤이븐 매트리스",
+    "category2": "헤이븐 매트리스",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/mattress/IMP18HV00A_1M3_1.jpg",
       "/images/iloom_images/mattress/IMP18HV00A_1M3_2.png"
@@ -62847,8 +53828,8 @@ export const productData = [
       }
     ],
     "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "헤이븐 매트리스",
+    "category2": "헤이븐 매트리스",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/mattress/IMS11HV03A_3M2_1.jpg",
       "/images/iloom_images/mattress/IMS11HV03A_3M2_2.png"
@@ -62893,8 +53874,8 @@ export const productData = [
       }
     ],
     "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "헤이븐 매트리스",
+    "category2": "헤이븐 매트리스",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/mattress/IMS15HV03A_3M2_1.jpg",
       "/images/iloom_images/mattress/IMS15HV03A_3M2_2.png"
@@ -62939,8 +53920,8 @@ export const productData = [
       }
     ],
     "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "헤이븐 매트리스",
+    "category2": "헤이븐 매트리스",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/mattress/IMS16HV03A_3M2_1.jpg",
       "/images/iloom_images/mattress/IMS16HV03A_3M2_2.png"
@@ -62985,8 +53966,8 @@ export const productData = [
       }
     ],
     "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "헤이븐 매트리스",
+    "category2": "헤이븐 매트리스",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/mattress/IMS18HV03A_3M2_1.jpg",
       "/images/iloom_images/mattress/IMS18HV03A_3M2_2.png"
@@ -63031,8 +54012,8 @@ export const productData = [
       }
     ],
     "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "헤이븐 매트리스",
+    "category2": "헤이븐 매트리스",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/mattress/IMS11HV04A_3M2_1.jpg",
       "/images/iloom_images/mattress/IMS11HV04A_3M2_2.png"
@@ -63077,8 +54058,8 @@ export const productData = [
       }
     ],
     "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "헤이븐 매트리스",
+    "category2": "헤이븐 매트리스",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/mattress/IMS15HV04A_3M2_1.jpg",
       "/images/iloom_images/mattress/IMS15HV04A_3M2_2.png"
@@ -63123,8 +54104,8 @@ export const productData = [
       }
     ],
     "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "헤이븐 매트리스",
+    "category2": "헤이븐 매트리스",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/mattress/IMS16HV04A_3M2_1.jpg",
       "/images/iloom_images/mattress/IMS16HV04A_3M2_2.png"
@@ -63169,8 +54150,8 @@ export const productData = [
       }
     ],
     "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "헤이븐 매트리스",
+    "category2": "헤이븐 매트리스",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/mattress/IMS18HV04A_3M2_1.jpg",
       "/images/iloom_images/mattress/IMS18HV04A_3M2_2.png"
@@ -63215,8 +54196,8 @@ export const productData = [
       }
     ],
     "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "헤이븐 매트리스",
+    "category2": "헤이븐 매트리스",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/mattress/IMS11HV05A_3M2_1.jpg",
       "/images/iloom_images/mattress/IMS11HV05A_3M2_2.png"
@@ -63261,8 +54242,8 @@ export const productData = [
       }
     ],
     "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "헤이븐 매트리스",
+    "category2": "헤이븐 매트리스",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/mattress/IMS15HV05A_3M2_1.jpg",
       "/images/iloom_images/mattress/IMS15HV05A_3M2_2.png"
@@ -63307,8 +54288,8 @@ export const productData = [
       }
     ],
     "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "헤이븐 매트리스",
+    "category2": "헤이븐 매트리스",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/mattress/IMS16HV05A_3M2_1.jpg",
       "/images/iloom_images/mattress/IMS16HV05A_3M2_2.png"
@@ -63353,8 +54334,8 @@ export const productData = [
       }
     ],
     "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "헤이븐 매트리스",
+    "category2": "헤이븐 매트리스",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/mattress/IMS18HV05A_3M2_1.jpg",
       "/images/iloom_images/mattress/IMS18HV05A_3M2_2.png"
@@ -63399,8 +54380,8 @@ export const productData = [
       }
     ],
     "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "헤이븐 매트리스",
+    "category2": "헤이븐 매트리스",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/mattress/IMP11HV01A_1M4_1.jpg",
       "/images/iloom_images/mattress/IMP11HV01A_1M4_2.png"
@@ -63436,8 +54417,8 @@ export const productData = [
       }
     ],
     "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "헤이븐 매트리스",
+    "category2": "헤이븐 매트리스",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/mattress/IMP15HV01A_1M4_1.jpg",
       "/images/iloom_images/mattress/IMP15HV01A_1M4_2.png"
@@ -63473,8 +54454,8 @@ export const productData = [
       }
     ],
     "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "헤이븐 매트리스",
+    "category2": "헤이븐 매트리스",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/mattress/IMP16HV01A_1M4_1.jpg",
       "/images/iloom_images/mattress/IMP16HV01A_1M4_2.png"
@@ -63510,8 +54491,8 @@ export const productData = [
       }
     ],
     "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "헤이븐 매트리스",
+    "category2": "헤이븐 매트리스",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/mattress/IMP18HV01A_1M4_1.jpg",
       "/images/iloom_images/mattress/IMP18HV01A_1M4_2.png"
@@ -63547,8 +54528,8 @@ export const productData = [
       }
     ],
     "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "헤이븐 매트리스",
+    "category2": "헤이븐 매트리스",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/mattress/IMS11HV06A_3M2_1.jpg",
       "/images/iloom_images/mattress/IMS11HV06A_3M2_2.png"
@@ -63592,8 +54573,8 @@ export const productData = [
       }
     ],
     "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "헤이븐 매트리스",
+    "category2": "헤이븐 매트리스",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/mattress/IMS15HV06A_3M2_1.jpg",
       "/images/iloom_images/mattress/IMS15HV06A_3M2_2.png"
@@ -63637,8 +54618,8 @@ export const productData = [
       }
     ],
     "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "헤이븐 매트리스",
+    "category2": "헤이븐 매트리스",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/mattress/IMS16HV06A_3M2_1.jpg",
       "/images/iloom_images/mattress/IMS16HV06A_3M2_2.png"
@@ -63682,8 +54663,8 @@ export const productData = [
       }
     ],
     "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "헤이븐 매트리스",
+    "category2": "헤이븐 매트리스",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/mattress/IMS18HV06A_3M2_1.jpg",
       "/images/iloom_images/mattress/IMS18HV06A_3M2_2.png"
@@ -63727,8 +54708,8 @@ export const productData = [
       }
     ],
     "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "헤이븐 매트리스",
+    "category2": "헤이븐 매트리스",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/mattress/IMS11HV07A_3M2_1.jpg",
       "/images/iloom_images/mattress/IMS11HV07A_3M2_2.png"
@@ -63790,8 +54771,8 @@ export const productData = [
       }
     ],
     "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "헤이븐 매트리스",
+    "category2": "헤이븐 매트리스",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/mattress/IMS15HV07A_3M2_1.jpg",
       "/images/iloom_images/mattress/IMS15HV07A_3M2_2.png"
@@ -63835,8 +54816,8 @@ export const productData = [
       }
     ],
     "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "헤이븐 매트리스",
+    "category2": "헤이븐 매트리스",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/mattress/IMS16HV07A_3M2_1.jpg",
       "/images/iloom_images/mattress/IMS16HV07A_3M2_2.png"
@@ -63880,8 +54861,8 @@ export const productData = [
       }
     ],
     "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "헤이븐 매트리스",
+    "category2": "헤이븐 매트리스",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/mattress/IMS18HV07A_3M2_1.jpg",
       "/images/iloom_images/mattress/IMS18HV07A_3M2_2.png"
@@ -63911,154 +54892,6 @@ export const productData = [
     "ranking": 712
   },
   {
-    "id": "IMP11HV01A",
-    "series": "헤이븐 디럭스/슬림 상단패드",
-    "name": "헤이븐 디럭스/슬림 상단패드 헤이븐 디럭스/슬림 상단 패드 (SS)",
-    "material": "",
-    "price": "149,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "1M4"
-        ]
-      }
-    ],
-    "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "헤이븐 매트리스",
-    "productImages": [
-      "/images/iloom_images/mattress/IMP11HV01A_1M4_1.jpg",
-      "/images/iloom_images/mattress/IMP11HV01A_1M4_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250508/_4ad594b5-dc3f-462b-801d-075ef2872f9e.jpg",
-      "https://www.iloom.com/upload/contents/20251204/_fd4ff8d9-457e-4457-b86b-994a866a45e7.jpg",
-      "https://www.iloom.com/upload/contents/20240628/_d681c06c-d6eb-410c-9627-1f18dd93788c.jpg",
-      "https://www.iloom.com/upload/contents/20251119/_9b2f5286-aeda-448b-bb95-12d7ad86cb30.jpg",
-      "https://www.iloom.com/upload/contents/20260203/_fdf565b6-c0de-413a-a9d1-34989d56b3bd.jpg",
-      "https://www.iloom.com/upload/contents/20240628/_5509ddd7-fee5-4d77-9f39-8c520cb9d0a5.jpg",
-      "https://www.iloom.com/upload/contents/20240822/_39831719-09a1-47cf-b456-b95ff021fed1.jpg",
-      "https://www.iloom.com/upload/contents/20250619/_621fe21d-7a68-4a5d-8841-c73dc30b10d3.jpg",
-      "https://www.iloom.com/upload/contents/20250905/_e5b79160-742e-4297-bc7e-7b0254c9badf.jpg"
-    ],
-    "ranking": 582
-  },
-  {
-    "id": "IMP15HV01A",
-    "series": "헤이븐 디럭스/슬림 상단패드",
-    "name": "헤이븐 디럭스/슬림 상단패드 헤이븐 디럭스/슬림 상단 패드 (Q)",
-    "material": "",
-    "price": "169,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "1M4"
-        ]
-      }
-    ],
-    "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "헤이븐 매트리스",
-    "productImages": [
-      "/images/iloom_images/mattress/IMP15HV01A_1M4_1.jpg",
-      "/images/iloom_images/mattress/IMP15HV01A_1M4_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250508/_316c4fc1-61c6-4062-9b08-65d5c7cd6f0d.jpg",
-      "https://www.iloom.com/upload/contents/20251204/_091e1325-d241-479d-bf31-87a7e002df04.jpg",
-      "https://www.iloom.com/upload/contents/20240628/_b93bb2c1-0307-4f14-9c12-cf9a30b8cec7.jpg",
-      "https://www.iloom.com/upload/contents/20251119/_0f284155-4fb0-4273-85fb-af147009c18a.jpg",
-      "https://www.iloom.com/upload/contents/20260203/_ce1b4f60-faae-426d-b415-80a90e7ed656.jpg",
-      "https://www.iloom.com/upload/contents/20240628/_4b37c8e6-9f51-4c86-9e6d-87e6f3b49a1b.jpg",
-      "https://www.iloom.com/upload/contents/20240822/_1e201b6e-76ce-45be-9e8e-0c42f15589cd.jpg",
-      "https://www.iloom.com/upload/contents/20250619/_2f655289-c33c-4157-a2ee-c2ad10a3b437.jpg",
-      "https://www.iloom.com/upload/contents/20250905/_f3db85b8-0c6c-448c-99b9-20e45633a8e2.jpg"
-    ],
-    "ranking": 479
-  },
-  {
-    "id": "IMP16HV01A",
-    "series": "헤이븐 디럭스/슬림 상단패드",
-    "name": "헤이븐 디럭스/슬림 상단패드 헤이븐 디럭스/슬림 상단 패드 (K)",
-    "material": "",
-    "price": "179,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "1M4"
-        ]
-      }
-    ],
-    "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "헤이븐 매트리스",
-    "productImages": [
-      "/images/iloom_images/mattress/IMP16HV01A_1M4_1.jpg",
-      "/images/iloom_images/mattress/IMP16HV01A_1M4_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250508/_7b37bd23-6c05-4f52-ae85-40747a7a0c37.jpg",
-      "https://www.iloom.com/upload/contents/20251204/_dc1d47c9-7524-46b7-87bf-49931e43ff35.jpg",
-      "https://www.iloom.com/upload/contents/20240628/_d7142e26-9ae1-4291-87a7-51734ee3c0ad.jpg",
-      "https://www.iloom.com/upload/contents/20251119/_6cd52fe3-7bf1-4ffd-9a1a-3864b8ba6796.jpg",
-      "https://www.iloom.com/upload/contents/20260203/_47924f74-430a-41e3-8918-a373ba2c1d60.jpg",
-      "https://www.iloom.com/upload/contents/20240628/_9e3dbbe0-c7fd-40ab-bcb0-b694dabdda43.jpg",
-      "https://www.iloom.com/upload/contents/20240822/_43c6bcc9-5781-43cc-9f2f-bda6c4d22bc3.jpg",
-      "https://www.iloom.com/upload/contents/20250619/_cd0c03b9-1b81-42b6-93da-bc457758b1a9.jpg",
-      "https://www.iloom.com/upload/contents/20250905/_45ee8008-84be-45ae-811e-620c40359b3e.jpg"
-    ],
-    "ranking": 139
-  },
-  {
-    "id": "IMP18HV01A",
-    "series": "헤이븐 디럭스/슬림 상단패드",
-    "name": "헤이븐 디럭스/슬림 상단패드 헤이븐 디럭스/슬림 상단 패드 (KK)",
-    "material": "",
-    "price": "199,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "1M4"
-        ]
-      }
-    ],
-    "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "헤이븐 매트리스",
-    "productImages": [
-      "/images/iloom_images/mattress/IMP18HV01A_1M4_1.jpg",
-      "/images/iloom_images/mattress/IMP18HV01A_1M4_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250508/_54f9027c-2617-40ff-90a5-62982b23999c.jpg",
-      "https://www.iloom.com/upload/contents/20251204/_adf1f731-5690-4166-8de8-090e295a0c79.jpg",
-      "https://www.iloom.com/upload/contents/20240628/_0b59084d-83d3-4cc2-9741-45d0d6bb6b5a.jpg",
-      "https://www.iloom.com/upload/contents/20251119/_0caae0e1-0ae8-45cf-9b2d-714228fbcf3a.jpg",
-      "https://www.iloom.com/upload/contents/20260203/_26d98055-f648-4589-a134-51f65c2f1d3a.jpg",
-      "https://www.iloom.com/upload/contents/20240628/_5cb06c25-965b-4a7b-89a6-6275b47a4653.jpg",
-      "https://www.iloom.com/upload/contents/20240822/_05856d5e-3468-4e0c-a340-e378bccd46c3.jpg",
-      "https://www.iloom.com/upload/contents/20250619/_c2a3e2f8-e8fa-498d-aae4-c17d02dd1c98.jpg",
-      "https://www.iloom.com/upload/contents/20250905/_64a5ea4d-e408-4977-aa80-f0ffae033b01.jpg"
-    ],
-    "ranking": 991
-  },
-  {
     "id": "IMP11HV02A",
     "series": "헤이븐 전용 쿨링패드",
     "name": "헤이븐 전용 쿨링패드 헤이븐 쿨링 상단 패드 (SS)",
@@ -64073,8 +54906,8 @@ export const productData = [
       }
     ],
     "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "헤이븐 매트리스",
+    "category2": "헤이븐 매트리스",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/mattress/IMP11HV02A_1M5_1.jpg",
       "/images/iloom_images/mattress/IMP11HV02A_1M5_2.png"
@@ -64108,8 +54941,8 @@ export const productData = [
       }
     ],
     "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "헤이븐 매트리스",
+    "category2": "헤이븐 매트리스",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/mattress/IMP15HV02A_1M5_1.jpg",
       "/images/iloom_images/mattress/IMP15HV02A_1M5_2.png"
@@ -64143,8 +54976,8 @@ export const productData = [
       }
     ],
     "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "헤이븐 매트리스",
+    "category2": "헤이븐 매트리스",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/mattress/IMP16HV02A_1M5_1.jpg",
       "/images/iloom_images/mattress/IMP16HV02A_1M5_2.png"
@@ -64178,8 +55011,8 @@ export const productData = [
       }
     ],
     "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "헤이븐 매트리스",
+    "category2": "헤이븐 매트리스",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/mattress/IMP18HV02A_1M5_1.jpg",
       "/images/iloom_images/mattress/IMP18HV02A_1M5_2.png"
@@ -64199,287 +55032,6 @@ export const productData = [
     "ranking": 769
   },
   {
-    "id": "HM40L09ECE",
-    "series": "플렉서블 *모션 겸용",
-    "name": "플렉서블 *모션 겸용 라텍스 매트리스 (S 900)",
-    "material": "라텍스",
-    "price": "950,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "S5G2A"
-        ]
-      }
-    ],
-    "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "매트리스",
-    "productImages": [
-      "/images/iloom_images/mattress/HM40L09ECE_S5G2A_1.png",
-      "/images/iloom_images/mattress/HM40L09ECE_S5G2A_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20251117/_f52ed08b-c2fb-41da-8b6d-8937d57f885a.jpg",
-      "https://www.iloom.com/upload/contents/20251117/_4e9b51e8-ddc3-41e5-ae78-730e1d248577.jpg",
-      "https://www.iloom.com/upload/contents/20251117/_3df5d46f-45d3-42ad-961e-f4abef6baeae.jpg",
-      "https://www.iloom.com/upload/contents/20251117/_da61fe18-df97-4fd6-921f-a82981437540.jpg",
-      "https://www.iloom.com/upload/contents/20250701/_f1571c81-50f7-46cd-88b5-15ecb0985ef2.jpg",
-      "https://www.iloom.com/upload/contents/20251117/_4245f6d4-a645-48b0-80f0-78da5ad541d3.jpg"
-    ],
-    "ranking": 340
-  },
-  {
-    "id": "HM40L11ECE",
-    "series": "플렉서블 *모션 겸용",
-    "name": "플렉서블 *모션 겸용 라텍스 매트리스 (SS)",
-    "material": "라텍스",
-    "price": "1,250,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "S5G2A"
-        ]
-      }
-    ],
-    "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "매트리스",
-    "productImages": [
-      "/images/iloom_images/mattress/HM40L11ECE_S5G2A_1.png",
-      "/images/iloom_images/mattress/HM40L11ECE_S5G2A_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20251117/_8e25d8df-d0a1-44cb-bfb8-e946323c9f10.jpg",
-      "https://www.iloom.com/upload/contents/20251117/_ba1c14e4-53f3-4225-abf6-54da48abdff4.jpg",
-      "https://www.iloom.com/upload/contents/20251117/_c84f0321-307a-49f2-a6bc-10230d801103.jpg",
-      "https://www.iloom.com/upload/contents/20251117/_0f91cef0-92d7-4f47-8452-54c7d0ca2323.jpg",
-      "https://www.iloom.com/upload/contents/20250701/_ecd2878a-9cb8-417b-bc2d-6d53ea2e384f.jpg",
-      "https://www.iloom.com/upload/contents/20251117/_9fd0f257-e11c-4695-810b-76e7676fba41.jpg"
-    ],
-    "ranking": 865
-  },
-  {
-    "id": "HM40L15ECE",
-    "series": "플렉서블 *모션 겸용",
-    "name": "플렉서블 *모션 겸용 라텍스 매트리스 (Q)",
-    "material": "라텍스",
-    "price": "1,450,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "S5G2A"
-        ]
-      }
-    ],
-    "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "매트리스",
-    "productImages": [
-      "/images/iloom_images/mattress/HM40L15ECE_S5G2A_1.png",
-      "/images/iloom_images/mattress/HM40L15ECE_S5G2A_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20251117/_15697047-0759-4cc2-a3c8-e40429629786.jpg",
-      "https://www.iloom.com/upload/contents/20251117/_66b158ff-0219-4244-a6d9-1e6676bda5cb.jpg",
-      "https://www.iloom.com/upload/contents/20251117/_9db9d1ad-007e-40cb-b8c6-13e452a8b340.jpg",
-      "https://www.iloom.com/upload/contents/20251117/_9042e320-44c7-4e06-aaae-f98c78c0941d.jpg",
-      "https://www.iloom.com/upload/contents/20250701/_dcdccb64-db07-49f3-b8cc-18c6b8415882.jpg",
-      "https://www.iloom.com/upload/contents/20251117/_392ecd7b-0d40-4c81-870d-9f889b9ab2b5.jpg"
-    ],
-    "ranking": 38
-  },
-  {
-    "id": "HM40F09EBE",
-    "series": "플렉서블 *모션 겸용",
-    "name": "플렉서블 *모션 겸용 폼 매트리스 (S 900)",
-    "material": "폼",
-    "price": "850,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "S5G2A"
-        ]
-      }
-    ],
-    "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "매트리스",
-    "productImages": [
-      "/images/iloom_images/mattress/HM40F09EBE_S5G2A_1.png",
-      "/images/iloom_images/mattress/HM40F09EBE_S5G2A_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20251117/_5418d728-2bf9-4b21-ab69-60b61b93b999.jpg",
-      "https://www.iloom.com/upload/contents/20251117/_222fec33-ef29-48cb-8900-160ad74a4887.jpg",
-      "https://www.iloom.com/upload/contents/20250206/_a434dff8-a260-4f2f-802e-4fda0b5a1b47.jpg",
-      "https://www.iloom.com/upload/contents/20251117/_016c8f42-b85f-41f7-aef0-0b97f9adef2f.jpg",
-      "https://www.iloom.com/upload/contents/20251117/_0de113d7-b7c1-40cd-b596-ca2b9554189e.jpg",
-      "https://www.iloom.com/upload/contents/20251117/_ef55eaf6-f913-4c4d-9fef-6a7acb821e03.jpg"
-    ],
-    "ranking": 293
-  },
-  {
-    "id": "HM40F11EBE",
-    "series": "플렉서블 *모션 겸용",
-    "name": "플렉서블 *모션 겸용 폼 매트리스 (SS)",
-    "material": "폼",
-    "price": "1,050,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "S5G2A"
-        ]
-      }
-    ],
-    "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "매트리스",
-    "productImages": [
-      "/images/iloom_images/mattress/HM40F11EBE_S5G2A_1.png",
-      "/images/iloom_images/mattress/HM40F11EBE_S5G2A_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20251117/_09d513d5-38a4-4a9c-bf00-d299ea51c276.jpg",
-      "https://www.iloom.com/upload/contents/20251117/_46425b4f-bf3f-41df-a335-2af185e6c0db.jpg",
-      "https://www.iloom.com/upload/contents/20251117/_f6976ca5-77d5-47c9-8eae-28a4e6652c98.jpg",
-      "https://www.iloom.com/upload/contents/20251117/_b751a916-ae08-4d3e-b22c-90f53b8ca49f.jpg",
-      "https://www.iloom.com/upload/contents/20250701/_e481e53f-27c7-4919-a225-78cd6ff500ee.jpg",
-      "https://www.iloom.com/upload/contents/20251117/_2235af76-b203-43c9-bf7e-724cad69b5f1.jpg"
-    ],
-    "ranking": 571
-  },
-  {
-    "id": "IMS09AC09A",
-    "series": "플렉서블 *모션 겸용",
-    "name": "플렉서블 *모션 겸용 스프링 매트리스 (S 900)",
-    "material": "스프링",
-    "price": "750,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "S5MT4"
-        ]
-      }
-    ],
-    "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "매트리스",
-    "productImages": [
-      "/images/iloom_images/mattress/IMS09AC09A_S5MT4_1.png",
-      "/images/iloom_images/mattress/IMS09AC09A_S5MT4_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20231120/_8bb640a1-c8ec-474b-b7c1-365e180fc44a.jpg",
-      "https://www.iloom.com/upload/contents/20251117/_7b947681-57c6-43b8-b1e4-7cd7d96fb12c.jpg",
-      "https://www.iloom.com/upload/contents/20251117/_05bd7b1a-0c5e-409f-b7f3-f1f7eebfca03.jpg",
-      "https://www.iloom.com/upload/contents/20231120/_fa8eaacc-416d-4b65-909f-f248acd5e4cf.jpg",
-      "https://www.iloom.com/upload/contents/20231120/_5312fb4d-6c2e-43f4-9099-a7cccef2e96b.jpg",
-      "https://www.iloom.com/upload/contents/20250701/_b3cc10b0-d325-4d1d-937c-ab3ff694e0e1.jpg",
-      "https://www.iloom.com/upload/contents/20251117/_700baa1e-6a09-4b36-be24-793ec504b76d.jpg"
-    ],
-    "ranking": 871
-  },
-  {
-    "id": "IMS11AC11A",
-    "series": "플렉서블 *모션 겸용",
-    "name": "플렉서블 *모션 겸용 스프링 매트리스 (SS)",
-    "material": "스프링",
-    "price": "850,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "S5MT4"
-        ]
-      }
-    ],
-    "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "매트리스",
-    "productImages": [
-      "/images/iloom_images/mattress/IMS11AC11A_S5MT4_1.png",
-      "/images/iloom_images/mattress/IMS11AC11A_S5MT4_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20231120/_1969f66e-e881-4a2f-b502-2def490e9e1c.jpg",
-      "https://www.iloom.com/upload/contents/20231120/_ab98fb29-ed8d-48d3-a9fb-99ef7d6a2978.jpg",
-      "https://www.iloom.com/upload/contents/20231120/_b1c46db2-34dd-413e-a41e-342eb02e5515.jpg",
-      "https://www.iloom.com/upload/contents/20231120/_1803f6e5-ae20-42af-9006-378a5cf4e88b.jpg",
-      "https://www.iloom.com/upload/contents/20231120/_5df9bf97-32bc-4aec-b271-94c9abe40ec0.jpg",
-      "https://www.iloom.com/upload/contents/20240724/_0acee2b1-f3ba-47d6-977a-d6bbbdb255b1.jpg",
-      "https://www.iloom.com/upload/contents/20250701/_716eb43c-b04c-456e-b930-60d3c0968b09.jpg",
-      "https://www.iloom.com/upload/contents/20251117/_f1cad9ed-1ceb-4135-8eab-0263d607d973.jpg"
-    ],
-    "ranking": 859
-  },
-  {
-    "id": "IMF11AB00A",
-    "series": "플렉서블 라이트 *모션 겸용",
-    "name": "플렉서블 라이트 *모션 겸용 폼 매트리스 (SS)",
-    "material": "폼",
-    "price": "650,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "9M3"
-        ]
-      }
-    ],
-    "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "매트리스",
-    "productImages": [
-      "/images/iloom_images/bedroom/bed/IMF11AB00A_a_9M3_1.png",
-      "/images/iloom_images/bedroom/bed/IMF11AB00A_a_9M3_2.jpg",
-      "/images/iloom_images/bedroom/bed/IMF11AB00A_a_9M3_3.png",
-      "/images/iloom_images/mattress/IMF11AB00A_b_9M3_1.png",
-      "/images/iloom_images/mattress/IMF11AB00A_b_9M3_2.jpg",
-      "/images/iloom_images/mattress/IMF11AB00A_b_9M3_3.png"
-    ],
-    "mdPick": true,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20251117/_04b0d3b9-fe4f-49b2-bd57-0b9d1c745bc4.jpg",
-      "https://www.iloom.com/upload/contents/20251117/_4d6b32a2-3c04-4553-85ad-06c9a76fe3ef.jpg",
-      "https://www.iloom.com/upload/contents/20251117/_53a1c0ff-adf1-4158-8eb5-e8e5f7d10228.jpg",
-      "https://www.iloom.com/upload/contents/20251117/_46188d0b-d28b-42ab-97ea-c6750e930f08.jpg",
-      "https://www.iloom.com/upload/contents/20251117/_4ac49df7-98c9-4004-8e2e-f8e649be2903.jpg",
-      "https://www.iloom.com/upload/contents/20240724/_07aaced3-8b56-40c0-a343-c99a4362c436.jpg",
-      "https://www.iloom.com/upload/contents/20250701/_9ee90f28-0244-44fe-adcf-6d01bf4812d3.jpg",
-      "https://www.iloom.com/upload/contents/20251117/_bb8f543b-da1e-48bf-8ba2-81b974a280fe.jpg"
-    ],
-    "ranking": 600
-  },
-  {
     "id": "HA43E09EFN",
     "series": "모션베드 커버 *모션 겸용",
     "name": "모션베드 커버 *모션 겸용 모션 겸용 커버 (S 900)",
@@ -64495,8 +55047,8 @@ export const productData = [
       }
     ],
     "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "커버•패드",
+    "category2": "커버•패드",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/mattress/HA43E09EFN_1E1_1.png",
       "/images/iloom_images/mattress/HA43E09EFN_1E1_3.png",
@@ -64531,8 +55083,8 @@ export const productData = [
       }
     ],
     "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "커버•패드",
+    "category2": "커버•패드",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/mattress/HA43E11EFN_1E1_1.png",
       "/images/iloom_images/mattress/HA43E11EFN_1E1_3.png",
@@ -64567,8 +55119,8 @@ export const productData = [
       }
     ],
     "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "커버•패드",
+    "category2": "커버•패드",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/mattress/HA43E15EFN_1E1_1.png",
       "/images/iloom_images/mattress/HA43E15EFN_1E1_3.png",
@@ -64588,1046 +55140,6 @@ export const productData = [
     "ranking": 589
   },
   {
-    "id": "IMS10AC00A",
-    "series": "데일리",
-    "name": "데일리 미디엄 매트리스 (S)",
-    "material": "",
-    "price": "470,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "9M2"
-        ]
-      }
-    ],
-    "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "매트리스",
-    "productImages": [
-      "/images/iloom_images/mattress/IMS10AC00A_9M2_1.jpg",
-      "/images/iloom_images/mattress/IMS10AC00A_9M2_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20230601/_60e0ec16-c880-4301-938a-b6ffeeabd412.jpg",
-      "https://www.iloom.com/upload/contents/20240903/_04e3e7cd-45c8-43f9-abfc-db94352d83bd.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_ace09821-2b8a-41b1-a687-0ca4c9c9ce6d.jpg",
-      "https://www.iloom.com/upload/contents/20250311/_fbe50e1d-9d0d-4685-8123-940066bba939.jpg",
-      "https://www.iloom.com/upload/contents/20240903/_48012b59-5203-48e2-9a98-b5cbb25e22fd.jpg",
-      "https://www.iloom.com/upload/contents/20250619/_e52ea5a6-a44d-4785-94a6-4d20f7b7ae9f.jpg",
-      "https://www.iloom.com/upload/contents/20240724/_90415414-0ec0-49cd-940a-bc3babd224db.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_42b81e5b-6e2f-4217-aa39-bc311208cd8e.jpg",
-      "https://www.iloom.com/upload/contents/20250428/_e55de95c-bcc4-4d65-a1e1-aaa22858fb57.jpg"
-    ],
-    "ranking": 862
-  },
-  {
-    "id": "IMS11AC00A",
-    "series": "데일리",
-    "name": "데일리 미디엄 매트리스 (SS)",
-    "material": "",
-    "price": "510,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "9M2"
-        ]
-      }
-    ],
-    "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "매트리스",
-    "productImages": [
-      "/images/iloom_images/mattress/IMS11AC00A_9M2_1.jpg",
-      "/images/iloom_images/mattress/IMS11AC00A_9M2_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20230601/_2994e3e0-3648-4bd8-a009-28f88c1ba315.jpg",
-      "https://www.iloom.com/upload/contents/20240903/_b4e50474-b09c-4fca-8813-dde4c01e0f3e.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_0d9ea51a-f9c8-4258-9004-9b7e7f00fbff.jpg",
-      "https://www.iloom.com/upload/contents/20250311/_100d7b19-bd53-4c81-be40-0176329c67dd.jpg",
-      "https://www.iloom.com/upload/contents/20240903/_14d38444-5780-4767-804c-79a46b366e27.jpg",
-      "https://www.iloom.com/upload/contents/20250619/_8baa6bf2-1e28-44dc-bb50-1376ace9dff8.jpg",
-      "https://www.iloom.com/upload/contents/20240724/_5fd6cba8-731b-48af-8f05-8ee9c3edb7ae.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_71af6541-b6fc-4e06-92f3-47f8ce9036b1.jpg",
-      "https://www.iloom.com/upload/contents/20250428/_7ebbc70f-520a-4ce3-ac50-828fad1198e3.jpg"
-    ],
-    "ranking": 30
-  },
-  {
-    "id": "IMS15AC00A",
-    "series": "데일리",
-    "name": "데일리 미디엄 매트리스 (Q)",
-    "material": "",
-    "price": "680,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "9M2"
-        ]
-      }
-    ],
-    "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "매트리스",
-    "productImages": [
-      "/images/iloom_images/mattress/IMS15AC00A_9M2_1.jpg",
-      "/images/iloom_images/mattress/IMS15AC00A_9M2_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20230601/_0eba762f-5340-4b58-8d45-9324ad4e0a78.jpg",
-      "https://www.iloom.com/upload/contents/20240903/_25a622ce-58dd-43f4-9225-e9b347b35db5.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_26735faa-934e-48d9-92bc-6e536e2e72b4.jpg",
-      "https://www.iloom.com/upload/contents/20250311/_4d0a6fa1-bfdc-4c2b-902a-1a64dcfd3929.jpg",
-      "https://www.iloom.com/upload/contents/20240903/_9c817edc-3297-485b-a233-9ad1e83b47f3.jpg",
-      "https://www.iloom.com/upload/contents/20250619/_a815e7a1-57f5-4380-a1ce-982d48dab402.jpg",
-      "https://www.iloom.com/upload/contents/20240724/_3e93178b-2980-427b-b071-0c56383acd20.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_e26e1297-b004-4683-952d-12ca3db5e435.jpg",
-      "https://www.iloom.com/upload/contents/20250428/_2c983559-bd4e-427b-9b5e-98f89e35859e.jpg"
-    ],
-    "ranking": 1234
-  },
-  {
-    "id": "IMS16AC00A",
-    "series": "데일리",
-    "name": "데일리 미디엄 매트리스 (K)",
-    "material": "",
-    "price": "790,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "9M2"
-        ]
-      }
-    ],
-    "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "매트리스",
-    "productImages": [
-      "/images/iloom_images/mattress/IMS16AC00A_9M2_1.jpg",
-      "/images/iloom_images/mattress/IMS16AC00A_9M2_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20230601/_c13f5443-c474-4380-9d63-4932cf2c85bd.jpg",
-      "https://www.iloom.com/upload/contents/20240903/_5fe44c70-e8e2-41da-bffc-e8dd779c3e1a.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_e3ca7adb-0f1f-4331-b7d3-4e7970ea9c34.jpg",
-      "https://www.iloom.com/upload/contents/20250311/_256a40c7-1332-44f3-ae6e-0b87c4401ff5.jpg",
-      "https://www.iloom.com/upload/contents/20240903/_0f4878e2-cf92-4cac-98a2-c584c6086f52.jpg",
-      "https://www.iloom.com/upload/contents/20250619/_0b0943fd-bed7-49fa-9651-b68bc513098d.jpg",
-      "https://www.iloom.com/upload/contents/20240724/_2a283f64-5f6a-4079-acef-ba9b9f5a51d8.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_6cecff82-e430-4d93-84e3-9446564e9756.jpg",
-      "https://www.iloom.com/upload/contents/20250428/_9beba9ee-7899-48f4-b3e1-aef62d95a1b0.jpg"
-    ],
-    "ranking": 310
-  },
-  {
-    "id": "IMS10AC01A",
-    "series": "데일리",
-    "name": "데일리 펌 매트리스 (S)",
-    "material": "",
-    "price": "470,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "9M2"
-        ]
-      }
-    ],
-    "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "매트리스",
-    "productImages": [
-      "/images/iloom_images/mattress/IMS10AC01A_9M2_1.jpg",
-      "/images/iloom_images/mattress/IMS10AC01A_9M2_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20230601/_bb07dce8-eaa3-4117-be96-73d03f7414f2.jpg",
-      "https://www.iloom.com/upload/contents/20240903/_ae746454-77f5-424f-8d0a-376642f82954.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_15ddcb1e-fe1a-4fba-a90a-09f868a91d22.jpg",
-      "https://www.iloom.com/upload/contents/20240903/_3994423b-761f-46a8-8df0-b4bef89427f0.jpg",
-      "https://www.iloom.com/upload/contents/20240903/_beb665b4-a1e9-414d-b63e-9a22ce982f0f.jpg",
-      "https://www.iloom.com/upload/contents/20250619/_60514dc4-d9e4-4e84-a5f1-759c65df47c3.jpg",
-      "https://www.iloom.com/upload/contents/20240724/_32ec62e4-ec7a-432a-9097-e65c3ca29163.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_434c911e-8e46-46de-9cc9-24432ce08705.jpg",
-      "https://www.iloom.com/upload/contents/20250428/_aad18841-fd17-4482-b07f-0a65108fd65c.jpg"
-    ],
-    "ranking": 1394
-  },
-  {
-    "id": "IMS11AC01A",
-    "series": "데일리",
-    "name": "데일리 펌 매트리스 (SS)",
-    "material": "",
-    "price": "510,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "9M2"
-        ]
-      }
-    ],
-    "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "매트리스",
-    "productImages": [
-      "/images/iloom_images/mattress/IMS11AC01A_9M2_1.jpg",
-      "/images/iloom_images/mattress/IMS11AC01A_9M2_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20230601/_20b74967-06b1-4eec-9f04-42de0fc57327.jpg",
-      "https://www.iloom.com/upload/contents/20240903/_c62cbb4d-ce42-4119-a169-c5e1816b922c.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_e61a8272-2fe6-41fe-95b6-fd0f12b4916f.jpg",
-      "https://www.iloom.com/upload/contents/20240903/_019bb8ad-efe8-4b16-ad15-3029b4896fb5.jpg",
-      "https://www.iloom.com/upload/contents/20240903/_cbcb6439-26a9-4d1c-831a-c5857357f05a.jpg",
-      "https://www.iloom.com/upload/contents/20250619/_206c6ac0-7b07-4b8d-bac3-1dd6d51a11c3.jpg",
-      "https://www.iloom.com/upload/contents/20240724/_42840627-3f06-40dd-8caa-bf83dfc07ed2.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_dbe191c2-4035-4335-bd1e-5317498e4da2.jpg",
-      "https://www.iloom.com/upload/contents/20250428/_3bdab782-d035-4696-8a24-115cef77110a.jpg"
-    ],
-    "ranking": 1589
-  },
-  {
-    "id": "IMS15AC01A",
-    "series": "데일리",
-    "name": "데일리 펌 매트리스 (Q)",
-    "material": "",
-    "price": "680,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "9M2"
-        ]
-      }
-    ],
-    "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "매트리스",
-    "productImages": [
-      "/images/iloom_images/mattress/IMS15AC01A_9M2_1.jpg",
-      "/images/iloom_images/mattress/IMS15AC01A_9M2_2.png"
-    ],
-    "mdPick": true,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20230601/_336c416e-144b-44dd-996d-5f24f45307ea.jpg",
-      "https://www.iloom.com/upload/contents/20240903/_b2cbd4b9-dbc3-463b-98e6-7140239a47c0.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_4940d585-5cf9-4a3c-9c26-3d5df86fb3e2.jpg",
-      "https://www.iloom.com/upload/contents/20240903/_3625d728-c8da-40ce-b16e-c7eb71d4ecfd.jpg",
-      "https://www.iloom.com/upload/contents/20240903/_da2f42c8-a4a5-402c-bf2e-2ad3d873ba3e.jpg",
-      "https://www.iloom.com/upload/contents/20250619/_10460b77-2cd2-4121-ab0a-32d410eb0ee1.jpg",
-      "https://www.iloom.com/upload/contents/20240724/_bea8c610-03ce-4e7a-90d9-dd686bea2253.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_877566d0-aabc-411e-b890-f4ec4f86ba27.jpg",
-      "https://www.iloom.com/upload/contents/20250428/_8e29b104-ce25-423d-8773-739f288fe422.jpg"
-    ],
-    "ranking": 44
-  },
-  {
-    "id": "IMS16AC01A",
-    "series": "데일리",
-    "name": "데일리 펌 매트리스 (K)",
-    "material": "",
-    "price": "790,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "9M2"
-        ]
-      }
-    ],
-    "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "매트리스",
-    "productImages": [
-      "/images/iloom_images/mattress/IMS16AC01A_9M2_1.jpg",
-      "/images/iloom_images/mattress/IMS16AC01A_9M2_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20230601/_9c4a77ea-c6e9-4bf9-8232-19ac90826dfa.jpg",
-      "https://www.iloom.com/upload/contents/20240903/_27cd0f6e-7e05-492d-b744-0ab07d24b3f4.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_e2a7e90e-d499-4ced-8a06-a94232c2872d.jpg",
-      "https://www.iloom.com/upload/contents/20240903/_89682c37-3caa-4a05-8300-e3431ea70063.jpg",
-      "https://www.iloom.com/upload/contents/20240903/_1bdfd8fe-324d-41b4-91fd-f90155180ea0.jpg",
-      "https://www.iloom.com/upload/contents/20250619/_559834e3-1dd3-4ab0-9b18-5064712b3223.jpg",
-      "https://www.iloom.com/upload/contents/20240724/_e86fd368-6a3e-4176-badc-80fa0ecab332.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_d8a46ec3-536e-4437-bd84-52981ce563cd.jpg",
-      "https://www.iloom.com/upload/contents/20250428/_229208d6-55c0-4ecf-9072-afb4aa83c616.jpg"
-    ],
-    "ranking": 190
-  },
-  {
-    "id": "IMS10AC03A",
-    "series": "데일리 투인원 *양면 사용 가능",
-    "name": "데일리 투인원 *양면 사용 가능 양면 (펌+슈퍼펌) 매트리스 (S)",
-    "material": "",
-    "price": "560,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "9M2"
-        ]
-      }
-    ],
-    "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "매트리스",
-    "productImages": [
-      "/images/iloom_images/mattress/IMS10AC03A_9M2_1.jpg",
-      "/images/iloom_images/mattress/IMS10AC03A_9M2_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20230601/_51b56565-79a1-47e6-b7ea-459f120420eb.jpg",
-      "https://www.iloom.com/upload/contents/20240903/_5dc2a4b9-bd12-448a-a71c-68e82be79fe4.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_4f27c40e-cc08-4467-828f-61812b9e463e.jpg",
-      "https://www.iloom.com/upload/contents/20240903/_54ca4d0b-6dff-4579-84bd-758eaaf0a1a7.jpg",
-      "https://www.iloom.com/upload/contents/20240903/_95f1ed6d-f73e-4df2-a2a3-83689dd69671.jpg",
-      "https://www.iloom.com/upload/contents/20250619/_1f47d1e6-39d2-4ba6-ba89-e0cbedcad178.jpg",
-      "https://www.iloom.com/upload/contents/20240724/_136b2caf-a50a-423b-a801-4868d7d604df.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_4af89534-d979-4255-992b-5a8674e70ee4.jpg",
-      "https://www.iloom.com/upload/contents/20250428/_be870df7-dff7-43c9-a386-548873821b87.jpg"
-    ],
-    "ranking": 1304
-  },
-  {
-    "id": "IMS11AC03A",
-    "series": "데일리 투인원 *양면 사용 가능",
-    "name": "데일리 투인원 *양면 사용 가능 양면 (펌+슈퍼펌) 매트리스 (SS)",
-    "material": "",
-    "price": "590,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "9M2"
-        ]
-      }
-    ],
-    "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "매트리스",
-    "productImages": [
-      "/images/iloom_images/mattress/IMS11AC03A_9M2_1.jpg",
-      "/images/iloom_images/mattress/IMS11AC03A_9M2_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20230601/_d23d47a6-d6a0-409d-9eed-5fc368d47732.jpg",
-      "https://www.iloom.com/upload/contents/20240903/_82f3da00-0759-4ed2-8d08-56a8a52fc3c8.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_08fe839a-8315-4fc0-94c5-6346bb5b691c.jpg",
-      "https://www.iloom.com/upload/contents/20240903/_86c06219-77c9-47b6-8429-eaa7a3deac40.jpg",
-      "https://www.iloom.com/upload/contents/20240903/_dea3f3b6-80ea-45be-a282-b8a01a291b7d.jpg",
-      "https://www.iloom.com/upload/contents/20250619/_46161ea1-8e78-4b30-b2be-f67ea1a3a151.jpg",
-      "https://www.iloom.com/upload/contents/20240724/_7352979b-faf0-4d01-a150-3c098bac4d2d.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_f11c0b13-200a-4b60-bab7-d482d33c6054.jpg",
-      "https://www.iloom.com/upload/contents/20250307/_a03c3a23-92b3-489a-8590-66cead1403ce.jpg"
-    ],
-    "ranking": 115
-  },
-  {
-    "id": "IMS15AC03A",
-    "series": "데일리 투인원 *양면 사용 가능",
-    "name": "데일리 투인원 *양면 사용 가능 양면 (펌+슈퍼펌) 매트리스 (Q)",
-    "material": "",
-    "price": "760,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "9M2"
-        ]
-      }
-    ],
-    "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "매트리스",
-    "productImages": [
-      "/images/iloom_images/mattress/IMS15AC03A_9M2_1.jpg",
-      "/images/iloom_images/mattress/IMS15AC03A_9M2_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20230601/_2c220823-2b07-455b-99e0-98987650b161.jpg",
-      "https://www.iloom.com/upload/contents/20240903/_2bd222f2-52fd-4d78-9555-0d2cb45982d2.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_31d5a3ed-4772-4fae-8a50-4cc29d68ad6e.jpg",
-      "https://www.iloom.com/upload/contents/20240903/_154a9965-e4a5-415e-aeca-ab8ab36667ad.jpg",
-      "https://www.iloom.com/upload/contents/20240903/_dfe81bf8-dbf9-4e09-9aa8-a6add06f74b4.jpg",
-      "https://www.iloom.com/upload/contents/20250619/_763e1f16-19d1-47f3-b600-86c1b46c3e6a.jpg",
-      "https://www.iloom.com/upload/contents/20240724/_8811fcbc-a103-4d52-8f95-eeb8d3513490.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_8129f48a-992f-4aae-b7c9-fedf85047ad6.jpg",
-      "https://www.iloom.com/upload/contents/20250428/_59387788-9d0e-4408-a908-0324195a71e1.jpg"
-    ],
-    "ranking": 1214
-  },
-  {
-    "id": "IMS16AC03A",
-    "series": "데일리 투인원 *양면 사용 가능",
-    "name": "데일리 투인원 *양면 사용 가능 양면 (펌+슈퍼펌) 매트리스 (K)",
-    "material": "",
-    "price": "890,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "9M2"
-        ]
-      }
-    ],
-    "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "매트리스",
-    "productImages": [
-      "/images/iloom_images/mattress/IMS16AC03A_9M2_1.jpg",
-      "/images/iloom_images/mattress/IMS16AC03A_9M2_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20230601/_ab30d870-1e58-4397-b96b-8932880b62f3.jpg",
-      "https://www.iloom.com/upload/contents/20240903/_65c356c3-f1c1-4820-81ca-9e905272454d.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_a0d10a38-65db-43f6-a4f6-f4a3b35a0aa7.jpg",
-      "https://www.iloom.com/upload/contents/20240903/_c7f011c6-7177-428c-bbb5-93973e4a35b8.jpg",
-      "https://www.iloom.com/upload/contents/20240903/_b2c6fa37-c403-40af-b247-c36c7a240581.jpg",
-      "https://www.iloom.com/upload/contents/20250619/_43d3285f-2bc2-41b3-b985-3b58b1c582b8.jpg",
-      "https://www.iloom.com/upload/contents/20240724/_cb416981-c8ee-42f1-95f5-9de6a4231912.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_c085982c-a4cb-4d38-9caf-c0fabf43d76c.jpg",
-      "https://www.iloom.com/upload/contents/20250428/_70e28054-ad4b-4c00-9bad-9f85d06608d2.jpg"
-    ],
-    "ranking": 782
-  },
-  {
-    "id": "IMS11AB01A",
-    "series": "데일리 라이트",
-    "name": "데일리 라이트 펌 매트리스 (SS)",
-    "material": "",
-    "price": "370,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "9M1"
-        ]
-      }
-    ],
-    "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "매트리스",
-    "productImages": [
-      "/images/iloom_images/kids-room/bed/IMS11AB01A_a_9M1_1.jpg",
-      "/images/iloom_images/kids-room/bed/IMS11AB01A_a_9M1_2.png",
-      "/images/iloom_images/mattress/IMS11AB01A_b_9M1_1.jpg",
-      "/images/iloom_images/mattress/IMS11AB01A_b_9M1_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20230601/_18e6ff7e-f13e-46d3-b492-7339b36b73c9.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_d0640eb8-46a4-426f-92c6-d2d84df4ec61.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_009e5509-4b70-4e64-965f-602fc440cd82.jpg",
-      "https://www.iloom.com/upload/contents/20250311/_c092235f-b050-4444-92db-eb70529e9d29.jpg",
-      "https://www.iloom.com/upload/contents/20240903/_a9f9f959-eea9-4d36-93c0-75b09618bbee.jpg",
-      "https://www.iloom.com/upload/contents/20250619/_4fb8e52f-a2d0-4c1a-8b24-075edd7c8e27.jpg",
-      "https://www.iloom.com/upload/contents/20240724/_fbd91edb-c636-4d07-83f6-2a098cba2549.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_8f2a94f7-a475-4d62-9376-057c5b0af207.jpg",
-      "https://www.iloom.com/upload/contents/20250428/_aec5f3f0-1436-43a3-a3ad-18744e1f4b0d.jpg"
-    ],
-    "ranking": 1310
-  },
-  {
-    "id": "IMS15AB01A",
-    "series": "데일리 라이트",
-    "name": "데일리 라이트 펌 매트리스 (Q)",
-    "material": "",
-    "price": "480,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "9M1"
-        ]
-      }
-    ],
-    "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "매트리스",
-    "productImages": [
-      "/images/iloom_images/mattress/IMS15AB01A_9M1_1.jpg",
-      "/images/iloom_images/mattress/IMS15AB01A_9M1_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20230601/_751bc9dc-7f18-4c4d-8749-50b34204a101.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_af78d651-d961-4080-a717-d66f69483686.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_0efe46af-f3a4-4935-9a4c-34b860bdd199.jpg",
-      "https://www.iloom.com/upload/contents/20250311/_b877a7f2-5329-46d9-ae85-a1e1c14ec795.jpg",
-      "https://www.iloom.com/upload/contents/20240903/_8fc5d1f4-9ce8-4a1c-9579-bd98f339eab0.jpg",
-      "https://www.iloom.com/upload/contents/20250619/_99523140-d1c1-4752-9916-756f3eb9dc4f.jpg",
-      "https://www.iloom.com/upload/contents/20240724/_ad7b3d00-70ae-4158-8738-c34be04f46b6.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_ee4c5fac-2709-45b3-8330-174f1ae3f1db.jpg",
-      "https://www.iloom.com/upload/contents/20250307/_b34d011d-b95a-4c7d-b802-1424b065772c.jpg"
-    ],
-    "ranking": 1565
-  },
-  {
-    "id": "IMS16AB01A",
-    "series": "데일리 라이트",
-    "name": "데일리 라이트 펌 매트리스 (K)",
-    "material": "",
-    "price": "540,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "9M1"
-        ]
-      }
-    ],
-    "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "매트리스",
-    "productImages": [
-      "/images/iloom_images/mattress/IMS16AB01A_9M1_1.jpg",
-      "/images/iloom_images/mattress/IMS16AB01A_9M1_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20230601/_14f19f6e-8e65-4fe2-945d-a01c08ad6b60.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_f62c901a-8472-414b-84db-2b9e87f1541d.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_57a1433f-8ce2-45f6-a13e-ba5ec594379a.jpg",
-      "https://www.iloom.com/upload/contents/20250311/_f0feb2aa-4c25-4082-8e97-989c86af41e5.jpg",
-      "https://www.iloom.com/upload/contents/20240903/_ca006ae8-e153-414e-b65a-3f716cfa8b4b.jpg",
-      "https://www.iloom.com/upload/contents/20250619/_78edb97c-aa1f-4264-957e-ceaddfea19c6.jpg",
-      "https://www.iloom.com/upload/contents/20240724/_a0f1395e-2e80-471d-81ee-067bc1e67998.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_a8c391a3-78ce-486b-8213-1e061f1d9bbf.jpg",
-      "https://www.iloom.com/upload/contents/20250428/_77926828-6813-4d3f-be56-0f97135744ee.jpg"
-    ],
-    "ranking": 1222
-  },
-  {
-    "id": "IMS11AB00A",
-    "series": "데일리 라이트",
-    "name": "데일리 라이트 미디엄 매트리스 (SS)",
-    "material": "",
-    "price": "370,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "9M1"
-        ]
-      }
-    ],
-    "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "매트리스",
-    "productImages": [
-      "/images/iloom_images/mattress/IMS11AB00A_9M1_1.jpg",
-      "/images/iloom_images/mattress/IMS11AB00A_9M1_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20230601/_f813dc8b-7b85-4068-90bf-43dca62f1718.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_7b2004ea-c3a0-445a-b13e-1f4a60082c23.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_954c5821-1af5-41a3-b21f-d211558b3dfc.jpg",
-      "https://www.iloom.com/upload/contents/20250311/_3a522b59-8a1a-4d0a-8774-3d944f505ac7.jpg",
-      "https://www.iloom.com/upload/contents/20240903/_66f593ee-125a-42ce-8ef9-46653f5c280d.jpg",
-      "https://www.iloom.com/upload/contents/20250619/_3fcadd25-049e-4855-9ff1-9541719fc152.jpg",
-      "https://www.iloom.com/upload/contents/20240724/_42a6f4ea-d259-4a1e-9757-e55b20cf39df.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_d0f4f689-83f5-4a99-8a92-68cb2abf3987.jpg",
-      "https://www.iloom.com/upload/contents/20250428/_23fbee6b-b8b8-4879-9388-450ea7c7a93b.jpg"
-    ],
-    "ranking": 1662
-  },
-  {
-    "id": "IMS15AB00A",
-    "series": "데일리 라이트",
-    "name": "데일리 라이트 미디엄 매트리스 (Q)",
-    "material": "",
-    "price": "480,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "9M1"
-        ]
-      }
-    ],
-    "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "매트리스",
-    "productImages": [
-      "/images/iloom_images/mattress/IMS15AB00A_9M1_1.jpg",
-      "/images/iloom_images/mattress/IMS15AB00A_9M1_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20230601/_1f3594db-5d62-4495-a5d1-f54434c106f9.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_ba9e0f0a-ba21-42d0-85f0-b154501b6c20.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_32215b66-c576-4efe-9019-fbb4c92549ca.jpg",
-      "https://www.iloom.com/upload/contents/20250311/_e72b4ef0-c809-4873-9eb5-921ea33364ea.jpg",
-      "https://www.iloom.com/upload/contents/20240903/_94e73a85-e4bc-4e05-8279-92d28399e260.jpg",
-      "https://www.iloom.com/upload/contents/20250619/_4dc69001-3f89-4a7b-a405-5c7da5f2e30a.jpg",
-      "https://www.iloom.com/upload/contents/20240724/_0a3f9306-8c4d-4605-98de-fba8602e5d39.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_6ce6ba0e-afd2-42a8-8239-e3280cc2ea1c.jpg",
-      "https://www.iloom.com/upload/contents/20250428/_2d37c3ec-4ae3-4a4b-8017-eec3f620b316.jpg"
-    ],
-    "ranking": 1282
-  },
-  {
-    "id": "IMS16AB00A",
-    "series": "데일리 라이트",
-    "name": "데일리 라이트 미디엄 매트리스 (K)",
-    "material": "",
-    "price": "540,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "9M1"
-        ]
-      }
-    ],
-    "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "매트리스",
-    "productImages": [
-      "/images/iloom_images/mattress/IMS16AB00A_9M1_1.jpg",
-      "/images/iloom_images/mattress/IMS16AB00A_9M1_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20230601/_751f2a1e-7137-4e0d-8cf2-8d2af50ae7ef.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_eb2cf233-ff4e-4395-a877-ae48d07d0ccb.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_9b9ac781-2b90-4589-8adb-bd66aaf1df86.jpg",
-      "https://www.iloom.com/upload/contents/20250311/_7a2c50fb-2858-4bc5-8fd9-59bd94a692f7.jpg",
-      "https://www.iloom.com/upload/contents/20240903/_793f5355-eb95-4847-b7b7-fc2e086a3300.jpg",
-      "https://www.iloom.com/upload/contents/20250619/_0e29a7ee-9a83-4a03-a345-8d94fdd39d5a.jpg",
-      "https://www.iloom.com/upload/contents/20240724/_35ee735d-194a-4d6d-baeb-b8b199983b32.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_f7246324-511c-4991-9f70-c297167d9ff3.jpg",
-      "https://www.iloom.com/upload/contents/20250428/_95a512bf-ac7a-4921-b8ec-dfc752ee5496.jpg"
-    ],
-    "ranking": 505
-  },
-  {
-    "id": "IMS10AC02A",
-    "series": "데일리 키즈",
-    "name": "데일리 키즈 키즈 스프링 매트리스 (S)",
-    "material": "스프링",
-    "price": "299,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "9M2"
-        ]
-      }
-    ],
-    "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "매트리스",
-    "productImages": [
-      "/images/iloom_images/kids-room/bed/IMS10AC02A_a_9M2_1.jpg",
-      "/images/iloom_images/kids-room/bed/IMS10AC02A_a_9M2_2.png",
-      "/images/iloom_images/mattress/IMS10AC02A_b_9M2_1.jpg",
-      "/images/iloom_images/mattress/IMS10AC02A_b_9M2_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20230601/_c30d2acc-4131-4ae7-9808-b34216d3f993.jpg",
-      "https://www.iloom.com/upload/contents/20240912/_13d6acd6-c420-45c5-a837-ffe5f17a3a5b.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_62160d95-68f0-436c-801d-1bb964e9fbcd.jpg",
-      "https://www.iloom.com/upload/contents/20240912/_6101a005-781a-470a-a5a7-8f132c352c6b.jpg",
-      "https://www.iloom.com/upload/contents/20240912/_ca184a46-505e-433a-903b-3b405980d21a.jpg",
-      "https://www.iloom.com/upload/contents/20250619/_1ddc2a37-9d88-4496-a871-90d25a96f4b0.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_311c8873-3cef-4153-b86b-24d83016d860.jpg",
-      "https://www.iloom.com/upload/contents/20240724/_69abd459-432e-4587-8458-b0d7f1a6a932.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_f9ecb4ab-9e0c-4aed-b1f6-a4f2c7923581.jpg",
-      "https://www.iloom.com/upload/contents/20250428/_30528552-79f2-4535-bc8f-8b679aacd6c5.jpg"
-    ],
-    "ranking": 909
-  },
-  {
-    "id": "IMS11AC02A",
-    "series": "데일리 키즈",
-    "name": "데일리 키즈 키즈 스프링 매트리스 (SS)",
-    "material": "스프링",
-    "price": "319,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "9M2"
-        ]
-      }
-    ],
-    "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "매트리스",
-    "productImages": [
-      "/images/iloom_images/kids-room/bed/IMS11AC02A_a_9M2_1.jpg",
-      "/images/iloom_images/kids-room/bed/IMS11AC02A_a_9M2_2.png",
-      "/images/iloom_images/mattress/IMS11AC02A_b_9M2_1.jpg",
-      "/images/iloom_images/mattress/IMS11AC02A_b_9M2_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20230601/_76abbe02-ba12-49a8-9354-7445a0fd0927.jpg",
-      "https://www.iloom.com/upload/contents/20240912/_b34ebe74-eac7-4acb-a877-985dd182f2a9.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_f9d8abbf-f32e-46ef-820b-91ac50943f06.jpg",
-      "https://www.iloom.com/upload/contents/20240912/_f770b3ec-aacb-4e8c-96de-a1d61959682d.jpg",
-      "https://www.iloom.com/upload/contents/20240912/_7754c2db-113a-471f-9317-addecb76bb3e.jpg",
-      "https://www.iloom.com/upload/contents/20250619/_5ade794c-52da-48a7-9ed5-4b1fcf594d5a.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_736c2348-aa7f-48b6-9cd8-e62c45b1aae1.jpg",
-      "https://www.iloom.com/upload/contents/20240724/_ab4597a4-a102-4b41-96e8-7ff872408648.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_82fc0246-8493-4054-a57b-aeb522fca50f.jpg",
-      "https://www.iloom.com/upload/contents/20250428/_2e445c1d-b3e2-4146-b840-b4becef2b643.jpg"
-    ],
-    "ranking": 218
-  },
-  {
-    "id": "HM50S10ECEN",
-    "series": "코코",
-    "name": "코코 키즈 스프링 매트리스 (S)",
-    "material": "스프링",
-    "price": "419,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "S5G2A"
-        ]
-      }
-    ],
-    "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "매트리스",
-    "productImages": [
-      "/images/iloom_images/mattress/HM50S10ECEN_S5G2A_1.jpg",
-      "/images/iloom_images/mattress/HM50S10ECEN_S5G2A_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20231019/_39e12e17-c876-40f7-9257-e66d270a2a2a.jpg",
-      "https://www.iloom.com/upload/contents/20230531/_cdec9b73-185f-4082-9153-b07fe5388d28.jpg",
-      "https://www.iloom.com/upload/contents/20230531/_07ec5b24-4a93-4410-8915-7f020ac0c6cb.jpg",
-      "https://www.iloom.com/upload/contents/20230531/_6719322f-6a34-4442-ae1a-5b7d955157fb.jpg",
-      "https://www.iloom.com/upload/contents/20250428/_dee1f778-b93f-419c-8e49-ccc2e5bc1875.jpg",
-      "https://www.iloom.com/upload/contents/20230531/_61ed8953-3420-4ee2-9af7-af86a3f3a626.jpg",
-      "https://www.iloom.com/upload/contents/20230531/_7d249f40-3e59-4591-a986-2335240e5cf2.jpg"
-    ],
-    "ranking": 751
-  },
-  {
-    "id": "HM50S11ECEN",
-    "series": "코코",
-    "name": "코코 키즈 스프링 매트리스 (SS)",
-    "material": "스프링",
-    "price": "469,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "S5G2A"
-        ]
-      }
-    ],
-    "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "매트리스",
-    "productImages": [
-      "/images/iloom_images/mattress/HM50S11ECEN_S5G2A_1.jpg",
-      "/images/iloom_images/mattress/HM50S11ECEN_S5G2A_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20231024/_e1371e6b-aa46-4e25-9e4e-b8f60c40b201.jpg",
-      "https://www.iloom.com/upload/contents/20231024/_11b97980-d959-47d2-b85c-8fe4da14d750.jpg",
-      "https://www.iloom.com/upload/contents/20231024/_d157de05-e30e-42cd-b876-3cfc0f35551a.jpg",
-      "https://www.iloom.com/upload/contents/20231024/_826f1145-f672-4269-b86a-45ce3ac9a209.jpg",
-      "https://www.iloom.com/upload/contents/20250428/_6b4bbe14-de82-4b32-aa53-e3e1f9a631ea.jpg",
-      "https://www.iloom.com/upload/contents/20230531/_6b083b35-0f3c-42eb-91d5-234ab8156991.jpg",
-      "https://www.iloom.com/upload/contents/20230531/_8debb10b-0612-4639-8011-b30b61cfa9fc.jpg"
-    ],
-    "ranking": 1177
-  },
-  {
-    "id": "IMS10CQ00A",
-    "series": "쿠시노 투인원 *양면 사용 가능",
-    "name": "쿠시노 투인원 *양면 사용 가능 양면 (미디엄하드+슈퍼하드) 매트리스 (S)",
-    "material": "",
-    "price": "569,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "3M2"
-        ]
-      }
-    ],
-    "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "매트리스",
-    "productImages": [
-      "/images/iloom_images/mattress/IMS10CQ00A_3M2_1.jpg",
-      "/images/iloom_images/mattress/IMS10CQ00A_3M2_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20241216/_f18faff6-9b08-4e57-bfb9-f953d62be69a.jpg",
-      "https://www.iloom.com/upload/contents/20241216/_c12a5953-56c8-4ef9-b1c2-73ce03eeaa45.jpg",
-      "https://www.iloom.com/upload/contents/20241216/_4a06a8c6-0351-4e32-b82c-439d6e7dc059.jpg",
-      "https://www.iloom.com/upload/contents/20241216/_27be64c8-3523-4969-af10-7e372df55229.jpg",
-      "https://www.iloom.com/upload/contents/20241216/_2560239a-43f8-450a-9715-708f5261a0cc.jpg",
-      "https://www.iloom.com/upload/contents/20260129/_03ee6417-e783-45a3-8832-07f729392936.jpg",
-      "https://www.iloom.com/upload/contents/20241216/_82923cd1-b1c4-4d92-8800-fa98790585f1.jpg",
-      "https://www.iloom.com/upload/contents/20250428/_94c64b2d-428e-4109-8765-10d327a56c4e.jpg"
-    ],
-    "ranking": 36
-  },
-  {
-    "id": "IMS11CQ00A",
-    "series": "쿠시노 투인원 *양면 사용 가능",
-    "name": "쿠시노 투인원 *양면 사용 가능 양면 (미디엄하드+슈퍼하드) 매트리스 (SS)",
-    "material": "",
-    "price": "599,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "3M2"
-        ]
-      }
-    ],
-    "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "매트리스",
-    "productImages": [
-      "/images/iloom_images/mattress/IMS11CQ00A_3M2_1.jpg",
-      "/images/iloom_images/mattress/IMS11CQ00A_3M2_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20241216/_54f72255-094c-472d-831c-53f8f39e346e.jpg",
-      "https://www.iloom.com/upload/contents/20241216/_d0dcc2a4-f58c-470a-b367-e6272502264b.jpg",
-      "https://www.iloom.com/upload/contents/20241216/_986661ad-d69c-4119-809e-e2703bb53f1f.jpg",
-      "https://www.iloom.com/upload/contents/20241216/_7cc31858-5c58-4791-823f-b87df2a14021.jpg",
-      "https://www.iloom.com/upload/contents/20241216/_980f5a47-f03b-4a1b-accd-15e48f49f78b.jpg",
-      "https://www.iloom.com/upload/contents/20260129/_0e01a431-789c-4740-b25a-f5be061a495f.jpg",
-      "https://www.iloom.com/upload/contents/20241216/_208f83d2-810c-4747-9d80-aa5957a3c1f0.jpg",
-      "https://www.iloom.com/upload/contents/20250428/_51df69b8-15f3-4702-93ad-5f48898c8a4f.jpg"
-    ],
-    "ranking": 689
-  },
-  {
-    "id": "IMS15CQ00A",
-    "series": "쿠시노 투인원 *양면 사용 가능",
-    "name": "쿠시노 투인원 *양면 사용 가능 양면 (미디엄하드+슈퍼하드) 매트리스 (Q)",
-    "material": "",
-    "price": "779,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "3M2"
-        ]
-      }
-    ],
-    "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "매트리스",
-    "productImages": [
-      "/images/iloom_images/mattress/IMS15CQ00A_3M2_1.jpg",
-      "/images/iloom_images/mattress/IMS15CQ00A_3M2_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20241216/_2ab3c9f6-1d43-466a-9917-8036dbaf75ee.jpg",
-      "https://www.iloom.com/upload/contents/20241216/_dacde483-5ddd-400b-a58d-3313ef6a33a4.jpg",
-      "https://www.iloom.com/upload/contents/20241216/_a54f844d-f556-45f3-bb6d-771e831268c2.jpg",
-      "https://www.iloom.com/upload/contents/20241216/_0c2aa70c-077d-44a1-a6f6-796d6845c518.jpg",
-      "https://www.iloom.com/upload/contents/20241216/_6c97462c-bd57-488b-a31c-e3821027c38f.jpg",
-      "https://www.iloom.com/upload/contents/20260129/_bde71253-0aa3-427e-8cfd-3d8314930915.jpg",
-      "https://www.iloom.com/upload/contents/20241216/_b7ffac3f-1c4b-4f3c-a92f-9b8d577138e6.jpg",
-      "https://www.iloom.com/upload/contents/20250428/_ee4231ab-e9f1-4639-9577-78fa75f584d7.jpg"
-    ],
-    "ranking": 734
-  },
-  {
-    "id": "IMS16CQ00A",
-    "series": "쿠시노 투인원 *양면 사용 가능",
-    "name": "쿠시노 투인원 *양면 사용 가능 양면 (미디엄하드+슈퍼하드) 매트리스 (K)",
-    "material": "",
-    "price": "899,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "3M2"
-        ]
-      }
-    ],
-    "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "매트리스",
-    "productImages": [
-      "/images/iloom_images/mattress/IMS16CQ00A_3M2_1.jpg",
-      "/images/iloom_images/mattress/IMS16CQ00A_3M2_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20241216/_2c0a929b-fd89-41a2-ac70-f2111cba7611.jpg",
-      "https://www.iloom.com/upload/contents/20241216/_d25e3da9-cfe5-493d-9f30-661266c05e3c.jpg",
-      "https://www.iloom.com/upload/contents/20241216/_fe74979d-6c22-418a-a6fc-1c8e2ba30e38.jpg",
-      "https://www.iloom.com/upload/contents/20241216/_5c31d6d2-6f1c-46a4-a034-8e0d4cdaf391.jpg",
-      "https://www.iloom.com/upload/contents/20241216/_b3ab18f1-82db-4278-b5ba-89eeb37e7ebe.jpg",
-      "https://www.iloom.com/upload/contents/20260129/_14cb957d-c208-4f5c-8921-5fe809dbc105.jpg",
-      "https://www.iloom.com/upload/contents/20241216/_f354df85-4eb5-4c12-80ba-e39b0e7f9372.jpg",
-      "https://www.iloom.com/upload/contents/20250428/_d591e311-ac28-47a9-83f8-399918b58948.jpg"
-    ],
-    "ranking": 180
-  },
-  {
-    "id": "IMP10AW00A",
-    "series": "쿠시노 지퍼탑 방수커버",
-    "name": "쿠시노 지퍼탑 방수커버 지퍼탑 방수 매트리스 커버 (S)",
-    "material": "",
-    "price": "72,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "XX"
-        ]
-      }
-    ],
-    "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "커버•패드",
-    "productImages": [
-      "/images/iloom_images/kids-room/bed/IMP10AW00A_a_XX_1.png",
-      "/images/iloom_images/kids-room/bed/IMP10AW00A_a_XX_2.png",
-      "/images/iloom_images/mattress/IMP10AW00A_b_XX_1.png",
-      "/images/iloom_images/mattress/IMP10AW00A_b_XX_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20240926/_330040c3-80ec-4933-929d-f632b14104d2.jpg",
-      "https://www.iloom.com/upload/contents/20251121/_4cbbce9c-583e-4cc3-aa21-7faa4a15219a.jpg",
-      "https://www.iloom.com/upload/contents/20251121/_392e8f07-63d8-4401-8217-db27bb55a880.jpg",
-      "https://www.iloom.com/upload/contents/20251121/_10399a33-7a03-4fd5-bb56-3cdf3caf5df1.gif",
-      "https://www.iloom.com/upload/contents/20251121/_d9632146-d970-4d50-9c64-5b9cbd744f49.jpg",
-      "https://www.iloom.com/upload/contents/20251121/_a3bf059a-3658-4669-8839-e249fc6b966b.jpg",
-      "https://www.iloom.com/upload/contents/20260209/_2eb1a7e4-def9-4de2-9a10-13a2742a1693.jpg",
-      "https://www.iloom.com/upload/contents/20251204/_72c049ce-a82b-4a5c-abed-b46643d14ddd.jpg",
-      "https://www.iloom.com/upload/contents/20240926/_5dbbbfbf-d4f7-4db4-a10a-39a16e5908c5.jpg"
-    ],
-    "ranking": 792
-  },
-  {
-    "id": "IMP11AW00A",
-    "series": "쿠시노 지퍼탑 방수커버",
-    "name": "쿠시노 지퍼탑 방수커버 지퍼탑 방수 매트리스 커버 (SS)",
-    "material": "",
-    "price": "75,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "XX"
-        ]
-      }
-    ],
-    "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "커버•패드",
-    "productImages": [
-      "/images/iloom_images/kids-room/bed/IMP11AW00A_a_XX_1.png",
-      "/images/iloom_images/kids-room/bed/IMP11AW00A_a_XX_2.png",
-      "/images/iloom_images/mattress/IMP11AW00A_b_XX_1.png",
-      "/images/iloom_images/mattress/IMP11AW00A_b_XX_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20240926/_20d77777-ff7f-4b1f-8014-07e84aeb76c5.jpg",
-      "https://www.iloom.com/upload/contents/20251121/_fcb9192a-97b9-456b-bfed-6ed0110b83b1.jpg",
-      "https://www.iloom.com/upload/contents/20251121/_aa52c98d-7f30-49bf-8fc2-2c937a39c5ff.jpg",
-      "https://www.iloom.com/upload/contents/20251121/_8b0fd3ae-2239-4623-bcd7-cc6b76ab0898.gif",
-      "https://www.iloom.com/upload/contents/20251121/_38ed093c-f7aa-475a-b329-fab72e67b0ac.jpg",
-      "https://www.iloom.com/upload/contents/20251121/_ad800e11-6e67-483a-9056-ff87aebb0777.jpg",
-      "https://www.iloom.com/upload/contents/20260209/_42560298-f5b3-443f-b2a6-3cd103089461.jpg",
-      "https://www.iloom.com/upload/contents/20251204/_9fac8b3c-13b9-4174-8828-796017a53d82.jpg",
-      "https://www.iloom.com/upload/contents/20240926/_368a4240-81c3-4977-9336-21b14cd1cd3e.jpg"
-    ],
-    "ranking": 527
-  },
-  {
     "id": "IMP15AW00A",
     "series": "쿠시노 지퍼탑 방수커버",
     "name": "쿠시노 지퍼탑 방수커버 지퍼탑 방수 매트리스 커버 (Q)",
@@ -65642,8 +55154,8 @@ export const productData = [
       }
     ],
     "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "커버•패드",
+    "category2": "커버•패드",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/mattress/IMP15AW00A_XX_1.png",
       "/images/iloom_images/mattress/IMP15AW00A_XX_2.png"
@@ -65679,8 +55191,8 @@ export const productData = [
       }
     ],
     "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "커버•패드",
+    "category2": "커버•패드",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/mattress/IMP16AW00A_XX_1.png",
       "/images/iloom_images/mattress/IMP16AW00A_XX_2.png"
@@ -65716,8 +55228,8 @@ export const productData = [
       }
     ],
     "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "커버•패드",
+    "category2": "커버•패드",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/mattress/HA40E10EEF_XX_1.png",
       "/images/iloom_images/mattress/HA40E10EEF_XX_2.png"
@@ -65746,8 +55258,8 @@ export const productData = [
       }
     ],
     "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "커버•패드",
+    "category2": "커버•패드",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/mattress/HA40E11EEF_XX_1.png",
       "/images/iloom_images/mattress/HA40E11EEF_XX_2.png"
@@ -65776,8 +55288,8 @@ export const productData = [
       }
     ],
     "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "커버•패드",
+    "category2": "커버•패드",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/mattress/HA40E15EEF_XX_1.png",
       "/images/iloom_images/mattress/HA40E15EEF_XX_2.png"
@@ -65806,8 +55318,8 @@ export const productData = [
       }
     ],
     "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "커버•패드",
+    "category2": "커버•패드",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/mattress/HA40E16EEF_XX_1.png",
       "/images/iloom_images/mattress/HA40E16EEF_XX_2.png"
@@ -65837,8 +55349,8 @@ export const productData = [
       }
     ],
     "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "토퍼",
+    "category2": "토퍼",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/mattress/IMP10AA00A_1E1_1.png",
       "/images/iloom_images/mattress/IMP10AA00A_1E1_3.png",
@@ -65874,8 +55386,8 @@ export const productData = [
       }
     ],
     "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "토퍼",
+    "category2": "토퍼",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/mattress/IMP11AA00A_1E1_1.png",
       "/images/iloom_images/mattress/IMP11AA00A_1E1_3.png",
@@ -65911,8 +55423,8 @@ export const productData = [
       }
     ],
     "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "토퍼",
+    "category2": "토퍼",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/mattress/IMP15AA00A_1E1_1.png",
       "/images/iloom_images/mattress/IMP15AA00A_1E1_3.png",
@@ -65948,8 +55460,8 @@ export const productData = [
       }
     ],
     "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "토퍼",
+    "category2": "토퍼",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/mattress/IMP16AA00A_1E1_1.png",
       "/images/iloom_images/mattress/IMP16AA00A_1E1_3.png",
@@ -65985,8 +55497,8 @@ export const productData = [
       }
     ],
     "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "토퍼",
+    "category2": "토퍼",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/mattress/IMP25AA00A_1E1_1.png",
       "/images/iloom_images/mattress/IMP25AA00A_1E1_3.png",
@@ -66022,8 +55534,8 @@ export const productData = [
       }
     ],
     "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "토퍼",
+    "category2": "토퍼",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/mattress/IMP26AA00A_1E1_1.png",
       "/images/iloom_images/mattress/IMP26AA00A_1E1_3.png",
@@ -66044,146 +55556,6 @@ export const productData = [
     "ranking": 1395
   },
   {
-    "id": "IMP11AA01A",
-    "series": "지퍼탑 프리미엄 프로텍터",
-    "name": "지퍼탑 프리미엄 프로텍터 (SS)",
-    "material": "",
-    "price": "109,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "1M1"
-        ]
-      }
-    ],
-    "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "매트리스",
-    "productImages": [
-      "/images/iloom_images/mattress/IMP11AA01A_1M1_1.jpg",
-      "/images/iloom_images/mattress/IMP11AA01A_1M1_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20240926/_873d54c9-f4de-48d7-a522-e819050af9db.jpg",
-      "https://www.iloom.com/upload/contents/20240926/_100c8a43-75be-4f2c-820b-5cdd81703e95.jpg",
-      "https://www.iloom.com/upload/contents/20240926/_a23f549b-7bbe-4bb4-93f3-28622b27d3c5.jpg",
-      "https://www.iloom.com/upload/contents/20240926/_0a8c0216-afee-4117-a372-1c87c2071e87.jpg",
-      "https://www.iloom.com/upload/contents/20240926/_c17f46e8-e80e-42d2-89f7-10a5bf751c4b.jpg",
-      "https://www.iloom.com/upload/contents/20251204/_0fd3471c-09ff-4ce7-a6ed-df2c84314ffd.jpg",
-      "https://www.iloom.com/upload/contents/20240926/_95be4c1b-d5dd-4adc-bcfa-3b3ec9a81da1.jpg"
-    ],
-    "ranking": 213
-  },
-  {
-    "id": "IMP15AA01A",
-    "series": "지퍼탑 프리미엄 프로텍터",
-    "name": "지퍼탑 프리미엄 프로텍터 (Q)",
-    "material": "",
-    "price": "129,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "1M1"
-        ]
-      }
-    ],
-    "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "매트리스",
-    "productImages": [
-      "/images/iloom_images/mattress/IMP15AA01A_1M1_1.jpg",
-      "/images/iloom_images/mattress/IMP15AA01A_1M1_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20240926/_e1793300-5c8f-46bb-abf4-13b74a07882e.jpg",
-      "https://www.iloom.com/upload/contents/20240926/_40f01166-15af-4e91-8144-ba48a35ddfec.jpg",
-      "https://www.iloom.com/upload/contents/20240926/_f54a2a31-ab60-4950-b2ec-9b1edd5d958f.jpg",
-      "https://www.iloom.com/upload/contents/20240926/_98a5ba24-a9b5-4676-8e46-a44460484f21.jpg",
-      "https://www.iloom.com/upload/contents/20240926/_b744631c-9f34-4f8a-8030-12cf2a685253.jpg",
-      "https://www.iloom.com/upload/contents/20251204/_0f218201-dc0d-4840-bd9d-24e5c2ecbcb0.jpg",
-      "https://www.iloom.com/upload/contents/20240926/_02a0dc02-67f9-4ede-a6cb-e4d6f1c1df82.jpg"
-    ],
-    "ranking": 544
-  },
-  {
-    "id": "IMP16AA01A",
-    "series": "지퍼탑 프리미엄 프로텍터",
-    "name": "지퍼탑 프리미엄 프로텍터 (K)",
-    "material": "",
-    "price": "139,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "1M1"
-        ]
-      }
-    ],
-    "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "매트리스",
-    "productImages": [
-      "/images/iloom_images/mattress/IMP16AA01A_1M1_1.jpg",
-      "/images/iloom_images/mattress/IMP16AA01A_1M1_2.png"
-    ],
-    "mdPick": false,
-    "new": true,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20240926/_bb8ae44e-76a5-4585-8c26-665fdc12afd9.jpg",
-      "https://www.iloom.com/upload/contents/20241010/_aba8cd4d-d0e1-4944-9a4e-b86dfcc43e25.jpg",
-      "https://www.iloom.com/upload/contents/20240926/_e1bac54e-57e9-46df-a44d-c07b80daf9b3.jpg",
-      "https://www.iloom.com/upload/contents/20240926/_5a905a10-c157-4eca-b07a-e9c9409dcda3.jpg",
-      "https://www.iloom.com/upload/contents/20240926/_5fb7d400-ebb8-4c47-aa3c-3d2c69558fdc.jpg",
-      "https://www.iloom.com/upload/contents/20251204/_eb9dee24-7495-42e9-ba8f-f9fe54784443.jpg",
-      "https://www.iloom.com/upload/contents/20240926/_bb342fa4-a07c-4989-8c53-3d3b3db21cbd.jpg"
-    ],
-    "ranking": 641
-  },
-  {
-    "id": "IMP18AA01A",
-    "series": "지퍼탑 프리미엄 프로텍터",
-    "name": "지퍼탑 프리미엄 프로텍터 (KK)",
-    "material": "",
-    "price": "149,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "1M1"
-        ]
-      }
-    ],
-    "originalCategory": "매트리스",
-    "category2": "매트리스",
-    "category3": "매트리스",
-    "productImages": [
-      "/images/iloom_images/mattress/IMP18AA01A_1M1_1.jpg",
-      "/images/iloom_images/mattress/IMP18AA01A_1M1_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20240926/_4d4eed2b-2918-47c4-81ac-eb9b6abe8068.jpg",
-      "https://www.iloom.com/upload/contents/20240926/_31898b4c-3f0d-4085-908b-5f5459bf6947.jpg",
-      "https://www.iloom.com/upload/contents/20240926/_6c4f957b-50f3-4512-ac4c-3c279972cf91.jpg",
-      "https://www.iloom.com/upload/contents/20240926/_ddb16d8d-669c-4944-8763-9f3604295825.jpg",
-      "https://www.iloom.com/upload/contents/20240926/_96c21e19-2dea-405a-96f7-b01a170813db.jpg",
-      "https://www.iloom.com/upload/contents/20251204/_bb7ccd3b-33e1-4c6c-9b5f-96c021a0e780.jpg",
-      "https://www.iloom.com/upload/contents/20240926/_b3590239-20bb-4583-8871-1e77218cf915.jpg"
-    ],
-    "ranking": 366
-  },
-  {
     "id": "HSPD120",
     "series": "글렌",
     "name": "글렌 책상 1200폭",
@@ -66198,7 +55570,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "홈라이브러리",
+    "originalCategory": "서재",
     "category2": "책상",
     "category3": "일반형",
     "productImages": [
@@ -66206,7 +55578,7 @@ export const productData = [
       "/images/iloom_images/home-library/desk/HSPD120_NCCDG_1.jpg",
       "/images/iloom_images/home-library/desk/HSPD120_NCCDG_3.png"
     ],
-    "mdPick": true,
+    "mdPick": false,
     "new": false,
     "BestSeller": false,
     "detailImg": [
@@ -66230,7 +55602,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "홈라이브러리",
+    "originalCategory": "서재",
     "category2": "책상",
     "category3": "일반형",
     "productImages": [
@@ -66263,9 +55635,9 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "홈라이브러리",
+    "originalCategory": "서재",
     "category2": "책장",
-    "category3": "책장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/home-library/bookshelf/HSPC064_GUDG_2.png",
       "/images/iloom_images/home-library/bookshelf/HSPC064_NCCBG_1.jpg",
@@ -66304,9 +55676,9 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "홈라이브러리",
+    "originalCategory": "서재",
     "category2": "책장",
-    "category3": "책장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/home-library/bookshelf/HSPC084_GUDG_2.png",
       "/images/iloom_images/home-library/bookshelf/HSPC084_GUDG_2.png",
@@ -66318,7 +55690,7 @@ export const productData = [
       "/images/iloom_images/home-library/bookshelf/HSPC084_WWWW_4.png",
       "/images/iloom_images/home-library/bookshelf/HSPC084_WWWW_4.png"
     ],
-    "mdPick": false,
+    "mdPick": true,
     "new": false,
     "BestSeller": false,
     "detailImg": [
@@ -66349,9 +55721,9 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "홈라이브러리",
+    "originalCategory": "서재",
     "category2": "책장",
-    "category3": "책장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/home-library/bookshelf/HSPC164_GUDG_2.png",
       "/images/iloom_images/home-library/bookshelf/HSPC164_NCCBG_1.jpg",
@@ -66392,9 +55764,9 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "홈라이브러리",
+    "originalCategory": "서재",
     "category2": "책장",
-    "category3": "책장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/home-library/bookshelf/HSPC184_GUDG_2.png",
       "/images/iloom_images/home-library/bookshelf/HSPC184_NCCBG_1.jpg",
@@ -66433,9 +55805,9 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "홈라이브러리",
+    "originalCategory": "서재",
     "category2": "책장",
-    "category3": "책장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/home-library/bookshelf/HSPC264_GUDG_2.png",
       "/images/iloom_images/home-library/bookshelf/HSPC264_NCCBG_1.jpg",
@@ -66471,9 +55843,9 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "홈라이브러리",
+    "originalCategory": "서재",
     "category2": "책장",
-    "category3": "책장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/home-library/bookshelf/HSPC284_GUDG_2.png",
       "/images/iloom_images/home-library/bookshelf/HSPC284_GUDG_2.png",
@@ -66513,9 +55885,9 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "홈라이브러리",
+    "originalCategory": "서재",
     "category2": "책장",
-    "category3": "책장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/home-library/bookshelf/HSPC066_GUDG_2.png",
       "/images/iloom_images/home-library/bookshelf/HSPC066_GUDG_2.png",
@@ -66557,9 +55929,9 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "홈라이브러리",
+    "originalCategory": "서재",
     "category2": "책장",
-    "category3": "책장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/home-library/bookshelf/HSPC086_GUDG_2.png",
       "/images/iloom_images/home-library/bookshelf/HSPC086_GUDG_2.png",
@@ -66601,9 +55973,9 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "홈라이브러리",
+    "originalCategory": "서재",
     "category2": "책장",
-    "category3": "책장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/home-library/bookshelf/HSPC166_GUDG_2.png",
       "/images/iloom_images/home-library/bookshelf/HSPC166_NCCBG_1.jpg",
@@ -66640,9 +56012,9 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "홈라이브러리",
+    "originalCategory": "서재",
     "category2": "책장",
-    "category3": "책장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/home-library/bookshelf/HSPC186_GUDG_2.png",
       "/images/iloom_images/home-library/bookshelf/HSPC186_GUDG_2.png",
@@ -66683,9 +56055,9 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "홈라이브러리",
+    "originalCategory": "서재",
     "category2": "책장",
-    "category3": "책장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/home-library/bookshelf/HSPC266_GUDG_2.png",
       "/images/iloom_images/home-library/bookshelf/HSPC266_GUDG_2.png",
@@ -66725,9 +56097,9 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "홈라이브러리",
+    "originalCategory": "서재",
     "category2": "책장",
-    "category3": "책장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/home-library/bookshelf/HSPC286_GUDG_2.png",
       "/images/iloom_images/home-library/bookshelf/HSPC286_GUDG_2.png",
@@ -66754,114 +56126,6 @@ export const productData = [
     "ranking": 130
   },
   {
-    "id": "HSKA0002",
-    "series": "글렌",
-    "name": "글렌 북엔드(2ea)",
-    "material": "",
-    "price": "4,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "IV",
-          "DG"
-        ]
-      }
-    ],
-    "originalCategory": "홈라이브러리",
-    "category2": "책장",
-    "category3": "액세서리",
-    "productImages": [
-      "/images/iloom_images/home-library/bookshelf/HSKA0002_c_IV_1.jpg",
-      "/images/iloom_images/study-room/storage/HSKA0002_a_IV_1.jpg",
-      "/images/iloom_images/study-room/storage/HSKA0002_b_IV_1.jpg"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20180322/_edde7f6e-e797-4ae4-8875-573dafb41818.jpg",
-      "https://www.iloom.com/upload/contents/20180322/_d0603bf4-a2f8-4069-b048-10168d7a957a.jpg",
-      "https://www.iloom.com/upload/contents/20180322/_9dfa6db6-b50e-4c0e-9869-05e4b4eb8216.jpg"
-    ],
-    "ranking": 380
-  },
-  {
-    "id": "IAY00AA00A",
-    "series": "뉴트",
-    "name": "뉴트 철제 북엔드",
-    "material": "",
-    "price": "15,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "WW"
-        ]
-      }
-    ],
-    "originalCategory": "홈라이브러리",
-    "category2": "책장",
-    "category3": "액세서리",
-    "productImages": [
-      "/images/iloom_images/study-room/storage/IAY00AA00A_WW_1.png",
-      "/images/iloom_images/study-room/storage/IAY00AA00A_WW_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20241128/_23815215-16dd-42c0-84bb-2d876d54859c.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_4284b720-1ca5-4151-9a0a-d24bb541c53d.jpg",
-      "https://www.iloom.com/upload/contents/20250709/_f5c1fc81-cd35-4fda-9df6-1ba6b63f28c6.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_778a9a59-b2aa-4c52-ae40-262790efba1f.jpg"
-    ],
-    "ranking": 1640
-  },
-  {
-    "id": "HSPC1000P",
-    "series": "일룸(공통)",
-    "name": "일룸(공통) 패브릭 수납박스(2ea)",
-    "material": "패브릭",
-    "price": "17,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "2F1",
-          "2F2"
-        ]
-      }
-    ],
-    "originalCategory": "홈라이브러리",
-    "category2": "책장",
-    "category3": "액세서리",
-    "productImages": [
-      "/images/iloom_images/home-library/bookshelf/HSPC1000P_c_2F1_1.jpg",
-      "/images/iloom_images/home-library/bookshelf/HSPC1000P_c_2F1_3.png",
-      "/images/iloom_images/home-library/bookshelf/HSPC1000P_c_2F2_2.png",
-      "/images/iloom_images/kids-room/accessories/HSPC1000P_a_2F1_1.jpg",
-      "/images/iloom_images/kids-room/accessories/HSPC1000P_a_2F1_3.png",
-      "/images/iloom_images/kids-room/accessories/HSPC1000P_a_2F2_2.png",
-      "/images/iloom_images/study-room/storage/HSPC1000P_b_2F1_1.jpg",
-      "/images/iloom_images/study-room/storage/HSPC1000P_b_2F1_3.png",
-      "/images/iloom_images/study-room/storage/HSPC1000P_b_2F2_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20230601/_b7a45c15-326e-4d34-9e76-2cee763ee916.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_7081eb87-9bf9-4827-a2ad-015a4cee44e8.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_b833b3d9-a5df-48c9-aa64-da5fff5b014d.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_385b35fd-4899-42f9-b425-9e787f3f35c9.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_820feb8d-a024-44cd-a016-a642080c5a54.gif",
-      "https://www.iloom.com/upload/contents/20250722/_c7cabc62-7ac0-4dd3-9426-487071615641.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_f766798d-5a92-4a0f-8c56-1ecd4062ade6.jpg"
-    ],
-    "ranking": 1410
-  },
-  {
     "id": "HSPA0001",
     "series": "글렌",
     "name": "글렌 포인트박스",
@@ -66875,7 +56139,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "홈라이브러리",
+    "originalCategory": "서재",
     "category2": "책장",
     "category3": "액세서리",
     "productImages": [
@@ -66905,7 +56169,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "홈라이브러리",
+    "originalCategory": "서재",
     "category2": "책장",
     "category3": "액세서리",
     "productImages": [
@@ -66940,7 +56204,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "홈라이브러리",
+    "originalCategory": "서재",
     "category2": "책장",
     "category3": "액세서리",
     "productImages": [
@@ -66970,7 +56234,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "홈라이브러리",
+    "originalCategory": "서재",
     "category2": "책상",
     "category3": "일반형",
     "productImages": [
@@ -67014,7 +56278,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "홈라이브러리",
+    "originalCategory": "서재",
     "category2": "책상",
     "category3": "일반형",
     "productImages": [
@@ -67057,7 +56321,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "홈라이브러리",
+    "originalCategory": "서재",
     "category2": "책상",
     "category3": "모션형",
     "productImages": [
@@ -67106,7 +56370,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "홈라이브러리",
+    "originalCategory": "서재",
     "category2": "책상",
     "category3": "모션형",
     "productImages": [
@@ -67164,458 +56428,6 @@ export const productData = [
     "ranking": 451
   },
   {
-    "id": "IDU00AA05A",
-    "series": "뉴트",
-    "name": "뉴트 모니터암",
-    "material": "",
-    "price": "56,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "WW"
-        ]
-      }
-    ],
-    "originalCategory": "홈라이브러리",
-    "category2": "책장",
-    "category3": "액세서리",
-    "productImages": [
-      "/images/iloom_images/study-room/storage/IDU00AA05A_WW_1.jpg",
-      "/images/iloom_images/study-room/storage/IDU00AA05A_WW_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250106/_855c14c8-b161-435c-a028-3cfabc450969.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_4b896410-36fa-4a33-a6c2-09b2c0af0e67.jpg",
-      "https://www.iloom.com/upload/contents/20250709/_7abb2bc1-b86b-4b12-aaae-6db017ad77d3.jpg",
-      "https://www.iloom.com/upload/contents/20241203/_1f2bf145-ac8a-4e13-999a-49a67a7a0a7c.jpg"
-    ],
-    "ranking": 723
-  },
-  {
-    "id": "IAY00AA00A",
-    "series": "뉴트",
-    "name": "뉴트 철제 북엔드",
-    "material": "",
-    "price": "15,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "WW"
-        ]
-      }
-    ],
-    "originalCategory": "홈라이브러리",
-    "category2": "책장",
-    "category3": "액세서리",
-    "productImages": [
-      "/images/iloom_images/study-room/storage/IAY00AA00A_WW_1.png",
-      "/images/iloom_images/study-room/storage/IAY00AA00A_WW_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20241128/_23815215-16dd-42c0-84bb-2d876d54859c.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_4284b720-1ca5-4151-9a0a-d24bb541c53d.jpg",
-      "https://www.iloom.com/upload/contents/20250709/_f5c1fc81-cd35-4fda-9df6-1ba6b63f28c6.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_778a9a59-b2aa-4c52-ae40-262790efba1f.jpg"
-    ],
-    "ranking": 1532
-  },
-  {
-    "id": "HSGP0303",
-    "series": "뉴트",
-    "name": "뉴트 3단 책상 서랍",
-    "material": "",
-    "price": "119,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "WW"
-        ]
-      }
-    ],
-    "originalCategory": "홈라이브러리",
-    "category2": "책상",
-    "category3": "일반형",
-    "productImages": [
-      "/images/iloom_images/home-library/desk/HSGP0303_b_WW_1.png",
-      "/images/iloom_images/home-library/desk/HSGP0303_b_WW_2.png",
-      "/images/iloom_images/home-library/desk/HSGP0303_b_WW_3.png",
-      "/images/iloom_images/home-library/desk/HSGP0303_c_GYM_1.png",
-      "/images/iloom_images/home-library/desk/HSGP0303_c_GYM_2.png",
-      "/images/iloom_images/home-library/desk/HSGP0303_c_GYM_3.png",
-      "/images/iloom_images/study-room/desk/HSGP0303_a_WW_1.png",
-      "/images/iloom_images/study-room/desk/HSGP0303_a_WW_2.png",
-      "/images/iloom_images/study-room/desk/HSGP0303_a_WW_3.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250109/_e8f88281-9ad4-42c0-a525-1ecab35359d4.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_822ff278-0d21-448e-923f-f4f993d20c04.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_2866c52c-edff-4063-9253-7e76c470e24d.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_c7c70d6a-b0e9-4c36-8fd9-7445fd54be59.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_d81ea27b-05ac-47e9-9163-31d6f329aa84.jpg",
-      "https://www.iloom.com/upload/contents/20250709/_50c83076-44d5-4da0-99dc-489bc0013bbf.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_5d240c4c-d10b-42e3-a145-85cef1c6c93c.jpg"
-    ],
-    "ranking": 1027
-  },
-  {
-    "id": "HSPC084",
-    "series": "글렌",
-    "name": "글렌 4단 기본선반장 800폭",
-    "material": "",
-    "price": "239,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "NCCBG",
-          "GUDG",
-          "NCCGG",
-          "WWWW"
-        ]
-      }
-    ],
-    "originalCategory": "홈라이브러리",
-    "category2": "책장",
-    "category3": "책장",
-    "productImages": [
-      "/images/iloom_images/home-library/bookshelf/HSPC084_GUDG_2.png",
-      "/images/iloom_images/home-library/bookshelf/HSPC084_GUDG_2.png",
-      "/images/iloom_images/home-library/bookshelf/HSPC084_NCCBG_1.jpg",
-      "/images/iloom_images/home-library/bookshelf/HSPC084_NCCBG_5.png",
-      "/images/iloom_images/home-library/bookshelf/HSPC084_NCCBG_5.png",
-      "/images/iloom_images/home-library/bookshelf/HSPC084_NCCGG_3.png",
-      "/images/iloom_images/home-library/bookshelf/HSPC084_NCCGG_3.png",
-      "/images/iloom_images/home-library/bookshelf/HSPC084_WWWW_4.png",
-      "/images/iloom_images/home-library/bookshelf/HSPC084_WWWW_4.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20241128/_c01fc851-1681-45ca-a17e-c98dbf506885.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_f726d54e-10dc-4082-956e-0e24a3c60bc1.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_e9723a96-20ca-4d6a-8ec8-4f4c8f841fe1.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_7f015028-92b8-4927-8430-f69d5fa63f0f.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_671c0a71-55b3-4208-88aa-2289c537160b.jpg",
-      "https://www.iloom.com/upload/contents/20260326/_d64704a0-16a6-4fa9-aab4-973ff355f242.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_6a9840fc-cbaa-4fcd-b5cb-888a90a67157.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_0a7ece84-8ef4-46ad-b0de-6d872fc3fec9.jpg"
-    ],
-    "ranking": 1341
-  },
-  {
-    "id": "HSPC184",
-    "series": "글렌",
-    "name": "글렌 4단 기본선반장 800폭(1단서랍형)",
-    "material": "",
-    "price": "329,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "NCCBG",
-          "GUDG",
-          "NCCGG",
-          "WWWW"
-        ]
-      }
-    ],
-    "originalCategory": "홈라이브러리",
-    "category2": "책장",
-    "category3": "책장",
-    "productImages": [
-      "/images/iloom_images/home-library/bookshelf/HSPC184_GUDG_2.png",
-      "/images/iloom_images/home-library/bookshelf/HSPC184_NCCBG_1.jpg",
-      "/images/iloom_images/home-library/bookshelf/HSPC184_NCCBG_5.png",
-      "/images/iloom_images/home-library/bookshelf/HSPC184_NCCBG_5.png",
-      "/images/iloom_images/home-library/bookshelf/HSPC184_NCCGG_3.png",
-      "/images/iloom_images/home-library/bookshelf/HSPC184_WWWW_4.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20241128/_b5a87041-8fdb-4fe0-9191-ef6ba14b23be.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_c47d7c4d-96d3-47fb-b73d-c91893644cdf.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_144449c6-37cf-42ac-85d0-2a130067211a.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_96c66780-1621-414a-b3ec-0b13876dc821.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_f248412d-a198-4d8f-897d-0f3a027f32a7.jpg",
-      "https://www.iloom.com/upload/contents/20260326/_70da74db-8b64-48fc-85c5-501734bed125.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_cf5853d6-36ac-4b96-a876-fcfa93beb646.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_0a7ece84-8ef4-46ad-b0de-6d872fc3fec9.jpg"
-    ],
-    "ranking": 324
-  },
-  {
-    "id": "HSPC086",
-    "series": "글렌",
-    "name": "글렌 6단 기본선반장 800폭",
-    "material": "",
-    "price": "298,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "NCCBG",
-          "GUDG",
-          "NCCGG",
-          "WWWW"
-        ]
-      }
-    ],
-    "originalCategory": "홈라이브러리",
-    "category2": "책장",
-    "category3": "책장",
-    "productImages": [
-      "/images/iloom_images/home-library/bookshelf/HSPC086_GUDG_2.png",
-      "/images/iloom_images/home-library/bookshelf/HSPC086_GUDG_2.png",
-      "/images/iloom_images/home-library/bookshelf/HSPC086_NCCBG_1.jpg",
-      "/images/iloom_images/home-library/bookshelf/HSPC086_NCCBG_5.png",
-      "/images/iloom_images/home-library/bookshelf/HSPC086_NCCBG_5.png",
-      "/images/iloom_images/home-library/bookshelf/HSPC086_NCCGG_3.png",
-      "/images/iloom_images/home-library/bookshelf/HSPC086_NCCGG_3.png",
-      "/images/iloom_images/home-library/bookshelf/HSPC086_WWWW_4.png",
-      "/images/iloom_images/home-library/bookshelf/HSPC086_WWWW_4.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20241128/_7bf5a729-83e7-451e-a782-4b3dfda09cae.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_e2e96296-6970-4d6b-ba8d-1a7502c74f55.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_b0c62f53-b99b-47a4-a0db-5b12214ac4c9.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_b8af4e47-594f-48a0-8bb1-628f87bddc27.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_e5d08e8a-0f9e-4a4a-8314-6048cae46e56.jpg",
-      "https://www.iloom.com/upload/contents/20260326/_d7625a49-2cf1-488d-b2f3-b491fa580d6e.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_bbca21fd-390e-4af9-b4ae-7209f046a4aa.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_0a7ece84-8ef4-46ad-b0de-6d872fc3fec9.jpg"
-    ],
-    "ranking": 949
-  },
-  {
-    "id": "HSPC186",
-    "series": "글렌",
-    "name": "글렌 6단 기본선반장 800폭(1단서랍형)",
-    "material": "",
-    "price": "388,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "NCCBG",
-          "GUDG",
-          "WWWW"
-        ]
-      }
-    ],
-    "originalCategory": "홈라이브러리",
-    "category2": "책장",
-    "category3": "책장",
-    "productImages": [
-      "/images/iloom_images/home-library/bookshelf/HSPC186_GUDG_2.png",
-      "/images/iloom_images/home-library/bookshelf/HSPC186_GUDG_2.png",
-      "/images/iloom_images/home-library/bookshelf/HSPC186_NCCBG_1.jpg",
-      "/images/iloom_images/home-library/bookshelf/HSPC186_NCCBG_4.png",
-      "/images/iloom_images/home-library/bookshelf/HSPC186_NCCBG_4.png",
-      "/images/iloom_images/home-library/bookshelf/HSPC186_WWWW_3.png",
-      "/images/iloom_images/home-library/bookshelf/HSPC186_WWWW_3.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20241128/_d0c291e6-728c-4d75-8d31-2fd675fe354e.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_f26dfc8a-11b9-4183-bde8-2a635233989d.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_5bc0db8d-1654-4e62-ae60-5eb26e359098.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_82473893-f913-4742-80b6-282b33ad46d2.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_6b8565ec-52d1-436d-bc7a-a1a5bb4e38c1.jpg",
-      "https://www.iloom.com/upload/contents/20260326/_852493d0-2a3d-4793-91da-ad08c3a58d43.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_d76bb4ff-61f2-4093-8b6d-e1d4bd268f1b.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_0a7ece84-8ef4-46ad-b0de-6d872fc3fec9.jpg"
-    ],
-    "ranking": 1709
-  },
-  {
-    "id": "ICB0002A",
-    "series": "뉴트",
-    "name": "뉴트 책장 5단 600폭",
-    "material": "",
-    "price": "189,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "WW"
-        ]
-      }
-    ],
-    "originalCategory": "홈라이브러리",
-    "category2": "책장",
-    "category3": "책장",
-    "productImages": [
-      "/images/iloom_images/study-room/bookshelf/ICB0002A_WW_1.png",
-      "/images/iloom_images/study-room/bookshelf/ICB0002A_WW_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250109/_cba8c25c-84d4-44d8-bbce-b5abce5b31f4.jpg",
-      "https://www.iloom.com/upload/contents/20251114/_6950e6d3-66f4-418c-9f7e-65662882e117.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_d8f4264f-5e64-4204-ad4a-7bd95f999781.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_3af61e27-7654-4468-9ae7-a48b081e7fe2.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_6d61b625-7139-4549-87c7-0700a3b7b293.jpg",
-      "https://www.iloom.com/upload/contents/20251114/_d78377fe-73ff-4eac-90c8-29bd8823ae7c.gif",
-      "https://www.iloom.com/upload/contents/20241128/_175955c0-c291-4ff1-9a70-b2f922b93ed9.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_647bf145-c842-435a-a49f-0fbf9416788b.gif",
-      "https://www.iloom.com/upload/contents/20241128/_243bfd83-2b1b-4054-ba6d-6c515be19333.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_42bf12be-ac8c-4e64-ba3d-2028e91a1401.jpg",
-      "https://www.iloom.com/upload/contents/20251114/_97c1bf6b-f8c1-4913-93eb-75d274d1603c.gif",
-      "https://www.iloom.com/upload/contents/20250709/_91f4aadb-183e-4cea-9084-7d9357b47502.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_9b766cb9-b4f0-4cf7-a1c7-84d213c539ad.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_51965ce6-0deb-422a-adb2-7324302be9c3.jpg"
-    ],
-    "ranking": 531
-  },
-  {
-    "id": "ICB0003A",
-    "series": "뉴트",
-    "name": "뉴트 책장 5단 800폭",
-    "material": "",
-    "price": "239,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "WW"
-        ]
-      }
-    ],
-    "originalCategory": "홈라이브러리",
-    "category2": "책장",
-    "category3": "책장",
-    "productImages": [
-      "/images/iloom_images/study-room/bookshelf/ICB0003A_WW_1.jpg",
-      "/images/iloom_images/study-room/bookshelf/ICB0003A_WW_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250109/_02b5b470-d000-4d49-b891-f20e69d72c64.jpg",
-      "https://www.iloom.com/upload/contents/20251114/_e463e57f-a455-401c-a57d-223ff1841db8.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_bf0c0658-f7e8-489f-9a98-2a619044fd5f.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_b1888722-da87-4ced-89f0-7522816f7911.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_b350f29f-4422-49e4-87da-ceb16cf1d4c9.jpg",
-      "https://www.iloom.com/upload/contents/20251114/_1a370ed0-444e-443e-aa7f-8c9c1239b3aa.gif",
-      "https://www.iloom.com/upload/contents/20241128/_54a92b9f-7455-41a3-bb0a-d7756ee52993.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_a0496bf4-d2b9-426a-a163-1ec1a3386b2c.gif",
-      "https://www.iloom.com/upload/contents/20250110/_2fdb05ce-528c-460e-9b30-8c71a20cd752.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_766b0cce-b622-40cf-96b9-2ea0a4fb2251.jpg",
-      "https://www.iloom.com/upload/contents/20251114/_7ec31f7d-4f66-409f-b807-bad5f2432260.gif",
-      "https://www.iloom.com/upload/contents/20250709/_4288da7e-87a4-4cd4-9c2e-fe90ce0a67c2.jpg",
-      "https://www.iloom.com/upload/contents/20250110/_487df19c-bfa4-4b91-b4d1-c3892f568d44.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_51965ce6-0deb-422a-adb2-7324302be9c3.jpg"
-    ],
-    "ranking": 1379
-  },
-  {
-    "id": "ICB0005A",
-    "series": "뉴트",
-    "name": "뉴트 책장 6단 600폭",
-    "material": "",
-    "price": "219,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "WW"
-        ]
-      }
-    ],
-    "originalCategory": "홈라이브러리",
-    "category2": "책장",
-    "category3": "책장",
-    "productImages": [
-      "/images/iloom_images/study-room/bookshelf/ICB0005A_WW_1.jpg",
-      "/images/iloom_images/study-room/bookshelf/ICB0005A_WW_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250109/_755c638b-3041-401b-a2a7-c5018a0a76b8.jpg",
-      "https://www.iloom.com/upload/contents/20251114/_1e25619b-23ac-4d2b-9352-315f86376119.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_5c4ec3c4-1f89-4634-ab5d-da431440cfb6.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_2c37ba24-fe52-49cd-ab76-332426356529.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_be88c846-e7b4-46ae-ac65-80f0724b8fa7.jpg",
-      "https://www.iloom.com/upload/contents/20251114/_01e474ec-1abd-4c42-895c-e00aaa76d664.gif",
-      "https://www.iloom.com/upload/contents/20241128/_9ef9c58d-1f62-4aad-998c-7ed9b9eb1526.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_ce9be375-18b4-4e76-bdb9-ee840e75baaa.gif",
-      "https://www.iloom.com/upload/contents/20241128/_d437969b-8f63-4c67-aa4b-14e0d7ea3bef.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_af4c7f8a-8ab6-4192-b89e-4e9b5fe13cf5.jpg",
-      "https://www.iloom.com/upload/contents/20251114/_e21e991c-873f-4afc-895e-cc00c69fd3c9.gif",
-      "https://www.iloom.com/upload/contents/20250709/_0bbd939e-d33b-493a-b8b8-11db68e95a73.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_b654c86f-cc4e-41b0-bd52-ede010698a6d.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_51965ce6-0deb-422a-adb2-7324302be9c3.jpg"
-    ],
-    "ranking": 869
-  },
-  {
-    "id": "ICB0006A",
-    "series": "뉴트",
-    "name": "뉴트 책장 6단 800폭",
-    "material": "",
-    "price": "274,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "WW"
-        ]
-      }
-    ],
-    "originalCategory": "홈라이브러리",
-    "category2": "책장",
-    "category3": "책장",
-    "productImages": [
-      "/images/iloom_images/study-room/bookshelf/ICB0006A_WW_1.jpg",
-      "/images/iloom_images/study-room/bookshelf/ICB0006A_WW_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250109/_a673a051-2aca-4bc8-af13-051343d4e940.jpg",
-      "https://www.iloom.com/upload/contents/20251114/_d6cd10c5-ec22-4e40-b03f-6e24144fe5b8.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_bf89ae77-7552-4633-a8c6-14dc058b231a.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_bcf65c67-cc2f-4ed0-af2b-ed96f3ba6c72.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_181230a0-ae0f-437c-9dc6-afa49478f913.jpg",
-      "https://www.iloom.com/upload/contents/20251114/_0abb97c8-843c-44dc-a9f5-7d2e93c451bd.gif",
-      "https://www.iloom.com/upload/contents/20241128/_40307d81-5e9a-4bf8-828a-44650741c1bf.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_5862a1bf-c661-431d-bd31-76e2b7099d0b.gif",
-      "https://www.iloom.com/upload/contents/20250110/_183565d4-3e34-496e-a2d5-d40cf92f4564.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_c5d78793-3748-407c-9ad2-55cebf362581.jpg",
-      "https://www.iloom.com/upload/contents/20251114/_88858ec7-5964-4bd2-8186-ce248ea6ad62.gif",
-      "https://www.iloom.com/upload/contents/20250709/_52483a5b-c4f8-4be7-b899-944d0cf95295.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_df121d07-6e2e-4219-aba8-ca4e9d1a9790.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_51965ce6-0deb-422a-adb2-7324302be9c3.jpg"
-    ],
-    "ranking": 272
-  },
-  {
     "id": "HSFC044N",
     "series": "에디",
     "name": "에디 400폭 4단책장",
@@ -67630,9 +56442,9 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "홈라이브러리",
+    "originalCategory": "서재",
     "category2": "책장",
-    "category3": "책장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/home-library/bookshelf/HSFC044N_IV_1.jpg",
       "/images/iloom_images/home-library/bookshelf/HSFC044N_IV_3.png",
@@ -67670,9 +56482,9 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "홈라이브러리",
+    "originalCategory": "서재",
     "category2": "책장",
-    "category3": "책장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/home-library/bookshelf/HSFC046N_IV_1.jpg",
       "/images/iloom_images/home-library/bookshelf/HSFC046N_IV_3.png",
@@ -67710,9 +56522,9 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "홈라이브러리",
+    "originalCategory": "서재",
     "category2": "책장",
-    "category3": "책장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/home-library/bookshelf/HSFC122_IV_1.jpg",
       "/images/iloom_images/home-library/bookshelf/HSFC122_IV_3.png",
@@ -67750,9 +56562,9 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "홈라이브러리",
+    "originalCategory": "서재",
     "category2": "책장",
-    "category3": "책장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/home-library/bookshelf/HSFC124_IV_1.jpg",
       "/images/iloom_images/home-library/bookshelf/HSFC124_IV_3.png",
@@ -67790,9 +56602,9 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "홈라이브러리",
+    "originalCategory": "서재",
     "category2": "책장",
-    "category3": "책장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/home-library/bookshelf/HSFC062N_IV_1.jpg",
       "/images/iloom_images/home-library/bookshelf/HSFC062N_IV_3.png",
@@ -67830,9 +56642,9 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "홈라이브러리",
+    "originalCategory": "서재",
     "category2": "책장",
-    "category3": "책장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/home-library/bookshelf/HSFC063N_IV_1.png",
       "/images/iloom_images/home-library/bookshelf/HSFC063N_IV_1.png",
@@ -67871,9 +56683,9 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "홈라이브러리",
+    "originalCategory": "서재",
     "category2": "책장",
-    "category3": "책장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/home-library/bookshelf/HSFC064N_IV_1.jpg",
       "/images/iloom_images/home-library/bookshelf/HSFC064N_IV_3.png",
@@ -67911,9 +56723,9 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "홈라이브러리",
+    "originalCategory": "서재",
     "category2": "책장",
-    "category3": "책장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/home-library/bookshelf/HSFC066NA_IV_1.jpg",
       "/images/iloom_images/home-library/bookshelf/HSFC066NA_IV_3.png",
@@ -67937,52 +56749,6 @@ export const productData = [
     "ranking": 1002
   },
   {
-    "id": "HSFC082N",
-    "series": "에디",
-    "name": "에디 800폭 2단책장",
-    "material": "",
-    "price": "119,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "IV",
-          "NCC",
-          "OAT"
-        ]
-      }
-    ],
-    "originalCategory": "홈라이브러리",
-    "category2": "책장",
-    "category3": "책장",
-    "productImages": [
-      "/images/iloom_images/home-library/bookshelf/HSFC082N_b_IV_1.jpg",
-      "/images/iloom_images/home-library/bookshelf/HSFC082N_b_IV_4.png",
-      "/images/iloom_images/home-library/bookshelf/HSFC082N_b_NCC_2.png",
-      "/images/iloom_images/home-library/bookshelf/HSFC082N_b_OAT_3.png",
-      "/images/iloom_images/kids-room/storage/HSFC082N_a_IV_2.png",
-      "/images/iloom_images/kids-room/storage/HSFC082N_a_NCC_3.png",
-      "/images/iloom_images/kids-room/storage/HSFC082N_a_OAT_1.jpg",
-      "/images/iloom_images/kids-room/storage/HSFC082N_a_OAT_4.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20230601/_6524f73b-92c8-4b7c-9b98-ed4ca34977f3.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_8bc3c201-c19e-42ab-95ba-e63e3642658c.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_7b10c8ce-ed6d-45db-962e-1f299bdc5b91.jpg",
-      "https://www.iloom.com/upload/contents/20240507/_145469a6-b6a8-4299-a098-4f857fbcb2bd.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_b16f9ceb-362c-469b-be49-dfedd46a35af.jpg",
-      "https://www.iloom.com/upload/contents/20240507/_2329e495-f108-4c01-a41a-0fb34af43d21.gif",
-      "https://www.iloom.com/upload/contents/20241128/_d3314af1-27e7-4497-89ff-06fdecbc0c66.jpg",
-      "https://www.iloom.com/upload/contents/20250625/_9be64ccb-8adc-4dd9-b139-3c4d015ee6fb.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_b214e31b-420c-40dc-90a4-8d5e6879b397.jpg",
-      "https://www.iloom.com/upload/contents/20230601/_efd0fb5d-73dd-4edb-bf5e-ee26e78d7a20.jpg"
-    ],
-    "ranking": 1083
-  },
-  {
     "id": "HSFC083N",
     "series": "에디",
     "name": "에디 800폭 3단책장",
@@ -67997,9 +56763,9 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "홈라이브러리",
+    "originalCategory": "서재",
     "category2": "책장",
-    "category3": "책장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/home-library/bookshelf/HSFC083N_IV_1.jpg",
       "/images/iloom_images/home-library/bookshelf/HSFC083N_IV_3.png",
@@ -68037,9 +56803,9 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "홈라이브러리",
+    "originalCategory": "서재",
     "category2": "책장",
-    "category3": "책장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/home-library/bookshelf/HSFC084N_IV_1.jpg",
       "/images/iloom_images/home-library/bookshelf/HSFC084N_IV_3.png",
@@ -68078,9 +56844,9 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "홈라이브러리",
+    "originalCategory": "서재",
     "category2": "책장",
-    "category3": "책장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/home-library/bookshelf/HSFC086NA_IV_1.jpg",
       "/images/iloom_images/home-library/bookshelf/HSFC086NA_IV_3.png",
@@ -68118,9 +56884,9 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "홈라이브러리",
+    "originalCategory": "서재",
     "category2": "책장",
-    "category3": "책장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/home-library/bookshelf/HSFC162N_IV_1.jpg",
       "/images/iloom_images/home-library/bookshelf/HSFC162N_IV_3.png",
@@ -68158,9 +56924,9 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "홈라이브러리",
+    "originalCategory": "서재",
     "category2": "책장",
-    "category3": "책장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/home-library/bookshelf/HSFC182N_IV_1.jpg",
       "/images/iloom_images/home-library/bookshelf/HSFC182N_IV_3.png",
@@ -68198,9 +56964,9 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "홈라이브러리",
+    "originalCategory": "서재",
     "category2": "책장",
-    "category3": "책장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/home-library/bookshelf/HSFC061SN_IV_1.png",
       "/images/iloom_images/home-library/bookshelf/HSFC061SN_IV_3.png",
@@ -68232,9 +56998,9 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "홈라이브러리",
+    "originalCategory": "서재",
     "category2": "책장",
-    "category3": "책장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/home-library/bookshelf/HSFC062SN_IV_1.png",
       "/images/iloom_images/home-library/bookshelf/HSFC062SN_IV_3.png",
@@ -68266,9 +57032,9 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "홈라이브러리",
+    "originalCategory": "서재",
     "category2": "책장",
-    "category3": "책장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/home-library/bookshelf/HSFC081SN_IV_1.png",
       "/images/iloom_images/home-library/bookshelf/HSFC081SN_IV_3.png",
@@ -68299,9 +57065,9 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "홈라이브러리",
+    "originalCategory": "서재",
     "category2": "책장",
-    "category3": "책장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/home-library/bookshelf/HSFC082SN_IV_1.png",
       "/images/iloom_images/home-library/bookshelf/HSFC082SN_IV_3.png",
@@ -68334,9 +57100,9 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "홈라이브러리",
+    "originalCategory": "서재",
     "category2": "책장",
-    "category3": "책장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/home-library/bookshelf/HSFC0061CC_IV_1.png",
       "/images/iloom_images/home-library/bookshelf/HSFC0061CC_IV_3.png",
@@ -68371,7 +57137,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "홈라이브러리",
+    "originalCategory": "서재",
     "category2": "책장",
     "category3": "액세서리",
     "productImages": [
@@ -68407,7 +57173,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "홈라이브러리",
+    "originalCategory": "서재",
     "category2": "책장",
     "category3": "액세서리",
     "productImages": [
@@ -68443,7 +57209,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "홈라이브러리",
+    "originalCategory": "서재",
     "category2": "책장",
     "category3": "액세서리",
     "productImages": [
@@ -68480,7 +57246,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "홈라이브러리",
+    "originalCategory": "서재",
     "category2": "서랍장",
     "category3": "책상서랍",
     "productImages": [
@@ -68517,7 +57283,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "홈라이브러리",
+    "originalCategory": "서재",
     "category2": "책장",
     "category3": "액세서리",
     "productImages": [
@@ -68554,7 +57320,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "홈라이브러리",
+    "originalCategory": "서재",
     "category2": "서랍장",
     "category3": "책상서랍",
     "productImages": [
@@ -68591,7 +57357,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "홈라이브러리",
+    "originalCategory": "서재",
     "category2": "서랍장",
     "category3": "책상서랍",
     "productImages": [
@@ -68623,7 +57389,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "홈라이브러리",
+    "originalCategory": "서재",
     "category2": "책상",
     "category3": "일반형",
     "productImages": [
@@ -68665,7 +57431,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "홈라이브러리",
+    "originalCategory": "서재",
     "category2": "책상",
     "category3": "일반형",
     "productImages": [
@@ -68705,7 +57471,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "홈라이브러리",
+    "originalCategory": "서재",
     "category2": "책상",
     "category3": "일반형",
     "productImages": [
@@ -68738,7 +57504,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "홈라이브러리",
+    "originalCategory": "서재",
     "category2": "책상",
     "category3": "일반형",
     "productImages": [
@@ -68771,7 +57537,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "홈라이브러리",
+    "originalCategory": "서재",
     "category2": "책상",
     "category3": "일반형",
     "productImages": [
@@ -68815,7 +57581,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "홈라이브러리",
+    "originalCategory": "서재",
     "category2": "책상",
     "category3": "일반형",
     "productImages": [
@@ -68860,7 +57626,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "홈라이브러리",
+    "originalCategory": "서재",
     "category2": "책상",
     "category3": "일반형",
     "productImages": [
@@ -68903,7 +57669,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "홈라이브러리",
+    "originalCategory": "서재",
     "category2": "책상",
     "category3": "일반형",
     "productImages": [
@@ -68946,7 +57712,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "홈라이브러리",
+    "originalCategory": "서재",
     "category2": "책상",
     "category3": "일반형",
     "productImages": [
@@ -68975,48 +57741,6 @@ export const productData = [
     "ranking": 1233
   },
   {
-    "id": "HSGP0303",
-    "series": "모드",
-    "name": "모드 3단 책상서랍",
-    "material": "",
-    "price": "119,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "GYM"
-        ]
-      }
-    ],
-    "originalCategory": "홈라이브러리",
-    "category2": "책상",
-    "category3": "일반형",
-    "productImages": [
-      "/images/iloom_images/home-library/desk/HSGP0303_b_WW_1.png",
-      "/images/iloom_images/home-library/desk/HSGP0303_b_WW_2.png",
-      "/images/iloom_images/home-library/desk/HSGP0303_b_WW_3.png",
-      "/images/iloom_images/home-library/desk/HSGP0303_c_GYM_1.png",
-      "/images/iloom_images/home-library/desk/HSGP0303_c_GYM_2.png",
-      "/images/iloom_images/home-library/desk/HSGP0303_c_GYM_3.png",
-      "/images/iloom_images/study-room/desk/HSGP0303_a_WW_1.png",
-      "/images/iloom_images/study-room/desk/HSGP0303_a_WW_2.png",
-      "/images/iloom_images/study-room/desk/HSGP0303_a_WW_3.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250109/_e8f88281-9ad4-42c0-a525-1ecab35359d4.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_822ff278-0d21-448e-923f-f4f993d20c04.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_2866c52c-edff-4063-9253-7e76c470e24d.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_c7c70d6a-b0e9-4c36-8fd9-7445fd54be59.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_d81ea27b-05ac-47e9-9163-31d6f329aa84.jpg",
-      "https://www.iloom.com/upload/contents/20250709/_50c83076-44d5-4da0-99dc-489bc0013bbf.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_5d240c4c-d10b-42e3-a145-85cef1c6c93c.jpg"
-    ],
-    "ranking": 303
-  },
-  {
     "id": "HSG120HP",
     "series": "모드",
     "name": "모드 6단 h형 책상세트(1200폭 수납형책상)",
@@ -69031,7 +57755,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "홈라이브러리",
+    "originalCategory": "서재",
     "category2": "책상",
     "category3": "일반형",
     "productImages": [
@@ -69064,7 +57788,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "홈라이브러리",
+    "originalCategory": "서재",
     "category2": "책상",
     "category3": "일반형",
     "productImages": [
@@ -69096,7 +57820,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "홈라이브러리",
+    "originalCategory": "서재",
     "category2": "책상",
     "category3": "일반형",
     "productImages": [
@@ -69139,7 +57863,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "홈라이브러리",
+    "originalCategory": "서재",
     "category2": "책상",
     "category3": "일반형",
     "productImages": [
@@ -69181,7 +57905,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "홈라이브러리",
+    "originalCategory": "서재",
     "category2": "책장",
     "category3": "액세서리",
     "productImages": [
@@ -69215,7 +57939,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "홈라이브러리",
+    "originalCategory": "서재",
     "category2": "책장",
     "category3": "액세서리",
     "productImages": [
@@ -69248,7 +57972,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "홈라이브러리",
+    "originalCategory": "서재",
     "category2": "책장",
     "category3": "액세서리",
     "productImages": [
@@ -69265,67 +57989,6 @@ export const productData = [
     "ranking": 899
   },
   {
-    "id": "HSKF0010N",
-    "series": "모드",
-    "name": "모드 스크린(책상연결형)",
-    "material": "",
-    "price": "69,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "IIV"
-        ]
-      }
-    ],
-    "originalCategory": "홈라이브러리",
-    "category2": "책상",
-    "category3": "일반형",
-    "productImages": [
-      "/images/iloom_images/home-library/desk/HSKF0010N_b_IIV_1.png",
-      "/images/iloom_images/study-room/desk/HSKF0010N_a_IIV_1.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20220118/_1dfe8e80-1dd4-4794-aa39-23ddb43b6e6d.jpg",
-      "https://www.iloom.com/upload/contents/20220118/_b9a5ed57-800e-4112-8a65-0caf7ae06d28.jpg"
-    ],
-    "ranking": 1189
-  },
-  {
-    "id": "HSAA0000",
-    "series": "모드",
-    "name": "모드 자석세트(4EA)",
-    "material": "",
-    "price": "4,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "XX"
-        ]
-      }
-    ],
-    "originalCategory": "홈라이브러리",
-    "category2": "책장",
-    "category3": "액세서리",
-    "productImages": [
-      "/images/iloom_images/home-library/bookshelf/HSAA0000_d_XX_1.jpg",
-      "/images/iloom_images/study-room/storage/HSAA0000_a_XX_1.jpg",
-      "/images/iloom_images/study-room/storage/HSAA0000_b_XX_1.jpg",
-      "/images/iloom_images/study-room/storage/HSAA0000_c_XX_1.jpg"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20211210/_3265932c-0d9d-4a0e-9b28-fb59b00e2f54.jpg"
-    ],
-    "ranking": 861
-  },
-  {
     "id": "HSUD012",
     "series": "엘바",
     "name": "엘바 책상 1200폭",
@@ -69339,7 +58002,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "홈라이브러리",
+    "originalCategory": "서재",
     "category2": "책상",
     "category3": "일반형",
     "productImages": [
@@ -69370,7 +58033,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "홈라이브러리",
+    "originalCategory": "서재",
     "category2": "책상",
     "category3": "일반형",
     "productImages": [
@@ -69401,7 +58064,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "홈라이브러리",
+    "originalCategory": "서재",
     "category2": "책상",
     "category3": "일반형",
     "productImages": [
@@ -69433,7 +58096,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "홈라이브러리",
+    "originalCategory": "서재",
     "category2": "책장",
     "category3": "액세서리",
     "productImages": [
@@ -69450,228 +58113,6 @@ export const productData = [
     "ranking": 1031
   },
   {
-    "id": "HSSE290F",
-    "series": "다나",
-    "name": "다나 모션베드 캐주얼(메모리폼,책상형)",
-    "material": "폼",
-    "price": "2,253,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "NCCGU"
-        ]
-      }
-    ],
-    "originalCategory": "홈라이브러리",
-    "category2": "책상",
-    "category3": "모션형",
-    "productImages": [
-      "/images/iloom_images/study-room/desk/HSSE290F_NCCGU_1.jpg",
-      "/images/iloom_images/study-room/desk/HSSE290F_NCCGU_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": true,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20251127/_62470b9c-d54c-4ba0-8b97-7d5dddf2788b.jpg",
-      "https://www.iloom.com/upload/contents/20251127/_3b84761d-63ad-4c06-934d-0f1ee35be99f.jpg",
-      "https://www.iloom.com/upload/contents/20251127/_13c02e5a-8b54-4410-84f6-b442c60052ef.jpg",
-      "https://www.iloom.com/upload/contents/20251127/_5026055d-1026-4b89-a1c7-7a88a726dac4.jpg",
-      "https://www.iloom.com/upload/contents/20260209/_823a256e-a41d-4a12-af86-7de97b5cb9bd.jpg",
-      "https://www.iloom.com/upload/contents/20251127/_424b83d0-3616-4284-aaca-31bd2872f655.jpg",
-      "https://www.iloom.com/upload/contents/20251127/_83868ee7-f23e-46d8-ab75-acbfda9be6f6.jpg",
-      "https://www.iloom.com/upload/contents/20251127/_0e18b2fb-4c79-4d42-b5da-2e6007f34d62.jpg",
-      "https://www.iloom.com/upload/contents/20251218/_de9e30dc-d12f-43ab-8e27-8f180f683b2f.jpg"
-    ],
-    "ranking": 146
-  },
-  {
-    "id": "IBM0012A",
-    "series": "다나",
-    "name": "다나 모션베드 캐주얼 (바운텍스폼,책상형)",
-    "material": "폼",
-    "price": "2,353,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "NCCGU"
-        ]
-      }
-    ],
-    "originalCategory": "홈라이브러리",
-    "category2": "책상",
-    "category3": "모션형",
-    "productImages": [
-      "/images/iloom_images/study-room/desk/IBM0012A_NCCGU_1.png",
-      "/images/iloom_images/study-room/desk/IBM0012A_NCCGU_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20251104/_ddcebcdc-4e31-4285-875c-f788c6cdc874.jpg",
-      "https://www.iloom.com/upload/contents/20251104/_b9c78831-3ef6-4372-b590-18c6945e2133.jpg",
-      "https://www.iloom.com/upload/contents/20251104/_db8ea6a7-25c6-49f0-b38e-dc190470c321.jpg",
-      "https://www.iloom.com/upload/contents/20251104/_c2a529e1-f922-40f5-97e2-2d3adf812cb7.jpg",
-      "https://www.iloom.com/upload/contents/20251215/_79ee6efb-3b61-4deb-91db-f77b4b20fbf3.jpg",
-      "https://www.iloom.com/upload/contents/20251104/_1c99eae2-2a61-4593-9075-20730939ae41.jpg",
-      "https://www.iloom.com/upload/contents/20251104/_3152ff1a-3b48-437f-b159-024f13ffcd9b.jpg",
-      "https://www.iloom.com/upload/contents/20251104/_2c776e94-8626-4ecf-9ece-e913071df6d6.jpg",
-      "https://www.iloom.com/upload/contents/20251218/_b3658fe3-9b76-4fa5-b18f-fffd5f9fc994.jpg"
-    ],
-    "ranking": 1371
-  },
-  {
-    "id": "IBM0000B",
-    "series": "다나",
-    "name": "다나 모션베드 캐주얼(바운텍스폼,베드테이블 포 함)",
-    "material": "폼",
-    "price": "2,099,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "GUNCC"
-        ]
-      }
-    ],
-    "originalCategory": "홈라이브러리",
-    "category2": "수납장",
-    "category3": "장식장",
-    "productImages": [
-      "/images/iloom_images/study-room/bed/IBM0000B_GUNCC_1.png",
-      "/images/iloom_images/study-room/bed/IBM0000B_GUNCC_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20251104/_81ac94c3-dd66-4bdd-b808-1f63d4f66351.jpg",
-      "https://www.iloom.com/upload/contents/20251104/_0f953b58-22cc-46f6-98f5-30afbe3e0005.jpg",
-      "https://www.iloom.com/upload/contents/20251104/_fbb54b55-27e1-4b7a-8f2b-02e2d0512f18.jpg",
-      "https://www.iloom.com/upload/contents/20251104/_1f350751-5155-458d-9be0-439f74c5f395.jpg",
-      "https://www.iloom.com/upload/contents/20251215/_948ce1c0-cd9b-47fd-bfa6-ad39ba8cf5b2.jpg",
-      "https://www.iloom.com/upload/contents/20251104/_7dd61044-3835-4f74-a791-fcc561a4c98e.jpg",
-      "https://www.iloom.com/upload/contents/20251104/_e9ff7170-3cfa-450e-bef1-e1cf9cbdc7f0.jpg",
-      "https://www.iloom.com/upload/contents/20251104/_53841926-3749-48df-b4ba-4860727b501c.jpg",
-      "https://www.iloom.com/upload/contents/20251218/_60560c8f-6d03-4752-9884-89c1d35856e2.jpg"
-    ],
-    "ranking": 306
-  },
-  {
-    "id": "IBM0001A",
-    "series": "다나",
-    "name": "다나 모션베드 캐주얼(메모리폼,베드테이블 포 함)",
-    "material": "폼",
-    "price": "1,999,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "GUNCC"
-        ]
-      }
-    ],
-    "originalCategory": "홈라이브러리",
-    "category2": "수납장",
-    "category3": "장식장",
-    "productImages": [
-      "/images/iloom_images/study-room/bed/IBM0001A_GUNCC_1.png",
-      "/images/iloom_images/study-room/bed/IBM0001A_GUNCC_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20251127/_ede40eb4-d53a-4792-bf41-a734db1eb587.jpg",
-      "https://www.iloom.com/upload/contents/20251128/_76465122-a635-4e7b-beb6-39b2b56f9bb0.jpg",
-      "https://www.iloom.com/upload/contents/20251127/_e7ca1f1a-a969-4738-9d57-8393f2077ec1.jpg",
-      "https://www.iloom.com/upload/contents/20251127/_d679bf41-be83-4d13-a695-f1fdd12e850a.jpg",
-      "https://www.iloom.com/upload/contents/20251215/_b252aa8a-3007-42d3-b83e-b9bdcbcb2adf.jpg",
-      "https://www.iloom.com/upload/contents/20251128/_244e56a4-8781-4bbb-aeed-235f3f2ad609.jpg",
-      "https://www.iloom.com/upload/contents/20251127/_7ec2d474-7876-467c-82fe-161d469cba24.jpg",
-      "https://www.iloom.com/upload/contents/20251127/_bc94ab8f-831e-47fb-8ff5-efa2168c64c2.jpg",
-      "https://www.iloom.com/upload/contents/20251218/_2ee74161-cffd-44df-affc-4eead7a15904.jpg"
-    ],
-    "ranking": 1097
-  },
-  {
-    "id": "HSYD012H",
-    "series": "다나",
-    "name": "다나 책상 (1200폭,책선반형)",
-    "material": "",
-    "price": "329,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "NCCGU",
-          "NCCGG"
-        ]
-      }
-    ],
-    "originalCategory": "홈라이브러리",
-    "category2": "책상",
-    "category3": "일반형",
-    "productImages": [
-      "/images/iloom_images/study-room/desk/HSYD012H_NCCGG_2.png",
-      "/images/iloom_images/study-room/desk/HSYD012H_NCCGU_1.jpg",
-      "/images/iloom_images/study-room/desk/HSYD012H_NCCGU_3.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20191113/_685d92e3-79c7-476c-9a72-8e856815ebac.jpg",
-      "https://www.iloom.com/upload/contents/20191113/_e6ffab67-b3a7-4ed4-88ad-a0f69595230f.jpg",
-      "https://www.iloom.com/upload/contents/20191113/_4cd1dcc6-bb11-4e17-9865-fc7354f1fced.jpg",
-      "https://www.iloom.com/upload/contents/20191113/_62d2f472-bd15-4ee6-8357-e577cb683873.jpg",
-      "https://www.iloom.com/upload/contents/20191113/_1e70cec9-04ca-49a5-bd56-e4959d55365b.jpg",
-      "https://www.iloom.com/upload/contents/20191113/_5a4ceafb-9369-49bb-a041-9fbc77ead15c.jpg",
-      "https://www.iloom.com/upload/contents/20191113/_fe4179ee-dd0d-49cf-b38c-26545e89f5bc.jpg"
-    ],
-    "ranking": 1439
-  },
-  {
-    "id": "HSYD012L",
-    "series": "다나",
-    "name": "다나 책상 (1200폭,모니터선반형)",
-    "material": "",
-    "price": "299,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "NCCGU",
-          "NCCGG"
-        ]
-      }
-    ],
-    "originalCategory": "홈라이브러리",
-    "category2": "책상",
-    "category3": "일반형",
-    "productImages": [
-      "/images/iloom_images/study-room/desk/HSYD012L_NCCGG_2.png",
-      "/images/iloom_images/study-room/desk/HSYD012L_NCCGU_1.png",
-      "/images/iloom_images/study-room/desk/HSYD012L_NCCGU_3.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20191113/_6ae72057-83be-4e59-b675-bef2fcd68632.jpg",
-      "https://www.iloom.com/upload/contents/20191113/_251d8b14-3bb5-4379-894a-1db0d4cd4089.jpg",
-      "https://www.iloom.com/upload/contents/20191113/_83d2d9e1-eb91-4c31-9623-db68fa88a594.jpg",
-      "https://www.iloom.com/upload/contents/20191113/_93acf1b6-0aac-47e7-8074-6eaa53cf2b1f.jpg",
-      "https://www.iloom.com/upload/contents/20191113/_1e70cec9-04ca-49a5-bd56-e4959d55365b.jpg",
-      "https://www.iloom.com/upload/contents/20221028/_691de1cd-e0ee-4b0a-a1d2-bdd5cb14df47.jpg",
-      "https://www.iloom.com/upload/contents/20191113/_845cdbf7-47ec-4eab-954f-608d3d9de5a0.jpg"
-    ],
-    "ranking": 1539
-  },
-  {
     "id": "HSYD010H",
     "series": "다나",
     "name": "다나 책상 (1000폭,책선반형)",
@@ -69685,7 +58126,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "홈라이브러리",
+    "originalCategory": "서재",
     "category2": "책상",
     "category3": "일반형",
     "productImages": [
@@ -69707,324 +58148,6 @@ export const productData = [
     "ranking": 637
   },
   {
-    "id": "HSYC124",
-    "series": "다나",
-    "name": "다나 1200폭 4단 책장",
-    "material": "",
-    "price": "299,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "NCCGU",
-          "NCCGG"
-        ]
-      }
-    ],
-    "originalCategory": "홈라이브러리",
-    "category2": "책장",
-    "category3": "책장",
-    "productImages": [
-      "/images/iloom_images/study-room/bookshelf/HSYC124_NCCGG_2.png",
-      "/images/iloom_images/study-room/bookshelf/HSYC124_NCCGU_1.jpg",
-      "/images/iloom_images/study-room/bookshelf/HSYC124_NCCGU_3.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20191113/_459fddd6-a045-4b63-b0f6-b8da932bb9d6.jpg",
-      "https://www.iloom.com/upload/contents/20191113/_ef875fe9-ab68-496a-a83f-6d797e0143f6.jpg",
-      "https://www.iloom.com/upload/contents/20191113/_f0dba4c5-7aa9-49c8-9d3e-a29aaf8a8f84.jpg",
-      "https://www.iloom.com/upload/contents/20191113/_ca6b1e52-b8c9-4b4c-8448-949ef4ef15f3.jpg",
-      "https://www.iloom.com/upload/contents/20200518/_55efab9d-6664-4a8c-b939-f2df3ef3a195.jpg",
-      "https://www.iloom.com/upload/contents/20191114/_bae6917f-45dc-4f59-9fff-4be46c9e825d.jpg",
-      "https://www.iloom.com/upload/contents/20251027/_865f2385-1724-4b3e-8ed9-a34a95aa979d.jpg",
-      "https://www.iloom.com/upload/contents/20210618/_fc5628c5-b111-4178-a256-24a0268f5c37.jpg",
-      "https://www.iloom.com/upload/contents/20191114/_7da28833-9df1-49b3-8bbb-5f12360f640d.jpg",
-      "https://www.iloom.com/upload/contents/20191113/_2bbf6491-fa28-4aba-8e17-e263ded8ff2c.jpg",
-      "https://www.iloom.com/upload/contents/20210618/_c22d9233-86fd-40ea-b9d8-6515c9249ede.jpg",
-      "https://www.iloom.com/upload/contents/20191113/_42384a7b-ff50-42b7-a1bb-0205da8f8baf.jpg"
-    ],
-    "ranking": 595
-  },
-  {
-    "id": "HSYC126",
-    "series": "다나",
-    "name": "다나 1200폭 6단 책장",
-    "material": "",
-    "price": "349,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "NCCGU",
-          "NCCGG"
-        ]
-      }
-    ],
-    "originalCategory": "홈라이브러리",
-    "category2": "책장",
-    "category3": "책장",
-    "productImages": [
-      "/images/iloom_images/study-room/bookshelf/HSYC126_NCCGG_2.png",
-      "/images/iloom_images/study-room/bookshelf/HSYC126_NCCGU_1.png",
-      "/images/iloom_images/study-room/bookshelf/HSYC126_NCCGU_3.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20191114/_7bd0fefb-4a36-4ca4-b300-ec931224618a.jpg",
-      "https://www.iloom.com/upload/contents/20191114/_4b640aab-49f1-4d80-b045-f57d7cde4c34.jpg",
-      "https://www.iloom.com/upload/contents/20191114/_1ea641ad-dc7b-4ba6-a456-3878294a78ac.jpg",
-      "https://www.iloom.com/upload/contents/20191114/_6172f792-4f1b-4862-b2ce-ccadbd92db67.jpg",
-      "https://www.iloom.com/upload/contents/20200518/_15ca4f66-64be-441f-8075-23779fa54c2d.jpg",
-      "https://www.iloom.com/upload/contents/20191114/_bae6917f-45dc-4f59-9fff-4be46c9e825d.jpg",
-      "https://www.iloom.com/upload/contents/20251027/_865f2385-1724-4b3e-8ed9-a34a95aa979d.jpg",
-      "https://www.iloom.com/upload/contents/20210618/_fc5628c5-b111-4178-a256-24a0268f5c37.jpg",
-      "https://www.iloom.com/upload/contents/20191114/_7da28833-9df1-49b3-8bbb-5f12360f640d.jpg",
-      "https://www.iloom.com/upload/contents/20191113/_2bbf6491-fa28-4aba-8e17-e263ded8ff2c.jpg",
-      "https://www.iloom.com/upload/contents/20210618/_c22d9233-86fd-40ea-b9d8-6515c9249ede.jpg",
-      "https://www.iloom.com/upload/contents/20191114/_01b2d795-5ea1-4a4f-bf65-9bacc62fe7aa.jpg",
-      "https://www.iloom.com/upload/contents/20191114/_2d2981d6-3dc6-4ca0-a5d4-910706791594.jpg",
-      "https://www.iloom.com/upload/contents/20191114/_dddceaf6-b918-4a59-8507-119d9140a0c8.jpg"
-    ],
-    "ranking": 1130
-  },
-  {
-    "id": "HSYC084",
-    "series": "다나",
-    "name": "다나 800폭 4단 책장",
-    "material": "",
-    "price": "189,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "NCC",
-          "GU",
-          "GG"
-        ]
-      }
-    ],
-    "originalCategory": "홈라이브러리",
-    "category2": "책장",
-    "category3": "책장",
-    "productImages": [
-      "/images/iloom_images/study-room/bookshelf/HSYC084_GG_3.png",
-      "/images/iloom_images/study-room/bookshelf/HSYC084_GU_2.png",
-      "/images/iloom_images/study-room/bookshelf/HSYC084_NCC_1.jpg",
-      "/images/iloom_images/study-room/bookshelf/HSYC084_NCC_4.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20191111/_45c25bf6-6838-407b-af77-dee2ba36eae3.jpg",
-      "https://www.iloom.com/upload/contents/20191111/_570ab49f-95f9-48b0-8e65-ec4a01afdf69.jpg",
-      "https://www.iloom.com/upload/contents/20191111/_19291432-a394-4f37-a5b8-f1f7e7ee99ed.jpg",
-      "https://www.iloom.com/upload/contents/20191111/_144b20f6-d5e1-47cf-9df6-bb10c35d2bbf.jpg",
-      "https://www.iloom.com/upload/contents/20200518/_ca6e33f9-d144-4549-8902-12e4f318b7d6.jpg",
-      "https://www.iloom.com/upload/contents/20191114/_7da28833-9df1-49b3-8bbb-5f12360f640d.jpg",
-      "https://www.iloom.com/upload/contents/20191113/_2bbf6491-fa28-4aba-8e17-e263ded8ff2c.jpg",
-      "https://www.iloom.com/upload/contents/20210618/_c22d9233-86fd-40ea-b9d8-6515c9249ede.jpg",
-      "https://www.iloom.com/upload/contents/20191111/_e285ac8e-9b7f-488f-8f0e-b5556c9970f5.jpg",
-      "https://www.iloom.com/upload/contents/20191113/_ab3a2211-c176-4bd0-bde3-5258cd73cf08.jpg"
-    ],
-    "ranking": 339
-  },
-  {
-    "id": "HSYC086",
-    "series": "다나",
-    "name": "다나 800폭 6단 책장",
-    "material": "",
-    "price": "219,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "NCC",
-          "GU",
-          "GG"
-        ]
-      }
-    ],
-    "originalCategory": "홈라이브러리",
-    "category2": "책장",
-    "category3": "책장",
-    "productImages": [
-      "/images/iloom_images/study-room/bookshelf/HSYC086_GG_3.png",
-      "/images/iloom_images/study-room/bookshelf/HSYC086_GU_2.png",
-      "/images/iloom_images/study-room/bookshelf/HSYC086_NCC_1.png",
-      "/images/iloom_images/study-room/bookshelf/HSYC086_NCC_4.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20191113/_7a74d63a-3038-4244-bd4d-45c702b92212.jpg",
-      "https://www.iloom.com/upload/contents/20191112/_7cda0829-0620-40ad-ac12-a74387ec0235.jpg",
-      "https://www.iloom.com/upload/contents/20191112/_16d067b6-523d-48db-9ca9-331617a36006.jpg",
-      "https://www.iloom.com/upload/contents/20191112/_671dcc85-f6da-4710-9a6d-e171ba857251.jpg",
-      "https://www.iloom.com/upload/contents/20200518/_f3adcb9c-6702-4951-9669-eb50aba79bbe.jpg",
-      "https://www.iloom.com/upload/contents/20191114/_7da28833-9df1-49b3-8bbb-5f12360f640d.jpg",
-      "https://www.iloom.com/upload/contents/20191113/_2bbf6491-fa28-4aba-8e17-e263ded8ff2c.jpg",
-      "https://www.iloom.com/upload/contents/20210618/_c22d9233-86fd-40ea-b9d8-6515c9249ede.jpg",
-      "https://www.iloom.com/upload/contents/20191113/_c89ec41a-648b-4c4c-b9f1-197efe4af70c.jpg",
-      "https://www.iloom.com/upload/contents/20191113/_e620e823-9bb4-4b3c-9986-83f7ba477992.jpg",
-      "https://www.iloom.com/upload/contents/20191113/_4b5c3a38-8f5f-415e-8c08-da3d4f092467.jpg"
-    ],
-    "ranking": 112
-  },
-  {
-    "id": "HSYB042",
-    "series": "다나",
-    "name": "다나 400폭 2단 책장도어",
-    "material": "",
-    "price": "60,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "NCC"
-        ]
-      }
-    ],
-    "originalCategory": "홈라이브러리",
-    "category2": "책장",
-    "category3": "책장",
-    "productImages": [
-      "/images/iloom_images/study-room/bookshelf/HSYB042_NCC_1.jpg",
-      "/images/iloom_images/study-room/bookshelf/HSYB042_NCC_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20251027/_464c9ecc-186e-488c-823b-711abf8bcbc1.jpg",
-      "https://www.iloom.com/upload/contents/20251027/_7f0a3a81-d222-4756-81d7-7c8046c6b88e.jpg"
-    ],
-    "ranking": 415
-  },
-  {
-    "id": "HSYB082",
-    "series": "다나",
-    "name": "다나 800폭 2단 책장도어",
-    "material": "",
-    "price": "120,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "NCC",
-          "GU",
-          "GG"
-        ]
-      }
-    ],
-    "originalCategory": "홈라이브러리",
-    "category2": "책장",
-    "category3": "책장",
-    "productImages": [
-      "/images/iloom_images/study-room/bookshelf/HSYB082_GG_3.png",
-      "/images/iloom_images/study-room/bookshelf/HSYB082_GU_2.png",
-      "/images/iloom_images/study-room/bookshelf/HSYB082_NCC_1.jpg",
-      "/images/iloom_images/study-room/bookshelf/HSYB082_NCC_4.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20230222/_f5e0e445-c7de-4a27-afc3-dedd6e822c8c.jpg",
-      "https://www.iloom.com/upload/contents/20230222/_496fa9d1-0520-4a49-bdf1-de7ca9e5de20.jpg"
-    ],
-    "ranking": 1317
-  },
-  {
-    "id": "HSYP0303",
-    "series": "다나",
-    "name": "다나 책상서랍",
-    "material": "",
-    "price": "139,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "GU"
-        ]
-      }
-    ],
-    "originalCategory": "홈라이브러리",
-    "category2": "책상",
-    "category3": "일반형",
-    "productImages": [
-      "/images/iloom_images/study-room/desk/HSYP0303_GU_1.jpg",
-      "/images/iloom_images/study-room/desk/HSYP0303_GU_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20191125/_050c94fc-a319-4e2b-8e4d-10e537c65926.jpg",
-      "https://www.iloom.com/upload/contents/20191125/_66cd6244-7dc5-4fd4-84c0-33d9d5753aee.jpg",
-      "https://www.iloom.com/upload/contents/20191125/_352bc1cb-1af4-4245-94c6-fa1192fd9ead.jpg",
-      "https://www.iloom.com/upload/contents/20191125/_b884d839-ed6c-4456-af53-0ced98be3d75.jpg",
-      "https://www.iloom.com/upload/contents/20221028/_adfc62c1-b121-4838-9c4b-b13551fef498.jpg",
-      "https://www.iloom.com/upload/contents/20191125/_e736d9e0-68a1-475d-8db5-ee4bbf4d6021.jpg"
-    ],
-    "ranking": 1102
-  },
-  {
-    "id": "HSYA0006",
-    "series": "다나",
-    "name": "다나 화장대",
-    "material": "",
-    "price": "229,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "NCC",
-          "SP",
-          "CZ"
-        ]
-      }
-    ],
-    "originalCategory": "홈라이브러리",
-    "category2": "수납장",
-    "category3": "장식장",
-    "productImages": [
-      "/images/iloom_images/bedroom/vanity/HSYA0006_a__1.jpg",
-      "/images/iloom_images/bedroom/vanity/HSYA0006_a_default_2.png",
-      "/images/iloom_images/bedroom/vanity/HSYA0006_a_default_2.png",
-      "/images/iloom_images/bedroom/vanity/HSYA0006_a_default_3.png",
-      "/images/iloom_images/bedroom/vanity/HSYA0006_a_default_3.png",
-      "/images/iloom_images/bedroom/vanity/HSYA0006_a_default_4.png",
-      "/images/iloom_images/home-library/storage/HSYA0006_c_CZ_3.png",
-      "/images/iloom_images/home-library/storage/HSYA0006_c_CZ_3.png",
-      "/images/iloom_images/home-library/storage/HSYA0006_c_NCC_1.jpg",
-      "/images/iloom_images/home-library/storage/HSYA0006_c_NCC_4.png",
-      "/images/iloom_images/home-library/storage/HSYA0006_c_SP_2.png",
-      "/images/iloom_images/home-library/storage/HSYA0006_c_SP_2.png",
-      "/images/iloom_images/study-room/storage/HSYA0006_b_NCC_1.jpg",
-      "/images/iloom_images/study-room/storage/HSYA0006_b_NCC_2.png",
-      "/images/iloom_images/study-room/storage/HSYA0006_b_NCC_3.png",
-      "/images/iloom_images/study-room/storage/HSYA0006_b_NCC_4.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20191125/_dacef3ae-ea2d-4a89-aba2-67dd68c57d13.jpg",
-      "https://www.iloom.com/upload/contents/20191125/_33c6e7ed-b5aa-4b6b-951e-69ae3844a932.jpg",
-      "https://www.iloom.com/upload/contents/20191125/_82342479-40ea-46f5-bf98-1c4ae58415ce.jpg",
-      "https://www.iloom.com/upload/contents/20191125/_e97602c1-6385-4509-9d13-2b247a079767.jpg",
-      "https://www.iloom.com/upload/contents/20191125/_049ea38b-8f2d-4ac6-8f83-e5dad8885eca.jpg"
-    ],
-    "ranking": 1596
-  },
-  {
     "id": "HSVD015",
     "series": "케플러클래식",
     "name": "케플러클래식 책상 1500폭",
@@ -70038,7 +58161,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "홈라이브러리",
+    "originalCategory": "서재",
     "category2": "책상",
     "category3": "일반형",
     "productImages": [
@@ -70069,7 +58192,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "홈라이브러리",
+    "originalCategory": "서재",
     "category2": "책상",
     "category3": "일반형",
     "productImages": [
@@ -70100,7 +58223,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "홈라이브러리",
+    "originalCategory": "서재",
     "category2": "책장",
     "category3": "액세서리",
     "productImages": [
@@ -70134,7 +58257,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "홈라이브러리",
+    "originalCategory": "서재",
     "category2": "수납장",
     "category3": "장식장",
     "productImages": [
@@ -70166,7 +58289,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "홈라이브러리",
+    "originalCategory": "서재",
     "category2": "수납장",
     "category3": "장식장",
     "productImages": [
@@ -70200,7 +58323,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "홈라이브러리",
+    "originalCategory": "서재",
     "category2": "수납장",
     "category3": "장식장",
     "productImages": [
@@ -70231,7 +58354,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "홈라이브러리",
+    "originalCategory": "서재",
     "category2": "수납장",
     "category3": "장식장",
     "productImages": [
@@ -70264,7 +58387,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "홈라이브러리",
+    "originalCategory": "서재",
     "category2": "책장",
     "category3": "액세서리",
     "productImages": [
@@ -70291,7 +58414,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "홈라이브러리",
+    "originalCategory": "서재",
     "category2": "책장",
     "category3": "액세서리",
     "productImages": [
@@ -70305,406 +58428,6 @@ export const productData = [
       "https://www.iloom.com/upload/contents/20190902/_96f5c12d-ff9e-483b-832a-5aade68359dd.jpg"
     ],
     "ranking": 161
-  },
-  {
-    "id": "HSVA0001",
-    "series": "케플러클래식",
-    "name": "케플러클래식 4단 미니수납BOX",
-    "material": "",
-    "price": "59,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "WP"
-        ]
-      }
-    ],
-    "originalCategory": "홈라이브러리",
-    "category2": "책장",
-    "category3": "액세서리",
-    "productImages": [
-      "/images/iloom_images/home-library/bookshelf/HSVA0001_a_NCC_1.jpg",
-      "/images/iloom_images/home-library/bookshelf/HSVA0001_a_NCC_2.png",
-      "/images/iloom_images/home-library/bookshelf/HSVA0001_a_NCC_3.png",
-      "/images/iloom_images/home-library/bookshelf/HSVA0001_b_WP_1.jpg",
-      "/images/iloom_images/home-library/bookshelf/HSVA0001_b_WP_2.png",
-      "/images/iloom_images/home-library/bookshelf/HSVA0001_b_WP_3.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20180419/_06d88ef7-4048-426e-a480-3c48526b5088.jpg",
-      "https://www.iloom.com/upload/contents/20180419/_95250a6e-24a9-487d-b218-4b8dd923f05b.jpg",
-      "https://www.iloom.com/upload/contents/20180419/_2ddab26f-a84a-4603-afbc-9004562ffec2.jpg"
-    ],
-    "ranking": 1653
-  },
-  {
-    "id": "HCH0020WN",
-    "series": "버튼스위블",
-    "name": "버튼스위블 버튼 스위블(캐스터,좌판패딩)",
-    "material": "",
-    "price": "179,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "452MWW",
-          "451MWW",
-          "453DWW",
-          "454DWW"
-        ]
-      }
-    ],
-    "originalCategory": "홈라이브러리",
-    "category2": "책장",
-    "category3": "액세서리",
-    "productImages": [
-      "/images/iloom_images/study-room/storage/HCH0020WN_451MWW_2.png",
-      "/images/iloom_images/study-room/storage/HCH0020WN_452MWW_1.jpg",
-      "/images/iloom_images/study-room/storage/HCH0020WN_452MWW_5.png",
-      "/images/iloom_images/study-room/storage/HCH0020WN_453DWW_3.png",
-      "/images/iloom_images/study-room/storage/HCH0020WN_454DWW_4.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20231121/_124194a6-cc7c-4f5d-b0e4-21bb126153bb.jpg",
-      "https://www.iloom.com/upload/contents/20250725/_a0b9eda9-66fd-48d6-8397-dbc227b87f87.jpg",
-      "https://www.iloom.com/upload/contents/20231121/_34999770-8dbb-4095-81b3-020fc325249e.jpg",
-      "https://www.iloom.com/upload/contents/20250725/_cc7fc256-097a-4751-88d3-000285695ac2.jpg",
-      "https://www.iloom.com/upload/contents/20250725/_e521306b-2d22-43ec-9da0-5a09eaf7480e.jpg",
-      "https://www.iloom.com/upload/contents/20231121/_68f937b4-5e36-4221-ab19-231bfb2f3aea.gif",
-      "https://www.iloom.com/upload/contents/20231121/_41ad15ba-e6c1-4a57-877c-8b902157710b.jpg",
-      "https://www.iloom.com/upload/contents/20250725/_a8003d73-387e-41ab-b6c9-eb208a9d0d0d.jpg",
-      "https://www.iloom.com/upload/contents/20250709/_33390be9-eef8-4026-894a-ee4273a2304e.jpg",
-      "https://www.iloom.com/upload/contents/20231121/_5b277d5d-fac9-4609-ba1b-4d4add6817d5.jpg"
-    ],
-    "ranking": 943
-  },
-  {
-    "id": "HCH0020G",
-    "series": "버튼스위블",
-    "name": "버튼스위블 버튼 스위블(글라이드,좌판패딩)",
-    "material": "",
-    "price": "179,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "452MWW",
-          "453DWW",
-          "454DWW"
-        ]
-      }
-    ],
-    "originalCategory": "홈라이브러리",
-    "category2": "책장",
-    "category3": "액세서리",
-    "productImages": [
-      "/images/iloom_images/study-room/storage/HCH0020G_452MWW_1.jpg",
-      "/images/iloom_images/study-room/storage/HCH0020G_452MWW_4.png",
-      "/images/iloom_images/study-room/storage/HCH0020G_453DWW_2.png",
-      "/images/iloom_images/study-room/storage/HCH0020G_454DWW_3.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20231121/_fac9a9db-635f-47c2-82be-b75ab4324f98.jpg",
-      "https://www.iloom.com/upload/contents/20250725/_d715cb17-9cbe-4fec-94ba-6879efc72eed.jpg",
-      "https://www.iloom.com/upload/contents/20231121/_f094a8bd-e375-42d4-828b-381eea29331b.jpg",
-      "https://www.iloom.com/upload/contents/20250725/_f0659a65-b167-40cc-82df-58b3a47cbdd0.jpg",
-      "https://www.iloom.com/upload/contents/20250725/_b02bc408-1a91-4500-be96-d1682815d950.jpg",
-      "https://www.iloom.com/upload/contents/20231121/_d5d40ce2-076e-419e-b6ab-4ff3fe2a3eb2.gif",
-      "https://www.iloom.com/upload/contents/20231121/_214ff1c1-1a9c-4c6a-a703-80e9a26ade0d.jpg",
-      "https://www.iloom.com/upload/contents/20250725/_489ce7a3-bef1-4453-b494-4d3db8175fc8.jpg",
-      "https://www.iloom.com/upload/contents/20250709/_19910db7-583e-4d9f-a232-3ee0583d1f3c.jpg",
-      "https://www.iloom.com/upload/contents/20231121/_a24ea958-f60f-4e25-a941-b016b3d090fc.jpg"
-    ],
-    "ranking": 266
-  },
-  {
-    "id": "HCH0020B",
-    "series": "버튼",
-    "name": "버튼 등판패딩",
-    "material": "",
-    "price": "35,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "452M",
-          "451M",
-          "453D",
-          "454D"
-        ]
-      }
-    ],
-    "originalCategory": "홈라이브러리",
-    "category2": "책장",
-    "category3": "액세서리",
-    "productImages": [
-      "/images/iloom_images/home-library/bookshelf/HCH0020B_b_451M_2.png",
-      "/images/iloom_images/home-library/bookshelf/HCH0020B_b_452M_1.jpg",
-      "/images/iloom_images/home-library/bookshelf/HCH0020B_b_452M_5.png",
-      "/images/iloom_images/home-library/bookshelf/HCH0020B_b_453D_3.png",
-      "/images/iloom_images/home-library/bookshelf/HCH0020B_b_454D_4.png",
-      "/images/iloom_images/study-room/storage/HCH0020B_a_451M_2.png",
-      "/images/iloom_images/study-room/storage/HCH0020B_a_452M_1.jpg",
-      "/images/iloom_images/study-room/storage/HCH0020B_a_452M_5.png",
-      "/images/iloom_images/study-room/storage/HCH0020B_a_453D_3.png",
-      "/images/iloom_images/study-room/storage/HCH0020B_a_454D_4.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [],
-    "ranking": 1440
-  },
-  {
-    "id": "ITY00BS00A",
-    "series": "에가스위블",
-    "name": "에가스위블 에가 스위블(캐스터,좌판패딩)",
-    "material": "",
-    "price": "209,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "451L",
-          "452M"
-        ]
-      }
-    ],
-    "originalCategory": "홈라이브러리",
-    "category2": "책장",
-    "category3": "액세서리",
-    "productImages": [
-      "/images/iloom_images/study-room/storage/ITY00BS00A_451L_1.jpg",
-      "/images/iloom_images/study-room/storage/ITY00BS00A_451L_3.png",
-      "/images/iloom_images/study-room/storage/ITY00BS00A_452M_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20231207/_54422af2-766d-4044-996b-6f468c8bb767.jpg",
-      "https://www.iloom.com/upload/contents/20250725/_29c22228-cec9-4a7d-8b12-116b2a5284cf.jpg",
-      "https://www.iloom.com/upload/contents/20231121/_2d7d02a8-6b3e-4eae-9000-cd6976471a23.jpg",
-      "https://www.iloom.com/upload/contents/20231121/_3a84f932-eb79-4d2c-b728-7dc4d502e645.jpg",
-      "https://www.iloom.com/upload/contents/20231121/_95f58704-ad4d-4f39-81f4-c7615e24c9d3.jpg",
-      "https://www.iloom.com/upload/contents/20231121/_778c0855-8068-4526-a889-9d84353c6925.gif",
-      "https://www.iloom.com/upload/contents/20231121/_f5c5f3a3-29a3-4fc7-8708-370d5182df56.jpg",
-      "https://www.iloom.com/upload/contents/20250725/_b30f1d58-fe61-4c1b-88ac-b9b49c5285c7.jpg",
-      "https://www.iloom.com/upload/contents/20250709/_c617ef2c-93c8-4e41-8541-f24746eb93e5.jpg",
-      "https://www.iloom.com/upload/contents/20231121/_86948c52-acd0-4b02-ac86-cbf266fa10a5.jpg"
-    ],
-    "ranking": 1058
-  },
-  {
-    "id": "ITY00BS01A",
-    "series": "에가스위블",
-    "name": "에가스위블 에가 스위블(글라이드,좌판패딩)",
-    "material": "",
-    "price": "209,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "451L",
-          "452M"
-        ]
-      }
-    ],
-    "originalCategory": "홈라이브러리",
-    "category2": "책장",
-    "category3": "액세서리",
-    "productImages": [
-      "/images/iloom_images/study-room/storage/ITY00BS01A_451L_1.jpg",
-      "/images/iloom_images/study-room/storage/ITY00BS01A_451L_3.png",
-      "/images/iloom_images/study-room/storage/ITY00BS01A_452M_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20231207/_4d828f77-eaa3-4a2b-b09c-1465b9b0c624.jpg",
-      "https://www.iloom.com/upload/contents/20250725/_2838ad67-4935-417c-86d7-aa66ae865b08.jpg",
-      "https://www.iloom.com/upload/contents/20231121/_2cedd8e1-a688-463b-8f17-4877885486b5.jpg",
-      "https://www.iloom.com/upload/contents/20231121/_b689a3ab-3ef1-417c-86ee-fb1ebca78c2d.jpg",
-      "https://www.iloom.com/upload/contents/20231121/_f9082868-ce28-421f-bd53-321458e9adfb.jpg",
-      "https://www.iloom.com/upload/contents/20231121/_51add565-18a2-4f73-9bbe-59d9b42616c7.gif",
-      "https://www.iloom.com/upload/contents/20231121/_8e4ea18b-ac45-4f76-a5d5-bad54f937912.jpg",
-      "https://www.iloom.com/upload/contents/20250725/_18321ee2-8812-4016-9279-b76e41d7861d.jpg",
-      "https://www.iloom.com/upload/contents/20250709/_f1022f9b-e1f7-48fb-9464-fdb100257807.jpg",
-      "https://www.iloom.com/upload/contents/20231121/_3c6d0213-2ed3-4ec0-988d-b92cc65d0d7b.jpg"
-    ],
-    "ranking": 653
-  },
-  {
-    "id": "HVCH3510KHLN",
-    "series": "아이핏에어",
-    "name": "아이핏에어 아이핏 에어(헤드레스트,럼버서포트,BK)",
-    "material": "",
-    "price": "369,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "2D6"
-        ]
-      }
-    ],
-    "originalCategory": "홈라이브러리",
-    "category2": "책장",
-    "category3": "액세서리",
-    "productImages": [
-      "/images/iloom_images/study-room/storage/HVCH3510KHLN_2D6_1.png",
-      "/images/iloom_images/study-room/storage/HVCH3510KHLN_2D6_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250609/_12befd9e-dda6-4f10-9968-62c98f4cdfed.jpg",
-      "https://www.iloom.com/upload/contents/20250609/_65ef4b71-3219-496b-8280-d0c96372eb24.jpg"
-    ],
-    "ranking": 34
-  },
-  {
-    "id": "HVCH3510HLN",
-    "series": "아이핏에어",
-    "name": "아이핏에어 아이핏 에어(헤드레스트,럼버서포트)",
-    "material": "",
-    "price": "379,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "2D1"
-        ]
-      }
-    ],
-    "originalCategory": "홈라이브러리",
-    "category2": "책장",
-    "category3": "액세서리",
-    "productImages": [
-      "/images/iloom_images/study-room/storage/HVCH3510HLN_2D1_1.png",
-      "/images/iloom_images/study-room/storage/HVCH3510HLN_2D1_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250513/_c02fb698-652f-43a9-a458-471650c801cf.jpg",
-      "https://www.iloom.com/upload/contents/20250513/_db9ed8d5-a39f-42a7-91c4-321fa0805496.jpg"
-    ],
-    "ranking": 1705
-  },
-  {
-    "id": "HCH3510C",
-    "series": "아이핏에어",
-    "name": "아이핏에어 아이핏 에어 좌판커버",
-    "material": "",
-    "price": "25,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "454A",
-          "455",
-          "456"
-        ]
-      }
-    ],
-    "originalCategory": "홈라이브러리",
-    "category2": "책장",
-    "category3": "액세서리",
-    "productImages": [
-      "/images/iloom_images/study-room/bed/HCH3510C_454A_1.png",
-      "/images/iloom_images/study-room/bed/HCH3510C_454A_4.png",
-      "/images/iloom_images/study-room/bed/HCH3510C_455_2.png",
-      "/images/iloom_images/study-room/bed/HCH3510C_456_3.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [],
-    "ranking": 409
-  },
-  {
-    "id": "HVCH3501KHLN",
-    "series": "아이핏",
-    "name": "아이핏 (헤드레스트,럼버서포트,BK)",
-    "material": "",
-    "price": "349,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "456"
-        ]
-      }
-    ],
-    "originalCategory": "홈라이브러리",
-    "category2": "책장",
-    "category3": "액세서리",
-    "productImages": [
-      "/images/iloom_images/study-room/storage/HVCH3501KHLN_456_1.png",
-      "/images/iloom_images/study-room/storage/HVCH3501KHLN_456_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20240828/_baee4e5b-2b96-48f5-8fb2-e2c24592dbab.jpg",
-      "https://www.iloom.com/upload/contents/20240828/_1383899e-0b65-408c-8c94-d76ac627d1d3.jpg",
-      "https://www.iloom.com/upload/contents/20240828/_631f8a5f-f4fc-41b1-854c-6790a1937b84.jpg",
-      "https://www.iloom.com/upload/contents/20240828/_4ad11ed7-97d2-4e06-93aa-1a13b8eff083.jpg"
-    ],
-    "ranking": 341
-  },
-  {
-    "id": "HVCH3501HLN",
-    "series": "아이핏",
-    "name": "아이핏 (헤드레스트,럼버서포트)",
-    "material": "",
-    "price": "359,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "454A",
-          "455",
-          "456"
-        ]
-      }
-    ],
-    "originalCategory": "홈라이브러리",
-    "category2": "책장",
-    "category3": "액세서리",
-    "productImages": [
-      "/images/iloom_images/study-room/storage/HVCH3501HLN_454A_1.jpg",
-      "/images/iloom_images/study-room/storage/HVCH3501HLN_454A_4.png",
-      "/images/iloom_images/study-room/storage/HVCH3501HLN_455_2.png",
-      "/images/iloom_images/study-room/storage/HVCH3501HLN_456_3.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250324/_57e3fede-9443-484e-aed3-5c24fea1c64d.jpg",
-      "https://www.iloom.com/upload/contents/20250324/_9c713672-7555-41fc-b46b-d2e38ea614ca.jpg",
-      "https://www.iloom.com/upload/contents/20250324/_7e84450d-7893-4dab-bafb-39b83b5e0283.jpg",
-      "https://www.iloom.com/upload/contents/20250324/_023c9fb6-0f69-4f42-88cf-2fa656a24c93.jpg",
-      "https://www.iloom.com/upload/contents/20250324/_5ec711b2-830d-425e-bdd4-97e1adddd162.jpg",
-      "https://www.iloom.com/upload/contents/20250324/_95338528-234d-4f1f-bd96-f20bace968eb.jpg"
-    ],
-    "ranking": 1648
   },
   {
     "id": "HCH3601L",
@@ -70721,7 +58444,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "홈라이브러리",
+    "originalCategory": "서재",
     "category2": "의자",
     "category3": "태스크의자",
     "productImages": [

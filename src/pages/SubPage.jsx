@@ -3,6 +3,7 @@ import { useProductStore } from '../store/useProductStore'
 import { Link, useParams } from 'react-router-dom';
 import "./scss/subPage.scss"
 import MdPick from '../components/MdPick';
+import SubCard from '../components/SubCard';
 
 const SubPage = () => {
     const { items, menus } = useProductStore();
@@ -11,8 +12,6 @@ const SubPage = () => {
     const mainCate = params.originalCategory || originalCategory;
     const subCate = params.category2
     const thirdCate = params.category3
-
-    console.log("dd", mainCate, subCate, thirdCate);
 
     let cateItems = items.filter((item) => {
         // 메인메뉴
@@ -31,6 +30,21 @@ const SubPage = () => {
     const thirdTab = currentSubMenu?.thirdMenu || [];
     const tab = currentMenu?.subMenu || [];
 
+    const tabItems = (() => {
+        if (!subCate) {
+
+            return tab.map(t => ({ label: t.name, to: `/${mainCate}/${t.name}`, active: false }));
+        }
+        if (thirdTab.length > 0) {
+
+            return thirdTab.map(t => ({ label: t.name, to: `/${mainCate}/${subCate}/${t.name}`, active: t.name === thirdCate}));
+        }
+
+        return tab.map(t => ({ label: t.name, to: `/${mainCate}/${t.name}`, active: t.name === subCate }));
+        
+        
+    })();
+    
 
     return (
         <div className='sub-page-wrap'>
@@ -38,47 +52,21 @@ const SubPage = () => {
                 <div className="inner">
                     <h1>{categoryName}</h1>
 
-                    {!subCate && (
-                        <ul className="sub-tab">
-                            {tab.map((t, id) => (
-                                <li><Link to={`/${mainCate}/${t.name}`}>{t.name}</Link></li>
-                            ))}
-                        </ul>
-                    )}
-
-                    {subCate && (
-                        <ul className="third-tab">
-                            {thirdTab.map((t) => (
-                                <li key={t.name}>
-                                    <Link to={`/${mainCate}/${subCate}/${t.name}`}>{t.name}</Link>
+                    {tabItems.length > 0 && (
+                        <ul className="menu-tab">
+                            {tabItems.map((t) => (
+                                <li key={t.label} className={t.active ? "active" : ""}>
+                                    <Link to={t.to}>{t.label}</Link>
                                 </li>
                             ))}
                         </ul>
                     )}
 
-                    <div className="md-pick-wrap">
-                        <h2>MD's Pick!</h2>
-                        <ul className="md-pick">
-
-                            {mdPick.map((md, id) => (
-                                <li>
-                                    <Link>
-
-                                        <div className="img-box">
-                                            <img src={md.productImages[1]} alt="상품이미지" />
-                                        </div>
-                                        <div className="text-box">
-                                            <h1 className='sub-series-name'>{md.series}</h1>
-                                            <p className='product-name'>{md.name}</p>
-                                            <p className='price'>{md.price} 원</p>
-                                        </div>
-                                    </Link>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-
-                    <div className="sub-line"></div>
+                    {mdPick.length > 0 && (
+                        <div className="md-pick-wrap">
+                            <MdPick mdPick={mdPick} />
+                        </div>
+                    )}
 
                     <div className="sub-product-list-wrap">
 
@@ -86,14 +74,7 @@ const SubPage = () => {
                             {cateItems.map((item, id) => (
                                 <li key={id}>
                                     <Link>
-                                        <div className="product-img-box">
-                                            <img src={item.productImages[0]} alt="상품이미지" />
-                                        </div>
-                                        <div className="product-text-box">
-                                            <h1 className='sub-series-name'>{item.series}</h1>
-                                            <p className='product-name'>{item.name}</p>
-                                            <p className='price'>{item.price} 원</p>
-                                        </div>
+                                        <SubCard item={item} />
                                     </Link>
                                 </li>
                             ))}

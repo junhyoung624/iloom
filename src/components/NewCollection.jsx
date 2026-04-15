@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import "./scss/newcollection.scss"
 import { productData } from '../data/productData'
+import Card from './Card';
 
 
 export default function NewCollection() {
@@ -19,24 +20,20 @@ export default function NewCollection() {
             </div>
             <div className="inner">
 
-                <div className="item-card-wrap">
+                <ul className="item-card-wrap">
 
                     {newItems.map((item, index) => (
-                        <Link
-                            to={`/product/${item.id}`}
-                            className="item-card"
-                            key={`${item.id}-${index}`}
-                        >
-                            <div>
-                                <img src={item.productImages[1]} alt={item.name} />
-                                <div className="series-name">{item.series}</div>
-
-                                <h1>{item.name}</h1>
-                                <span>{item.price}원</span>
-                            </div>
-                        </Link>
+                        <li>
+                            <Link
+                                to={`/product/${item.id}`}
+                                className="item-card"
+                                key={`${item.id}-${index}`}
+                            >
+                                <Card item={item} />
+                            </Link>
+                        </li>
                     ))}
-                </div>
+                </ul>
             </div>
         </section >
     )

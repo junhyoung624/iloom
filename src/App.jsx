@@ -32,6 +32,7 @@ import OAuth from './pages/OAuth'
 import SubPage from './pages/SubPage'
 import SearchPage from './pages/SearchPage'
 import NaverCallback from './pages/NaverCallback'
+import ProductDetail from './pages/ProductDetail'
 
 // 메인 페이지
 function App() {
@@ -56,9 +57,7 @@ function App() {
         <Route path="/order" element={<Order />} />
         <Route path="/searchpage" element={<SearchPage />} />
         {/* <Route path='/product-list' element={<ProductList />} /> */}
-        <Route path='/:originalCategory' element={<SubPage />} />
-        <Route path='/:originalCategory/:category2' element={<SubPage />} />
-        <Route path='/:originalCategory/:category2/:category3' element={<SubPage />} />
+
 
         <Route path="/oauth" element={<OAuth />} />
 
@@ -75,6 +74,11 @@ function App() {
         <Route path='/mypage' element={<MyPage />} />
         <Route path='/leavepage' element={<LeavePage />} />
         <Route path='/naver-callback' element={<NaverCallback />} />
+        <Route path='/product/:id' element={<ProductDetail />} />
+
+        <Route path='/:originalCategory' element={<SubPage />} />
+        <Route path='/:originalCategory/:category2' element={<SubPage />} />
+        <Route path='/:originalCategory/:category2/:category3' element={<SubPage />} />
       </Routes>
       <QuickMenu />
       <Footer />
