@@ -29,6 +29,7 @@ export default function InfoHeader({
                     selectedSearchType === "keyword" ? (<KeywordSearch keyword={keyword} setKeyword={setKeyword} />)
                         : (
                             <LocationSearch
+
                                 selectedRegion={selectedRegion}
                                 setSelectedRegion={setSelectedRegion}
                                 selectedSubRegion={selectedSubRegion}
