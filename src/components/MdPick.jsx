@@ -1,6 +1,7 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-const MdPick = () => {
+const MdPick = ({mdPick}) => {
     return (
         <>
             <h2>MD's Pick!</h2>
@@ -22,6 +23,8 @@ const MdPick = () => {
                     </li>
                 ))}
             </ul>
+
+            <div className="sub-line"></div>
         </>
     )
 }
