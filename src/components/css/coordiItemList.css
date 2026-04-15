@@ -1,0 +1,16 @@
+.coordi-item-list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  text-align: center;
+}
+
+.coordi-item .name {
+  color: #5c5c5c;
+}
+.coordi-item .price {
+  font-weight: 600;
+}
+
+.coordi-item:hover {
+  transform: translateY(-10px);
+}
