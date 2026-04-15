@@ -1,20 +1,49 @@
 .coordi-item-list {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
+    //gap: 130px;
     text-align: center;
     //justify-content: space-evenly;
     //gap: 100px;
 }
 
 .coordi-item {
+    color: #303030;
+    //width: 200px;
+
     .name {
-        color: #5c5c5c;
+        font-size: 16px;
+        font-weight: 400;
     }
 
-    .price {
+    .subName {
+        //width: 190px;
+        width: 200px;
+        margin: 0 auto;
+        font-size: 18px;
         font-weight: 600;
+        padding-top: 10px;
+
+        white-space: nowrap;
+        /* 줄바꿈 방지 */
+        overflow: hidden;
+        /* 영역 밖 숨김 */
+        text-overflow: ellipsis;
+        /* 말줄임표 처리 */
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        line-clamp: 1;
+        -webkit-box-orient: vertical;
     }
 }
+
+.price {
+    font-size: 16px;
+    font-weight: 600;
+    padding-top: 15px;
+    color: #CA1230
+}
+
 
 .coordi-item:hover {
     transform: translateY(-10px);

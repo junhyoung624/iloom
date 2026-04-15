@@ -1,14 +1,23 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>illoom</title>
-    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>illoom</title>
+  <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+  <script type="text/javascript"
+    src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=7c735096a4f753774089446a1e835175&libraries=services,clusterer"></script>
+  <script>
+    console.log("window.Kakao:", window.Kakao);
+    console.log("window.kakao:", window.kakao);
+  </script>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
 </html>
