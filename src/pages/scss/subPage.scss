@@ -12,51 +12,23 @@
         text-align: center;
         gap: 30px;
         padding: 130px 0;
+    }
+
+    .menu-tab {
+        @include g.myFlex($jc: center);
+        margin-top: 20px;
 
         li {
-            .product-img-box {
-                aspect-ratio: 1/1;
-                width: 100%;
-
-                img {
-                    width: 100%;
-                    height: 100%;
-                }
+            &:hover a {
+                font-weight: bold;
+                border-bottom: 3px solid;
             }
 
-            .product-text-box {
-
-                .sub-series-name {
-                    color: #606060;
-                    font-size: 18px;
-                    font-weight: 600;
-                    margin-top: 30px;
-                }
-
-                .product-name {
-                    font-weight: 400;
-                    font-size: 16px;
-                    color: #606060;
-                    margin-bottom: 15px;
-                }
-
-                .price {
-                    font-size: 16px;
-                    font-weight: 600;
-                    color: #CA1230;
-                }
+            &.active a {
+                font-weight: bold;
+                border-bottom: 3px solid;
             }
         }
-    }
-
-    .sub-tab {
-        @include g.myFlex($jc: center);
-        margin-top: 20px
-    }
-
-    .third-tab {
-        @include g.myFlex($jc: center);
-        margin-top: 20px
     }
 
     .sub-line {
@@ -69,11 +41,19 @@
         margin-top: 90px;
 
         h2 {
-            margin: 0;
+            // margin: 0;
         }
 
         .md-pick {
             @include g.myFlex();
+
+            .img-box {
+                img {
+                    width: 300px;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
 
 
             .sub-series-name {

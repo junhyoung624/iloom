@@ -176,28 +176,4 @@
     grid-template-columns: repeat(5, 1fr);
     gap: 50px;
     padding: 130px 0;
-
-    img {
-        width: 283px;
-    }
-
-    .series-name {
-        color: #606060;
-        font-size: 16px;
-        font-weight: 400;
-        margin-top: 30px;
-    }
-
-    h1 {
-        font-weight: 600;
-        font-size: 18px;
-        color: #030303;
-        margin: 7px 0 15px;
-    }
-
-    span {
-        font-size: 16px;
-        font-weight: 600;
-        color: #CA1230;
-    }
 }
