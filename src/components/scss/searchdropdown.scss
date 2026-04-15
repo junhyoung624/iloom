@@ -7,18 +7,16 @@
     align-items: center;
     gap: 12px;
     margin-bottom: 24px;
+    padding-left: 255px;
 
     input {
         flex: 1;
         height: 50px;
-        padding: 0 16px;
+        padding: 0;
         border: none;
         background: #fff;
-        font-size: 16px;
         outline: none;
-        margin-left: 240px;
         margin-bottom: 20px;
-
         color: #030303;
         font-size: 30px;
         font-weight: 700;
@@ -72,9 +70,23 @@
 }
 
 .no-result {
-    font-size: 18px;
-    color: #999;
-    padding: 12px 0;
+    position: absolute;
+    top: 43%;
+    left: 46.9%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 20px;
+    color: #030303;
+
+    img {
+        width: 100px;
+
+    }
 }
 
 .cate-right {
@@ -93,6 +105,8 @@
     display: flex;
     flex-direction: column;
     gap: 16px;
+    min-height: 450px;
+
 
     .keyword-item {
         display: grid;
