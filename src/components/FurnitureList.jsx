@@ -20,7 +20,7 @@ export default function FurnitureList() {
                         {FurnitureList.map((item, id) => (
                             <li key={id}>
                                 <div className='furniture-item'>
-                                    <Link to={`/furniture/${item.id}`}>
+                                    <Link to={`/${item.key}`}>
                                         <img src={item.image} alt={item.key} />
                                         <p>{item.key}</p>
                                     </Link>

@@ -8,7 +8,7 @@ const MdPick = ({mdPick}) => {
             <ul className="md-pick">
 
                 {mdPick.map((md, id) => (
-                    <li>
+                    <li key={id}>
                         <Link to={`/product/${md.id}`}>
 
                             <div className="img-box">

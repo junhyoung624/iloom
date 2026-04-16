@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { useProductStore } from '../store/useProductStore'
 import { Link, useParams } from 'react-router-dom';
 import "./scss/subPage.scss"
 import MdPick from '../components/MdPick';
 import SubCard from '../components/SubCard';
+import Breadcrumb from '../components/Breadcrumb';
 
 const SubPage = () => {
     const bannerImgData = [
@@ -18,7 +19,7 @@ const SubPage = () => {
         { category: "매트리스", imgUrl: "./images/subpage-images/metress.png" }
     ]
 
-    const { items, menus } = useProductStore();
+    const { items, menus, sortType, sortOrder, onSetSort } = useProductStore();
 
     const params = useParams();
     const mainCate = params.originalCategory || originalCategory;
@@ -66,33 +67,46 @@ const SubPage = () => {
 
 
 
+    if (sortType) {
+        cateItems = [...cateItems].sort((a, b) => {
+            switch (sortType) {
+                case "price":
+                    const aPrice = Number(String(a.price).replace(/,/g, ""));
+                    const bPrice = Number(String(b.price).replace(/,/g, ""));
+                    return sortOrder === "asc" ? aPrice - bPrice : bPrice - aPrice;
+                case "ranking":
+                    return b.ranking - a.ranking
+                case "new":
+                    return Number(b.new) - Number(a.new)
+                case "name":
+                    return a.name.localeCompare(b.name)
+                default:
+                    return 0;
+            }
+        })
+    }
+
     const bannerImg = bannerImgData.find(ban => ban.category === mainCate)?.imgUrl
+
+    const [currentPage, setCurrentPage] = useState(1)
+    const itemPage = 20;
+    const totalPages = Math.ceil(cateItems.length / itemPage);
+
+    const pageItem = cateItems.slice(
+        (currentPage - 1) * itemPage,
+        currentPage * itemPage
+    )
+
+    useEffect(() => {
+        setCurrentPage(1);
+    }, [mainCate, subCate, thirdCate]);
+
     return (
         <div className='sub-page-wrap'>
             {!subCate && !thirdCate && (<p className='banner-img'><img src={bannerImg} alt="img" /></p>)}
             <div className="sub-page">
                 <ul className="breadcrumb-list">
-                    <li>
-                        <Link to="/"><img src="/images/logo-icon/home-icon.png" alt="" /></Link>
-                    </li>
-                    <li><img src="/images/logo-icon/arrow-right.png" alt="" /></li>
-                    <li>
-                        <Link to={`/${mainCate}`}> {mainCate}</Link>
-                    </li>
-                    {subCate && (
-                        <>
-                            <li><img src="/images/logo-icon/arrow-right.png" alt="" /></li>
-                            <li>
-                                <Link to={`/${mainCate}/${subCate}`}>{subCate}</Link>
-                            </li>
-                        </>
-                    )}
-                    {thirdCate && (
-                        <>
-                            <li><img src="/images/logo-icon/arrow-right.png" alt="" /></li>
-                            <li>{thirdCate}</li>
-                        </>
-                    )}
+                    <Breadcrumb mainCate={mainCate} subCate={subCate} thirdCate={thirdCate} />
                 </ul>
                 <div className="inner">
                     <h1>{categoryName}</h1>
@@ -114,13 +128,31 @@ const SubPage = () => {
                     )}
 
                     <div className="sub-product-list-wrap">
-
+                        <div className="sort-wrap">
+                            <button className={sortType === "price" ? "active" : ""} onClick={() => onSetSort("price", "desc")}>가격순</button>
+                            <button className={sortType === "ranking" ? "active" : ""} onClick={() => onSetSort("ranking", "asc")}>인기순</button>
+                            <button className={sortType === "new" ? "active" : ""} onClick={() => onSetSort("new", "asc")}>신상품순</button>
+                            <button className={sortType === "name" ? "active" : ""} onClick={() => onSetSort("name", "asc")}>상품명순</button>
+                        </div>
                         <ul className="sub-product-list">
-                            {cateItems.map((item, id) => (
+                            {pageItem.map((item, id) => (
                                 <li key={id}>
                                     <Link to={`/product/${item.id}`}>
                                         <SubCard item={item} />
                                     </Link>
+                                </li>
+                            ))}
+                        </ul>
+
+                        <ul className="pagination">
+                            {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
+                                <li key={page}>
+                                    <button
+                                        className={currentPage === page ? "active" : ""}
+                                        onClick={() => setCurrentPage(page)}
+                                    >
+                                        {page}
+                                    </button>
                                 </li>
                             ))}
                         </ul>

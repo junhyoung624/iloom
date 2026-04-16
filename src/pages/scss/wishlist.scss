@@ -1,20 +1,33 @@
-.wish-list-wrap {
+.mypage {
     margin-top: 100px;
+    padding: 80px 0;
 
     .inner {
         max-width: 1440px;
         margin: 0 auto;
 
-        .page-title {
-            font-size: 40px;
-            font-weight: 700;
-            text-align: center;
+        .content {
+            .page-title {
+                font-size: 32px;
+                font-weight: 700;
+                text-align: center;
+            }
         }
+
     }
 }
 
+
 .wish-list {
-    margin-top: 30px;
+    //margin-top: 30px;
+}
+
+
+
+.checked-wish-area {
+    padding: 10px 0;
+    display: flex;
+
 }
 
 .wish-check-box {
@@ -47,20 +60,86 @@
     display: block;
 }
 
+.wish-list-title {
+    margin-top: 50px;
+    display: flex;
+    border-top: 1px solid #ddd;
+    padding: 10px 0;
+
+    .wish-left {
+        margin: auto 0;
+    }
+
+    .wish-right {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        margin-left: auto;
+
+        .wish-control-btn {
+            height: 40px;
+            width: 60px;
+            line-height: 40px;
+            margin: auto 10px;
+            border: 2px solid black;
+            border-radius: 30px;
+            text-align: center;
+            background: #f1f1f1;
+        }
+
+        .wish-control-btn:hover {
+            background: black;
+            color: white;
+            transition: 0.5s;
+        }
+
+        .checked-wish-area {
+            background: yellowgreen;
+
+            .control-wish-list {
+                display: flex;
+                flex-direction: row-reverse;
+                gap: 10px;
+
+                .checked-wish-thumbnail {
+                    img {
+                        width: 60px;
+                        aspect-ratio: 1/1;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
 .wish-item {
     display: flex;
     gap: 30px;
-    margin-bottom: 10px;
+    //margin-bottom: 10px;
     align-items: center;
-    padding: 30px 0;
+    //padding: 30px 0;
     border-top: 1px solid #ddd;
 
     .wish-name-info {
         flex-basis: 40%;
+
+        .series-name {
+            padding: 10px;
+        }
+
+        .product-name {
+            color: black;
+            padding: 10px;
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+
     }
 
     .wish-img-info {
         flex-basis: 20%;
+        padding: 30px 0;
     }
 
     .wish-price-info {
@@ -71,14 +150,15 @@
         flex-basis: 20%;
         text-align: center;
 
-        * {
+        .detail-btn,
+        .delete-btn {
             border: 1px solid black;
             margin: 10px;
             padding: 10px 0;
             width: 205px;
         }
 
-        *:hover {
+        .wish-btn:hover {
             background: black;
             color: white;
             margin: 10px;
@@ -93,7 +173,7 @@
 
 .wish-img-info {
     img {
-        width: 230px;
+        width: 200px;
         aspect-ratio: 1/1.06;
     }
 }
