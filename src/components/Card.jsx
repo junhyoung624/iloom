@@ -3,7 +3,7 @@ import { useProductStore } from '../store/useProductStore'
 import "./scss/Card.scss"
 
 const SubCard = ({ item }) => {
-    const { onToggleWishlist, wishlist } = useProductStore()
+    const { onToggleWishList, wishlist } = useProductStore()
     const [isHoverHeart, setIsHoverHeart] = useState(false)
 
     const isLiked = wishlist.some((wishItem) => wishItem.id === item.id)
@@ -12,7 +12,7 @@ const SubCard = ({ item }) => {
     const handleHeartClick = (e) => {
         e.preventDefault()
         e.stopPropagation()
-        onToggleWishlist(item)
+        onToggleWishList(item)
     }
 
     return (
