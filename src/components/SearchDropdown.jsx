@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { useProductStore } from '../store/useProductStore'
 import "./scss/searchdropdown.scss"
 
-export default function SearchDropdown({ isSearchOpen, setIsSearchOpen }) {
+export default function SearchDropdown({ isSearchOpen, setIsSearchOpen, isScrolled }) {
     const { items, searchWordAll, onSetSearchWordAll } = useProductStore()
     const [activeMenu, setActiveMenu] = useState("md")
     const [hoveredItem, setHoveredItem] = useState(null)
@@ -38,7 +38,6 @@ export default function SearchDropdown({ isSearchOpen, setIsSearchOpen }) {
         }
     }
 
-
     const currentItems =
         activeMenu === "md"
             ? mdItems
@@ -72,7 +71,7 @@ export default function SearchDropdown({ isSearchOpen, setIsSearchOpen }) {
 
     return (
         <div
-            className={`search-dropdown ${isSearchOpen ? "active" : ""}`}
+            className={`search-dropdown ${isSearchOpen ? "active" : ""} ${!isScrolled ? "dark" : ""}`}
             onClick={(e) => e.stopPropagation()}
         >
             <div className="search-dropdown-inner">
@@ -84,7 +83,7 @@ export default function SearchDropdown({ isSearchOpen, setIsSearchOpen }) {
                         onChange={(e) => onSetSearchWordAll(e.target.value)}
                         onKeyDown={handleKeyDown}
                     />
-                    <button type="button" onClick={handleSearchAll} >
+                    <button type="button" onClick={handleSearchAll}>
                         검색
                     </button>
                 </div>
