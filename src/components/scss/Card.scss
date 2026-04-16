@@ -1,32 +1,58 @@
-.card-img-box {
-    aspect-ratio: 1/1;
-    width: 100%;
-
-    img {
-        width: 100%;
-        height: 100%;
-    }
+.series-row {
+    position: relative;
 }
 
-.card-text-box {
+.series-name {
+    margin: 0;
+    text-align: center;
+    color: #606060;
+    font-size: 16px;
+    font-weight: 300;
+    padding: 20px 0 5px;
+}
 
-    .series-name {
-        color: #606060;
-        font-size: 16px;
-        font-weight: 400;
-        margin-top: 30px;
-    }
+.heart-btn {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+}
 
-    .product-name {
-        font-weight: 600;
-        font-size: 18px;
-        color: #030303;
-        margin: 7px 0 15px;
-    }
+.heart {
+    position: absolute;
+    inset: 0;
+    width: 20px;
+    height: 20px;
+    display: block;
+    transition: opacity 0.25s ease;
+}
 
-    .price {
-        font-size: 16px;
-        font-weight: 600;
-        color: #CA1230;
-    }
+.heart-line {
+    opacity: 1;
+}
+
+.heart-fill {
+    opacity: 0;
+}
+
+.heart-btn.active .heart-line {
+    opacity: 0;
+}
+
+.heart-btn.active .heart-fill {
+    opacity: 1;
+}
+
+.product-name {
+    padding-bottom: 10px;
+}
+
+.price {
+    font-weight: 500;
 }
