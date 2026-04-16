@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const UserMenu = ({ userClose }) => {
   const mypage = [
     { link: "/order", name: '주문/배송' },
-    { link: "/wish", name: '위시리스트' },
+    { link: "/wishlist", name: '위시리스트' },
     {
       link: "/mypage", name: '내 정보관리',
       sub: [

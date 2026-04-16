@@ -33,6 +33,7 @@ import SubPage from './pages/SubPage'
 import SearchPage from './pages/SearchPage'
 import NaverCallback from './pages/NaverCallback'
 import ProductDetail from './pages/ProductDetail'
+import WishList from './pages/WishList'
 
 // 메인 페이지
 function App() {
@@ -75,6 +76,7 @@ function App() {
         <Route path='/leavepage' element={<LeavePage />} />
         <Route path='/naver-callback' element={<NaverCallback />} />
         <Route path='/product/:id' element={<ProductDetail />} />
+        <Route path='/wishlist' element={<WishList />} />
 
         <Route path='/:originalCategory' element={<SubPage />} />
         <Route path='/:originalCategory/:category2' element={<SubPage />} />
