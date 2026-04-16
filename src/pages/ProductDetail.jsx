@@ -15,7 +15,10 @@ export default function ProductDetail() {
     const [selectedOption, setSelectedOption] = useState('')
     const [quantity, setQuantity] = useState(1)
     const [activeTab, setActiveTab] = useState('상세정보')
-    const [isWished, setIsWished] = useState(false)
+    //const [isWished, setIsWished] = useState(false)
+    const { onToggleWishList, isWished } = useProductStore();
+    const wished = isWished(id);
+
 
     useEffect(() => {
         window.scrollTo(0, 0)
@@ -143,9 +146,9 @@ export default function ProductDetail() {
 
 
                     <div className="icon-btns">
-                        <button className={`wish-btn ${isWished ? 'active' : ''}`}
-                            onClick={() => setIsWished(w => !w)}>
-                            <img src={isWished ? '/images/product-detail/like.png' : '/images/product-detail/unlike.png'} alt="wish"
+                        <button className={`wish-btn ${wished ? 'active' : ''}`}
+                            onClick={() => onToggleWishList(product)}>
+                            <img src={wished ? '/images/product-detail/like.png' : '/images/product-detail/unlike.png'} alt="wish"
                                 style={{ width: '20px', height: '20px' }} />
                         </button>
                         <button className="share-btn" onClick={() => {
