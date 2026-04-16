@@ -9,7 +9,7 @@ const MdPick = ({mdPick}) => {
 
                 {mdPick.map((md, id) => (
                     <li>
-                        <Link>
+                        <Link to={`/product/${md.id}`}>
 
                             <div className="img-box">
                                 <img src={md.productImages[1]} alt="상품이미지" />
