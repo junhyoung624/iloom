@@ -75,7 +75,7 @@ export default function ImageWithTags() {
                     </ul>
 
                 </div>
-                <Link>
+                <div>
                     <span><img src={spaceCoordiData.filter(item => item.tab === selectedTab)[0].space_image_url} alt="." /></span>
                     <div className="dot-and-box-wrap">
                         <ul>
@@ -110,6 +110,7 @@ export default function ImageWithTags() {
                                                         <p className='item-price'>{item.price}</p>
                                                     </div>
                                                     <div className="button-area">
+
                                                         {/* <p>::</p> */}
 
                                                         <Link
@@ -138,7 +139,7 @@ export default function ImageWithTags() {
                                 className={isAllSelected ? "shop-btn-active" : ""} />
                         </div>
                     </div>
-                </Link >
+                </div >
 
             </div >
             <CoordiItemList tab={selectedTab} data={allIdArr} />

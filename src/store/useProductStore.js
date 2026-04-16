@@ -1,8 +1,8 @@
 import { create } from "zustand";
 import { productData } from "../data/productData";
-import { persist } from "zustand/middleware";
+// import { persist } from "zustand/middleware";
 
-export const useProductStore = create(persist((set, get) => ({
+export const useProductStore = create((set, get) => ({
 
    //상품 변수, 메서드
     items: [],
@@ -65,4 +65,4 @@ export const useProductStore = create(persist((set, get) => ({
     },
 
 
-})))
+}))
