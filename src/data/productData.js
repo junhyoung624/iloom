@@ -10573,7 +10573,7 @@ export const productData = [
     ],
     "originalCategory": "옷장",
     "category2": "옷장•붙박이장",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/wardrobe/wardrobe/HWB1D09S_SP_1.png"
     ],
@@ -10599,7 +10599,7 @@ export const productData = [
     ],
     "originalCategory": "옷장",
     "category2": "옷장•붙박이장",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/wardrobe/wardrobe/HWA0D04LS_a_IVA_1.png",
       "/images/iloom_images/wardrobe/wardrobe/HWA0D04LS_a_IVA_2.png",
@@ -10628,7 +10628,7 @@ export const productData = [
     ],
     "originalCategory": "옷장",
     "category2": "옷장•붙박이장",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/wardrobe/wardrobe/HWA0D09S_a_IVA_1.png",
       "/images/iloom_images/wardrobe/wardrobe/HWA0D09S_a_IVA_2.png",
@@ -10659,7 +10659,7 @@ export const productData = [
     ],
     "originalCategory": "옷장",
     "category2": "옷장•붙박이장",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/wardrobe/wardrobe/HWB0D04LL_WGYS_1.png"
     ],
@@ -10685,7 +10685,7 @@ export const productData = [
     ],
     "originalCategory": "옷장",
     "category2": "옷장•붙박이장",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/wardrobe/wardrobe/HWB0D09L_WGYS_1.png",
       "/images/iloom_images/wardrobe/wardrobe/HWB0D09L_WGYS_2.png"
@@ -10705,7 +10705,7 @@ export const productData = [
     "options": [],
     "originalCategory": "옷장",
     "category2": "옷장•붙박이장",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/wardrobe/wardrobe/HW90D04LL__1.png",
       "/images/iloom_images/wardrobe/wardrobe/HW90D04LL_default_2.png",
@@ -10740,7 +10740,7 @@ export const productData = [
     ],
     "originalCategory": "옷장",
     "category2": "옷장•붙박이장",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/wardrobe/wardrobe/HW90D09L_FIVFIV_1.png",
       "/images/iloom_images/wardrobe/wardrobe/HW90D09L_FIVFIV_3.png",
@@ -10780,7 +10780,7 @@ export const productData = [
     ],
     "originalCategory": "옷장",
     "category2": "옷장•붙박이장",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/wardrobe/wardrobe/HW91D04LL_FIV_1.jpg",
       "/images/iloom_images/wardrobe/wardrobe/HW91D04LL_FIV_1.jpg",
@@ -10816,7 +10816,7 @@ export const productData = [
     ],
     "originalCategory": "옷장",
     "category2": "옷장•붙박이장",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/wardrobe/wardrobe/HW91D09L_FIV_1.jpg",
       "/images/iloom_images/wardrobe/wardrobe/HW91D09L_FIV_1.jpg",
@@ -10852,7 +10852,7 @@ export const productData = [
     ],
     "originalCategory": "옷장",
     "category2": "옷장•붙박이장",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/wardrobe/wardrobe/HWD0D09G_DG_1.png"
     ],
@@ -10878,7 +10878,7 @@ export const productData = [
     ],
     "originalCategory": "옷장",
     "category2": "옷장•붙박이장",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/wardrobe/wardrobe/HYC6002_XX_1.jpg",
       "/images/iloom_images/wardrobe/wardrobe/HYC6002_XX_1.jpg",
@@ -10906,7 +10906,7 @@ export const productData = [
     ],
     "originalCategory": "옷장",
     "category2": "옷장•붙박이장",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/wardrobe/wardrobe/IGL0018A_SP_1.jpg",
       "/images/iloom_images/wardrobe/wardrobe/IGL0018A_SP_1.jpg",
@@ -10948,7 +10948,7 @@ export const productData = [
     ],
     "originalCategory": "옷장",
     "category2": "옷장•붙박이장",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/wardrobe/wardrobe/HWA0D20SLS_a_IVA_1.png",
       "/images/iloom_images/wardrobe/wardrobe/HWA0D20SLS_a_IVA_2.png",
@@ -10985,7 +10985,7 @@ export const productData = [
     ],
     "originalCategory": "옷장",
     "category2": "옷장•붙박이장",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/wardrobe/wardrobe/HWA0D30SS_a_IVA_1.jpg",
       "/images/iloom_images/wardrobe/wardrobe/HWA0D30SS_a_IVA_1.jpg",
@@ -11032,7 +11032,7 @@ export const productData = [
     ],
     "originalCategory": "옷장",
     "category2": "옷장•붙박이장",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/wardrobe/wardrobe/HWB0D30SS_a_NGYS_1.jpg",
       "/images/iloom_images/wardrobe/wardrobe/HWB0D30SS_a_NGYS_1.jpg",
@@ -11079,7 +11079,7 @@ export const productData = [
     ],
     "originalCategory": "옷장",
     "category2": "옷장•붙박이장",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/wardrobe/wardrobe/HWC0D30SS_WGYAS_1.png",
       "/images/iloom_images/wardrobe/wardrobe/HWC0D30SS_WGYAS_1.png"
@@ -11267,7 +11267,7 @@ export const productData = [
     ],
     "originalCategory": "옷장",
     "category2": "옷장•붙박이장",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/wardrobe/wardrobe/HYC993B_DGC_1.png",
       "/images/iloom_images/wardrobe/wardrobe/HYC993B_DGC_3.png",
@@ -11307,7 +11307,7 @@ export const productData = [
     ],
     "originalCategory": "옷장",
     "category2": "옷장•붙박이장",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/wardrobe/wardrobe/HYC913B_DGC_1.png",
       "/images/iloom_images/wardrobe/wardrobe/HYC913B_DGC_3.png",
@@ -11347,7 +11347,7 @@ export const productData = [
     ],
     "originalCategory": "옷장",
     "category2": "옷장•붙박이장",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/wardrobe/wardrobe/HYC993E_DGC_1.png",
       "/images/iloom_images/wardrobe/wardrobe/HYC993E_DGC_3.png",
@@ -11387,7 +11387,7 @@ export const productData = [
     ],
     "originalCategory": "옷장",
     "category2": "옷장•붙박이장",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/wardrobe/wardrobe/HYC913E_DGC_1.png",
       "/images/iloom_images/wardrobe/wardrobe/HYC913E_DGC_3.png",
@@ -11827,7 +11827,7 @@ export const productData = [
     ],
     "originalCategory": "옷장",
     "category2": "옷장•붙박이장",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/wardrobe/wardrobe/HYC941B_DGC_1.png",
       "/images/iloom_images/wardrobe/wardrobe/HYC941B_DGC_3.png",
@@ -11867,7 +11867,7 @@ export const productData = [
     ],
     "originalCategory": "옷장",
     "category2": "옷장•붙박이장",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/wardrobe/wardrobe/HYC951B_DGC_1.png",
       "/images/iloom_images/wardrobe/wardrobe/HYC951B_DGC_3.png",
@@ -11907,7 +11907,7 @@ export const productData = [
     ],
     "originalCategory": "옷장",
     "category2": "옷장•붙박이장",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/wardrobe/wardrobe/HYC941D_DGC_1.png",
       "/images/iloom_images/wardrobe/wardrobe/HYC941D_DGC_3.png",
@@ -11946,7 +11946,7 @@ export const productData = [
     ],
     "originalCategory": "옷장",
     "category2": "옷장•붙박이장",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/wardrobe/wardrobe/HYC951D_DGC_1.png",
       "/images/iloom_images/wardrobe/wardrobe/HYC951D_DGC_3.png",
@@ -11985,7 +11985,7 @@ export const productData = [
     ],
     "originalCategory": "옷장",
     "category2": "옷장•붙박이장",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/wardrobe/wardrobe/IFC00CT00A_5J1_1.jpg",
       "/images/iloom_images/wardrobe/wardrobe/IFC00CT00A_5J1_1.jpg",
@@ -12020,7 +12020,7 @@ export const productData = [
     ],
     "originalCategory": "옷장",
     "category2": "옷장•붙박이장",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/wardrobe/wardrobe/IFC00CT01A_5J1_1.jpg",
       "/images/iloom_images/wardrobe/wardrobe/IFC00CT01A_5J1_1.jpg",
@@ -12055,7 +12055,7 @@ export const productData = [
     ],
     "originalCategory": "옷장",
     "category2": "옷장•붙박이장",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/wardrobe/wardrobe/IFC00CT02A_5J1_1.jpg",
       "/images/iloom_images/wardrobe/wardrobe/IFC00CT02A_5J1_1.jpg",
@@ -12090,7 +12090,7 @@ export const productData = [
     ],
     "originalCategory": "옷장",
     "category2": "옷장•붙박이장",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/wardrobe/wardrobe/IFC00CT03A_5J1_1.jpg",
       "/images/iloom_images/wardrobe/wardrobe/IFC00CT03A_5J1_1.jpg",
@@ -12125,7 +12125,7 @@ export const productData = [
     ],
     "originalCategory": "옷장",
     "category2": "옷장•붙박이장",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/wardrobe/wardrobe/IFC00CT04A_5J1_1.jpg",
       "/images/iloom_images/wardrobe/wardrobe/IFC00CT04A_5J1_1.jpg",
@@ -12160,7 +12160,7 @@ export const productData = [
     ],
     "originalCategory": "옷장",
     "category2": "옷장•붙박이장",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/wardrobe/wardrobe/IFC00CT05A_5J1_1.jpg",
       "/images/iloom_images/wardrobe/wardrobe/IFC00CT05A_5J1_1.jpg",
@@ -12195,7 +12195,7 @@ export const productData = [
     ],
     "originalCategory": "옷장",
     "category2": "옷장•붙박이장",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/wardrobe/wardrobe/IFC00CT06A_5J1_1.jpg",
       "/images/iloom_images/wardrobe/wardrobe/IFC00CT06A_5J1_1.jpg",
@@ -12229,7 +12229,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "침대",
     "category3": "",
     "productImages": [
@@ -12272,7 +12272,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "침대",
     "category3": "",
     "productImages": [
@@ -12315,7 +12315,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "침대",
     "category3": "",
     "productImages": [
@@ -12358,7 +12358,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "침대",
     "category3": "",
     "productImages": [
@@ -12401,7 +12401,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "침대",
     "category3": "",
     "productImages": [
@@ -12444,7 +12444,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "침대",
     "category3": "",
     "productImages": [
@@ -12487,7 +12487,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "침대",
     "category3": "침대액세서리",
     "productImages": [
@@ -12530,7 +12530,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "침대",
     "category3": "침대액세서리",
     "productImages": [
@@ -12573,7 +12573,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "침대",
     "category3": "침대액세서리",
     "productImages": [
@@ -12617,7 +12617,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "침대",
     "category3": "침대액세서리",
     "productImages": [
@@ -12663,7 +12663,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "침대",
     "category3": "침대액세서리",
     "productImages": [
@@ -12706,7 +12706,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "침대",
     "category3": "침대액세서리",
     "productImages": [
@@ -12749,7 +12749,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "침대",
     "category3": "",
     "productImages": [
@@ -12789,7 +12789,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "침대",
     "category3": "침대액세서리",
     "productImages": [
@@ -12828,7 +12828,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "액세서리",
     "category3": "",
     "productImages": [
@@ -12861,7 +12861,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "침대",
     "category3": "매트리스",
     "productImages": [
@@ -12901,7 +12901,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "침대",
     "category3": "매트리스",
     "productImages": [
@@ -12937,7 +12937,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "침대",
     "category3": "매트리스",
     "productImages": [
@@ -12976,7 +12976,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "침대",
     "category3": "매트리스",
     "productImages": [
@@ -13012,7 +13012,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "침대",
     "category3": "매트리스",
     "productImages": [
@@ -13051,7 +13051,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "침대",
     "category3": "매트리스",
     "productImages": [
@@ -13087,7 +13087,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "액세서리",
     "category3": "",
     "productImages": [
@@ -13123,7 +13123,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "액세서리",
     "category3": "",
     "productImages": [
@@ -13158,7 +13158,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "액세서리",
     "category3": "",
     "productImages": [
@@ -13194,7 +13194,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "수납장",
     "category3": "",
     "productImages": [
@@ -13241,7 +13241,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "수납장",
     "category3": "",
     "productImages": [
@@ -13289,7 +13289,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "수납장",
     "category3": "",
     "productImages": [
@@ -13336,7 +13336,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "수납장",
     "category3": "",
     "productImages": [
@@ -13383,7 +13383,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "수납장",
     "category3": "",
     "productImages": [
@@ -13430,7 +13430,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "수납장",
     "category3": "",
     "productImages": [
@@ -13477,7 +13477,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "수납장",
     "category3": "",
     "productImages": [
@@ -13512,7 +13512,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "액세서리",
     "category3": "",
     "productImages": [
@@ -13553,7 +13553,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "액세서리",
     "category3": "",
     "productImages": [
@@ -13596,7 +13596,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "액세서리",
     "category3": "",
     "productImages": [
@@ -13639,7 +13639,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "액세서리",
     "category3": "",
     "productImages": [
@@ -13680,7 +13680,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "액세서리",
     "category3": "",
     "productImages": [
@@ -13720,7 +13720,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "액세서리",
     "category3": "",
     "productImages": [
@@ -13760,7 +13760,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "액세서리",
     "category3": "조명",
     "productImages": [
@@ -13800,7 +13800,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "액세서리",
     "category3": "조명",
     "productImages": [
@@ -13839,7 +13839,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "침대",
     "category3": "",
     "productImages": [
@@ -13873,7 +13873,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "침대",
     "category3": "매트리스",
     "productImages": [
@@ -13909,7 +13909,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "침대",
     "category3": "매트리스",
     "productImages": [
@@ -13949,7 +13949,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "수납장",
     "category3": "옷장•행거",
     "productImages": [
@@ -13984,7 +13984,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "수납장",
     "category3": "",
     "productImages": [
@@ -14019,7 +14019,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "액세서리",
     "category3": "",
     "productImages": [
@@ -14053,7 +14053,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "액세서리",
     "category3": "",
     "productImages": [
@@ -14087,7 +14087,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "액세서리",
     "category3": "",
     "productImages": [
@@ -14128,7 +14128,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "수납장",
     "category3": "책장",
     "productImages": [
@@ -14173,7 +14173,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "침대",
     "category3": "",
     "productImages": [
@@ -14213,7 +14213,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "침대",
     "category3": "침대액세서리",
     "productImages": [
@@ -14251,7 +14251,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "침대",
     "category3": "침대액세서리",
     "productImages": [
@@ -14289,7 +14289,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "액세서리",
     "category3": "",
     "productImages": [
@@ -14324,7 +14324,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "액세서리",
     "category3": "",
     "productImages": [
@@ -14359,7 +14359,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "액세서리",
     "category3": "조명",
     "productImages": [
@@ -14394,7 +14394,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "액세서리",
     "category3": "조명",
     "productImages": [
@@ -14429,7 +14429,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "액세서리",
     "category3": "",
     "productImages": [
@@ -14464,7 +14464,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "액세서리",
     "category3": "",
     "productImages": [
@@ -14499,7 +14499,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "액세서리",
     "category3": "조명",
     "productImages": [
@@ -14534,7 +14534,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "액세서리",
     "category3": "조명",
     "productImages": [
@@ -14568,7 +14568,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "침대",
     "category3": "",
     "productImages": [
@@ -14599,7 +14599,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "액세서리",
     "category3": "",
     "productImages": [
@@ -14631,7 +14631,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "침대",
     "category3": "침대액세서리",
     "productImages": [
@@ -14681,7 +14681,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "침대",
     "category3": "침대액세서리",
     "productImages": [
@@ -14728,7 +14728,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "침대",
     "category3": "침대액세서리",
     "productImages": [
@@ -14773,7 +14773,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "침대",
     "category3": "",
     "productImages": [
@@ -14820,7 +14820,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "침대",
     "category3": "침대액세서리",
     "productImages": [
@@ -14860,7 +14860,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "침대",
     "category3": "침대액세서리",
     "productImages": [
@@ -14898,7 +14898,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "침대",
     "category3": "침대액세서리",
     "productImages": [
@@ -14934,7 +14934,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "침대",
     "category3": "매트리스",
     "productImages": [
@@ -14975,7 +14975,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "액세서리",
     "category3": "",
     "productImages": [
@@ -15012,7 +15012,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "액세서리",
     "category3": "",
     "productImages": [
@@ -15050,7 +15050,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "액세서리",
     "category3": "",
     "productImages": [
@@ -15086,9 +15086,9 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "소파•의자",
-    "category3": "소파",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/kids-room/sofa-chair/HSFS090_GYM3J2_1.jpg",
       "/images/iloom_images/kids-room/sofa-chair/HSFS090_GYM3J2_2.png"
@@ -15118,7 +15118,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "수납장",
     "category3": "책장",
     "productImages": [
@@ -15166,7 +15166,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "수납장",
     "category3": "책장",
     "productImages": [
@@ -15220,7 +15220,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "액세서리",
     "category3": "",
     "productImages": [
@@ -15256,7 +15256,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "액세서리",
     "category3": "",
     "productImages": [
@@ -15304,7 +15304,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "액세서리",
     "category3": "",
     "productImages": [
@@ -15340,7 +15340,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "액세서리",
     "category3": "",
     "productImages": [
@@ -15369,7 +15369,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "액세서리",
     "category3": "",
     "productImages": [
@@ -15400,7 +15400,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "수납장",
     "category3": "책장",
     "productImages": [
@@ -15442,7 +15442,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "수납장",
     "category3": "책장",
     "productImages": [
@@ -15486,7 +15486,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "수납장",
     "category3": "책장",
     "productImages": [
@@ -15527,7 +15527,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "액세서리",
     "category3": "",
     "productImages": [
@@ -15568,7 +15568,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "수납장",
     "category3": "",
     "productImages": [
@@ -15631,7 +15631,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "수납장",
     "category3": "",
     "productImages": [
@@ -15684,7 +15684,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "액세서리",
     "category3": "",
     "productImages": [
@@ -15726,7 +15726,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "수납장",
     "category3": "책장",
     "productImages": [
@@ -15767,7 +15767,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "수납장",
     "category3": "",
     "productImages": [
@@ -15804,7 +15804,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "수납장",
     "category3": "책장",
     "productImages": [
@@ -15837,7 +15837,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "액세서리",
     "category3": "",
     "productImages": [
@@ -15870,7 +15870,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "수납장",
     "category3": "책장",
     "productImages": [
@@ -15907,7 +15907,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "침대",
     "category3": "침대액세서리",
     "productImages": [
@@ -15951,7 +15951,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "침대",
     "category3": "침대액세서리",
     "productImages": [
@@ -15994,7 +15994,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "침대",
     "category3": "침대액세서리",
     "productImages": [
@@ -16036,7 +16036,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "침대",
     "category3": "침대액세서리",
     "productImages": [
@@ -16065,7 +16065,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "침대",
     "category3": "",
     "productImages": [
@@ -16111,7 +16111,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "침대",
     "category3": "",
     "productImages": [
@@ -16147,7 +16147,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "침대",
     "category3": "",
     "productImages": [
@@ -16183,7 +16183,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "침대",
     "category3": "",
     "productImages": [
@@ -16217,7 +16217,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "침대",
     "category3": "",
     "productImages": [
@@ -16252,7 +16252,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "침대",
     "category3": "침대액세서리",
     "productImages": [
@@ -16288,7 +16288,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "수납장",
     "category3": "옷장•행거",
     "productImages": [
@@ -16324,7 +16324,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "수납장",
     "category3": "옷장•행거",
     "productImages": [
@@ -16365,7 +16365,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "수납장",
     "category3": "옷장•행거",
     "productImages": [
@@ -16403,7 +16403,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "수납장",
     "category3": "옷장•행거",
     "productImages": [
@@ -16436,7 +16436,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "수납장",
     "category3": "서랍장•수납장",
     "productImages": [
@@ -16468,7 +16468,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "수납장",
     "category3": "서랍장•수납장",
     "productImages": [
@@ -16514,7 +16514,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "액세서리",
     "category3": "",
     "productImages": [
@@ -16556,7 +16556,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "액세서리",
     "category3": "",
     "productImages": [
@@ -16622,7 +16622,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "침대",
     "category3": "",
     "productImages": [
@@ -16670,7 +16670,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "침대",
     "category3": "",
     "productImages": [
@@ -16716,7 +16716,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "침대",
     "category3": "",
     "productImages": [
@@ -16757,7 +16757,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "침대",
     "category3": "",
     "productImages": [
@@ -16794,7 +16794,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "책상",
     "category3": "",
     "productImages": [
@@ -16837,7 +16837,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "책상",
     "category3": "",
     "productImages": [
@@ -16876,7 +16876,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "책상",
     "category3": "",
     "productImages": [
@@ -16915,7 +16915,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "수납장",
     "category3": "서랍장•수납장",
     "productImages": [
@@ -16951,7 +16951,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "수납장",
     "category3": "옷장•행거",
     "productImages": [
@@ -16987,7 +16987,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "수납장",
     "category3": "옷장•행거",
     "productImages": [
@@ -17021,7 +17021,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "수납장",
     "category3": "화장대",
     "productImages": [
@@ -17052,7 +17052,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "수납장",
     "category3": "책장",
     "productImages": [
@@ -17086,7 +17086,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "수납장",
     "category3": "책장",
     "productImages": [
@@ -17120,7 +17120,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "수납장",
     "category3": "책장",
     "productImages": [
@@ -17152,7 +17152,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "수납장",
     "category3": "책장",
     "productImages": [
@@ -17182,7 +17182,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "수납장",
     "category3": "",
     "productImages": [
@@ -17219,7 +17219,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "액세서리",
     "category3": "",
     "productImages": [
@@ -17251,7 +17251,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "액세서리",
     "category3": "",
     "productImages": [
@@ -17279,7 +17279,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "액세서리",
     "category3": "",
     "productImages": [
@@ -17304,7 +17304,7 @@ export const productData = [
     "material": "가죽, 인조가죽",
     "price": "179,000",
     "options": [],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "액세서리",
     "category3": "",
     "productImages": [
@@ -17342,7 +17342,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "수납장",
     "category3": "화장대",
     "productImages": [
@@ -17375,7 +17375,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "액세서리",
     "category3": "",
     "productImages": [
@@ -17414,7 +17414,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "액세서리",
     "category3": "",
     "productImages": [
@@ -17448,7 +17448,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "액세서리",
     "category3": "",
     "productImages": [
@@ -17489,7 +17489,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "액세서리",
     "category3": "",
     "productImages": [
@@ -17527,7 +17527,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "액세서리",
     "category3": "",
     "productImages": [
@@ -17566,7 +17566,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "액세서리",
     "category3": "",
     "productImages": [
@@ -17606,7 +17606,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "액세서리",
     "category3": "",
     "productImages": [
@@ -17645,7 +17645,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "키즈",
+    "originalCategory": "키즈룸",
     "category2": "액세서리",
     "category3": "",
     "productImages": [
@@ -18902,7 +18902,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁",
     "category3": "리빙다이닝식탁",
     "productImages": [
@@ -18931,7 +18931,6 @@ export const productData = [
     ],
     "ranking": 367
   },
-
   {
     "id": "IDM0003A",
     "series": "업 모션",
@@ -18946,7 +18945,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁",
     "category3": "리빙다이닝식탁",
     "productImages": [
@@ -18975,7 +18974,6 @@ export const productData = [
     ],
     "ranking": 1614
   },
-
   {
     "id": "IDM0005A",
     "series": "업 모션",
@@ -18990,7 +18988,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁",
     "category3": "리빙다이닝식탁",
     "productImages": [
@@ -19033,7 +19031,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁",
     "category3": "리빙다이닝식탁",
     "productImages": [
@@ -19076,7 +19074,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁",
     "category3": "4인용식탁",
     "productImages": [
@@ -19116,7 +19114,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁",
     "category3": "6인용식탁",
     "productImages": [
@@ -19156,7 +19154,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁",
     "category3": "6인용식탁",
     "productImages": [
@@ -19199,7 +19197,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁",
     "category3": "4인용식탁",
     "productImages": [
@@ -19250,7 +19248,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁",
     "category3": "6인용식탁",
     "productImages": [
@@ -19299,7 +19297,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁",
     "category3": "6인용식탁",
     "productImages": [
@@ -19351,7 +19349,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁",
     "category3": "4인용식탁",
     "productImages": [
@@ -19396,7 +19394,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁",
     "category3": "6인용식탁",
     "productImages": [
@@ -19441,7 +19439,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁",
     "category3": "6인용식탁",
     "productImages": [
@@ -19487,7 +19485,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁",
     "category3": "6인용식탁",
     "productImages": [
@@ -19531,7 +19529,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁",
     "category3": "4인용식탁",
     "productImages": [
@@ -19569,7 +19567,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁",
     "category3": "6인용식탁",
     "productImages": [
@@ -19606,7 +19604,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁",
     "category3": "6인용식탁",
     "productImages": [
@@ -19645,7 +19643,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁",
     "category3": "6인용식탁",
     "productImages": [
@@ -19689,7 +19687,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁",
     "category3": "6인용식탁",
     "productImages": [
@@ -19732,7 +19730,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁",
     "category3": "4인용식탁",
     "productImages": [
@@ -19775,7 +19773,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁",
     "category3": "2인용식탁",
     "productImages": [
@@ -19816,7 +19814,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁",
     "category3": "6인용식탁",
     "productImages": [
@@ -19855,7 +19853,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁",
     "category3": "6인용식탁",
     "productImages": [
@@ -19895,7 +19893,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁",
     "category3": "6인용식탁",
     "productImages": [
@@ -19936,7 +19934,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁",
     "category3": "6인용식탁",
     "productImages": [
@@ -19978,7 +19976,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁",
     "category3": "6인용식탁",
     "productImages": [
@@ -20013,7 +20011,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁",
     "category3": "6인용식탁",
     "productImages": [
@@ -20046,7 +20044,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁",
     "category3": "6인용식탁",
     "productImages": [
@@ -20081,7 +20079,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁",
     "category3": "6인용식탁",
     "productImages": [
@@ -20121,7 +20119,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁",
     "category3": "6인용식탁",
     "productImages": [
@@ -20154,7 +20152,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁",
     "category3": "6인용식탁",
     "productImages": [
@@ -20188,7 +20186,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁",
     "category3": "4인용식탁",
     "productImages": [
@@ -20222,7 +20220,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁",
     "category3": "4인용식탁",
     "productImages": [
@@ -20255,7 +20253,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁",
     "category3": "6인용식탁",
     "productImages": [
@@ -20288,7 +20286,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁",
     "category3": "6인용식탁",
     "productImages": [
@@ -20322,7 +20320,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁",
     "category3": "4인용식탁",
     "productImages": [
@@ -20356,7 +20354,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁",
     "category3": "4인용식탁",
     "productImages": [
@@ -20391,7 +20389,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁",
     "category3": "6인용식탁",
     "productImages": [
@@ -20422,7 +20420,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁",
     "category3": "4인용식탁",
     "productImages": [
@@ -20458,7 +20456,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁",
     "category3": "6인용식탁",
     "productImages": [
@@ -20493,7 +20491,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁",
     "category3": "4인용식탁",
     "productImages": [
@@ -20528,7 +20526,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁",
     "category3": "4인용식탁",
     "productImages": [
@@ -20561,7 +20559,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁",
     "category3": "4인용식탁",
     "productImages": [
@@ -20596,7 +20594,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁",
     "category3": "4인용식탁",
     "productImages": [
@@ -20630,7 +20628,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁",
     "category3": "4인용식탁",
     "productImages": [
@@ -20665,7 +20663,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁",
     "category3": "4인용식탁",
     "productImages": [
@@ -20700,7 +20698,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁",
     "category3": "6인용식탁",
     "productImages": [
@@ -20735,7 +20733,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁",
     "category3": "6인용식탁",
     "productImages": [
@@ -20770,7 +20768,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁",
     "category3": "4인용식탁",
     "productImages": [
@@ -20801,7 +20799,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁",
     "category3": "6인용식탁",
     "productImages": [
@@ -20833,7 +20831,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁",
     "category3": "2인용식탁",
     "productImages": [
@@ -20867,7 +20865,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁",
     "category3": "6인용식탁",
     "productImages": [
@@ -20903,7 +20901,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁",
     "category3": "2인용식탁",
     "productImages": [
@@ -20935,7 +20933,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁",
     "category3": "2인용식탁",
     "productImages": [
@@ -20968,7 +20966,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁",
     "category3": "2인용식탁",
     "productImages": [
@@ -21001,7 +20999,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁",
     "category3": "2인용식탁",
     "productImages": [
@@ -21035,7 +21033,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁",
     "category3": "4인용식탁",
     "productImages": [
@@ -21078,7 +21076,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁",
     "category3": "4인용식탁",
     "productImages": [
@@ -21121,7 +21119,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁",
     "category3": "6인용식탁",
     "productImages": [
@@ -21162,7 +21160,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁",
     "category3": "2인용식탁",
     "productImages": [
@@ -21191,7 +21189,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁",
     "category3": "4인용식탁",
     "productImages": [
@@ -21223,7 +21221,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁",
     "category3": "6인용식탁",
     "productImages": [
@@ -21255,7 +21253,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁세트",
     "category3": "",
     "productImages": [
@@ -21287,7 +21285,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁세트",
     "category3": "",
     "productImages": [
@@ -21319,7 +21317,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁의자",
     "category3": "",
     "productImages": [
@@ -21354,7 +21352,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁의자",
     "category3": "",
     "productImages": [
@@ -21392,7 +21390,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁의자",
     "category3": "",
     "productImages": [
@@ -21428,7 +21426,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁의자",
     "category3": "",
     "productImages": [
@@ -21464,7 +21462,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁의자",
     "category3": "",
     "productImages": [
@@ -21501,7 +21499,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁의자",
     "category3": "",
     "productImages": [
@@ -21540,7 +21538,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁의자",
     "category3": "",
     "productImages": [
@@ -21580,7 +21578,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁의자",
     "category3": "",
     "productImages": [
@@ -21616,7 +21614,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁의자",
     "category3": "",
     "productImages": [
@@ -21649,7 +21647,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁의자",
     "category3": "",
     "productImages": [
@@ -21684,7 +21682,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁의자",
     "category3": "",
     "productImages": [
@@ -21721,7 +21719,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁의자",
     "category3": "",
     "productImages": [
@@ -21755,7 +21753,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁의자",
     "category3": "",
     "productImages": [
@@ -21794,7 +21792,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁의자",
     "category3": "",
     "productImages": [
@@ -21832,7 +21830,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁의자",
     "category3": "",
     "productImages": [
@@ -21868,7 +21866,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁의자",
     "category3": "",
     "productImages": [
@@ -21905,7 +21903,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁의자",
     "category3": "",
     "productImages": [
@@ -21943,7 +21941,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁의자",
     "category3": "",
     "productImages": [
@@ -21979,7 +21977,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁의자",
     "category3": "",
     "productImages": [
@@ -22013,7 +22011,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁의자",
     "category3": "",
     "productImages": [
@@ -22050,7 +22048,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁의자",
     "category3": "",
     "productImages": [
@@ -22088,7 +22086,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁의자",
     "category3": "",
     "productImages": [
@@ -22120,7 +22118,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁의자",
     "category3": "",
     "productImages": [
@@ -22153,7 +22151,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁의자",
     "category3": "",
     "productImages": [
@@ -22191,7 +22189,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁의자",
     "category3": "",
     "productImages": [
@@ -22230,7 +22228,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁의자",
     "category3": "",
     "productImages": [
@@ -22271,7 +22269,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁의자",
     "category3": "",
     "productImages": [
@@ -22311,7 +22309,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁의자",
     "category3": "",
     "productImages": [
@@ -22343,7 +22341,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁의자",
     "category3": "",
     "productImages": [
@@ -22376,7 +22374,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁의자",
     "category3": "",
     "productImages": [
@@ -22412,7 +22410,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁의자",
     "category3": "",
     "productImages": [
@@ -22447,9 +22445,9 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "수납장",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dining-room/storage/IKB0006A_SO_1.jpg",
       "/images/iloom_images/dining-room/storage/IKB0006A_SO_2.png"
@@ -22482,9 +22480,9 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "수납장",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dining-room/storage/IKB0007A_SO_1.jpg",
       "/images/iloom_images/dining-room/storage/IKB0007A_SO_2.png"
@@ -22517,9 +22515,9 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "수납장",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dining-room/storage/IKB0008A_SO_1.jpg",
       "/images/iloom_images/dining-room/storage/IKB0008A_SO_2.png"
@@ -22552,9 +22550,9 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "수납장",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dining-room/storage/IKB0009A_SO_1.jpg",
       "/images/iloom_images/dining-room/storage/IKB0009A_SO_2.png",
@@ -22591,9 +22589,9 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "수납장",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dining-room/storage/IKB0010A_SO_1.jpg",
       "/images/iloom_images/dining-room/storage/IKB0010A_SO_2.png",
@@ -22630,9 +22628,9 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "수납장",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dining-room/storage/IKB0011A_SO_1.jpg",
       "/images/iloom_images/dining-room/storage/IKB0011A_SO_2.png",
@@ -22686,7 +22684,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁",
     "category3": "4인용식탁",
     "productImages": [
@@ -22724,7 +22722,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁",
     "category3": "4인용식탁",
     "productImages": [
@@ -22762,7 +22760,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁",
     "category3": "4인용식탁",
     "productImages": [
@@ -22800,9 +22798,9 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "수납장",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dining-room/storage/IKS00CE06A_SO_1.png",
       "/images/iloom_images/dining-room/storage/IKS00CE06A_SO_2.png"
@@ -22829,9 +22827,9 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "수납장",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dining-room/storage/IKB0004A_SO_1.jpg",
       "/images/iloom_images/dining-room/storage/IKB0004A_SO_2.png",
@@ -22867,7 +22865,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁의자",
     "category3": "",
     "productImages": [
@@ -22904,7 +22902,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁의자",
     "category3": "",
     "productImages": [
@@ -22942,7 +22940,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁의자",
     "category3": "",
     "productImages": [
@@ -22968,7 +22966,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "수납장",
     "category3": "",
     "productImages": [
@@ -23009,7 +23007,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "수납장",
     "category3": "",
     "productImages": [
@@ -23051,7 +23049,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁의자",
     "category3": "",
     "productImages": [
@@ -23093,7 +23091,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "수납장",
     "category3": "",
     "productImages": [
@@ -23137,7 +23135,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "수납장",
     "category3": "",
     "productImages": [
@@ -23179,7 +23177,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "수납장",
     "category3": "",
     "productImages": [
@@ -23220,9 +23218,9 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "수납장",
-    "category3": "액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/dining-room/storage/HCB2R10ESL_SP_1.png",
       "/images/iloom_images/dining-room/storage/HCB2R10ESL_SP_2.png"
@@ -23247,7 +23245,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁의자",
     "category3": "",
     "productImages": [
@@ -23286,7 +23284,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁의자",
     "category3": "",
     "productImages": [
@@ -23326,7 +23324,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁의자",
     "category3": "",
     "productImages": [
@@ -23371,7 +23369,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁의자",
     "category3": "",
     "productImages": [
@@ -23416,7 +23414,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁의자",
     "category3": "",
     "productImages": [
@@ -23449,7 +23447,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁의자",
     "category3": "",
     "productImages": [
@@ -23485,7 +23483,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁의자",
     "category3": "",
     "productImages": [
@@ -23519,7 +23517,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁의자",
     "category3": "",
     "productImages": [
@@ -23555,7 +23553,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁의자",
     "category3": "",
     "productImages": [
@@ -23589,7 +23587,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁의자",
     "category3": "",
     "productImages": [
@@ -23623,7 +23621,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "다이닝",
+    "originalCategory": "주방",
     "category2": "식탁의자",
     "category3": "",
     "productImages": [
@@ -39844,7 +39842,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "모션데스크",
     "productImages": [
@@ -39879,7 +39877,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "수납가구•액세서리",
     "productImages": [
@@ -39916,7 +39914,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "수납가구•액세서리",
     "productImages": [
@@ -39953,7 +39951,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "수납가구•액세서리",
     "productImages": [
@@ -39987,7 +39985,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -40030,7 +40028,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -40074,7 +40072,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -40120,7 +40118,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -40167,7 +40165,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -40212,7 +40210,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -40255,7 +40253,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -40292,7 +40290,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -40332,7 +40330,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -40376,7 +40374,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -40419,7 +40417,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -40458,7 +40456,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -40497,7 +40495,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -40543,7 +40541,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -40589,7 +40587,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -40630,7 +40628,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -40676,7 +40674,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -40722,7 +40720,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -40763,7 +40761,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -40804,7 +40802,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -40849,7 +40847,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -40890,7 +40888,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -40931,7 +40929,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -40977,7 +40975,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -41018,7 +41016,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "모션데스크",
     "productImages": [
@@ -41059,7 +41057,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "모션데스크",
     "productImages": [
@@ -41099,7 +41097,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "모션데스크",
     "productImages": [
@@ -41143,7 +41141,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -41179,7 +41177,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -41215,7 +41213,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -41251,7 +41249,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "수납가구•액세서리",
     "productImages": [
@@ -41281,7 +41279,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "수납가구•액세서리",
     "productImages": [
@@ -41315,7 +41313,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -41362,7 +41360,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -41409,7 +41407,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -41454,7 +41452,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -41499,7 +41497,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -41538,7 +41536,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "서랍장",
     "productImages": [
@@ -41577,7 +41575,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "서랍장",
     "productImages": [
@@ -41616,7 +41614,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "서랍장",
     "productImages": [
@@ -41655,7 +41653,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책장",
     "category3": "",
     "productImages": [
@@ -41694,7 +41692,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책장",
     "category3": "",
     "productImages": [
@@ -41733,7 +41731,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "책상액세서리",
     "productImages": [
@@ -41772,7 +41770,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "책상액세서리",
     "productImages": [
@@ -41801,7 +41799,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "책상액세서리",
     "productImages": [
@@ -41830,7 +41828,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "책상액세서리",
     "productImages": [
@@ -41859,7 +41857,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "책상액세서리",
     "productImages": [
@@ -41888,7 +41886,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "책상액세서리",
     "productImages": [
@@ -41917,7 +41915,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "책상액세서리",
     "productImages": [
@@ -41946,7 +41944,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "책상액세서리",
     "productImages": [
@@ -41975,7 +41973,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "수납가구•액세서리",
     "productImages": [
@@ -42015,7 +42013,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "수납가구•액세서리",
     "productImages": [
@@ -42055,7 +42053,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "수납가구•액세서리",
     "productImages": [
@@ -42095,7 +42093,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "옷장",
     "productImages": [
@@ -42135,7 +42133,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "옷장",
     "productImages": [
@@ -42175,7 +42173,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "옷장",
     "productImages": [
@@ -42212,7 +42210,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "수납가구•액세서리",
     "productImages": [
@@ -42250,7 +42248,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "수납가구•액세서리",
     "productImages": [
@@ -42288,7 +42286,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "수납가구•액세서리",
     "productImages": [
@@ -42330,7 +42328,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "수납가구•액세서리",
     "productImages": [
@@ -42370,7 +42368,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "수납가구•액세서리",
     "productImages": [
@@ -42407,7 +42405,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "옷장",
     "productImages": [
@@ -42445,7 +42443,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "옷장",
     "productImages": [
@@ -42483,7 +42481,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "옷장",
     "productImages": [
@@ -42523,7 +42521,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "침대",
     "category3": "일반침대",
     "productImages": [
@@ -42565,7 +42563,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "침대",
     "category3": "수납침대",
     "productImages": [
@@ -42607,7 +42605,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "침대",
     "category3": "수납침대",
     "productImages": [
@@ -42648,7 +42646,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "침대",
     "category3": "수납침대",
     "productImages": [
@@ -42689,9 +42687,9 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "의자",
-    "category3": "의자액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/study-room/chair/HSSE2000FR_a_A443D_1.jpg",
       "/images/iloom_images/study-room/chair/HSSE2000FR_b_A444A_1.jpg"
@@ -42718,7 +42716,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "침대",
     "category3": "침대액세서리",
     "productImages": [
@@ -42748,7 +42746,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "수납가구•액세서리",
     "productImages": [
@@ -42784,7 +42782,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "수납가구•액세서리",
     "productImages": [
@@ -42813,7 +42811,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "수납가구•액세서리",
     "productImages": [
@@ -42852,7 +42850,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "수납가구•액세서리",
     "productImages": [
@@ -42888,7 +42886,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "수납가구•액세서리",
     "productImages": [
@@ -42922,7 +42920,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -42952,7 +42950,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "수납가구•액세서리",
     "productImages": [
@@ -42984,7 +42982,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "수납가구•액세서리",
     "productImages": [
@@ -43017,7 +43015,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -43048,7 +43046,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -43083,7 +43081,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -43123,7 +43121,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "모션데스크",
     "productImages": [
@@ -43164,7 +43162,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "모션데스크",
     "productImages": [
@@ -43203,7 +43201,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "모션데스크",
     "productImages": [
@@ -43242,7 +43240,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "모션데스크",
     "productImages": [
@@ -43281,7 +43279,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "모션데스크",
     "productImages": [
@@ -43322,7 +43320,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "모션데스크",
     "productImages": [
@@ -43363,7 +43361,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -43405,7 +43403,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -43447,7 +43445,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -43489,7 +43487,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -43537,7 +43535,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -43585,7 +43583,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -43633,7 +43631,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -43680,7 +43678,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -43727,7 +43725,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -43772,7 +43770,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -43817,7 +43815,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -43862,7 +43860,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -43909,7 +43907,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -43956,7 +43954,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "서랍장",
     "productImages": [
@@ -44003,7 +44001,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "서랍장",
     "productImages": [
@@ -44046,7 +44044,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -44074,7 +44072,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -44102,7 +44100,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -44131,7 +44129,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -44163,7 +44161,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -44210,7 +44208,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -44257,7 +44255,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -44304,7 +44302,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -44348,7 +44346,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "책상액세서리",
     "productImages": [
@@ -44378,7 +44376,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -44407,7 +44405,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -44440,7 +44438,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -44482,7 +44480,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "수납가구•액세서리",
     "productImages": [
@@ -44510,7 +44508,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책장",
     "category3": "",
     "productImages": [
@@ -44551,7 +44549,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책장",
     "category3": "",
     "productImages": [
@@ -44592,7 +44590,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책장",
     "category3": "",
     "productImages": [
@@ -44633,7 +44631,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책장",
     "category3": "",
     "productImages": [
@@ -44677,7 +44675,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책장",
     "category3": "책장액세서리",
     "productImages": [
@@ -44708,7 +44706,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책장",
     "category3": "책장액세서리",
     "productImages": [
@@ -44739,7 +44737,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책장",
     "category3": "책장액세서리",
     "productImages": [
@@ -44770,7 +44768,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책장",
     "category3": "책장액세서리",
     "productImages": [
@@ -44801,7 +44799,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "수납가구•액세서리",
     "productImages": [
@@ -44850,7 +44848,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "수납가구•액세서리",
     "productImages": [
@@ -44898,7 +44896,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "수납가구•액세서리",
     "productImages": [
@@ -44946,7 +44944,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "옷장",
     "productImages": [
@@ -44994,7 +44992,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "옷장",
     "productImages": [
@@ -45042,7 +45040,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "옷장",
     "productImages": [
@@ -45091,7 +45089,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "수납가구•액세서리",
     "productImages": [
@@ -45139,7 +45137,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "수납가구•액세서리",
     "productImages": [
@@ -45187,7 +45185,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "수납가구•액세서리",
     "productImages": [
@@ -45235,7 +45233,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "수납가구•액세서리",
     "productImages": [
@@ -45280,7 +45278,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "책상액세서리",
     "productImages": [
@@ -45324,7 +45322,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "책상액세서리",
     "productImages": [
@@ -45372,7 +45370,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "책상액세서리",
     "productImages": [
@@ -45419,7 +45417,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "서랍장",
     "productImages": [
@@ -45466,7 +45464,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "서랍장",
     "productImages": [
@@ -45511,7 +45509,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "침대",
     "category3": "모션침대",
     "productImages": [
@@ -45556,7 +45554,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "침대",
     "category3": "모션침대",
     "productImages": [
@@ -45600,7 +45598,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "침대",
     "category3": "모션침대",
     "productImages": [
@@ -45644,7 +45642,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "침대",
     "category3": "모션침대",
     "productImages": [
@@ -45692,7 +45690,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "침대",
     "category3": "모션침대",
     "productImages": [
@@ -45736,7 +45734,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "침대",
     "category3": "모션침대",
     "productImages": [
@@ -45783,7 +45781,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "침대",
     "category3": "일반침대",
     "productImages": [
@@ -45807,102 +45805,102 @@ export const productData = [
     ],
     "ranking": 418
   },
-  // {
-  //   "id": "IDL0002A",
-  //   "series": "뉴트",
-  //   "name": "뉴트 다리형책상 1200폭",
-  //   "material": "",
-  //   "price": "269,000",
-  //   "options": [
-  //     {
-  //       "name": "색상",
-  //       "values": [
-  //         "WWWW",
-  //         "WWMRB",
-  //         "NKWW"
-  //       ]
-  //     }
-  //   ],
-  //   "originalCategory": "스터디",
-  //   "category2": "책상",
-  //   "category3": "일반책상•책상세트",
-  //   "productImages": [
-  //     "/images/iloom_images/study-room/desk/IDL0002A_NKWW_3.png",
-  //     "/images/iloom_images/study-room/desk/IDL0002A_WWMRB_2.png",
-  //     "/images/iloom_images/study-room/desk/IDL0002A_WWWW_1.jpg",
-  //     "/images/iloom_images/study-room/desk/IDL0002A_WWWW_4.png"
-  //   ],
-  //   "mdPick": false,
-  //   "new": false,
-  //   "BestSeller": false,
-  //   "detailImg": [
-  //     "https://www.iloom.com/upload/contents/20250108/_65d6c342-7bbe-483f-b3c6-e6b069b7f889.jpg",
-  //     "https://www.iloom.com/upload/contents/20241211/_a2fc6dc9-cd90-438b-8e2e-b81b3e312ac6.jpg",
-  //     "https://www.iloom.com/upload/contents/20251113/_546b48ea-289c-410f-8a55-1ed3eb9f2baa.jpg",
-  //     "https://www.iloom.com/upload/contents/20241128/_3bf9198c-8e46-4a60-a35a-da90391d80be.jpg",
-  //     "https://www.iloom.com/upload/contents/20241128/_d05392ec-d3bd-4099-aaf6-a925ccad508f.jpg",
-  //     "https://www.iloom.com/upload/contents/20241128/_b9218363-b0d6-4c51-b686-a29a00921351.jpg",
-  //     "https://www.iloom.com/upload/contents/20251113/_b1006bc6-96ae-4d1b-a29c-ab6e72321821.gif",
-  //     "https://www.iloom.com/upload/contents/20241128/_0cbc4c4b-5c9f-4cd3-80e4-d6f6a381552b.jpg",
-  //     "https://www.iloom.com/upload/contents/20241128/_66527d52-2bd0-4ec2-9c2d-1af6ad2af443.gif",
-  //     "https://www.iloom.com/upload/contents/20241128/_f86c0d84-b6d3-4645-8f8b-27c68b31b310.jpg",
-  //     "https://www.iloom.com/upload/contents/20241128/_27b04fb9-b244-4cd7-9721-7855b77a7c94.gif",
-  //     "https://www.iloom.com/upload/contents/20241128/_6fc937b0-6093-48d0-8db4-2598f65bf3b8.jpg",
-  //     "https://www.iloom.com/upload/contents/20241128/_c84920ea-af03-4bec-aaba-0a849a59b121.jpg",
-  //     "https://www.iloom.com/upload/contents/20251113/_7cbc72ab-e651-4ab4-8c9a-a35be2053a37.gif",
-  //     "https://www.iloom.com/upload/contents/20250709/_1b9eaba8-c265-43f4-9933-dce0c608b921.jpg",
-  //     "https://www.iloom.com/upload/contents/20241128/_8651dd78-045d-419a-a08e-e6ad26526f54.jpg"
-  //   ],
-  //   "ranking": 305
-  // },
-  // {
-  //   "id": "IDL0003A",
-  //   "series": "뉴트",
-  //   "name": "뉴트 다리형책상 1400폭",
-  //   "material": "",
-  //   "price": "299,000",
-  //   "options": [
-  //     {
-  //       "name": "색상",
-  //       "values": [
-  //         "WWWW",
-  //         "WWMRB",
-  //         "NKWW"
-  //       ]
-  //     }
-  //   ],
-  //   "originalCategory": "스터디",
-  //   "category2": "책상",
-  //   "category3": "일반책상•책상세트",
-  //   "productImages": [
-  //     "/images/iloom_images/study-room/desk/IDL0003A_NKWW_3.png",
-  //     "/images/iloom_images/study-room/desk/IDL0003A_WWMRB_2.png",
-  //     "/images/iloom_images/study-room/desk/IDL0003A_WWWW_1.jpg",
-  //     "/images/iloom_images/study-room/desk/IDL0003A_WWWW_4.png"
-  //   ],
-  //   "mdPick": false,
-  //   "new": true,
-  //   "BestSeller": false,
-  //   "detailImg": [
-  //     "https://www.iloom.com/upload/contents/20250109/_956aab37-6be8-4436-9d39-fb679813cba8.jpg",
-  //     "https://www.iloom.com/upload/contents/20241211/_c3341932-1f75-4736-820c-9bedfd239d02.jpg",
-  //     "https://www.iloom.com/upload/contents/20251113/_035d77ba-eb55-4e83-8954-044f69c9f095.jpg",
-  //     "https://www.iloom.com/upload/contents/20241128/_4e3bb139-7b81-42bd-8917-4b8aa501cfbb.jpg",
-  //     "https://www.iloom.com/upload/contents/20241128/_5eb51b57-c0ed-4d95-b368-a530aba132ff.jpg",
-  //     "https://www.iloom.com/upload/contents/20241128/_0f3095bf-7b50-4892-9e9b-7bd3ed8b507b.jpg",
-  //     "https://www.iloom.com/upload/contents/20251113/_de33e57b-13e8-491e-b592-d36c4aafd498.gif",
-  //     "https://www.iloom.com/upload/contents/20241128/_dd97420e-bc59-4fec-b2b0-dbf0af550b6c.jpg",
-  //     "https://www.iloom.com/upload/contents/20241128/_0be80461-b4a4-4d8b-bef1-d73339115189.gif",
-  //     "https://www.iloom.com/upload/contents/20241128/_f7f96a39-8713-440a-bb3d-7840525c54b1.jpg",
-  //     "https://www.iloom.com/upload/contents/20241128/_cdb55100-76aa-4e50-8d73-2b4a64032c12.gif",
-  //     "https://www.iloom.com/upload/contents/20241128/_03ed8ba3-28bf-4a44-a264-7b764751fe65.jpg",
-  //     "https://www.iloom.com/upload/contents/20241128/_8b6fb189-0a4c-4bd6-b951-f6db08624135.jpg",
-  //     "https://www.iloom.com/upload/contents/20251113/_d76c569a-10a7-42e1-a139-6e1de2ed281c.gif",
-  //     "https://www.iloom.com/upload/contents/20250709/_94d79797-0f35-4508-a3e5-194083e60cb5.jpg",
-  //     "https://www.iloom.com/upload/contents/20241128/_7841accf-0f1e-401a-a59f-269211e098e6.jpg"
-  //   ],
-  //   "ranking": 1087
-  // },
+  {
+    "id": "IDL0002A",
+    "series": "뉴트",
+    "name": "뉴트 다리형책상 1200폭",
+    "material": "",
+    "price": "269,000",
+    "options": [
+      {
+        "name": "색상",
+        "values": [
+          "WWWW",
+          "WWMRB",
+          "NKWW"
+        ]
+      }
+    ],
+    "originalCategory": "학생방",
+    "category2": "책상",
+    "category3": "일반책상•책상세트",
+    "productImages": [
+      "/images/iloom_images/study-room/desk/IDL0002A_NKWW_3.png",
+      "/images/iloom_images/study-room/desk/IDL0002A_WWMRB_2.png",
+      "/images/iloom_images/study-room/desk/IDL0002A_WWWW_1.jpg",
+      "/images/iloom_images/study-room/desk/IDL0002A_WWWW_4.png"
+    ],
+    "mdPick": false,
+    "new": false,
+    "BestSeller": false,
+    "detailImg": [
+      "https://www.iloom.com/upload/contents/20250108/_65d6c342-7bbe-483f-b3c6-e6b069b7f889.jpg",
+      "https://www.iloom.com/upload/contents/20241211/_a2fc6dc9-cd90-438b-8e2e-b81b3e312ac6.jpg",
+      "https://www.iloom.com/upload/contents/20251113/_546b48ea-289c-410f-8a55-1ed3eb9f2baa.jpg",
+      "https://www.iloom.com/upload/contents/20241128/_3bf9198c-8e46-4a60-a35a-da90391d80be.jpg",
+      "https://www.iloom.com/upload/contents/20241128/_d05392ec-d3bd-4099-aaf6-a925ccad508f.jpg",
+      "https://www.iloom.com/upload/contents/20241128/_b9218363-b0d6-4c51-b686-a29a00921351.jpg",
+      "https://www.iloom.com/upload/contents/20251113/_b1006bc6-96ae-4d1b-a29c-ab6e72321821.gif",
+      "https://www.iloom.com/upload/contents/20241128/_0cbc4c4b-5c9f-4cd3-80e4-d6f6a381552b.jpg",
+      "https://www.iloom.com/upload/contents/20241128/_66527d52-2bd0-4ec2-9c2d-1af6ad2af443.gif",
+      "https://www.iloom.com/upload/contents/20241128/_f86c0d84-b6d3-4645-8f8b-27c68b31b310.jpg",
+      "https://www.iloom.com/upload/contents/20241128/_27b04fb9-b244-4cd7-9721-7855b77a7c94.gif",
+      "https://www.iloom.com/upload/contents/20241128/_6fc937b0-6093-48d0-8db4-2598f65bf3b8.jpg",
+      "https://www.iloom.com/upload/contents/20241128/_c84920ea-af03-4bec-aaba-0a849a59b121.jpg",
+      "https://www.iloom.com/upload/contents/20251113/_7cbc72ab-e651-4ab4-8c9a-a35be2053a37.gif",
+      "https://www.iloom.com/upload/contents/20250709/_1b9eaba8-c265-43f4-9933-dce0c608b921.jpg",
+      "https://www.iloom.com/upload/contents/20241128/_8651dd78-045d-419a-a08e-e6ad26526f54.jpg"
+    ],
+    "ranking": 305
+  },
+  {
+    "id": "IDL0003A",
+    "series": "뉴트",
+    "name": "뉴트 다리형책상 1400폭",
+    "material": "",
+    "price": "299,000",
+    "options": [
+      {
+        "name": "색상",
+        "values": [
+          "WWWW",
+          "WWMRB",
+          "NKWW"
+        ]
+      }
+    ],
+    "originalCategory": "학생방",
+    "category2": "책상",
+    "category3": "일반책상•책상세트",
+    "productImages": [
+      "/images/iloom_images/study-room/desk/IDL0003A_NKWW_3.png",
+      "/images/iloom_images/study-room/desk/IDL0003A_WWMRB_2.png",
+      "/images/iloom_images/study-room/desk/IDL0003A_WWWW_1.jpg",
+      "/images/iloom_images/study-room/desk/IDL0003A_WWWW_4.png"
+    ],
+    "mdPick": false,
+    "new": true,
+    "BestSeller": false,
+    "detailImg": [
+      "https://www.iloom.com/upload/contents/20250109/_956aab37-6be8-4436-9d39-fb679813cba8.jpg",
+      "https://www.iloom.com/upload/contents/20241211/_c3341932-1f75-4736-820c-9bedfd239d02.jpg",
+      "https://www.iloom.com/upload/contents/20251113/_035d77ba-eb55-4e83-8954-044f69c9f095.jpg",
+      "https://www.iloom.com/upload/contents/20241128/_4e3bb139-7b81-42bd-8917-4b8aa501cfbb.jpg",
+      "https://www.iloom.com/upload/contents/20241128/_5eb51b57-c0ed-4d95-b368-a530aba132ff.jpg",
+      "https://www.iloom.com/upload/contents/20241128/_0f3095bf-7b50-4892-9e9b-7bd3ed8b507b.jpg",
+      "https://www.iloom.com/upload/contents/20251113/_de33e57b-13e8-491e-b592-d36c4aafd498.gif",
+      "https://www.iloom.com/upload/contents/20241128/_dd97420e-bc59-4fec-b2b0-dbf0af550b6c.jpg",
+      "https://www.iloom.com/upload/contents/20241128/_0be80461-b4a4-4d8b-bef1-d73339115189.gif",
+      "https://www.iloom.com/upload/contents/20241128/_f7f96a39-8713-440a-bb3d-7840525c54b1.jpg",
+      "https://www.iloom.com/upload/contents/20241128/_cdb55100-76aa-4e50-8d73-2b4a64032c12.gif",
+      "https://www.iloom.com/upload/contents/20241128/_03ed8ba3-28bf-4a44-a264-7b764751fe65.jpg",
+      "https://www.iloom.com/upload/contents/20241128/_8b6fb189-0a4c-4bd6-b951-f6db08624135.jpg",
+      "https://www.iloom.com/upload/contents/20251113/_d76c569a-10a7-42e1-a139-6e1de2ed281c.gif",
+      "https://www.iloom.com/upload/contents/20250709/_94d79797-0f35-4508-a3e5-194083e60cb5.jpg",
+      "https://www.iloom.com/upload/contents/20241128/_7841accf-0f1e-401a-a59f-269211e098e6.jpg"
+    ],
+    "ranking": 1087
+  },
   {
     "id": "IDL0024A",
     "series": "뉴트",
@@ -45919,7 +45917,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -45972,7 +45970,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -46025,7 +46023,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -46077,7 +46075,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -46127,7 +46125,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "수납가구•액세서리",
     "productImages": [
@@ -46159,7 +46157,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -46201,7 +46199,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "수납가구•액세서리",
     "productImages": [
@@ -46233,7 +46231,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "수납가구•액세서리",
     "productImages": [
@@ -46267,7 +46265,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -46319,7 +46317,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -46371,7 +46369,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -46423,7 +46421,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -46475,7 +46473,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -46526,7 +46524,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -46577,7 +46575,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -46628,7 +46626,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -46679,7 +46677,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -46730,7 +46728,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -46781,7 +46779,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -46835,7 +46833,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -46886,7 +46884,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -46938,7 +46936,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -46989,7 +46987,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -47044,7 +47042,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -47094,7 +47092,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "수납가구•액세서리",
     "productImages": [
@@ -47126,7 +47124,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "수납가구•액세서리",
     "productImages": [
@@ -47158,7 +47156,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "책상액세서리",
     "productImages": [
@@ -47190,7 +47188,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "수납가구•액세서리",
     "productImages": [
@@ -47224,7 +47222,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "모션데스크",
     "productImages": [
@@ -47275,7 +47273,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "모션데스크",
     "productImages": [
@@ -47325,7 +47323,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "모션데스크",
     "productImages": [
@@ -47375,7 +47373,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "모션데스크",
     "productImages": [
@@ -47425,7 +47423,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "모션데스크",
     "productImages": [
@@ -47477,7 +47475,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "모션데스크",
     "productImages": [
@@ -47529,7 +47527,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "모션데스크",
     "productImages": [
@@ -47581,7 +47579,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "모션데스크",
     "productImages": [
@@ -47661,7 +47659,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "모션데스크",
     "productImages": [
@@ -47711,7 +47709,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "모션데스크",
     "productImages": [
@@ -47761,7 +47759,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "모션데스크",
     "productImages": [
@@ -47811,7 +47809,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "모션데스크",
     "productImages": [
@@ -47861,7 +47859,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "모션데스크",
     "productImages": [
@@ -47913,7 +47911,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "모션데스크",
     "productImages": [
@@ -47965,7 +47963,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "모션데스크",
     "productImages": [
@@ -48017,7 +48015,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "모션데스크",
     "productImages": [
@@ -48069,7 +48067,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "모션데스크",
     "productImages": [
@@ -48119,7 +48117,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "모션데스크",
     "productImages": [
@@ -48169,7 +48167,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "모션데스크",
     "productImages": [
@@ -48219,7 +48217,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "모션데스크",
     "productImages": [
@@ -48269,7 +48267,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "수납가구•액세서리",
     "productImages": [
@@ -48314,7 +48312,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "수납가구•액세서리",
     "productImages": [
@@ -48359,7 +48357,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "수납가구•액세서리",
     "productImages": [
@@ -48404,7 +48402,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "수납가구•액세서리",
     "productImages": [
@@ -48448,7 +48446,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "수납가구•액세서리",
     "productImages": [
@@ -48478,7 +48476,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책장",
     "category3": "책장액세서리",
     "productImages": [
@@ -48506,7 +48504,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책장",
     "category3": "",
     "productImages": [
@@ -48548,7 +48546,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책장",
     "category3": "",
     "productImages": [
@@ -48590,7 +48588,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책장",
     "category3": "",
     "productImages": [
@@ -48632,7 +48630,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책장",
     "category3": "",
     "productImages": [
@@ -48674,7 +48672,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책장",
     "category3": "",
     "productImages": [
@@ -48716,7 +48714,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책장",
     "category3": "",
     "productImages": [
@@ -48759,7 +48757,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책장",
     "category3": "",
     "productImages": [
@@ -48804,7 +48802,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책장",
     "category3": "",
     "productImages": [
@@ -48848,7 +48846,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책장",
     "category3": "책장액세서리",
     "productImages": [
@@ -48892,7 +48890,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책장",
     "category3": "",
     "productImages": [
@@ -48936,7 +48934,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책장",
     "category3": "",
     "productImages": [
@@ -48980,7 +48978,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책장",
     "category3": "책장액세서리",
     "productImages": [
@@ -49024,7 +49022,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책장",
     "category3": "책장액세서리",
     "productImages": [
@@ -49053,7 +49051,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책장",
     "category3": "책장액세서리",
     "productImages": [
@@ -49081,7 +49079,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책장",
     "category3": "책장액세서리",
     "productImages": [
@@ -49108,7 +49106,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책장",
     "category3": "책장액세서리",
     "productImages": [
@@ -49135,7 +49133,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "책상액세서리",
     "productImages": [
@@ -49162,7 +49160,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "책상액세서리",
     "productImages": [
@@ -49190,7 +49188,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책장",
     "category3": "",
     "productImages": [
@@ -49237,7 +49235,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책장",
     "category3": "책장액세서리",
     "productImages": [
@@ -49284,7 +49282,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책장",
     "category3": "",
     "productImages": [
@@ -49330,7 +49328,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책장",
     "category3": "책장액세서리",
     "productImages": [
@@ -49376,7 +49374,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책장",
     "category3": "",
     "productImages": [
@@ -49416,7 +49414,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책장",
     "category3": "",
     "productImages": [
@@ -49456,7 +49454,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책장",
     "category3": "",
     "productImages": [
@@ -49499,7 +49497,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책장",
     "category3": "",
     "productImages": [
@@ -49539,7 +49537,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "서랍장",
     "productImages": [
@@ -49586,7 +49584,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "서랍장",
     "productImages": [
@@ -49631,7 +49629,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책장",
     "category3": "",
     "productImages": [
@@ -49675,7 +49673,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책장",
     "category3": "",
     "productImages": [
@@ -49715,7 +49713,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "수납가구•액세서리",
     "productImages": [
@@ -49744,7 +49742,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "옷장",
     "productImages": [
@@ -49784,7 +49782,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "옷장",
     "productImages": [
@@ -49824,7 +49822,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "옷장",
     "productImages": [
@@ -49864,7 +49862,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "옷장",
     "productImages": [
@@ -49904,7 +49902,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "수납가구•액세서리",
     "productImages": [
@@ -49945,7 +49943,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "수납가구•액세서리",
     "productImages": [
@@ -49985,7 +49983,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "옷장",
     "productImages": [
@@ -50025,7 +50023,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "수납가구•액세서리",
     "productImages": [
@@ -50066,7 +50064,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "수납가구•액세서리",
     "productImages": [
@@ -50112,7 +50110,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "수납가구•액세서리",
     "productImages": [
@@ -50159,7 +50157,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "수납가구•액세서리",
     "productImages": [
@@ -50203,7 +50201,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "침대",
     "category3": "수납침대",
     "productImages": [
@@ -50250,7 +50248,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "침대",
     "category3": "수납침대",
     "productImages": [
@@ -50297,7 +50295,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "침대",
     "category3": "수납침대",
     "productImages": [
@@ -50347,7 +50345,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "침대",
     "category3": "수납침대",
     "productImages": [
@@ -50400,7 +50398,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "침대",
     "category3": "수납침대",
     "productImages": [
@@ -50453,7 +50451,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "침대",
     "category3": "수납침대",
     "productImages": [
@@ -50503,7 +50501,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "침대",
     "category3": "수납침대",
     "productImages": [
@@ -50548,7 +50546,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "침대",
     "category3": "수납침대",
     "productImages": [
@@ -50593,7 +50591,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "침대",
     "category3": "수납침대",
     "productImages": [
@@ -50641,7 +50639,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "침대",
     "category3": "수납침대",
     "productImages": [
@@ -50692,7 +50690,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "침대",
     "category3": "수납침대",
     "productImages": [
@@ -50743,7 +50741,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "침대",
     "category3": "수납침대",
     "productImages": [
@@ -50791,9 +50789,9 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "의자",
-    "category3": "의자액세서리",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/study-room/chair/IBA0004A_3W1_1.png",
       "/images/iloom_images/study-room/chair/IBA0004A_3W1_2.png"
@@ -50823,7 +50821,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "침대",
     "category3": "수납침대",
     "productImages": [
@@ -50868,7 +50866,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "침대",
     "category3": "수납침대",
     "productImages": [
@@ -50913,7 +50911,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "침대",
     "category3": "수납침대",
     "productImages": [
@@ -50961,7 +50959,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "침대",
     "category3": "수납침대",
     "productImages": [
@@ -51012,7 +51010,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "침대",
     "category3": "수납침대",
     "productImages": [
@@ -51063,7 +51061,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "침대",
     "category3": "수납침대",
     "productImages": [
@@ -51111,7 +51109,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "침대",
     "category3": "일반침대",
     "productImages": [
@@ -51151,7 +51149,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "침대",
     "category3": "일반침대",
     "productImages": [
@@ -51189,7 +51187,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "침대",
     "category3": "일반침대",
     "productImages": [
@@ -51229,7 +51227,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "침대",
     "category3": "일반침대",
     "productImages": [
@@ -51268,7 +51266,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "침대",
     "category3": "일반침대",
     "productImages": [
@@ -51308,7 +51306,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "침대",
     "category3": "일반침대",
     "productImages": [
@@ -51346,7 +51344,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "침대",
     "category3": "일반침대",
     "productImages": [
@@ -51386,7 +51384,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "침대",
     "category3": "일반침대",
     "productImages": [
@@ -51424,7 +51422,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "침대",
     "category3": "일반침대",
     "productImages": [
@@ -51462,7 +51460,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "침대",
     "category3": "일반침대",
     "productImages": [
@@ -51500,7 +51498,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "침대",
     "category3": "일반침대",
     "productImages": [
@@ -51538,7 +51536,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "침대",
     "category3": "일반침대",
     "productImages": [
@@ -51576,7 +51574,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "침대",
     "category3": "일반침대",
     "productImages": [
@@ -51614,7 +51612,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "침대",
     "category3": "일반침대",
     "productImages": [
@@ -51652,7 +51650,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "침대",
     "category3": "일반침대",
     "productImages": [
@@ -51690,7 +51688,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "침대",
     "category3": "일반침대",
     "productImages": [
@@ -51728,7 +51726,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -51765,7 +51763,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -51802,7 +51800,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "침대",
     "category3": "모션침대",
     "productImages": [
@@ -51839,7 +51837,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "침대",
     "category3": "모션침대",
     "productImages": [
@@ -51877,7 +51875,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -51914,7 +51912,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -51951,7 +51949,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책장",
     "category3": "",
     "productImages": [
@@ -51993,7 +51991,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책장",
     "category3": "",
     "productImages": [
@@ -52038,7 +52036,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책장",
     "category3": "",
     "productImages": [
@@ -52080,7 +52078,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책장",
     "category3": "",
     "productImages": [
@@ -52121,7 +52119,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책장",
     "category3": "책장액세서리",
     "productImages": [
@@ -52153,7 +52151,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책장",
     "category3": "책장액세서리",
     "productImages": [
@@ -52185,7 +52183,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "책상",
     "category3": "일반책상•책상세트",
     "productImages": [
@@ -52219,7 +52217,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "수납가구•액세서리",
     "productImages": [
@@ -52249,7 +52247,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "수납가구•액세서리",
     "productImages": [
@@ -52281,7 +52279,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "침대",
     "category3": "침대액세서리",
     "productImages": [
@@ -52310,7 +52308,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "수납가구•액세서리",
     "productImages": [
@@ -52344,7 +52342,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "수납가구•액세서리",
     "productImages": [
@@ -52381,7 +52379,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "수납가구•액세서리",
     "productImages": [
@@ -52420,7 +52418,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "수납가구•액세서리",
     "productImages": [
@@ -52457,7 +52455,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "수납가구•액세서리",
     "productImages": [
@@ -52493,7 +52491,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "수납가구•액세서리",
     "productImages": [
@@ -52536,7 +52534,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "수납가구•액세서리",
     "productImages": [
@@ -52579,7 +52577,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "수납가구•액세서리",
     "productImages": [
@@ -52615,7 +52613,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "수납가구•액세서리",
     "productImages": [
@@ -52655,7 +52653,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "수납가구•액세서리",
     "productImages": [
@@ -52698,7 +52696,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "수납가구•액세서리",
     "productImages": [
@@ -52739,7 +52737,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "수납가구•액세서리",
     "productImages": [
@@ -52776,7 +52774,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "수납가구•액세서리",
     "productImages": [
@@ -52803,7 +52801,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "수납가구•액세서리",
     "productImages": [
@@ -52836,7 +52834,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "수납가구•액세서리",
     "productImages": [
@@ -52879,7 +52877,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "수납가구•액세서리",
     "productImages": [
@@ -52922,7 +52920,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "수납가구•액세서리",
     "productImages": [
@@ -52965,7 +52963,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "수납가구•액세서리",
     "productImages": [
@@ -53005,7 +53003,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "수납가구•액세서리",
     "productImages": [
@@ -53034,7 +53032,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "수납가구•액세서리",
     "productImages": [
@@ -53061,7 +53059,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "수납가구•액세서리",
     "productImages": [
@@ -53092,7 +53090,7 @@ export const productData = [
         ]
       }
     ],
-    "originalCategory": "스터디",
+    "originalCategory": "학생방",
     "category2": "수납장",
     "category3": "수납가구•액세서리",
     "productImages": [
@@ -53880,7 +53878,7 @@ export const productData = [
       "/images/iloom_images/mattress/IMS15HV03A_3M2_1.jpg",
       "/images/iloom_images/mattress/IMS15HV03A_3M2_2.png"
     ],
-    "mdPick": false,
+    "mdPick": true,
     "new": false,
     "BestSeller": false,
     "detailImg": [
@@ -54497,7 +54495,7 @@ export const productData = [
       "/images/iloom_images/mattress/IMP18HV01A_1M4_1.jpg",
       "/images/iloom_images/mattress/IMP18HV01A_1M4_2.png"
     ],
-    "mdPick": false,
+    "mdPick": true,
     "new": false,
     "BestSeller": false,
     "detailImg": [
@@ -54777,7 +54775,7 @@ export const productData = [
       "/images/iloom_images/mattress/IMS15HV07A_3M2_1.jpg",
       "/images/iloom_images/mattress/IMS15HV07A_3M2_2.png"
     ],
-    "mdPick": false,
+    "mdPick": true,
     "new": false,
     "BestSeller": false,
     "detailImg": [
@@ -57248,7 +57246,7 @@ export const productData = [
     ],
     "originalCategory": "서재",
     "category2": "서랍장",
-    "category3": "책상서랍",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/home-library/drawer/HSFA161_IV_1.jpg",
       "/images/iloom_images/home-library/drawer/HSFA161_IV_3.png",
@@ -57322,7 +57320,7 @@ export const productData = [
     ],
     "originalCategory": "서재",
     "category2": "서랍장",
-    "category3": "책상서랍",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/home-library/drawer/HSFA1061N_IV_1.jpg",
       "/images/iloom_images/home-library/drawer/HSFA1061N_IV_3.png",
@@ -57359,7 +57357,7 @@ export const productData = [
     ],
     "originalCategory": "서재",
     "category2": "서랍장",
-    "category3": "책상서랍",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/home-library/drawer/HSFA1061PN_IV_1.jpg",
       "/images/iloom_images/home-library/drawer/HSFA1061PN_IV_2.png"
@@ -58259,7 +58257,7 @@ export const productData = [
     ],
     "originalCategory": "서재",
     "category2": "수납장",
-    "category3": "장식장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/home-library/storage/HSVC084N_WP_1.jpg",
       "/images/iloom_images/home-library/storage/HSVC084N_WP_2.png"
@@ -58291,7 +58289,7 @@ export const productData = [
     ],
     "originalCategory": "서재",
     "category2": "수납장",
-    "category3": "장식장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/home-library/storage/HSVC124N_WP_1.jpg",
       "/images/iloom_images/home-library/storage/HSVC124N_WP_2.png"
@@ -58325,7 +58323,7 @@ export const productData = [
     ],
     "originalCategory": "서재",
     "category2": "수납장",
-    "category3": "장식장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/home-library/storage/HSVC086N_WP_1.jpg",
       "/images/iloom_images/home-library/storage/HSVC086N_WP_2.png"
@@ -58356,7 +58354,7 @@ export const productData = [
     ],
     "originalCategory": "서재",
     "category2": "수납장",
-    "category3": "장식장",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/home-library/storage/HSVC126N_WP_1.jpg",
       "/images/iloom_images/home-library/storage/HSVC126N_WP_2.png"
@@ -58446,7 +58444,7 @@ export const productData = [
     ],
     "originalCategory": "서재",
     "category2": "의자",
-    "category3": "태스크의자",
+    "category3": "",
     "productImages": [
       "/images/iloom_images/home-library/chair/HCH3601L_L846_2.png",
       "/images/iloom_images/home-library/chair/HCH3601L_L945B_1.jpg",
