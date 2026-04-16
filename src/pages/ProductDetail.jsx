@@ -20,10 +20,10 @@ export default function ProductDetail() {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false)
     const [quantity, setQuantity] = useState(1)
     const [activeTab, setActiveTab] = useState('상세정보')
+    const [showCartModal, setShowCartModal] = useState(false)
     //const [isWished, setIsWished] = useState(false)
     const { onToggleWishList, isWished } = useProductStore();
     const wished = isWished(id);
-
 
     useEffect(() => {
         window.scrollTo(0, 0)
@@ -67,15 +67,24 @@ export default function ProductDetail() {
     // const productQna = qnaData.flatMap(q => q.questions) || [];
     const productQna = commonQna;
 
+    const avgRating = productReviews && productReviews.length > 0
+        ? (productReviews.reduce((sum, r) => sum + r.rating, 0) / productReviews.length).toFixed(1) : '0.0'
+
+    const handleBuy = () => {
+        if (product.options?.length > 0 && !selectedOption) {
+            alert('옵션을 선택해주세요')
+            return
+        }
+        navigate('/order', { state: { product, option: selectedOption, quantity } })
+    }
+
     const handleAddCart = () => {
         if (product.options?.length > 0 && !selectedOption) {
             alert('옵션을 선택해주세요')
             return
         }
-
         addToCart(product, { color: selectedOption }, quantity)
-        alert('장바구니에 담겼습니다')
-        navigate('/cart')
+        setShowCartModal(true)
     }
 
     return (
@@ -93,15 +102,10 @@ export default function ProductDetail() {
                     <div className="main-image">
                         <img src={product.productImages[mainImg]} alt={product.name} />
                     </div>
-                    {product.productImages.length > 1 && (
-                        <div className="thumb-list">
-                            {product.productImages.map((img, i) => (
-                                <div>
-                                    <img src={img} alt={`썸네일${i + 1}`} />
-                                </div>
-                            ))}
+                    <div className="thumb-list">
+                        <div className={mainImg === 0 ? 'active' : ''} onClick={() => setMainImg(0)}><img src={product.productImages[0]} alt="thumb1" />
                         </div>
-                    )}
+                    </div>
                 </div>
 
                 <div className="info-area">
@@ -109,15 +113,16 @@ export default function ProductDetail() {
                         <p className="brand">{product.series}</p>
                         <h1 className="product-name">{product.name}</h1>
                         <div className="icon-btns">
-                            <button className={`wish-btn ${isWished ? 'active' : ''}`}
-                                onClick={() => setIsWished(w => !w)}>
-                                <img src={isWished ? '/images/product-detail/like.png' : '/images/product-detail/unlike.png'} alt="wish"
-                                    style={{ width: '20px', height: '20px' }} />
+                            <button className={`wish-btn ${wished ? 'active' : ''}`}
+                                onClick={() => onToggleWishList(product)}>
+                                <img src={wished ? '/images/product-detail/like.png' : '/images/product-detail/unlike.png'} alt="wish"
+                                    style={{ width: '24px', height: '21px' }} />
                             </button>
                             <button className="share-btn" onClick={() => {
                                 navigator.clipboard.writeText(window.location.href)
                                 alert('링크가 복사되었습니다');
-                            }}><img src="/images/product-detail/share.png" alt="공유하기" /></button>
+                            }}><img src="/images/product-detail/share.png" alt="공유하기"
+                                style={{ width: '27px', height: '27px' }} /></button>
                         </div>
                     </div>
                     <div className="delivery-info">
@@ -146,7 +151,7 @@ export default function ProductDetail() {
                                 ) : (
                                     <span className="placeholder">[필수] {opt.name}을 선택해주세요</span>
                                 )}
-                                <span className="arrow">▼</span>
+                                <span className="arrow"><img src="/images/product-detail/down-arrow.png" alt="down-arrow" /></span>
                             </div>
 
                             {isDropdownOpen && (
@@ -167,6 +172,21 @@ export default function ProductDetail() {
                             )}
                         </div>
                     ))}
+
+                    {selectedOption && product.productImages && product.productImages.length > 0 && (
+                        <div className="color-product-images">
+                            <p className="color-product-label">제품 이미지</p>
+                            <div className="color-product-list">
+                                {product.productImages.map((img, i) => (
+                                    <div key={1}
+                                        className={`color-product-item ${mainImg === i ? 'active' : ''}`}
+                                        onCilck={() => setMainImg(i)}>
+                                        <img src={img} alt={`제품이미지${i + 1}`} />
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    )}
 
                     {selectedOption && (
                         <div className="selected-option-box">
@@ -193,19 +213,6 @@ export default function ProductDetail() {
                     <div className="action-btns">
                         <button className="buy" onClick={() => alert('결제 페이지로 이동')}>결제하기</button>
                         <button className="cart" onClick={handleAddCart}>장바구니</button>
-                    </div>
-
-
-                    <div className="icon-btns">
-                        <button className={`wish-btn ${wished ? 'active' : ''}`}
-                            onClick={() => onToggleWishList(product)}>
-                            <img src={wished ? '/images/product-detail/like.png' : '/images/product-detail/unlike.png'} alt="wish"
-                                style={{ width: '20px', height: '20px' }} />
-                        </button>
-                        <button className="share-btn" onClick={() => {
-                            navigator.clipboard.writeText(window.location.href)
-                            alert('링크가 복사되었습니다');
-                        }}><img src="/images/product-detail/share.png" alt="공유하기" /></button>
                     </div>
                 </div>
             </div>
@@ -283,7 +290,7 @@ export default function ProductDetail() {
                                 <div className="opt-values-grid">
                                     {opt.values.map((v, j) => (
                                         <div key={j} className="opt-chip-item">
-                                            {opt.name === '색상' && (
+                                            {opt.name === '색상' && getColorImg(v) && (
                                                 <img src={getColorImg(v)} alt={v} className="chip-img" />
                                             )}
                                             <span key={j} className="opt-chip">{v}</span>
@@ -312,10 +319,11 @@ export default function ProductDetail() {
                 {activeTab === '상품평' && (
                     <div className="tab-review">
                         <div className="review-summary">
-                            <div className="rating-big">
-                                {productReviews && productReviews.length > 0
-                                    ? (productReviews.reduce((sum, r) => sum + r.rating, 0) / productReviews.length).toFixed(1) : '0.0'
-                                }
+                            <div className="review-rating-wrap">
+                                <div className="rating-big">{avgRating}</div>
+                            </div>
+                            <div className="review-stars-row">
+                                {'★'.repeat(Math.round(Number(avgRating)))}{'☆'.repeat(5 - Math.round(Number(avgRating)))}
                             </div>
                             <p>총 리뷰 {productReviews.length}개</p>
                         </div>
@@ -326,10 +334,15 @@ export default function ProductDetail() {
                                     <li key={r.id} className="review-item">
                                         <div className="review-top">
                                             <span className="stars">{"★".repeat(r.rating)}{"☆".repeat(5 - r.rating)}</span>
-                                            <span className="user">{r.user}</span>
+                                            <span className="user">{r.userName}</span>
                                             <span className="date">{r.date}</span>
                                         </div>
                                         <p className="review-title">{r.title}</p>
+                                        <div className="review-img">
+                                            {r.images?.map((img, idx) => (
+                                                <img key={idx} src={img} alt={`review${idx + 1}`} />
+                                            ))}
+                                        </div>
                                         <p className="review-content">{r.content}</p>
                                         <span className="review-option">옵션: {r.option}</span>
                                     </li>
@@ -518,6 +531,22 @@ export default function ProductDetail() {
                     </div>
                 )}
             </div>
-        </ section>
+
+            {showCartModal && (
+                <div className="cart-modal-overlay" onClick={() => setShowCartModal(false)}>
+                    <div className="cart-modal" onClick={e => e.stopPropagation()}>
+                        <p className="cart-modal-title">장바구니에 담겼습니다.</p>
+                        <p className="cart-modal-sub">장바구니로 이동하시겠습니까?</p>
+                        <div className="cart-modal-btns">
+                            <button className="cart-modal-continue" onClick={() => setShowCartModal(false)}>쇼핑 계속하기</button>
+                            <button className="cart-modal-go" onClick={() => {
+                                setShowCartModal(false)
+                                navigate('/cart')
+                            }}>장바구니 이동</button>
+                        </div>
+                    </div>
+                </div>
+            )}
+        </ section >
     )
 }
