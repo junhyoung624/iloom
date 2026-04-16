@@ -109,9 +109,9 @@ export default function ProductDetail() {
                         <p className="brand">{product.series}</p>
                         <h1 className="product-name">{product.name}</h1>
                         <div className="icon-btns">
-                            <button className={`wish-btn ${isWished ? 'active' : ''}`}
-                                onClick={() => setIsWished(w => !w)}>
-                                <img src={isWished ? '/images/product-detail/like.png' : '/images/product-detail/unlike.png'} alt="wish"
+                            <button className={`wish-btn ${wished ? 'active' : ''}`}
+                                onClick={() => onToggleWishList(product)}>
+                                <img src={wished ? '/images/product-detail/like.png' : '/images/product-detail/unlike.png'} alt="wish"
                                     style={{ width: '20px', height: '20px' }} />
                             </button>
                             <button className="share-btn" onClick={() => {

@@ -3,22 +3,21 @@ import { productData } from "../data/productData";
 // import { persist } from "zustand/middleware";
 
 export const useProductStore = create((set, get) => ({
-
-    //상품 변수, 메서드
+    // 상품 변수, 메서드
     items: [],
-    //메뉴를 저장할 변수
+
+    // 메뉴
     menus: [],
-    //search 서브 페이지내에서의 
+
+    // 검색
     searchWord: "",
     onSetSearchWord: (word) => set({ searchWord: word }),
-    // 전체 search
+
     searchWordAll: "",
     onSetSearchWordAll: (word) => set({ searchWordAll: word }),
 
-    //정렬
-    //정렬의 종류를 체크할 변수
+    // 정렬
     sortType: "",
-    //정렬의 차순을 저장할 변수 기본오름
     sortOrder: "asc",
     onSetSort: (type, order = "asc") =>
         set({ sortType: type, sortOrder: order }),
@@ -26,20 +25,47 @@ export const useProductStore = create((set, get) => ({
     onfetchItems: async () => {
         const existing = get().items;
         if (existing.length > 0) return;
-        set({ items: productData })
+        set({ items: productData });
     },
-    //위시리스트
+
+    // 위시리스트
     wishlist: [],
 
-    onToggleWishlist: (item) => {
+    isWished: (id) => {
+        const wishlist = get().wishlist;
+        return wishlist.some((item) => item.id === id);
+    },
+
+    onToggleWishList: (item) => {
         const { wishlist } = get();
         const exists = wishlist.some((wishItem) => wishItem.id === item.id);
 
         set({
             wishlist: exists
                 ? wishlist.filter((wishItem) => wishItem.id !== item.id)
-                : [...wishlist, item]
+                : [...wishlist, item],
         });
+    },
+
+    onAddWishList: (product) => {
+        const wish = get().wishlist;
+        const existing = wish.find((w) => w.id === product.id);
+
+        if (existing) {
+            alert("이미 있는 제품입니다");
+            return;
+        }
+
+        set({
+            wishlist: [...wish, product],
+        });
+    },
+
+    onRemoveWish: (id) => {
+        const updateWish = get().wishlist.filter((item) => item.id !== id);
+        set({
+            wishlist: updateWish,
+        })
     },
 
     // 장바구니
@@ -61,7 +87,7 @@ export const useProductStore = create((set, get) => ({
                         item.color === (selectedOption.color || "")
                         ? { ...item, qty: item.qty + qty }
                         : item
-                )
+                ),
             });
         } else {
             set({
@@ -72,8 +98,8 @@ export const useProductStore = create((set, get) => ({
                         qty,
                         checked: true,
                         color: selectedOption.color || "",
-                    }
-                ]
+                    },
+                ],
             });
         }
     },
@@ -84,7 +110,7 @@ export const useProductStore = create((set, get) => ({
                 item.id === id && item.color === color
                     ? { ...item, qty: item.qty + 1 }
                     : item
-            )
+            ),
         });
     },
 
@@ -94,7 +120,7 @@ export const useProductStore = create((set, get) => ({
                 item.id === id && item.color === color
                     ? { ...item, qty: Math.max(1, item.qty - 1) }
                     : item
-            )
+            ),
         });
     },
 
@@ -104,7 +130,7 @@ export const useProductStore = create((set, get) => ({
                 item.id === id && item.color === color
                     ? { ...item, checked: !item.checked }
                     : item
-            )
+            ),
         });
     },
 
@@ -112,8 +138,8 @@ export const useProductStore = create((set, get) => ({
         set({
             cartItems: get().cartItems.map((item) => ({
                 ...item,
-                checked
-            }))
+                checked,
+            })),
         });
     },
 
@@ -121,126 +147,57 @@ export const useProductStore = create((set, get) => ({
         set({
             cartItems: get().cartItems.filter(
                 (item) => !(item.id === id && item.color === color)
-            )
+            ),
         });
     },
 
-    // 메뉴 
-
-
+    // 메뉴 생성
     onMakeMenu: () => {
         const items = get().items;
-
         const menuList = [];
 
         items.forEach(({ originalCategory, category2, category3 }) => {
-            // 메뉴 find로 찾기
-            let mainMenu = menuList.find((menu) => menu.name === originalCategory);
+            let mainMenu = menuList.find(
+                (menu) => menu.name === originalCategory
+            );
+
             if (!mainMenu) {
-                mainMenu = { name: originalCategory, link: `/${originalCategory}`, subMenu: [] }
+                mainMenu = {
+                    name: originalCategory,
+                    link: `/${originalCategory}`,
+                    subMenu: [],
+                };
                 menuList.push(mainMenu);
             }
 
-export const useProductStore = create(
-    (set, get) => ({
+            let subMenu = mainMenu.subMenu.find(
+                (sub) => sub.name === category2
+            );
 
-        //상품 변수, 메서드
-        items: [],
-        //메뉴를 저장할 변수
-        menus: [],
-        //search 서브 페이지내에서의 
-        searchWord: "",
-        onSetSearchWord: (word) => set({ searchWord: word }),
-        // 전체 search
-        searchWordAll: "",
-        onSetSearchWordAll: (word) => set({ searchWordAll: word }),
-
-        //위시리스트
-        wishlist: [],
-
-        //이미 찜했는지 확인
-        isWished: (id) => {
-            const wishlist = get().wishlist;
-            return wishlist.some((item) => item.id === id);
-        },
-
-        //하트 버튼 클릭 시 => isWished값으로 색상 변경, onToggleWishList로 wishlist배열 관리
-        onToggleWishList: (item) => {
-            const { wishlist } = get();
-            console.log("check wishlist : ", wishlist);
-            const exists = wishlist.some((wishItem) => wishItem.id === item.id);
-            set({
-                wishlist: exists
-                    ? wishlist.filter((wishItem) => wishItem.id !== item.id)
-                    : [...wishlist, item]
-            });
-        },
-
-        //wish 추가
-        onAddWishList: (product) => {
-            const wish = get().wishlist;
-            //이미 있는 제품인지 확인하기
-            const existing = wish.find((w) => w.id === product.id);
-            if (existing) {
-                alert("이미 있는 제품입니다");
-                return;
+            if (!subMenu && category2) {
+                subMenu = {
+                    name: category2,
+                    link: `/${originalCategory}/${category2}`,
+                    thirdMenu: [],
+                };
+                mainMenu.subMenu.push(subMenu);
             }
-            set({
-                wishlist: [...wish, product],
-            })
-        },
 
+            if (subMenu && category3) {
+                const thirdMenu = subMenu.thirdMenu.find(
+                    (th) => th.name === category3
+                );
 
-        //정렬
-        //정렬의 종류를 체크할 변수
-        sortType: "",
-        //정렬의 차순을 저장할 변수 기본오름
-        sortOrder: "asc",
-        onSetSort: (type, order = "asc") =>
-            set({ sortType: type, sortOrder: order }),
-
-        onfetchItems: async () => {
-            const existing = get().items;
-            if (existing.length > 0) return;
-            set({ items: productData })
-        },
-
-        // 메뉴 
-        menus: [],
-
-        onMakeMenu: () => {
-            const items = get().items;
-
-            const menuList = [];
-
-            items.forEach(({ originalCategory, category2, category3 }) => {
-                // 메뉴 find로 찾기
-                let mainMenu = menuList.find((menu) => menu.name === originalCategory);
-                if (!mainMenu) {
-                    mainMenu = { name: originalCategory, link: `/${originalCategory}`, subMenu: [] }
-                    menuList.push(mainMenu);
+                if (!thirdMenu) {
+                    subMenu.thirdMenu.push({
+                        name: category3,
+                        link: `/${originalCategory}/${category2}/${category3}`,
+                    });
                 }
+            }
+        });
 
-                // 두번째 서브메뉴 
-                let subMenu = mainMenu.subMenu.find((sub) => sub.name === category2)
-                if (!subMenu && category2) {
-                    subMenu = ({ name: category2, link: `/${originalCategory}/${category2}`, thirdMenu: [] })
-                    mainMenu.subMenu.push(subMenu)
-                }
-
-                // 세번째 서브메뉴
-                let thirdMenu = subMenu.thirdMenu.find((th) => th.name === category3);
-                if (!thirdMenu && category3) {
-                    subMenu.thirdMenu.push({ name: category3, link: `/${originalCategory}/${category2}/${category3}` })
-                }
-            })
-
-            set({ menus: menuList });
-            console.log(menuList);
-
-        },
-
-
-    }),
-
-)
+        set({ menus: menuList });
+        console.log(menuList);
+    },
+}));
