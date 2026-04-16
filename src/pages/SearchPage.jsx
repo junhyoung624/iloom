@@ -28,7 +28,7 @@ export default function SearchPage() {
           </p>
         </div>
         <div className="line"></div>
-        <ul className="sub-product-list">
+        <ul className="search-product-list">
           {cateItems.map((item) => (
             <li key={item.id}>
               <Link to={`/product/${item.id}`}>
