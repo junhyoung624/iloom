@@ -1,0 +1,56 @@
+.signature-series-horizontal-section {
+    padding: 160px 24px;
+    overflow: hidden;
+}
+
+.signature-series-horizontal-head {
+    max-width: 1280px;
+    margin: 0 auto 48px;
+    text-align: center;
+    animation: signatureSeriesHorizontalFadeUp 1s ease both;
+}
+
+.signature-series-horizontal-head-sub {
+    display: inline-block;
+    margin-bottom: 14px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: #777;
+}
+
+.signature-series-horizontal-head-title {
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 1.06;
+    color: #111;
+    margin-bottom: 16px;
+}
+
+.signature-series-horizontal-head-desc {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.7;
+}
+
+.signature-series-horizontal-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 1440px;
+    margin: 0 auto;
+    animation: signatureSeriesHorizontalFadeUp 1s ease 0.15s both;
+}
+
+@keyframes signatureSeriesHorizontalFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(36px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

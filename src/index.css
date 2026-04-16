@@ -54,20 +54,78 @@ html {
 
     .hero-text {
         position: absolute;
-        left: 100px;
-        bottom: 150px;
+        left: 50%;
+        bottom: 50%;
+        transform: translate(-50%);
         z-index: 2;
         color: #fff;
 
-        h2 {
-            font-size: 70px;
-            font-weight: 700;
+        .hero-title {
+            font-size: 50px;
+            text-align: center;
+            font-weight: 600;
             margin-bottom: 18px;
+            line-height: 1.1;
+
+            color: transparent;
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.7);
+
+            background-image: linear-gradient(#fff, #fff);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 0% 100%;
+            -webkit-background-clip: text;
+            background-clip: text;
+
+            opacity: 0;
+            transform: translateY(24px);
+            animation:
+                heroTitleReveal 0.8s ease forwards,
+                heroTitleFillCenter 1s ease 0.2s forwards;
         }
 
-        p {
-            font-size: 28px;
+        .hero-desc {
+            font-size: 37px;
+            text-align: center;
+            font-weight: 200;
             line-height: 1.6;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: heroDescReveal 0.8s ease 1.4s forwards;
         }
+    }
+}
+
+@keyframes heroTitleReveal {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes heroTitleFillCenter {
+    from {
+        background-size: 0% 100%;
+    }
+
+    to {
+        background-size: 100% 100%;
+    }
+}
+
+@keyframes heroDescReveal {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }

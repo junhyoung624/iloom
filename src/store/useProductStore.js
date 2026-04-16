@@ -61,6 +61,27 @@ export const useProductStore = create((set, get) => ({
         });
     },
 
+    onAddWishList: (product) => {
+        const wish = get().wishlist;
+        const existing = wish.find((w) => w.id === product.id);
+
+        if (existing) {
+            alert("이미 있는 제품입니다");
+            return;
+        }
+
+        set({
+            wishlist: [...wish, product],
+        });
+    },
+
+    onRemoveWish: (id) => {
+        const updateWish = get().wishlist.filter((item) => item.id !== id);
+        set({
+            wishlist: updateWish,
+        })
+    },
+
     // 장바구니
     cartItems: [],
 
