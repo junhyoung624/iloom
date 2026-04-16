@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useAuthStore } from '../store/useAuthStore'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import "./scss/mypage.scss"
+import MyPageMenu from './MyPageMenu'
 
 export default function LeavePage() {
     const { user, onDeleteAccount } = useAuthStore()
@@ -25,16 +26,7 @@ export default function LeavePage() {
     return (
         <section className="mypage">
             <div className="inner">
-                <aisde className="sidebar">
-                    <ul>
-                        <li><Link to="/order">주문/배송</Link></li>
-                        <li><Link tp="/wishlist">위시리스트</Link></li>
-                        <li className={location.pathname === "/mypage" ? "active" : ""}>
-                            <Link to="/mypage">회원정보 수정</Link>
-                        </li>
-                        <li className={location.pathname === "/leavepage" ? "active" : ""}><Link to="/leavepage">회원 탈퇴</Link></li>
-                    </ul>
-                </aisde>
+                <MyPageMenu />
 
                 <div className="content">
                     <h2>회원탈퇴</h2>

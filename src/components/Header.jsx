@@ -23,6 +23,8 @@ const Header = () => {
 
   const userLogin = useRef(null)
   const loginMenu = useRef(false)
+  const enterTimer = useRef(null)
+  const leaveTimer = useRef(null)
 
   const location = useLocation()
   const isHome = location.pathname === '/'
@@ -80,12 +82,29 @@ const Header = () => {
     }
   }, [isSearchOpen])
 
-  const handleEnter = () => {
-    setHover(true)
+  useEffect(() => {
+    return () => {
+      clearTimeout(enterTimer.current)
+      clearTimeout(leaveTimer.current)
+    }
+  }, [])
+
+  const handleMenuEnter = () => {
+    clearTimeout(leaveTimer.current)
+    clearTimeout(enterTimer.current)
+
+    enterTimer.current = setTimeout(() => {
+      setHover(true)
+    }, 90)
   }
 
-  const handleLeave = () => {
-    setHover(false)
+  const handleMenuLeave = () => {
+    clearTimeout(enterTimer.current)
+    clearTimeout(leaveTimer.current)
+
+    leaveTimer.current = setTimeout(() => {
+      setHover(false)
+    }, 140)
   }
 
   const handleClick = () => {
@@ -104,23 +123,32 @@ const Header = () => {
     setIsSearchOpen(false)
   }
 
-  const isHeaderActive = scrollProgress > HEADER_ACTIVE_POINT || isSearchOpen
+  const isScrolled = scrollProgress > HEADER_ACTIVE_POINT
+  const isDarkHeader = !isScrolled && (isHover || isSearchOpen)
+  const isHeaderActive = isScrolled || isSearchOpen || isHover
 
   return (
     <>
-      <header className={isHeaderActive ? 'active' : ''}>
+      <header className={`${isHeaderActive ? 'active' : ''} ${isDarkHeader ? 'menu-dark' : ''}`}>
         <HeaderInner
-          onEnter={handleEnter}
+          onEnter={handleMenuEnter}
           userClick={handleClick}
           isHover={isHover}
           isSearchOpen={isSearchOpen}
           setIsSearchOpen={setIsSearchOpen}
           searchClick={handleSearchToggle}
           scrollProgress={scrollProgress}
+          isScrolled={isScrolled}
         />
       </header>
 
-      {isHover && <MainMenu menus={menus} onSend={handleLeave} />}
+      <MainMenu
+        menus={menus}
+        isHover={isHover}
+        isScrolled={isScrolled}
+        onSend={handleMenuLeave}
+        onEnter={handleMenuEnter}
+      />
 
       <div
         className={`user-menu-overlay ${userMenu ? 'active' : ''}`}
@@ -138,6 +166,7 @@ const Header = () => {
         <SearchDropdown
           isSearchOpen={isSearchOpen}
           setIsSearchOpen={setIsSearchOpen}
+          isScrolled={isScrolled}
         />
       </div>
     </>
