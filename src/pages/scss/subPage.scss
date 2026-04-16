@@ -25,12 +25,52 @@
         // margin-top: 80px;
     }
 
+    .sort-wrap {
+        @include g.myFlex($jc: end, $gap: 20px);
+        padding-bottom: 20px;
+        padding-top: 100px;
+
+        button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            color: 949494;;
+
+            &.active {
+                font-weight: bold;
+                color: #CA1230;
+            }
+        }
+    }
+
     .sub-product-list {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         text-align: center;
         gap: 30px;
-        padding: 130px 0;
+        // padding: 130px 0;
+    }
+
+    .pagination {
+        @include g.myFlex($jc: center, $gap: 20px);
+        padding: 100px 0;
+        li {
+            button {
+                background: none;
+                border: 1px solid #ccc;
+                padding: 10px 13px;
+                cursor: pointer;
+                font-size: 14px;
+                
+
+                &.active {
+                    font-weight: bold;
+                    font-size: 16px;
+                    color: #CA1230;
+                }
+            }
+        }
     }
 
     .menu-tab {
