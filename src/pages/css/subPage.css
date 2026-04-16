@@ -20,14 +20,50 @@
 }
 .sub-page h1 {
   text-align: center;
-  margin-top: 80px;
+}
+.sub-page .sort-wrap {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 20px;
+  padding-top: 100px;
+}
+.sub-page .sort-wrap button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: 949494;
+}
+.sub-page .sort-wrap button.active {
+  font-weight: bold;
+  color: #CA1230;
 }
 .sub-page .sub-product-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   text-align: center;
   gap: 30px;
-  padding: 130px 0;
+}
+.sub-page .pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 100px 0;
+}
+.sub-page .pagination li button {
+  background: none;
+  border: 1px solid #ccc;
+  padding: 10px 13px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.sub-page .pagination li button.active {
+  font-weight: bold;
+  font-size: 16px;
+  color: #CA1230;
 }
 .sub-page .menu-tab {
   display: flex;
