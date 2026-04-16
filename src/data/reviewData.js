@@ -1,0 +1,42 @@
+export const productReviews = [
+    {
+        id: 1,
+        userName: "디자인러버",
+        rating: 5,
+        date: "2026-04-10",
+        title: "미니멀한 디자인이 너무 마음에 들어요!",
+        content: "공간이 훨씬 넓어 보이고 깔끔합니다. 블랙 프레임 마감이 정교해서 고급스러운 느낌이 나네요. 배송도 생각보다 빨랐고 기사님도 친절하셨습니다.",
+        option: "DIO",
+        images: ["/images/product-detail/review-01.jpg"],
+    },
+    {
+        id: 2,
+        userName: "홈스타일러",
+        rating: 4,
+        date: "2026-04-12",
+        title: "튼튼하고 실용적입니다.",
+        content: "설치하고 나니 흔들림 없이 아주 튼튼해요. 다만 무게가 꽤 나가서 혼자 옮기기는 조금 힘들었지만, 그만큼 내구성이 좋다는 뜻이겠죠? 만족합니다.",
+        option: "GYA",
+        images: ["/images/product-detail/review-02.jpg"],
+    },
+    {
+        id: 3,
+        userName: "미니멀리스트",
+        rating: 5,
+        date: "2026-04-15",
+        title: "딱 찾던 스타일이에요.",
+        content: "조립도 간편하고 군더더기 없는 디자인이라 어디든 잘 어울립니다. 가성비 최고예요!",
+        option: "SO",
+        images: ["/images/product-detail/review-03.jpg", ".iamges/product-datail/review-04.jpg"],
+    },
+    {
+        id: 4,
+        userName: "깔끔쟁이",
+        rating: 3,
+        date: "2026-04-16",
+        title: "색감이 사진과 아주 약간 달라요.",
+        content: "제품 자체는 훌륭한데 화면에서 보던 것보다 실물이 조금 더 진한 블랙 느낌입니다. 그래도 전체적인 분위기는 잘 맞아서 그냥 쓰려고요.",
+        option: "SP",
+        images: [],
+    }
+];
