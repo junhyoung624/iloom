@@ -4,7 +4,7 @@ import { productData } from "../data/productData";
 
 export const useProductStore = create((set, get) => ({
 
-   //상품 변수, 메서드
+    //상품 변수, 메서드
     items: [],
     //메뉴를 저장할 변수
     menus: [],
@@ -28,9 +28,105 @@ export const useProductStore = create((set, get) => ({
         if (existing.length > 0) return;
         set({ items: productData })
     },
+    //위시리스트
+    wishlist: [],
+
+    onToggleWishlist: (item) => {
+        const { wishlist } = get();
+        const exists = wishlist.some((wishItem) => wishItem.id === item.id);
+
+        set({
+            wishlist: exists
+                ? wishlist.filter((wishItem) => wishItem.id !== item.id)
+                : [...wishlist, item]
+        });
+    },
+
+    // 장바구니
+    cartItems: [],
+
+    addToCart: (product, selectedOption = {}, qty = 1) => {
+        const { cartItems } = get();
+
+        const existItem = cartItems.find(
+            (item) =>
+                item.id === product.id &&
+                item.color === (selectedOption.color || "")
+        );
+
+        if (existItem) {
+            set({
+                cartItems: cartItems.map((item) =>
+                    item.id === product.id &&
+                        item.color === (selectedOption.color || "")
+                        ? { ...item, qty: item.qty + qty }
+                        : item
+                )
+            });
+        } else {
+            set({
+                cartItems: [
+                    ...cartItems,
+                    {
+                        id: product.id,
+                        qty,
+                        checked: true,
+                        color: selectedOption.color || "",
+                    }
+                ]
+            });
+        }
+    },
+
+    increaseQty: (id, color = "") => {
+        set({
+            cartItems: get().cartItems.map((item) =>
+                item.id === id && item.color === color
+                    ? { ...item, qty: item.qty + 1 }
+                    : item
+            )
+        });
+    },
+
+    decreaseQty: (id, color = "") => {
+        set({
+            cartItems: get().cartItems.map((item) =>
+                item.id === id && item.color === color
+                    ? { ...item, qty: Math.max(1, item.qty - 1) }
+                    : item
+            )
+        });
+    },
+
+    toggleChecked: (id, color = "") => {
+        set({
+            cartItems: get().cartItems.map((item) =>
+                item.id === id && item.color === color
+                    ? { ...item, checked: !item.checked }
+                    : item
+            )
+        });
+    },
+
+    toggleAllChecked: (checked) => {
+        set({
+            cartItems: get().cartItems.map((item) => ({
+                ...item,
+                checked
+            }))
+        });
+    },
+
+    removeCartItem: (id, color = "") => {
+        set({
+            cartItems: get().cartItems.filter(
+                (item) => !(item.id === id && item.color === color)
+            )
+        });
+    },
 
     // 메뉴 
-    menus: [],
+
 
     onMakeMenu: () => {
         const items = get().items;

@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import { productData } from '../data/productData'
+import { useProductStore } from '../store/useProductStore'
 
 const TABS = ['상세정보', '옵션', '인테리어 팁', '상품평', '제품Q&A', '배송/취소/반품']
 
 export default function ProductDetail() {
     const { id } = useParams()
     const navigate = useNavigate()
+    const { addToCart } = useProductStore()
     const product = productData.find(p => p.id === id)
 
     const [mainImg, setMainImg] = useState(0)
@@ -38,6 +40,17 @@ export default function ProductDetail() {
         setActiveTab(tab)
         const el = document.getElementById('tab-content')
         if (el) el.scrollIntoView({ behavier: 'smooth' })
+    }
+
+    const handleAddCart = () => {
+        if (product.options?.length > 0 && !selectedOption) {
+            alert('옵션을 선택해주세요')
+            return
+        }
+
+        addToCart(product, { color: selectedOption }, quantity)
+        alert('장바구니에 담겼습니다')
+        navigate('/cart')
     }
 
     return (
@@ -125,7 +138,7 @@ export default function ProductDetail() {
 
                     <div className="action-btns">
                         <button className="buy" onClick={() => alert('결제 페이지로 이동')}>결제하기</button>
-                        <button className="cart" onClick={() => alert('장바구니에 담겼습니다')}>장바구니</button>
+                        <button className="cart" onClick={handleAddCart}>장바구니</button>
                     </div>
 
 

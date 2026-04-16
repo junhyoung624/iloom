@@ -18931,7 +18931,7 @@ export const productData = [
     ],
     "ranking": 367
   },
-  
+
   {
     "id": "IDM0003A",
     "series": "업 모션",
@@ -18975,7 +18975,7 @@ export const productData = [
     ],
     "ranking": 1614
   },
-  
+
   {
     "id": "IDM0005A",
     "series": "업 모션",
@@ -45807,102 +45807,102 @@ export const productData = [
     ],
     "ranking": 418
   },
-  {
-    "id": "IDL0002A",
-    "series": "뉴트",
-    "name": "뉴트 다리형책상 1200폭",
-    "material": "",
-    "price": "269,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "WWWW",
-          "WWMRB",
-          "NKWW"
-        ]
-      }
-    ],
-    "originalCategory": "스터디",
-    "category2": "책상",
-    "category3": "일반책상•책상세트",
-    "productImages": [
-      "/images/iloom_images/study-room/desk/IDL0002A_NKWW_3.png",
-      "/images/iloom_images/study-room/desk/IDL0002A_WWMRB_2.png",
-      "/images/iloom_images/study-room/desk/IDL0002A_WWWW_1.jpg",
-      "/images/iloom_images/study-room/desk/IDL0002A_WWWW_4.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250108/_65d6c342-7bbe-483f-b3c6-e6b069b7f889.jpg",
-      "https://www.iloom.com/upload/contents/20241211/_a2fc6dc9-cd90-438b-8e2e-b81b3e312ac6.jpg",
-      "https://www.iloom.com/upload/contents/20251113/_546b48ea-289c-410f-8a55-1ed3eb9f2baa.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_3bf9198c-8e46-4a60-a35a-da90391d80be.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_d05392ec-d3bd-4099-aaf6-a925ccad508f.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_b9218363-b0d6-4c51-b686-a29a00921351.jpg",
-      "https://www.iloom.com/upload/contents/20251113/_b1006bc6-96ae-4d1b-a29c-ab6e72321821.gif",
-      "https://www.iloom.com/upload/contents/20241128/_0cbc4c4b-5c9f-4cd3-80e4-d6f6a381552b.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_66527d52-2bd0-4ec2-9c2d-1af6ad2af443.gif",
-      "https://www.iloom.com/upload/contents/20241128/_f86c0d84-b6d3-4645-8f8b-27c68b31b310.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_27b04fb9-b244-4cd7-9721-7855b77a7c94.gif",
-      "https://www.iloom.com/upload/contents/20241128/_6fc937b0-6093-48d0-8db4-2598f65bf3b8.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_c84920ea-af03-4bec-aaba-0a849a59b121.jpg",
-      "https://www.iloom.com/upload/contents/20251113/_7cbc72ab-e651-4ab4-8c9a-a35be2053a37.gif",
-      "https://www.iloom.com/upload/contents/20250709/_1b9eaba8-c265-43f4-9933-dce0c608b921.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_8651dd78-045d-419a-a08e-e6ad26526f54.jpg"
-    ],
-    "ranking": 305
-  },
-  {
-    "id": "IDL0003A",
-    "series": "뉴트",
-    "name": "뉴트 다리형책상 1400폭",
-    "material": "",
-    "price": "299,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "WWWW",
-          "WWMRB",
-          "NKWW"
-        ]
-      }
-    ],
-    "originalCategory": "스터디",
-    "category2": "책상",
-    "category3": "일반책상•책상세트",
-    "productImages": [
-      "/images/iloom_images/study-room/desk/IDL0003A_NKWW_3.png",
-      "/images/iloom_images/study-room/desk/IDL0003A_WWMRB_2.png",
-      "/images/iloom_images/study-room/desk/IDL0003A_WWWW_1.jpg",
-      "/images/iloom_images/study-room/desk/IDL0003A_WWWW_4.png"
-    ],
-    "mdPick": false,
-    "new": true,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20250109/_956aab37-6be8-4436-9d39-fb679813cba8.jpg",
-      "https://www.iloom.com/upload/contents/20241211/_c3341932-1f75-4736-820c-9bedfd239d02.jpg",
-      "https://www.iloom.com/upload/contents/20251113/_035d77ba-eb55-4e83-8954-044f69c9f095.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_4e3bb139-7b81-42bd-8917-4b8aa501cfbb.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_5eb51b57-c0ed-4d95-b368-a530aba132ff.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_0f3095bf-7b50-4892-9e9b-7bd3ed8b507b.jpg",
-      "https://www.iloom.com/upload/contents/20251113/_de33e57b-13e8-491e-b592-d36c4aafd498.gif",
-      "https://www.iloom.com/upload/contents/20241128/_dd97420e-bc59-4fec-b2b0-dbf0af550b6c.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_0be80461-b4a4-4d8b-bef1-d73339115189.gif",
-      "https://www.iloom.com/upload/contents/20241128/_f7f96a39-8713-440a-bb3d-7840525c54b1.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_cdb55100-76aa-4e50-8d73-2b4a64032c12.gif",
-      "https://www.iloom.com/upload/contents/20241128/_03ed8ba3-28bf-4a44-a264-7b764751fe65.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_8b6fb189-0a4c-4bd6-b951-f6db08624135.jpg",
-      "https://www.iloom.com/upload/contents/20251113/_d76c569a-10a7-42e1-a139-6e1de2ed281c.gif",
-      "https://www.iloom.com/upload/contents/20250709/_94d79797-0f35-4508-a3e5-194083e60cb5.jpg",
-      "https://www.iloom.com/upload/contents/20241128/_7841accf-0f1e-401a-a59f-269211e098e6.jpg"
-    ],
-    "ranking": 1087
-  },
+  // {
+  //   "id": "IDL0002A",
+  //   "series": "뉴트",
+  //   "name": "뉴트 다리형책상 1200폭",
+  //   "material": "",
+  //   "price": "269,000",
+  //   "options": [
+  //     {
+  //       "name": "색상",
+  //       "values": [
+  //         "WWWW",
+  //         "WWMRB",
+  //         "NKWW"
+  //       ]
+  //     }
+  //   ],
+  //   "originalCategory": "스터디",
+  //   "category2": "책상",
+  //   "category3": "일반책상•책상세트",
+  //   "productImages": [
+  //     "/images/iloom_images/study-room/desk/IDL0002A_NKWW_3.png",
+  //     "/images/iloom_images/study-room/desk/IDL0002A_WWMRB_2.png",
+  //     "/images/iloom_images/study-room/desk/IDL0002A_WWWW_1.jpg",
+  //     "/images/iloom_images/study-room/desk/IDL0002A_WWWW_4.png"
+  //   ],
+  //   "mdPick": false,
+  //   "new": false,
+  //   "BestSeller": false,
+  //   "detailImg": [
+  //     "https://www.iloom.com/upload/contents/20250108/_65d6c342-7bbe-483f-b3c6-e6b069b7f889.jpg",
+  //     "https://www.iloom.com/upload/contents/20241211/_a2fc6dc9-cd90-438b-8e2e-b81b3e312ac6.jpg",
+  //     "https://www.iloom.com/upload/contents/20251113/_546b48ea-289c-410f-8a55-1ed3eb9f2baa.jpg",
+  //     "https://www.iloom.com/upload/contents/20241128/_3bf9198c-8e46-4a60-a35a-da90391d80be.jpg",
+  //     "https://www.iloom.com/upload/contents/20241128/_d05392ec-d3bd-4099-aaf6-a925ccad508f.jpg",
+  //     "https://www.iloom.com/upload/contents/20241128/_b9218363-b0d6-4c51-b686-a29a00921351.jpg",
+  //     "https://www.iloom.com/upload/contents/20251113/_b1006bc6-96ae-4d1b-a29c-ab6e72321821.gif",
+  //     "https://www.iloom.com/upload/contents/20241128/_0cbc4c4b-5c9f-4cd3-80e4-d6f6a381552b.jpg",
+  //     "https://www.iloom.com/upload/contents/20241128/_66527d52-2bd0-4ec2-9c2d-1af6ad2af443.gif",
+  //     "https://www.iloom.com/upload/contents/20241128/_f86c0d84-b6d3-4645-8f8b-27c68b31b310.jpg",
+  //     "https://www.iloom.com/upload/contents/20241128/_27b04fb9-b244-4cd7-9721-7855b77a7c94.gif",
+  //     "https://www.iloom.com/upload/contents/20241128/_6fc937b0-6093-48d0-8db4-2598f65bf3b8.jpg",
+  //     "https://www.iloom.com/upload/contents/20241128/_c84920ea-af03-4bec-aaba-0a849a59b121.jpg",
+  //     "https://www.iloom.com/upload/contents/20251113/_7cbc72ab-e651-4ab4-8c9a-a35be2053a37.gif",
+  //     "https://www.iloom.com/upload/contents/20250709/_1b9eaba8-c265-43f4-9933-dce0c608b921.jpg",
+  //     "https://www.iloom.com/upload/contents/20241128/_8651dd78-045d-419a-a08e-e6ad26526f54.jpg"
+  //   ],
+  //   "ranking": 305
+  // },
+  // {
+  //   "id": "IDL0003A",
+  //   "series": "뉴트",
+  //   "name": "뉴트 다리형책상 1400폭",
+  //   "material": "",
+  //   "price": "299,000",
+  //   "options": [
+  //     {
+  //       "name": "색상",
+  //       "values": [
+  //         "WWWW",
+  //         "WWMRB",
+  //         "NKWW"
+  //       ]
+  //     }
+  //   ],
+  //   "originalCategory": "스터디",
+  //   "category2": "책상",
+  //   "category3": "일반책상•책상세트",
+  //   "productImages": [
+  //     "/images/iloom_images/study-room/desk/IDL0003A_NKWW_3.png",
+  //     "/images/iloom_images/study-room/desk/IDL0003A_WWMRB_2.png",
+  //     "/images/iloom_images/study-room/desk/IDL0003A_WWWW_1.jpg",
+  //     "/images/iloom_images/study-room/desk/IDL0003A_WWWW_4.png"
+  //   ],
+  //   "mdPick": false,
+  //   "new": true,
+  //   "BestSeller": false,
+  //   "detailImg": [
+  //     "https://www.iloom.com/upload/contents/20250109/_956aab37-6be8-4436-9d39-fb679813cba8.jpg",
+  //     "https://www.iloom.com/upload/contents/20241211/_c3341932-1f75-4736-820c-9bedfd239d02.jpg",
+  //     "https://www.iloom.com/upload/contents/20251113/_035d77ba-eb55-4e83-8954-044f69c9f095.jpg",
+  //     "https://www.iloom.com/upload/contents/20241128/_4e3bb139-7b81-42bd-8917-4b8aa501cfbb.jpg",
+  //     "https://www.iloom.com/upload/contents/20241128/_5eb51b57-c0ed-4d95-b368-a530aba132ff.jpg",
+  //     "https://www.iloom.com/upload/contents/20241128/_0f3095bf-7b50-4892-9e9b-7bd3ed8b507b.jpg",
+  //     "https://www.iloom.com/upload/contents/20251113/_de33e57b-13e8-491e-b592-d36c4aafd498.gif",
+  //     "https://www.iloom.com/upload/contents/20241128/_dd97420e-bc59-4fec-b2b0-dbf0af550b6c.jpg",
+  //     "https://www.iloom.com/upload/contents/20241128/_0be80461-b4a4-4d8b-bef1-d73339115189.gif",
+  //     "https://www.iloom.com/upload/contents/20241128/_f7f96a39-8713-440a-bb3d-7840525c54b1.jpg",
+  //     "https://www.iloom.com/upload/contents/20241128/_cdb55100-76aa-4e50-8d73-2b4a64032c12.gif",
+  //     "https://www.iloom.com/upload/contents/20241128/_03ed8ba3-28bf-4a44-a264-7b764751fe65.jpg",
+  //     "https://www.iloom.com/upload/contents/20241128/_8b6fb189-0a4c-4bd6-b951-f6db08624135.jpg",
+  //     "https://www.iloom.com/upload/contents/20251113/_d76c569a-10a7-42e1-a139-6e1de2ed281c.gif",
+  //     "https://www.iloom.com/upload/contents/20250709/_94d79797-0f35-4508-a3e5-194083e60cb5.jpg",
+  //     "https://www.iloom.com/upload/contents/20241128/_7841accf-0f1e-401a-a59f-269211e098e6.jpg"
+  //   ],
+  //   "ranking": 1087
+  // },
   {
     "id": "IDL0024A",
     "series": "뉴트",

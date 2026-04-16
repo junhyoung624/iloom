@@ -1,7 +1,8 @@
 import React from 'react'
-import { useLocation } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { useProductStore } from '../store/useProductStore'
 import "./scss/searchpage.scss"
+import SubCard from '../components/SubCard'
 
 export default function SearchPage() {
   const { items } = useProductStore()
@@ -26,14 +27,16 @@ export default function SearchPage() {
             {cateItems.length}개의 상품이 검색되었습니다.
           </p>
         </div>
-
-        <div className="search-list">
+        <div className="line"></div>
+        <ul className="sub-product-list">
           {cateItems.map((item) => (
-            <div key={item.id}>
-              {item.name}
-            </div>
+            <li key={item.id}>
+              <Link to={`/product/${item.id}`}>
+                <SubCard key={item.id} item={item} />
+              </Link>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </section>
   )
