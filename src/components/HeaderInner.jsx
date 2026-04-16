@@ -17,12 +17,21 @@ const HeaderInner = ({
     const { user } = useAuthStore()
 
     const [lastScroll, setLastScroll] = useState(false)
+    const [hasPassedThreshold, setHasPassedThreshold] = useState(false)
 
     useEffect(() => {
         let lastScrollY = window.scrollY
 
         const AddMenuScroll = () => {
             const currentScrollY = window.scrollY
+
+            if (currentScrollY >= 700) {
+                setHasPassedThreshold(true)
+            }
+
+            if (currentScrollY < 700) {
+                setHasPassedThreshold(false)
+            }
 
             if (currentScrollY === 0) {
                 setLastScroll(false)
@@ -108,9 +117,7 @@ const HeaderInner = ({
                 </div>
             </div>
 
-
-
-            <ul className={`scroll-menu ${!isSearchOpen && !isHover && lastScroll ? "active" : ""}`}>
+            <ul className={`scroll-menu ${!isSearchOpen && !isHover && lastScroll && hasPassedThreshold ? "active" : ""}`}>
                 {menus.map((menu, index) => (
                     <li key={`${menu.key}-${index}`}>
                         <Link to={menu.link}>

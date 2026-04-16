@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.product-detail {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 24px 20px 100px;
+    color: #222;
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    color: #303030;
+    margin: 90px 0;
+
+    a {
+        color: #505050;
+
+        &:hover {
+            color: #303030;
+        }
+    }
+
+    img {
+        width: 17px;
+        height: 15px;
+    }
+
+    span {
+        color: #505050;
+    }
+}
+
+.detail-top {
+    display: flex;
+    gap: 120px;
+    margin-bottom: 60px;
+    align-items: flex-start;
+}
+
+.image-area {
+    flex: 0 0 520px;
+    max-width: 520px;
+
+    .main-image {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        margin-bottom: 10px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    .thumb-list {
+        display: flex;
+        gap: 10px;
+
+        div {
+            width: 138px;
+            height: 138px;
+            cursor: pointer;
+            overflow: hidden;
+            border: 1px solid transparent;
+            transition: border-color 0.15s;
+
+            &:hover {
+                border-color: #c9c9c9;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+}
+
+.info-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    color: #303030;
+
+    .info-top {
+        position: relative;
+        margin-bottom: 50px;
+
+        .brand {
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 25px;
+        }
+
+        .product-name {
+            font-size: 32px;
+        }
+    }
+
+    .delivery-info {
+        display: flex;
+        color: #303030;
+        align-items: center;
+
+        strong {
+            font-size: 16px;
+            margin: 0 5px 0 10px;
+        }
+
+        p {
+            font-size: 15px;
+        }
+    }
+}
+
+.icon-btns {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    gap: 25px;
+
+    button {
+        background: none;
+        border: none;
+    }
+}
