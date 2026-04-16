@@ -5,12 +5,14 @@ import { colorData } from '../data/colorData'
 import { productReviews as initialData } from '../data/reviewData'
 import { commonQna } from '../data/qnaData'
 import "./scss/product-detail.scss"
+import { useProductStore } from '../store/useProductStore'
 
 const TABS = ['상세정보', '옵션', '인테리어 팁', '상품평', '제품Q&A', '배송/취소/반품']
 
 export default function ProductDetail() {
     const { id } = useParams()
     const navigate = useNavigate()
+    const { addToCart } = useProductStore()
     const product = productData.find(p => p.id === id)
 
     const [mainImg, setMainImg] = useState(0)
@@ -18,7 +20,10 @@ export default function ProductDetail() {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false)
     const [quantity, setQuantity] = useState(1)
     const [activeTab, setActiveTab] = useState('상세정보')
-    const [isWished, setIsWished] = useState(false)
+    //const [isWished, setIsWished] = useState(false)
+    const { onToggleWishList, isWished } = useProductStore();
+    const wished = isWished(id);
+
 
     useEffect(() => {
         window.scrollTo(0, 0)
@@ -61,6 +66,17 @@ export default function ProductDetail() {
     const [productReviews, setProductReviews] = useState(initialData);
     // const productQna = qnaData.flatMap(q => q.questions) || [];
     const productQna = commonQna;
+
+    const handleAddCart = () => {
+        if (product.options?.length > 0 && !selectedOption) {
+            alert('옵션을 선택해주세요')
+            return
+        }
+
+        addToCart(product, { color: selectedOption }, quantity)
+        alert('장바구니에 담겼습니다')
+        navigate('/cart')
+    }
 
     return (
         <section className="product-detail">
@@ -176,7 +192,20 @@ export default function ProductDetail() {
 
                     <div className="action-btns">
                         <button className="buy" onClick={() => alert('결제 페이지로 이동')}>결제하기</button>
-                        <button className="cart" onClick={() => alert('장바구니에 담겼습니다')}>장바구니</button>
+                        <button className="cart" onClick={handleAddCart}>장바구니</button>
+                    </div>
+
+
+                    <div className="icon-btns">
+                        <button className={`wish-btn ${wished ? 'active' : ''}`}
+                            onClick={() => onToggleWishList(product)}>
+                            <img src={wished ? '/images/product-detail/like.png' : '/images/product-detail/unlike.png'} alt="wish"
+                                style={{ width: '20px', height: '20px' }} />
+                        </button>
+                        <button className="share-btn" onClick={() => {
+                            navigator.clipboard.writeText(window.location.href)
+                            alert('링크가 복사되었습니다');
+                        }}><img src="/images/product-detail/share.png" alt="공유하기" /></button>
                     </div>
                 </div>
             </div>

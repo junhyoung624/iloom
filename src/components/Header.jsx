@@ -1,89 +1,92 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 import MainMenu from './MainMenu'
 import HeaderInner from './HeaderInner'
 import UserMenu from './UserMenu'
-import "./scss/header.scss"
+import './scss/header.scss'
 import { useProductStore } from '../store/useProductStore'
 import { useAuthStore } from '../store/useAuthStore'
 import SearchDropdown from './SearchDropdown'
 
-// header
+const HERO_FADE_START = 0
+const HERO_FADE_END = 700
+const HEADER_ACTIVE_POINT = 0.99
+
 const Header = () => {
+  const { menus } = useProductStore()
+  const { user } = useAuthStore()
 
-  // 메뉴 불러오기
-  const { menus } = useProductStore();
-  const { user } = useAuthStore();
-  const [isScroll, setScroll] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0)
+  const [isHover, setHover] = useState(false)
+  const [userMenu, setUserMenu] = useState(false)
+  const [isSearchOpen, setIsSearchOpen] = useState(false)
 
-  const location = useLocation();
+  const userLogin = useRef(null)
+  const loginMenu = useRef(false)
 
-  const Home = location.pathname === "/";
+  const location = useLocation()
+  const isHome = location.pathname === '/'
 
   useEffect(() => {
-
-    if (!Home) {
-      setScroll(true)
+    if (!isHome) {
+      setScrollProgress(1)
       return
     }
 
     const handleScroll = () => {
-      setScroll(window.scrollY > 60);
+      const scrollY = window.scrollY
+
+      const progress = Math.min(
+        Math.max((scrollY - HERO_FADE_START) / (HERO_FADE_END - HERO_FADE_START), 0),
+        1
+      )
+
+      setScrollProgress(progress)
     }
 
+    window.addEventListener('scroll', handleScroll)
+    handleScroll()
 
-    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [isHome])
 
-    handleScroll();
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [Home])
+  useEffect(() => {
+    if (!userLogin.current && user) {
+      setUserMenu(true)
+      loginMenu.current = true
+    } else {
+      setUserMenu(false)
+    }
+    userLogin.current = user
+  }, [user])
 
+  useEffect(() => {
+    if (loginMenu.current) {
+      loginMenu.current = false
+      return
+    }
+    setUserMenu(false)
+  }, [location.pathname])
 
+  useEffect(() => {
+    if (isSearchOpen) {
+      document.documentElement.style.overflow = 'hidden'
+    } else {
+      document.documentElement.style.overflow = ''
+    }
 
+    return () => {
+      document.documentElement.style.overflow = ''
+    }
+  }, [isSearchOpen])
 
-  const [isHover, setHover] = useState(false);
   const handleEnter = () => {
     setHover(true)
-    console.log("hover", isHover)
   }
 
   const handleLeave = () => {
     setHover(false)
-    console.log("out", isHover)
   }
-
-  // 헤더 스크롤
-  const [scrollHover, setScrollHover] = useState(false);
-  const scrollEnter = () => {
-    setScrollHover(true)
-  }
-
-  const scrollLeave = () => {
-    setScrollHover(false)
-  }
-
-  // userMenu 
-  const [userMenu, setUserMenu] = useState(false);
-  const userLogin = useRef(null);
-  const loginMenu = useRef(false);
-
-  useEffect(() => {
-    if (!userLogin.current && user) {
-      setUserMenu(true);
-      loginMenu.current = true;
-    } else {
-      setUserMenu(false)
-    }
-    userLogin.current = user;
-  }, [user]);
-
-  useEffect(() => {
-    if (loginMenu.current) {
-      loginMenu.current = false;
-      return;
-    }
-    setUserMenu(false)
-  }, [location.pathname])
 
   const handleClick = () => {
     setUserMenu(true)
@@ -93,21 +96,6 @@ const Header = () => {
     setUserMenu(false)
   }
 
-  //////////////////////////////////////
-  const [isSearchOpen, setIsSearchOpen] = useState(false)
-
-  useEffect(() => {
-    if (isSearchOpen) {
-      document.documentElement.style.overflow = "hidden"
-    } else {
-      document.documentElement.style.overflow = ""
-    }
-
-    return () => {
-      document.documentElement.style.overflow = ""
-    }
-  }, [isSearchOpen])
-
   const handleSearchToggle = () => {
     setIsSearchOpen((prev) => !prev)
   }
@@ -116,9 +104,11 @@ const Header = () => {
     setIsSearchOpen(false)
   }
 
+  const isHeaderActive = scrollProgress > HEADER_ACTIVE_POINT || isSearchOpen
+
   return (
     <>
-      <header className={isScroll || isSearchOpen ? "active" : ""}>
+      <header className={isHeaderActive ? 'active' : ''}>
         <HeaderInner
           onEnter={handleEnter}
           userClick={handleClick}
@@ -126,36 +116,29 @@ const Header = () => {
           isSearchOpen={isSearchOpen}
           setIsSearchOpen={setIsSearchOpen}
           searchClick={handleSearchToggle}
+          scrollProgress={scrollProgress}
         />
-      </header >
+      </header>
 
+      {isHover && <MainMenu menus={menus} onSend={handleLeave} />}
 
-      {isHover && <MainMenu menus={menus} onSend={handleLeave} />
-      }
-
-
-
-
-      {/* <div
-        className={`main-menu-wrap-scroll ${scrollHover ? "active" : ""}`}
-        onMouseLeave={scrollLeave}>
-        <MainMenu menus={menus}/>
-      </div> */}
       <div
-        className={`user-menu-overlay ${userMenu ? "active" : ""}`}
+        className={`user-menu-overlay ${userMenu ? 'active' : ''}`}
         onClick={closeBtn}
       />
 
-      <div className={`user-menu-wrap ${userMenu ? "active" : ""}`}>
+      <div className={`user-menu-wrap ${userMenu ? 'active' : ''}`}>
         <UserMenu userClose={closeBtn} userMenu={userMenu} />
       </div>
 
       <div
-        className={`search-overlay ${isSearchOpen ? "active" : ""}`}
+        className={`search-overlay ${isSearchOpen ? 'active' : ''}`}
         onClick={handleSearchClose}
       >
-        <SearchDropdown isSearchOpen={isSearchOpen}
-          setIsSearchOpen={setIsSearchOpen} />
+        <SearchDropdown
+          isSearchOpen={isSearchOpen}
+          setIsSearchOpen={setIsSearchOpen}
+        />
       </div>
     </>
   )

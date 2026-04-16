@@ -1,9 +1,28 @@
 @use "../../App.scss" as g;
 
+.banner-img {
+    width: 100%;
+    height: 500px;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
 .sub-page {
+
+    .breadcrumb-list {
+        @include g.myFlex($jc: null, $gap: 20px);
+        cursor: pointer;
+        color: #555;
+        padding-top: 80px;
+        padding-left: 150px;        
+    }
+
     h1 {
         text-align: center;
-        margin-top: 80px;
+        // margin-top: 80px;
     }
 
     .sub-product-list {
