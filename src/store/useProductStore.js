@@ -17,7 +17,7 @@ export const useProductStore = create((set, get) => ({
     onSetSearchWordAll: (word) => set({ searchWordAll: word }),
 
     // 정렬
-    sortType: "",
+    sortType: "price",
     sortOrder: "asc",
     onSetSort: (type, order = "asc") =>
         set({ sortType: type, sortOrder: order }),
