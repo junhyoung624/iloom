@@ -18011,7 +18011,7 @@ export const productData = [
     ],
     "mdPick": false,
     "new": false,
-    "BestSeller": false,
+    "BestSeller": true,
     "detailImg": [
       "https://www.iloom.com/upload/contents/20250605/_cfdfefa9-aec9-4a9e-b5de-0ec628394c11.jpg",
       "https://www.iloom.com/upload/contents/20250605/_56a35134-424a-48a4-87ed-4791f5324ee0.jpg",
@@ -18259,7 +18259,7 @@ export const productData = [
       "/images/iloom_images/lighting/table-lighting/IAL00GA23A_MTD_6.png"
     ],
     "mdPick": false,
-    "new": false,
+    "new": true,
     "BestSeller": false,
     "detailImg": [
       "https://www.iloom.com/upload/contents/20250605/_54486b25-bd82-4648-94a2-04d7af1beac7.jpg",
@@ -18347,7 +18347,7 @@ export const productData = [
       "/images/iloom_images/lighting/pendant-lighting/IAL00GA24A_EWH_2.png"
     ],
     "mdPick": false,
-    "new": false,
+    "new": true,
     "BestSeller": false,
     "detailImg": [
       "https://www.iloom.com/upload/contents/20250605/_bfaf546a-8f43-47ae-9884-4dbea57ce22e.jpg",
@@ -18425,7 +18425,7 @@ export const productData = [
       "/images/iloom_images/lighting/portable-lighting/IAL00NT02A_RTH_3.png"
     ],
     "mdPick": false,
-    "new": false,
+    "new": true,
     "BestSeller": false,
     "detailImg": [
       "https://www.iloom.com/upload/contents/20250605/_9a5e7b86-4635-4c10-8817-eba9bd3035c0.jpg",
@@ -18795,7 +18795,7 @@ export const productData = [
     ],
     "mdPick": true,
     "new": false,
-    "BestSeller": false,
+    "BestSeller": true,
     "detailImg": [
       "https://www.iloom.com/upload/contents/20250610/_a1cf3009-38b7-488e-8b93-b5becbcdcb75.jpg",
       "https://www.iloom.com/upload/contents/20250610/_a384a0b3-6445-498d-947d-686486e54300.jpg",
@@ -18836,7 +18836,7 @@ export const productData = [
     ],
     "mdPick": false,
     "new": false,
-    "BestSeller": false,
+    "BestSeller": true,
     "detailImg": [
       "https://www.iloom.com/upload/contents/20250609/_e7679b51-0c40-437a-8c95-cc3f7a5c4167.jpg",
       "https://www.iloom.com/upload/contents/20250609/_4160cacf-30d6-4744-852f-22eb1da6ee4e.jpg",

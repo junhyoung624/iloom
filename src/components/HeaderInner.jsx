@@ -3,35 +3,25 @@ import { Link } from 'react-router-dom'
 import { useProductStore } from '../store/useProductStore'
 import { useAuthStore } from '../store/useAuthStore'
 import "./scss/headerinner.scss"
-import SearchDropdown from './SearchDropdown'
 
 const HeaderInner = ({
     onEnter,
     userClick,
     isHover,
     isSearchOpen,
-    setIsSearchOpen,
-    searchClick
+    searchClick,
+    isScrolled
 }) => {
     const { menus } = useProductStore()
     const { user } = useAuthStore()
 
     const [lastScroll, setLastScroll] = useState(false)
-    const [hasPassedThreshold, setHasPassedThreshold] = useState(false)
 
     useEffect(() => {
         let lastScrollY = window.scrollY
 
-        const AddMenuScroll = () => {
+        const handleScrollDirection = () => {
             const currentScrollY = window.scrollY
-
-            if (currentScrollY >= 700) {
-                setHasPassedThreshold(true)
-            }
-
-            if (currentScrollY < 700) {
-                setHasPassedThreshold(false)
-            }
 
             if (currentScrollY === 0) {
                 setLastScroll(false)
@@ -44,8 +34,10 @@ const HeaderInner = ({
             lastScrollY = currentScrollY
         }
 
-        window.addEventListener("scroll", AddMenuScroll)
-        return () => window.removeEventListener("scroll", AddMenuScroll)
+        window.addEventListener("scroll", handleScrollDirection)
+        handleScrollDirection()
+
+        return () => window.removeEventListener("scroll", handleScrollDirection)
     }, [])
 
     return (
@@ -117,15 +109,17 @@ const HeaderInner = ({
                 </div>
             </div>
 
-            <ul className={`scroll-menu ${!isSearchOpen && !isHover && lastScroll && hasPassedThreshold ? "active" : ""}`}>
-                {menus.map((menu, index) => (
-                    <li key={`${menu.key}-${index}`}>
-                        <Link to={menu.link}>
-                            {menu.name}
-                        </Link>
-                    </li>
-                ))}
-            </ul>
+            <div className="header-scroll-nav-mask">
+                <ul className={`header-scroll-nav ${!isSearchOpen && !isHover && lastScroll && isScrolled ? "active" : ""}`}>
+                    {menus.map((menu, index) => (
+                        <li key={`${menu.key}-${index}`}>
+                            <Link to={menu.link}>
+                                {menu.name}
+                            </Link>
+                        </li>
+                    ))}
+                </ul>
+            </div>
         </>
     )
 }

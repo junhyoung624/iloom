@@ -144,7 +144,7 @@ export default function ProductDetail() {
                                 {selectedOption ? (
                                     <span className="selected-value">
                                         {getColorImg(selectedOption) && (
-                                            <img src={`/${getColorImg(selectedOption)}`} alt={selectedOption} />
+                                            <img src={`/images/${getColorImg(selectedOption)}`} alt={selectedOption} />
                                         )}
                                         {selectedOption}
                                     </span>
@@ -163,7 +163,7 @@ export default function ProductDetail() {
                                                 setIsDropdownOpen(false)
                                             }}>
                                             {getColorImg(v) && (
-                                                <img src={`/${getColorImg(v)}`} alt={v} />
+                                                <img src={`/images/${getColorImg(v)}`} alt={v} />
                                             )}
                                             <span>{v}</span>
                                         </li>
@@ -291,7 +291,7 @@ export default function ProductDetail() {
                                     {opt.values.map((v, j) => (
                                         <div key={j} className="opt-chip-item">
                                             {opt.name === '색상' && getColorImg(v) && (
-                                                <img src={getColorImg(v)} alt={v} className="chip-img" />
+                                                <img src={`/images/${getColorImg(v)}`} alt={v} className="chip-img" />
                                             )}
                                             <span key={j} className="opt-chip">{v}</span>
                                         </div>
@@ -340,7 +340,7 @@ export default function ProductDetail() {
                                         <p className="review-title">{r.title}</p>
                                         <div className="review-img">
                                             {r.images?.map((img, idx) => (
-                                                <img key={idx} src={img} alt={`review${idx + 1}`} />
+                                                <img key={idx} src={img[0]} alt={`review${idx + 1}`} />
                                             ))}
                                         </div>
                                         <p className="review-content">{r.content}</p>
