@@ -364,21 +364,22 @@ header {
 
         .menu-img-wrap {
             .text-box {
-                color: #000;
+                // color: #000;
 
                 img {
-                    filter: invert(1);
+                    // filter: invert(1);
                 }
 
                 .magazine-button {
                     a {
-                        color: #000;
-                        border-color: #000;
+                        color: #fff;
+                        border-color: #fff;
                     }
 
                     a:hover {
                         background: #000;
                         color: #fff;
+                        border-color: #000;
                     }
                 }
             }
