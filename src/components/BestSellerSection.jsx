@@ -11,22 +11,22 @@ export default function Best() {
     {
       id: "1", key: "best1", image: "./images/best-seller/bestseller-01.png",
       product: [
-        { id: "1-1", image: "./images/best-seller/product-01.png", serise: "핀", name: "원목 의자(쿠션형, 2EA)", price: "349,000 원" },
-        { id: "1-2", image: "./images/best-seller/product-02.png", serise: "에디", name: "3단 600폭 책장", price: "99,000 원" }
+        { id: "HCH9003", image: "./images/best-seller/product-01.png", serise: "핀", name: "원목 의자(쿠션형, 2EA)", price: "349,000 원" },
+        { id: "HSFC063N", image: "./images/best-seller/product-02.png", serise: "에디", name: "3단 600폭 책장", price: "99,000 원" }
       ]
     },
     {
       id: "2", key: "best2", image: "./images/best-seller/bestseller-02.png",
       product: [
-        { id: "2-1", image: "./images/best-seller/product-03.png", serise: "필즈", name: "세라믹 원형 식탁 1100폭", price: "1,390,000 원" },
-        { id: "2-2", image: "./images/best-seller/product-04.png", serise: "아고", name: "서커스 샹들리에 펜던트 조명", price: "748,000 원" }
+        { id: "IDD0023A", image: "./images/best-seller/product-03.png", serise: "필즈", name: "세라믹 원형 식탁 1100폭", price: "1,390,000 원" },
+        { id: "IAL00GA12A", image: "./images/best-seller/product-04.png", serise: "아고", name: "서커스 샹들리에 펜던트 조명", price: "748,000 원" }
       ]
     },
     {
       id: "3", key: "best3", image: "./images/best-seller/bestseller-03.png",
       product: [
-        { id: "3-1", image: "./images/best-seller/product-05.png", serise: "캐스터네츠", name: "펫 3인 소파(우,패브릭)", price: "1,129,000 원" },
-        { id: "3-2", image: "./images/best-seller/product-06.png", serise: "케플러클래식", name: "책상서랍", price: "279,000 원" }
+        { id: "HCS763PLF", image: "./images/best-seller/product-05.png", serise: "캐스터네츠", name: "펫 3인 소파(우,패브릭)", price: "1,129,000 원" },
+        { id: "HSVP042", image: "./images/best-seller/product-06.png", serise: "케플러클래식", name: "책상서랍", price: "279,000 원" }
       ]
     },
     {
@@ -73,7 +73,7 @@ export default function Best() {
           {bestList.map((item) => (
             <SwiperSlide key={item.id}>
               <div className="best-item">
-                <Link to={`/best/${item.id}`}>
+                <Link>
                   <img src={item.image} alt={item.key} />
                 </Link>
                 <ul className="best-product-list">

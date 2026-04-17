@@ -4,11 +4,11 @@ import "./scss/footeraccordion.scss";
 
 const menuData = [
     { title: "About", items: "회사소개", link: "companypage" },
-    { title: "About", items: "매장안내", link: "stores" },
+    { title: "About", items: "매장안내", link: "store-info" },
     { title: "Support", items: "고객지원", link: "notice" },
     { title: "Support", items: "서비스센터", link: "https://cs.iloom.com/" },
-    { title: "Info", items: "이용약관", link: "terms" },
-    { title: "Info", items: "개인정보처리방침", link: "privacy" },
+    { title: "Info", items: "이용약관", link: "https://www.iloom.com/policy/termsOfUse.do" },
+    { title: "Info", items: "개인정보처리방침", link: "https://www.iloom.com/policy/privacy.do" },
     { title: "Info", items: "윤리신고센터", link: "https://www.kbei.org/whistle/center/?code=fursysgroup" },
 ];
 
