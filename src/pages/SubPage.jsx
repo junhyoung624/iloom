@@ -101,6 +101,10 @@ const SubPage = () => {
         setCurrentPage(1);
     }, [mainCate, subCate, thirdCate]);
 
+    useEffect(() => {
+            onSetSort("price", "desc");
+        },[location.pathname])
+
     return (
         <div className='sub-page-wrap'>
             {!subCate && !thirdCate && (<p className='banner-img'><img src={bannerImg} alt="img" /></p>)}
