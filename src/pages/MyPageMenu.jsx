@@ -8,7 +8,7 @@ export default function MyPageMenu() {
         <div>
             <aside className='mypage-sidebar'>
                 <ul>
-                    <li><Link to="/order">주문/배송</Link></li>
+                    <li className={location.pathname === "/order" ? "active" : ""}><Link to="/order">주문/배송</Link></li>
                     <li className={location.pathname === "/wishlist" ? "active" : ""}><Link to="/wishlist">위시리스트</Link></li>
                     <li className={location.pathname === "/mypage" ? "active" : ""}>
                         <Link to="/mypage">회원정보 수정</Link>

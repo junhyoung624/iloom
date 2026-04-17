@@ -1,9 +1,13 @@
+@use "./mypagemenu.scss" as g;
+
 .mypage {
     margin-top: 100px;
     padding: 80px 0;
 
+
     .inner {
         max-width: 1440px;
+
         margin: 0 auto;
 
         .content {
@@ -12,6 +16,7 @@
                 font-weight: 700;
                 text-align: center;
             }
+
         }
 
     }
@@ -19,7 +24,35 @@
 
 
 .wish-list {
+
     //margin-top: 30px;
+
+
+}
+
+.empty-content-wrap {
+    .show-empty-info {
+        text-align: center;
+        font-size: 1.5rem;
+        margin: 30px 0;
+    }
+
+    .show-more-btn {
+        border: 2px solid black;
+        background: #f1f1f1;
+        border-radius: 30px;
+        width: 150px;
+        text-align: center;
+        padding: 10px;
+        margin: 0 auto;
+    }
+
+    .show-more-btn:hover {
+        background: black;
+        color: white;
+        transition: 0.5s;
+    }
+
 }
 
 
@@ -37,6 +70,7 @@
     height: 20px;
     border-radius: 5px;
     border: 2px solid #ddd;
+    margin: 10px;
 }
 
 .wish-check-box:after {
@@ -114,15 +148,42 @@
 }
 
 .wish-item {
+
     display: flex;
-    gap: 30px;
-    //margin-bottom: 10px;
     align-items: center;
     //padding: 30px 0;
     border-top: 1px solid #ddd;
+    width: 100%;
+    justify-content: space-between;
+    //width: fit-content;
+    background: skyblue;
+
+    .wish-item-left {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        flex: 1 1 auto;
+        min-width: 0;
+    }
+
+    .wish-item-right {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        flex: 0 1 auto;
+        min-width: 0;
+    }
 
     .wish-name-info {
-        flex-basis: 40%;
+        //flex-basis: 40%;
+
+        background: yellow;
+        min-width: 0;
+        width: 210px;
+
+
+
+
 
         .series-name {
             padding: 10px;
@@ -133,37 +194,58 @@
             padding: 10px;
             font-weight: 600;
             font-size: 1.2rem;
+            white-space: nowrap;
+            /* 줄바꿈 금지 */
+            overflow: hidden;
+            /* 넘치는 텍스트 숨김 */
+            text-overflow: ellipsis;
+            /* 말줄임표(...) 표시 */
         }
 
     }
 
     .wish-img-info {
-        flex-basis: 20%;
+        //flex-basis: 20%;
         padding: 30px 0;
+
+        img {
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+            aspect-ratio: 1/1.06;
+
+            display: block;
+        }
     }
 
     .wish-price-info {
-        flex-basis: 20%;
+        //flex-basis: 20%;
     }
 
     .wish-button {
-        flex-basis: 20%;
+        //flex-basis: 20%;
         text-align: center;
 
         .detail-btn,
         .delete-btn {
+
             border: 1px solid black;
             margin: 10px;
             padding: 10px 0;
-            width: 205px;
+            //width: 205px;
+            width: 100%;
+            min-width: 205px;
+            margin: auto 0;
+            margin-bottom: 5px;
         }
 
         .wish-btn:hover {
             background: black;
             color: white;
-            margin: 10px;
-            padding: 10px 0;
-            width: 205px;
+            //margin: 10px;
+            //padding: 10px 0;
+            width: 100%;
+            min-width: 205px;
             transition: 0.5s;
         }
 
@@ -171,9 +253,434 @@
     }
 }
 
-.wish-img-info {
-    img {
-        width: 200px;
-        aspect-ratio: 1/1.06;
+// 반응형
+
+/* 큰 데스크탑 */
+@media (max-width: 1440px) {
+
+    .mypage {
+
+
+        .inner {
+
+            display: flex;
+            flex-direction: column;
+
+            .content {
+                .page-title {
+                    font-size: 32px;
+                    font-weight: 700;
+                    text-align: center;
+                }
+
+            }
+
+        }
+    }
+
+    .wish-item {
+        position: relative;
+
+        //width: fit-content;
+
+
+        .wish-item-left {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex: 1 1 auto;
+            min-width: 0;
+
+        }
+
+        .wish-item-right {
+            position: absolute;
+            right: 20%;
+            display: flex;
+
+            align-items: center;
+            gap: 20px;
+            flex: 0 1 auto;
+            min-width: 0;
+        }
+
+        .wish-name-info {
+            //flex-basis: 40%;
+            background: yellow;
+            min-width: 0;
+
+
+            .series-name {
+                padding: 10px;
+            }
+
+            .product-name {
+                color: black;
+                padding: 10px;
+                font-weight: 600;
+                font-size: 1.2rem;
+            }
+
+        }
+
+        .wish-img-info {
+            //flex-basis: 20%;
+            padding: 30px 0;
+
+            img {
+                width: 100%;
+                max-width: 200px;
+                height: auto;
+                aspect-ratio: 1/1.06;
+
+                display: block;
+            }
+        }
+
+        .wish-price-info {
+            //flex-basis: 20%;
+        }
+
+        .wish-button {
+            //flex-basis: 20%;
+            text-align: center;
+
+            .detail-btn,
+            .delete-btn {
+
+                border: 1px solid black;
+                margin: 10px;
+                padding: 10px 0;
+                //width: 205px;
+                width: 100%;
+                //min-width: 190px;
+                margin: auto 0;
+                margin-bottom: 5px;
+            }
+
+            .wish-btn:hover {
+                background: black;
+                color: white;
+                //margin: 10px;
+                //padding: 10px 0;
+                width: 100%;
+                //min-width: 190px;
+                transition: 0.5s;
+            }
+
+
+        }
+    }
+
+}
+
+/* 일반 노트북 */
+@media (max-width: 1200px) {
+    .wish-item {
+        position: relative;
+
+        //width: fit-content;
+
+
+        .wish-item-left {
+            display: flex;
+            //flex-direction: column;
+            //align-items: center;
+            gap: 20px;
+            flex: 1 1 auto;
+
+
+        }
+
+        .wish-item-right {
+            position: absolute;
+            right: 30%;
+            display: flex;
+
+            align-items: center;
+            gap: 20px;
+            flex: 0 1 auto;
+            min-width: 0;
+        }
+
+        .wish-name-info {
+            //flex-basis: 40%;
+            background: yellow;
+            min-width: 0;
+
+
+            .series-name {
+                padding: 10px;
+            }
+
+            .product-name {
+                color: black;
+                padding: 10px;
+                font-weight: 600;
+                font-size: 1.2rem;
+            }
+
+        }
+
+        .wish-img-info {
+            //flex-basis: 20%;
+            padding: 30px 0;
+
+            img {
+                width: 100%;
+                max-width: 200px;
+                height: auto;
+                aspect-ratio: 1/1.06;
+
+                display: block;
+            }
+        }
+
+        .wish-price-info {
+            //flex-basis: 20%;
+        }
+
+        .wish-button {
+            //flex-basis: 20%;
+            text-align: center;
+
+            .detail-btn,
+            .delete-btn {
+
+                border: 1px solid black;
+                margin: 10px;
+                padding: 10px 0;
+                //width: 205px;
+                width: 100%;
+                //min-width: 190px;
+                margin: auto 0;
+                margin-bottom: 5px;
+            }
+
+            .wish-btn:hover {
+                background: black;
+                color: white;
+                //margin: 10px;
+                //padding: 10px 0;
+                width: 100%;
+                //min-width: 190px;
+                transition: 0.5s;
+            }
+
+
+        }
     }
 }
+
+/* 작은 노트북 / 태블릿 가로 */
+@media (max-width: 1024px) {
+    .wish-item {
+        position: relative;
+
+        //width: fit-content;
+
+
+        .wish-item-left {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            //margin-left: 10px;
+            //position: absolute;
+            //align-items: center;
+            gap: 5px;
+            flex: 1 1 auto;
+
+
+        }
+
+        .wish-item-right {
+            position: absolute;
+            right: 40%;
+            display: flex;
+
+            align-items: center;
+            gap: 20px;
+            flex: 0 1 auto;
+            min-width: 0;
+        }
+
+        .wish-name-info {
+            //flex-basis: 40%;
+            background: yellow;
+            min-width: 0;
+
+
+            .series-name {
+                padding: 10px;
+            }
+
+            .product-name {
+                color: black;
+                padding: 10px;
+                font-weight: 600;
+                font-size: 1.2rem;
+            }
+
+        }
+
+        .wish-img-info {
+            //flex-basis: 20%;
+            padding: 30px 0;
+
+            img {
+                width: 100%;
+                max-width: 200px;
+                height: auto;
+                aspect-ratio: 1/1.06;
+
+                display: block;
+            }
+        }
+
+        .wish-price-info {
+            //flex-basis: 20%;
+        }
+
+        .wish-button {
+            //flex-basis: 20%;
+            text-align: center;
+
+            .detail-btn,
+            .delete-btn {
+
+                border: 1px solid black;
+                margin: 10px;
+                padding: 10px 0;
+                //width: 205px;
+                width: 100%;
+                //min-width: 190px;
+                margin: auto 0;
+                margin-bottom: 5px;
+            }
+
+            .wish-btn:hover {
+                background: black;
+                color: white;
+                //margin: 10px;
+                //padding: 10px 0;
+                width: 100%;
+                //min-width: 190px;
+                transition: 0.5s;
+            }
+
+
+        }
+    }
+}
+
+/* 태블릿 */
+@media (max-width: 768px) {
+    .wish-item {
+        position: relative;
+
+        //width: fit-content;
+
+        display: flex;
+        //height: 700px;
+
+        .wish-item-left {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            //margin-left: 10px;
+            //position: absolute;
+            //align-items: center;
+            gap: 5px;
+            flex: 1 1 auto;
+
+
+        }
+
+        .wish-item-right {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            right: 60%;
+            bottom: 0;
+            display: flex;
+
+            align-items: center;
+            gap: 20px;
+            flex: 0 1 auto;
+            min-width: 0;
+        }
+
+        .wish-name-info {
+            //flex-basis: 40%;
+            background: yellow;
+            min-width: 0;
+
+
+            .series-name {
+                padding: 10px;
+            }
+
+            .product-name {
+                color: black;
+                padding: 10px;
+                font-weight: 600;
+                font-size: 1.2rem;
+            }
+
+        }
+
+        .wish-img-info {
+            //flex-basis: 20%;
+            padding: 30px 0;
+
+            img {
+                width: 100%;
+                max-width: 200px;
+                height: auto;
+                aspect-ratio: 1/1.06;
+
+                display: block;
+            }
+        }
+
+        .wish-price-info {
+            //flex-basis: 20%;
+        }
+
+        .wish-button {
+            //flex-basis: 20%;
+            text-align: center;
+
+            .detail-btn,
+            .delete-btn {
+
+                border: 1px solid black;
+                margin: 10px;
+                padding: 10px 0;
+                //width: 205px;
+                width: 100%;
+                //min-width: 190px;
+                margin: auto 0;
+                margin-bottom: 5px;
+            }
+
+            .wish-btn:hover {
+                background: black;
+                color: white;
+                //margin: 10px;
+                //padding: 10px 0;
+                width: 100%;
+                //min-width: 190px;
+                transition: 0.5s;
+            }
+
+
+        }
+    }
+}
+
+/* 큰 모바일 */
+@media (max-width: 576px) {}
+
+/* 작은 모바일 */
+@media (max-width: 480px) {}
