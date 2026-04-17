@@ -9,6 +9,20 @@
      object-fit: cover;
 }
 
+.banner-img {
+  position: relative;
+}
+
+.banner-text {
+  position: absolute;
+  top: 250px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-size: 80px;
+  font-weight: 400;
+}
+
 .sub-page .breadcrumb-list {
   display: flex;
   align-items: center;
@@ -71,6 +85,7 @@
   align-items: center;
   gap: 30px;
   margin-top: 20px;
+  cursor: pointer;
 }
 .sub-page .menu-tab li:hover a {
   font-weight: bold;

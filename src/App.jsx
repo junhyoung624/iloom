@@ -8,8 +8,6 @@ import Home from './components/Home'
 import Login from './components/Login'
 import Member from './components/Member'
 import { useProductStore } from './store/useProductStore'
-import NewProduct from './pages/NewProduct'
-import BestSeller from './pages/BestSeller'
 import Magazine from './pages/Magazine'
 import Series from './pages/Series'
 import StoreInfo from './pages/StoreInfo'
@@ -35,6 +33,7 @@ import NaverCallback from './pages/NaverCallback'
 import ProductDetail from './pages/ProductDetail'
 import WishList from './pages/WishList'
 import SeriesDetail from './pages/SerierDetail'
+import NewBestPage from './pages/NewBestPage'
 
 // 메인 페이지
 function App() {
@@ -63,8 +62,9 @@ function App() {
 
         <Route path="/oauth" element={<OAuth />} />
 
-        <Route path="/new-product" element={<NewProduct />} />
-        <Route path="/best-seller" element={<BestSeller />} />
+        {/* <Route path="/new-product" element={<NewProduct />} />
+        <Route path="/best-seller" element={<BestSeller />} /> */}
+
         <Route path="/magazine" element={<Magazine />} />
         <Route path="/magazine/:id" element={<ContentDetailPage />} />
         <Route path="/series" element={<Series />} />
@@ -80,6 +80,8 @@ function App() {
         <Route path='/product/:id' element={<ProductDetail />} />
         <Route path='/wishlist' element={<WishList />} />
 
+        <Route path="/new" element={<NewBestPage />} />
+        <Route path="/BestSeller" element={<NewBestPage />} />
         <Route path='/:originalCategory' element={<SubPage />} />
         <Route path='/:originalCategory/:category2' element={<SubPage />} />
         <Route path='/:originalCategory/:category2/:category3' element={<SubPage />} />

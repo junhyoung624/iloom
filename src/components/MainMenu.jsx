@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom'
 
 const MainMenu = ({ menus, isHover, isScrolled, onSend, onEnter }) => {
   const tabMenu = [
-    { key: "new-product", label: "신제품" },
-    { key: "best-seller", label: "베스트셀러" },
+    { key: "new", label: "신제품" },
+    { key: "BestSeller", label: "베스트셀러" },
     { key: "magazine", label: "매거진" },
     { key: "series", label: "시리즈" },
     { key: "store-info", label: "매장안내" },

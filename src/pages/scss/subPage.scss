@@ -9,7 +9,18 @@
         object-fit: cover;
     }
 }
-
+.banner-img {
+    position: relative;
+}
+.banner-text {
+    position: absolute; 
+    top: 250px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-size: 80px;
+    font-weight: 400;
+}
 .sub-page {
 
     .breadcrumb-list {
@@ -76,6 +87,7 @@
     .menu-tab {
         @include g.myFlex($jc: center);
         margin-top: 20px;
+        cursor: pointer;
 
         li {
             &:hover a {
@@ -99,9 +111,7 @@
         text-align: center;
         margin-top: 90px;
 
-        h2 {
-            // margin: 0;
-        }
+        
 
         .md-pick {
             @include g.myFlex();
