@@ -8,7 +8,7 @@ export default function Footer() {
             <div className="footer-inner">
                 <div className="footer-left">
                     <h2 className="footer-logo">
-                        <img src="./images/footer/Logo-303030.png" alt="iloom" />
+                        <img src="/images/footer/Logo-303030.png" alt="iloom" />
                     </h2>
                     <p className="footer-slogan">
                         당신의 모든 순간이 일룸과 함께 다정하기를.
@@ -46,10 +46,10 @@ export default function Footer() {
 
                 <div className="footer-right">
                     <div className="footer-certifications">
-                        <img src="./images/footer/mark01.png" alt="ISMS 인증" />
-                        <img src="./images/footer/mark02.png" alt="개인정보보호 인증" />
-                        <img src="./images/footer/mark03.png" alt="Norton Secured" />
-                        <img src="./images/footer/mark04.png" alt="SPC Networks" />
+                        <img src="/images/footer/mark01.png" alt="ISMS 인증" />
+                        <img src="/images/footer/mark02.png" alt="개인정보보호 인증" />
+                        <img src="/images/footer/mark03.png" alt="Norton Secured" />
+                        <img src="/images/footer/mark04.png" alt="SPC Networks" />
                     </div>
 
                     <div className="footer-inquiry-links">
