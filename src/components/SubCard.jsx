@@ -3,7 +3,7 @@ import { useProductStore } from '../store/useProductStore'
 import "./scss/Card.scss"
 
 const SubCard = ({ item }) => {
-    const { onToggleWishlist, wishlist } = useProductStore()
+    const { onToggleWishList, wishlist } = useProductStore()
     const [isHoverHeart, setIsHoverHeart] = useState(false)
 
     const isLiked = wishlist.some((wishItem) => wishItem.id === item.id)
@@ -12,7 +12,7 @@ const SubCard = ({ item }) => {
     const handleHeartClick = (e) => {
         e.preventDefault()
         e.stopPropagation()
-        onToggleWishlist(item)
+        onToggleWishList(item)
     }
 
     return (
@@ -37,12 +37,12 @@ const SubCard = ({ item }) => {
                         onMouseLeave={() => setIsHoverHeart(false)}
                     >
                         <img
-                            src="./images/logo-icon/heart-lined.png"
+                            src="/images/logo-icon/heart-lined.png"
                             alt="빈 하트"
                             className="heart heart-line"
                         />
                         <img
-                            src="./images/logo-icon/heart-filled.png"
+                            src="/images/logo-icon/heart-filled.png"
                             alt="찜한 하트"
                             className="heart heart-fill"
                         />

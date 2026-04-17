@@ -32,6 +32,7 @@ import SearchPage from './pages/SearchPage'
 import NaverCallback from './pages/NaverCallback'
 import ProductDetail from './pages/ProductDetail'
 import WishList from './pages/WishList'
+import SeriesDetail from './pages/SerierDetail'
 import NewBestPage from './pages/NewBestPage'
 
 // 메인 페이지
@@ -67,6 +68,7 @@ function App() {
         <Route path="/magazine" element={<Magazine />} />
         <Route path="/magazine/:id" element={<ContentDetailPage />} />
         <Route path="/series" element={<Series />} />
+        <Route path="/series/:slug" element={<SeriesDetail />} />
         <Route path="/store-info" element={<StoreInfo />} />
         <Route path="/event" element={<Event />} />
         <Route path="/notice" element={<Notice />} />

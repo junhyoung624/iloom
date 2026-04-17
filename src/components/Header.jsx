@@ -63,10 +63,16 @@ const Header = () => {
   }, [user])
 
   useEffect(() => {
+    clearTimeout(enterTimer.current)
+    clearTimeout(leaveTimer.current)
+    setHover(false)
+    setIsSearchOpen(false)
+
     if (loginMenu.current) {
       loginMenu.current = false
       return
     }
+
     setUserMenu(false)
   }, [location.pathname])
 
@@ -123,8 +129,8 @@ const Header = () => {
     setIsSearchOpen(false)
   }
 
-  const isScrolled = scrollProgress > HEADER_ACTIVE_POINT
-  const isDarkHeader = !isScrolled && (isHover || isSearchOpen)
+  const isScrolled = !isHome || scrollProgress > HEADER_ACTIVE_POINT
+  const isDarkHeader = isHome && !isScrolled && (isHover || isSearchOpen)
   const isHeaderActive = isScrolled || isSearchOpen || isHover
 
   return (
@@ -139,6 +145,7 @@ const Header = () => {
           searchClick={handleSearchToggle}
           scrollProgress={scrollProgress}
           isScrolled={isScrolled}
+          isHome={isHome}
         />
       </header>
 
