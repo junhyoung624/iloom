@@ -1,9 +1,15 @@
 import React, { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { iloomList } from "../data/magazine";
-import "./scss/magazine-news-event.scss"
+import "./scss/contentlist.scss"
 
-const tabs = ["이벤트", "뉴스", "매거진"];
+const tabs = ["이벤트", "매거진"];
+
+function getSafeImageUrl(url = "") {
+  if (!url) return "";
+
+  return url.replace("https://www.iloom.com/", "https://cdn.iloom.com/");
+}
 
 export default function ContentsPage() {
   const [activeTab, setActiveTab] = useState("이벤트");
@@ -16,6 +22,7 @@ export default function ContentsPage() {
     <section className="contents-page">
       <div className="inner contents-wrap">
         <h2 className="page-title">{activeTab}</h2>
+
         <div className="contents-tabs">
           {tabs.map((tab) => (
             <button
@@ -29,7 +36,6 @@ export default function ContentsPage() {
           ))}
         </div>
 
-
         <div className="contents-grid">
           {filteredItems.map((item) => (
             <Link
@@ -39,7 +45,14 @@ export default function ContentsPage() {
             >
               <div className="card-thumb">
                 {item.thumbnail ? (
-                  <img src={item.thumbnail} alt={item.title} />
+                  <img
+                    src={getSafeImageUrl(item.thumbnail)}
+                    alt={item.title}
+                    onError={(e) => {
+                      console.log("썸네일 깨짐:", item.id, item.thumbnail);
+                      e.currentTarget.style.display = "none";
+                    }}
+                  />
                 ) : (
                   <div className="thumb-empty">NO IMAGE</div>
                 )}

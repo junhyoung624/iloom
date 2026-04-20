@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
 import { iloomDetails } from "../data/magazine";
+import "./scss/contentdetailpage.scss"
 
 export default function DetailPage() {
     const { id } = useParams();
@@ -20,9 +21,6 @@ export default function DetailPage() {
         return <MagazineDetail data={detailData} />;
     }
 
-    if (detailData.category === "뉴스") {
-        return <NewsDetail data={detailData} />;
-    }
 
     if (detailData.category === "이벤트") {
         return <EventDetail data={detailData} />;
@@ -36,16 +34,77 @@ export default function DetailPage() {
     );
 }
 
+function getSafeImageUrl(url = "") {
+    if (!url) return "";
+
+    return url.replace(
+        "https://www.iloom.com/",
+        "https://cdn.iloom.com/"
+    );
+}
+
+function DetailImage({ src, alt }) {
+    const safeSrc = getSafeImageUrl(src);
+
+    return (
+        <div className="item-image">
+            <img
+                src={safeSrc}
+                alt={alt || "상세 이미지"}
+                loading="lazy"
+                referrerPolicy="no-referrer"
+                onError={(e) => {
+                    e.currentTarget.onerror = null;
+                    e.currentTarget.src = "/images/no-image.jpg";
+                }}
+            />
+        </div>
+    );
+}
+
+function DetailImageGroup({ images = [], alt }) {
+    return (
+        <div className="item-images">
+            {images.map((img, idx) => (
+                <DetailImage
+                    key={idx}
+                    src={img}
+                    alt={`${alt || "상세 이미지"} ${idx + 1}`}
+                />
+            ))}
+        </div>
+    );
+}
+
+function RenderItemImages({ item }) {
+    if (item.images?.length > 0) {
+        return <DetailImageGroup images={item.images} alt={item.title} />;
+    }
+
+    if (item.image) {
+        return <DetailImage src={item.image} alt={item.title} />;
+    }
+
+    return null;
+}
+
 function MagazineDetail({ data }) {
     return (
         <section className="detail-page magazine-detail">
             <div className="inner">
                 <div className="detail-top">
-                    <p className="detail-category">{data.category}</p>
-                    <h2 className="detail-title">{data.title}</h2>
-                    {data.subtitle && <p className="detail-subtitle">{data.subtitle}</p>}
-                    {data.intro && <p className="detail-intro">{data.intro}</p>}
-                    {data.editor && <p className="detail-editor">{data.editor}</p>}
+                    <div className="detail-head">
+                        <p className="detail-category">{data.category}</p>
+                        <h2 className="detail-title">{data.title}</h2>
+                        {data.subtitle && (
+                            <p className="detail-subtitle">{data.subtitle}</p>
+                        )}
+                    </div>
+
+                    <div className="detail-meta">
+                        {data.intro && <p className="detail-intro">{data.intro}</p>}
+                        {data.editor && <p className="detail-editor">{data.editor}</p>}
+                    </div>
                 </div>
 
                 <div className="detail-sections">
@@ -56,11 +115,7 @@ function MagazineDetail({ data }) {
                             <div className="section-items">
                                 {section.items?.map((item, itemIdx) => (
                                     <article className="section-item" key={itemIdx}>
-                                        {item.image && (
-                                            <div className="item-image">
-                                                <img src={item.image} alt={item.title} />
-                                            </div>
-                                        )}
+                                        <RenderItemImages item={item} />
 
                                         <div className="item-text">
                                             {item.title && <h4 className="item-title">{item.title}</h4>}
@@ -74,7 +129,7 @@ function MagazineDetail({ data }) {
                 </div>
 
                 <div className="detail-bottom">
-                    <Link to="/contents" className="back-btn">
+                    <Link to="/magazine" className="back-btn">
                         목록으로 돌아가기
                     </Link>
                 </div>
@@ -83,61 +138,24 @@ function MagazineDetail({ data }) {
     );
 }
 
-function NewsDetail({ data }) {
-    return (
-        <section className="detail-page news-detail">
-            <div className="inner">
-                <div className="detail-top news-top">
-                    <p className="detail-category">{data.category}</p>
-                    <h2 className="detail-title">{data.title}</h2>
-                    {data.date && <p className="detail-date">{data.date}</p>}
-                    {data.subtitle && <p className="detail-subtitle">{data.subtitle}</p>}
-                    {data.intro && <p className="detail-intro">{data.intro}</p>}
-                </div>
-
-                <div className="detail-sections">
-                    {data.sections?.map((section, sectionIdx) => (
-                        <section className="detail-section" key={sectionIdx}>
-                            {section.sectionTitle && (
-                                <h3 className="section-title">{section.sectionTitle}</h3>
-                            )}
-
-                            {section.items?.map((item, itemIdx) => (
-                                <article className="news-article" key={itemIdx}>
-                                    {item.image && (
-                                        <div className="item-image">
-                                            <img src={item.image} alt={item.title} />
-                                        </div>
-                                    )}
-
-                                    {item.title && <h4 className="item-title">{item.title}</h4>}
-                                    {item.desc && <p className="item-desc">{item.desc}</p>}
-                                </article>
-                            ))}
-                        </section>
-                    ))}
-                </div>
-
-                <div className="detail-bottom">
-                    <Link to="/contents" className="back-btn">
-                        목록으로 돌아가기
-                    </Link>
-                </div>
-            </div>
-        </section>
-    );
-}
 
 function EventDetail({ data }) {
     return (
         <section className="detail-page event-detail">
             <div className="inner">
                 <div className="detail-top event-top">
-                    <p className="detail-category">{data.category}</p>
-                    <h2 className="detail-title">{data.title}</h2>
-                    {data.period && <p className="detail-date">{data.period}</p>}
-                    {data.subtitle && <p className="detail-subtitle">{data.subtitle}</p>}
-                    {data.intro && <p className="detail-intro">{data.intro}</p>}
+                    <div className="detail-head">
+                        <p className="detail-category">{data.category}</p>
+                        <h2 className="detail-title">{data.title}</h2>
+                        {data.subtitle && (
+                            <p className="detail-subtitle">{data.subtitle}</p>
+                        )}
+                    </div>
+
+                    <div className="detail-meta">
+                        {data.intro && <p className="detail-intro">{data.intro}</p>}
+                        {data.period && <p className="detail-date">{data.period}</p>}
+                    </div>
                 </div>
 
                 <div className="detail-sections">
@@ -149,11 +167,7 @@ function EventDetail({ data }) {
 
                             {section.items?.map((item, itemIdx) => (
                                 <article className="event-article" key={itemIdx}>
-                                    {item.image && (
-                                        <div className="item-image">
-                                            <img src={item.image} alt={item.title} />
-                                        </div>
-                                    )}
+                                    <RenderItemImages item={item} />
 
                                     {item.title && <h4 className="item-title">{item.title}</h4>}
                                     {item.desc && <p className="item-desc">{item.desc}</p>}
@@ -164,7 +178,7 @@ function EventDetail({ data }) {
                 </div>
 
                 <div className="detail-bottom">
-                    <Link to="/Magazine" className="back-btn">
+                    <Link to="/magazine" className="back-btn">
                         목록으로 돌아가기
                     </Link>
                 </div>
