@@ -2,11 +2,14 @@ import React, { useMemo, useState } from 'react'
 import { useProductStore } from '../store/useProductStore'
 import { useAuthStore } from '../store/useAuthStore'
 import "./scss/charge.scss"
+import { Link, useNavigate } from 'react-router-dom'
+import ChargeModal from './ChargeModal'
 
 export default function Charge() {
-    const { cartItems, items } = useProductStore()
+    const { cartItems, items, onAddOrder } = useProductStore()
     const { user } = useAuthStore()
     const [paymentMethod, setPaymentMethod] = useState('card')
+    const navigate = useNavigate();
 
     const orderItems = useMemo(() => {
         return cartItems
@@ -43,6 +46,40 @@ export default function Charge() {
         if (Number.isNaN(number)) return '0원'
         return number.toLocaleString('ko-KR') + '원'
     }
+
+    //결제 여부 재확인 팝업
+    const [confirmPay, setConfirmPay] = useState(false);
+
+    //결제하기 버튼 클릭시
+    const handlePayment = () => {
+        if (!user) {
+            alert("로그인 후 이용하세요");
+            navigate("/login");
+        } else {
+            setConfirmPay(true);
+        }
+    }
+
+    //결제 취소
+    const handleClosePopup = () => {
+        setConfirmPay(false);
+    }
+
+    //결제가 완료
+    const handleFinalConfirm = (e) => {
+        alert("결제가 완료되었습니다. 주문 내역을 확인하세요");
+        //주문 내역 orderList에 저장하기
+        onAddOrder({
+            items: orderItems,
+            total: totalPrice,
+
+        })
+
+        //주문/배송 페이지로 이동
+        navigate("/order");
+    }
+
+
 
     return (
         <section className="charge-page">
@@ -230,11 +267,16 @@ export default function Charge() {
                         type="button"
                         className="payment-btn"
                         disabled={orderItems.length === 0}
+                        onClick={handlePayment}
                     >
                         {formatPrice(totalPrice)} 결제하기
                     </button>
                 </div>
             </div>
+            {/* 결제 확인 모달 */}
+            {
+                confirmPay ? <ChargeModal onClose={handleClosePopup} onConfirm={handleFinalConfirm} /> : ""
+            }
         </section>
     )
 }

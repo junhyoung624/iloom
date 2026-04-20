@@ -1,0 +1,138 @@
+.order-list-wrap {
+    //max-width: 1400px;
+    //background: pink;
+    margin: 10px;
+
+}
+
+.order-id-wrap {
+    margin-bottom: 30px;
+
+}
+
+// .order-id-wrap::before {
+//     content: "";
+//     border-left: 2px solid black;
+// }
+
+
+.order-item {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    margin-bottom: 40px;
+    max-width: 1280px;
+
+    .order-main-info {
+        display: flex;
+        align-items: center;
+
+        .order-date {
+            flex: 0.5;
+            display: grid;
+            gap: 10px;
+            text-align: center;
+
+            //background: yellowgreen;
+            .order-date-info {
+                font-size: 1.2rem;
+                font-weight: 600;
+            }
+
+            .order-state {
+                font-size: 1.1rem;
+                color: #808080;
+            }
+
+            .order-item-id {
+                color: #bdbdbd;
+            }
+
+        }
+
+        .order-item-img {
+            flex: 0.5;
+            //background: yellowgreen;
+            margin: auto;
+            text-align: center;
+
+            img {
+                width: 200px;
+                height: 200px;
+                margin: auto 0;
+                margin: 10px;
+            }
+        }
+
+        .order-item-txt-info {
+            flex: 2;
+            display: grid;
+            gap: 10px;
+            margin: auto 0;
+            padding-left: 70px;
+            //background: skyblue;
+
+            .series {
+                //background: yellowgreen;
+                padding: 0;
+            }
+
+            .item-name {
+                font-size: 1.1rem;
+                font-weight: 600;
+            }
+
+            .item-color {
+                color: #808080;
+            }
+        }
+
+    }
+
+    .order-sub-info {
+        display: flex;
+        border-top: 1px solid #ddd;
+        line-height: 40px;
+        color: #808080;
+
+        .left {
+            flex: 0.5;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            //text-align: center;
+        }
+
+        .right {
+            flex: 2.5;
+            display: flex;
+            justify-content: space-between;
+
+            .move-btn {
+                width: 30px;
+                height: 30px;
+                margin: auto 0;
+                margin-right: 20px;
+            }
+
+            .move-btn:hover {
+                transform: scale(1.1);
+                transition: 0.5s;
+            }
+
+        }
+    }
+
+}
+
+.order-item:hover {
+    border: 1px solid black;
+
+    .order-sub-info {
+
+        border-top: 1px solid black;
+
+    }
+}

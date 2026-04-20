@@ -163,6 +163,36 @@ export const useProductStore = create((set, get) => ({
         });
     },
 
+    //주문
+    //주문 목록을 저장할 변수
+    orderList: [],
+    //결제를 클릭하면 결제 항목이 주문 목록에 들어가도록
+    onAddOrder: (order) => {
+        const orderPrev = get().orderList;
+        console.log("onAddOrder in", order);
+
+        const newOrder = {
+            id: Date.now(),
+            // orderTime: new Date(),
+            date: new Date().toLocaleDateString(),
+            hours: new Date().getHours(),
+            minutes: new Date().getMinutes(),
+            seconds: new Date().getSeconds(),
+            items: order.items,
+            price: order.total,
+            color: order.color,
+            state: "결제완료",
+        };
+
+        const updateOrder = [...orderPrev, newOrder];
+
+        set({
+            orderList: updateOrder,
+            cartCount: 0,
+        })
+    },
+
+
     // 메뉴 생성
     onMakeMenu: () => {
         const items = get().items;
