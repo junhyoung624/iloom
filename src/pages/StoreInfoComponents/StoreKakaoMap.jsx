@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 
 export default function StoreKakaoMap({ stores = [], selectedStore, setSelectedStoreId }) {
     console.log("store kakao map in");
+
     useEffect(() => {
 
         if (!window.kakao) return;
@@ -18,12 +19,25 @@ export default function StoreKakaoMap({ stores = [], selectedStore, setSelectedS
                 level: 8,
             };
 
+            //맵 사이즈
             const map = new window.kakao.maps.Map(container, options);
-            console.log("map created", map);
+            // if (!map) return;
+            // console.log("map created", map);
+
+            // const handleResize = () => {
+            //     const center = map.getCenter();
+            //     map.relayout();
+            //     map.setCenter(center);
+            // }
+
+            // window.addEventListener("resize", handleResize);
+
 
             const bounds = new window.kakao.maps.LatLngBounds();
 
+            //마커 클릭 이벤트 관리
             let openedInfoWindow = null;
+            let openedMarkerId = null;
 
             stores.forEach((store) => {
                 if (!store.latitude || !store.longitude) return;
@@ -51,12 +65,24 @@ export default function StoreKakaoMap({ stores = [], selectedStore, setSelectedS
                 });
 
                 window.kakao.maps.event.addListener(marker, "click", () => {
+                    //같은 마커 다시 클릭 -> 토글로 닫기
+                    // if (openedMarkerId == store.id && openedInfoWindow) {
+                    //     openedInfoWindow.close();
+                    //     openedInfoWindow = null;
+                    //     openedMarkerId = null;
+                    //     setSelectedStoreId(null);
+                    //     return;
+                    // }
+                    //다른 마커 클릭 -> 이전 거 닫기
                     if (openedInfoWindow) {
                         openedInfoWindow.close();
                     }
-                    setSelectedStoreId(store.id);
+                    //새로 열기
+
                     infowindow.open(map, marker);
                     openedInfoWindow = infowindow;
+                    //openedMarkerId = store.id;
+                    setSelectedStoreId(store.id);
                 });
 
                 bounds.extend(position);
@@ -77,6 +103,10 @@ export default function StoreKakaoMap({ stores = [], selectedStore, setSelectedS
                 map.setLevel(3);
             }
         });
+        // return () => {
+        //     window.removeEventListener("resize", handleResize);
+        // };
+        //}, [stores]);
     }, [stores, selectedStore, setSelectedStoreId]);
 
 
