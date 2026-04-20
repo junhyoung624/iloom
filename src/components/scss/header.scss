@@ -12,6 +12,7 @@ header {
     .header-inner {
         @include g.myFlex($gap: null);
 
+
         .main-logo {
             position: absolute;
             left: 50%;
@@ -20,6 +21,12 @@ header {
             img {
                 display: block;
                 transition: filter 0.48s ease;
+            }
+        }
+
+        .gnb-list {
+            img {
+                filter: invert(1);
             }
         }
     }
@@ -85,6 +92,7 @@ header {
         }
 
         .gnb-list {
+
             .cart-num {
                 filter: invert(1);
             }
@@ -92,6 +100,10 @@ header {
 
         .header-right {
             .gnb-list {
+                img {
+                    filter: invert(0);
+                }
+
                 li {
                     .user-btn {
                         span {

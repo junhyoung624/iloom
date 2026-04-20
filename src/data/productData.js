@@ -18259,7 +18259,7 @@ export const productData = [
       "/images/iloom_images/lighting/table-lighting/IAL00GA23A_MTD_6.png"
     ],
     "mdPick": false,
-    "new": true,
+    "new": false,
     "BestSeller": false,
     "detailImg": [
       "https://www.iloom.com/upload/contents/20250605/_54486b25-bd82-4648-94a2-04d7af1beac7.jpg",
@@ -18347,7 +18347,7 @@ export const productData = [
       "/images/iloom_images/lighting/pendant-lighting/IAL00GA24A_EWH_2.png"
     ],
     "mdPick": false,
-    "new": true,
+    "new": false,
     "BestSeller": false,
     "detailImg": [
       "https://www.iloom.com/upload/contents/20250605/_bfaf546a-8f43-47ae-9884-4dbea57ce22e.jpg",

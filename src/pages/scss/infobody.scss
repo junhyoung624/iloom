@@ -1,3 +1,19 @@
+.store-list {
+    overflow-y: auto;
+    height: inherit;
+}
+
 .store-item {
-    border-bottom: 1px solid black;
+    // border-bottom: 1px solid black;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    margin: 2px 2px 10px 2px;
+}
+
+.store-item.is-active {
+    border: 2px solid #9a9a9a;
+}
+
+.store-item:hover {
+    border-color: #9a9a9a;
 }

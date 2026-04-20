@@ -40,7 +40,7 @@ export const spaceCoordiData = [
                 default: false,
             },
             {
-                id: " IAL00NT00A",
+                id: "IAL00NT00A",
                 name: "앤트레디션",
                 subName: "코모 포터블 조명 (Como SC53 Portable)",
                 price: "오프라인 전용",

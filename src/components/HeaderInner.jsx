@@ -10,9 +10,11 @@ const HeaderInner = ({
     isHover,
     isSearchOpen,
     searchClick,
-    isScrolled
+    isScrolled,
+    scrollProgress
 }) => {
-    const { menus } = useProductStore()
+    const { menus, cartItems } = useProductStore()
+    const cartCount = cartItems.length
     const { user } = useAuthStore()
 
     const [lastScroll, setLastScroll] = useState(false)
@@ -75,9 +77,9 @@ const HeaderInner = ({
                                     </button>
                                 </li>
                                 <li>
-                                    <Link to="/cart">
+                                    <Link to="/cart" className="cart-link">
                                         <img src="/images/logo-icon/cart-white.png" alt="" />
-                                        <span className="cart-num">0</span>
+                                        {cartCount > 0 && <span className="cart-num">{cartCount}</span>}
                                     </Link>
                                 </li>
                             </>
@@ -98,9 +100,9 @@ const HeaderInner = ({
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link to="/cart">
+                                    <Link to="/cart" className="cart-link">
                                         <img src="/images/logo-icon/cart-white.png" alt="" />
-                                        <span className="cart-num">0</span>
+                                        {cartCount > 0 && <span className="cart-num">{cartCount}</span>}
                                     </Link>
                                 </li>
                             </>
@@ -110,7 +112,7 @@ const HeaderInner = ({
             </div>
 
             <div className="header-scroll-nav-mask">
-                <ul className={`header-scroll-nav ${!isSearchOpen && !isHover && lastScroll && isScrolled ? "active" : ""}`}>
+                <ul className={`header-scroll-nav header-minus-scroll ${!isSearchOpen && !isHover && lastScroll && isScrolled ? "active" : ""}`}>
                     {menus.map((menu, index) => (
                         <li key={`${menu.key}-${index}`}>
                             <Link to={menu.link}>
