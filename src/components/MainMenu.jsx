@@ -20,8 +20,8 @@ const MainMenu = ({ menus, isHover, isScrolled, onSend, onEnter }) => {
       onMouseLeave={onSend}
     >
       <ul className='main-tab-menu'>
-        {tabMenu.map((tab) => (
-          <li key={tab.key}>
+        {tabMenu.map((tab, id) => (
+          <li key={id}>
             <Link to={`/${tab.key}`}>{tab.label}</Link>
           </li>
         ))}

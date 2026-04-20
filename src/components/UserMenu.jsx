@@ -1,6 +1,6 @@
 import React from 'react'
 import { useAuthStore } from '../store/useAuthStore'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 const UserMenu = ({ userClose }) => {
@@ -16,7 +16,14 @@ const UserMenu = ({ userClose }) => {
     }
   ]
 
+  const navigate = useNavigate();
+
   const { user, onLogout } = useAuthStore();
+
+  const handleLogout = () => {
+    onLogout();
+    navigate("/")
+  }
 
   return (
 
@@ -25,7 +32,7 @@ const UserMenu = ({ userClose }) => {
       <p className='user-name'><strong>{user?.name}</strong> 님 환영합니다!</p>
       <p className='close-btn' onClick={userClose}><img src="./images/logo-icon/close-btn-black.png" alt="" /></p>
 
-      <button className='logout-btn' onClick={onLogout}>
+      <button className='logout-btn' onClick={handleLogout}>
         로그아웃
       </button>
 

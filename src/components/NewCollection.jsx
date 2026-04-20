@@ -15,7 +15,7 @@ export default function NewCollection() {
                 <div className="text-box">
                     <h1>NEW COLLECTION</h1>
                     <p>일룸의 새로운 가구로, 더 편안하고 실용적인 공간을 경험해보세요</p>
-                    <Link className='btn'>지금 만나보기</Link>
+                    <Link to="/new" className='btn'>지금 만나보기</Link>
                 </div>
             </div>
             <div className="inner">
@@ -23,7 +23,7 @@ export default function NewCollection() {
                 <ul className="item-card-wrap">
 
                     {newItems.map((item, index) => (
-                        <li>
+                        <li key={index}>
                             <Link
                                 to={`/product/${item.id}`}
                                 className="item-card"

@@ -140,9 +140,9 @@ export const spaceCoordiData = [
         products: [
             //id, name, price,image_url,position : {x : , y : },
             {
-                id: "HVCH0014R",
+                id: "HCH0014R",
                 name: "세타플러스",
-                subName: "의자 (인조가죽,1EA)",
+                subName: "세타플러스 인조가죽 의자",
                 price: "195,000원",
                 position: { x: 738, y: 565 },
                 //tag_position: "bottom",
