@@ -67,18 +67,18 @@ const HeaderInner = ({
                                         className="icon-btn"
                                         onClick={searchClick}
                                     >
-                                        <img src="/images/logo-icon/search-white.png" alt="search" />
+                                        <img src="/images/logo-icon/search-black.png" alt="search" />
                                     </button>
                                 </li>
                                 <li>
                                     <button className="user-btn" onClick={userClick}>
-                                        <img src="/images/logo-icon/user-white.png" alt="" />
+                                        <img src="/images/logo-icon/user-black.png" alt="" />
                                         <span>{user.name}</span>
                                     </button>
                                 </li>
                                 <li>
                                     <Link to="/cart" className="cart-link">
-                                        <img src="/images/logo-icon/cart-white.png" alt="" />
+                                        <img src="/images/logo-icon/cart-black.png" alt="" />
                                         {cartCount > 0 && <span className="cart-num">{cartCount}</span>}
                                     </Link>
                                 </li>
@@ -91,17 +91,17 @@ const HeaderInner = ({
                                         className="icon-btn"
                                         onClick={searchClick}
                                     >
-                                        <img src="/images/logo-icon/search-white.png" alt="search" />
+                                        <img src="/images/logo-icon/search-black.png" alt="search" />
                                     </button>
                                 </li>
                                 <li>
                                     <Link to="/login">
-                                        <img src="/images/logo-icon/user-white.png" alt="" />
+                                        <img src="/images/logo-icon/user-black.png" alt="" />
                                     </Link>
                                 </li>
                                 <li>
                                     <Link to="/cart" className="cart-link">
-                                        <img src="/images/logo-icon/cart-white.png" alt="" />
+                                        <img src="/images/logo-icon/cart-black.png" alt="" />
                                         {cartCount > 0 && <span className="cart-num">{cartCount}</span>}
                                     </Link>
                                 </li>

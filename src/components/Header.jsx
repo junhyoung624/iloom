@@ -52,7 +52,7 @@ const Header = () => {
   }, [isHome])
 
   useEffect(() => {
-    if (!userLogin.current && user) {
+    if (user) {
       setUserMenu(true)
       loginMenu.current = true
     } else {
