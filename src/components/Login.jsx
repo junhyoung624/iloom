@@ -90,7 +90,7 @@ const Login = () => {
             <p style={{ color: "#C9C9C9" }}>주문번호를 잊으신 경우, <br />
               일룸 고객센터 1577 -5670로 문의하여 주시기 바랍니다.</p>
             <button type="submit">조회</button>
-            <p className='pass'>비밀번호를 잊으셨나요?</p>
+            
           </form>
 
         </div>

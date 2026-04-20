@@ -95,7 +95,7 @@ export default function ProductDetail() {
     return (
         <section className="product-detail">
             <div className="breadcrumb">
-                <Link to="/"><img src='/images/product-detail/home.png' alt="home" /></Link>
+                <Link to="/"><img src='/images/logo-icon/home-icon.png' alt="home" /></Link>
                 <span>&gt;</span>
                 <Link to={`/${product.originalCategory}`}>{product.originalCategory}</Link>
                 <span>&gt;</span>
