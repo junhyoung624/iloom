@@ -42,7 +42,6 @@ const Header = () => {
         Math.max((scrollY - HERO_FADE_START) / (HERO_FADE_END - HERO_FADE_START), 0),
         1
       )
-
       setScrollProgress(progress)
     }
 

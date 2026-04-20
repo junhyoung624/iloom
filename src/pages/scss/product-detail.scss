@@ -902,3 +902,115 @@
         cursor: pointer;
     }
 }
+
+.cart-modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    background: rgba(0, 0, 0, 0.48);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    animation: cartOverlayFade 0.28s ease forwards;
+}
+
+.cart-modal {
+    width: 520px;
+    min-height: 300px;
+    background: #fff;
+    border: 1px solid #111;
+    box-shadow: 0 32px 90px rgba(0, 0, 0, 0.24);
+    padding: 54px 48px 42px;
+    animation: cartModalUp 0.38s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.cart-modal-text {
+    text-align: center;
+}
+
+.cart-modal-label {
+    display: inline-block;
+    margin-bottom: 18px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.28em;
+    color: #777;
+}
+
+.cart-modal-title {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.35;
+    color: #111;
+    margin-bottom: 12px;
+}
+
+.cart-modal-sub {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+}
+
+.cart-modal-btns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 42px;
+}
+
+.cart-modal-btns button {
+    height: 52px;
+    border: 1px solid #111;
+    background: transparent;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+        background 0.28s ease,
+        color 0.28s ease,
+        border-color 0.28s ease,
+        transform 0.28s ease;
+}
+
+.cart-modal-continue {
+    color: #111;
+    background: #fff;
+}
+
+.cart-modal-go {
+    color: #fff;
+    background: #111 !important;
+}
+
+.cart-modal-btns button:hover {}
+
+.cart-modal-continue:hover {
+    background: #f4f4f4;
+}
+
+.cart-modal-go:hover {
+    background: #333 !important;
+    border-color: #333;
+}
+
+@keyframes cartOverlayFade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes cartModalUp {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
