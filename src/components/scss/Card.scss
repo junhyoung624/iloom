@@ -1,3 +1,35 @@
+.card-img-box {
+    position: relative;
+
+    .product-img {
+        width: 100%;
+        display: block;
+        transition: opacity 0.3s ease;
+    }
+
+    .default {
+        position: relative;
+        z-index: 1;
+    }
+
+    .hover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        z-index: 2;
+    }
+}
+
+.sub-card:hover {
+    .hover {
+        opacity: 1;
+    }
+    .default {
+        opacity: 0;
+    }
+}
+
 .series-row {
     position: relative;
 }
