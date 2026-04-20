@@ -193,11 +193,12 @@ export default function Cart() {
               <strong>{finalPrice.toLocaleString()}원</strong>
             </div>
 
-            <button className="order-btn">
+            <Link to="/charge" className="charge-btn">
               {finalPrice.toLocaleString()}원 주문하기
-            </button>
+            </Link>
           </div>
         </div>
+
 
         <div className="recommend-section">
           <h3>이 상품을 구매한 고객이 함께 구매한 상품</h3>
@@ -224,6 +225,6 @@ export default function Cart() {
           </div>
         </div>
       </div>
-    </section>
+    </section >
   )
 }

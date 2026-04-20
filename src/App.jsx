@@ -34,6 +34,7 @@ import ProductDetail from './pages/ProductDetail'
 import WishList from './pages/WishList'
 import SeriesDetail from './pages/SerierDetail'
 import NewBestPage from './pages/NewBestPage'
+import Charge from './pages/Charge'
 
 // 메인 페이지
 function App() {
@@ -55,6 +56,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/member" element={<Member />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/charge" element={<Charge />} />
         <Route path="/order" element={<Order />} />
         <Route path="/searchpage" element={<SearchPage />} />
         {/* <Route path='/product-list' element={<ProductList />} /> */}
