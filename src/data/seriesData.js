@@ -9,11 +9,11 @@ export const seriesListEn = [
   },
   {
     id: "series-002",
-    nameKo: "멘디",
-    nameEn: "Mendy",
-    slug: "mendy",
+    nameKo: "에디",
+    nameEn: "Eddi",
+    slug: "eddi",
     image: "./images/series-card/mendy.jpg",
-    bannerImage: "./images/series-banner/mendy.jpg"
+    bannerImage: "./images/series-banner/eddi.jpg"
   },
   {
     id: "series-003",
@@ -22,6 +22,14 @@ export const seriesListEn = [
     slug: "ember",
     image: "./images/series-card/ember.jpg",
     bannerImage: "./images/series-banner/ember.jpg"
+  },
+  {
+    id: "series-003",
+    nameKo: "코모",
+    nameEn: "Como",
+    slug: "como",
+    image: "./images/series-card/ember.jpg",
+    bannerImage: "./images/series-banner/como.jpg"
   },
   {
     id: "series-004",

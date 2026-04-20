@@ -60,6 +60,7 @@ header {
                     top: -5px;
                     right: -8px;
                     background: #fff;
+                    color: #030303;
                     width: 20px;
                     height: 20px;
                     font-weight: bold;
@@ -141,12 +142,18 @@ header {
         .header-right {
             .gnb-list {
                 li {
+                    img {
+                        filter: invert(1);
+                    }
+
                     .user-btn {
                         span {
-                            filter: none;
+                            filter: invert(0);
                             color: #fff;
                         }
                     }
+
+
                 }
             }
         }

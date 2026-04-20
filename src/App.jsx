@@ -35,6 +35,7 @@ import WishList from './pages/WishList'
 import SeriesDetail from './pages/SerierDetail'
 import NewBestPage from './pages/NewBestPage'
 import Charge from './pages/Charge'
+import FurniturePage from './components/FurniturePage'
 
 // 메인 페이지
 function App() {
@@ -82,6 +83,7 @@ function App() {
         <Route path='/product/:id' element={<ProductDetail />} />
         <Route path='/wishlist' element={<WishList />} />
 
+        <Route path="/furniturepage" element={<FurniturePage  />} />
         <Route path="/new" element={<NewBestPage />} />
         <Route path="/BestSeller" element={<NewBestPage />} />
         <Route path='/:originalCategory' element={<SubPage />} />
