@@ -1,0 +1,174 @@
+.signature-series-card {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.08);
+  transition: transform 0.45s ease, box-shadow 0.45s ease;
+}
+
+.signature-series-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.14);
+}
+
+.signature-series-media {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.signature-series-media img {
+  width: 100%;
+  height: 125%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center top;
+     object-position: center top;
+  display: block;
+}
+
+.signature-series-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.12);
+  transition: background 0.4s ease;
+}
+
+.signature-series-card:hover .signature-series-media::after {
+  background: rgba(0, 0, 0, 0.22);
+}
+
+.signature-series-image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+  display: block;
+  transform: scale(1);
+  transition: transform 0.9s ease;
+}
+
+.signature-series-card:hover .signature-series-image {
+  transform: scale(1.05);
+}
+
+.signature-series-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  width: 34%;
+  min-width: 220px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 24px 18px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.58);
+  backdrop-filter: blur(6px);
+  overflow: hidden;
+}
+
+.signature-series-title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+  color: #fff;
+  margin: 0 0 10px;
+  word-break: keep-all;
+}
+
+.signature-series-desc {
+  margin: 0;
+}
+.signature-series-desc span {
+  display: block;
+  font-size: 14px;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.72);
+  margin-bottom: 5px;
+}
+
+.signature-series-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 15px;
+}
+
+.signature-series-meta span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  padding: 2px 8px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.82);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.signature-series-button {
+  margin-top: auto;
+  margin-bottom: 10px;
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 32px;
+  padding: 0 10px;
+  border: 1px solid rgba(255, 255, 255, 0.26);
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.35s ease, color 0.35s ease, border-color 0.35s ease;
+}
+
+.signature-series-button span {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.signature-series-button i {
+  font-style: normal;
+  transition: transform 0.35s ease;
+}
+
+.signature-series-card:hover .signature-series-button {
+  background: #fff;
+  color: #111;
+  border-color: #fff;
+}
+
+.signature-series-card:hover .signature-series-button i {
+  transform: translateX(4px);
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 100px 0;
+}
+.pagination li button {
+  background: none;
+  border: 1px solid #ccc;
+  padding: 10px 13px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.pagination li button.active {
+  font-weight: bold;
+  font-size: 16px;
+  color: #CA1230;
+}

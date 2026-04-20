@@ -32,9 +32,7 @@
     }
 
     .series-product-head {
-        display: flex;
-        align-items: flex-end;
-        justify-content: space-between;
+        text-align: center;
         margin-bottom: 24px;
 
         h3 {
@@ -42,11 +40,6 @@
             font-weight: 700;
             margin: 0;
             letter-spacing: -0.04em;
-        }
-
-        span {
-            font-size: 14px;
-            color: #777;
         }
     }
 
