@@ -542,8 +542,8 @@ export default function ProductDetail() {
                     <div className="cart-modal" onClick={(e) => e.stopPropagation()}>
                         <div className="cart-modal-text">
                             <span className="cart-modal-label">CART</span>
-                            <p className="cart-modal-title">니 진짜 이거 살끼가?</p>
-                            <p className="cart-modal-sub">두번 말 안한다?장바구니 간다?</p>
+                            <p className="cart-modal-title">장바구니에 담았습니다.</p>
+                            <p className="cart-modal-sub">장바구니 페이지로 이동합니다.</p>
                         </div>
 
                         <div className="cart-modal-btns">
@@ -552,7 +552,7 @@ export default function ProductDetail() {
                                 className="cart-modal-continue"
                                 onClick={() => setShowCartModal(false)}
                             >
-                                치아라 마
+                                쇼핑 계속하기
                             </button>
 
                             <button
@@ -563,7 +563,7 @@ export default function ProductDetail() {
                                     navigate('/cart')
                                 }}
                             >
-                                갈끼!!
+                                이동하기
                             </button>
                         </div>
                     </div>
