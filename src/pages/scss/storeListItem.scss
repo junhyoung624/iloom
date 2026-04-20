@@ -1,5 +1,6 @@
 .store-list-item-wrap {
-    padding: 10px;
+    padding: 20px;
+    margin-left: 10px;
 }
 
 .store-item-top {
@@ -24,12 +25,14 @@
             display: flex;
             gap: 10px;
             margin-bottom: 10px;
+            //padding-bottom: 10px;
         }
 
         .phone {
             display: flex;
             gap: 10px;
-            margin-bottom: 10px;
+            // margin-bottom: 10px;
+            //padding-bottom: 10px;
         }
     }
 }

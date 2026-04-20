@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useAuthStore } from '../store/useAuthStore'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import "./scss/mypage.scss"
+import MyPageMenu from './MyPageMenu'
 
 export default function MyPage() {
     const navigate = useNavigate()
@@ -52,14 +53,15 @@ export default function MyPage() {
     return (
         <section className="mypage">
             <div className="inner">
-                <aside className="sidebar">
+                {/* <aside className="sidebar">
                     <ul>
                         <li><Link to="/order">주문/배송</Link></li>
                         <li><Link to="/wishlist">위시리스트</Link></li>
                         <li className={location.pathname === "/mypage" ? "active" : ""}><Link to="/mypage">회원 정보 수정</Link></li>
                         <li><Link to="/leavepage">회원 탈퇴</Link></li>
                     </ul>
-                </aside>
+                </aside> */}
+                <MyPageMenu />
 
                 <div className="content">
                     <h2>회원 정보 수정</h2>

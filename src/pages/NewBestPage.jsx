@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Link, useLocation, useParams } from 'react-router-dom'
 import { useProductStore } from '../store/useProductStore';
 import SubCard from '../components/SubCard';
@@ -12,6 +12,7 @@ const NewBestPage = () => {
 
     const location = useLocation();
     const { items, sortType, sortOrder, onSetSort } = useProductStore();
+    const listRef = useRef(null);
 
     const NewProduct = location.pathname === "/new";
     const BestSeller = location.pathname === "/BestSeller";
@@ -29,7 +30,7 @@ const NewBestPage = () => {
 
     useEffect(() => {
         setSelectTab("전체")
-    },[NewProduct, BestSeller])
+    }, [NewProduct, BestSeller])
 
     const pageName = location.pathname === "/new" ? "New Arrival" : "BestSeller"
     const bannerText = location.pathname === "/new" ? "NEW ARRIVAL" : "BEST SELLER"
@@ -55,9 +56,27 @@ const NewBestPage = () => {
 
     useEffect(() => {
         onSetSort("price", "desc");
-    },[location.pathname])
+    }, [location.pathname])
 
     const bannerImg = bannerImgList.find(ban => location.pathname === `/${ban.page}`)
+
+    const [currentPage, setCurrentPage] = useState(1)
+    const itemPage = 20;
+    const totalPages = Math.ceil(productList.length / itemPage);
+
+    const pageItem = productList.slice(
+        (currentPage - 1) * itemPage,
+        currentPage * itemPage
+    )
+
+    const pageTop = (page) => {
+        setCurrentPage(page);
+        listRef.current?.scrollIntoView({ behavior: "smooth" });
+    }
+
+    useEffect(() => {
+        setCurrentPage(1)
+    }, [selectTab, location.pathname])
 
     return (
         <div className='sub-page-wrap'>
@@ -74,7 +93,7 @@ const NewBestPage = () => {
                     </li>
                 </ul>
                 <div className="inner">
-                    <h1>{pageName}</h1>
+                    <h1 ref={listRef}>{pageName}</h1>
 
                     <ul className="menu-tab">
                         {tabMenu.map((tab, id) => (
@@ -97,11 +116,24 @@ const NewBestPage = () => {
                             <button className={sortType === "name" ? "active" : ""} onClick={() => onSetSort("name", "asc")}>상품명순</button>
                         </div>
                         <ul className="sub-product-list">
-                            {productList.map((item, id) => (
+                            {pageItem.map((item, id) => (
                                 <li key={id}>
                                     <Link to={`/product/${item.id}`}>
                                         <SubCard item={item} />
                                     </Link>
+                                </li>
+                            ))}
+                        </ul>
+
+                        <ul className="pagination">
+                            {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
+                                <li key={page}>
+                                    <button
+                                        className={currentPage === page ? "active" : ""}
+                                        onClick={() => pageTop(page)}
+                                    >
+                                        {page}
+                                    </button>
                                 </li>
                             ))}
                         </ul>

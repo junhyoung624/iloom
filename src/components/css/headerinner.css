@@ -1,3 +1,7 @@
+.ham-btn {
+  cursor: pointer;
+}
+
 .gnb-list .icon-btn {
   border: none;
   background: transparent;
@@ -8,23 +12,34 @@
   display: block;
 }
 
+.search-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s ease;
+  z-index: 10;
+}
+.search-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 .search-dropdown {
-  position: absolute;
-  top: 0px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100vw;
+  position: fixed;
+  width: 100%;
   background: #fff;
   max-height: 0;
   overflow: hidden;
-  transition: 0.3s ease;
+  transition: 0.5s ease;
   opacity: 0;
   pointer-events: none;
-  z-index: 20;
+  z-index: 1003;
 }
 .search-dropdown.active {
   max-height: 1500px;
-  padding: 24px 40px;
+  padding: 60px 40px;
   opacity: 1;
   pointer-events: auto;
 }
@@ -49,4 +64,53 @@
   background: #111;
   color: #fff;
   cursor: pointer;
+}
+
+.header-scroll-nav-mask {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  height: 48px;
+  overflow: hidden;
+  z-index: 1001;
+  pointer-events: none;
+}
+
+.header-scroll-nav {
+  width: 100%;
+  height: 48px;
+  padding: 13px 40px;
+  background: #fff;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  pointer-events: none;
+  transform: translateY(-100%);
+  transition: transform 0.48s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.header-scroll-nav.active {
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.header-scroll-nav-mask:has(.header-scroll-nav.active) {
+  pointer-events: auto;
+}
+
+.header-scroll-nav li a {
+  display: block;
+  font-size: 15px;
+  font-weight: 400;
+  color: #111;
+  white-space: nowrap;
+  transition: font-weight 0.25s ease;
+}
+
+.header-scroll-nav li:hover a {
+  font-weight: 700;
 }

@@ -91,6 +91,7 @@ const SubPage = () => {
     const [currentPage, setCurrentPage] = useState(1)
     const itemPage = 20;
     const totalPages = Math.ceil(cateItems.length / itemPage);
+    const listRef = useRef(null);
 
     const pageItem = cateItems.slice(
         (currentPage - 1) * itemPage,
@@ -105,6 +106,11 @@ const SubPage = () => {
             onSetSort("price", "desc");
         },[location.pathname])
 
+    const pageTop = (page) => {
+        setCurrentPage(page)
+        listRef.current?.scrollIntoView({behavior: "smooth"});
+    }
+
     return (
         <div className='sub-page-wrap'>
             {!subCate && !thirdCate && (<p className='banner-img'><img src={bannerImg} alt="img" /></p>)}
@@ -113,7 +119,7 @@ const SubPage = () => {
                     <Breadcrumb mainCate={mainCate} subCate={subCate} thirdCate={thirdCate} />
                 </ul>
                 <div className="inner">
-                    <h1>{categoryName}</h1>
+                    <h1  ref={listRef}>{categoryName}</h1>
 
                     {tabItems.length > 0 && (
                         <ul className="menu-tab">
@@ -138,7 +144,7 @@ const SubPage = () => {
                             <button className={sortType === "new" ? "active" : ""} onClick={() => onSetSort("new", "asc")}>신상품순</button>
                             <button className={sortType === "name" ? "active" : ""} onClick={() => onSetSort("name", "asc")}>상품명순</button>
                         </div>
-                        <ul className="sub-product-list">
+                        <ul className="sub-product-list" >
                             {pageItem.map((item, id) => (
                                 <li key={id}>
                                     <Link to={`/product/${item.id}`}>
@@ -153,7 +159,7 @@ const SubPage = () => {
                                 <li key={page}>
                                     <button
                                         className={currentPage === page ? "active" : ""}
-                                        onClick={() => setCurrentPage(page)}
+                                        onClick={() => pageTop(page)}
                                     >
                                         {page}
                                     </button>
