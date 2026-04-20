@@ -157,3 +157,12 @@
   gap: 50px;
   padding: 130px 0;
 }
+
+.breadcrumb-list {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+  color: #555;
+  padding-left: 150px;
+}

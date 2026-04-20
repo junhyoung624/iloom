@@ -8,9 +8,9 @@ const MainMenu = ({ menus, isHover, isScrolled, onSend, onEnter }) => {
     { key: "magazine", label: "매거진" },
     { key: "series", label: "시리즈" },
     { key: "store-info", label: "매장안내" },
-    { key: "event", label: "이벤트/뉴스" },
+    { key: "magazine", label: "이벤트/뉴스" },
     { key: "notice", label: "공지사항" },
-    { key: "company-info", label: "회사소개" }
+    { key: "companypage", label: "회사소개" }
   ]
 
   return (

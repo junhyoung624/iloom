@@ -87,18 +87,17 @@ export const useProductStore = create((set, get) => ({
 
     addToCart: (product, selectedOption = {}, qty = 1) => {
         const { cartItems } = get();
+        const color = selectedOption.color || "";
 
-        const existItem = cartItems.find(
-            (item) =>
-                item.id === product.id &&
-                item.color === (selectedOption.color || "")
-        );
+        const isSameItem = (item) =>
+            item.id === product.id && item.color === color;
+
+        const existItem = cartItems.find(isSameItem);
 
         if (existItem) {
             set({
                 cartItems: cartItems.map((item) =>
-                    item.id === product.id &&
-                        item.color === (selectedOption.color || "")
+                    isSameItem(item)
                         ? { ...item, qty: item.qty + qty }
                         : item
                 ),
@@ -111,13 +110,12 @@ export const useProductStore = create((set, get) => ({
                         id: product.id,
                         qty,
                         checked: true,
-                        color: selectedOption.color || "",
+                        color,
                     },
                 ],
             });
         }
     },
-
     increaseQty: (id, color = "") => {
         set({
             cartItems: get().cartItems.map((item) =>

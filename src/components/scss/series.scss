@@ -1,3 +1,5 @@
+@use "../../App.scss" as g;
+
 .series {
     width: 100%;
     overflow: hidden;
@@ -176,4 +178,13 @@
     grid-template-columns: repeat(5, 1fr);
     gap: 50px;
     padding: 130px 0;
+}
+
+
+.breadcrumb-list {
+    @include g.myFlex($jc: null, $gap: 20px);
+    cursor: pointer;
+    color: #555;
+    // padding-top: 80px;
+    padding-left: 150px;
 }

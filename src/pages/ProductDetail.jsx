@@ -21,6 +21,7 @@ export default function ProductDetail() {
     const [quantity, setQuantity] = useState(1)
     const [activeTab, setActiveTab] = useState('상세정보')
     const [showCartModal, setShowCartModal] = useState(false)
+    const [showWishModal, setShowWishModal] = useState(false)
     //const [isWished, setIsWished] = useState(false)
     const { onToggleWishList, isWished } = useProductStore();
     const wished = isWished(id);
@@ -87,6 +88,10 @@ export default function ProductDetail() {
         setShowCartModal(true)
     }
 
+    const handleWishClick = () => {
+        onToggleWishList(product)
+        setShowWishModal(true)
+    }
     return (
         <section className="product-detail">
             <div className="breadcrumb">
@@ -534,15 +539,32 @@ export default function ProductDetail() {
 
             {showCartModal && (
                 <div className="cart-modal-overlay" onClick={() => setShowCartModal(false)}>
-                    <div className="cart-modal" onClick={e => e.stopPropagation()}>
-                        <p className="cart-modal-title">장바구니에 담겼습니다.</p>
-                        <p className="cart-modal-sub">장바구니로 이동하시겠습니까?</p>
+                    <div className="cart-modal" onClick={(e) => e.stopPropagation()}>
+                        <div className="cart-modal-text">
+                            <span className="cart-modal-label">CART</span>
+                            <p className="cart-modal-title">장바구니에 담았습니다.</p>
+                            <p className="cart-modal-sub">장바구니 페이지로 이동합니다.</p>
+                        </div>
+
                         <div className="cart-modal-btns">
-                            <button className="cart-modal-continue" onClick={() => setShowCartModal(false)}>쇼핑 계속하기</button>
-                            <button className="cart-modal-go" onClick={() => {
-                                setShowCartModal(false)
-                                navigate('/cart')
-                            }}>장바구니 이동</button>
+                            <button
+                                type="button"
+                                className="cart-modal-continue"
+                                onClick={() => setShowCartModal(false)}
+                            >
+                                쇼핑 계속하기
+                            </button>
+
+                            <button
+                                type="button"
+                                className="cart-modal-go"
+                                onClick={() => {
+                                    setShowCartModal(false)
+                                    navigate('/cart')
+                                }}
+                            >
+                                이동하기
+                            </button>
                         </div>
                     </div>
                 </div>

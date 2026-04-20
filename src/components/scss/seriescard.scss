@@ -1,3 +1,5 @@
+@use "../../App.scss" as g;
+
 .signature-series-card {
     position: relative;
     height: 300px;
@@ -152,4 +154,26 @@
 
 .signature-series-card:hover .signature-series-button i {
     transform: translateX(4px);
+}
+
+.pagination {
+    @include g.myFlex($jc: center, $gap: 20px);
+    padding: 100px 0;
+
+    li {
+        button {
+            background: none;
+            border: 1px solid #ccc;
+            padding: 10px 13px;
+            cursor: pointer;
+            font-size: 14px;
+
+
+            &.active {
+                font-weight: bold;
+                font-size: 16px;
+                color: #CA1230;
+            }
+        }
+    }
 }

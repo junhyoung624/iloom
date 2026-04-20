@@ -11,43 +11,43 @@ export default function Best() {
     {
       id: "1", key: "best1", image: "./images/best-seller/bestseller-01.png",
       product: [
-        { id: "1-1", image: "./images/best-seller/product-01.png", serise: "핀", name: "원목 의자(쿠션형, 2EA)", price: "349,000 원" },
-        { id: "1-2", image: "./images/best-seller/product-02.png", serise: "에디", name: "3단 600폭 책장", price: "99,000 원" }
+        { id: "HCH9003", image: "./images/best-seller/product-01.png", serise: "핀", name: "원목 의자(쿠션형, 2EA)", price: "349,000 원" },
+        { id: "HSFC063N", image: "./images/best-seller/product-02.png", serise: "에디", name: "3단 600폭 책장", price: "99,000 원" }
       ]
     },
     {
       id: "2", key: "best2", image: "./images/best-seller/bestseller-02.png",
       product: [
-        { id: "2-1", image: "./images/best-seller/product-03.png", serise: "필즈", name: "세라믹 원형 식탁 1100폭", price: "1,390,000 원" },
-        { id: "2-2", image: "./images/best-seller/product-04.png", serise: "아고", name: "서커스 샹들리에 펜던트 조명", price: "748,000 원" }
+        { id: "IDD0023A", image: "./images/best-seller/product-03.png", serise: "필즈", name: "세라믹 원형 식탁 1100폭", price: "1,390,000 원" },
+        { id: "IAL00GA12A", image: "./images/best-seller/product-04.png", serise: "아고", name: "서커스 샹들리에 펜던트 조명", price: "748,000 원" }
       ]
     },
     {
       id: "3", key: "best3", image: "./images/best-seller/bestseller-03.png",
       product: [
-        { id: "3-1", image: "./images/best-seller/product-05.png", serise: "캐스터네츠", name: "펫 3인 소파(우,패브릭)", price: "1,129,000 원" },
-        { id: "3-2", image: "./images/best-seller/product-06.png", serise: "케플러클래식", name: "책상서랍", price: "279,000 원" }
+        { id: "HCS763PLF", image: "./images/best-seller/product-05.png", serise: "캐스터네츠", name: "펫 3인 소파(우,패브릭)", price: "1,129,000 원" },
+        { id: "HSVP042", image: "./images/best-seller/product-06.png", serise: "케플러클래식", name: "책상서랍", price: "279,000 원" }
       ]
     },
     {
       id: "4", key: "best4", image: "./images/best-seller/bestseller-04.png",
       product: [
-        { id: "4-1", image: "./images/best-seller/product-07.png", serise: "멘디", name: "패키지(1400책상,2000파티션책장)", price: "969,000 원" },
-        { id: "4-2", image: "./images/best-seller/product-08.png", serise: "쿠시노 코지", name: "침대 프레임 SS(실리콘패브릭)", price: "653,000 원" }
+        { id: "HSO123BN", image: "./images/best-seller/product-07.png", serise: "로이", name: "로이 3단 측판형책상 세트 1200폭", price: "589,000 원" },
+        { id: "IBF0038A", image: "./images/best-seller/product-08.png", serise: "쿠시노 코지", name: "침대 프레임 SS(실리콘패브릭)", price: "653,000 원" }
       ]
     },
     {
       id: "5", key: "best5", image: "./images/best-seller/bestseller-05.png",
       product: [
-        { id: "5-1", image: "./images/best-seller/product-09.png", serise: "모니스W", name: "3단 수납장 800폭", price: "159,000 원" },
-        { id: "5-2", image: "./images/best-seller/product-10.png", serise: "미엘", name: "서랍장 4단 800폭", price: "329,000 원" }
+        { id: "ICS0004A", image: "./images/best-seller/product-09.png", serise: "모니스W", name: "3단 수납장 800폭", price: "159,000 원" },
+        { id: "HP900841R", image: "./images/best-seller/product-10.png", serise: "미엘", name: "서랍장 4단 800폭", price: "329,000 원" }
       ]
     },
     {
       id: "6", key: "best6", image: "./images/best-seller/bestseller-06.png",
       product: [
-        { id: "6-1", image: "./images/best-seller/product-11.png", serise: "엘바패밀리", name: "1200폭 홈바 세트", price: "617,000 원" },
-        { id: "6-2", image: "./images/best-seller/product-12.png", serise: "테싯", name: "의자 (우드쉘, 1EA)", price: "209,000 원" }
+        { id: "HTUD1200H", image: "./images/best-seller/product-11.png", serise: "엘바패밀리", name: "1200폭 홈바 세트", price: "617,000 원" },
+        { id: "ITY00CD00A", image: "./images/best-seller/product-12.png", serise: "테싯", name: "의자 (우드쉘, 1EA)", price: "209,000 원" }
       ]
     }
   ]
@@ -73,7 +73,7 @@ export default function Best() {
           {bestList.map((item) => (
             <SwiperSlide key={item.id}>
               <div className="best-item">
-                <Link to={`/best/${item.id}`}>
+                <Link>
                   <img src={item.image} alt={item.key} />
                 </Link>
                 <ul className="best-product-list">
