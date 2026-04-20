@@ -32,22 +32,22 @@ export default function Best() {
     {
       id: "4", key: "best4", image: "./images/best-seller/bestseller-04.png",
       product: [
-        { id: "4-1", image: "./images/best-seller/product-07.png", serise: "멘디", name: "패키지(1400책상,2000파티션책장)", price: "969,000 원" },
-        { id: "4-2", image: "./images/best-seller/product-08.png", serise: "쿠시노 코지", name: "침대 프레임 SS(실리콘패브릭)", price: "653,000 원" }
+        { id: "HSO123BN", image: "./images/best-seller/product-07.png", serise: "로이", name: "로이 3단 측판형책상 세트 1200폭", price: "589,000 원" },
+        { id: "IBF0038A", image: "./images/best-seller/product-08.png", serise: "쿠시노 코지", name: "침대 프레임 SS(실리콘패브릭)", price: "653,000 원" }
       ]
     },
     {
       id: "5", key: "best5", image: "./images/best-seller/bestseller-05.png",
       product: [
-        { id: "5-1", image: "./images/best-seller/product-09.png", serise: "모니스W", name: "3단 수납장 800폭", price: "159,000 원" },
-        { id: "5-2", image: "./images/best-seller/product-10.png", serise: "미엘", name: "서랍장 4단 800폭", price: "329,000 원" }
+        { id: "ICS0004A", image: "./images/best-seller/product-09.png", serise: "모니스W", name: "3단 수납장 800폭", price: "159,000 원" },
+        { id: "HP900841R", image: "./images/best-seller/product-10.png", serise: "미엘", name: "서랍장 4단 800폭", price: "329,000 원" }
       ]
     },
     {
       id: "6", key: "best6", image: "./images/best-seller/bestseller-06.png",
       product: [
-        { id: "6-1", image: "./images/best-seller/product-11.png", serise: "엘바패밀리", name: "1200폭 홈바 세트", price: "617,000 원" },
-        { id: "6-2", image: "./images/best-seller/product-12.png", serise: "테싯", name: "의자 (우드쉘, 1EA)", price: "209,000 원" }
+        { id: "HTUD1200H", image: "./images/best-seller/product-11.png", serise: "엘바패밀리", name: "1200폭 홈바 세트", price: "617,000 원" },
+        { id: "ITY00CD00A", image: "./images/best-seller/product-12.png", serise: "테싯", name: "의자 (우드쉘, 1EA)", price: "209,000 원" }
       ]
     }
   ]
