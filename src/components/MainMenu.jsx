@@ -5,10 +5,10 @@ const MainMenu = ({ menus, isHover, isScrolled, onSend, onEnter }) => {
   const tabMenu = [
     { key: "new", label: "신제품" },
     { key: "BestSeller", label: "베스트셀러" },
-    { key: "magazine", label: "매거진" },
     { key: "series", label: "시리즈" },
     { key: "store-info", label: "매장안내" },
-    { key: "magazine", label: "이벤트/뉴스" },
+    { key: "magazine", label: "매거진" },
+    { key: "magazine", label: "이벤트" },
     { key: "notice", label: "공지사항" },
     { key: "companypage", label: "회사소개" }
   ]
