@@ -18695,7 +18695,6 @@ export const productData = [
     "category3": "",
     "productImages": [
       "/images/iloom_images/lighting/portable-lighting/IAL00NT16A_BSP_1.jpg",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT16A_BSP_1.jpg",
       "/images/iloom_images/lighting/portable-lighting/IAL00NT16A_BSP_3.png",
       "/images/iloom_images/lighting/portable-lighting/IAL00NT16A_CRP_2.png"
     ],
@@ -18737,19 +18736,13 @@ export const productData = [
     "category2": "펜던트 조명",
     "category3": "",
     "productImages": [
-      "/images/iloom_images/lighting/pendant-lighting/IAL00NT14A_GBE_4.png",
-      "/images/iloom_images/lighting/pendant-lighting/IAL00NT14A_GBE_4.png",
       "/images/iloom_images/lighting/pendant-lighting/IAL00NT14A_MBK_1.jpg",
-      "/images/iloom_images/lighting/pendant-lighting/IAL00NT14A_MBK_1.jpg",
-      "/images/iloom_images/lighting/pendant-lighting/IAL00NT14A_MBK_7.png",
+      "/images/iloom_images/lighting/pendant-lighting/IAL00NT14A_GBE_4.png",
       "/images/iloom_images/lighting/pendant-lighting/IAL00NT14A_MBK_7.png",
       "/images/iloom_images/lighting/pendant-lighting/IAL00NT14A_MEY_3.png",
-      "/images/iloom_images/lighting/pendant-lighting/IAL00NT14A_MEY_3.png",
-      "/images/iloom_images/lighting/pendant-lighting/IAL00NT14A_MTD_5.png",
       "/images/iloom_images/lighting/pendant-lighting/IAL00NT14A_MTD_5.png",
       "/images/iloom_images/lighting/pendant-lighting/IAL00NT14A_MTE_2.png",
-      "/images/iloom_images/lighting/pendant-lighting/IAL00NT14A_MTE_2.png",
-      "/images/iloom_images/lighting/pendant-lighting/IAL00NT14A_SGN_6.png",
+
       "/images/iloom_images/lighting/pendant-lighting/IAL00NT14A_SGN_6.png"
     ],
     "mdPick": false,
@@ -18826,7 +18819,6 @@ export const productData = [
     "category2": "포터블 조명",
     "category3": "",
     "productImages": [
-      "/images/iloom_images/lighting/portable-lighting/IAL00WB00A_BGY_1.jpg",
       "/images/iloom_images/lighting/portable-lighting/IAL00WB00A_BGY_1.jpg",
       "/images/iloom_images/lighting/portable-lighting/IAL00WB00A_BGY_6.png",
       "/images/iloom_images/lighting/portable-lighting/IAL00WB00A_CHB_5.png",
@@ -19078,8 +19070,8 @@ export const productData = [
     "category2": "식탁",
     "category3": "4인용식탁",
     "productImages": [
-      "/images/iloom_images/dining-room/dining-table/IDD0005A_DGS_2.png",
       "/images/iloom_images/dining-room/dining-table/IDD0005A_SSP_1.jpg",
+      "/images/iloom_images/dining-room/dining-table/IDD0005A_DGS_2.png",
       "/images/iloom_images/dining-room/dining-table/IDD0005A_SSP_3.png",
       "/images/iloom_images/dining-room/dining-table/IDD0005A_SSP_3.png"
     ],
@@ -19118,8 +19110,8 @@ export const productData = [
     "category2": "식탁",
     "category3": "6인용식탁",
     "productImages": [
-      "/images/iloom_images/dining-room/dining-table/IDD0006A_DGS_2.png",
       "/images/iloom_images/dining-room/dining-table/IDD0006A_SSP_1.jpg",
+      "/images/iloom_images/dining-room/dining-table/IDD0006A_DGS_2.png",
       "/images/iloom_images/dining-room/dining-table/IDD0006A_SSP_3.png",
       "/images/iloom_images/dining-room/dining-table/IDD0006A_SSP_3.png"
     ],
@@ -19158,8 +19150,8 @@ export const productData = [
     "category2": "식탁",
     "category3": "6인용식탁",
     "productImages": [
-      "/images/iloom_images/dining-room/dining-table/IDD0007A_DGS_2.png",
       "/images/iloom_images/dining-room/dining-table/IDD0007A_SSP_1.jpg",
+      "/images/iloom_images/dining-room/dining-table/IDD0007A_DGS_2.png",
       "/images/iloom_images/dining-room/dining-table/IDD0007A_SSP_3.png",
       "/images/iloom_images/dining-room/dining-table/IDD0007A_SSP_3.png"
     ],
@@ -19201,8 +19193,8 @@ export const productData = [
     "category2": "식탁",
     "category3": "4인용식탁",
     "productImages": [
-      "/images/iloom_images/dining-room/dining-table/IDD0008A_CBEDG_2.png",
       "/images/iloom_images/dining-room/dining-table/IDD0008A_CBESP_1.jpg",
+      "/images/iloom_images/dining-room/dining-table/IDD0008A_CBEDG_2.png",
       "/images/iloom_images/dining-room/dining-table/IDD0008A_CBESP_6.png",
       "/images/iloom_images/dining-room/dining-table/IDD0008A_CBESP_7.png",
       "/images/iloom_images/dining-room/dining-table/IDD0008A_CDWSP_5.png",
@@ -19252,8 +19244,8 @@ export const productData = [
     "category2": "식탁",
     "category3": "6인용식탁",
     "productImages": [
-      "/images/iloom_images/dining-room/dining-table/IDD0009A_CBEDG_2.png",
       "/images/iloom_images/dining-room/dining-table/IDD0009A_CBESP_1.jpg",
+      "/images/iloom_images/dining-room/dining-table/IDD0009A_CBEDG_2.png",
       "/images/iloom_images/dining-room/dining-table/IDD0009A_CBESP_6.png",
       "/images/iloom_images/dining-room/dining-table/IDD0009A_CBESP_7.png",
       "/images/iloom_images/dining-room/dining-table/IDD0009A_CDWSP_5.png",
@@ -19301,9 +19293,9 @@ export const productData = [
     "category2": "식탁",
     "category3": "6인용식탁",
     "productImages": [
-      "/images/iloom_images/dining-room/dining-table/IDD0011A_CBEDG_2.png",
-      "/images/iloom_images/dining-room/dining-table/IDD0011A_CBEDG_2.png",
       "/images/iloom_images/dining-room/dining-table/IDD0011A_CBESP_1.jpg",
+      "/images/iloom_images/dining-room/dining-table/IDD0011A_CBEDG_2.png",
+      "/images/iloom_images/dining-room/dining-table/IDD0011A_CBEDG_2.png",
       "/images/iloom_images/dining-room/dining-table/IDD0011A_CBESP_6.png",
       "/images/iloom_images/dining-room/dining-table/IDD0011A_CBESP_6.png",
       "/images/iloom_images/dining-room/dining-table/IDD0011A_CBESP_7.png",
@@ -19398,8 +19390,8 @@ export const productData = [
     "category2": "식탁",
     "category3": "6인용식탁",
     "productImages": [
-      "/images/iloom_images/dining-room/dining-table/IDD0010A_CIADG_2.png",
       "/images/iloom_images/dining-room/dining-table/IDD0010A_CIASP_1.jpg",
+      "/images/iloom_images/dining-room/dining-table/IDD0010A_CIADG_2.png",
       "/images/iloom_images/dining-room/dining-table/IDD0010A_CIASP_5.png",
       "/images/iloom_images/dining-room/dining-table/IDD0010A_CIASP_5.png",
       "/images/iloom_images/dining-room/dining-table/IDD0010A_CTRDG_4.png",
@@ -19533,8 +19525,8 @@ export const productData = [
     "category2": "식탁",
     "category3": "4인용식탁",
     "productImages": [
-      "/images/iloom_images/dining-room/dining-table/IDD0023A_CGSMWT_2.png",
       "/images/iloom_images/dining-room/dining-table/IDD0023A_CGSNK_1.jpg",
+      "/images/iloom_images/dining-room/dining-table/IDD0023A_CGSMWT_2.png",
       "/images/iloom_images/dining-room/dining-table/IDD0023A_CGSNK_3.png"
     ],
     "mdPick": false,
@@ -22555,7 +22547,6 @@ export const productData = [
     "category3": "",
     "productImages": [
       "/images/iloom_images/dining-room/storage/IKB0009A_SO_1.jpg",
-      "/images/iloom_images/dining-room/storage/IKB0009A_SO_2.png",
       "/images/iloom_images/dining-room/storage/IKB0009A_SO_2.png"
     ],
     "mdPick": false,

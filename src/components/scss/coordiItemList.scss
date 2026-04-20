@@ -10,19 +10,20 @@
 .coordi-item {
     color: #303030;
     //width: 200px;
+    margin-top: 30px;
 
     .name {
-        font-size: 16px;
-        font-weight: 400;
+        // font-size: 16px;
+        font-weight: 500;
     }
 
     .subName {
         //width: 190px;
         width: 200px;
         margin: 0 auto;
-        font-size: 18px;
-        font-weight: 600;
-        padding-top: 10px;
+        // font-size: 18px;
+        // font-weight: 600;
+        padding: 10px 0;
 
         white-space: nowrap;
         /* 줄바꿈 방지 */
@@ -44,7 +45,12 @@
     color: #CA1230
 }
 
+.coordi-item {
+    transition: transform 0.25s ease;
+}
 
 .coordi-item:hover {
-    transform: translateY(-10px);
+    img {
+        transform: translateY(-4px);
+    }
 }

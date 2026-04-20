@@ -30,6 +30,7 @@ export default function ProductDetail() {
         window.scrollTo(0, 0)
         if (product?.options?.[0]?.values[0]) {
             setSelectedOption(product.options[0].values[0])
+            setMainImg(0)
         }
     }, [id])
 
@@ -107,10 +108,6 @@ export default function ProductDetail() {
                     <div className="main-image">
                         <img src={product.productImages[mainImg]} alt={product.name} />
                     </div>
-                    <div className="thumb-list">
-                        <div className={mainImg === 0 ? 'active' : ''} onClick={() => setMainImg(0)}><img src={product.productImages[0]} alt="thumb1" />
-                        </div>
-                    </div>
                 </div>
 
                 <div className="info-area">
@@ -166,6 +163,7 @@ export default function ProductDetail() {
                                             onClick={() => {
                                                 setSelectedOption(v)
                                                 setIsDropdownOpen(false)
+                                                setMainImg(j + 1)
                                             }}>
                                             {getColorImg(v) && (
                                                 <img src={`/images/${getColorImg(v)}`} alt={v} />
@@ -182,11 +180,11 @@ export default function ProductDetail() {
                         <div className="color-product-images">
                             <p className="color-product-label">제품 이미지</p>
                             <div className="color-product-list">
-                                {product.productImages.map((img, i) => (
-                                    <div key={1}
-                                        className={`color-product-item ${mainImg === i ? 'active' : ''}`}
-                                        onCilck={() => setMainImg(i)}>
-                                        <img src={img} alt={`제품이미지${i + 1}`} />
+                                {product.productImages.slice(1).map((img, i) => (
+                                    <div key={i}
+                                        className={`color-product-item ${mainImg === i + 2 ? 'active' : ''}`}
+                                        onClick={() => setMainImg(i + 1)}>
+                                        <img src={img} alt={`제품이미지${i + 2}`} />
                                     </div>
                                 ))}
                             </div>
@@ -216,7 +214,7 @@ export default function ProductDetail() {
                     </div>
 
                     <div className="action-btns">
-                        <button className="buy" onClick={() => alert('결제 페이지로 이동')}>결제하기</button>
+                        <button className="buy" onClick={handleBuy}>결제하기</button>
                         <button className="cart" onClick={handleAddCart}>장바구니</button>
                     </div>
                 </div>
