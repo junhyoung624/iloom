@@ -38,8 +38,8 @@ export default function Series() {
                         spaceBetween={10}
                         className="mySwiper"
                     >
-                        {seriesList.map((item) => (
-                            <SwiperSlide key={item.id}>
+                        {seriesList.map((item, id) => (
+                            <SwiperSlide key={id}>
                                 <div className="series-card">
                                     <div className="img-box">
                                         <img src={item.image} alt={item.key} />
@@ -58,10 +58,10 @@ export default function Series() {
 
                 <div className="item">
                     <div className="tab-btn-menu">
-                        {tabs.map((tab) => (
+                        {tabs.map((tab, id) => (
                             <button
                                 type="button"
-                                key={tab}
+                                key={id}
                                 className={activeTab === tab ?
                                     "series-name active" : "series-name"}
                                 onClick={() => setActiveTab(tab)}

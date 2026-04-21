@@ -161,7 +161,7 @@ export default function ProductDetail() {
 
                             {isDropdownOpen && (
                                 <ul className="dropdown-list">
-                                    {opt.values.map((v, j) => (
+                                    {(Array.isArray(opt.values) ? opt.values : [opt.values]).map((v, j) => (
                                         <li key={j}
                                             onClick={() => {
                                                 setSelectedOption(v)
@@ -178,7 +178,7 @@ export default function ProductDetail() {
                         </div>
                     ))}
 
-                    {selectedOption && product.productImages && product.productImages.length > 0 && (
+                    {product.productImages && product.productImages.length > 0 && (
                         <div className="color-product-images">
                             <p className="color-product-label">제품 이미지</p>
                             <div className="color-product-list">
@@ -193,10 +193,10 @@ export default function ProductDetail() {
                         </div>
                     )}
 
-                    {selectedOption && (
+                    {(selectedOption || product.options?.length === 0) && (
                         <div className="selected-option-box">
                             <div className="selected-info">
-                                <span>{product.name} / {selectedOption}</span>
+                                <span>{product.name}{selectedOption ? ` / ${selectedOption}` : ''}</span>
                             </div>
                             <div className="qty-price-row">
                                 <div className="qty-control">
@@ -295,7 +295,7 @@ export default function ProductDetail() {
                             <div key={i} className="option-group">
                                 <p className="opt-name">{opt.name}</p>
                                 <div className="opt-values-grid">
-                                    {opt.values.map((v, j) => (
+                                    {(Array.isArray(opt.values) ? opt.values : [opt.values]).map((v, j) => (
                                         <div key={j} className="opt-chip-item">
                                             {opt.name === '색상' && getColorImg(v) && (
                                                 <img src={`/images/${getColorImg(v)}`} alt={v} className="chip-img" />
