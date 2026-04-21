@@ -78,7 +78,7 @@
             text-decoration: none;
         }
 
-        button {
+        .series-btn {
             border: 1.3px solid #fff;
             padding: 15px 40px;
             background: transparent;
@@ -129,6 +129,8 @@
         gap: 32px;
         margin-top: 40px;
         margin-bottom: -60px;
+        padding-top: 60px;
+
 
         button {
             width: auto;
@@ -138,6 +140,10 @@
             cursor: pointer;
             flex: 0 0 auto;
         }
+    }
+
+    .item-card-wrap {
+        padding-top: 70px;
     }
 }
 

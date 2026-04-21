@@ -19,9 +19,14 @@ const SubCard = ({ item }) => {
         <div className="sub-card">
             <div className="card-img-box">
                 <img
+                    src={item.productImages[1]}
+                    alt="상품이미지"
+                    className="product-img default"
+                />
+                <img
                     src={item.productImages[0]}
                     alt="상품이미지"
-                    className="product-img"
+                    className="product-img hover"
                 />
             </div>
 

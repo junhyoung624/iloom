@@ -14,10 +14,10 @@ export default function Series() {
     const [activeTab, setActiveTab] = useState("에디")
 
     const seriesList = [
-        { id: "1", key: "에디", image: "./images/series/eddi.jpg" },
-        { id: "2", key: "하이프", image: "./images/series/Hype.jpg" },
-        { id: "3", key: "레마", image: "./images/series/rema.jpg" },
-        { id: "4", key: "코모", image: "./images/series/como.jpg" },
+        { id: "1", link: "eddi", key: "에디", image: "./images/series/eddi.jpg" },
+        { id: "2", link: "hype", key: "하이프", image: "./images/series/Hype.jpg" },
+        { id: "3", link: "rema", key: "레마", image: "./images/series/rema.jpg" },
+        { id: "4", link: "como", key: "코모", image: "./images/series/como.jpg" },
     ]
 
     const seriesItem = productData.filter((item) => item.series === activeTab).slice(0, 10);
@@ -46,12 +46,9 @@ export default function Series() {
                                     </div>
                                     <div className="text-box">
                                         <h2>{item.key}</h2>
-                                        <button
-                                            type="button"
-                                            onClick={() => setActiveTab(item.key)}
-                                        >
+                                        <Link to={`/series/${item.link}`} className="series-btn">
                                             지금 만나보기
-                                        </button>
+                                        </Link>
                                     </div>
                                 </div>
                             </SwiperSlide>
@@ -76,7 +73,7 @@ export default function Series() {
 
                     <ul className="item-card-wrap">
                         {seriesItem.map((item, index) => (
-                            <li>
+                            <li key={index}>
                                 <Link
                                     to={`/product/${item.id}`}
                                     className="item-card"

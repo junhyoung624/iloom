@@ -2,6 +2,7 @@ import { createUserWithEmailAndPassword, onAuthStateChanged, linkWithPopup, unli
 import { create } from "zustand";
 import { auth, db, googleProvider } from "../firebase/firebase";
 import { deleteDoc, doc, getDoc, setDoc, updateDoc } from "firebase/firestore";
+import { useNavigate } from "react-router-dom";
 
 // import { useNavigate } from "react-router-dom";
 export const useAuthStore = create((set, get) => ({
