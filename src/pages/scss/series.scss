@@ -1,3 +1,5 @@
+@import '../../variables.scss';
+
 .signature-series-section {
     padding: 160px 24px;
     overflow: hidden;
@@ -15,11 +17,8 @@
     margin-bottom: 14px;
     font-size: 36px;
     font-weight: 600;
-    color: #030303;
+    color: var(--main);
 }
-
-
-
 
 .signature-series-list {
     display: grid;

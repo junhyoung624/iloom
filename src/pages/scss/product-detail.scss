@@ -45,8 +45,8 @@
 }
 
 .image-area {
-    flex: 0 0 520px;
-    max-width: 520px;
+    flex: 0 0 600px;
+    max-width: 600px;
 
     .main-image {
         width: 100%;
@@ -61,30 +61,6 @@
             width: 100%;
             height: 100%;
             object-fit: contain;
-        }
-    }
-
-    .thumb-list {
-        display: flex;
-        gap: 10px;
-
-        div {
-            width: 138px;
-            height: 138px;
-            cursor: pointer;
-            overflow: hidden;
-            border: 1px solid transparent;
-            transition: border-color 0.15s;
-
-            &:hover {
-                border-color: #c9c9c9;
-            }
-
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: contain;
-            }
         }
     }
 }
@@ -114,6 +90,8 @@
         display: flex;
         color: #303030;
         align-items: center;
+        margin-bottom: 40px;
+        margin-top: -30px;
 
         strong {
             font-size: 16px;
@@ -245,8 +223,7 @@
             }
 
             &.actuve {
-                border-color: #303030;
-                border-width: 2px;
+                border: 1px solid #303030 !important;
             }
 
             img {

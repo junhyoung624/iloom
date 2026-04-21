@@ -21452,7 +21452,6 @@ export const productData = [
     "category3": "",
     "productImages": [
       "/images/iloom_images/dining-room/storage/IKB0009A_SO_1.jpg",
-      "/images/iloom_images/dining-room/storage/IKB0009A_SO_2.png",
       "/images/iloom_images/dining-room/storage/IKB0009A_SO_2.png"
     ],
     "mdPick": false,
@@ -54214,8 +54213,7 @@ export const productData = [
     "category2": "책장",
     "category3": "",
     "productImages": [
-      "/images/iloom_images/home-library/bookshelf/HSFC063N_IV_1.png",
-      "/images/iloom_images/home-library/bookshelf/HSFC063N_IV_1.png",
+      "/images/iloom_images/home-library/bookshelf/HSFC063N_IV_1.jpg",
       "/images/iloom_images/home-library/bookshelf/HSFC063N_NCC_2.png",
       "/images/iloom_images/home-library/bookshelf/HSFC063N_IV_3.png"
     ],

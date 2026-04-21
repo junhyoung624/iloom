@@ -1,3 +1,5 @@
+@import '../../variables.scss';
+
 .new-collection {
     width: 100%;
 
@@ -47,8 +49,8 @@
             text-align: center;
 
             &:hover {
-                border: 1.4px solid #030303;
-                background: #030303;
+                border: 1.4px solid var(--main);
+                background: var(--main);
                 color: #fff;
             }
         }
