@@ -37,7 +37,6 @@ const Header = () => {
 
     const handleScroll = () => {
       const scrollY = window.scrollY
-
       const progress = Math.min(
         Math.max((scrollY - HERO_FADE_START) / (HERO_FADE_END - HERO_FADE_START), 0),
         1
@@ -53,7 +52,11 @@ const Header = () => {
 
   useEffect(() => {
     if (user) {
-      setUserMenu(true)
+      if (window.__appLoaded) {
+        setUserMenu(true)
+      } else {
+        setTimeout(() => setUserMenu(true), 1600)
+      }
       loginMenu.current = true
     } else {
       setUserMenu(false)
@@ -97,7 +100,6 @@ const Header = () => {
   const handleMenuEnter = () => {
     clearTimeout(leaveTimer.current)
     clearTimeout(enterTimer.current)
-
     enterTimer.current = setTimeout(() => {
       setHover(true)
     }, 90)
@@ -106,14 +108,17 @@ const Header = () => {
   const handleMenuLeave = () => {
     clearTimeout(enterTimer.current)
     clearTimeout(leaveTimer.current)
-
     leaveTimer.current = setTimeout(() => {
       setHover(false)
     }, 140)
   }
 
   const handleClick = () => {
-    setUserMenu(true)
+    if (window.__appLoaded) {
+      setUserMenu(true)
+    } else {
+      setTimeout(() => setUserMenu(true), 1600)
+    }
   }
 
   const closeBtn = () => {
