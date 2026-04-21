@@ -180,11 +180,11 @@ export default function ProductDetail() {
                         <div className="color-product-images">
                             <p className="color-product-label">제품 이미지</p>
                             <div className="color-product-list">
-                                {product.productImages.slice(1).map((img, i) => (
+                                {product.productImages.map((img, i) => (
                                     <div key={i}
-                                        className={`color-product-item ${mainImg === i + 2 ? 'active' : ''}`}
-                                        onClick={() => setMainImg(i + 1)}>
-                                        <img src={img} alt={`제품이미지${i + 2}`} />
+                                        className={`color-product-item ${mainImg === i + 1 ? 'active' : ''}`}
+                                        onClick={() => setMainImg(i)}>
+                                        <img src={img} alt={`제품이미지${i + 1}`} />
                                     </div>
                                 ))}
                             </div>

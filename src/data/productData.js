@@ -18653,14 +18653,9 @@ export const productData = [
     "category3": "",
     "productImages": [
       "/images/iloom_images/lighting/portable-lighting/IAL00NT16A_BSP_1.jpg",
-<<<<<<< HEAD
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT16A_BSP_3.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00NT16A_CRP_2.png"
-=======
       "/images/iloom_images/lighting/portable-lighting/IAL00NT16A_BSP_1.jpg",
       "/images/iloom_images/lighting/portable-lighting/IAL00NT16A_CRP_2.png",
       "/images/iloom_images/lighting/portable-lighting/IAL00NT16A_BSP_3.png"
->>>>>>> b8e5edfdebec84aa80800a4bfeecd6aba4289d29
     ],
     "mdPick": false,
     "new": false,
@@ -18701,15 +18696,6 @@ export const productData = [
     "category3": "",
     "productImages": [
       "/images/iloom_images/lighting/pendant-lighting/IAL00NT14A_MBK_1.jpg",
-<<<<<<< HEAD
-      "/images/iloom_images/lighting/pendant-lighting/IAL00NT14A_GBE_4.png",
-      "/images/iloom_images/lighting/pendant-lighting/IAL00NT14A_MBK_7.png",
-      "/images/iloom_images/lighting/pendant-lighting/IAL00NT14A_MEY_3.png",
-      "/images/iloom_images/lighting/pendant-lighting/IAL00NT14A_MTD_5.png",
-      "/images/iloom_images/lighting/pendant-lighting/IAL00NT14A_MTE_2.png",
-
-      "/images/iloom_images/lighting/pendant-lighting/IAL00NT14A_SGN_6.png"
-=======
       "/images/iloom_images/lighting/pendant-lighting/IAL00NT14A_MBK_1.jpg",
       "/images/iloom_images/lighting/pendant-lighting/IAL00NT14A_MTE_2.png",
       "/images/iloom_images/lighting/pendant-lighting/IAL00NT14A_MTE_2.png",
@@ -18723,7 +18709,6 @@ export const productData = [
       "/images/iloom_images/lighting/pendant-lighting/IAL00NT14A_SGN_6.png",
       "/images/iloom_images/lighting/pendant-lighting/IAL00NT14A_MBK_7.png",
       "/images/iloom_images/lighting/pendant-lighting/IAL00NT14A_MBK_7.png"
->>>>>>> b8e5edfdebec84aa80800a4bfeecd6aba4289d29
     ],
     "mdPick": false,
     "new": false,
@@ -18800,12 +18785,7 @@ export const productData = [
     "category3": "",
     "productImages": [
       "/images/iloom_images/lighting/portable-lighting/IAL00WB00A_BGY_1.jpg",
-<<<<<<< HEAD
-      "/images/iloom_images/lighting/portable-lighting/IAL00WB00A_BGY_6.png",
-      "/images/iloom_images/lighting/portable-lighting/IAL00WB00A_CHB_5.png",
-=======
       "/images/iloom_images/lighting/portable-lighting/IAL00WB00A_BGY_1.jpg",
->>>>>>> b8e5edfdebec84aa80800a4bfeecd6aba4289d29
       "/images/iloom_images/lighting/portable-lighting/IAL00WB00A_GRW_2.png",
       "/images/iloom_images/lighting/portable-lighting/IAL00WB00A_TRG_3.png",
       "/images/iloom_images/lighting/portable-lighting/IAL00WB00A_PUR_4.png",
@@ -19181,15 +19161,6 @@ export const productData = [
     "productImages": [
       "/images/iloom_images/dining-room/dining-table/IDD0008A_CBESP_1.jpg",
       "/images/iloom_images/dining-room/dining-table/IDD0008A_CBEDG_2.png",
-<<<<<<< HEAD
-      "/images/iloom_images/dining-room/dining-table/IDD0008A_CBESP_6.png",
-      "/images/iloom_images/dining-room/dining-table/IDD0008A_CBESP_7.png",
-      "/images/iloom_images/dining-room/dining-table/IDD0008A_CDWSP_5.png",
-      "/images/iloom_images/dining-room/dining-table/IDD0008A_CDWSP_5.png",
-      "/images/iloom_images/dining-room/dining-table/IDD0008A_CMADG_4.png",
-      "/images/iloom_images/dining-room/dining-table/IDD0008A_CMADG_4.png",
-=======
->>>>>>> b8e5edfdebec84aa80800a4bfeecd6aba4289d29
       "/images/iloom_images/dining-room/dining-table/IDD0008A_CMASP_3.png",
       "/images/iloom_images/dining-room/dining-table/IDD0008A_CMASP_3.png",
       "/images/iloom_images/dining-room/dining-table/IDD0008A_CMADG_4.png",
@@ -19241,14 +19212,7 @@ export const productData = [
     "productImages": [
       "/images/iloom_images/dining-room/dining-table/IDD0009A_CBESP_1.jpg",
       "/images/iloom_images/dining-room/dining-table/IDD0009A_CBEDG_2.png",
-<<<<<<< HEAD
-      "/images/iloom_images/dining-room/dining-table/IDD0009A_CBESP_6.png",
-      "/images/iloom_images/dining-room/dining-table/IDD0009A_CBESP_7.png",
-      "/images/iloom_images/dining-room/dining-table/IDD0009A_CDWSP_5.png",
-      "/images/iloom_images/dining-room/dining-table/IDD0009A_CDWSP_5.png",
-=======
       "/images/iloom_images/dining-room/dining-table/IDD0009A_CMASP_3.png",
->>>>>>> b8e5edfdebec84aa80800a4bfeecd6aba4289d29
       "/images/iloom_images/dining-room/dining-table/IDD0009A_CMADG_4.png",
       "/images/iloom_images/dining-room/dining-table/IDD0009A_CDWSP_5.png",
       "/images/iloom_images/dining-room/dining-table/IDD0009A_CDWSP_5.png",
@@ -19298,16 +19262,6 @@ export const productData = [
       "/images/iloom_images/dining-room/dining-table/IDD0011A_CBESP_1.jpg",
       "/images/iloom_images/dining-room/dining-table/IDD0011A_CBEDG_2.png",
       "/images/iloom_images/dining-room/dining-table/IDD0011A_CBEDG_2.png",
-<<<<<<< HEAD
-      "/images/iloom_images/dining-room/dining-table/IDD0011A_CBESP_6.png",
-      "/images/iloom_images/dining-room/dining-table/IDD0011A_CBESP_6.png",
-      "/images/iloom_images/dining-room/dining-table/IDD0011A_CBESP_7.png",
-      "/images/iloom_images/dining-room/dining-table/IDD0011A_CBESP_7.png",
-      "/images/iloom_images/dining-room/dining-table/IDD0011A_CDWSP_5.png",
-      "/images/iloom_images/dining-room/dining-table/IDD0011A_CDWSP_5.png",
-      "/images/iloom_images/dining-room/dining-table/IDD0011A_CMADG_4.png",
-=======
->>>>>>> b8e5edfdebec84aa80800a4bfeecd6aba4289d29
       "/images/iloom_images/dining-room/dining-table/IDD0011A_CMASP_3.png",
       "/images/iloom_images/dining-room/dining-table/IDD0011A_CMASP_3.png",
       "/images/iloom_images/dining-room/dining-table/IDD0011A_CMADG_4.png",
@@ -19404,12 +19358,6 @@ export const productData = [
     "productImages": [
       "/images/iloom_images/dining-room/dining-table/IDD0010A_CIASP_1.jpg",
       "/images/iloom_images/dining-room/dining-table/IDD0010A_CIADG_2.png",
-<<<<<<< HEAD
-      "/images/iloom_images/dining-room/dining-table/IDD0010A_CIASP_5.png",
-      "/images/iloom_images/dining-room/dining-table/IDD0010A_CIASP_5.png",
-      "/images/iloom_images/dining-room/dining-table/IDD0010A_CTRDG_4.png",
-=======
->>>>>>> b8e5edfdebec84aa80800a4bfeecd6aba4289d29
       "/images/iloom_images/dining-room/dining-table/IDD0010A_CTRSP_3.png",
       "/images/iloom_images/dining-room/dining-table/IDD0010A_CTRSP_3.png",
       "/images/iloom_images/dining-room/dining-table/IDD0010A_CTRDG_4.png",
