@@ -55,16 +55,16 @@
 
     &:hover {
         transform: translateY(-10px);
+    }
 
-        .coordi-item {
+    .coordi-item {
+        img {
+            transition: transform 0.3s ease;
+        }
+
+        &:hover {
             img {
-                transition: transform 0.3s ease;
-            }
-
-            &:hover {
-                img {
-                    transform: translateY(-4px);
-                }
+                transform: translateY(-4px);
             }
         }
     }
