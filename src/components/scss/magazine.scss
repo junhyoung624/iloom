@@ -1,10 +1,10 @@
-@import '../../variables.scss';
+@use '../../variables.scss';
 
 .magazine {
-
     .inner {
-        text-align: center;
+        max-width: 1440px;
         margin: 0 auto;
+        text-align: center;
 
         .title-box {
             display: flex;
@@ -24,23 +24,25 @@
         }
 
         .magazine-box {
+            width: 100%;
             display: flex;
-            gap: 21px;
-            justify-content: center;
+            gap: 28px;
         }
 
         .magazine-card {
             position: relative;
-            width: 380px;
+            width: calc((100% - 56px) / 3);
             overflow: hidden;
+            flex-shrink: 0;
 
             img {
                 display: block;
                 width: 100%;
+                height: auto;
             }
 
             .text-box {
-                width: 400px;
+                width: calc(100% - 40px);
                 position: absolute;
                 left: 50%;
                 transform: translateX(-50%);
