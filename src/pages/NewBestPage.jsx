@@ -64,6 +64,15 @@ const NewBestPage = () => {
     const itemPage = 20;
     const totalPages = Math.ceil(productList.length / itemPage);
 
+    const pageGroupSize = 5;
+    const startPage = Math.floor((currentPage - 1) / pageGroupSize) * pageGroupSize + 1;
+    const endPage = Math.min(startPage + pageGroupSize - 1, totalPages);
+
+    const visiblePages = Array.from(
+        { length: endPage - startPage + 1 },
+        (_, i) => startPage + i
+    );
+
     const pageItem = productList.slice(
         (currentPage - 1) * itemPage,
         currentPage * itemPage
@@ -126,7 +135,12 @@ const NewBestPage = () => {
                         </ul>
 
                         <ul className="pagination">
-                            {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
+                            {startPage > 1 && (
+                                <li>
+                                    <button onClick={() => pageTop(startPage - 1)}>{"<"}</button>
+                                </li>
+                            )}
+                            {visiblePages.map(page => (
                                 <li key={page}>
                                     <button
                                         className={currentPage === page ? "active" : ""}
@@ -136,6 +150,11 @@ const NewBestPage = () => {
                                     </button>
                                 </li>
                             ))}
+                            {endPage < totalPages && (
+                                <li>
+                                    <button onClick={() => pageTop(endPage + 1)}>{">"}</button>
+                                </li>
+                            )}
                         </ul>
                     </div>
                 </div>

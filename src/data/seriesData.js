@@ -24,7 +24,7 @@ export const seriesListEn = [
     bannerImage: "./images/series-banner/ember.jpg"
   },
   {
-    id: "series-003",
+    id: "series-115",
     nameKo: "코모",
     nameEn: "Como",
     slug: "como",
