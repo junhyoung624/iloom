@@ -163,6 +163,15 @@ export const useProductStore = create((set, get) => ({
         });
     },
 
+    changeItemColor: (id, oldColor, newColor) => {
+        set(state => ({
+            cartItems: state.cartItems.map(item =>
+                item.id === id && item.color === oldColor
+                    ? { ...item, color: newColor }
+                    : item
+            )
+        }))
+    },
     //주문
     //주문 목록을 저장할 변수
     orderList: [],

@@ -1,35 +1,37 @@
-section {
+@import '../../variables.scss';
+
+.magazine {
 
     .inner {
         text-align: center;
         margin: 0 auto;
 
-
         .title-box {
             display: flex;
             flex-direction: column;
             gap: 15px;
-            margin-bottom: 80px;
+            margin-bottom: 40px;
 
-            h1 {
-                font-size: 48px;
+            h2 {
+                font-size: 42px;
+                color: var(--main);
             }
 
-            h3 {
-                font-size: 32px;
-                font-weight: 500;
-                color: #969696;
+            p {
+                font-size: 23px;
+                color: var(--sub);
             }
         }
 
         .magazine-box {
             display: flex;
             gap: 21px;
+            justify-content: center;
         }
 
         .magazine-card {
             position: relative;
-            width: 465px;
+            width: 380px;
             overflow: hidden;
 
             img {
@@ -82,14 +84,12 @@ section {
                     transition: 0.3s;
 
                     &:hover {
-                        background: #000;
+                        background: var(--main);
                         color: #fff;
-                        border: 1px solid #000;
+                        border: 1px solid var(--main);
                     }
                 }
             }
-
-
         }
     }
 }

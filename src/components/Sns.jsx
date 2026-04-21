@@ -58,8 +58,8 @@ export default function Sns() {
         <section className="sns" ref={sectionRef}>
             <div className="inner">
                 <div className="title-box">
-                    <h1>iloom Moment.</h1>
-                    <h3>나의 일상이 화보가 되는 기록</h3>
+                    <h2>iloom Moment.</h2>
+                    <p>나의 일상이 화보가 되는 기록</p>
                 </div>
 
                 <div className="sns-grid">

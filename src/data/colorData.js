@@ -2,20 +2,32 @@ export const colorData = [
   {
     "category": "livingroom",
     "productCd": "HC70Y18EL",
-    "colorCd": "CZSE",
-    "localImgPath": "color_images/livingroom/CZSE.png"
+    "colorCd": [
+      "CZSE"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/CZSE.png"
+    ]
   },
   {
     "category": "livingroom",
     "productCd": "HC80Y04EEW",
-    "colorCd": "CZ",
-    "localImgPath": "color_images/livingroom/CZ.png"
+    "colorCd": [
+      "CZ"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/CZ.png"
+    ]
   },
   {
     "category": "livingroom",
     "productCd": "HC80Y12EEL",
-    "colorCd": "CZ",
-    "localImgPath": "color_images/livingroom/CZ.png"
+    "colorCd": [
+      "CZ"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/CZ.png"
+    ]
   },
   {
     "category": "livingroom",
@@ -116,56 +128,92 @@ export const colorData = [
   {
     "category": "livingroom",
     "productCd": "HCF2D21HL",
-    "colorCd": "SP",
-    "localImgPath": "color_images/livingroom/SP.png"
+    "colorCd": [
+      "SP"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/SP.png"
+    ]
   },
   {
     "category": "livingroom",
     "productCd": "HCF2D21LL",
-    "colorCd": "SP",
-    "localImgPath": "color_images/livingroom/SP.png"
+    "colorCd": [
+      "SP"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/SP.png"
+    ]
   },
   {
     "category": "livingroom",
     "productCd": "HCF2D31HL",
-    "colorCd": "SP",
-    "localImgPath": "color_images/livingroom/SP.png"
+    "colorCd": [
+      "SP"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/SP.png"
+    ]
   },
   {
     "category": "livingroom",
     "productCd": "HCF2D31LL",
-    "colorCd": "SP",
-    "localImgPath": "color_images/livingroom/SP.png"
+    "colorCd": [
+      "SP"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/SP.png"
+    ]
   },
   {
     "category": "livingroom",
     "productCd": "HCF2P21HL",
-    "colorCd": "SP",
-    "localImgPath": "color_images/livingroom/SP.png"
+    "colorCd": [
+      "SP"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/SP.png"
+    ]
   },
   {
     "category": "livingroom",
     "productCd": "HCF2P21LL",
-    "colorCd": "SP",
-    "localImgPath": "color_images/livingroom/SP.png"
+    "colorCd": [
+      "SP"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/SP.png"
+    ]
   },
   {
     "category": "livingroom",
     "productCd": "HCF2P31HL",
-    "colorCd": "SP",
-    "localImgPath": "color_images/livingroom/SP.png"
+    "colorCd": [
+      "SP"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/SP.png"
+    ]
   },
   {
     "category": "livingroom",
     "productCd": "HCF2P31LL",
-    "colorCd": "SP",
-    "localImgPath": "color_images/livingroom/SP.png"
+    "colorCd": [
+      "SP"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/SP.png"
+    ]
   },
   {
     "category": "livingroom",
     "productCd": "HCS0001",
-    "colorCd": "XX",
-    "localImgPath": "color_images/livingroom/XX.png"
+    "colorCd": [
+      "XX"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/XX.png"
+    ]
   },
   {
     "category": "livingroom",
@@ -568,14 +616,22 @@ export const colorData = [
   {
     "category": "livingroom",
     "productCd": "HCS762PF",
-    "colorCd": "3J1",
-    "localImgPath": "color_images/livingroom/3J1.png"
+    "colorCd": [
+      "3J1"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/3J1.png"
+    ]
   },
   {
     "category": "livingroom",
     "productCd": "HCS762PLF",
-    "colorCd": "3J1",
-    "localImgPath": "color_images/livingroom/3J1.png"
+    "colorCd": [
+      "3J1"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/3J1.png"
+    ]
   },
   {
     "category": "livingroom",
@@ -592,14 +648,22 @@ export const colorData = [
   {
     "category": "livingroom",
     "productCd": "HCS763PF",
-    "colorCd": "3J1",
-    "localImgPath": "color_images/livingroom/3J1.png"
+    "colorCd": [
+      "3J1"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/3J1.png"
+    ]
   },
   {
     "category": "livingroom",
     "productCd": "HCS763PLF",
-    "colorCd": "3J1",
-    "localImgPath": "color_images/livingroom/3J1.png"
+    "colorCd": [
+      "3J1"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/3J1.png"
+    ]
   },
   {
     "category": "livingroom",
@@ -616,32 +680,52 @@ export const colorData = [
   {
     "category": "livingroom",
     "productCd": "HCS7800CF",
-    "colorCd": "3T1",
-    "localImgPath": "color_images/livingroom/3T1.png"
+    "colorCd": [
+      "3T1"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/3T1.png"
+    ]
   },
   {
     "category": "livingroom",
     "productCd": "HCS7801ZF",
-    "colorCd": "3T1",
-    "localImgPath": "color_images/livingroom/3T1.png"
+    "colorCd": [
+      "3T1"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/3T1.png"
+    ]
   },
   {
     "category": "livingroom",
     "productCd": "HCS782F",
-    "colorCd": "3T1",
-    "localImgPath": "color_images/livingroom/3T1.png"
+    "colorCd": [
+      "3T1"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/3T1.png"
+    ]
   },
   {
     "category": "livingroom",
     "productCd": "HCS783CF",
-    "colorCd": "3T1",
-    "localImgPath": "color_images/livingroom/3T1.png"
+    "colorCd": [
+      "3T1"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/3T1.png"
+    ]
   },
   {
     "category": "livingroom",
     "productCd": "HCS783F",
-    "colorCd": "3T1",
-    "localImgPath": "color_images/livingroom/3T1.png"
+    "colorCd": [
+      "3T1"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/3T1.png"
+    ]
   },
   {
     "category": "livingroom",
@@ -1364,14 +1448,22 @@ export const colorData = [
   {
     "category": "livingroom",
     "productCd": "HL31Y12EL",
-    "colorCd": "SP",
-    "localImgPath": "color_images/livingroom/SP.png"
+    "colorCd": [
+      "SP"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/SP.png"
+    ]
   },
   {
     "category": "livingroom",
     "productCd": "HL32Y05EL",
-    "colorCd": "CZ",
-    "localImgPath": "color_images/livingroom/CZ.png"
+    "colorCd": [
+      "CZ"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/CZ.png"
+    ]
   },
   {
     "category": "livingroom",
@@ -1412,8 +1504,12 @@ export const colorData = [
   {
     "category": "livingroom",
     "productCd": "HL91T12ET",
-    "colorCd": "CZ",
-    "localImgPath": "color_images/livingroom/CZ.png"
+    "colorCd": [
+      "CZ"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/CZ.png"
+    ]
   },
   {
     "category": "livingroom",
@@ -1446,20 +1542,32 @@ export const colorData = [
   {
     "category": "livingroom",
     "productCd": "HLC0E04EU",
-    "colorCd": "FK",
-    "localImgPath": "color_images/livingroom/FK.png"
+    "colorCd": [
+      "FK"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/FK.png"
+    ]
   },
   {
     "category": "livingroom",
     "productCd": "HLC0E04HL",
-    "colorCd": "FK",
-    "localImgPath": "color_images/livingroom/FK.png"
+    "colorCd": [
+      "FK"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/FK.png"
+    ]
   },
   {
     "category": "livingroom",
     "productCd": "HLC0E04HU",
-    "colorCd": "FK",
-    "localImgPath": "color_images/livingroom/FK.png"
+    "colorCd": [
+      "FK"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/FK.png"
+    ]
   },
   {
     "category": "livingroom",
@@ -1532,14 +1640,22 @@ export const colorData = [
   {
     "category": "livingroom",
     "productCd": "HP62Y083E",
-    "colorCd": "SOAT",
-    "localImgPath": "color_images/livingroom/SOAT.png"
+    "colorCd": [
+      "SOAT"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/SOAT.png"
+    ]
   },
   {
     "category": "livingroom",
     "productCd": "HP62Y083U",
-    "colorCd": "SOAT",
-    "localImgPath": "color_images/livingroom/SOAT.png"
+    "colorCd": [
+      "SOAT"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/SOAT.png"
+    ]
   },
   {
     "category": "livingroom",
@@ -1580,8 +1696,12 @@ export const colorData = [
   {
     "category": "livingroom",
     "productCd": "HXEL510",
-    "colorCd": "IVNCC",
-    "localImgPath": "color_images/livingroom/IVNCC.png"
+    "colorCd": [
+      "IVNCC"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/IVNCC.png"
+    ]
   },
   {
     "category": "livingroom",
@@ -1874,26 +1994,42 @@ export const colorData = [
   {
     "category": "livingroom",
     "productCd": "ICS0013A",
-    "colorCd": "SO",
-    "localImgPath": "color_images/livingroom/SO.png"
+    "colorCd": [
+      "SO"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/SO.png"
+    ]
   },
   {
     "category": "livingroom",
     "productCd": "ICS0014A",
-    "colorCd": "SO",
-    "localImgPath": "color_images/livingroom/SO.png"
+    "colorCd": [
+      "SO"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/SO.png"
+    ]
   },
   {
     "category": "livingroom",
     "productCd": "ICS0015A",
-    "colorCd": "SO",
-    "localImgPath": "color_images/livingroom/SO.png"
+    "colorCd": [
+      "SO"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/SO.png"
+    ]
   },
   {
     "category": "livingroom",
     "productCd": "ICS0016A",
-    "colorCd": "SO",
-    "localImgPath": "color_images/livingroom/SO.png"
+    "colorCd": [
+      "SO"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/SO.png"
+    ]
   },
   {
     "category": "livingroom",
@@ -1958,8 +2094,12 @@ export const colorData = [
   {
     "category": "livingroom",
     "productCd": "IDV0006A",
-    "colorCd": "OAT",
-    "localImgPath": "color_images/livingroom/OAT.png"
+    "colorCd": [
+      "OAT"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/OAT.png"
+    ]
   },
   {
     "category": "livingroom",
@@ -3902,8 +4042,12 @@ export const colorData = [
   {
     "category": "livingroom",
     "productCd": "ISP00CY00A",
-    "colorCd": "5J1",
-    "localImgPath": "color_images/livingroom/5J1.png"
+    "colorCd": [
+      "5J1"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/5J1.png"
+    ]
   },
   {
     "category": "livingroom",
@@ -4464,14 +4608,22 @@ export const colorData = [
   {
     "category": "bedroom",
     "productCd": "HA00G01EEU",
-    "colorCd": "GY",
-    "localImgPath": "color_images/bedroom/GY.png"
+    "colorCd": [
+      "GY"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/GY.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "HA20S04EEF",
-    "colorCd": "2P1",
-    "localImgPath": "color_images/bedroom/2P1.png"
+    "colorCd": [
+      "2P1"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/2P1.png"
+    ]
   },
   {
     "category": "bedroom",
@@ -4488,8 +4640,12 @@ export const colorData = [
   {
     "category": "bedroom",
     "productCd": "HA72S00EEA",
-    "colorCd": "A481C",
-    "localImgPath": "color_images/bedroom/A481C.png"
+    "colorCd": [
+      "A481C"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/A481C.png"
+    ]
   },
   {
     "category": "bedroom",
@@ -5154,134 +5310,222 @@ export const colorData = [
   {
     "category": "bedroom",
     "productCd": "HBA411100",
-    "colorCd": "CZ",
-    "localImgPath": "color_images/livingroom/CZ.png"
+    "colorCd": [
+      "CZ"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/CZ.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "HBA411101",
-    "colorCd": "CZ",
-    "localImgPath": "color_images/livingroom/CZ.png"
+    "colorCd": [
+      "CZ"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/CZ.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "HBA411120",
-    "colorCd": "CZ",
-    "localImgPath": "color_images/livingroom/CZ.png"
+    "colorCd": [
+      "CZ"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/CZ.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "HBA411121",
-    "colorCd": "CZ",
-    "localImgPath": "color_images/livingroom/CZ.png"
+    "colorCd": [
+      "CZ"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/CZ.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "HBA501101",
-    "colorCd": "SP",
-    "localImgPath": "color_images/livingroom/SP.png"
+    "colorCd": [
+      "SP"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/SP.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "HBA501103",
-    "colorCd": "SP",
-    "localImgPath": "color_images/livingroom/SP.png"
+    "colorCd": [
+      "SP"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/SP.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "HBA501501",
-    "colorCd": "SP",
-    "localImgPath": "color_images/livingroom/SP.png"
+    "colorCd": [
+      "SP"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/SP.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "HBA501801",
-    "colorCd": "SP",
-    "localImgPath": "color_images/livingroom/SP.png"
+    "colorCd": [
+      "SP"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/SP.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "HBA50H04E",
-    "colorCd": "SP",
-    "localImgPath": "color_images/livingroom/SP.png"
+    "colorCd": [
+      "SP"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/SP.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "HBA50H06E",
-    "colorCd": "SP",
-    "localImgPath": "color_images/livingroom/SP.png"
+    "colorCd": [
+      "SP"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/SP.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "HBA50H08L",
-    "colorCd": "SP",
-    "localImgPath": "color_images/livingroom/SP.png"
+    "colorCd": [
+      "SP"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/SP.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "HBA50H08R",
-    "colorCd": "SP",
-    "localImgPath": "color_images/livingroom/SP.png"
+    "colorCd": [
+      "SP"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/SP.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "HBA511101",
-    "colorCd": "UW",
-    "localImgPath": "color_images/bedroom/UW.png"
+    "colorCd": [
+      "UW"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/UW.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "HBA511103",
-    "colorCd": "UW",
-    "localImgPath": "color_images/bedroom/UW.png"
+    "colorCd": [
+      "UW"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/UW.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "HBA511501",
-    "colorCd": "UW",
-    "localImgPath": "color_images/bedroom/UW.png"
+    "colorCd": [
+      "UW"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/UW.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "HBA511801",
-    "colorCd": "UW",
-    "localImgPath": "color_images/bedroom/UW.png"
+    "colorCd": [
+      "UW"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/UW.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "HBA51H04E",
-    "colorCd": "UW",
-    "localImgPath": "color_images/bedroom/UW.png"
+    "colorCd": [
+      "UW"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/UW.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "HBA51H06E",
-    "colorCd": "UW",
-    "localImgPath": "color_images/bedroom/UW.png"
+    "colorCd": [
+      "UW"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/UW.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "HBA51H08L",
-    "colorCd": "UW",
-    "localImgPath": "color_images/bedroom/UW.png"
+    "colorCd": [
+      "UW"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/UW.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "HBA51H08R",
-    "colorCd": "UW",
-    "localImgPath": "color_images/bedroom/UW.png"
+    "colorCd": [
+      "UW"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/UW.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "HC400801",
-    "colorCd": "SP",
-    "localImgPath": "color_images/livingroom/SP.png"
+    "colorCd": [
+      "SP"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/SP.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "HC400802",
-    "colorCd": "SP",
-    "localImgPath": "color_images/livingroom/SP.png"
+    "colorCd": [
+      "SP"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/SP.png"
+    ]
   },
   {
     "category": "bedroom",
@@ -5346,8 +5590,12 @@ export const colorData = [
   {
     "category": "bedroom",
     "productCd": "HD701013N",
-    "colorCd": "SP",
-    "localImgPath": "color_images/livingroom/SP.png"
+    "colorCd": [
+      "SP"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/SP.png"
+    ]
   },
   {
     "category": "bedroom",
@@ -5376,62 +5624,102 @@ export const colorData = [
   {
     "category": "bedroom",
     "productCd": "HDA500811",
-    "colorCd": "SP",
-    "localImgPath": "color_images/livingroom/SP.png"
+    "colorCd": [
+      "SP"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/SP.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "HDA510811",
-    "colorCd": "UW",
-    "localImgPath": "color_images/bedroom/UW.png"
+    "colorCd": [
+      "UW"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/UW.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "HP310651R",
-    "colorCd": "LDGYM",
-    "localImgPath": "color_images/livingroom/LDGYM.png"
+    "colorCd": [
+      "LDGYM"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/LDGYM.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "HP311041R",
-    "colorCd": "LDGYM",
-    "localImgPath": "color_images/livingroom/LDGYM.png"
+    "colorCd": [
+      "LDGYM"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/LDGYM.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "HP311231",
-    "colorCd": "LDGYM",
-    "localImgPath": "color_images/livingroom/LDGYM.png"
+    "colorCd": [
+      "LDGYM"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/LDGYM.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "HP570421",
-    "colorCd": "NCC",
-    "localImgPath": "color_images/bedroom/NCC.png"
+    "colorCd": [
+      "NCC"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/NCC.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "HP570432",
-    "colorCd": "NCC",
-    "localImgPath": "color_images/bedroom/NCC.png"
+    "colorCd": [
+      "NCC"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/NCC.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "HP720605R",
-    "colorCd": "OS",
-    "localImgPath": "color_images/bedroom/OS.png"
+    "colorCd": [
+      "OS"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/OS.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "HP721015",
-    "colorCd": "OS",
-    "localImgPath": "color_images/bedroom/OS.png"
+    "colorCd": [
+      "OS"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/OS.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "HP721025R",
-    "colorCd": "OS",
-    "localImgPath": "color_images/bedroom/OS.png"
+    "colorCd": [
+      "OS"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/OS.png"
+    ]
   },
   {
     "category": "bedroom",
@@ -5484,44 +5772,72 @@ export const colorData = [
   {
     "category": "bedroom",
     "productCd": "HPA500831",
-    "colorCd": "SP",
-    "localImgPath": "color_images/livingroom/SP.png"
+    "colorCd": [
+      "SP"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/SP.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "HPA501231",
-    "colorCd": "SP",
-    "localImgPath": "color_images/livingroom/SP.png"
+    "colorCd": [
+      "SP"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/SP.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "HPA510831",
-    "colorCd": "UW",
-    "localImgPath": "color_images/bedroom/UW.png"
+    "colorCd": [
+      "UW"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/UW.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "HPA511231",
-    "colorCd": "UW",
-    "localImgPath": "color_images/bedroom/UW.png"
+    "colorCd": [
+      "UW"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/UW.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "HSVA004",
-    "colorCd": "GYM",
-    "localImgPath": "color_images/livingroom/GYM.png"
+    "colorCd": [
+      "GYM"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/GYM.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "HU00R00EL",
-    "colorCd": "GYM",
-    "localImgPath": "color_images/livingroom/GYM.png"
+    "colorCd": [
+      "GYM"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/GYM.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "HU00R01EL",
-    "colorCd": "GYM",
-    "localImgPath": "color_images/livingroom/GYM.png"
+    "colorCd": [
+      "GYM"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/GYM.png"
+    ]
   },
   {
     "category": "bedroom",
@@ -5550,80 +5866,132 @@ export const colorData = [
   {
     "category": "bedroom",
     "productCd": "IBA0001A",
-    "colorCd": "SP",
-    "localImgPath": "color_images/livingroom/SP.png"
+    "colorCd": [
+      "SP"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/SP.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "IBF0003A",
-    "colorCd": "2Z2",
-    "localImgPath": "color_images/livingroom/2Z2.png"
+    "colorCd": [
+      "2Z2"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/2Z2.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "IBF0004A",
-    "colorCd": "2Z2",
-    "localImgPath": "color_images/livingroom/2Z2.png"
+    "colorCd": [
+      "2Z2"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/2Z2.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "IBF0005A",
-    "colorCd": "2Z2",
-    "localImgPath": "color_images/livingroom/2Z2.png"
+    "colorCd": [
+      "2Z2"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/2Z2.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "IBF0006A",
-    "colorCd": "2Z2",
-    "localImgPath": "color_images/livingroom/2Z2.png"
+    "colorCd": [
+      "2Z2"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/2Z2.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "IBF0007A",
-    "colorCd": "2Z2",
-    "localImgPath": "color_images/livingroom/2Z2.png"
+    "colorCd": [
+      "2Z2"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/2Z2.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "IBF0008A",
-    "colorCd": "2Z2",
-    "localImgPath": "color_images/livingroom/2Z2.png"
+    "colorCd": [
+      "2Z2"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/2Z2.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "IBF0011A",
-    "colorCd": "2Z2",
-    "localImgPath": "color_images/livingroom/2Z2.png"
+    "colorCd": [
+      "2Z2"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/2Z2.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "IBF0012A",
-    "colorCd": "2Z2",
-    "localImgPath": "color_images/livingroom/2Z2.png"
+    "colorCd": [
+      "2Z2"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/2Z2.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "IBF0013A",
-    "colorCd": "2Z2",
-    "localImgPath": "color_images/livingroom/2Z2.png"
+    "colorCd": [
+      "2Z2"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/2Z2.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "IBF0014A",
-    "colorCd": "2Z2",
-    "localImgPath": "color_images/livingroom/2Z2.png"
+    "colorCd": [
+      "2Z2"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/2Z2.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "IBF0015A",
-    "colorCd": "5K1L",
-    "localImgPath": "color_images/bedroom/5K1L.png"
+    "colorCd": [
+      "5K1L"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/5K1L.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "IBF0016A",
-    "colorCd": "5K1L",
-    "localImgPath": "color_images/bedroom/5K1L.png"
+    "colorCd": [
+      "5K1L"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/5K1L.png"
+    ]
   },
   {
     "category": "bedroom",
@@ -5652,110 +6020,182 @@ export const colorData = [
   {
     "category": "bedroom",
     "productCd": "IBF0038A",
-    "colorCd": "2V2L",
-    "localImgPath": "color_images/bedroom/2V2L.png"
+    "colorCd": [
+      "2V2L"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/2V2L.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "IBF0039A",
-    "colorCd": "2V2L",
-    "localImgPath": "color_images/bedroom/2V2L.png"
+    "colorCd": [
+      "2V2L"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/2V2L.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "IBF0040A",
-    "colorCd": "2V2L",
-    "localImgPath": "color_images/bedroom/2V2L.png"
+    "colorCd": [
+      "2V2L"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/2V2L.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "IBF0041A",
-    "colorCd": "2V2L",
-    "localImgPath": "color_images/bedroom/2V2L.png"
+    "colorCd": [
+      "2V2L"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/2V2L.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "IBG0000A",
-    "colorCd": "2Z2",
-    "localImgPath": "color_images/livingroom/2Z2.png"
+    "colorCd": [
+      "2Z2"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/2Z2.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "IBG0001A",
-    "colorCd": "2Z2",
-    "localImgPath": "color_images/livingroom/2Z2.png"
+    "colorCd": [
+      "2Z2"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/2Z2.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "IBG0002A",
-    "colorCd": "2Z2",
-    "localImgPath": "color_images/livingroom/2Z2.png"
+    "colorCd": [
+      "2Z2"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/2Z2.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "IBG0003A",
-    "colorCd": "2Z2",
-    "localImgPath": "color_images/livingroom/2Z2.png"
+    "colorCd": [
+      "2Z2"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/2Z2.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "IBG0004A",
-    "colorCd": "2Z2",
-    "localImgPath": "color_images/livingroom/2Z2.png"
+    "colorCd": [
+      "2Z2"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/2Z2.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "IBG0005A",
-    "colorCd": "2Z2",
-    "localImgPath": "color_images/livingroom/2Z2.png"
+    "colorCd": [
+      "2Z2"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/2Z2.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "IBG0006A",
-    "colorCd": "2Z2",
-    "localImgPath": "color_images/livingroom/2Z2.png"
+    "colorCd": [
+      "2Z2"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/2Z2.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "IBG0020A",
-    "colorCd": "2V2L",
-    "localImgPath": "color_images/bedroom/2V2L.png"
+    "colorCd": [
+      "2V2L"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/2V2L.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "IBG0021A",
-    "colorCd": "2V2L",
-    "localImgPath": "color_images/bedroom/2V2L.png"
+    "colorCd": [
+      "2V2L"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/2V2L.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "IBG0022A",
-    "colorCd": "2V2L",
-    "localImgPath": "color_images/bedroom/2V2L.png"
+    "colorCd": [
+      "2V2L"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/2V2L.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "IBG0023A",
-    "colorCd": "2V2L",
-    "localImgPath": "color_images/bedroom/2V2L.png"
+    "colorCd": [
+      "2V2L"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/2V2L.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "IBG0024A",
-    "colorCd": "2V2L",
-    "localImgPath": "color_images/bedroom/2V2L.png"
+    "colorCd": [
+      "2V2L"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/2V2L.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "IBG0025A",
-    "colorCd": "2V2L",
-    "localImgPath": "color_images/bedroom/2V2L.png"
+    "colorCd": [
+      "2V2L"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/2V2L.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "IBG0026A",
-    "colorCd": "2V2L",
-    "localImgPath": "color_images/bedroom/2V2L.png"
+    "colorCd": [
+      "2V2L"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/2V2L.png"
+    ]
   },
   {
     "category": "bedroom",
@@ -5774,50 +6214,82 @@ export const colorData = [
   {
     "category": "bedroom",
     "productCd": "IBG20AW01A",
-    "colorCd": "2Z2",
-    "localImgPath": "color_images/livingroom/2Z2.png"
+    "colorCd": [
+      "2Z2"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/2Z2.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "IBG20AW02A",
-    "colorCd": "2V2L",
-    "localImgPath": "color_images/bedroom/2V2L.png"
+    "colorCd": [
+      "2V2L"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/2V2L.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "IBL0000A",
-    "colorCd": "2Z2",
-    "localImgPath": "color_images/livingroom/2Z2.png"
+    "colorCd": [
+      "2Z2"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/2Z2.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "IBL0001A",
-    "colorCd": "2Z2",
-    "localImgPath": "color_images/livingroom/2Z2.png"
+    "colorCd": [
+      "2Z2"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/2Z2.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "IBL0002A",
-    "colorCd": "2Z2",
-    "localImgPath": "color_images/livingroom/2Z2.png"
+    "colorCd": [
+      "2Z2"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/2Z2.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "IBL0003A",
-    "colorCd": "2Z2",
-    "localImgPath": "color_images/livingroom/2Z2.png"
+    "colorCd": [
+      "2Z2"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/2Z2.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "IBL0004A",
-    "colorCd": "2Z2",
-    "localImgPath": "color_images/livingroom/2Z2.png"
+    "colorCd": [
+      "2Z2"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/2Z2.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "IBL0005A",
-    "colorCd": "2Z2",
-    "localImgPath": "color_images/livingroom/2Z2.png"
+    "colorCd": [
+      "2Z2"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/2Z2.png"
+    ]
   },
   {
     "category": "bedroom",
@@ -5966,104 +6438,172 @@ export const colorData = [
   {
     "category": "bedroom",
     "productCd": "IBL0032A",
-    "colorCd": "2V2L",
-    "localImgPath": "color_images/bedroom/2V2L.png"
+    "colorCd": [
+      "2V2L"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/2V2L.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "IBL0033A",
-    "colorCd": "2V2L",
-    "localImgPath": "color_images/bedroom/2V2L.png"
+    "colorCd": [
+      "2V2L"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/2V2L.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "IBL0034A",
-    "colorCd": "2V2L",
-    "localImgPath": "color_images/bedroom/2V2L.png"
+    "colorCd": [
+      "2V2L"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/2V2L.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "IBL0035A",
-    "colorCd": "2V2L",
-    "localImgPath": "color_images/bedroom/2V2L.png"
+    "colorCd": [
+      "2V2L"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/2V2L.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "IBL0036A",
-    "colorCd": "2V2L",
-    "localImgPath": "color_images/bedroom/2V2L.png"
+    "colorCd": [
+      "2V2L"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/2V2L.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "IBL0037A",
-    "colorCd": "2V2L",
-    "localImgPath": "color_images/bedroom/2V2L.png"
+    "colorCd": [
+      "2V2L"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/2V2L.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "IBL0038A",
-    "colorCd": "2V2L",
-    "localImgPath": "color_images/bedroom/2V2L.png"
+    "colorCd": [
+      "2V2L"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/2V2L.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "IBL0039A",
-    "colorCd": "2V2L",
-    "localImgPath": "color_images/bedroom/2V2L.png"
+    "colorCd": [
+      "2V2L"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/2V2L.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "IBL0040A",
-    "colorCd": "2V2L",
-    "localImgPath": "color_images/bedroom/2V2L.png"
+    "colorCd": [
+      "2V2L"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/2V2L.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "IBL0041A",
-    "colorCd": "2V2L",
-    "localImgPath": "color_images/bedroom/2V2L.png"
+    "colorCd": [
+      "2V2L"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/2V2L.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "IBL0042A",
-    "colorCd": "2V2L",
-    "localImgPath": "color_images/bedroom/2V2L.png"
+    "colorCd": [
+      "2V2L"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/2V2L.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "IBL0043A",
-    "colorCd": "2V2L",
-    "localImgPath": "color_images/bedroom/2V2L.png"
+    "colorCd": [
+      "2V2L"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/2V2L.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "IBM0002A",
-    "colorCd": "SP",
-    "localImgPath": "color_images/livingroom/SP.png"
+    "colorCd": [
+      "SP"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/SP.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "IBM0003A",
-    "colorCd": "SP",
-    "localImgPath": "color_images/livingroom/SP.png"
+    "colorCd": [
+      "SP"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/SP.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "IBS0011A",
-    "colorCd": "SO",
-    "localImgPath": "color_images/livingroom/SO.png"
+    "colorCd": [
+      "SO"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/SO.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "IBS0016A",
-    "colorCd": "SO",
-    "localImgPath": "color_images/livingroom/SO.png"
+    "colorCd": [
+      "SO"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/SO.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "IBS0018A",
-    "colorCd": "SO",
-    "localImgPath": "color_images/livingroom/SO.png"
+    "colorCd": [
+      "SO"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/SO.png"
+    ]
   },
   {
     "category": "bedroom",
@@ -6080,14 +6620,22 @@ export const colorData = [
   {
     "category": "bedroom",
     "productCd": "IDE0001A",
-    "colorCd": "SO",
-    "localImgPath": "color_images/livingroom/SO.png"
+    "colorCd": [
+      "SO"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/SO.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "IDE0005A",
-    "colorCd": "OAT",
-    "localImgPath": "color_images/livingroom/OAT.png"
+    "colorCd": [
+      "OAT"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/OAT.png"
+    ]
   },
   {
     "category": "bedroom",
@@ -6144,8 +6692,12 @@ export const colorData = [
   {
     "category": "bedroom",
     "productCd": "IMF11AB00A",
-    "colorCd": "9M3",
-    "localImgPath": "color_images/bedroom/9M3.png"
+    "colorCd": [
+      "9M3"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/9M3.png"
+    ]
   },
   {
     "category": "bedroom",
@@ -6270,14 +6822,22 @@ export const colorData = [
   {
     "category": "bedroom",
     "productCd": "IPS0000A",
-    "colorCd": "SP",
-    "localImgPath": "color_images/livingroom/SP.png"
+    "colorCd": [
+      "SP"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/SP.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "IPS0001A",
-    "colorCd": "SP",
-    "localImgPath": "color_images/livingroom/SP.png"
+    "colorCd": [
+      "SP"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/SP.png"
+    ]
   },
   {
     "category": "bedroom",
@@ -6306,56 +6866,92 @@ export const colorData = [
   {
     "category": "bedroom",
     "productCd": "IVP0001A",
-    "colorCd": "5K1L",
-    "localImgPath": "color_images/bedroom/5K1L.png"
+    "colorCd": [
+      "5K1L"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/5K1L.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "IVP0002A",
-    "colorCd": "5K1L",
-    "localImgPath": "color_images/bedroom/5K1L.png"
+    "colorCd": [
+      "5K1L"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/5K1L.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "IVP0004A",
-    "colorCd": "SO",
-    "localImgPath": "color_images/livingroom/SO.png"
+    "colorCd": [
+      "SO"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/SO.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "IVP0005A",
-    "colorCd": "SO",
-    "localImgPath": "color_images/livingroom/SO.png"
+    "colorCd": [
+      "SO"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/SO.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "IVP0006A",
-    "colorCd": "SO",
-    "localImgPath": "color_images/livingroom/SO.png"
+    "colorCd": [
+      "SO"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/SO.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "IVP0007A",
-    "colorCd": "SO",
-    "localImgPath": "color_images/livingroom/SO.png"
+    "colorCd": [
+      "SO"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/SO.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "IVP0008A",
-    "colorCd": "SO",
-    "localImgPath": "color_images/livingroom/SO.png"
+    "colorCd": [
+      "SO"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/SO.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "IVP0009A",
-    "colorCd": "SO",
-    "localImgPath": "color_images/livingroom/SO.png"
+    "colorCd": [
+      "SO"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/SO.png"
+    ]
   },
   {
     "category": "bedroom",
     "productCd": "IVP0010A",
-    "colorCd": "SO",
-    "localImgPath": "color_images/livingroom/SO.png"
+    "colorCd": [
+      "SO"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/SO.png"
+    ]
   },
   {
     "category": "dining-room",
@@ -6480,8 +7076,12 @@ export const colorData = [
   {
     "category": "dining-room",
     "productCd": "HCB2E10L",
-    "colorCd": "SP",
-    "localImgPath": "color_images/livingroom/SP.png"
+    "colorCd": [
+      "SP"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/SP.png"
+    ]
   },
   {
     "category": "dining-room",
@@ -6544,8 +7144,12 @@ export const colorData = [
   {
     "category": "dining-room",
     "productCd": "HCH3001",
-    "colorCd": "BWWW",
-    "localImgPath": "color_images/dining-room/BWWW.png"
+    "colorCd": [
+      "BWWW"
+    ],
+    "localImgPath": [
+      "color_images/dining-room/BWWW.png"
+    ]
   },
   {
     "category": "dining-room",
@@ -6576,26 +7180,42 @@ export const colorData = [
   {
     "category": "dining-room",
     "productCd": "HCH6000",
-    "colorCd": "451WW",
-    "localImgPath": "color_images/dining-room/451WW.png"
+    "colorCd": [
+      "451WW"
+    ],
+    "localImgPath": [
+      "color_images/dining-room/451WW.png"
+    ]
   },
   {
     "category": "dining-room",
     "productCd": "HCH6001",
-    "colorCd": "BWWW",
-    "localImgPath": "color_images/dining-room/BWWW.png"
+    "colorCd": [
+      "BWWW"
+    ],
+    "localImgPath": [
+      "color_images/dining-room/BWWW.png"
+    ]
   },
   {
     "category": "dining-room",
     "productCd": "HCH702B",
-    "colorCd": "CZ",
-    "localImgPath": "color_images/livingroom/CZ.png"
+    "colorCd": [
+      "CZ"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/CZ.png"
+    ]
   },
   {
     "category": "dining-room",
     "productCd": "HCH703B",
-    "colorCd": "CZ",
-    "localImgPath": "color_images/livingroom/CZ.png"
+    "colorCd": [
+      "CZ"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/CZ.png"
+    ]
   },
   {
     "category": "dining-room",
@@ -6614,8 +7234,12 @@ export const colorData = [
   {
     "category": "dining-room",
     "productCd": "HCH9001",
-    "colorCd": "3H5",
-    "localImgPath": "color_images/dining-room/3H5.png"
+    "colorCd": [
+      "3H5"
+    ],
+    "localImgPath": [
+      "color_images/dining-room/3H5.png"
+    ]
   },
   {
     "category": "dining-room",
@@ -6656,8 +7280,12 @@ export const colorData = [
   {
     "category": "dining-room",
     "productCd": "HL13T10HF",
-    "colorCd": "bia",
-    "localImgPath": ""
+    "colorCd": [
+      "bia"
+    ],
+    "localImgPath": [
+      ""
+    ]
   },
   {
     "category": "dining-room",
@@ -6674,14 +7302,22 @@ export const colorData = [
   {
     "category": "dining-room",
     "productCd": "HL13T14HF",
-    "colorCd": "bia",
-    "localImgPath": ""
+    "colorCd": [
+      "bia"
+    ],
+    "localImgPath": [
+      ""
+    ]
   },
   {
     "category": "dining-room",
     "productCd": "HL13T16HF",
-    "colorCd": "bia",
-    "localImgPath": ""
+    "colorCd": [
+      "bia"
+    ],
+    "localImgPath": [
+      ""
+    ]
   },
   {
     "category": "dining-room",
@@ -6698,8 +7334,12 @@ export const colorData = [
   {
     "category": "dining-room",
     "productCd": "HL13T19HF",
-    "colorCd": "bia",
-    "localImgPath": ""
+    "colorCd": [
+      "bia"
+    ],
+    "localImgPath": [
+      ""
+    ]
   },
   {
     "category": "dining-room",
@@ -6716,68 +7356,112 @@ export const colorData = [
   {
     "category": "dining-room",
     "productCd": "HSUD012H",
-    "colorCd": "NCCGY",
-    "localImgPath": "color_images/dining-room/NCCGY.png"
+    "colorCd": [
+      "NCCGY"
+    ],
+    "localImgPath": [
+      "color_images/dining-room/NCCGY.png"
+    ]
   },
   {
     "category": "dining-room",
     "productCd": "HSUD014",
-    "colorCd": "NCCGY",
-    "localImgPath": "color_images/dining-room/NCCGY.png"
+    "colorCd": [
+      "NCCGY"
+    ],
+    "localImgPath": [
+      "color_images/dining-room/NCCGY.png"
+    ]
   },
   {
     "category": "dining-room",
     "productCd": "HSUD014F",
-    "colorCd": "NGAGY",
-    "localImgPath": "color_images/dining-room/NGAGY.png"
+    "colorCd": [
+      "NGAGY"
+    ],
+    "localImgPath": [
+      "color_images/dining-room/NGAGY.png"
+    ]
   },
   {
     "category": "dining-room",
     "productCd": "HSUD018F",
-    "colorCd": "NGAGY",
-    "localImgPath": "color_images/dining-room/NGAGY.png"
+    "colorCd": [
+      "NGAGY"
+    ],
+    "localImgPath": [
+      "color_images/dining-room/NGAGY.png"
+    ]
   },
   {
     "category": "dining-room",
     "productCd": "HSUD018T",
-    "colorCd": "NCCGY",
-    "localImgPath": "color_images/dining-room/NCCGY.png"
+    "colorCd": [
+      "NCCGY"
+    ],
+    "localImgPath": [
+      "color_images/dining-room/NCCGY.png"
+    ]
   },
   {
     "category": "dining-room",
     "productCd": "HT00Y06EL",
-    "colorCd": "IVIVM",
-    "localImgPath": "color_images/dining-room/IVIVM.png"
+    "colorCd": [
+      "IVIVM"
+    ],
+    "localImgPath": [
+      "color_images/dining-room/IVIVM.png"
+    ]
   },
   {
     "category": "dining-room",
     "productCd": "HT00Y06LL",
-    "colorCd": "IVIVM",
-    "localImgPath": "color_images/dining-room/IVIVM.png"
+    "colorCd": [
+      "IVIVM"
+    ],
+    "localImgPath": [
+      "color_images/dining-room/IVIVM.png"
+    ]
   },
   {
     "category": "dining-room",
     "productCd": "HT00Y08EL",
-    "colorCd": "IVIVM",
-    "localImgPath": "color_images/dining-room/IVIVM.png"
+    "colorCd": [
+      "IVIVM"
+    ],
+    "localImgPath": [
+      "color_images/dining-room/IVIVM.png"
+    ]
   },
   {
     "category": "dining-room",
     "productCd": "HT00Y08LL",
-    "colorCd": "IVIVM",
-    "localImgPath": "color_images/dining-room/IVIVM.png"
+    "colorCd": [
+      "IVIVM"
+    ],
+    "localImgPath": [
+      "color_images/dining-room/IVIVM.png"
+    ]
   },
   {
     "category": "dining-room",
     "productCd": "HT30T14EL",
-    "colorCd": "WWAD",
-    "localImgPath": "color_images/dining-room/WWAD.png"
+    "colorCd": [
+      "WWAD"
+    ],
+    "localImgPath": [
+      "color_images/dining-room/WWAD.png"
+    ]
   },
   {
     "category": "dining-room",
     "productCd": "HT30T16EL",
-    "colorCd": "WWAD",
-    "localImgPath": "color_images/dining-room/WWAD.png"
+    "colorCd": [
+      "WWAD"
+    ],
+    "localImgPath": [
+      "color_images/dining-room/WWAD.png"
+    ]
   },
   {
     "category": "dining-room",
@@ -6806,38 +7490,62 @@ export const colorData = [
   {
     "category": "dining-room",
     "productCd": "HT71Y17EL",
-    "colorCd": "CZ",
-    "localImgPath": "color_images/livingroom/CZ.png"
+    "colorCd": [
+      "CZ"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/CZ.png"
+    ]
   },
   {
     "category": "dining-room",
     "productCd": "HT71Y21EL",
-    "colorCd": "CZ",
-    "localImgPath": "color_images/livingroom/CZ.png"
+    "colorCd": [
+      "CZ"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/CZ.png"
+    ]
   },
   {
     "category": "dining-room",
     "productCd": "HT90Y16EF",
-    "colorCd": "bia",
-    "localImgPath": ""
+    "colorCd": [
+      "bia"
+    ],
+    "localImgPath": [
+      ""
+    ]
   },
   {
     "category": "dining-room",
     "productCd": "HT90Y16EL",
-    "colorCd": "IV",
-    "localImgPath": "color_images/bedroom/IV.png"
+    "colorCd": [
+      "IV"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/IV.png"
+    ]
   },
   {
     "category": "dining-room",
     "productCd": "HT90Y19EF",
-    "colorCd": "bia",
-    "localImgPath": ""
+    "colorCd": [
+      "bia"
+    ],
+    "localImgPath": [
+      ""
+    ]
   },
   {
     "category": "dining-room",
     "productCd": "HT90Y19HF",
-    "colorCd": "bia",
-    "localImgPath": ""
+    "colorCd": [
+      "bia"
+    ],
+    "localImgPath": [
+      ""
+    ]
   },
   {
     "category": "dining-room",
@@ -6866,14 +7574,22 @@ export const colorData = [
   {
     "category": "dining-room",
     "productCd": "HTUD1200H",
-    "colorCd": "NCC451",
-    "localImgPath": "color_images/dining-room/NCC451.png"
+    "colorCd": [
+      "NCC451"
+    ],
+    "localImgPath": [
+      "color_images/dining-room/NCC451.png"
+    ]
   },
   {
     "category": "dining-room",
     "productCd": "HTUD1201H",
-    "colorCd": "NCCBW",
-    "localImgPath": "color_images/dining-room/NCCBW.png"
+    "colorCd": [
+      "NCCBW"
+    ],
+    "localImgPath": [
+      "color_images/dining-room/NCCBW.png"
+    ]
   },
   {
     "category": "dining-room",
@@ -7038,26 +7754,42 @@ export const colorData = [
   {
     "category": "dining-room",
     "productCd": "IDD0013A",
-    "colorCd": "SO",
-    "localImgPath": "color_images/livingroom/SO.png"
+    "colorCd": [
+      "SO"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/SO.png"
+    ]
   },
   {
     "category": "dining-room",
     "productCd": "IDD0014A",
-    "colorCd": "bia",
-    "localImgPath": ""
+    "colorCd": [
+      "bia"
+    ],
+    "localImgPath": [
+      ""
+    ]
   },
   {
     "category": "dining-room",
     "productCd": "IDD0015A",
-    "colorCd": "SO",
-    "localImgPath": "color_images/livingroom/SO.png"
+    "colorCd": [
+      "SO"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/SO.png"
+    ]
   },
   {
     "category": "dining-room",
     "productCd": "IDD0016A",
-    "colorCd": "bia",
-    "localImgPath": ""
+    "colorCd": [
+      "bia"
+    ],
+    "localImgPath": [
+      ""
+    ]
   },
   {
     "category": "dining-room",
@@ -7162,98 +7894,162 @@ export const colorData = [
   {
     "category": "dining-room",
     "productCd": "IDM0001A",
-    "colorCd": "SP",
-    "localImgPath": "color_images/livingroom/SP.png"
+    "colorCd": [
+      "SP"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/SP.png"
+    ]
   },
   {
     "category": "dining-room",
     "productCd": "IDM0002A",
-    "colorCd": "SP",
-    "localImgPath": "color_images/livingroom/SP.png"
+    "colorCd": [
+      "SP"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/SP.png"
+    ]
   },
   {
     "category": "dining-room",
     "productCd": "IDM0003A",
-    "colorCd": "SSP",
-    "localImgPath": "color_images/dining-room/SSP.png"
+    "colorCd": [
+      "SSP"
+    ],
+    "localImgPath": [
+      "color_images/dining-room/SSP.png"
+    ]
   },
   {
     "category": "dining-room",
     "productCd": "IDM0004A",
-    "colorCd": "SSP",
-    "localImgPath": "color_images/dining-room/SSP.png"
+    "colorCd": [
+      "SSP"
+    ],
+    "localImgPath": [
+      "color_images/dining-room/SSP.png"
+    ]
   },
   {
     "category": "dining-room",
     "productCd": "IDM0005A",
-    "colorCd": "SP",
-    "localImgPath": "color_images/livingroom/SP.png"
+    "colorCd": [
+      "SP"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/SP.png"
+    ]
   },
   {
     "category": "dining-room",
     "productCd": "IDM0006A",
-    "colorCd": "SSP",
-    "localImgPath": "color_images/dining-room/SSP.png"
+    "colorCd": [
+      "SSP"
+    ],
+    "localImgPath": [
+      "color_images/dining-room/SSP.png"
+    ]
   },
   {
     "category": "dining-room",
     "productCd": "IKB0001A",
-    "colorCd": "SPSP",
-    "localImgPath": "color_images/dining-room/SPSP.png"
+    "colorCd": [
+      "SPSP"
+    ],
+    "localImgPath": [
+      "color_images/dining-room/SPSP.png"
+    ]
   },
   {
     "category": "dining-room",
     "productCd": "IKB0002A",
-    "colorCd": "SPSP",
-    "localImgPath": "color_images/dining-room/SPSP.png"
+    "colorCd": [
+      "SPSP"
+    ],
+    "localImgPath": [
+      "color_images/dining-room/SPSP.png"
+    ]
   },
   {
     "category": "dining-room",
     "productCd": "IKB0004A",
-    "colorCd": "SO",
-    "localImgPath": "color_images/livingroom/SO.png"
+    "colorCd": [
+      "SO"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/SO.png"
+    ]
   },
   {
     "category": "dining-room",
     "productCd": "IKB0005A",
-    "colorCd": "SO",
-    "localImgPath": "color_images/livingroom/SO.png"
+    "colorCd": [
+      "SO"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/SO.png"
+    ]
   },
   {
     "category": "dining-room",
     "productCd": "IKB0006A",
-    "colorCd": "SO",
-    "localImgPath": "color_images/livingroom/SO.png"
+    "colorCd": [
+      "SO"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/SO.png"
+    ]
   },
   {
     "category": "dining-room",
     "productCd": "IKB0007A",
-    "colorCd": "SO",
-    "localImgPath": "color_images/livingroom/SO.png"
+    "colorCd": [
+      "SO"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/SO.png"
+    ]
   },
   {
     "category": "dining-room",
     "productCd": "IKB0008A",
-    "colorCd": "SO",
-    "localImgPath": "color_images/livingroom/SO.png"
+    "colorCd": [
+      "SO"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/SO.png"
+    ]
   },
   {
     "category": "dining-room",
     "productCd": "IKB0009A",
-    "colorCd": "SO",
-    "localImgPath": "color_images/livingroom/SO.png"
+    "colorCd": [
+      "SO"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/SO.png"
+    ]
   },
   {
     "category": "dining-room",
     "productCd": "IKB0010A",
-    "colorCd": "SO",
-    "localImgPath": "color_images/livingroom/SO.png"
+    "colorCd": [
+      "SO"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/SO.png"
+    ]
   },
   {
     "category": "dining-room",
     "productCd": "IKB0011A",
-    "colorCd": "SO",
-    "localImgPath": "color_images/livingroom/SO.png"
+    "colorCd": [
+      "SO"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/SO.png"
+    ]
   },
   {
     "category": "dining-room",
@@ -7294,32 +8090,52 @@ export const colorData = [
   {
     "category": "dining-room",
     "productCd": "IKP0004A",
-    "colorCd": "SO",
-    "localImgPath": "color_images/livingroom/SO.png"
+    "colorCd": [
+      "SO"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/SO.png"
+    ]
   },
   {
     "category": "dining-room",
     "productCd": "IKS00CE06A",
-    "colorCd": "SO",
-    "localImgPath": "color_images/livingroom/SO.png"
+    "colorCd": [
+      "SO"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/SO.png"
+    ]
   },
   {
     "category": "dining-room",
     "productCd": "IKT0001A",
-    "colorCd": "SO",
-    "localImgPath": "color_images/livingroom/SO.png"
+    "colorCd": [
+      "SO"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/SO.png"
+    ]
   },
   {
     "category": "dining-room",
     "productCd": "IKT0002A",
-    "colorCd": "SO",
-    "localImgPath": "color_images/livingroom/SO.png"
+    "colorCd": [
+      "SO"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/SO.png"
+    ]
   },
   {
     "category": "dining-room",
     "productCd": "IKT0003A",
-    "colorCd": "SO",
-    "localImgPath": "color_images/livingroom/SO.png"
+    "colorCd": [
+      "SO"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/SO.png"
+    ]
   },
   {
     "category": "dining-room",
@@ -7376,8 +8192,12 @@ export const colorData = [
   {
     "category": "dining-room",
     "productCd": "ITY00CW01A",
-    "colorCd": "NRO",
-    "localImgPath": "color_images/dining-room/NRO.png"
+    "colorCd": [
+      "NRO"
+    ],
+    "localImgPath": [
+      "color_images/dining-room/NRO.png"
+    ]
   },
   {
     "category": "dining-room",
@@ -7406,14 +8226,22 @@ export const colorData = [
   {
     "category": "dining-room",
     "productCd": "IUX25126",
-    "colorCd": "BICGY",
-    "localImgPath": "color_images/dining-room/BICGY.png"
+    "colorCd": [
+      "BICGY"
+    ],
+    "localImgPath": [
+      "color_images/dining-room/BICGY.png"
+    ]
   },
   {
     "category": "dining-room",
     "productCd": "IYX24002",
-    "colorCd": "UA",
-    "localImgPath": "color_images/dining-room/UA.png"
+    "colorCd": [
+      "UA"
+    ],
+    "localImgPath": [
+      "color_images/dining-room/UA.png"
+    ]
   },
   {
     "category": "dining-room",
@@ -7580,8 +8408,12 @@ export const colorData = [
   {
     "category": "home-library",
     "productCd": "HSFB044G",
-    "colorCd": "BRZ",
-    "localImgPath": "color_images/home-library/BRZ.png"
+    "colorCd": [
+      "BRZ"
+    ],
+    "localImgPath": [
+      "color_images/home-library/BRZ.png"
+    ]
   },
   {
     "category": "home-library",
@@ -7816,8 +8648,12 @@ export const colorData = [
   {
     "category": "home-library",
     "productCd": "HSGA0005",
-    "colorCd": "GY",
-    "localImgPath": "color_images/bedroom/GY.png"
+    "colorCd": [
+      "GY"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/GY.png"
+    ]
   },
   {
     "category": "home-library",
@@ -7918,8 +8754,12 @@ export const colorData = [
   {
     "category": "home-library",
     "productCd": "HSKA0002",
-    "colorCd": "IV",
-    "localImgPath": "color_images/bedroom/IV.png"
+    "colorCd": [
+      "IV"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/IV.png"
+    ]
   },
   {
     "category": "home-library",
@@ -7936,8 +8776,12 @@ export const colorData = [
   {
     "category": "home-library",
     "productCd": "HSPA0001",
-    "colorCd": "NCC",
-    "localImgPath": "color_images/bedroom/NCC.png"
+    "colorCd": [
+      "NCC"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/NCC.png"
+    ]
   },
   {
     "category": "home-library",
@@ -8146,32 +8990,52 @@ export const colorData = [
   {
     "category": "home-library",
     "productCd": "HSSE290F",
-    "colorCd": "NCCGU",
-    "localImgPath": "color_images/home-library/NCCGU.png"
+    "colorCd": [
+      "NCCGU"
+    ],
+    "localImgPath": [
+      "color_images/home-library/NCCGU.png"
+    ]
   },
   {
     "category": "home-library",
     "productCd": "HSUA0100",
-    "colorCd": "NCC",
-    "localImgPath": "color_images/bedroom/NCC.png"
+    "colorCd": [
+      "NCC"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/NCC.png"
+    ]
   },
   {
     "category": "home-library",
     "productCd": "HSUD012",
-    "colorCd": "NCC",
-    "localImgPath": "color_images/bedroom/NCC.png"
+    "colorCd": [
+      "NCC"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/NCC.png"
+    ]
   },
   {
     "category": "home-library",
     "productCd": "HSUD014P",
-    "colorCd": "NCCGG",
-    "localImgPath": "color_images/home-library/NCCGG.png"
+    "colorCd": [
+      "NCCGG"
+    ],
+    "localImgPath": [
+      "color_images/home-library/NCCGG.png"
+    ]
   },
   {
     "category": "home-library",
     "productCd": "HSUD018",
-    "colorCd": "NCC",
-    "localImgPath": "color_images/bedroom/NCC.png"
+    "colorCd": [
+      "NCC"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/NCC.png"
+    ]
   },
   {
     "category": "home-library",
@@ -8188,44 +9052,72 @@ export const colorData = [
   {
     "category": "home-library",
     "productCd": "HSVA0008",
-    "colorCd": "BK",
-    "localImgPath": "color_images/dining-room/BK.png"
+    "colorCd": [
+      "BK"
+    ],
+    "localImgPath": [
+      "color_images/dining-room/BK.png"
+    ]
   },
   {
     "category": "home-library",
     "productCd": "HSVC084N",
-    "colorCd": "WP",
-    "localImgPath": "color_images/dining-room/WP.png"
+    "colorCd": [
+      "WP"
+    ],
+    "localImgPath": [
+      "color_images/dining-room/WP.png"
+    ]
   },
   {
     "category": "home-library",
     "productCd": "HSVC086N",
-    "colorCd": "WP",
-    "localImgPath": "color_images/dining-room/WP.png"
+    "colorCd": [
+      "WP"
+    ],
+    "localImgPath": [
+      "color_images/dining-room/WP.png"
+    ]
   },
   {
     "category": "home-library",
     "productCd": "HSVC124N",
-    "colorCd": "WP",
-    "localImgPath": "color_images/dining-room/WP.png"
+    "colorCd": [
+      "WP"
+    ],
+    "localImgPath": [
+      "color_images/dining-room/WP.png"
+    ]
   },
   {
     "category": "home-library",
     "productCd": "HSVC126N",
-    "colorCd": "WP",
-    "localImgPath": "color_images/dining-room/WP.png"
+    "colorCd": [
+      "WP"
+    ],
+    "localImgPath": [
+      "color_images/dining-room/WP.png"
+    ]
   },
   {
     "category": "home-library",
     "productCd": "HSVD015",
-    "colorCd": "WP",
-    "localImgPath": "color_images/dining-room/WP.png"
+    "colorCd": [
+      "WP"
+    ],
+    "localImgPath": [
+      "color_images/dining-room/WP.png"
+    ]
   },
   {
     "category": "home-library",
     "productCd": "HSVP042",
-    "colorCd": "WP",
-    "localImgPath": "color_images/dining-room/WP.png"
+    "colorCd": [
+      "WP"
+    ],
+    "localImgPath": [
+      "color_images/dining-room/WP.png"
+    ]
   },
   {
     "category": "home-library",
@@ -8244,8 +9136,12 @@ export const colorData = [
   {
     "category": "home-library",
     "productCd": "HSYB042",
-    "colorCd": "NCC",
-    "localImgPath": "color_images/bedroom/NCC.png"
+    "colorCd": [
+      "NCC"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/NCC.png"
+    ]
   },
   {
     "category": "home-library",
@@ -8316,8 +9212,12 @@ export const colorData = [
   {
     "category": "home-library",
     "productCd": "HSYD010H",
-    "colorCd": "NCCGG",
-    "localImgPath": "color_images/home-library/NCCGG.png"
+    "colorCd": [
+      "NCCGG"
+    ],
+    "localImgPath": [
+      "color_images/home-library/NCCGG.png"
+    ]
   },
   {
     "category": "home-library",
@@ -8346,8 +9246,12 @@ export const colorData = [
   {
     "category": "home-library",
     "productCd": "HSYP0303",
-    "colorCd": "GU",
-    "localImgPath": "color_images/home-library/GU.png"
+    "colorCd": [
+      "GU"
+    ],
+    "localImgPath": [
+      "color_images/home-library/GU.png"
+    ]
   },
   {
     "category": "home-library",
@@ -8366,56 +9270,92 @@ export const colorData = [
   {
     "category": "home-library",
     "productCd": "HVCH3501KHLN",
-    "colorCd": "456",
-    "localImgPath": "color_images/livingroom/456.png"
+    "colorCd": [
+      "456"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/456.png"
+    ]
   },
   {
     "category": "home-library",
     "productCd": "HVCH3510HLN",
-    "colorCd": "2D1",
-    "localImgPath": "color_images/home-library/2D1.png"
+    "colorCd": [
+      "2D1"
+    ],
+    "localImgPath": [
+      "color_images/home-library/2D1.png"
+    ]
   },
   {
     "category": "home-library",
     "productCd": "HVCH3510KHLN",
-    "colorCd": "2D6",
-    "localImgPath": "color_images/home-library/2D6.png"
+    "colorCd": [
+      "2D6"
+    ],
+    "localImgPath": [
+      "color_images/home-library/2D6.png"
+    ]
   },
   {
     "category": "home-library",
     "productCd": "IAY00AA00A",
-    "colorCd": "WW",
-    "localImgPath": "color_images/livingroom/WW.png"
+    "colorCd": [
+      "WW"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/WW.png"
+    ]
   },
   {
     "category": "home-library",
     "productCd": "IBM0012A",
-    "colorCd": "NCCGU",
-    "localImgPath": "color_images/home-library/NCCGU.png"
+    "colorCd": [
+      "NCCGU"
+    ],
+    "localImgPath": [
+      "color_images/home-library/NCCGU.png"
+    ]
   },
   {
     "category": "home-library",
     "productCd": "ICB0002A",
-    "colorCd": "WW",
-    "localImgPath": "color_images/livingroom/WW.png"
+    "colorCd": [
+      "WW"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/WW.png"
+    ]
   },
   {
     "category": "home-library",
     "productCd": "ICB0003A",
-    "colorCd": "WW",
-    "localImgPath": "color_images/livingroom/WW.png"
+    "colorCd": [
+      "WW"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/WW.png"
+    ]
   },
   {
     "category": "home-library",
     "productCd": "ICB0005A",
-    "colorCd": "WW",
-    "localImgPath": "color_images/livingroom/WW.png"
+    "colorCd": [
+      "WW"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/WW.png"
+    ]
   },
   {
     "category": "home-library",
     "productCd": "ICB0006A",
-    "colorCd": "WW",
-    "localImgPath": "color_images/livingroom/WW.png"
+    "colorCd": [
+      "WW"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/WW.png"
+    ]
   },
   {
     "category": "home-library",
@@ -8468,8 +9408,12 @@ export const colorData = [
   {
     "category": "home-library",
     "productCd": "IDU00AA05A",
-    "colorCd": "WW",
-    "localImgPath": "color_images/livingroom/WW.png"
+    "colorCd": [
+      "WW"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/WW.png"
+    ]
   },
   {
     "category": "home-library",
@@ -8666,44 +9610,72 @@ export const colorData = [
   {
     "category": "kids-room",
     "productCd": "IMF11AA01A",
-    "colorCd": "A472L",
-    "localImgPath": "color_images/kids-room/A472L.png"
+    "colorCd": [
+      "A472L"
+    ],
+    "localImgPath": [
+      "color_images/kids-room/A472L.png"
+    ]
   },
   {
     "category": "kids-room",
     "productCd": "IMS11AC02A",
-    "colorCd": "9M2",
-    "localImgPath": "color_images/kids-room/9M2.png"
+    "colorCd": [
+      "9M2"
+    ],
+    "localImgPath": [
+      "color_images/kids-room/9M2.png"
+    ]
   },
   {
     "category": "kids-room",
     "productCd": "IMP11AW00A",
-    "colorCd": "XX",
-    "localImgPath": "color_images/livingroom/XX.png"
+    "colorCd": [
+      "XX"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/XX.png"
+    ]
   },
   {
     "category": "kids-room",
     "productCd": "IMP11AW01A",
-    "colorCd": "XX",
-    "localImgPath": "color_images/livingroom/XX.png"
+    "colorCd": [
+      "XX"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/XX.png"
+    ]
   },
   {
     "category": "kids-room",
     "productCd": "IMP10AW00A",
-    "colorCd": "XX",
-    "localImgPath": "color_images/livingroom/XX.png"
+    "colorCd": [
+      "XX"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/XX.png"
+    ]
   },
   {
     "category": "kids-room",
     "productCd": "IMP10AW01A",
-    "colorCd": "XX",
-    "localImgPath": "color_images/livingroom/XX.png"
+    "colorCd": [
+      "XX"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/XX.png"
+    ]
   },
   {
     "category": "kids-room",
     "productCd": "IBL00CN04A",
-    "colorCd": "XX",
-    "localImgPath": "color_images/livingroom/XX.png"
+    "colorCd": [
+      "XX"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/XX.png"
+    ]
   },
   {
     "category": "kids-room",
@@ -8720,8 +9692,12 @@ export const colorData = [
   {
     "category": "kids-room",
     "productCd": "IBL00CN05A",
-    "colorCd": "XX",
-    "localImgPath": "color_images/livingroom/XX.png"
+    "colorCd": [
+      "XX"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/XX.png"
+    ]
   },
   {
     "category": "kids-room",
@@ -8810,14 +9786,22 @@ export const colorData = [
   {
     "category": "kids-room",
     "productCd": "IDP0002A",
-    "colorCd": "NKHY",
-    "localImgPath": "color_images/kids-room/NKHY.png"
+    "colorCd": [
+      "NKHY"
+    ],
+    "localImgPath": [
+      "color_images/kids-room/NKHY.png"
+    ]
   },
   {
     "category": "kids-room",
     "productCd": "IDP0000A",
-    "colorCd": "NK",
-    "localImgPath": "color_images/dining-room/NK.png"
+    "colorCd": [
+      "NK"
+    ],
+    "localImgPath": [
+      "color_images/dining-room/NK.png"
+    ]
   },
   {
     "category": "kids-room",
@@ -8898,20 +9882,32 @@ export const colorData = [
   {
     "category": "kids-room",
     "productCd": "HSQE110",
-    "colorCd": "OAT",
-    "localImgPath": "color_images/livingroom/OAT.png"
+    "colorCd": [
+      "OAT"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/OAT.png"
+    ]
   },
   {
     "category": "kids-room",
     "productCd": "IMS10AC02A",
-    "colorCd": "9M2",
-    "localImgPath": "color_images/kids-room/9M2.png"
+    "colorCd": [
+      "9M2"
+    ],
+    "localImgPath": [
+      "color_images/kids-room/9M2.png"
+    ]
   },
   {
     "category": "kids-room",
     "productCd": "HSQA450",
-    "colorCd": "OAT",
-    "localImgPath": "color_images/livingroom/OAT.png"
+    "colorCd": [
+      "OAT"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/OAT.png"
+    ]
   },
   {
     "category": "kids-room",
@@ -8928,14 +9924,22 @@ export const colorData = [
   {
     "category": "kids-room",
     "productCd": "HSQA0004",
-    "colorCd": "BCY",
-    "localImgPath": "color_images/kids-room/BCY.png"
+    "colorCd": [
+      "BCY"
+    ],
+    "localImgPath": [
+      "color_images/kids-room/BCY.png"
+    ]
   },
   {
     "category": "kids-room",
     "productCd": "HSQA0005",
-    "colorCd": "BCY",
-    "localImgPath": "color_images/kids-room/BCY.png"
+    "colorCd": [
+      "BCY"
+    ],
+    "localImgPath": [
+      "color_images/kids-room/BCY.png"
+    ]
   },
   {
     "category": "kids-room",
@@ -9098,14 +10102,22 @@ export const colorData = [
   {
     "category": "kids-room",
     "productCd": "HSAE03",
-    "colorCd": "IV",
-    "localImgPath": "color_images/bedroom/IV.png"
+    "colorCd": [
+      "IV"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/IV.png"
+    ]
   },
   {
     "category": "kids-room",
     "productCd": "HSAE001P",
-    "colorCd": "GYM",
-    "localImgPath": "color_images/livingroom/GYM.png"
+    "colorCd": [
+      "GYM"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/GYM.png"
+    ]
   },
   {
     "category": "kids-room",
@@ -9138,14 +10150,22 @@ export const colorData = [
   {
     "category": "kids-room",
     "productCd": "IBS0004A",
-    "colorCd": "IVIV",
-    "localImgPath": "color_images/kids-room/IVIV.png"
+    "colorCd": [
+      "IVIV"
+    ],
+    "localImgPath": [
+      "color_images/kids-room/IVIV.png"
+    ]
   },
   {
     "category": "kids-room",
     "productCd": "IBS0005A",
-    "colorCd": "IV",
-    "localImgPath": "color_images/bedroom/IV.png"
+    "colorCd": [
+      "IV"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/IV.png"
+    ]
   },
   {
     "category": "kids-room",
@@ -9178,14 +10198,22 @@ export const colorData = [
   {
     "category": "kids-room",
     "productCd": "IBG0013A",
-    "colorCd": "IV",
-    "localImgPath": "color_images/bedroom/IV.png"
+    "colorCd": [
+      "IV"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/IV.png"
+    ]
   },
   {
     "category": "kids-room",
     "productCd": "IMS11AB01A",
-    "colorCd": "9M1",
-    "localImgPath": "color_images/kids-room/9M1.png"
+    "colorCd": [
+      "9M1"
+    ],
+    "localImgPath": [
+      "color_images/kids-room/9M1.png"
+    ]
   },
   {
     "category": "kids-room",
@@ -9218,26 +10246,42 @@ export const colorData = [
   {
     "category": "kids-room",
     "productCd": "HSFS090",
-    "colorCd": "GYM3J2",
-    "localImgPath": "color_images/kids-room/GYM3J2.png"
+    "colorCd": [
+      "GYM3J2"
+    ],
+    "localImgPath": [
+      "color_images/kids-room/GYM3J2.png"
+    ]
   },
   {
     "category": "kids-room",
     "productCd": "HSFC123",
-    "colorCd": "IV",
-    "localImgPath": "color_images/bedroom/IV.png"
+    "colorCd": [
+      "IV"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/IV.png"
+    ]
   },
   {
     "category": "kids-room",
     "productCd": "HSFS123",
-    "colorCd": "IVGYM",
-    "localImgPath": "color_images/kids-room/IVGYM.png"
+    "colorCd": [
+      "IVGYM"
+    ],
+    "localImgPath": [
+      "color_images/kids-room/IVGYM.png"
+    ]
   },
   {
     "category": "kids-room",
     "productCd": "HSFC083C",
-    "colorCd": "IV",
-    "localImgPath": "color_images/bedroom/IV.png"
+    "colorCd": [
+      "IV"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/IV.png"
+    ]
   },
   {
     "category": "kids-room",
@@ -9278,8 +10322,12 @@ export const colorData = [
   {
     "category": "kids-room",
     "productCd": "HSLA0040L",
-    "colorCd": "IV",
-    "localImgPath": "color_images/bedroom/IV.png"
+    "colorCd": [
+      "IV"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/IV.png"
+    ]
   },
   {
     "category": "kids-room",
@@ -9450,20 +10498,32 @@ export const colorData = [
   {
     "category": "kids-room",
     "productCd": "HSFS0060",
-    "colorCd": "IV",
-    "localImgPath": "color_images/bedroom/IV.png"
+    "colorCd": [
+      "IV"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/IV.png"
+    ]
   },
   {
     "category": "kids-room",
     "productCd": "HSFP0060",
-    "colorCd": "IV",
-    "localImgPath": "color_images/bedroom/IV.png"
+    "colorCd": [
+      "IV"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/IV.png"
+    ]
   },
   {
     "category": "kids-room",
     "productCd": "ICB0000A",
-    "colorCd": "IV",
-    "localImgPath": "color_images/bedroom/IV.png"
+    "colorCd": [
+      "IV"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/IV.png"
+    ]
   },
   {
     "category": "kids-room",
@@ -9524,26 +10584,42 @@ export const colorData = [
   {
     "category": "kids-room",
     "productCd": "IBS0000A",
-    "colorCd": "IV",
-    "localImgPath": "color_images/bedroom/IV.png"
+    "colorCd": [
+      "IV"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/IV.png"
+    ]
   },
   {
     "category": "kids-room",
     "productCd": "IBS0001A",
-    "colorCd": "IV",
-    "localImgPath": "color_images/bedroom/IV.png"
+    "colorCd": [
+      "IV"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/IV.png"
+    ]
   },
   {
     "category": "kids-room",
     "productCd": "IBA0002A",
-    "colorCd": "IV",
-    "localImgPath": "color_images/bedroom/IV.png"
+    "colorCd": [
+      "IV"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/IV.png"
+    ]
   },
   {
     "category": "kids-room",
     "productCd": "IBA0003A",
-    "colorCd": "IV",
-    "localImgPath": "color_images/bedroom/IV.png"
+    "colorCd": [
+      "IV"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/IV.png"
+    ]
   },
   {
     "category": "kids-room",
@@ -9560,8 +10636,12 @@ export const colorData = [
   {
     "category": "kids-room",
     "productCd": "HSFC580",
-    "colorCd": "IVGY",
-    "localImgPath": "color_images/kids-room/IVGY.png"
+    "colorCd": [
+      "IVGY"
+    ],
+    "localImgPath": [
+      "color_images/kids-room/IVGY.png"
+    ]
   },
   {
     "category": "kids-room",
@@ -9606,26 +10686,42 @@ export const colorData = [
   {
     "category": "kids-room",
     "productCd": "HSFC582",
-    "colorCd": "IVGY",
-    "localImgPath": "color_images/kids-room/IVGY.png"
+    "colorCd": [
+      "IVGY"
+    ],
+    "localImgPath": [
+      "color_images/kids-room/IVGY.png"
+    ]
   },
   {
     "category": "kids-room",
     "productCd": "HSFC8083",
-    "colorCd": "IVGY",
-    "localImgPath": "color_images/kids-room/IVGY.png"
+    "colorCd": [
+      "IVGY"
+    ],
+    "localImgPath": [
+      "color_images/kids-room/IVGY.png"
+    ]
   },
   {
     "category": "kids-room",
     "productCd": "IPP80AP00A",
-    "colorCd": "IVGY",
-    "localImgPath": "color_images/kids-room/IVGY.png"
+    "colorCd": [
+      "IVGY"
+    ],
+    "localImgPath": [
+      "color_images/kids-room/IVGY.png"
+    ]
   },
   {
     "category": "kids-room",
     "productCd": "IPK0001A",
-    "colorCd": "IVGY",
-    "localImgPath": "color_images/kids-room/IVGY.png"
+    "colorCd": [
+      "IVGY"
+    ],
+    "localImgPath": [
+      "color_images/kids-room/IVGY.png"
+    ]
   },
   {
     "category": "kids-room",
@@ -9796,8 +10892,12 @@ export const colorData = [
   {
     "category": "kids-room",
     "productCd": "HSLA151N",
-    "colorCd": "IVKP",
-    "localImgPath": "color_images/kids-room/IVKP.png"
+    "colorCd": [
+      "IVKP"
+    ],
+    "localImgPath": [
+      "color_images/kids-room/IVKP.png"
+    ]
   },
   {
     "category": "kids-room",
@@ -9886,8 +10986,12 @@ export const colorData = [
   {
     "category": "kids-room",
     "productCd": "HCS4400S",
-    "colorCd": "F263",
-    "localImgPath": "color_images/kids-room/F263.png"
+    "colorCd": [
+      "F263"
+    ],
+    "localImgPath": [
+      "color_images/kids-room/F263.png"
+    ]
   },
   {
     "category": "kids-room",
@@ -9908,8 +11012,12 @@ export const colorData = [
   {
     "category": "kids-room",
     "productCd": "HCH2000AN",
-    "colorCd": "A440P",
-    "localImgPath": "color_images/kids-room/A440P.png"
+    "colorCd": [
+      "A440P"
+    ],
+    "localImgPath": [
+      "color_images/kids-room/A440P.png"
+    ]
   },
   {
     "category": "kids-room",
@@ -9930,8 +11038,12 @@ export const colorData = [
   {
     "category": "kids-room",
     "productCd": "HVCS4001A",
-    "colorCd": "A472L",
-    "localImgPath": "color_images/kids-room/A472L.png"
+    "colorCd": [
+      "A472L"
+    ],
+    "localImgPath": [
+      "color_images/kids-room/A472L.png"
+    ]
   },
   {
     "category": "kids-room",
@@ -9974,8 +11086,12 @@ export const colorData = [
   {
     "category": "kids-room",
     "productCd": "HCS4016A",
-    "colorCd": "A441D",
-    "localImgPath": "color_images/bedroom/A441D.png"
+    "colorCd": [
+      "A441D"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/A441D.png"
+    ]
   },
   {
     "category": "study-room",
@@ -10048,20 +11164,32 @@ export const colorData = [
   {
     "category": "study-room",
     "productCd": "HSFC123",
-    "colorCd": "IV",
-    "localImgPath": "color_images/bedroom/IV.png"
+    "colorCd": [
+      "IV"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/IV.png"
+    ]
   },
   {
     "category": "study-room",
     "productCd": "HSFS123",
-    "colorCd": "IVGYM",
-    "localImgPath": "color_images/kids-room/IVGYM.png"
+    "colorCd": [
+      "IVGYM"
+    ],
+    "localImgPath": [
+      "color_images/kids-room/IVGYM.png"
+    ]
   },
   {
     "category": "study-room",
     "productCd": "HSFC083C",
-    "colorCd": "IV",
-    "localImgPath": "color_images/bedroom/IV.png"
+    "colorCd": [
+      "IV"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/IV.png"
+    ]
   },
   {
     "category": "study-room",
@@ -10184,8 +11312,12 @@ export const colorData = [
   {
     "category": "study-room",
     "productCd": "HSLA0040L",
-    "colorCd": "IV",
-    "localImgPath": "color_images/bedroom/IV.png"
+    "colorCd": [
+      "IV"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/IV.png"
+    ]
   },
   {
     "category": "study-room",
@@ -10298,14 +11430,22 @@ export const colorData = [
   {
     "category": "study-room",
     "productCd": "HSKD512F",
-    "colorCd": "IVTSS",
-    "localImgPath": "color_images/study-room/IVTSS.png"
+    "colorCd": [
+      "IVTSS"
+    ],
+    "localImgPath": [
+      "color_images/study-room/IVTSS.png"
+    ]
   },
   {
     "category": "study-room",
     "productCd": "HSKD514F",
-    "colorCd": "IVTSS",
-    "localImgPath": "color_images/study-room/IVTSS.png"
+    "colorCd": [
+      "IVTSS"
+    ],
+    "localImgPath": [
+      "color_images/study-room/IVTSS.png"
+    ]
   },
   {
     "category": "study-room",
@@ -10502,26 +11642,42 @@ export const colorData = [
   {
     "category": "study-room",
     "productCd": "HSKD512",
-    "colorCd": "IVTSS",
-    "localImgPath": "color_images/study-room/IVTSS.png"
+    "colorCd": [
+      "IVTSS"
+    ],
+    "localImgPath": [
+      "color_images/study-room/IVTSS.png"
+    ]
   },
   {
     "category": "study-room",
     "productCd": "HSKD514",
-    "colorCd": "IVTSS",
-    "localImgPath": "color_images/study-room/IVTSS.png"
+    "colorCd": [
+      "IVTSS"
+    ],
+    "localImgPath": [
+      "color_images/study-room/IVTSS.png"
+    ]
   },
   {
     "category": "study-room",
     "productCd": "HSKD512E",
-    "colorCd": "IV",
-    "localImgPath": "color_images/bedroom/IV.png"
+    "colorCd": [
+      "IV"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/IV.png"
+    ]
   },
   {
     "category": "study-room",
     "productCd": "HSKD514E",
-    "colorCd": "IV",
-    "localImgPath": "color_images/bedroom/IV.png"
+    "colorCd": [
+      "IV"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/IV.png"
+    ]
   },
   {
     "category": "study-room",
@@ -10654,26 +11810,42 @@ export const colorData = [
   {
     "category": "study-room",
     "productCd": "HSKD012R",
-    "colorCd": "IVTSS",
-    "localImgPath": "color_images/study-room/IVTSS.png"
+    "colorCd": [
+      "IVTSS"
+    ],
+    "localImgPath": [
+      "color_images/study-room/IVTSS.png"
+    ]
   },
   {
     "category": "study-room",
     "productCd": "HSKD014R",
-    "colorCd": "IVTSS",
-    "localImgPath": "color_images/study-room/IVTSS.png"
+    "colorCd": [
+      "IVTSS"
+    ],
+    "localImgPath": [
+      "color_images/study-room/IVTSS.png"
+    ]
   },
   {
     "category": "study-room",
     "productCd": "HSKD012ER",
-    "colorCd": "IV",
-    "localImgPath": "color_images/bedroom/IV.png"
+    "colorCd": [
+      "IV"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/IV.png"
+    ]
   },
   {
     "category": "study-room",
     "productCd": "HSKD014ER",
-    "colorCd": "IV",
-    "localImgPath": "color_images/bedroom/IV.png"
+    "colorCd": [
+      "IV"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/IV.png"
+    ]
   },
   {
     "category": "study-room",
@@ -10694,8 +11866,12 @@ export const colorData = [
   {
     "category": "study-room",
     "productCd": "HSKD612T",
-    "colorCd": "IV",
-    "localImgPath": "color_images/bedroom/IV.png"
+    "colorCd": [
+      "IV"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/IV.png"
+    ]
   },
   {
     "category": "study-room",
@@ -10716,26 +11892,42 @@ export const colorData = [
   {
     "category": "study-room",
     "productCd": "HSKD420F",
-    "colorCd": "IVTSS",
-    "localImgPath": "color_images/study-room/IVTSS.png"
+    "colorCd": [
+      "IVTSS"
+    ],
+    "localImgPath": [
+      "color_images/study-room/IVTSS.png"
+    ]
   },
   {
     "category": "study-room",
     "productCd": "HSKD420",
-    "colorCd": "IVTSS",
-    "localImgPath": "color_images/study-room/IVTSS.png"
+    "colorCd": [
+      "IVTSS"
+    ],
+    "localImgPath": [
+      "color_images/study-room/IVTSS.png"
+    ]
   },
   {
     "category": "study-room",
     "productCd": "HSKD420E",
-    "colorCd": "IV",
-    "localImgPath": "color_images/bedroom/IV.png"
+    "colorCd": [
+      "IV"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/IV.png"
+    ]
   },
   {
     "category": "study-room",
     "productCd": "HSKA0000X",
-    "colorCd": "XX",
-    "localImgPath": "color_images/livingroom/XX.png"
+    "colorCd": [
+      "XX"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/XX.png"
+    ]
   },
   {
     "category": "study-room",
@@ -11150,8 +12342,12 @@ export const colorData = [
   {
     "category": "study-room",
     "productCd": "HSSE010G",
-    "colorCd": "A441D",
-    "localImgPath": "color_images/bedroom/A441D.png"
+    "colorCd": [
+      "A441D"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/A441D.png"
+    ]
   },
   {
     "category": "study-room",
@@ -11186,8 +12382,12 @@ export const colorData = [
   {
     "category": "study-room",
     "productCd": "HSKA040",
-    "colorCd": "IVM",
-    "localImgPath": "color_images/study-room/IVM.png"
+    "colorCd": [
+      "IVM"
+    ],
+    "localImgPath": [
+      "color_images/study-room/IVM.png"
+    ]
   },
   {
     "category": "study-room",
@@ -11248,14 +12448,22 @@ export const colorData = [
   {
     "category": "study-room",
     "productCd": "HSKA0002",
-    "colorCd": "IV",
-    "localImgPath": "color_images/bedroom/IV.png"
+    "colorCd": [
+      "IV"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/IV.png"
+    ]
   },
   {
     "category": "study-room",
     "productCd": "HSAA2027",
-    "colorCd": "IVM",
-    "localImgPath": "color_images/study-room/IVM.png"
+    "colorCd": [
+      "IVM"
+    ],
+    "localImgPath": [
+      "color_images/study-room/IVM.png"
+    ]
   },
   {
     "category": "study-room",
@@ -11274,14 +12482,22 @@ export const colorData = [
   {
     "category": "study-room",
     "productCd": "HSKA901N",
-    "colorCd": "WW",
-    "localImgPath": "color_images/livingroom/WW.png"
+    "colorCd": [
+      "WW"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/WW.png"
+    ]
   },
   {
     "category": "study-room",
     "productCd": "HSKA0904N",
-    "colorCd": "XX",
-    "localImgPath": "color_images/livingroom/XX.png"
+    "colorCd": [
+      "XX"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/XX.png"
+    ]
   },
   {
     "category": "study-room",
@@ -11974,8 +13190,12 @@ export const colorData = [
   {
     "category": "study-room",
     "productCd": "HSOA040",
-    "colorCd": "SP",
-    "localImgPath": "color_images/livingroom/SP.png"
+    "colorCd": [
+      "SP"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/SP.png"
+    ]
   },
   {
     "category": "study-room",
@@ -12236,8 +13456,12 @@ export const colorData = [
   {
     "category": "study-room",
     "productCd": "IVA0001A",
-    "colorCd": "WW",
-    "localImgPath": "color_images/livingroom/WW.png"
+    "colorCd": [
+      "WW"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/WW.png"
+    ]
   },
   {
     "category": "study-room",
@@ -12254,14 +13478,22 @@ export const colorData = [
   {
     "category": "study-room",
     "productCd": "IDU00AA05A",
-    "colorCd": "WW",
-    "localImgPath": "color_images/livingroom/WW.png"
+    "colorCd": [
+      "WW"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/WW.png"
+    ]
   },
   {
     "category": "study-room",
     "productCd": "IAY00AA00A",
-    "colorCd": "WW",
-    "localImgPath": "color_images/livingroom/WW.png"
+    "colorCd": [
+      "WW"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/WW.png"
+    ]
   },
   {
     "category": "study-room",
@@ -12490,26 +13722,42 @@ export const colorData = [
   {
     "category": "study-room",
     "productCd": "IVH00AA00A",
-    "colorCd": "WW",
-    "localImgPath": "color_images/livingroom/WW.png"
+    "colorCd": [
+      "WW"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/WW.png"
+    ]
   },
   {
     "category": "study-room",
     "productCd": "IVH00AA01A",
-    "colorCd": "WW",
-    "localImgPath": "color_images/livingroom/WW.png"
+    "colorCd": [
+      "WW"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/WW.png"
+    ]
   },
   {
     "category": "study-room",
     "productCd": "IVA0000A",
-    "colorCd": "WW",
-    "localImgPath": "color_images/livingroom/WW.png"
+    "colorCd": [
+      "WW"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/WW.png"
+    ]
   },
   {
     "category": "study-room",
     "productCd": "IHU00AA02A",
-    "colorCd": "WH",
-    "localImgPath": "color_images/study-room/WH.png"
+    "colorCd": [
+      "WH"
+    ],
+    "localImgPath": [
+      "color_images/study-room/WH.png"
+    ]
   },
   {
     "category": "study-room",
@@ -12778,44 +14026,72 @@ export const colorData = [
   {
     "category": "study-room",
     "productCd": "IVN91CP00A",
-    "colorCd": "WW",
-    "localImgPath": "color_images/livingroom/WW.png"
+    "colorCd": [
+      "WW"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/WW.png"
+    ]
   },
   {
     "category": "study-room",
     "productCd": "ICB0001A",
-    "colorCd": "WW",
-    "localImgPath": "color_images/livingroom/WW.png"
+    "colorCd": [
+      "WW"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/WW.png"
+    ]
   },
   {
     "category": "study-room",
     "productCd": "ICB0002A",
-    "colorCd": "WW",
-    "localImgPath": "color_images/livingroom/WW.png"
+    "colorCd": [
+      "WW"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/WW.png"
+    ]
   },
   {
     "category": "study-room",
     "productCd": "ICB0003A",
-    "colorCd": "WW",
-    "localImgPath": "color_images/livingroom/WW.png"
+    "colorCd": [
+      "WW"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/WW.png"
+    ]
   },
   {
     "category": "study-room",
     "productCd": "ICB0004A",
-    "colorCd": "WW",
-    "localImgPath": "color_images/livingroom/WW.png"
+    "colorCd": [
+      "WW"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/WW.png"
+    ]
   },
   {
     "category": "study-room",
     "productCd": "ICB0005A",
-    "colorCd": "WW",
-    "localImgPath": "color_images/livingroom/WW.png"
+    "colorCd": [
+      "WW"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/WW.png"
+    ]
   },
   {
     "category": "study-room",
     "productCd": "ICB0006A",
-    "colorCd": "WW",
-    "localImgPath": "color_images/livingroom/WW.png"
+    "colorCd": [
+      "WW"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/WW.png"
+    ]
   },
   {
     "category": "study-room",
@@ -13012,74 +14288,122 @@ export const colorData = [
   {
     "category": "study-room",
     "productCd": "IVP0011A",
-    "colorCd": "WW",
-    "localImgPath": "color_images/livingroom/WW.png"
+    "colorCd": [
+      "WW"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/WW.png"
+    ]
   },
   {
     "category": "study-room",
     "productCd": "IVP0012A",
-    "colorCd": "WW",
-    "localImgPath": "color_images/livingroom/WW.png"
+    "colorCd": [
+      "WW"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/WW.png"
+    ]
   },
   {
     "category": "study-room",
     "productCd": "IFT0000A",
-    "colorCd": "WW",
-    "localImgPath": "color_images/livingroom/WW.png"
+    "colorCd": [
+      "WW"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/WW.png"
+    ]
   },
   {
     "category": "study-room",
     "productCd": "IFT0001A",
-    "colorCd": "WW",
-    "localImgPath": "color_images/livingroom/WW.png"
+    "colorCd": [
+      "WW"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/WW.png"
+    ]
   },
   {
     "category": "study-room",
     "productCd": "IFT0003A",
-    "colorCd": "WW",
-    "localImgPath": "color_images/livingroom/WW.png"
+    "colorCd": [
+      "WW"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/WW.png"
+    ]
   },
   {
     "category": "study-room",
     "productCd": "IFT0004A",
-    "colorCd": "WW",
-    "localImgPath": "color_images/livingroom/WW.png"
+    "colorCd": [
+      "WW"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/WW.png"
+    ]
   },
   {
     "category": "study-room",
     "productCd": "IFW0039A",
-    "colorCd": "WW",
-    "localImgPath": "color_images/livingroom/WW.png"
+    "colorCd": [
+      "WW"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/WW.png"
+    ]
   },
   {
     "category": "study-room",
     "productCd": "IFI0015A",
-    "colorCd": "WW",
-    "localImgPath": "color_images/livingroom/WW.png"
+    "colorCd": [
+      "WW"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/WW.png"
+    ]
   },
   {
     "category": "study-room",
     "productCd": "IFW0038A",
-    "colorCd": "WW",
-    "localImgPath": "color_images/livingroom/WW.png"
+    "colorCd": [
+      "WW"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/WW.png"
+    ]
   },
   {
     "category": "study-room",
     "productCd": "IBS0019A",
-    "colorCd": "WW",
-    "localImgPath": "color_images/livingroom/WW.png"
+    "colorCd": [
+      "WW"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/WW.png"
+    ]
   },
   {
     "category": "study-room",
     "productCd": "IBS0020A",
-    "colorCd": "WW",
-    "localImgPath": "color_images/livingroom/WW.png"
+    "colorCd": [
+      "WW"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/WW.png"
+    ]
   },
   {
     "category": "study-room",
     "productCd": "IBS0021A",
-    "colorCd": "WW",
-    "localImgPath": "color_images/livingroom/WW.png"
+    "colorCd": [
+      "WW"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/WW.png"
+    ]
   },
   {
     "category": "study-room",
@@ -13132,20 +14456,32 @@ export const colorData = [
   {
     "category": "study-room",
     "productCd": "IBS0031A",
-    "colorCd": "WW",
-    "localImgPath": "color_images/livingroom/WW.png"
+    "colorCd": [
+      "WW"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/WW.png"
+    ]
   },
   {
     "category": "study-room",
     "productCd": "IBS0032A",
-    "colorCd": "WW",
-    "localImgPath": "color_images/livingroom/WW.png"
+    "colorCd": [
+      "WW"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/WW.png"
+    ]
   },
   {
     "category": "study-room",
     "productCd": "IBS0033A",
-    "colorCd": "WW",
-    "localImgPath": "color_images/livingroom/WW.png"
+    "colorCd": [
+      "WW"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/WW.png"
+    ]
   },
   {
     "category": "study-room",
@@ -13198,26 +14534,42 @@ export const colorData = [
   {
     "category": "study-room",
     "productCd": "IBA0004A",
-    "colorCd": "3W1",
-    "localImgPath": "color_images/kids-room/3W1.png"
+    "colorCd": [
+      "3W1"
+    ],
+    "localImgPath": [
+      "color_images/kids-room/3W1.png"
+    ]
   },
   {
     "category": "study-room",
     "productCd": "IBS0034A",
-    "colorCd": "WW",
-    "localImgPath": "color_images/livingroom/WW.png"
+    "colorCd": [
+      "WW"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/WW.png"
+    ]
   },
   {
     "category": "study-room",
     "productCd": "IBS0035A",
-    "colorCd": "WW",
-    "localImgPath": "color_images/livingroom/WW.png"
+    "colorCd": [
+      "WW"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/WW.png"
+    ]
   },
   {
     "category": "study-room",
     "productCd": "IBS0036A",
-    "colorCd": "WW",
-    "localImgPath": "color_images/livingroom/WW.png"
+    "colorCd": [
+      "WW"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/WW.png"
+    ]
   },
   {
     "category": "study-room",
@@ -13270,110 +14622,182 @@ export const colorData = [
   {
     "category": "study-room",
     "productCd": "IVA0002A",
-    "colorCd": "WW",
-    "localImgPath": "color_images/livingroom/WW.png"
+    "colorCd": [
+      "WW"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/WW.png"
+    ]
   },
   {
     "category": "study-room",
     "productCd": "IVA0003A",
-    "colorCd": "WW",
-    "localImgPath": "color_images/livingroom/WW.png"
+    "colorCd": [
+      "WW"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/WW.png"
+    ]
   },
   {
     "category": "study-room",
     "productCd": "IVA0004A",
-    "colorCd": "WW",
-    "localImgPath": "color_images/livingroom/WW.png"
+    "colorCd": [
+      "WW"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/WW.png"
+    ]
   },
   {
     "category": "study-room",
     "productCd": "IVA0005A",
-    "colorCd": "WW",
-    "localImgPath": "color_images/livingroom/WW.png"
+    "colorCd": [
+      "WW"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/WW.png"
+    ]
   },
   {
     "category": "study-room",
     "productCd": "IVA0006A",
-    "colorCd": "3W1",
-    "localImgPath": "color_images/kids-room/3W1.png"
+    "colorCd": [
+      "3W1"
+    ],
+    "localImgPath": [
+      "color_images/kids-room/3W1.png"
+    ]
   },
   {
     "category": "study-room",
     "productCd": "IVA0007A",
-    "colorCd": "3W1",
-    "localImgPath": "color_images/kids-room/3W1.png"
+    "colorCd": [
+      "3W1"
+    ],
+    "localImgPath": [
+      "color_images/kids-room/3W1.png"
+    ]
   },
   {
     "category": "study-room",
     "productCd": "IVA0008A",
-    "colorCd": "3W1",
-    "localImgPath": "color_images/kids-room/3W1.png"
+    "colorCd": [
+      "3W1"
+    ],
+    "localImgPath": [
+      "color_images/kids-room/3W1.png"
+    ]
   },
   {
     "category": "study-room",
     "productCd": "IVA0009A",
-    "colorCd": "3W1",
-    "localImgPath": "color_images/kids-room/3W1.png"
+    "colorCd": [
+      "3W1"
+    ],
+    "localImgPath": [
+      "color_images/kids-room/3W1.png"
+    ]
   },
   {
     "category": "study-room",
     "productCd": "IVA0014A",
-    "colorCd": "WW",
-    "localImgPath": "color_images/livingroom/WW.png"
+    "colorCd": [
+      "WW"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/WW.png"
+    ]
   },
   {
     "category": "study-room",
     "productCd": "IVA0015A",
-    "colorCd": "WW",
-    "localImgPath": "color_images/livingroom/WW.png"
+    "colorCd": [
+      "WW"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/WW.png"
+    ]
   },
   {
     "category": "study-room",
     "productCd": "IVA0010A",
-    "colorCd": "WW",
-    "localImgPath": "color_images/livingroom/WW.png"
+    "colorCd": [
+      "WW"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/WW.png"
+    ]
   },
   {
     "category": "study-room",
     "productCd": "IVA0011A",
-    "colorCd": "WW",
-    "localImgPath": "color_images/livingroom/WW.png"
+    "colorCd": [
+      "WW"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/WW.png"
+    ]
   },
   {
     "category": "study-room",
     "productCd": "IVA0016A",
-    "colorCd": "3W1",
-    "localImgPath": "color_images/kids-room/3W1.png"
+    "colorCd": [
+      "3W1"
+    ],
+    "localImgPath": [
+      "color_images/kids-room/3W1.png"
+    ]
   },
   {
     "category": "study-room",
     "productCd": "IVA0017A",
-    "colorCd": "3W1",
-    "localImgPath": "color_images/kids-room/3W1.png"
+    "colorCd": [
+      "3W1"
+    ],
+    "localImgPath": [
+      "color_images/kids-room/3W1.png"
+    ]
   },
   {
     "category": "study-room",
     "productCd": "IVA0012A",
-    "colorCd": "3W1",
-    "localImgPath": "color_images/kids-room/3W1.png"
+    "colorCd": [
+      "3W1"
+    ],
+    "localImgPath": [
+      "color_images/kids-room/3W1.png"
+    ]
   },
   {
     "category": "study-room",
     "productCd": "IVA0013A",
-    "colorCd": "3W1",
-    "localImgPath": "color_images/kids-room/3W1.png"
+    "colorCd": [
+      "3W1"
+    ],
+    "localImgPath": [
+      "color_images/kids-room/3W1.png"
+    ]
   },
   {
     "category": "study-room",
     "productCd": "HSSE290F",
-    "colorCd": "NCCGU",
-    "localImgPath": "color_images/home-library/NCCGU.png"
+    "colorCd": [
+      "NCCGU"
+    ],
+    "localImgPath": [
+      "color_images/home-library/NCCGU.png"
+    ]
   },
   {
     "category": "study-room",
     "productCd": "IBM0012A",
-    "colorCd": "NCCGU",
-    "localImgPath": "color_images/home-library/NCCGU.png"
+    "colorCd": [
+      "NCCGU"
+    ],
+    "localImgPath": [
+      "color_images/home-library/NCCGU.png"
+    ]
   },
   {
     "category": "study-room",
@@ -13454,8 +14878,12 @@ export const colorData = [
   {
     "category": "study-room",
     "productCd": "HSYB042",
-    "colorCd": "NCC",
-    "localImgPath": "color_images/bedroom/NCC.png"
+    "colorCd": [
+      "NCC"
+    ],
+    "localImgPath": [
+      "color_images/bedroom/NCC.png"
+    ]
   },
   {
     "category": "study-room",
@@ -13474,8 +14902,12 @@ export const colorData = [
   {
     "category": "study-room",
     "productCd": "HSYP0303",
-    "colorCd": "GU",
-    "localImgPath": "color_images/home-library/GU.png"
+    "colorCd": [
+      "GU"
+    ],
+    "localImgPath": [
+      "color_images/home-library/GU.png"
+    ]
   },
   {
     "category": "study-room",
@@ -13494,14 +14926,22 @@ export const colorData = [
   {
     "category": "study-room",
     "productCd": "HVCH3510KHLN",
-    "colorCd": "2D6",
-    "localImgPath": "color_images/home-library/2D6.png"
+    "colorCd": [
+      "2D6"
+    ],
+    "localImgPath": [
+      "color_images/home-library/2D6.png"
+    ]
   },
   {
     "category": "study-room",
     "productCd": "HVCH3510HLN",
-    "colorCd": "2D1",
-    "localImgPath": "color_images/home-library/2D1.png"
+    "colorCd": [
+      "2D1"
+    ],
+    "localImgPath": [
+      "color_images/home-library/2D1.png"
+    ]
   },
   {
     "category": "study-room",
@@ -13520,8 +14960,12 @@ export const colorData = [
   {
     "category": "study-room",
     "productCd": "HVCH3501KHLN",
-    "colorCd": "456",
-    "localImgPath": "color_images/livingroom/456.png"
+    "colorCd": [
+      "456"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/456.png"
+    ]
   },
   {
     "category": "study-room",
@@ -13658,14 +15102,22 @@ export const colorData = [
   {
     "category": "study-room",
     "productCd": "HCX0001RB",
-    "colorCd": "SG",
-    "localImgPath": "color_images/study-room/SG.png"
+    "colorCd": [
+      "SG"
+    ],
+    "localImgPath": [
+      "color_images/study-room/SG.png"
+    ]
   },
   {
     "category": "study-room",
     "productCd": "HCX0001BB",
-    "colorCd": "SG",
-    "localImgPath": "color_images/study-room/SG.png"
+    "colorCd": [
+      "SG"
+    ],
+    "localImgPath": [
+      "color_images/study-room/SG.png"
+    ]
   },
   {
     "category": "study-room",
@@ -13730,14 +15182,22 @@ export const colorData = [
   {
     "category": "study-room",
     "productCd": "HCX0001RA",
-    "colorCd": "SG",
-    "localImgPath": "color_images/study-room/SG.png"
+    "colorCd": [
+      "SG"
+    ],
+    "localImgPath": [
+      "color_images/study-room/SG.png"
+    ]
   },
   {
     "category": "study-room",
     "productCd": "HCX0001BA",
-    "colorCd": "SG",
-    "localImgPath": "color_images/study-room/SG.png"
+    "colorCd": [
+      "SG"
+    ],
+    "localImgPath": [
+      "color_images/study-room/SG.png"
+    ]
   },
   {
     "category": "study-room",
@@ -13792,44 +15252,72 @@ export const colorData = [
   {
     "category": "dressroom",
     "productCd": "IFC00CT00A",
-    "colorCd": "5J1",
-    "localImgPath": "color_images/livingroom/5J1.png"
+    "colorCd": [
+      "5J1"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/5J1.png"
+    ]
   },
   {
     "category": "dressroom",
     "productCd": "IFC00CT01A",
-    "colorCd": "5J1",
-    "localImgPath": "color_images/livingroom/5J1.png"
+    "colorCd": [
+      "5J1"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/5J1.png"
+    ]
   },
   {
     "category": "dressroom",
     "productCd": "IFC00CT02A",
-    "colorCd": "5J1",
-    "localImgPath": "color_images/livingroom/5J1.png"
+    "colorCd": [
+      "5J1"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/5J1.png"
+    ]
   },
   {
     "category": "dressroom",
     "productCd": "IFC00CT03A",
-    "colorCd": "5J1",
-    "localImgPath": "color_images/livingroom/5J1.png"
+    "colorCd": [
+      "5J1"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/5J1.png"
+    ]
   },
   {
     "category": "dressroom",
     "productCd": "IFC00CT04A",
-    "colorCd": "5J1",
-    "localImgPath": "color_images/livingroom/5J1.png"
+    "colorCd": [
+      "5J1"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/5J1.png"
+    ]
   },
   {
     "category": "dressroom",
     "productCd": "IFC00CT05A",
-    "colorCd": "5J1",
-    "localImgPath": "color_images/livingroom/5J1.png"
+    "colorCd": [
+      "5J1"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/5J1.png"
+    ]
   },
   {
     "category": "dressroom",
     "productCd": "IFC00CT06A",
-    "colorCd": "5J1",
-    "localImgPath": "color_images/livingroom/5J1.png"
+    "colorCd": [
+      "5J1"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/5J1.png"
+    ]
   },
   {
     "category": "lighting",
@@ -13876,8 +15364,12 @@ export const colorData = [
   {
     "category": "lighting",
     "productCd": "IAL00GA07A",
-    "colorCd": "DBK",
-    "localImgPath": "color_images/lighting/DBK.png"
+    "colorCd": [
+      "DBK"
+    ],
+    "localImgPath": [
+      "color_images/lighting/DBK.png"
+    ]
   },
   {
     "category": "lighting",
@@ -13914,20 +15406,32 @@ export const colorData = [
   {
     "category": "lighting",
     "productCd": "IAL00GA03A",
-    "colorCd": "CTW",
-    "localImgPath": "color_images/lighting/CTW.png"
+    "colorCd": [
+      "CTW"
+    ],
+    "localImgPath": [
+      "color_images/lighting/CTW.png"
+    ]
   },
   {
     "category": "lighting",
     "productCd": "IAL00GA04A",
-    "colorCd": "CTW",
-    "localImgPath": "color_images/lighting/CTW.png"
+    "colorCd": [
+      "CTW"
+    ],
+    "localImgPath": [
+      "color_images/lighting/CTW.png"
+    ]
   },
   {
     "category": "lighting",
     "productCd": "IAL00GA05A",
-    "colorCd": "CTW",
-    "localImgPath": "color_images/lighting/CTW.png"
+    "colorCd": [
+      "CTW"
+    ],
+    "localImgPath": [
+      "color_images/lighting/CTW.png"
+    ]
   },
   {
     "category": "lighting",
@@ -14044,8 +15548,12 @@ export const colorData = [
   {
     "category": "lighting",
     "productCd": "IAL00GA24A",
-    "colorCd": "EWH",
-    "localImgPath": "color_images/lighting/EWH.png"
+    "colorCd": [
+      "EWH"
+    ],
+    "localImgPath": [
+      "color_images/lighting/EWH.png"
+    ]
   },
   {
     "category": "lighting",
@@ -14100,5 +15608,37 @@ export const colorData = [
       "color_images/lighting/OXR.png",
       "color_images/lighting/SOW.png"
     ]
+  },
+  {
+    "category": "lighting",
+    "productCd": "IAL00NT05A",
+    "colorCd": [
+      "CBB",
+      "DPM",
+      "GBE",
+      "MBK",
+      "MEY",
+      "MTD",
+      "MTE",
+      "SGN",
+      "STB",
+      "SWB",
+      "TPK",
+      "VRD"
+    ],
+    "localImgPath": [
+      "color_images/livingroom/CBB.png",
+      "color_images/livingroom/DPM.png",
+      "color_images/livingroom/GBE.png",
+      "color_images/livingroom/MBK.png",
+      "color_images/livingroom/MEY.png",
+      "color_images/livingroom/MTD.png",
+      "color_images/livingroom/MTE.png",
+      "color_images/livingroom/SGN.png",
+      "color_images/livingroom/STB.png",
+      "color_images/livingroom/SWB.png",
+      "color_images/livingroom/TPK.png",
+      "color_images/livingroom/VRD.png"
+    ]
   }
-]
+];

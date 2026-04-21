@@ -29,7 +29,9 @@ export default function LeavePage() {
                 <MyPageMenu />
 
                 <div className="content">
-                    <h2>회원탈퇴</h2>
+                    <div className="leave-title">
+                        <h2>회원탈퇴</h2>
+                    </div>
 
                     <div className="leave-section">
                         <div className="leave-box">

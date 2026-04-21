@@ -407,8 +407,10 @@
 }
 
 // 회원탈퇴페이지
-h2 {
-    margin-bottom: 45px;
+.leave-title {
+    h2 {
+        margin-bottom: 45px;
+    }
 }
 
 .leave-section {

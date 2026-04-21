@@ -51,10 +51,12 @@ export default function Home() {
             style={{ opacity: overlayOpacity }}
           />
           <div className="hero-text">
-            <h2 className="hero-title">Comfort meets design</h2>
+            <h2 className="hero-title">Design for Inner Peace.</h2>
             <p className="hero-desc">
-              일상을 편안하게 만드는 공간의 변화
+              일상의 온도를 바꾸는 일룸의 새로운 시선
             </p>
+
+
           </div>
         </div>
       </section>
