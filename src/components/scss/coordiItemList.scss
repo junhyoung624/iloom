@@ -1,15 +1,27 @@
+.coordi-item-list-wrap {
+    margin-top: 40px;
+}
+
 .coordi-item-list {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    //gap: 130px;
     text-align: center;
-    //justify-content: space-evenly;
-    //gap: 100px;
+    gap: 24px;
 }
 
 .coordi-item {
+    display: block;
     color: #303030;
-    //width: 200px;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+    transform: translateY(0);
+
+    img {
+        display: block;
+        width: 100%;
+        max-width: 220px;
+        margin: 0 auto 16px;
+    }
 
     .name {
         font-size: 16px;
@@ -17,7 +29,6 @@
     }
 
     .subName {
-        //width: 190px;
         width: 200px;
         margin: 0 auto;
         font-size: 18px;
@@ -25,26 +36,21 @@
         padding-top: 10px;
 
         white-space: nowrap;
-        /* 줄바꿈 방지 */
         overflow: hidden;
-        /* 영역 밖 숨김 */
         text-overflow: ellipsis;
-        /* 말줄임표 처리 */
         display: -webkit-box;
         -webkit-line-clamp: 1;
         line-clamp: 1;
         -webkit-box-orient: vertical;
     }
-}
 
-.price {
-    font-size: 16px;
-    // font-weight: 600;
-    // padding-top: 15px;
-    color: #CA1230
-}
+    .price {
+        font-size: 16px;
+        color: #CA1230;
+        padding-top: 8px;
+    }
 
-
-.coordi-item:hover {
-    transform: translateY(-10px);
+    &:hover {
+        transform: translateY(-10px);
+    }
 }

@@ -55,6 +55,8 @@ export default function Home() {
             <p className="hero-desc">
               일상을 편안하게 만드는 공간의 변화
             </p>
+
+
           </div>
         </div>
       </section>

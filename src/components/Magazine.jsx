@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 import { iloomList } from "../data/magazine";
 
 export default function Magazine() {
-    const magazineItems = iloomList.filter((item) => item.category === "매거진");
+    const magazineItems = iloomList.filter((item) => item.category === "매거진")
+        .slice(0, 3);
 
 
     return (

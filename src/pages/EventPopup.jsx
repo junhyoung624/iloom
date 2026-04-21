@@ -4,35 +4,39 @@ import { Link } from "react-router-dom";
 import { iloomList } from "../data/magazine";
 
 export default function Popup() {
-    const popupItem = iloomList.find((item) => item.id === "event_243")
-    const [isOpen, setIsOpen] = useState(false);
+    const [visible, setVisible] = useState(false)
+    const [isOpen, setIsOpen] = useState(false)  // ← 위로 올림
 
+    // 로딩 딜레이
     useEffect(() => {
-        const hideUntil = localStorage.getItem("hidePopupUntil");
-        const now = new Date().getTime();
+        const timer = setTimeout(() => {
+            setVisible(true)
+        }, 1800)
+        return () => clearTimeout(timer)
+    }, [])
 
+    // 팝업 오픈 여부 (visible 바뀔 때 실행)
+    useEffect(() => {
+        if (!visible) return
+        const hideUntil = localStorage.getItem("hidePopupUntil")
+        const now = new Date().getTime()
         if (!hideUntil || now > Number(hideUntil)) {
-            setIsOpen(true);
+            setIsOpen(true)
         }
-    }, []);
+    }, [visible])  // ← visible이 true 될 때 localStorage 체크
 
-    const handleClose = () => {
-        setIsOpen(false);
-    };
+    const popupItem = iloomList.find((item) => item.id === "event_243")
+
+    const handleClose = () => setIsOpen(false)
 
     const handleHideToday = () => {
-        const now = new Date();
-        const tomorrow = new Date(
-            now.getFullYear(),
-            now.getMonth(),
-            now.getDate() + 1
-        ).getTime();
+        const now = new Date()
+        const tomorrow = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1).getTime()
+        localStorage.setItem("hidePopupUntil", String(tomorrow))
+        setIsOpen(false)
+    }
 
-        localStorage.setItem("hidePopupUntil", String(tomorrow));
-        setIsOpen(false);
-    };
-
-    if (!isOpen) return null;
+    if (!visible || !isOpen) return null  // ← 조건부 return은 맨 아래에
 
     return (
         <div className="event-popup">
@@ -54,5 +58,5 @@ export default function Popup() {
                 </div>
             </div>
         </div>
-    );
+    )
 }
