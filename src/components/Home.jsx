@@ -55,6 +55,8 @@ export default function Home() {
             <p className="hero-desc">
               일상의 온도를 바꾸는 일룸의 새로운 시선
             </p>
+
+
           </div>
         </div>
       </section>
