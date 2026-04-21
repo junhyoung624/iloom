@@ -13,10 +13,33 @@ export default function Charge() {
     const navigate = useNavigate();
 
     //비회원 우편번호 찾기 컴포넌트 관리
-    const [address, setAddress] = useState(''); //주소
-    const [extraAddress, setExtraAddress] = useState('')//상세주소
-    const [zipCode, setZipCode] = useState(''); //우편번호
-    //const [isOpen, setIsOpen] = useState(false); //팝업 오픈 상태
+    const [guestForm, setGuestForm] = useState({
+        name: "",
+        phone: "",
+        email: "",
+        zipCode: "",
+        address: "",
+        extraAddress: "",
+        request: "",
+    });
+
+    const [errors, setErrors] = useState({});
+
+    const handleGuestChange = (e) => {
+        const { name, value } = e.target;
+        console.log(e.target.value);
+
+        setGuestForm((prev) => ({
+            ...prev,
+            [name]: value,
+        }));
+
+        setErrors((prev) => ({
+            ...prev,
+            [name]: "",
+        }));
+    };
+
 
     const SCRIPT_URL =
         "//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js";
@@ -37,18 +60,75 @@ export default function Charge() {
 
             fullAddress += (extraAddress !== '' ? ` (${extraAddress})` : '');
         }
-        setZipCode(data.zonecode); //5자리 우편번호
-        setAddress(fullAddress); //주소
-        setIsOpen(false);//팝업닫기
+        // setZipCode(data.zonecode); //5자리 우편번호
+        // setAddress(fullAddress); //주소
+        // setIsOpen(false);//팝업닫기
+
+        setGuestForm((prev) => ({
+            ...prev,
+            zipCode: data.zonecode,
+            address: fullAddress,
+        }));
+
+        setErrors((prev) => ({
+            ...prev,
+            zipCode: "",
+            address: "",
+        }));
+
     }
 
     const handlePopupClick = () => {
         open({ onComplete: handleComplete });
     }
 
-    const handleExtraAddr = (e) => {
-        setExtraAddress(e.target.value);
-    }
+
+
+    const validateGuestForm = () => {
+        const newErrors = {};
+
+        const name = guestForm.name.trim();
+        const phone = guestForm.phone.trim();
+        const email = guestForm.email.trim();
+        const zipCode = guestForm.zipCode.trim();
+        const address = guestForm.address.trim();
+        const extraAddress = guestForm.extraAddress.trim();
+
+        const phoneRegex = /^01[0-9]-?\d{3,4}-?\d{4}$/;
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!name) {
+            newErrors.name = "이름을 입력해주세요.";
+        }
+
+        if (!phone) {
+            newErrors.phone = "휴대폰 번호를 입력해주세요.";
+        } else if (!phoneRegex.test(phone)) {
+            newErrors.phone = "휴대폰 번호 형식이 올바르지 않습니다.";
+        }
+
+        if (!email) {
+            newErrors.email = "이메일을 입력해주세요.";
+        } else if (!emailRegex.test(email)) {
+            newErrors.email = "이메일 형식이 올바르지 않습니다.";
+        }
+
+        if (!zipCode) {
+            newErrors.zipCode = "우편번호를 입력해주세요.";
+        }
+
+        if (!address) {
+            newErrors.address = "주소를 입력해주세요.";
+        }
+
+        if (!extraAddress) {
+            newErrors.extraAddress = "상세 주소를 입력해주세요.";
+        }
+
+        setErrors(newErrors);
+
+        return Object.keys(newErrors).length === 0;
+    };
 
     const orderItems = useMemo(() => {
         return cartItems
@@ -90,13 +170,23 @@ export default function Charge() {
     const [confirmPay, setConfirmPay] = useState(false);
 
     //결제하기 버튼 클릭시
+    //회원이면 -> 바로 결제 모달
+    //비회원이면 -> 검증 통과 시에만 결제 모달
     const handlePayment = () => {
-        if (!user) {
-            alert("로그인 후 이용하세요");
-            navigate("/login");
-        } else {
+        if (orderItems.length === 0) return;
+
+        if (user) {
             setConfirmPay(true);
+            return;
         }
+
+        const isValid = validateGuestForm();
+
+        if (!isValid) {
+            alert("필수 정보를 올바르게 입력해주세요.");
+            return;
+        }
+        setConfirmPay(true);
     }
 
     //결제 취소
@@ -184,7 +274,6 @@ export default function Charge() {
                     {
                         !user && (
                             <div className="unlogged-user-charge-section">
-                                charge section for unlogged user
                                 <form className='user-form'>
                                     <div className="unlogged-charge-section">
                                         <h3 className="section-title">주문자 정보</h3>
@@ -192,20 +281,32 @@ export default function Charge() {
                                             <div className="info-row">
                                                 <span className="label">보내는 분</span>
                                                 <input type="text"
+                                                    name="name"
+                                                    onChange={handleGuestChange}
+                                                    value={guestForm.name}
                                                     className="unlogged_input"
                                                     required />
+                                                {errors.name && <p className="error-text">{errors.name}</p>}
                                             </div>
                                             <div className="info-row">
                                                 <span className="label">휴대폰</span>
                                                 <input type="text"
+                                                    name="phone"
+                                                    onChange={handleGuestChange}
+                                                    value={guestForm.phone}
                                                     className="unlogged_input"
                                                     required />
+                                                {errors.phone && <p className="error-text">{errors.phone}</p>}
                                             </div>
                                             <div className="info-row">
                                                 <span className="label">이메일</span>
                                                 <input type="email"
+                                                    name="email"
+                                                    onChange={handleGuestChange}
+                                                    value={guestForm.email}
                                                     className="unlogged_input"
                                                     required />
+                                                {errors.email && <p className="error-text">{errors.email}</p>}
                                             </div>
                                         </div>
                                     </div>
@@ -225,28 +326,34 @@ export default function Charge() {
                                                     <div className="fixed-zipcode-area input-zone">
                                                         <p>우편번호</p>
                                                         <input type="text"
-                                                            value={zipCode}
+                                                            value={guestForm.zipCode}
                                                             placeholder='우편번호'
                                                             className="zipcode-input unlogged_input"
                                                             readOnly
+
                                                             required />
+                                                        {errors.zipCode && <p className="error-text">{errors.zipCode}</p>}
+
                                                     </div>
                                                     <div className="fixed-addr-area input-zone">
                                                         <p>주소</p>
                                                         <input type="text"
-                                                            value={address}
+                                                            value={guestForm.address}
                                                             placeholder='주소'
                                                             className="addr-input unlogged_input"
                                                             readOnly
                                                             required />
+                                                        {errors.address && <p className="error-text">{errors.address}</p>}
                                                     </div>
                                                     <div className="extra-addr-info input-zone">
                                                         <p>상세 주소 (도로명 주소를 제외한 상세 주소만 입력해주세요)</p>
                                                         <input type="text"
-                                                            value={extraAddress}
+                                                            name='extraAddress'
+                                                            onChange={handleGuestChange}
+                                                            value={guestForm.extraAddress}
                                                             className="exta-addr-input unlogged_input"
-                                                            onChange={handleExtraAddr}
                                                             required />
+                                                        {errors.extraAddress && <p className="error-text">{errors.extraAddress}</p>}
                                                     </div>
                                                 </div>
                                             </div>
