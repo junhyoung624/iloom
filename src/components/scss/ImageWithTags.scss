@@ -20,7 +20,7 @@
         padding: 10px 18px;
         border: none;
         background: transparent;
-        color: #888;
+        color: var(--sub);
         cursor: pointer;
         position: relative;
         margin-bottom: 20px;
@@ -33,7 +33,7 @@
         display: block;
         width: 0;
         height: 2px;
-        background: #111;
+        background: var(--main);
         margin: 6px auto 0;
         transition: 0.3s;
     }
@@ -48,7 +48,7 @@
     // }
 
     .tab-active {
-        color: #111;
+        color: var(--main);
         font-weight: 700;
     }
 
@@ -192,7 +192,7 @@
         margin: auto 0;
 
         .item-name {
-            color: #5c5c5c;
+            color: var(--sub);
             font-size: 0.7rem;
             margin-bottom: 5px;
         }
@@ -200,10 +200,12 @@
         .item-subname {
             font-size: 0.9rem;
             margin-bottom: 5px;
+            color: var(--main);
         }
 
         .item-price {
             font-weight: 600;
+            color: var(--main);
         }
 
         >p {

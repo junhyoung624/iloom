@@ -56714,8 +56714,7 @@ export const productData = [
     "category2": "책장",
     "category3": "",
     "productImages": [
-      "/images/iloom_images/home-library/bookshelf/HSFC063N_IV_1.png",
-      "/images/iloom_images/home-library/bookshelf/HSFC063N_IV_1.png",
+      "/images/iloom_images/home-library/bookshelf/HSFC063N_IV_1.jpg",
       "/images/iloom_images/home-library/bookshelf/HSFC063N_NCC_2.png",
       "/images/iloom_images/home-library/bookshelf/HSFC063N_IV_3.png"
     ],

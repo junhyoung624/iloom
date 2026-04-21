@@ -46,11 +46,13 @@
 }
 
 .coordi-item {
-    transition: transform 0.25s ease;
-}
-
-.coordi-item:hover {
     img {
-        transform: translateY(-4px);
+        transition: transform 0.3s ease;
+    }
+
+    &:hover {
+        img {
+            transform: translateY(-4px);
+        }
     }
 }

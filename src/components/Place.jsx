@@ -22,8 +22,8 @@ export default function Place() {
             <div className="inner">
                 <div className="title-box">
                     <h2>일상의 모든 순간을 더 깊고 아늑하게</h2>
-                    <h1>가장 나다운 모습으로 머무는 자리</h1>
-                    <span>/</span>
+                    <h3>가장 나다운 모습으로 머무는 자리</h3>
+                    <img src="/images/place/line.png" alt="" />
                     <p>일룸이 제안하는 새로운 일상</p>
                 </div>
             </div>
@@ -46,7 +46,7 @@ export default function Place() {
                                     <span className="place-message">{item.message}</span>
                                     <p className='place-btn'>더 보기</p>
                                 </Link>
-                                
+
                             </div>
                         </SwiperSlide>
                     ))}
