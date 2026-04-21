@@ -22,18 +22,20 @@
         max-width: 220px;
         margin: 0 auto 16px;
     }
+    //width: 200px;
+    margin-top: 30px;
 
     .name {
-        font-size: 16px;
-        font-weight: 400;
+        // font-size: 16px;
+        font-weight: 500;
     }
 
     .subName {
         width: 200px;
         margin: 0 auto;
-        font-size: 18px;
-        font-weight: 600;
-        padding-top: 10px;
+        // font-size: 18px;
+        // font-weight: 600;
+        padding: 10px 0;
 
         white-space: nowrap;
         overflow: hidden;
@@ -52,5 +54,14 @@
 
     &:hover {
         transform: translateY(-10px);
+.coordi-item {
+    img {
+        transition: transform 0.3s ease;
+    }
+
+    &:hover {
+        img {
+            transform: translateY(-4px);
+        }
     }
 }

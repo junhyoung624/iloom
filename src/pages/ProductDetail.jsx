@@ -30,6 +30,7 @@ export default function ProductDetail() {
         window.scrollTo(0, 0)
         if (product?.options?.[0]?.values[0]) {
             setSelectedOption(product.options[0].values[0])
+            setMainImg(0)
         }
     }, [id])
 
@@ -107,10 +108,6 @@ export default function ProductDetail() {
                     <div className="main-image">
                         <img src={product.productImages[mainImg]} alt={product.name} />
                     </div>
-                    <div className="thumb-list">
-                        <div className={mainImg === 0 ? 'active' : ''} onClick={() => setMainImg(0)}><img src={product.productImages[0]} alt="thumb1" />
-                        </div>
-                    </div>
                 </div>
 
                 <div className="info-area">
@@ -161,11 +158,12 @@ export default function ProductDetail() {
 
                             {isDropdownOpen && (
                                 <ul className="dropdown-list">
-                                    {opt.values.map((v, j) => (
+                                    {(Array.isArray(opt.values) ? opt.values : [opt.values]).map((v, j) => (
                                         <li key={j}
                                             onClick={() => {
                                                 setSelectedOption(v)
                                                 setIsDropdownOpen(false)
+                                                setMainImg(j + 1)
                                             }}>
                                             {getColorImg(v) && (
                                                 <img src={`/images/${getColorImg(v)}`} alt={v} />
@@ -178,14 +176,14 @@ export default function ProductDetail() {
                         </div>
                     ))}
 
-                    {selectedOption && product.productImages && product.productImages.length > 0 && (
+                    {product.productImages && product.productImages.length > 0 && (
                         <div className="color-product-images">
                             <p className="color-product-label">제품 이미지</p>
                             <div className="color-product-list">
                                 {product.productImages.map((img, i) => (
-                                    <div key={1}
-                                        className={`color-product-item ${mainImg === i ? 'active' : ''}`}
-                                        onCilck={() => setMainImg(i)}>
+                                    <div key={i}
+                                        className={`color-product-item ${mainImg === i + 1 ? 'active' : ''}`}
+                                        onClick={() => setMainImg(i)}>
                                         <img src={img} alt={`제품이미지${i + 1}`} />
                                     </div>
                                 ))}
@@ -193,10 +191,10 @@ export default function ProductDetail() {
                         </div>
                     )}
 
-                    {selectedOption && (
+                    {(selectedOption || product.options?.length === 0) && (
                         <div className="selected-option-box">
                             <div className="selected-info">
-                                <span>{product.name} / {selectedOption}</span>
+                                <span>{product.name}{selectedOption ? ` / ${selectedOption}` : ''}</span>
                             </div>
                             <div className="qty-price-row">
                                 <div className="qty-control">
@@ -216,7 +214,7 @@ export default function ProductDetail() {
                     </div>
 
                     <div className="action-btns">
-                        <button className="buy" onClick={() => alert('결제 페이지로 이동')}>결제하기</button>
+                        <button className="buy" onClick={handleBuy}>결제하기</button>
                         <button className="cart" onClick={handleAddCart}>장바구니</button>
                     </div>
                 </div>
@@ -236,7 +234,9 @@ export default function ProductDetail() {
                             <td>크기(mm/중량kg)</td>
                             <td>*상품페이지 참고</td>
                             <td>색상</td>
-                            <td>{product.options?.find(o => o.name === '색상')?.values.join(', ') || '*상품페이지 참고'}</td>
+                            <td>{Array.isArray(product.options?.find(o => o.name === '색상')?.values)
+                                ? product.options.find(o => o.name === '색상').values.join(', ')
+                                : product.options?.find(o => o.name === '색상')?.values || '*상품페이지 참고'}</td>
                         </tr>
                         <tr>
                             <td>구성품</td>
@@ -293,7 +293,7 @@ export default function ProductDetail() {
                             <div key={i} className="option-group">
                                 <p className="opt-name">{opt.name}</p>
                                 <div className="opt-values-grid">
-                                    {opt.values.map((v, j) => (
+                                    {(Array.isArray(opt.values) ? opt.values : [opt.values]).map((v, j) => (
                                         <div key={j} className="opt-chip-item">
                                             {opt.name === '색상' && getColorImg(v) && (
                                                 <img src={`/images/${getColorImg(v)}`} alt={v} className="chip-img" />

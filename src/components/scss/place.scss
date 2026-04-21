@@ -1,3 +1,5 @@
+@import '../../variables.scss';
+
 .place {
     overflow: hidden;
 
@@ -9,9 +11,25 @@
     .title-box {
         text-align: center;
         margin-bottom: 40px;
+        color: var(--main);
+
+        h2 {
+            font-size: 25px;
+            font-weight: 400;
+            margin-bottom: 25px;
+        }
+
+        h3 {
+            font-size: 35px;
+            margin-bottom: 54px;
+        }
 
         p {
+            padding: 60px 0 50px 0;
             font-size: 36px;
+
+            font-weight: 200;
+
         }
     }
 
@@ -88,7 +106,7 @@
             left: 50%;
             top: 70%;
             transform: translate(-50%, 10px);
-            color: #d7d7d7;
+            color: var(--line);
             font-size: 16px;
             font-weight: 400;
             width: 100%;
@@ -118,9 +136,9 @@
             cursor: pointer;
 
             &:hover {
-                background: #030303;
+                background: var(--main);
                 color: #fff;
-                border: 1.3px solid #030303;
+                border: 1.3px solid var(--main);
             }
         }
     }

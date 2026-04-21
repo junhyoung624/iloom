@@ -2,11 +2,53 @@ import React, { useMemo, useState } from 'react'
 import { useProductStore } from '../store/useProductStore'
 import { useAuthStore } from '../store/useAuthStore'
 import "./scss/charge.scss"
+import { Link, useNavigate } from 'react-router-dom'
+import ChargeModal from './ChargeModal'
+import { useKakaoPostcodePopup } from 'react-daum-postcode'
 
 export default function Charge() {
-    const { cartItems, items } = useProductStore()
+    const { cartItems, items, onAddOrder } = useProductStore()
     const { user } = useAuthStore()
     const [paymentMethod, setPaymentMethod] = useState('card')
+    const navigate = useNavigate();
+
+    //비회원 우편번호 찾기 컴포넌트 관리
+    const [address, setAddress] = useState(''); //주소
+    const [extraAddress, setExtraAddress] = useState('')//상세주소
+    const [zipCode, setZipCode] = useState(''); //우편번호
+    //const [isOpen, setIsOpen] = useState(false); //팝업 오픈 상태
+
+    const SCRIPT_URL =
+        "//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js";
+    const open = useKakaoPostcodePopup(SCRIPT_URL);
+
+    const handleComplete = (data) => {
+        let fullAddress = data.address;
+        let extraAddress = '';
+
+        if (data.addressType === 'R') {
+            if (data.bname !== '') {
+                extraAddress += data.bname;
+            }
+
+            if (data.buildingName !== '') {
+                extraAddress += (extraAddress !== '' ? `, ${data.buildingName}` : data.buildingName);
+            }
+
+            fullAddress += (extraAddress !== '' ? ` (${extraAddress})` : '');
+        }
+        setZipCode(data.zonecode); //5자리 우편번호
+        setAddress(fullAddress); //주소
+        setIsOpen(false);//팝업닫기
+    }
+
+    const handlePopupClick = () => {
+        open({ onComplete: handleComplete });
+    }
+
+    const handleExtraAddr = (e) => {
+        setExtraAddress(e.target.value);
+    }
 
     const orderItems = useMemo(() => {
         return cartItems
@@ -44,6 +86,40 @@ export default function Charge() {
         return number.toLocaleString('ko-KR') + '원'
     }
 
+    //결제 여부 재확인 팝업
+    const [confirmPay, setConfirmPay] = useState(false);
+
+    //결제하기 버튼 클릭시
+    const handlePayment = () => {
+        if (!user) {
+            alert("로그인 후 이용하세요");
+            navigate("/login");
+        } else {
+            setConfirmPay(true);
+        }
+    }
+
+    //결제 취소
+    const handleClosePopup = () => {
+        setConfirmPay(false);
+    }
+
+    //결제가 완료
+    const handleFinalConfirm = (e) => {
+        alert("결제가 완료되었습니다. 주문 내역을 확인하세요");
+        //주문 내역 orderList에 저장하기
+        onAddOrder({
+            items: orderItems,
+            total: totalPrice,
+
+        })
+
+        //주문/배송 페이지로 이동
+        navigate("/order");
+    }
+
+
+
     return (
         <section className="charge-page">
             <div className="inner">
@@ -52,53 +128,142 @@ export default function Charge() {
                     <p>배송 / 결제 정보를 정확히 입력해주세요</p>
                 </div>
 
-                <div className="charge-section">
-                    <h3 className="section-title">주문자 정보</h3>
-                    <div className="info-table">
-                        <div className="info-row">
-                            <span className="label">보내는 분</span>
-                            <span className="value">{user?.name || '-'}</span>
-                        </div>
-                        <div className="info-row">
-                            <span className="label">휴대폰</span>
-                            <span className="value">{user?.phone || '등록된 번호 없음'}</span>
-                        </div>
-                        <div className="info-row">
-                            <span className="label">이메일</span>
-                            <span className="value">{user?.email || '-'}</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="charge-section">
-                    <h3 className="section-title">배송 정보</h3>
-                    <div className="info-table">
-                        <div className="info-row">
-                            <span className="label">배송지</span>
-                            <div className="value address-box">
-                                <div className="address-top">
-                                    <strong>삼조네</strong>
-                                    <span className="badge">기본 배송지</span>
+                <div className="charge-section-wrap">
+                    {
+                        user && (<> <div className="charge-section">
+                            <h3 className="section-title">주문자 정보</h3>
+                            <div className="info-table">
+                                <div className="info-row">
+                                    <span className="label">보내는 분</span>
+                                    <span className="value">{user?.name || '-'}</span>
                                 </div>
-                                <p>서울특별시 서초구 삼조숨조로길 33-33(3조건물) 303호</p>
-                                <button type="button" className="mini-btn">변경</button>
+                                <div className="info-row">
+                                    <span className="label">휴대폰</span>
+                                    <span className="value">{user?.phone || '등록된 번호 없음'}</span>
+                                </div>
+                                <div className="info-row">
+                                    <span className="label">이메일</span>
+                                    <span className="value">{user?.email || '-'}</span>
+                                </div>
                             </div>
                         </div>
 
-                        <div className="info-row">
-                            <span className="label">배송 요청사항</span>
-                            <div className="value request-box">
-                                <div className="request-inline">
-                                    <p>도착하시기 전에 연락주시고, 직접 설치해주세요</p>
-                                    <span className="divider"></span>
-                                    <p>공동현관 비밀번호 (3030#)</p>
+                            <div className="charge-section">
+                                <h3 className="section-title">배송 정보</h3>
+                                <div className="info-table">
+                                    <div className="info-row">
+                                        <span className="label">배송지</span>
+                                        <div className="value address-box">
+                                            <div className="address-top">
+                                                <strong>삼조네</strong>
+                                                <span className="badge">기본 배송지</span>
+                                            </div>
+                                            <p>서울특별시 서초구 삼조숨조로길 33-33(3조건물) 303호</p>
+                                            <button type="button" className="mini-btn">변경</button>
+                                        </div>
+                                    </div>
+
+                                    <div className="info-row">
+                                        <span className="label">배송 요청사항</span>
+                                        <div className="value request-box">
+                                            <div className="request-inline">
+                                                <p>도착하시기 전에 연락주시고, 직접 설치해주세요</p>
+                                                <span className="divider"></span>
+                                                <p>공동현관 비밀번호 (3030#)</p>
+                                            </div>
+                                            <p>엘리베이터 유무: 있음</p>
+                                            <p>{user?.name || '-'}, {user?.phone || '등록된 번호 없음'}</p>
+                                            <button type="button" className="mini-btn">수정</button>
+                                        </div>
+                                    </div>
                                 </div>
-                                <p>엘리베이터 유무: 있음</p>
-                                <p>{user?.name || '-'}, {user?.phone || '등록된 번호 없음'}</p>
-                                <button type="button" className="mini-btn">수정</button>
+                            </div></>
+
+                        )
+                    }
+                    {
+                        !user && (
+                            <div className="unlogged-user-charge-section">
+                                charge section for unlogged user
+                                <form className='user-form'>
+                                    <div className="unlogged-charge-section">
+                                        <h3 className="section-title">주문자 정보</h3>
+                                        <div className="info-table">
+                                            <div className="info-row">
+                                                <span className="label">보내는 분</span>
+                                                <input type="text"
+                                                    className="unlogged_input"
+                                                    required />
+                                            </div>
+                                            <div className="info-row">
+                                                <span className="label">휴대폰</span>
+                                                <input type="text"
+                                                    className="unlogged_input"
+                                                    required />
+                                            </div>
+                                            <div className="info-row">
+                                                <span className="label">이메일</span>
+                                                <input type="email"
+                                                    className="unlogged_input"
+                                                    required />
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="unlogged-charge-section">
+                                        <h3 className="section-title">배송 정보</h3>
+                                        <div className="info-table unlogged-addr-area">
+                                            <div className="info-row">
+
+                                                <div className="value address-box">
+                                                    <div className="search-addr input-zone">
+                                                        <p>배송지 조회</p>
+                                                        <button onClick={handlePopupClick}>우편번호 찾기</button>
+
+                                                    </div>
+
+                                                    <div className="fixed-zipcode-area input-zone">
+                                                        <p>우편번호</p>
+                                                        <input type="text"
+                                                            value={zipCode}
+                                                            placeholder='우편번호'
+                                                            className="zipcode-input unlogged_input"
+                                                            readOnly
+                                                            required />
+                                                    </div>
+                                                    <div className="fixed-addr-area input-zone">
+                                                        <p>주소</p>
+                                                        <input type="text"
+                                                            value={address}
+                                                            placeholder='주소'
+                                                            className="addr-input unlogged_input"
+                                                            readOnly
+                                                            required />
+                                                    </div>
+                                                    <div className="extra-addr-info input-zone">
+                                                        <p>상세 주소 (도로명 주소를 제외한 상세 주소만 입력해주세요)</p>
+                                                        <input type="text"
+                                                            value={extraAddress}
+                                                            className="exta-addr-input unlogged_input"
+                                                            onChange={handleExtraAddr}
+                                                            required />
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div className="info-row">
+                                                <span className="label">배송 요청사항</span>
+                                                <div className="value request-box">
+                                                    배송 요청사항 선택
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+
                             </div>
-                        </div>
-                    </div>
+                        )
+                    }
                 </div>
 
                 <div className="charge-section">
@@ -230,11 +395,16 @@ export default function Charge() {
                         type="button"
                         className="payment-btn"
                         disabled={orderItems.length === 0}
+                        onClick={handlePayment}
                     >
                         {formatPrice(totalPrice)} 결제하기
                     </button>
                 </div>
             </div>
+            {/* 결제 확인 모달 */}
+            {
+                confirmPay ? <ChargeModal onClose={handleClosePopup} onConfirm={handleFinalConfirm} /> : ""
+            }
         </section>
     )
 }
