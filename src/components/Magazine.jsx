@@ -4,15 +4,16 @@ import { Link } from "react-router-dom";
 import { iloomList } from "../data/magazine";
 
 export default function Magazine() {
-    const magazineItems = iloomList.filter((item) => item.category === "매거진");
+    const magazineItems = iloomList.filter((item) => item.category === "매거진")
+        .slice(0, 3);
 
 
     return (
         <section className="magazine">
             <div className="inner">
                 <div className="title-box">
-                    <h1>Weekly Brand</h1>
-                    <h3>이번 주, 주목할 브랜드 이야기</h3>
+                    <h2>Weekly Brand</h2>
+                    <p>이번 주, 주목할 브랜드 이야기</p>
                 </div>
 
                 <div className="magazine-box">

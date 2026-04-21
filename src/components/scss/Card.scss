@@ -1,3 +1,5 @@
+@import '../../variables.scss';
+
 .card-img-box {
     position: relative;
 
@@ -25,66 +27,77 @@
     .hover {
         opacity: 1;
     }
+
     .default {
         opacity: 0;
     }
 }
 
-.series-row {
-    position: relative;
-}
+.card-text-box {
+    .series-row {
+        position: relative;
+    }
 
-.series-name {
-    margin: 0;
-    text-align: center;
-    color: #606060;
-    font-size: 16px;
-    font-weight: 300;
-    padding: 20px 0 5px;
-}
+    .product-info {
+        text-align: center;
 
-.heart-btn {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-    width: 20px;
-    height: 20px;
-    border: none;
-    background: transparent;
-    padding: 0;
-    cursor: pointer;
-}
+        .series-name {
+            margin: 0;
+            text-align: center;
+            color: var(--sub);
+            font-size: 16px;
+            font-weight: 300;
+            padding: 10px 0 0 0;
+            margin-bottom: 10px;
+        }
 
-.heart {
-    position: absolute;
-    inset: 0;
-    width: 20px;
-    height: 20px;
-    display: block;
-    transition: opacity 0.25s ease;
-}
+        .product-name {
+            padding-bottom: 13px;
+            color: var(--main);
+            font-size: 17px;
+        }
 
-.heart-line {
-    opacity: 1;
-}
+        .price {
+            font-weight: 500;
+        }
+    }
 
-.heart-fill {
-    opacity: 0;
-}
+    .heart-btn {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 20px;
+        border: none;
+        background: transparent;
+        padding: 0;
+        cursor: pointer;
+        margin-top: 20px;
+    }
 
-.heart-btn.active .heart-line {
-    opacity: 0;
-}
+    .heart {
+        position: absolute;
+        inset: 0;
+        width: 20px;
+        height: 20px;
+        display: block;
+        transition: opacity 0.25s ease;
+    }
 
-.heart-btn.active .heart-fill {
-    opacity: 1;
-}
+    .heart-line {
+        opacity: 1;
+    }
 
-.product-name {
-    padding-bottom: 10px;
-}
+    .heart-fill {
+        opacity: 0;
+    }
 
-.price {
-    font-weight: 500;
+    .heart-btn.active .heart-line {
+        opacity: 0;
+    }
+
+    .heart-btn.active .heart-fill {
+        opacity: 1;
+    }
 }

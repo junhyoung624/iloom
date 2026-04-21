@@ -35,62 +35,90 @@ export default function StoreKakaoMap({ stores = [], selectedStore, setSelectedS
 
             const bounds = new window.kakao.maps.LatLngBounds();
 
+
+            //마커 클러스터
+            const clusterer = new window.kakao.maps.MarkerClusterer({
+                map: map,
+                averageCenter: true,
+                minLevel: 5,
+            })
+
+            var imageSrc = './images/storeInfo/map-pin.svg', // 마커이미지의 주소입니다    
+                imageSize = new kakao.maps.Size(30, 30), // 마커이미지의 크기입니다
+                imageOption = { offset: new kakao.maps.Point(27, 69) }; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
+
+            // 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
+            var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption);
+
             //마커 클릭 이벤트 관리
             let openedInfoWindow = null;
             let openedMarkerId = null;
 
-            stores.forEach((store) => {
-                if (!store.latitude || !store.longitude) return;
+            const markers = stores.filter((store) => store.latitude && store.longitude)
+                .map((store) => {
 
-                const position = new window.kakao.maps.LatLng(
-                    Number(store.latitude),
-                    Number(store.longitude)
+                    const position = new window.kakao.maps.LatLng(
+                        Number(store.latitude),
+                        Number(store.longitude)
+                    );
+
+                    const marker = new window.kakao.maps.Marker({
+                        position,
+                        image: markerImage
+                    });
+
+                    const content = `
+                        <div style="padding:10px; min-width:240px; font-size:13px; line-height:1.5;">
+                            <strong style="display:block; margin-bottom:4px;">${store.store_name}</strong>
+                            <div style="margin-top:4px;">${store.phone}</div>
+                        </div>
+                    `;
+
+                    const infowindow = new window.kakao.maps.InfoWindow({
+                        content,
+                        removable: true,
+                    });
+
+                    window.kakao.maps.event.addListener(marker, "click", () => {
+                        if (openedInfoWindow) {
+                            openedInfoWindow.close();
+                        }
+                        infowindow.open(map, marker);
+                        openedInfoWindow = infowindow;
+                        setSelectedStoreId(store.id);
+
+                    });
+                    bounds.extend(position);
+                    return marker;
+                    // return new window.kakao.maps.Marker({
+                    //     position: new window.kakao.maps.LatLng(
+                    //         store.latitude,
+                    //         store.longitude,
+                    //     ),
+                    //     image: markerImage,
+                    // })
+                });
+
+            clusterer.addMarkers(markers);
+            if (selectedStore) {
+                const movePosition = new window.kakao.maps.LatLng(
+                    Number(selectedStore.latitude),
+                    Number(selectedStore.longitude)
                 );
 
-                const marker = new window.kakao.maps.Marker({
-                    position,
-                });
-
-                marker.setMap(map);
-
-                const content = `
-                    <div style="padding:10px; min-width:240px; font-size:13px; line-height:1.5;">
-                        <strong style="display:block; margin-bottom:4px;">${store.store_name}</strong>
-                        <div style="margin-top:4px;">${store.phone}</div>
-                    </div>
-                `;
-                const infowindow = new window.kakao.maps.InfoWindow({
-                    content: content,
-                    removable: true,
-                });
-
-                window.kakao.maps.event.addListener(marker, "click", () => {
-                    //같은 마커 다시 클릭 -> 토글로 닫기
-                    // if (openedMarkerId == store.id && openedInfoWindow) {
-                    //     openedInfoWindow.close();
-                    //     openedInfoWindow = null;
-                    //     openedMarkerId = null;
-                    //     setSelectedStoreId(null);
-                    //     return;
-                    // }
-                    //다른 마커 클릭 -> 이전 거 닫기
-                    if (openedInfoWindow) {
-                        openedInfoWindow.close();
-                    }
-                    //새로 열기
-
-                    infowindow.open(map, marker);
-                    openedInfoWindow = infowindow;
-                    //openedMarkerId = store.id;
-                    setSelectedStoreId(store.id);
-                });
-
-                bounds.extend(position);
-            });
-
-            if (stores.length > 0) {
+                map.setCenter(movePosition);
+                map.setLevel(3);
+            } else if (markers.length > 0) {
                 map.setBounds(bounds);
             }
+
+
+
+
+
+            // if (stores.length > 0) {
+            //     map.setBounds(bounds);
+            // }
 
             // 선택된 매장 있으면 이동
             if (selectedStore) {
@@ -101,6 +129,8 @@ export default function StoreKakaoMap({ stores = [], selectedStore, setSelectedS
 
                 map.setCenter(movePosition);
                 map.setLevel(3);
+            } else if (markers.length > 0) {
+                map.setBounds(bounds);
             }
         });
         // return () => {

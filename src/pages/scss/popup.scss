@@ -7,12 +7,14 @@
     justify-content: center;
     background: rgba(0, 0, 0, 0.35);
     padding-top: 180px;
+    animation: fadeIn 0.5s ease forwards;
 
     .popup-box {
         width: 560px;
         background: #fff;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
         overflow: hidden;
+        animation: slideUp 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 
         .popup-image {
             img {
@@ -53,5 +55,27 @@
         }
 
 
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }

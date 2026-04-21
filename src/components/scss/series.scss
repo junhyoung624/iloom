@@ -1,4 +1,5 @@
 @use "../../App.scss" as g;
+@import '../../variables.scss';
 
 .series {
     width: 100%;
@@ -12,18 +13,19 @@
     }
 
     .title-box {
-        margin-bottom: 40px;
+        margin-bottom: 60px;
+        text-align: center;
 
-        h1 {
-            font-size: 40px;
+        h2 {
+            font-size: 42px;
             font-weight: 700;
             margin-bottom: 12px;
+            margin-top: 120px;
         }
 
-        h3 {
-            font-size: 18px;
-            font-weight: 400;
-            color: #666;
+        p {
+            font-size: 23px;
+            color: var(--sub);
         }
     }
 
@@ -88,8 +90,8 @@
             transition: 0.3s;
 
             &:hover {
-                border: 1.3px solid #030303;
-                background: #030303;
+                border: 1.3px solid var(--main);
+                background: var(--main);
             }
         }
     }
@@ -127,7 +129,8 @@
         display: flex;
         justify-content: center;
         gap: 32px;
-        padding-top: 60px ;
+        // margin-top: 40px;
+        // padding-top: 60px;
 
 
         button {
@@ -141,7 +144,7 @@
     }
 
     .item-card-wrap {
-        padding-top: 70px ;
+        padding-top: 60px;
     }
 }
 
@@ -149,7 +152,7 @@
     display: inline-block;
     border: none;
     background: transparent;
-    color: #888;
+    color: var(--sub);
     cursor: pointer;
     position: relative;
     font-size: 18px;
@@ -163,12 +166,12 @@
     bottom: -8px;
     width: 0;
     height: 2px;
-    background: #111;
+    background: var(--main);
     transition: 0.3s;
 }
 
 .series-name.active {
-    color: #111;
+    color: var(--main);
     font-weight: 700;
 }
 
@@ -182,7 +185,8 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 50px;
-    padding: 130px 0;
+    padding-top: 160px;
+    margin-bottom: 10px;
 }
 
 

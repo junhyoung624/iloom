@@ -20,9 +20,10 @@
         padding: 10px 18px;
         border: none;
         background: transparent;
-        color: #888;
+        color: var(--sub);
         cursor: pointer;
         position: relative;
+        margin-bottom: 20px;
         //font-size: 18px;
         //margin-top: 100px;
     }
@@ -32,7 +33,7 @@
         display: block;
         width: 0;
         height: 2px;
-        background: #111;
+        background: var(--main);
         margin: 6px auto 0;
         transition: 0.3s;
     }
@@ -47,7 +48,7 @@
     // }
 
     .tab-active {
-        color: #111;
+        color: var(--main);
         font-weight: 700;
     }
 
@@ -84,7 +85,7 @@
     // padding: 0;
     width: 1.5rem;
     height: 1.5rem;
-    border: 2px solid; // background-clip: padding-box;
+    // border: 1px solid; // background-clip: padding-box;
     position: absolute;
     // background-color: #ddd;
     // opacity: 0;
@@ -94,7 +95,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(0, 0, 0, 0.55);
+    background: rgba(0, 0, 0, 0.5);
 }
 
 
@@ -191,7 +192,7 @@
         margin: auto 0;
 
         .item-name {
-            color: #5c5c5c;
+            color: var(--sub);
             font-size: 0.7rem;
             margin-bottom: 5px;
         }
@@ -199,10 +200,12 @@
         .item-subname {
             font-size: 0.9rem;
             margin-bottom: 5px;
+            color: var(--main);
         }
 
         .item-price {
             font-weight: 600;
+            color: var(--main);
         }
 
         >p {
