@@ -93,6 +93,15 @@ const SubPage = () => {
     const totalPages = Math.ceil(cateItems.length / itemPage);
     const listRef = useRef(null);
 
+    const pageGroupSize = 5;
+    const startPage = Math.floor((currentPage - 1) / pageGroupSize) * pageGroupSize + 1;
+    const endPage = Math.min(startPage + pageGroupSize - 1, totalPages);
+
+    const visiblePages = Array.from(
+        { length: endPage - startPage + 1 },
+        (_, i) => startPage + i
+    );
+
     const pageItem = cateItems.slice(
         (currentPage - 1) * itemPage,
         currentPage * itemPage
@@ -103,12 +112,12 @@ const SubPage = () => {
     }, [mainCate, subCate, thirdCate]);
 
     useEffect(() => {
-            onSetSort("price", "desc");
-        },[location.pathname])
+        onSetSort("price", "desc");
+    }, [location.pathname])
 
     const pageTop = (page) => {
         setCurrentPage(page)
-        listRef.current?.scrollIntoView({behavior: "smooth"});
+        listRef.current?.scrollIntoView({ behavior: "smooth" });
     }
 
     return (
@@ -119,7 +128,7 @@ const SubPage = () => {
                     <Breadcrumb mainCate={mainCate} subCate={subCate} thirdCate={thirdCate} />
                 </ul>
                 <div className="inner">
-                    <h1  ref={listRef}>{categoryName}</h1>
+                    <h1 ref={listRef}>{categoryName}</h1>
 
                     {tabItems.length > 0 && (
                         <ul className="menu-tab">
@@ -155,7 +164,12 @@ const SubPage = () => {
                         </ul>
 
                         <ul className="pagination">
-                            {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
+                            {startPage > 1 && (
+                                <li>
+                                    <button onClick={() => pageTop(startPage - 1)}>{"<"}</button>
+                                </li>
+                            )}
+                            {visiblePages.map(page => (
                                 <li key={page}>
                                     <button
                                         className={currentPage === page ? "active" : ""}
@@ -165,6 +179,11 @@ const SubPage = () => {
                                     </button>
                                 </li>
                             ))}
+                            {endPage < totalPages && (
+                                <li>
+                                    <button onClick={() => pageTop(endPage + 1)}>{">"}</button>
+                                </li>
+                            )}
                         </ul>
                     </div>
                 </div>
