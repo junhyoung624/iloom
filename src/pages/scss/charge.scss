@@ -347,3 +347,68 @@
         border-bottom: 1px solid #ddd;
     }
 }
+
+// 비회원 주문
+.unlogged-user-charge-section {
+    display: grid;
+    gap: 50px;
+    margin-bottom: 30px;
+
+    .user-form {
+        display: grid;
+        gap: 50px;
+    }
+
+    .unlogged-charge-section {
+        display: flex;
+
+        .info-row {
+            display: grid;
+            gap: 10px;
+        }
+
+        .section-title {
+            flex: 0.5;
+            border-style: none;
+            padding: 0;
+        }
+
+        .info-table {
+            flex: 2;
+        }
+
+        .unlogged-addr-area {
+            .search-addr {
+                button {
+                    width: 500px;
+                    height: 3rem;
+                }
+            }
+
+            .address-box {
+                display: grid;
+                gap: 34px;
+            }
+
+            .input-zone {
+                display: grid;
+                gap: 10px;
+
+                >p {
+                    font-weight: 700;
+                    color: #222;
+                }
+            }
+        }
+    }
+
+    .unlogged_input {
+        height: 3rem;
+        width: 500px;
+        //flex-grow: 1;
+        appearance: none;
+        border-style: none;
+        border: 1px solid #808080;
+        padding-inline-start: 1rem;
+    }
+}

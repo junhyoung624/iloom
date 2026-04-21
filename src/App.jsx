@@ -4,6 +4,7 @@ import './App.scss'
 import Header from './components/Header'
 
 import { Route, Routes } from 'react-router-dom'
+import LoadingScreen from './components/LoadingScreen'
 import Home from './components/Home'
 import Login from './components/Login'
 import Member from './components/Member'
@@ -24,7 +25,6 @@ import Order from './pages/Order'
 import MyPage from './pages/MyPage'
 import { useAuthStore } from './store/useAuthStore'
 import LeavePage from './pages/LeavePage'
-import ProductList from './components/ProductList'
 import Search from './components/Search'
 import OAuth from './pages/OAuth'
 import SubPage from './pages/SubPage'
@@ -37,18 +37,26 @@ import NewBestPage from './pages/NewBestPage'
 import Charge from './pages/Charge'
 import FurniturePage from './components/FurniturePage'
 
-// 메인 페이지
 function App() {
-  const { onfetchItems, onMakeMenu } = useProductStore();
+  const [isLoading, setIsLoading] = useState(true)
+  const { onfetchItems, onMakeMenu } = useProductStore()
   const { initAuth } = useAuthStore()
 
   useEffect(() => {
-    onfetchItems();
-    onMakeMenu();
+    onfetchItems()
+    onMakeMenu()
     initAuth()
   }, [])
+
+  const handleFinish = () => {
+    setIsLoading(false)
+    window.__appLoaded = true
+  }
+
   return (
     <>
+      {isLoading && <LoadingScreen onFinish={handleFinish} />}
+
       <ScrollTop />
       <Header />
       <Routes>
@@ -60,13 +68,8 @@ function App() {
         <Route path="/charge" element={<Charge />} />
         <Route path="/order" element={<Order />} />
         <Route path="/searchpage" element={<SearchPage />} />
-        {/* <Route path='/product-list' element={<ProductList />} /> */}
-
 
         <Route path="/oauth" element={<OAuth />} />
-
-        {/* <Route path="/new-product" element={<NewProduct />} />
-        <Route path="/best-seller" element={<BestSeller />} /> */}
 
         <Route path="/magazine" element={<Magazine />} />
         <Route path="/magazine/:id" element={<ContentDetailPage />} />
@@ -83,7 +86,7 @@ function App() {
         <Route path='/product/:id' element={<ProductDetail />} />
         <Route path='/wishlist' element={<WishList />} />
 
-        <Route path="/furniturepage" element={<FurniturePage  />} />
+        <Route path="/furniturepage" element={<FurniturePage />} />
         <Route path="/new" element={<NewBestPage />} />
         <Route path="/BestSeller" element={<NewBestPage />} />
         <Route path='/:originalCategory' element={<SubPage />} />
