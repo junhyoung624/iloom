@@ -66,44 +66,47 @@ const StoreInfo = () => {
   }, [selectedRegion]);
   return (
     <div className="store-info-wrap">
-      <div className="store-info-title">
-        매장안내
-      </div>
-      <div className="store-info-main">
-        <div className="store-control">
-          {/* Info header : 검색 입력값 변경 이벤트 전달 */}
-          <div className="control-header">
-            <InfoHeader
-              selectedSearch={selectedSearch}
-              setSelectedSearch={setSelectedSearch}
-              keyword={keyword}
-              setKeyword={setKeyword}
-              selectedRegion={selectedRegion}
-              setSelectedRegion={setSelectedRegion}
-              selectedSubRegion={selectedSubRegion}
-              setSelectedSubRegion={setSelectedSubRegion}
-              storeRegion={store_region}
-            />
-          </div>
+      <div className="inner">
+        <div className="store-info-title">
+          매장안내
+        </div>
+        <div className="store-info-main">
+          <div className="store-control">
+            {/* Info header : 검색 입력값 변경 이벤트 전달 */}
+            <div className="control-header">
+              <InfoHeader
+                selectedSearch={selectedSearch}
+                setSelectedSearch={setSelectedSearch}
+                keyword={keyword}
+                setKeyword={setKeyword}
+                selectedRegion={selectedRegion}
+                setSelectedRegion={setSelectedRegion}
+                selectedSubRegion={selectedSubRegion}
+                setSelectedSubRegion={setSelectedSubRegion}
+                storeRegion={store_region}
+              />
+            </div>
 
-          {/* Info body : 왼쪽 매장 리스트 렌더링, 클릭한 매장 선택 */}
-          <div className="control-body">
-            <InfoBody
+            {/* Info body : 왼쪽 매장 리스트 렌더링, 클릭한 매장 선택 */}
+            <div className="control-body">
+              <InfoBody
+                stores={filteredStoreInfo}
+                selectedStoreId={selectedStoreId}
+                setSelectedStoreId={setSelectedStoreId} />
+            </div>
+
+          </div>
+          <div className="store-map">
+
+            {/* 필터링된 매장 마커 표시 */}
+            {/* 마커 클릭시 선택된 매장으로 이동 */}
+            <StoreKakaoMap
               stores={filteredStoreInfo}
-              selectedStoreId={selectedStoreId}
+              selectedStore={selectedStore}
               setSelectedStoreId={setSelectedStoreId} />
           </div>
-
         </div>
-        <div className="store-map">
 
-          {/* 필터링된 매장 마커 표시 */}
-          {/* 마커 클릭시 선택된 매장으로 이동 */}
-          <StoreKakaoMap
-            stores={filteredStoreInfo}
-            selectedStore={selectedStore}
-            setSelectedStoreId={setSelectedStoreId} />
-        </div>
       </div>
 
     </div>
