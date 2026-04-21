@@ -5,12 +5,15 @@ import "./scss/charge.scss"
 import { Link, useNavigate } from 'react-router-dom'
 import ChargeModal from './ChargeModal'
 import { useKakaoPostcodePopup } from 'react-daum-postcode'
+import { createOrder } from '../firebase/orderService'
 
 export default function Charge() {
     const { cartItems, items, onAddOrder } = useProductStore()
     const { user } = useAuthStore()
     const [paymentMethod, setPaymentMethod] = useState('card')
     const navigate = useNavigate();
+    const [guestName, setGuestName] = useState('')
+    const [guestPhone, setGuestPhone] = useState('')
 
     //비회원 우편번호 찾기 컴포넌트 관리
     const [address, setAddress] = useState(''); //주소
@@ -105,17 +108,32 @@ export default function Charge() {
     }
 
     //결제가 완료
-    const handleFinalConfirm = (e) => {
-        alert("결제가 완료되었습니다. 주문 내역을 확인하세요");
-        //주문 내역 orderList에 저장하기
-        onAddOrder({
-            items: orderItems,
-            total: totalPrice,
-
-        })
-
-        //주문/배송 페이지로 이동
-        navigate("/order");
+    const handleFinalConfirm = async () => {
+        try {
+            await createOrder({
+                name: user.name,
+                phone: user.phone,
+                product: orderItems[0],
+                option: orderItems[0].color,
+                quantity: orderItems[0].qty,
+                items: orderItems.map(item => ({
+                    productId: item.id,
+                    name: item.name,
+                    option: item.color,
+                    quantity: item.qty,
+                    price: item.priceNumber
+                }))
+            })
+            alert("결제가 완료되었습니다. 주문 내역을 확인하세요")
+            onAddOrder({
+                items: orderItems,
+                total: totalPrice,
+            })
+            navigate("/order")
+        } catch (err) {
+            alert("주문 저장 중 오류가 발생했습니다.")
+            console.error(err)
+        }
     }
 
 
@@ -193,12 +211,14 @@ export default function Charge() {
                                                 <span className="label">보내는 분</span>
                                                 <input type="text"
                                                     className="unlogged_input"
+                                                    onChange={(e) => setGuestName(e.target.value)}
                                                     required />
                                             </div>
                                             <div className="info-row">
                                                 <span className="label">휴대폰</span>
                                                 <input type="text"
                                                     className="unlogged_input"
+                                                    onChange={(e) => setGuestPhone(e.target.value)}
                                                     required />
                                             </div>
                                             <div className="info-row">

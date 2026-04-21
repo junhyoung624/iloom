@@ -22,6 +22,7 @@
         max-width: 220px;
         margin: 0 auto 16px;
     }
+
     //width: 200px;
     margin-top: 30px;
 
@@ -54,14 +55,17 @@
 
     &:hover {
         transform: translateY(-10px);
-.coordi-item {
-    img {
-        transition: transform 0.3s ease;
-    }
 
-    &:hover {
-        img {
-            transform: translateY(-4px);
+        .coordi-item {
+            img {
+                transition: transform 0.3s ease;
+            }
+        }
+
+        &:hover {
+            img {
+                transform: translateY(-4px);
+            }
         }
     }
 }
