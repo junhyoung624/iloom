@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { useProductStore } from '../store/useProductStore'
-import { Link, useParams } from 'react-router-dom';
+import { Link, useLocation, useParams } from 'react-router-dom';
 import "./scss/subPage.scss"
 import MdPick from '../components/MdPick';
 import SubCard from '../components/SubCard';
@@ -92,6 +92,7 @@ const SubPage = () => {
     const itemPage = 20;
     const totalPages = Math.ceil(cateItems.length / itemPage);
     const listRef = useRef(null);
+    const location = useLocation();
 
     const pageGroupSize = 5;
     const startPage = Math.floor((currentPage - 1) / pageGroupSize) * pageGroupSize + 1;
