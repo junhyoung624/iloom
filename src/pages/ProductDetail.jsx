@@ -183,9 +183,9 @@ export default function ProductDetail() {
                             <p className="color-product-label">제품 이미지</p>
                             <div className="color-product-list">
                                 {product.productImages.map((img, i) => (
-                                    <div key={1}
+                                    <div key={i}
                                         className={`color-product-item ${mainImg === i ? 'active' : ''}`}
-                                        onCilck={() => setMainImg(i)}>
+                                        onClick={() => setMainImg(i)}>
                                         <img src={img} alt={`제품이미지${i + 1}`} />
                                     </div>
                                 ))}
@@ -236,7 +236,9 @@ export default function ProductDetail() {
                             <td>크기(mm/중량kg)</td>
                             <td>*상품페이지 참고</td>
                             <td>색상</td>
-                            <td>{product.options?.find(o => o.name === '색상')?.values.join(', ') || '*상품페이지 참고'}</td>
+                            <td>{Array.isArray(product.options?.find(o => o.name === '색상')?.values)
+                                ? product.options.find(o => o.name === '색상').values.join(', ')
+                                : product.options?.find(o => o.name === '색상')?.values || '*상품페이지 참고'}</td>
                         </tr>
                         <tr>
                             <td>구성품</td>
