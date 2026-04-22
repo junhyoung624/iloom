@@ -180,26 +180,53 @@ export const useProductStore = create((set, get) => ({
         const orderPrev = get().orderList;
         console.log("onAddOrder in", order);
 
+        const now = new Date();
+
         const newOrder = {
             id: Date.now(),
             // orderTime: new Date(),
-            date: new Date().toLocaleDateString(),
-            hours: new Date().getHours(),
-            minutes: new Date().getMinutes(),
-            seconds: new Date().getSeconds(),
+            date: now.toLocaleDateString(),
+            hours: now.getHours(),
+            minutes: now.getMinutes(),
+            seconds: now.getSeconds(),
             items: order.items,
             price: order.total,
             color: order.color,
             state: "결제완료",
+            ...order, //charge.jsx에서 넘긴 값들 그대로 저장하기
         };
 
-        const updateOrder = [...orderPrev, newOrder];
+        //const updateOrder = [...orderPrev, newOrder];
 
         set({
-            orderList: updateOrder,
-            cartCount: 0,
+            orderList: [...orderPrev, newOrder],
+            //cartCount: 0,
         })
     },
+
+    //비회원 주문 조회 
+    //주문번호로 조회
+    findGuestOrderById: (orderNumber) => {
+        const orders = get().orderList;
+
+        return orders.find(
+            (order) =>
+                order.isGuest &&
+                order.orderNumber === orderNumber
+        );
+    },
+
+    //전화번호로 조회
+    findGuestOrderByPhone: (phone) => {
+        const orders = get().orderList;
+
+        return orders.find(
+            (order) =>
+                order.isGuest &&
+                order.guestInfo?.phone === phone
+        );
+    },
+
 
 
     // 메뉴 생성

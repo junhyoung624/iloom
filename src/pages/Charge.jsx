@@ -5,12 +5,15 @@ import "./scss/charge.scss"
 import { Link, useNavigate } from 'react-router-dom'
 import ChargeModal from './ChargeModal'
 import { useKakaoPostcodePopup } from 'react-daum-postcode'
+// import { createOrder } from '../firebase/orderService'
 
 export default function Charge() {
     const { cartItems, items, onAddOrder } = useProductStore()
     const { user } = useAuthStore()
     const [paymentMethod, setPaymentMethod] = useState('card')
     const navigate = useNavigate();
+    const [guestName, setGuestName] = useState('')
+    const [guestPhone, setGuestPhone] = useState('')
 
     //비회원 우편번호 찾기 컴포넌트 관리
     const [guestForm, setGuestForm] = useState({
@@ -98,31 +101,31 @@ export default function Charge() {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
         if (!name) {
-            newErrors.name = "이름을 입력해주세요.";
+            newErrors.name = "** 이름을 입력해주세요.";
         }
 
         if (!phone) {
-            newErrors.phone = "휴대폰 번호를 입력해주세요.";
+            newErrors.phone = "** 휴대폰 번호를 입력해주세요.";
         } else if (!phoneRegex.test(phone)) {
-            newErrors.phone = "휴대폰 번호 형식이 올바르지 않습니다.";
+            newErrors.phone = "** 휴대폰 번호 형식이 올바르지 않습니다.";
         }
 
         if (!email) {
-            newErrors.email = "이메일을 입력해주세요.";
+            newErrors.email = "** 이메일을 입력해주세요.";
         } else if (!emailRegex.test(email)) {
-            newErrors.email = "이메일 형식이 올바르지 않습니다.";
+            newErrors.email = "** 이메일 형식이 올바르지 않습니다.";
         }
 
         if (!zipCode) {
-            newErrors.zipCode = "우편번호를 입력해주세요.";
+            newErrors.zipCode = "** 우편번호를 입력해주세요.";
         }
 
         if (!address) {
-            newErrors.address = "주소를 입력해주세요.";
+            newErrors.address = "** 주소를 입력해주세요.";
         }
 
         if (!extraAddress) {
-            newErrors.extraAddress = "상세 주소를 입력해주세요.";
+            newErrors.extraAddress = "** 상세 주소를 입력해주세요.";
         }
 
         setErrors(newErrors);
@@ -166,6 +169,20 @@ export default function Charge() {
         return number.toLocaleString('ko-KR') + '원'
     }
 
+    const createOrderNumber = () => {
+        const now = new Date();
+
+        const year = now.getFullYear();
+        const month = String(now.getMonth() + 1).padStart(2, "0");
+        const date = String(now.getDate()).padStart(2, "0");
+
+        const random = Math.random().toString(36).slice(2, 8).toUpperCase();
+
+        return `${year}${month}${date}-${random}`;
+    };
+
+
+
     //결제 여부 재확인 팝업
     const [confirmPay, setConfirmPay] = useState(false);
 
@@ -195,18 +212,70 @@ export default function Charge() {
     }
 
     //결제가 완료
-    const handleFinalConfirm = (e) => {
-        alert("결제가 완료되었습니다. 주문 내역을 확인하세요");
-        //주문 내역 orderList에 저장하기
-        onAddOrder({
-            items: orderItems,
-            total: totalPrice,
+    const handleFinalConfirm = () => {
+        const orderNumber = createOrderNumber();
+        const formatGuestPhone = guestForm.phone.replace(/-/g, "");
 
-        })
+        const orderData = user
+            ? {
+                orderNumber,
+                isGuest: false, //회원
+                userInfo: {
+                    name: user.name,
+                    phone: user.phone,
+                    email: user.email,
+                },
+                items: orderItems,
+                total: totalPrice,
+            }
+            : {
+                orderNumber,
+                isGuest: true, //비회원
+                guestInfo: {
+                    name: guestForm.name,
+                    phone: formatGuestPhone,
+                    email: guestForm.email,
+                    zipCode: guestForm.zipCode,
+                    address: guestForm.address,
+                    extraAddress: guestForm.extraAddress,
+                    request: guestForm.request,
+                },
+                items: orderItems,
+                total: totalPrice,
+            };
 
-        //주문/배송 페이지로 이동
+        onAddOrder(orderData);
+
+        alert(`결제가 완료되었습니다. 주문번호는 ${orderNumber} 입니다.`);
         navigate("/order");
     }
+    // const handleFinalConfirm = async () => {
+    //     try {
+    //         await createOrder({
+    //             name: user.name,
+    //             phone: user.phone,
+    //             product: orderItems[0],
+    //             option: orderItems[0].color,
+    //             quantity: orderItems[0].qty,
+    //             items: orderItems.map(item => ({
+    //                 productId: item.id,
+    //                 name: item.name,
+    //                 option: item.color,
+    //                 quantity: item.qty,
+    //                 price: item.priceNumber
+    //             }))
+    //         })
+    //         alert("결제가 완료되었습니다. 주문 내역을 확인하세요")
+    //         onAddOrder({
+    //             items: orderItems,
+    //             total: totalPrice,
+    //         })
+    //         navigate("/order")
+    //     } catch (err) {
+    //         alert("주문 저장 중 오류가 발생했습니다.")
+    //         console.error(err)
+    //     }
+    // }
 
 
 
@@ -274,6 +343,7 @@ export default function Charge() {
                     {
                         !user && (
                             <div className="unlogged-user-charge-section">
+                                <div className="title">비회원 주문입니다</div>
                                 <form className='user-form'>
                                     <div className="unlogged-charge-section">
                                         <h3 className="section-title">주문자 정보</h3>
@@ -285,6 +355,7 @@ export default function Charge() {
                                                     onChange={handleGuestChange}
                                                     value={guestForm.name}
                                                     className="unlogged_input"
+                                                    onChange={(e) => setGuestName(e.target.value)}
                                                     required />
                                                 {errors.name && <p className="error-text">{errors.name}</p>}
                                             </div>
@@ -295,6 +366,7 @@ export default function Charge() {
                                                     onChange={handleGuestChange}
                                                     value={guestForm.phone}
                                                     className="unlogged_input"
+                                                    onChange={(e) => setGuestPhone(e.target.value)}
                                                     required />
                                                 {errors.phone && <p className="error-text">{errors.phone}</p>}
                                             </div>
