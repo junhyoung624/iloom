@@ -25,6 +25,7 @@ export default function ProductDetail() {
     //const [isWished, setIsWished] = useState(false)
     const { onToggleWishList, isWished } = useProductStore();
     const wished = isWished(id);
+    const [zoomImg, setZoomImg] = useState(null)
 
     useEffect(() => {
         window.scrollTo(0, 0)
@@ -351,7 +352,9 @@ export default function ProductDetail() {
                                         <p className="review-title">{r.title}</p>
                                         <div className="review-img">
                                             {r.images?.map((img, idx) => (
-                                                <img key={idx} src={img[0]} alt={`review${idx + 1}`} />
+                                                <img key={idx} src={img} alt={`review${idx + 1}`}
+                                                    onClick={() => setZoomImg(img)}
+                                                    style={{ cursor: 'pointer' }} />
                                             ))}
                                         </div>
                                         <p className="review-content">{r.content}</p>
@@ -542,6 +545,12 @@ export default function ProductDetail() {
                     </div>
                 )}
             </div>
+
+            {zoomImg && (
+                <div className="zoom-overlay" onClick={() => setZoomImg(null)}>
+                    <img src={zoomImg} alt="확대이미지" onClick={(e) => e.stopPropagation()} />
+                </div>
+            )}
 
             {showCartModal && (
                 <div className="cart-modal-overlay" onClick={() => setShowCartModal(false)}>
