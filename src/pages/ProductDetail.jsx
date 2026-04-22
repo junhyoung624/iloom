@@ -6,6 +6,7 @@ import { productReviews as initialData } from '../data/reviewData'
 import { commonQna } from '../data/qnaData'
 import "./scss/product-detail.scss"
 import { useProductStore } from '../store/useProductStore'
+import { Lens } from './Lens'
 
 const TABS = ['상세정보', '옵션', '인테리어 팁', '상품평', '제품Q&A', '배송/취소/반품']
 
@@ -121,7 +122,9 @@ export default function ProductDetail() {
             <div className="detail-top">
                 <div className="image-area">
                     <div className="main-image">
-                        <img src={product.productImages[mainImg]} alt={product.name} />
+                        <Lens zoomFactor={1.5} lensSize={250}>
+                            <img src={product.productImages[mainImg]} alt={product.name} />
+                        </Lens>
                     </div>
                 </div>
 
