@@ -37,6 +37,7 @@ import NewBestPage from './pages/NewBestPage'
 import Charge from './pages/Charge'
 import FurniturePage from './components/FurniturePage'
 import { addTestOrder } from './firebase/orderService'
+import OrderForGuest from './pages/OrderForGuest'
 
 function App() {
   const [isLoading, setIsLoading] = useState(true)
@@ -72,6 +73,7 @@ function App() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/charge" element={<Charge />} />
         <Route path="/order" element={<Order />} />
+        <Route path="/orderForGuest/:orderNum" element={<OrderForGuest />} />
         <Route path="/searchpage" element={<SearchPage />} />
 
         <Route path="/oauth" element={<OAuth />} />

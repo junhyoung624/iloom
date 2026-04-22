@@ -75,7 +75,15 @@ export default function ProductDetail() {
             alert('옵션을 선택해주세요')
             return
         }
-        navigate('/charge', { state: { product, option: selectedOption, quantity } })
+        navigate('/charge', {
+            state: {
+                directBuyItem: {
+                    ...product,
+                    color: selectedOption,
+                    qty: quantity,
+                }
+            }
+        })
     }
 
     const handleAddCart = () => {

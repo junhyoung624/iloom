@@ -60,7 +60,7 @@ const Order = () => {
                                 <p>택배배송</p>
                               </div>
                               <div className="right">
-                                <p>도착예정일 : </p>
+                                <p>도착예정일 : {order.deliveryDate}</p>
                                 <img src="./images/logo-icon/order-right-arrow.png" alt="."
                                   className='move-btn'
                                   onClick={() => alert("주문 상세로 이동")} />
