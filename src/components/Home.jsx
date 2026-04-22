@@ -9,12 +9,15 @@ import Place from './Place'
 import NewCollection from './NewCollection'
 import SpaceCoordi from './SpaceCoordi'
 import Popup from '../pages/EventPopup'
+import Instagram from './Instagram'
+import { Link } from 'react-router-dom'
 
 const HERO_FADE_START = 0
 const HERO_FADE_END = 700
 
 export default function Home() {
   const [overlayOpacity, setOverlayOpacity] = useState(0.7)
+  const [heroAnimate, setHeroAnimate] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,7 +35,14 @@ export default function Home() {
     window.addEventListener('scroll', handleScroll)
     handleScroll()
 
-    return () => window.removeEventListener('scroll', handleScroll)
+    const heroTimer = setTimeout(() => {
+      setHeroAnimate(true)
+    }, 1200)
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+      clearTimeout(heroTimer)
+    }
   }, [])
 
   return (
@@ -50,13 +60,16 @@ export default function Home() {
             className="hero-overlay"
             style={{ opacity: overlayOpacity }}
           />
-          <div className="hero-text">
-            <h2 className="hero-title">Design for Inner Peace.</h2>
+          <div className={`hero-text ${heroAnimate ? 'show' : ''}`}>
+            <h2 className="hero-title">Timeless Favorites for Everyday Living.</h2>
             <p className="hero-desc">
-              일상의 온도를 바꾸는 일룸의 새로운 시선
+              일상 속에서 꾸준히 사랑받는 일룸의 베스트셀러
             </p>
 
-
+            <Link to="/BestSeller" className="hero-cta">
+              <span className="hero-cta__label">베스트셀러 보기</span>
+              <span className="hero-cta__icon" aria-hidden="true">→</span>
+            </Link>
           </div>
         </div>
       </section>
@@ -69,6 +82,7 @@ export default function Home() {
       <SpaceCoordi />
       <Series />
       <Sns />
+      <Instagram />
       <Magazine />
       <FooterAccordion />
     </div>

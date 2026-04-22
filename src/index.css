@@ -23,7 +23,6 @@ html {
     font-family: 'Pretendard', sans-serif;
 }
 
-
 .hero-scroll-section {
     position: relative;
     height: 220vh;
@@ -55,10 +54,13 @@ html {
     .hero-text {
         position: absolute;
         left: 50%;
-        bottom: 50%;
+        top: 40%;
         transform: translate(-50%);
         z-index: 2;
         color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
         .hero-title {
             font-size: 50px;
@@ -66,22 +68,16 @@ html {
             font-weight: 600;
             margin-bottom: 18px;
             line-height: 1.1;
-
             color: transparent;
             -webkit-text-stroke: 1px rgba(255, 255, 255, 0.7);
-
             background-image: linear-gradient(#fff, #fff);
             background-repeat: no-repeat;
             background-position: center center;
             background-size: 0% 100%;
             -webkit-background-clip: text;
             background-clip: text;
-
             opacity: 0;
             transform: translateY(24px);
-            animation:
-                heroTitleReveal 0.8s ease forwards,
-                heroTitleFillCenter 1s ease 0.2s forwards;
         }
 
         .hero-desc {
@@ -91,7 +87,94 @@ html {
             line-height: 1.6;
             opacity: 0;
             transform: translateY(20px);
-            animation: heroDescReveal 0.8s ease 1.4s forwards;
+        }
+
+        .hero-cta {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            min-width: 240px;
+            height: 64px;
+            padding: 0 30px;
+            margin-top: 100px;
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            color: #fff;
+            text-decoration: none;
+            overflow: hidden;
+            backdrop-filter: blur(4px);
+            opacity: 0;
+            transform: translateY(20px);
+            transition:
+                color 0.35s ease,
+                border-color 0.35s ease,
+                transform 0.35s ease,
+                box-shadow 0.35s ease;
+
+            &::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: #fff;
+                transform: scaleX(0);
+                transform-origin: left center;
+                transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+                z-index: 0;
+            }
+
+            .hero-cta__label,
+            .hero-cta__icon {
+                position: relative;
+                z-index: 1;
+                transition: transform 0.35s ease, color 0.35s ease;
+            }
+
+            .hero-cta__label {
+                font-size: 15px;
+                font-weight: 600;
+                letter-spacing: 0.04em;
+            }
+
+            .hero-cta__icon {
+                font-size: 18px;
+                transform: translateX(0);
+            }
+
+            &:hover {
+                color: #111;
+                border-color: #fff;
+                transform: translateY(-2px);
+                box-shadow: 0 14px 30px rgba(0, 0, 0, 0.22);
+
+                &::before {
+                    transform: scaleX(1);
+                }
+
+                .hero-cta__label {
+                    transform: translateX(-2px);
+                }
+
+                .hero-cta__icon {
+                    transform: translateX(6px);
+                }
+            }
+        }
+
+        &.show {
+            .hero-title {
+                animation:
+                    heroTitleReveal 0.8s ease forwards,
+                    heroTitleFillCenter 1s ease 0.2s forwards;
+            }
+
+            .hero-desc {
+                animation: heroDescReveal 0.8s ease 1.4s forwards;
+            }
+
+            .hero-cta {
+                animation: heroCtaReveal 0.8s ease 1.9s forwards;
+            }
         }
     }
 }
@@ -119,6 +202,18 @@ html {
 }
 
 @keyframes heroDescReveal {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes heroCtaReveal {
     from {
         opacity: 0;
         transform: translateY(20px);
