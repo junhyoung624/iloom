@@ -64,7 +64,6 @@ export default function QuickMenu() {
                     </ul>
                 </div>
             </div>
-
         </div>
     );
 }

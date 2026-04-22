@@ -1,0 +1,45 @@
+:root {
+  --main: #303030;
+  --sub: #808080;
+  --line: #c9c9c9;
+}
+
+.signature-series-section {
+  padding: 160px 24px;
+  overflow: hidden;
+}
+
+.signature-series-head {
+  max-width: 1280px;
+  margin: 0 auto 48px;
+  text-align: center;
+  animation: signatureSeriesHorizontalFadeUp 1s ease both;
+}
+
+.signature-series-head-sub {
+  display: inline-block;
+  margin-bottom: 14px;
+  font-size: 36px;
+  font-weight: 600;
+  color: var(--main);
+}
+
+.signature-series-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 1440px;
+  margin: 0 auto;
+  animation: signatureSeriesHorizontalFadeUp 1s ease 0.15s both;
+}
+
+@keyframes signatureSeriesHorizontalFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(36px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

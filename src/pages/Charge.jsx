@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import { useProductStore } from '../store/useProductStore'
 import { useAuthStore } from '../store/useAuthStore'
 import "./scss/charge.scss"
@@ -8,12 +8,16 @@ import { useKakaoPostcodePopup } from 'react-daum-postcode'
 // import { createOrder } from '../firebase/orderService'
 
 export default function Charge() {
-    const { cartItems, items, onAddOrder } = useProductStore()
+    const { cartItems, items, onAddOrder, onfetchItems } = useProductStore()
     const { user } = useAuthStore()
     const [paymentMethod, setPaymentMethod] = useState('card')
     const navigate = useNavigate();
     const [guestName, setGuestName] = useState('')
     const [guestPhone, setGuestPhone] = useState('')
+
+    useEffect(()=> {
+        onfetchItems()
+    },[])
 
     //비회원 우편번호 찾기 컴포넌트 관리
     const [guestForm, setGuestForm] = useState({
@@ -381,7 +385,6 @@ export default function Charge() {
                                                     onChange={handleGuestChange}
                                                     value={guestForm.name}
                                                     className="unlogged_input"
-
                                                     required />
                                                 {errors.name && <p className="error-text">{errors.name}</p>}
                                             </div>
@@ -392,7 +395,6 @@ export default function Charge() {
                                                     onChange={handleGuestChange}
                                                     value={guestForm.phone}
                                                     className="unlogged_input"
-
                                                     required />
                                                 {errors.phone && <p className="error-text">{errors.phone}</p>}
                                             </div>

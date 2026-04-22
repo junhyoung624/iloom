@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { Navigation } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import "./scss/bestseller.scss"
@@ -7,6 +7,9 @@ import 'swiper/css/navigation'
 import { Link } from 'react-router-dom'
 
 export default function Best() {
+  const prevRef = useRef(null);
+  const nextRef = useRef(null);
+
   const bestList = [
     {
       id: "1", key: "best1", image: "./images/best-seller/bestseller-01.png",
@@ -62,13 +65,22 @@ export default function Best() {
       </div>
 
       <div className="best-swiper-wrap">
+        <button ref={prevRef} className="best-prev">&#8249;</button>
+        <button ref={nextRef} className="best-next">&#8250;</button>
+
         <Swiper
-          navigation={true}
           modules={[Navigation]}
+          navigation={{
+            prevEl: prevRef.current,
+            nextEl: nextRef.current,
+          }}
+          onBeforeInit={(swiper) => {
+            swiper.params.navigation.prevEl = prevRef.current;
+            swiper.params.navigation.nextEl = nextRef.current;
+          }}
           slidesPerView={3}
           spaceBetween={30}
           loop={true}
-          className="mySwiper"
         >
           {bestList.map((item) => (
             <SwiperSlide key={item.id}>
