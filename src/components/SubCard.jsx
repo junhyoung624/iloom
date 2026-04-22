@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { useProductStore } from '../store/useProductStore'
 import "./scss/Card.scss"
+import { useAuthStore } from '../store/useAuthStore'
+import { useNavigate } from 'react-router-dom'
 
 const SubCard = ({ item }) => {
     const { onToggleWishList, wishlist } = useProductStore()
