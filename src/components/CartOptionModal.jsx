@@ -59,7 +59,7 @@ export default function CartOptionModal({ item, onClose, onConfirm }) {
                                 >
                                     {paths[idx] && (
                                         <img
-                                            src={`/${paths[idx]}`}
+                                            src={`/images/${paths[idx]}`}
                                             alt={color}
                                             onError={e => { e.target.style.display = 'none' }}
                                         />
