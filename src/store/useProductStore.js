@@ -36,16 +36,37 @@ export const useProductStore = create((set, get) => ({
         return wishlist.some((item) => item.id === id);
     },
 
-    onToggleWishList: (item) => {
+    onToggleWishList: async (item, user) => {
         const { wishlist } = get();
         const exists = wishlist.some((wishItem) => wishItem.id === item.id);
 
-        set({
-            wishlist: exists
-                ? wishlist.filter((wishItem) => wishItem.id !== item.id)
-                : [...wishlist, item],
-        });
+        const newWishlist = exists
+            ? wishlist.filter((wishItem) => wishItem.id !== item.id)
+            : [...wishlist, item];
+
+        set({ wishlist: newWishlist });
+
+        if (user) {
+            const { doc, setDoc } = await import('firebase/firestore');
+            const { db } = await import('../firebase/firebase');
+            const userRef = doc(db, 'people', user.uid);
+            await setDoc(userRef, { wishlist: newWishlist }, { merge: true });
+        }
     },
+
+    fetchWishlist: async (user) => {
+        if (!user) return;
+        const { doc, getDoc } = await import('firebase/firestore');
+        const { db } = await import('../firebase/firebase');
+        const userRef = doc(db, 'people', user.uid);
+        const snap = await getDoc(userRef);
+        const data = snap.data();
+        if (data?.wishlist) {
+            set({ wishlist: data.wishlist });
+        }
+    },
+
+    clearWishlist: () => set({ wishlist: [] }),
 
     onAddWishList: (product) => {
         const wish = get().wishlist;

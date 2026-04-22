@@ -114,7 +114,7 @@ export default function Cart() {
                 const colorInfo = colorData.find((c) => c.productCd === item.id) 
 
                 const colorIndex = colorInfo?.colorCd.indexOf(item.color)
-                const colorImg = colorInfo.localImgPath[colorIndex]
+                const colorImg = colorInfo?.localImgPath[colorIndex]
 
                 const itemTotal = Number(item.price.replace(/,/g, '')) * item.qty
                 return (
