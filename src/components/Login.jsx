@@ -8,8 +8,9 @@ import { findEmailByNameAndPhone } from '../firebase/userService';
 
 const Login = () => {
 
-  const [email, setEmail] = useState("");
+  const [email, setEmail] = useState(() => localStorage.getItem('savedEmail') || "");
   const [pass, setPass] = useState("");
+  const [saveId, setSaveId] = useState(() => !!localStorage.getItem('savedEmail'))
 
   const { onLogin, onGoogleLogin, onKakaoLogin, onNaverLogin } = useAuthStore();
   const navigate = useNavigate();
@@ -76,6 +77,11 @@ const Login = () => {
   // 기본 이메일 로그인
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (saveId) {
+      localStorage.setItem('savedEmail', email)
+    } else {
+      localStorage.removeItem('savedEmail')
+    }
     const result = await onLogin(email, pass);
     if (result) navigate("/")
   }
@@ -119,12 +125,15 @@ const Login = () => {
           <form onSubmit={handleSubmit}>
             <p>아이디(이메일)</p>
             <input type="email" placeholder='ID 또는 이메일'
-              onChange={(e) => setEmail(e.target.value)} />
+              value={email} onChange={(e) => setEmail(e.target.value)} />
             <p>비밀번호</p>
             <input type="password" placeholder='비밀번호'
               onChange={(e) => setPass(e.target.value)} />
             <label>
-              <input type="checkbox" />아이디 저장
+              <input type="checkbox" checked={saveId} onChange={(e) => {
+                setSaveId(e.target.checked)
+                if (!e.target.checked) localStorage.removeItem('savedEmail')
+              }} />아이디 저장
             </label>
             <p style={{ color: "#C9C9C9" }}>* 개인정보를 위해 개인PC에서만 이용해주세요</p>
 

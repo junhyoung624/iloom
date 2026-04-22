@@ -1,0 +1,5 @@
+npm install react-select - 지도 지역 선택
+
+npm install react-daum-postcode - 주소 검색 기능
+
+npm install framer-motion - 플러그인

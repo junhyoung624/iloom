@@ -6,13 +6,16 @@ import { productReviews as initialData } from '../data/reviewData'
 import { commonQna } from '../data/qnaData'
 import "./scss/product-detail.scss"
 import { useProductStore } from '../store/useProductStore'
+import { useAuthStore } from '../store/useAuthStore'
+import { Lens } from './Lens'
 
 const TABS = ['상세정보', '옵션', '인테리어 팁', '상품평', '제품Q&A', '배송/취소/반품']
 
 export default function ProductDetail() {
     const { id } = useParams()
     const navigate = useNavigate()
-    const { addToCart } = useProductStore()
+    const { addToCart, onToggleWishList, isWished } = useProductStore()
+    const { user } = useAuthStore()
     const product = productData.find(p => p.id === id)
 
     const [mainImg, setMainImg] = useState(0)
@@ -26,12 +29,30 @@ export default function ProductDetail() {
     const { onToggleWishList, isWished } = useProductStore();
     const wished = isWished(id);
     const [zoomImg, setZoomImg] = useState(null)
+    const [productReviews, setProductReviews] = useState(initialData)
+
+    const wished = isWished(id)
 
     useEffect(() => {
         window.scrollTo(0, 0)
-        setSelectedOption('')   // 초기화만
+        setSelectedOption('')
         setMainImg(0)
     }, [id])
+
+    useEffect(() => {
+        if (!product) return
+
+        const recentItems = JSON.parse(localStorage.getItem("recentProducts") || "[]")
+        const newItem = {
+            id: product.id,
+            name: product.name,
+            image: product.productImages?.[0] || "",
+            price: product.price,
+        }
+        const filtered = recentItems.filter((item) => item.id !== product.id)
+        const updated = [newItem, ...filtered].slice(0, 10)
+        localStorage.setItem("recentProducts", JSON.stringify(updated))
+    }, [product])
 
     if (!product) {
         return (
@@ -54,22 +75,17 @@ export default function ProductDetail() {
     const getColorImg = (colorValue) => {
         const colorItem = colorData.find(c => c.productCd === product.id)
         if (!colorItem) return null
-
         const codes = Array.isArray(colorItem.colorCd) ? colorItem.colorCd : [colorItem.colorCd]
         const paths = Array.isArray(colorItem.localImgPath) ? colorItem.localImgPath : [colorItem.localImgPath]
-
         const idx = codes.indexOf(colorValue)
         return idx !== -1 ? paths[idx] : null
     }
 
-    // const productReviews = reviewData.find(r => r.productId === id)?.reviews || []
-    // const productReviews = reviewData.flatMap(r => r.reviews) || [];
-    const [productReviews, setProductReviews] = useState(initialData);
-    // const productQna = qnaData.flatMap(q => q.questions) || [];
-    const productQna = commonQna;
+    const productQna = commonQna
 
     const avgRating = productReviews && productReviews.length > 0
-        ? (productReviews.reduce((sum, r) => sum + r.rating, 0) / productReviews.length).toFixed(1) : '0.0'
+        ? (productReviews.reduce((sum, r) => sum + r.rating, 0) / productReviews.length).toFixed(1)
+        : '0.0'
 
     const handleBuy = () => {
         if (product.options?.length > 0 && !selectedOption) {
@@ -96,10 +112,17 @@ export default function ProductDetail() {
         setShowCartModal(true)
     }
 
+    // ↓ 수정된 찜하기 핸들러
     const handleWishClick = () => {
-        onToggleWishList(product)
+        if (!user) {
+            alert('로그인 후 이용해주세요.')
+            navigate('/login')
+            return
+        }
+        onToggleWishList(product, user)
         setShowWishModal(true)
     }
+
     return (
         <section className="product-detail">
             <div className="breadcrumb">
@@ -113,7 +136,9 @@ export default function ProductDetail() {
             <div className="detail-top">
                 <div className="image-area">
                     <div className="main-image">
-                        <img src={product.productImages[mainImg]} alt={product.name} />
+                        <Lens zoomFactor={1.5} lensSize={250}>
+                            <img src={product.productImages[mainImg]} alt={product.name} />
+                        </Lens>
                     </div>
                 </div>
 
@@ -122,18 +147,27 @@ export default function ProductDetail() {
                         <p className="brand">{product.series}</p>
                         <h1 className="product-name">{product.name}</h1>
                         <div className="icon-btns">
-                            <button className={`wish-btn ${wished ? 'active' : ''}`}
-                                onClick={() => onToggleWishList(product)}>
-                                <img src={wished ? '/images/product-detail/like.png' : '/images/product-detail/unlike.png'} alt="wish"
-                                    style={{ width: '24px', height: '21px' }} />
+                            {/* ↓ 수정된 찜하기 버튼 */}
+                            <button
+                                className={`wish-btn ${wished ? 'active' : ''}`}
+                                onClick={handleWishClick}
+                            >
+                                <img
+                                    src={wished ? '/images/product-detail/like.png' : '/images/product-detail/unlike.png'}
+                                    alt="wish"
+                                    style={{ width: '24px', height: '21px' }}
+                                />
                             </button>
                             <button className="share-btn" onClick={() => {
                                 navigator.clipboard.writeText(window.location.href)
-                                alert('링크가 복사되었습니다');
-                            }}><img src="/images/product-detail/share.png" alt="공유하기"
-                                style={{ width: '27px', height: '27px' }} /></button>
+                                alert('링크가 복사되었습니다')
+                            }}>
+                                <img src="/images/product-detail/share.png" alt="공유하기"
+                                    style={{ width: '27px', height: '27px' }} />
+                            </button>
                         </div>
                     </div>
+
                     <div className="delivery-info">
                         <strong>배송기간</strong>
                         <p>약 10일</p>
@@ -146,9 +180,7 @@ export default function ProductDetail() {
                     </div>
 
                     {product.options?.map((opt, i) => (
-                        <div
-                            key={i}
-                            className="option-select">
+                        <div key={i} className="option-select">
                             <div className="custom-select" onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
                                 {selectedOption ? (
                                     <span className="selected-value">
@@ -160,18 +192,19 @@ export default function ProductDetail() {
                                 ) : (
                                     <span className="placeholder">[필수] {opt.name}을 선택해주세요</span>
                                 )}
-                                <span className="arrow"><img src="/images/product-detail/down-arrow.png" alt="down-arrow" /></span>
+                                <span className="arrow">
+                                    <img src="/images/product-detail/down-arrow.png" alt="down-arrow" />
+                                </span>
                             </div>
 
                             {isDropdownOpen && (
                                 <ul className="dropdown-list">
                                     {(Array.isArray(opt.values) ? opt.values : [opt.values]).map((v, j) => (
-                                        <li key={j}
-                                            onClick={() => {
-                                                setSelectedOption(v)
-                                                setIsDropdownOpen(false)
-                                                setMainImg(j + 1)
-                                            }}>
+                                        <li key={j} onClick={() => {
+                                            setSelectedOption(v)
+                                            setIsDropdownOpen(false)
+                                            setMainImg(j + 1)
+                                        }}>
                                             {getColorImg(v) && (
                                                 <img src={`/images/${getColorImg(v)}`} alt={v} />
                                             )}
@@ -214,7 +247,6 @@ export default function ProductDetail() {
                         </div>
                     )}
 
-                    {/* 총구매가 */}
                     <div className="total-price-row">
                         <span>총 구매가</span>
                         <strong>{totalPrice}원</strong>
@@ -276,7 +308,10 @@ export default function ProductDetail() {
                     <button
                         key={tab}
                         className={`tab-btn ${activeTab === tab ? 'active' : ''}`}
-                        onClick={() => handleTabClick(tab)}>{tab}</button>
+                        onClick={() => handleTabClick(tab)}
+                    >
+                        {tab}
+                    </button>
                 ))}
             </div>
 
@@ -305,7 +340,7 @@ export default function ProductDetail() {
                                             {opt.name === '색상' && getColorImg(v) && (
                                                 <img src={`/images/${getColorImg(v)}`} alt={v} className="chip-img" />
                                             )}
-                                            <span key={j} className="opt-chip">{v}</span>
+                                            <span className="opt-chip">{v}</span>
                                         </div>
                                     ))}
                                 </div>
@@ -365,7 +400,9 @@ export default function ProductDetail() {
                         ) : (
                             <p className="no-content">아직 작성한 상품평이 없습니다.</p>
                         )}
-                        <button className="review-write-btn" onClick={() => alert('로그인 후 이용해주세요')}>상품평 작성하기</button>
+                        <button className="review-write-btn" onClick={() => alert('로그인 후 이용해주세요')}>
+                            상품평 작성하기
+                        </button>
                     </div>
                 )}
 
@@ -409,8 +446,8 @@ export default function ProductDetail() {
                             <h3>01.배송비</h3>
                             <ul>
                                 <li>- 전국 무료 배송 및 설치를 진행하고 있습니다.</li>
-                                <li>- 제주도는 제주 지역 배송비 부담 시, 온라인 주문도 가능합니다. (아래 "제주 지역 배송비 관련" 내용 참고)</li>
-                                <li>- 단, 제주도를 제외한 울릉도 등 도서/산간 지역의 경우 택배상품만 온라인 주문이 가능합니다. 설치배송은 가까운 매장에 문의 부탁드립니다.</li>
+                                <li>- 제주도는 제주 지역 배송비 부담 시, 온라인 주문도 가능합니다.</li>
+                                <li>- 단, 제주도를 제외한 울릉도 등 도서/산간 지역의 경우 택배상품만 온라인 주문이 가능합니다.</li>
                             </ul>
                         </div>
 
@@ -420,18 +457,16 @@ export default function ProductDetail() {
                                 <li>1) 배송비 안내</li>
                                 <li>제주 지역 배송비는 소비자가(정가)의 약 4%입니다.</li>
                                 <li>정확한 금액은 주문 이후 결제안내 알림톡을 통해 확인가능합니다.</li>
-                                <li>2)배송비 입금</li>
+                                <li>2) 배송비 입금</li>
                                 <li>주문 이후 발송되는 결제 안내 알림톡을 통해 결제 가능합니다.</li>
-                                <li>제주배송비 결제는 알림톡 수신일 포함 2일 이내에 진행해 주셔야 합니다. (기간 안에 결제되지 않을 경우 주문은 자동 취소되며, 상품 배송 원하실 경우 재주문으로 진행해 주셔야 하는 점 양해 부탁드립니다.)</li>
-                                <li>배송비 결제 안내 알림톡을 수신하지 못한 경우 고객센터로 문의 부탁드립니다.(주말/공휴일 제외)</li>
-                                <li>배송비도 현금영수증 발행이 가능하오니, 결제 시 현금영수증 정보를 입력해주세요.</li>
                             </ul>
                         </div>
 
                         <div className="delivery-section">
                             <h3>02.설치배송 상품 배송안내</h3>
                             <ul>
-                                <li>일룸은 전문시공기사가 배송과 동시에 설치까지 해드립니다. 완제품 배송이 아닌 설치 제품으로 아래 내용을 꼭 숙지해주세요.</li>
+                                <li>일룸은 전문시공기사가 배송과 동시에 설치까지 해드립니다.</li>
+                                <li>배송은 주문 확인 후 영업일 기준 7~10일 (주말, 공휴일 제외) 정도 소요합니다.</li>
                             </ul>
                             <div className="delivery-process">
                                 <div className="process-step"><span>주문 당일</span><p>배송예정일 확정 알림톡 발송</p></div>
@@ -442,15 +477,6 @@ export default function ProductDetail() {
                                 <div className="process-arrow">▶</div>
                                 <div className="process-step"><span>배송 당일</span><p>설치완료 후 수령확인 서명진행</p></div>
                             </div>
-                            <ul>
-                                <li>배송은 주문 확인 후 영업일 기준 7~10일 (주말, 공휴일 제외) 정도 소요합니다. 일요일 및 공휴일에는 배송(시공)을 하지 않습니다.</li>
-                                <li>성수기(1~4월) 기간은 별도 배송공지에 따라 운영됩니다.</li>
-                                <li>배송일 지정은 주문 당일 알림톡을 받으신 후 AI챗봇을 통해 직접 변경하실 수 있습니다.
-                                    만약 주문일의 익일 15시까지 알림톡을 수신하지 못한 경우, 일룸 고객센터(1588-6792)로 연락해주세요.</li>
-                                <li>배송 전일 오후에 담당 시공팀이 방문시간을 안내 드립니다.</li>
-                                <li>단, 제주 지역의 경우, 알림톡으로 안내되는 날짜는 실제 고객 배송일이 아닌 제품의 제주도 도착일입니다.
-                                    실제 시공일은 영업일 기준 2~3일 추가 소요됩니다. 정확한 배송일은 별도 안내드릴 예정입니다.</li>
-                            </ul>
                         </div>
 
                         <div className="delivery-section">
@@ -458,7 +484,6 @@ export default function ProductDetail() {
                             <ul>
                                 <li>택배 상품은 일반택배로 배송되며 주문 당일 배송예정일 알림톡이 발송됩니다.</li>
                                 <li>택배 송장번호는 배송예정일 전일 배송/조회, 알림톡, AI챗봇 주문조회를 통해 확인할 수 있습니다.</li>
-                                <li>수령지역 및 택배사 사정에 따라 실제 배송일은 달라질 수 있습니다.</li>
                             </ul>
                         </div>
 
@@ -467,23 +492,6 @@ export default function ProductDetail() {
                             <ul>
                                 <li>배송예정일로부터 영업일 기준 3일전에 변경 요청바랍니다.</li>
                                 <li>희망 배송일 신청은 AI챗봇으로만 가능합니다.</li>
-                            </ul>
-                        </div>
-
-                        <div className="delivery-section">
-                            <h3>05. 지역별 배송 요일</h3>
-                            <ul>
-                                <li>경기도 일부, 충청, 강원, 경상, 전라도, 연륙교가 있는 섬 지역은 배송하는 요일이 지정되어 있습니다.</li>
-                                <li>주문 후 각 지역별로 배송일이 정해지면 카톡 알림이나 문자로 안내해드리고 있습니다.</li>
-                            </ul>
-                        </div>
-
-                        <div className="delivery-section">
-                            <h3>06. 해외배송 불가 안내</h3>
-                            <ul>
-                                <li>일룸은 해외 배송 및 시공 서비스는 제공하고 있지 않습니다.</li>
-                                <li>별도 임의로 진행된 해외 배송 및 직접조립으로 인해 발생한 제품 하자는 A/S 및 반품이 불가합니다.
-                                    (시공조립설명서, 박스규격 및 중량 등의 정보 제공 불가능)</li>
                             </ul>
                         </div>
 
@@ -507,33 +515,12 @@ export default function ProductDetail() {
                             </table>
                         </div>
 
-                        <div className="delivery-section return-grid">
-                            <div className="return-possible">
-                                <h4>✔️반품 가능한 경우</h4>
-                                <ul>
-                                    <li>배송된 상품이 주문 내용과 상이한 경우</li>
-                                    <li>재화 등의 내용이 표시/광고와 다른 경우</li>
-                                    <li>상품에 오염이나 손상이 있는 경우</li>
-                                    <li>상품 자체의 이상 및 결함이 있는 경우</li>
-                                </ul>
-                            </div>
-                        </div>
-
                         <div className="delivery-section">
                             <h3>환불 안내</h3>
                             <ul>
                                 <li>취소일 또는 반환 받은 날로부터 영업일 3일 이내 환불 처리됩니다.</li>
                                 <li>신용카드 결제의 경우 익월 카드사에서 환급 처리됩니다.</li>
-                                <li>무통장입금의 경우 주문 취소 또는 제품 회수 후 입금 계좌 확인 시 3일 이내 환불됩니다. (토·일·공휴일 제외)</li>
-                            </ul>
-                        </div>
-
-                        <div className="delivery-section">
-                            <h3>유·무상 수리 기준</h3>
-                            <ul>
-                                <li>교환 및 A/S는 부품단위 조치를 원칙으로 합니다.</li>
-                                <li>고장이 아닌 경우 출장 서비스 요금이 부과될 수 있습니다.</li>
-                                <li>간단한 문제는 일룸 서비스센터(cs.illom.com)의 간편 해결 및 온라인 상담을 먼저 이용해주세요.</li>
+                                <li>무통장입금의 경우 주문 취소 또는 제품 회수 후 입금 계좌 확인 시 3일 이내 환불됩니다.</li>
                             </ul>
                         </div>
 
@@ -560,7 +547,6 @@ export default function ProductDetail() {
                             <p className="cart-modal-title">장바구니에 담았습니다.</p>
                             <p className="cart-modal-sub">장바구니 페이지로 이동합니다.</p>
                         </div>
-
                         <div className="cart-modal-btns">
                             <button
                                 type="button"
@@ -569,7 +555,6 @@ export default function ProductDetail() {
                             >
                                 쇼핑 계속하기
                             </button>
-
                             <button
                                 type="button"
                                 className="cart-modal-go"
@@ -584,6 +569,6 @@ export default function ProductDetail() {
                     </div>
                 </div>
             )}
-        </ section >
+        </section>
     )
 }

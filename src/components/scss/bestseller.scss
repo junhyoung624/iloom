@@ -1,8 +1,6 @@
-@import '../../variables.scss';
+@use '../../variables.scss' as *;
 
 .best {
-    // padding: 160px 0;
-
     .inner {
         width: 1440px;
         margin: 0 auto;
@@ -28,8 +26,29 @@
 }
 
 .best-swiper-wrap {
-    // padding: 0 240px;
     position: relative;
+
+    .best-prev,
+    .best-next {
+        position: absolute;
+        top: 36%;
+        transform: translateY(-50%);
+        z-index: 10;
+        background: none;
+        border: none;
+        font-size: 60px;
+        line-height: 1;
+        cursor: pointer;
+        color: var(--line)
+    }
+
+    .best-prev {
+        left: 450px;
+    }
+
+    .best-next {
+        right: 450px;
+    }
 
     .swiper {
         width: 1440px;
@@ -44,7 +63,7 @@
 
         >a>img {
             width: 100%;
-            aspect-ratio: 3 /4;
+            aspect-ratio: 3 / 4;
             object-fit: cover;
         }
     }
@@ -62,7 +81,6 @@
         img {
             width: 120px;
             object-fit: cover;
-
         }
     }
 
@@ -77,14 +95,13 @@
 
         .name {
             padding-top: 5px;
-            // font-weight: 500;
             font-size: 17px;
         }
 
         .price {
             font-weight: 500;
             padding-top: 13px;
-            color: #CA1230
+            color: #CA1230;
         }
     }
 }
