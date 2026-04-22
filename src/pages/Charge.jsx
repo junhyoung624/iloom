@@ -2,13 +2,14 @@ import React, { useEffect, useMemo, useState } from 'react'
 import { useProductStore } from '../store/useProductStore'
 import { useAuthStore } from '../store/useAuthStore'
 import "./scss/charge.scss"
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import ChargeModal from './ChargeModal'
 import { useKakaoPostcodePopup } from 'react-daum-postcode'
+import { addOrder } from '../firebase/orderService'
 // import { createOrder } from '../firebase/orderService'
 
 export default function Charge() {
-    const { cartItems, items, onAddOrder, onfetchItems } = useProductStore()
+    const { cartItems, items, onAddOrder, createDeliveryDate, onfetchItems } = useProductStore()
     const { user } = useAuthStore()
     const [paymentMethod, setPaymentMethod] = useState('card')
     const navigate = useNavigate();
@@ -137,7 +138,29 @@ export default function Charge() {
         return Object.keys(newErrors).length === 0;
     };
 
+    //product detail에서 상품 state 받아오기
+    const location = useLocation();
+    const directBuyItem = location.state?.directBuyItem;
+
+
     const orderItems = useMemo(() => {
+        //1. 상세페이지에서 바로 결제하기로 넘어온 경우
+        if (directBuyItem) {
+            const priceNumber = (
+                String(directBuyItem.price).replace(/,/g, '').replace(/원/g, '')
+            );
+
+            return [
+                {
+                    ...directBuyItem,
+                    priceNumber,
+                    totalPrice: priceNumber * directBuyItem.qty,
+                }
+            ];
+        }
+
+
+        //2. 장바구니에서 체크된 상품 가져오기
         return cartItems
             .filter((cart) => cart.checked)
             .map((cart) => {
@@ -161,7 +184,7 @@ export default function Charge() {
                 }
             })
             .filter(Boolean)
-    }, [cartItems, items])
+    }, [cartItems, items, directBuyItem])
 
     const totalPrice = useMemo(() => {
         return orderItems.reduce((acc, cur) => acc + cur.totalPrice, 0)
@@ -216,25 +239,48 @@ export default function Charge() {
     }
 
     //결제가 완료
-    const handleFinalConfirm = () => {
+    //firebase에도 저장하도록,, (async)
+    const handleFinalConfirm = async () => {
         const orderNumber = createOrderNumber();
         const formatGuestPhone = guestForm.phone.replace(/-/g, "");
+        const deliveryDate = createDeliveryDate();
 
         const orderData = user
             ? {
+                orderId: orderNumber,
                 orderNumber,
                 isGuest: false, //회원
+                name: user.name,
+                phone: user.phone,
+                email: user.email,
                 userInfo: {
                     name: user.name,
                     phone: user.phone,
                     email: user.email,
                 },
-                items: orderItems,
+                status: "결제완료",
+                deliveryInfo: {
+                    carrier: "일룸 배송팀",
+                    trackingNumber: "준비중",
+                    estimatedDate: deliveryDate,
+                },
+                items: orderItems.map((item) => ({
+                    productId: item.id,
+                    name: item.name,
+                    option: item.color || "",
+                    quantity: item.qty,
+                    price: item.priceNumber,
+                    image: item.productImages?.[0] || item.image || "",
+                })),
                 total: totalPrice,
             }
             : {
+                orderId: orderNumber,
                 orderNumber,
                 isGuest: true, //비회원
+                name: guestForm.name,
+                phone: formatGuestPhone,
+                email: guestForm.email,
                 guestInfo: {
                     name: guestForm.name,
                     phone: formatGuestPhone,
@@ -244,14 +290,39 @@ export default function Charge() {
                     extraAddress: guestForm.extraAddress,
                     request: guestForm.request,
                 },
-                items: orderItems,
+                status: "결제완료",
+                deliveryInfo: {
+                    carrier: "일룸 배송팀",
+                    trackingNumber: "준비중",
+                    estimatedDate: deliveryDate,
+                },
+                items: orderItems.map((item) => ({
+                    productId: item.id,
+                    name: item.name,
+                    option: item.color || "",
+                    quantity: item.qty,
+                    price: item.priceNumber,
+                    image: item.productImages?.[0] || item.image || "",
+                })),
                 total: totalPrice,
             };
+        try {
 
-        onAddOrder(orderData);
+            onAddOrder(orderData); //로컬저장
+            await addOrder(orderData); //firebase저장
 
-        alert(`결제가 완료되었습니다. 주문번호는 ${orderNumber} 입니다.`);
-        navigate("/order");
+            alert(`결제가 완료되었습니다. 주문번호는 ${orderNumber} 입니다.`);
+
+            {
+                user ? navigate("/order") : navigate(`/orderForGuest/${orderNumber}`)
+            }
+        } catch (err) {
+            console.log(err);
+            alert("주문 저장 중 오류가 발생했습니다.");
+        }
+
+
+
     }
     // const handleFinalConfirm = async () => {
     //     try {
