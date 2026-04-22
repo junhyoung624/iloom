@@ -101,31 +101,31 @@ export default function Charge() {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
         if (!name) {
-            newErrors.name = "이름을 입력해주세요.";
+            newErrors.name = "** 이름을 입력해주세요.";
         }
 
         if (!phone) {
-            newErrors.phone = "휴대폰 번호를 입력해주세요.";
+            newErrors.phone = "** 휴대폰 번호를 입력해주세요.";
         } else if (!phoneRegex.test(phone)) {
-            newErrors.phone = "휴대폰 번호 형식이 올바르지 않습니다.";
+            newErrors.phone = "** 휴대폰 번호 형식이 올바르지 않습니다.";
         }
 
         if (!email) {
-            newErrors.email = "이메일을 입력해주세요.";
+            newErrors.email = "** 이메일을 입력해주세요.";
         } else if (!emailRegex.test(email)) {
-            newErrors.email = "이메일 형식이 올바르지 않습니다.";
+            newErrors.email = "** 이메일 형식이 올바르지 않습니다.";
         }
 
         if (!zipCode) {
-            newErrors.zipCode = "우편번호를 입력해주세요.";
+            newErrors.zipCode = "** 우편번호를 입력해주세요.";
         }
 
         if (!address) {
-            newErrors.address = "주소를 입력해주세요.";
+            newErrors.address = "** 주소를 입력해주세요.";
         }
 
         if (!extraAddress) {
-            newErrors.extraAddress = "상세 주소를 입력해주세요.";
+            newErrors.extraAddress = "** 상세 주소를 입력해주세요.";
         }
 
         setErrors(newErrors);
@@ -169,6 +169,20 @@ export default function Charge() {
         return number.toLocaleString('ko-KR') + '원'
     }
 
+    const createOrderNumber = () => {
+        const now = new Date();
+
+        const year = now.getFullYear();
+        const month = String(now.getMonth() + 1).padStart(2, "0");
+        const date = String(now.getDate()).padStart(2, "0");
+
+        const random = Math.random().toString(36).slice(2, 8).toUpperCase();
+
+        return `${year}${month}${date}-${random}`;
+    };
+
+
+
     //결제 여부 재확인 팝업
     const [confirmPay, setConfirmPay] = useState(false);
 
@@ -198,6 +212,43 @@ export default function Charge() {
     }
 
     //결제가 완료
+    const handleFinalConfirm = () => {
+        const orderNumber = createOrderNumber();
+        const formatGuestPhone = guestForm.phone.replace(/-/g, "");
+
+        const orderData = user
+            ? {
+                orderNumber,
+                isGuest: false, //회원
+                userInfo: {
+                    name: user.name,
+                    phone: user.phone,
+                    email: user.email,
+                },
+                items: orderItems,
+                total: totalPrice,
+            }
+            : {
+                orderNumber,
+                isGuest: true, //비회원
+                guestInfo: {
+                    name: guestForm.name,
+                    phone: formatGuestPhone,
+                    email: guestForm.email,
+                    zipCode: guestForm.zipCode,
+                    address: guestForm.address,
+                    extraAddress: guestForm.extraAddress,
+                    request: guestForm.request,
+                },
+                items: orderItems,
+                total: totalPrice,
+            };
+
+        onAddOrder(orderData);
+
+        alert(`결제가 완료되었습니다. 주문번호는 ${orderNumber} 입니다.`);
+        navigate("/order");
+    }
     // const handleFinalConfirm = async () => {
     //     try {
     //         await createOrder({
@@ -292,6 +343,7 @@ export default function Charge() {
                     {
                         !user && (
                             <div className="unlogged-user-charge-section">
+                                <div className="title">비회원 주문입니다</div>
                                 <form className='user-form'>
                                     <div className="unlogged-charge-section">
                                         <h3 className="section-title">주문자 정보</h3>

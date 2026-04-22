@@ -20,7 +20,13 @@ const Order = () => {
               orderList.map((order) => (
                 <div className="order-list-wrap">
                   <div className="order-id-wrap">
-                    <p>주문번호 : {order.id}</p>
+                    {
+                      order.isGuest ?
+                        <div className='unlogged-user-info'>
+                          <p>비회원 주문</p>
+                        </div> : ""
+                    }
+                    <p>주문번호 : {order.orderNumber}</p>
                     <p>주문시간 : {order.date} / {order.hours} : {order.minutes} : {order.seconds}</p>
                   </div>
                   <ul className="order-list">
