@@ -28,10 +28,8 @@ export default function ProductDetail() {
 
     useEffect(() => {
         window.scrollTo(0, 0)
-        if (product?.options?.[0]?.values[0]) {
-            setSelectedOption(product.options[0].values[0])
-            setMainImg(0)
-        }
+        setSelectedOption('')   // 초기화만
+        setMainImg(0)
     }, [id])
 
     if (!product) {
