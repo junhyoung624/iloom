@@ -5,10 +5,11 @@ import "./scss/charge.scss"
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import ChargeModal from './ChargeModal'
 import { useKakaoPostcodePopup } from 'react-daum-postcode'
+import { addOrder } from '../firebase/orderService'
 // import { createOrder } from '../firebase/orderService'
 
 export default function Charge() {
-    const { cartItems, items, onAddOrder, onfetchItems } = useProductStore()
+    const { cartItems, items, onAddOrder, createDeliveryDate, onfetchItems } = useProductStore()
     const { user } = useAuthStore()
     const [paymentMethod, setPaymentMethod] = useState('card')
     const navigate = useNavigate();
@@ -145,15 +146,15 @@ export default function Charge() {
     const orderItems = useMemo(() => {
         //1. 상세페이지에서 바로 결제하기로 넘어온 경우
         if (directBuyItem) {
-            const priceNum = (
+            const priceNumber = (
                 String(directBuyItem.price).replace(/,/g, '').replace(/원/g, '')
             );
 
             return [
                 {
                     ...directBuyItem,
-                    priceNum,
-                    totalPrice: priceNum * directBuyItem.qty,
+                    priceNumber,
+                    totalPrice: priceNumber * directBuyItem.qty,
                 }
             ];
         }
@@ -238,25 +239,48 @@ export default function Charge() {
     }
 
     //결제가 완료
-    const handleFinalConfirm = () => {
+    //firebase에도 저장하도록,, (async)
+    const handleFinalConfirm = async () => {
         const orderNumber = createOrderNumber();
         const formatGuestPhone = guestForm.phone.replace(/-/g, "");
+        const deliveryDate = createDeliveryDate();
 
         const orderData = user
             ? {
+                orderId: orderNumber,
                 orderNumber,
                 isGuest: false, //회원
+                name: user.name,
+                phone: user.phone,
+                email: user.email,
                 userInfo: {
                     name: user.name,
                     phone: user.phone,
                     email: user.email,
                 },
-                items: orderItems,
+                status: "결제완료",
+                deliveryInfo: {
+                    carrier: "일룸 배송팀",
+                    trackingNumber: "준비중",
+                    estimatedDate: deliveryDate,
+                },
+                items: orderItems.map((item) => ({
+                    productId: item.id,
+                    name: item.name,
+                    option: item.color || "",
+                    quantity: item.qty,
+                    price: item.priceNumber,
+                    image: item.productImages?.[0] || item.image || "",
+                })),
                 total: totalPrice,
             }
             : {
+                orderId: orderNumber,
                 orderNumber,
                 isGuest: true, //비회원
+                name: guestForm.name,
+                phone: formatGuestPhone,
+                email: guestForm.email,
                 guestInfo: {
                     name: guestForm.name,
                     phone: formatGuestPhone,
@@ -266,17 +290,38 @@ export default function Charge() {
                     extraAddress: guestForm.extraAddress,
                     request: guestForm.request,
                 },
-                items: orderItems,
+                status: "결제완료",
+                deliveryInfo: {
+                    carrier: "일룸 배송팀",
+                    trackingNumber: "준비중",
+                    estimatedDate: deliveryDate,
+                },
+                items: orderItems.map((item) => ({
+                    productId: item.id,
+                    name: item.name,
+                    option: item.color || "",
+                    quantity: item.qty,
+                    price: item.priceNumber,
+                    image: item.productImages?.[0] || item.image || "",
+                })),
                 total: totalPrice,
             };
+        try {
 
-        onAddOrder(orderData);
+            onAddOrder(orderData); //로컬저장
+            await addOrder(orderData); //firebase저장
 
-        alert(`결제가 완료되었습니다. 주문번호는 ${orderNumber} 입니다.`);
+            alert(`결제가 완료되었습니다. 주문번호는 ${orderNumber} 입니다.`);
 
-        {
-            user ? navigate("/order") : navigate(`/orderForGuest/${orderNumber}`)
+            {
+                user ? navigate("/order") : navigate(`/orderForGuest/${orderNumber}`)
+            }
+        } catch (err) {
+            console.log(err);
+            alert("주문 저장 중 오류가 발생했습니다.");
         }
+
+
 
     }
     // const handleFinalConfirm = async () => {
