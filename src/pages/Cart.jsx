@@ -13,10 +13,10 @@ export default function Cart() {
     toggleChecked,
     toggleAllChecked,
     removeCartItem,
-    changeItemColor,   // ← 여기서 같이 꺼내기
+    changeItemColor,
   } = useProductStore()
 
-  const [optionModalItem, setOptionModalItem] = useState(null)  // ← 최상단으로
+  const [optionModalItem, setOptionModalItem] = useState(null)
 
   const mergedCartItems = useMemo(() => {
     return cartItems
@@ -45,7 +45,7 @@ export default function Cart() {
   }, 0)
 
   const shippingPrice = 0
-  const discountPrice = selectedItems.length > 0 ? 30000 : 0
+  const discountPrice = selectedItems.length > 0 ? totalProductPrice / 10 : 0
   const finalPrice = totalProductPrice + shippingPrice - discountPrice
 
   const recommendItems = productData

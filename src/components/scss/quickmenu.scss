@@ -5,7 +5,7 @@
     z-index: 999;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 8px;
     align-items: center;
 }
 
@@ -18,25 +18,132 @@
     background: transparent;
     line-height: 0;
     cursor: pointer;
+    transition: transform 0.25s ease;
 
     img {
         display: block;
         width: 100%;
     }
+
+    &:hover {
+        transform: translateY(-4px);
+    }
 }
 
-.top-btn {
-    transition: transform 0.25s ease;
+
+.recent-view-hover-area {
+    position: relative;
+    width: 256px;
+    height: 110px;
+    margin-left: -176px;
+
 }
 
-.top-btn:hover {
+.recent-view-box {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80px;
+    height: 110px;
+}
+
+.recent-view-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: #666;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.recent-view-list {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin: 0;
+    padding: 0;
+}
+
+.recent-view-list li {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80px;
+    height: 80px;
+    list-style: none;
+}
+
+.recent-view-item {
+    display: block;
+    width: 80px;
+    height: 80px;
+    transition: transform 0.35s ease, opacity 0.35s ease;
+
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+
+
+.recent-view-list li:nth-child(1) {
+    z-index: 3;
+}
+
+
+.recent-view-list li:nth-child(2) {
+    z-index: 2;
+
+    .recent-view-item {
+        opacity: 0;
+        transform: translateX(0) translateY(0);
+        pointer-events: none;
+    }
+}
+
+.recent-view-list li:nth-child(3) {
+    z-index: 1;
+
+    .recent-view-item {
+        opacity: 0;
+        transform: translateX(0) translateY(0);
+        pointer-events: none;
+    }
+}
+
+/* hover 유지 영역을 hover 기준으로 */
+.recent-view-hover-area:hover .recent-view-list li:nth-child(2) .recent-view-item {
+    opacity: 1;
+    transform: translateX(-88px) translateY(0);
+    pointer-events: auto;
+}
+
+.recent-view-hover-area:hover .recent-view-list li:nth-child(3) .recent-view-item {
+    opacity: 1;
+    transform: translateX(-176px) translateY(0);
+    pointer-events: auto;
+}
+
+.recent-view-hover-area:hover .recent-view-list li:nth-child(2) .recent-view-item:hover {
+    transform: translateX(-88px) translateY(-4px);
+}
+
+.recent-view-hover-area:hover .recent-view-list li:nth-child(3) .recent-view-item:hover {
+    transform: translateX(-176px) translateY(-4px);
+}
+
+.recent-view-list li:nth-child(1) .recent-view-item:hover {
     transform: translateY(-4px);
 }
 
-.chat-bot-btn {
-    transition: transform 0.25s ease;
-}
-
-.chat-bot-btn:hover {
-    transform: translateY(-4px);
+.recent-empty {
+    width: 80px;
+    height: 80px;
+    font-size: 11px;
+    color: #999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
