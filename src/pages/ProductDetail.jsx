@@ -28,10 +28,8 @@ export default function ProductDetail() {
 
     useEffect(() => {
         window.scrollTo(0, 0)
-        if (product?.options?.[0]?.values[0]) {
-            setSelectedOption(product.options[0].values[0])
-            setMainImg(0)
-        }
+        setSelectedOption('')   // 초기화만
+        setMainImg(0)
     }, [id])
 
     if (!product) {
@@ -77,7 +75,7 @@ export default function ProductDetail() {
             alert('옵션을 선택해주세요')
             return
         }
-        navigate('/order', { state: { product, option: selectedOption, quantity } })
+        navigate('/charge', { state: { product, option: selectedOption, quantity } })
     }
 
     const handleAddCart = () => {

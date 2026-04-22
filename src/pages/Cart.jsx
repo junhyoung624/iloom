@@ -4,9 +4,11 @@ import { productData } from '../data/productData'
 import { useProductStore } from '../store/useProductStore'
 import "./scss/cart.scss"
 import CartOptionModal from '../components/CartOptionModal'
+import { colorData } from '../data/colorData'
 
 export default function Cart() {
   const {
+    items,
     cartItems,
     increaseQty,
     decreaseQty,
@@ -109,6 +111,11 @@ export default function Cart() {
 
             <ul className="cart-list">
               {mergedCartItems.map((item) => {
+                const colorInfo = colorData.find((c) => c.productCd === item.id) 
+
+                const colorIndex = colorInfo?.colorCd.indexOf(item.color)
+                const colorImg = colorInfo.localImgPath[colorIndex]
+
                 const itemTotal = Number(item.price.replace(/,/g, '')) * item.qty
                 return (
                   <li className="cart-item" key={`${item.id}-${item.color || 'default'}`}>
@@ -127,7 +134,8 @@ export default function Cart() {
                       <div className="info-text">
                         <strong className="brand">일룸</strong>
                         <p className="name">{item.name}</p>
-                        <p className="meta">색상: {item.color || '-'}</p>
+                        <p className="meta">
+                          색상: {item.color || '-'} {colorImg && <img src={`/images/${colorImg}`} alt={item.color} />}</p>
                         <button
                           type="button"
                           className="option-change-btn"

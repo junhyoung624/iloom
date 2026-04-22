@@ -4,6 +4,7 @@
     .inner {
         width: 1440px;
         margin: 0 auto;
+        padding-top: 80px;
     }
 
     .cart-title-box {
@@ -124,6 +125,11 @@
             color: #888;
             margin-bottom: 10px;
             line-height: 1.5;
+
+            img {
+                width: 22px;
+                height: 22px;
+            }
         }
     }
 

@@ -36,6 +36,7 @@ import SeriesDetail from './pages/SerierDetail'
 import NewBestPage from './pages/NewBestPage'
 import Charge from './pages/Charge'
 import FurniturePage from './components/FurniturePage'
+import { addTestOrder } from './firebase/orderService'
 
 function App() {
   const [isLoading, setIsLoading] = useState(true)
@@ -46,6 +47,10 @@ function App() {
     onfetchItems()
     onMakeMenu()
     initAuth()
+  }, [])
+
+  useEffect(() => {
+    addTestOrder()
   }, [])
 
   const handleFinish = () => {
