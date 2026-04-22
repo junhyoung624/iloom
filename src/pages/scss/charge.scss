@@ -354,6 +354,12 @@
     gap: 50px;
     margin-bottom: 30px;
 
+    .error-text {
+        color: red;
+        font-weight: 700;
+        font-size: 1rem;
+    }
+
     .user-form {
         display: grid;
         gap: 50px;
@@ -361,6 +367,7 @@
 
     .unlogged-charge-section {
         display: flex;
+
 
         .info-row {
             display: grid;
@@ -388,6 +395,12 @@
             .address-box {
                 display: grid;
                 gap: 34px;
+
+                .error-text {
+                    color: red;
+                    font-weight: 700;
+                    font-size: 1rem;
+                }
             }
 
             .input-zone {
@@ -399,7 +412,9 @@
                     color: #222;
                 }
             }
+
         }
+
     }
 
     .unlogged_input {
