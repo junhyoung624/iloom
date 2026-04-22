@@ -175,12 +175,27 @@ export const useProductStore = create((set, get) => ({
     //주문
     //주문 목록을 저장할 변수
     orderList: [],
+
+    createDeliveryDate: () => {
+        const today = new Date();
+        const randomDays = Math.floor(Math.random() * 10) + 1;
+
+        const deliveryDate = new Date(today);
+        deliveryDate.setDate(today.getDate() + randomDays);
+
+        const year = deliveryDate.getFullYear();
+        const month = String(deliveryDate.getMonth() + 1).padStart(2, "0");
+        const date = String(deliveryDate.getDate()).padStart(2, "0");
+
+        return `${year}.${month}.${date}`;
+    },
     //결제를 클릭하면 결제 항목이 주문 목록에 들어가도록
     onAddOrder: (order) => {
         const orderPrev = get().orderList;
         console.log("onAddOrder in", order);
 
         const now = new Date();
+        const deliveryDate = get().createDeliveryDate();
 
         const newOrder = {
             id: Date.now(),
@@ -189,6 +204,7 @@ export const useProductStore = create((set, get) => ({
             hours: now.getHours(),
             minutes: now.getMinutes(),
             seconds: now.getSeconds(),
+            deliveryDate,
             items: order.items,
             price: order.total,
             color: order.color,
