@@ -91,6 +91,23 @@ export default function ProductDetail() {
         onToggleWishList(product)
         setShowWishModal(true)
     }
+    useEffect(() => {
+        if (!product) return;
+
+        const recentItems = JSON.parse(localStorage.getItem("recentProducts") || "[]");
+
+        const newItem = {
+            id: product.id,
+            name: product.name,
+            image: product.productImages?.[0] || "",
+            price: product.price,
+        };
+
+        const filtered = recentItems.filter((item) => item.id !== product.id);
+        const updated = [newItem, ...filtered].slice(0, 10);
+
+        localStorage.setItem("recentProducts", JSON.stringify(updated));
+    }, [product]);
     return (
         <section className="product-detail">
             <div className="breadcrumb">
