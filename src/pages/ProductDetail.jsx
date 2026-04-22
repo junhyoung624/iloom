@@ -25,8 +25,6 @@ export default function ProductDetail() {
     const [activeTab, setActiveTab] = useState('상세정보')
     const [showCartModal, setShowCartModal] = useState(false)
     const [showWishModal, setShowWishModal] = useState(false)
-    //const [isWished, setIsWished] = useState(false)
-    // const { onToggleWishList} = useProductStore();
     const wished = isWished(id);
     const [zoomImg, setZoomImg] = useState(null)
     const [productReviews, setProductReviews] = useState(initialData)
