@@ -189,10 +189,18 @@ export const useProductStore = create((set, get) => ({
 
         return `${year}.${month}.${date}`;
     },
+
     //결제를 클릭하면 결제 항목이 주문 목록에 들어가도록
     onAddOrder: (order) => {
         const orderPrev = get().orderList;
         console.log("onAddOrder in", order);
+
+        //같은 주문번호가 이미 있으면 추가 안함
+        const exists = orderPrev.some(
+            (item) => item.orderNumber === order.orderNumber
+        );
+
+        if (exists) return;
 
         const now = new Date();
         const deliveryDate = get().createDeliveryDate();
@@ -217,6 +225,7 @@ export const useProductStore = create((set, get) => ({
         set({
             orderList: [...orderPrev, newOrder],
             //cartCount: 0,
+            cartItems: [],
         })
     },
 
