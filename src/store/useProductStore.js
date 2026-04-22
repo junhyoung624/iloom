@@ -200,6 +200,7 @@ export const useProductStore = create((set, get) => ({
 
         set({
             orderList: [...orderPrev, newOrder],
+            cartItems: get().cartItems.filter((item) => !item.checked),
             //cartCount: 0,
         })
     },
