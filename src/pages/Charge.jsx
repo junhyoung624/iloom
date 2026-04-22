@@ -2,7 +2,7 @@ import React, { useEffect, useMemo, useState } from 'react'
 import { useProductStore } from '../store/useProductStore'
 import { useAuthStore } from '../store/useAuthStore'
 import "./scss/charge.scss"
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import ChargeModal from './ChargeModal'
 import { useKakaoPostcodePopup } from 'react-daum-postcode'
 // import { createOrder } from '../firebase/orderService'
@@ -137,7 +137,29 @@ export default function Charge() {
         return Object.keys(newErrors).length === 0;
     };
 
+    //product detail에서 상품 state 받아오기
+    const location = useLocation();
+    const directBuyItem = location.state?.directBuyItem;
+
+
     const orderItems = useMemo(() => {
+        //1. 상세페이지에서 바로 결제하기로 넘어온 경우
+        if (directBuyItem) {
+            const priceNum = (
+                String(directBuyItem.price).replace(/,/g, '').replace(/원/g, '')
+            );
+
+            return [
+                {
+                    ...directBuyItem,
+                    priceNum,
+                    totalPrice: priceNum * directBuyItem.qty,
+                }
+            ];
+        }
+
+
+        //2. 장바구니에서 체크된 상품 가져오기
         return cartItems
             .filter((cart) => cart.checked)
             .map((cart) => {
@@ -161,7 +183,7 @@ export default function Charge() {
                 }
             })
             .filter(Boolean)
-    }, [cartItems, items])
+    }, [cartItems, items, directBuyItem])
 
     const totalPrice = useMemo(() => {
         return orderItems.reduce((acc, cur) => acc + cur.totalPrice, 0)
@@ -251,7 +273,11 @@ export default function Charge() {
         onAddOrder(orderData);
 
         alert(`결제가 완료되었습니다. 주문번호는 ${orderNumber} 입니다.`);
-        navigate("/order");
+
+        {
+            user ? navigate("/order") : navigate(`/orderForGuest/${orderNumber}`)
+        }
+
     }
     // const handleFinalConfirm = async () => {
     //     try {
