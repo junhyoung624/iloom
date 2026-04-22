@@ -14,7 +14,7 @@ const TABS = ['상세정보', '옵션', '인테리어 팁', '상품평', '제품
 export default function ProductDetail() {
     const { id } = useParams()
     const navigate = useNavigate()
-    const { addToCart, onToggleWishList, isWished } = useProductStore()
+    const { addToCart, isWished, onToggleWishList } = useProductStore()
     const { user } = useAuthStore()
     const product = productData.find(p => p.id === id)
 
@@ -26,12 +26,10 @@ export default function ProductDetail() {
     const [showCartModal, setShowCartModal] = useState(false)
     const [showWishModal, setShowWishModal] = useState(false)
     //const [isWished, setIsWished] = useState(false)
-    const { onToggleWishList, isWished } = useProductStore();
+    // const { onToggleWishList} = useProductStore();
     const wished = isWished(id);
     const [zoomImg, setZoomImg] = useState(null)
     const [productReviews, setProductReviews] = useState(initialData)
-
-    const wished = isWished(id)
 
     useEffect(() => {
         window.scrollTo(0, 0)
