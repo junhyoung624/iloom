@@ -1,14 +1,16 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useAuthStore } from '../store/useAuthStore';
-import { getOrderByOrderId, getOrderByPhone } from '../firebase/orderService';
 import { sendPasswordResetEmail } from 'firebase/auth';
 import { auth } from '../firebase/firebase';
+import { getOrderByOrderId, getOrderByPhone } from '../firebase/orderService';
+import { findEmailByNameAndPhone } from '../firebase/userService';
 
 const Login = () => {
 
-  const [email, setEmail] = useState("");
+  const [email, setEmail] = useState(() => localStorage.getItem('savedEmail') || "");
   const [pass, setPass] = useState("");
+  const [saveId, setSaveId] = useState(() => !!localStorage.getItem('savedEmail'))
 
   const { onLogin, onGoogleLogin, onKakaoLogin, onNaverLogin } = useAuthStore();
   const navigate = useNavigate();
@@ -25,7 +27,28 @@ const Login = () => {
   const [findType, setFindType] = useState('password')
   const [resetEmail, setResetEmail] = useState('')
   const [resetMsg, setResetMsg] = useState('')
-  const [reserError, setResetError] = useState('')
+  const [resetError, setResetError] = useState('')
+
+  const [findName, setFindName] = useState('')
+  const [findPhone, setFindPhone] = useState('')
+  const [foundEmail, setFoundEmail] = useState('')
+  const [findError, setFindError] = useState('')
+
+  const handleFindId = async (e) => {
+    e.preventDefault()
+    setFoundEmail('')
+    setFindError('')
+    try {
+      const email = await findEmailByNameAndPhone(findName, findPhone)
+      if (email) {
+        setFoundEmail(email)
+      } else {
+        setFindError('일치하는 회원 정보가 없습니다.')
+      }
+    } catch (err) {
+      setFindError('오류가 발생했습니다.')
+    }
+  }
 
   // 비회원주문
   const handleGuestSearch = async (e) => {
@@ -54,6 +77,11 @@ const Login = () => {
   // 기본 이메일 로그인
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (saveId) {
+      localStorage.setItem('savedEmail', email)
+    } else {
+      localStorage.removeItem('savedEmail')
+    }
     const result = await onLogin(email, pass);
     if (result) navigate("/")
   }
@@ -97,12 +125,15 @@ const Login = () => {
           <form onSubmit={handleSubmit}>
             <p>아이디(이메일)</p>
             <input type="email" placeholder='ID 또는 이메일'
-              onChange={(e) => setEmail(e.target.value)} />
+              value={email} onChange={(e) => setEmail(e.target.value)} />
             <p>비밀번호</p>
             <input type="password" placeholder='비밀번호'
               onChange={(e) => setPass(e.target.value)} />
             <label>
-              <input type="checkbox" />아이디 저장
+              <input type="checkbox" checked={saveId} onChange={(e) => {
+                setSaveId(e.target.checked)
+                if (!e.target.checked) localStorage.removeItem('savedEmail')
+              }} />아이디 저장
             </label>
             <p style={{ color: "#C9C9C9" }}>* 개인정보를 위해 개인PC에서만 이용해주세요</p>
 
@@ -110,7 +141,15 @@ const Login = () => {
             <button type='submit'>로그인</button>
 
             <div className='login-under'>
-              <button className="search-id-pass" onClick={() => setShowFindModal(true)}>아이디/비밀번호 찾기</button>
+              <button type="button" className="search-id-pass" onClick={() => {
+                setShowFindModal(true)
+                setFoundEmail('')
+                setFindError('')
+                setFindName('')
+                setFindPhone('')
+                setResetMsg('')
+                setResetError('')
+              }}>아이디/비밀번호 찾기</button>
               <Link to="/member" className='new-member'>회원가입</Link>
             </div>
           </form>
@@ -154,7 +193,7 @@ const Login = () => {
           </form>
 
         </div>
-      </div>
+      </div >
       {showOrderModal && orderResult && (
         <div className="modal-overlay" onClick={() => setShowOrderModal(false)}>
           <div className="order-modal" onClick={(e) => e.stopPropagation()}>
@@ -186,6 +225,57 @@ const Login = () => {
           </div>
         </div>
       )}
+      {
+        showFindModal && (
+          <div className="modal-overlay" onClick={() => setShowFindModal(false)}>
+            <div className="find-modal" onClick={(e) => e.stopPropagation()}>
+              <button className="modal-close" onClick={() => setShowFindModal(false)}>✕</button>
+              <h2>아이디/비밀번호 찾기</h2>
+
+              <div className="find-tab">
+                <button
+                  className={findType === 'id' ? 'active' : ''}
+                  onClick={() => setFindType('id')}>아이디 찾기</button>
+                <button
+                  className={findType === 'password' ? 'active' : ''}
+                  onClick={() => setFindType('password')}>비밀번호 찾기</button>
+              </div>
+
+              {findType === 'id' ? (
+                <div className="find-id">
+                  <form onSubmit={handleFindId}>
+                    <p>이름</p>
+                    <input type="text" placeholder="이름을 입력하세요"
+                      onChange={(e) => setFindName(e.target.value)} />
+                    <p>휴대폰번호</p>
+                    <input type="text" placeholder="휴대폰번호 (- 없이 입력)"
+                      onChange={(e) => setFindPhone(e.target.value)} />
+                    {foundEmail && (
+                      <div className="found-email">
+                        가입된 이메일: <strong>{foundEmail}</strong>
+                      </div>
+                    )}
+                    {findError && <p style={{ color: 'red' }}>{findError}</p>}
+                    <button type="submit">아이디 찾기</button>
+                  </form>
+                </div>
+              ) : (
+                <form onSubmit={handlePasswordReset}>
+                  <p>가입한 이메일로 비밀번호 재설정 링크를 보내드립니다.</p>
+                  <input
+                    type="email"
+                    placeholder="가입한 이메일을 입력하세요"
+                    onChange={(e) => setResetEmail(e.target.value)}
+                  />
+                  {resetMsg && <p style={{ color: 'green' }}>{resetMsg}</p>}
+                  {resetError && <p style={{ color: 'red' }}>{resetError}</p>}
+                  <button type="submit">재설정 이메일 전송</button>
+                </form>
+              )}
+            </div>
+          </div>
+        )
+      }
     </div >
   )
 }

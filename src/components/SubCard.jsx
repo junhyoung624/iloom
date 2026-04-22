@@ -4,6 +4,8 @@ import "./scss/Card.scss"
 
 const SubCard = ({ item }) => {
     const { onToggleWishList, wishlist } = useProductStore()
+    const { user } = useAuthStore();
+    const navigate = useNavigate();
     const [isHoverHeart, setIsHoverHeart] = useState(false)
 
     const isLiked = wishlist.some((wishItem) => wishItem.id === item.id)
@@ -12,8 +14,16 @@ const SubCard = ({ item }) => {
     const handleHeartClick = (e) => {
         e.preventDefault()
         e.stopPropagation()
-        onToggleWishList(item)
+
+        if (!user) {
+            alert('로그인 후 이용해주세요.')
+            navigate('/login')
+            return
+        }
+
+        onToggleWishList(item, user)
     }
+
 
     return (
         <div className="sub-card">

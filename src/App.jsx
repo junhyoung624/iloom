@@ -37,11 +37,12 @@ import NewBestPage from './pages/NewBestPage'
 import Charge from './pages/Charge'
 import FurniturePage from './components/FurniturePage'
 import { addTestOrder } from './firebase/orderService'
+import OrderForGuest from './pages/OrderForGuest'
 
 function App() {
   const [isLoading, setIsLoading] = useState(true)
-  const { onfetchItems, onMakeMenu } = useProductStore()
-  const { initAuth } = useAuthStore()
+  const { onfetchItems, onMakeMenu, fetchWishlist, clearWishlist } = useProductStore() // ← fetchWishlist, clearWishlist 추가
+  const { initAuth, user } = useAuthStore() // ← user 추가
 
   useEffect(() => {
     onfetchItems()
@@ -52,6 +53,15 @@ function App() {
   useEffect(() => {
     addTestOrder()
   }, [])
+
+  // ← 추가
+  useEffect(() => {
+    if (user) {
+      fetchWishlist(user)
+    } else {
+      clearWishlist()
+    }
+  }, [user])
 
   const handleFinish = () => {
     setIsLoading(false)
@@ -72,6 +82,7 @@ function App() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/charge" element={<Charge />} />
         <Route path="/order" element={<Order />} />
+        <Route path="/orderForGuest/:orderNum" element={<OrderForGuest />} />
         <Route path="/searchpage" element={<SearchPage />} />
 
         <Route path="/oauth" element={<OAuth />} />

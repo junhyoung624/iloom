@@ -7,7 +7,7 @@ export const productReviews = [
         title: "미니멀한 디자인이 너무 마음에 들어요!",
         content: "공간이 훨씬 넓어 보이고 깔끔합니다. 블랙 프레임 마감이 정교해서 고급스러운 느낌이 나네요. 배송도 생각보다 빨랐고 기사님도 친절하셨습니다.",
         option: "DIO",
-        images: ["images/product-detail/review-01.jpg"],
+        images: ["/images/product-detail/review-01.jpg"],
     },
     {
         id: 2,
@@ -17,7 +17,7 @@ export const productReviews = [
         title: "튼튼하고 실용적입니다.",
         content: "설치하고 나니 흔들림 없이 아주 튼튼해요. 다만 무게가 꽤 나가서 혼자 옮기기는 조금 힘들었지만, 그만큼 내구성이 좋다는 뜻이겠죠? 만족합니다.",
         option: "GYA",
-        images: ["images/product-detail/review-02.jpg"],
+        images: ["/images/product-detail/review-02.jpg"],
     },
     {
         id: 3,
@@ -27,7 +27,7 @@ export const productReviews = [
         title: "딱 찾던 스타일이에요.",
         content: "조립도 간편하고 군더더기 없는 디자인이라 어디든 잘 어울립니다. 가성비 최고예요!",
         option: "SO",
-        images: ["images/product-detail/review-03.jpg", "images/product-datail/review-04.jpg"],
+        images: ["/images/product-detail/review-03.jpg", "/images/product-detail/review-04.jpg"],
     },
     {
         id: 4,

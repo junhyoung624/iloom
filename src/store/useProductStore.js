@@ -36,16 +36,37 @@ export const useProductStore = create((set, get) => ({
         return wishlist.some((item) => item.id === id);
     },
 
-    onToggleWishList: (item) => {
+    onToggleWishList: async (item, user) => {
         const { wishlist } = get();
         const exists = wishlist.some((wishItem) => wishItem.id === item.id);
 
-        set({
-            wishlist: exists
-                ? wishlist.filter((wishItem) => wishItem.id !== item.id)
-                : [...wishlist, item],
-        });
+        const newWishlist = exists
+            ? wishlist.filter((wishItem) => wishItem.id !== item.id)
+            : [...wishlist, item];
+
+        set({ wishlist: newWishlist });
+
+        if (user) {
+            const { doc, setDoc } = await import('firebase/firestore');
+            const { db } = await import('../firebase/firebase');
+            const userRef = doc(db, 'people', user.uid);
+            await setDoc(userRef, { wishlist: newWishlist }, { merge: true });
+        }
     },
+
+    fetchWishlist: async (user) => {
+        if (!user) return;
+        const { doc, getDoc } = await import('firebase/firestore');
+        const { db } = await import('../firebase/firebase');
+        const userRef = doc(db, 'people', user.uid);
+        const snap = await getDoc(userRef);
+        const data = snap.data();
+        if (data?.wishlist) {
+            set({ wishlist: data.wishlist });
+        }
+    },
+
+    clearWishlist: () => set({ wishlist: [] }),
 
     onAddWishList: (product) => {
         const wish = get().wishlist;
@@ -175,12 +196,35 @@ export const useProductStore = create((set, get) => ({
     //주문
     //주문 목록을 저장할 변수
     orderList: [],
+
+    createDeliveryDate: () => {
+        const today = new Date();
+        const randomDays = Math.floor(Math.random() * 10) + 1;
+
+        const deliveryDate = new Date(today);
+        deliveryDate.setDate(today.getDate() + randomDays);
+
+        const year = deliveryDate.getFullYear();
+        const month = String(deliveryDate.getMonth() + 1).padStart(2, "0");
+        const date = String(deliveryDate.getDate()).padStart(2, "0");
+
+        return `${year}.${month}.${date}`;
+    },
+
     //결제를 클릭하면 결제 항목이 주문 목록에 들어가도록
     onAddOrder: (order) => {
         const orderPrev = get().orderList;
         console.log("onAddOrder in", order);
 
+        //같은 주문번호가 이미 있으면 추가 안함
+        const exists = orderPrev.some(
+            (item) => item.orderNumber === order.orderNumber
+        );
+
+        if (exists) return;
+
         const now = new Date();
+        const deliveryDate = get().createDeliveryDate();
 
         const newOrder = {
             id: Date.now(),
@@ -189,6 +233,7 @@ export const useProductStore = create((set, get) => ({
             hours: now.getHours(),
             minutes: now.getMinutes(),
             seconds: now.getSeconds(),
+            deliveryDate,
             items: order.items,
             price: order.total,
             color: order.color,
@@ -200,7 +245,9 @@ export const useProductStore = create((set, get) => ({
 
         set({
             orderList: [...orderPrev, newOrder],
+            cartItems: get().cartItems.filter((item) => !item.checked),
             //cartCount: 0,
+            cartItems: [],
         })
     },
 

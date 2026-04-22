@@ -53592,11 +53592,8 @@ export const productData = [
     "productImages": [
       "/images/iloom_images/home-library/bookshelf/HSPC186_NCCBG_1.jpg",
       "/images/iloom_images/home-library/bookshelf/HSPC186_GUDG_2.png",
-      "/images/iloom_images/home-library/bookshelf/HSPC186_GUDG_2.png",
-      "/images/iloom_images/home-library/bookshelf/HSPC186_WWWW_3.png",
       "/images/iloom_images/home-library/bookshelf/HSPC186_WWWW_3.png",
       "/images/iloom_images/home-library/bookshelf/HSPC186_NCCBG_4.png",
-      "/images/iloom_images/home-library/bookshelf/HSPC186_NCCBG_4.png"
     ],
     "mdPick": false,
     "new": false,
