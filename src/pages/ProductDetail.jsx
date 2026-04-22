@@ -75,7 +75,7 @@ export default function ProductDetail() {
             alert('옵션을 선택해주세요')
             return
         }
-        navigate('/order', { state: { product, option: selectedOption, quantity } })
+        navigate('/charge', { state: { product, option: selectedOption, quantity } })
     }
 
     const handleAddCart = () => {
