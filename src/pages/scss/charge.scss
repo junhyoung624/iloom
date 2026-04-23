@@ -352,7 +352,46 @@
 .unlogged-user-charge-section {
     display: grid;
     gap: 50px;
-    margin-bottom: 30px;
+    margin-bottom: 34px;
+
+    .inner {
+        width: 1200px;
+
+        .title {
+            //text-align: center;
+            font-size: 28px;
+            font-weight: 700;
+            padding-bottom: 18px;
+            border-bottom: 1px solid #ddd;
+        }
+    }
+
+    .delivery-agreement-area {
+        .discription {
+            border: 1px solid #aaaaaa;
+            padding: 40px 30px 40px 40px;
+            margin-top: 35px;
+            margin-bottom: 34px;
+        }
+
+        .discription p,
+        .discription span {
+            display: block;
+            font-size: 14px;
+            line-height: 25px;
+            letter-spacing: -0.4px;
+            color: #909090;
+        }
+
+        .discription_title {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .fwBd {
+            font-weight: bold;
+        }
+    }
 
     .error-text {
         color: red;
@@ -361,13 +400,21 @@
     }
 
     .user-form {
-        display: grid;
+        display: flex;
+        justify-content: space-between;
         gap: 50px;
+        // border-top: 2px solid #ddd;
+        border-width: inherit;
+        padding-top: 20px;
     }
 
     .unlogged-charge-section {
-        display: flex;
+        //width: 100%;
 
+        //display: flex;
+        .section-title {
+            font-size: 1.2rem;
+        }
 
         .info-row {
             display: grid;
@@ -387,7 +434,7 @@
         .unlogged-addr-area {
             .search-addr {
                 button {
-                    width: 500px;
+                    width: 570px;
                     height: 3rem;
                 }
             }
@@ -419,11 +466,28 @@
 
     .unlogged_input {
         height: 3rem;
-        width: 500px;
+        width: 570px;
         //flex-grow: 1;
         appearance: none;
         border-style: none;
         border: 1px solid #808080;
         padding-inline-start: 1rem;
     }
+
+    .unlogged-requisite-info {
+        font-size: 16px;
+        line-height: 1.1rem;
+    }
+
+    .unlogged-requisite-info::after {
+        content: '';
+        display: inline-block;
+        width: 4px;
+        height: 4px;
+        margin-left: 2px;
+        border-radius: 50%;
+        background-color: #ff3c3c;
+        vertical-align: text-top;
+    }
+
 }
