@@ -16,9 +16,9 @@ export default function Charge() {
     const [guestName, setGuestName] = useState('')
     const [guestPhone, setGuestPhone] = useState('')
 
-    useEffect(()=> {
+    useEffect(() => {
         onfetchItems()
-    },[])
+    }, [])
 
     //비회원 우편번호 찾기 컴포넌트 관리
     const [guestForm, setGuestForm] = useState({
@@ -324,35 +324,6 @@ export default function Charge() {
 
 
     }
-    // const handleFinalConfirm = async () => {
-    //     try {
-    //         await createOrder({
-    //             name: user.name,
-    //             phone: user.phone,
-    //             product: orderItems[0],
-    //             option: orderItems[0].color,
-    //             quantity: orderItems[0].qty,
-    //             items: orderItems.map(item => ({
-    //                 productId: item.id,
-    //                 name: item.name,
-    //                 option: item.color,
-    //                 quantity: item.qty,
-    //                 price: item.priceNumber
-    //             }))
-    //         })
-    //         alert("결제가 완료되었습니다. 주문 내역을 확인하세요")
-    //         onAddOrder({
-    //             items: orderItems,
-    //             total: totalPrice,
-    //         })
-    //         navigate("/order")
-    //     } catch (err) {
-    //         alert("주문 저장 중 오류가 발생했습니다.")
-    //         console.error(err)
-    //     }
-    // }
-
-
 
     return (
         <section className="charge-page">
@@ -418,101 +389,127 @@ export default function Charge() {
                     {
                         !user && (
                             <div className="unlogged-user-charge-section">
-                                <div className="title">비회원 주문입니다</div>
-                                <form className='user-form'>
-                                    <div className="unlogged-charge-section">
-                                        <h3 className="section-title">주문자 정보</h3>
-                                        <div className="info-table">
-                                            <div className="info-row">
-                                                <span className="label">보내는 분</span>
-                                                <input type="text"
-                                                    name="name"
-                                                    onChange={handleGuestChange}
-                                                    value={guestForm.name}
-                                                    className="unlogged_input"
-                                                    required />
-                                                {errors.name && <p className="error-text">{errors.name}</p>}
-                                            </div>
-                                            <div className="info-row">
-                                                <span className="label">휴대폰</span>
-                                                <input type="text"
-                                                    name="phone"
-                                                    onChange={handleGuestChange}
-                                                    value={guestForm.phone}
-                                                    className="unlogged_input"
-                                                    required />
-                                                {errors.phone && <p className="error-text">{errors.phone}</p>}
-                                            </div>
-                                            <div className="info-row">
-                                                <span className="label">이메일</span>
-                                                <input type="email"
-                                                    name="email"
-                                                    onChange={handleGuestChange}
-                                                    value={guestForm.email}
-                                                    className="unlogged_input"
-                                                    required />
-                                                {errors.email && <p className="error-text">{errors.email}</p>}
-                                            </div>
+                                <div className="inner">
+                                    <div className="delivery-agreement-area">
+                                        <div className="title">비회원 개인정보 수집 및 이용 동의</div>
+                                        <div className="discription">
+                                            <p class="discription_title">개인정보의 수집 및 이용에 대한 안내</p>
+                                            <p class="discription_title">수집 항목</p>
+                                            <p>주문고객정보 (주문자이름, 이메일, 휴대폰번호)</p>
+                                            <p>배송지정보 (수취인이름, 배송지주소, 휴대폰번호, 전화번호)</p>
+                                            <p>결제정보 (카드정보, 계좌정보)</p>
+                                            <br></br>
+                                            <p class="discription_title">수집 목적</p>
+                                            <p>주문 확인, 주문상품 결제, 주문상품 배송</p>
+                                            <br></br>
+                                            <p class="discription_title">이용 기간</p>
+                                            <p class="fwBd underline">원칙적으로 개인정보 수집 및 이용목적이 달성된 후에 해당 정보를 지체 없이 파기합니다.</p>
+                                            <p class="fwBd underline">단, 관계법령의 규정에 의하여 필요가 있는 경우 일정기간 동안 개인정보를 보관할 수 있습니다.</p>
+                                            <p>귀하는 개인정보 수집 및 이용 동의를 거부할 권리가 있습니다. 단, 거부하는 경우 상품 구매가 불가능합니다. </p>
+                                            <p>
+                                                <br />
+                                                그 밖의 사항은 일룸 개인정보처리방침을 준수합니다.
+                                            </p>
                                         </div>
                                     </div>
-
-                                    <div className="unlogged-charge-section">
-                                        <h3 className="section-title">배송 정보</h3>
-                                        <div className="info-table unlogged-addr-area">
-                                            <div className="info-row">
-
-                                                <div className="value address-box">
-                                                    <div className="search-addr input-zone">
-                                                        <p>배송지 조회</p>
-                                                        <button onClick={handlePopupClick}>우편번호 찾기</button>
-
-                                                    </div>
-
-                                                    <div className="fixed-zipcode-area input-zone">
-                                                        <p>우편번호</p>
+                                    <div className="delivery-info-area">
+                                        <div className="title">비회원 주문정보</div>
+                                        <form className='user-form'>
+                                            <div className="unlogged-charge-section">
+                                                <h3 className="section-title">주문자 정보</h3>
+                                                <div className="info-table unlogged-addr-area">
+                                                    <div className="info-row input-zone">
+                                                        <p className="unlogged-requisite-info">주문자명</p>
                                                         <input type="text"
-                                                            value={guestForm.zipCode}
-                                                            placeholder='우편번호'
-                                                            className="zipcode-input unlogged_input"
-                                                            readOnly
-
-                                                            required />
-                                                        {errors.zipCode && <p className="error-text">{errors.zipCode}</p>}
-
-                                                    </div>
-                                                    <div className="fixed-addr-area input-zone">
-                                                        <p>주소</p>
-                                                        <input type="text"
-                                                            value={guestForm.address}
-                                                            placeholder='주소'
-                                                            className="addr-input unlogged_input"
-                                                            readOnly
-                                                            required />
-                                                        {errors.address && <p className="error-text">{errors.address}</p>}
-                                                    </div>
-                                                    <div className="extra-addr-info input-zone">
-                                                        <p>상세 주소 (도로명 주소를 제외한 상세 주소만 입력해주세요)</p>
-                                                        <input type="text"
-                                                            name='extraAddress'
+                                                            name="name"
                                                             onChange={handleGuestChange}
-                                                            value={guestForm.extraAddress}
-                                                            className="exta-addr-input unlogged_input"
+                                                            value={guestForm.name}
+                                                            className="unlogged_input"
                                                             required />
-                                                        {errors.extraAddress && <p className="error-text">{errors.extraAddress}</p>}
+                                                        {errors.name && <p className="error-text">{errors.name}</p>}
+                                                    </div>
+                                                    <div className="info-row input-zone">
+                                                        <p className="unlogged-requisite-info">휴대폰</p>
+                                                        <input type="text"
+                                                            name="phone"
+                                                            onChange={handleGuestChange}
+                                                            value={guestForm.phone}
+                                                            className="unlogged_input"
+                                                            required />
+                                                        {errors.phone && <p className="error-text">{errors.phone}</p>}
+                                                    </div>
+                                                    <div className="info-row input-zone">
+                                                        <p className="unlogged-requisite-info">이메일</p>
+                                                        <input type="email"
+                                                            name="email"
+                                                            onChange={handleGuestChange}
+                                                            value={guestForm.email}
+                                                            className="unlogged_input"
+                                                            required />
+                                                        {errors.email && <p className="error-text">{errors.email}</p>}
                                                     </div>
                                                 </div>
                                             </div>
 
-                                            <div className="info-row">
-                                                <span className="label">배송 요청사항</span>
-                                                <div className="value request-box">
-                                                    배송 요청사항 선택
+                                            <div className="unlogged-charge-section">
+                                                <h3 className="section-title">배송 정보</h3>
+                                                <div className="info-table unlogged-addr-area">
+                                                    <div className="info-row">
+
+                                                        <div className="value address-box">
+                                                            <div className="search-addr input-zone">
+                                                                <p className='unlogged-requisite-info'>배송지 조회</p>
+                                                                <button onClick={handlePopupClick}>우편번호 찾기</button>
+
+                                                            </div>
+
+                                                            <div className="fixed-zipcode-area input-zone">
+                                                                <p className='unlogged-requisite-info'>우편번호</p>
+                                                                <input type="text"
+                                                                    value={guestForm.zipCode}
+                                                                    placeholder='우편번호'
+                                                                    className="zipcode-input unlogged_input"
+                                                                    readOnly
+
+                                                                    required />
+                                                                {errors.zipCode && <p className="error-text">{errors.zipCode}</p>}
+
+                                                            </div>
+                                                            <div className="fixed-addr-area input-zone">
+                                                                <p className='unlogged-requisite-info'>주소</p>
+                                                                <input type="text"
+                                                                    value={guestForm.address}
+                                                                    placeholder='주소'
+                                                                    className="addr-input unlogged_input"
+                                                                    readOnly
+                                                                    required />
+                                                                {errors.address && <p className="error-text">{errors.address}</p>}
+                                                            </div>
+                                                            <div className="extra-addr-info input-zone">
+                                                                <p ><span className='unlogged-requisite-info'>상세 주소</span> <span>(도로명 주소를 제외한 상세 주소만 입력해주세요)</span></p>
+                                                                <input type="text"
+                                                                    name='extraAddress'
+                                                                    onChange={handleGuestChange}
+                                                                    value={guestForm.extraAddress}
+                                                                    className="exta-addr-input unlogged_input"
+                                                                    required />
+                                                                {errors.extraAddress && <p className="error-text">{errors.extraAddress}</p>}
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div className="info-row">
+                                                        <span className="label">배송 요청사항</span>
+                                                        <div className="value request-box">
+                                                            배송 요청사항 선택
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </form>
                                     </div>
-                                </form>
 
+                                </div>
                             </div>
                         )
                     }
