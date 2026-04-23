@@ -36,6 +36,8 @@ export const useAuthStore = create((set, get) => ({
                         providers: u.providerData.map(p => p.providerId)
                     }
                 })
+                const { useProductStore } = await import('./useProductStore');
+                await useProductStore.getState().fetchOrderList({ uid: u.uid });
             } else {
                 set({ user: null })
             }

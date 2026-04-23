@@ -66,6 +66,18 @@ export const useProductStore = create((set, get) => ({
         }
     },
 
+    fetchOrderList: async (user) => {
+        if (!user) return;
+        const { doc, getDoc } = await import('firebase/firestore');
+        const { db } = await import('../firebase/firebase');
+        const userRef = doc(db, 'people', user.uid);
+        const snap = await getDoc(userRef);
+        const data = snap.data();
+        if (data?.orderList) {
+            set({ orderList: data.orderList });
+        }
+    },
+    
     clearWishlist: () => set({ wishlist: [] }),
 
     onAddWishList: (product) => {
@@ -212,43 +224,51 @@ export const useProductStore = create((set, get) => ({
     },
 
     //결제를 클릭하면 결제 항목이 주문 목록에 들어가도록
-    onAddOrder: (order) => {
+    onAddOrder: async (order, user) => {
         const orderPrev = get().orderList;
         console.log("onAddOrder in", order);
 
-        //같은 주문번호가 이미 있으면 추가 안함
         const exists = orderPrev.some(
             (item) => item.orderNumber === order.orderNumber
         );
-
         if (exists) return;
 
         const now = new Date();
         const deliveryDate = get().createDeliveryDate();
 
+        const allItems = get().items;
+        const enrichedItems = order.items.map((cartItem) => {
+            const product = allItems.find((p) => p.id === cartItem.id);
+            return { ...product, ...cartItem };
+        });
+
         const newOrder = {
             id: Date.now(),
-            // orderTime: new Date(),
             date: now.toLocaleDateString(),
             hours: now.getHours(),
             minutes: now.getMinutes(),
             seconds: now.getSeconds(),
             deliveryDate,
-            items: order.items,
             price: order.total,
-            color: order.color,
             state: "결제완료",
-            ...order, //charge.jsx에서 넘긴 값들 그대로 저장하기
+            ...order,
+            items: enrichedItems,
         };
 
-        //const updateOrder = [...orderPrev, newOrder];
+        const updatedOrderList = [...orderPrev, newOrder];
 
         set({
-            orderList: [...orderPrev, newOrder],
-            cartItems: get().cartItems.filter((item) => !item.checked),
-            //cartCount: 0,
+            orderList: updatedOrderList,
             cartItems: [],
-        })
+        });
+
+        // Firestore 저장
+        if (user) {
+            const { doc, setDoc } = await import('firebase/firestore');
+            const { db } = await import('../firebase/firebase');
+            const userRef = doc(db, 'people', user.uid);
+            await setDoc(userRef, { orderList: updatedOrderList }, { merge: true });
+        }
     },
 
     //비회원 주문 조회 
