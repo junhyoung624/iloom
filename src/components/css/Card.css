@@ -1,9 +1,17 @@
+:root {
+  --main: #303030;
+  --sub: #808080;
+  --line: #c9c9c9;
+}
+
 .card-img-box {
   position: relative;
 }
 .card-img-box .product-img {
   width: 100%;
-  display: block;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
   transition: opacity 0.3s ease;
 }
 .card-img-box .default {
@@ -25,20 +33,31 @@
   opacity: 0;
 }
 
-.series-row {
+.card-text-box .series-row {
   position: relative;
 }
-
-.series-name {
+.card-text-box .product-info {
+  text-align: center;
+}
+.card-text-box .product-info .series-name {
   margin: 0;
   text-align: center;
-  color: #606060;
+  color: var(--sub);
   font-size: 16px;
   font-weight: 300;
-  padding: 20px 0 5px;
+  padding: 10px 0 0 0;
+  margin-bottom: 10px;
 }
-
-.heart-btn {
+.card-text-box .product-info .product-name {
+  padding-bottom: 13px;
+  color: var(--main);
+  font-size: 17px;
+}
+.card-text-box .product-info .price {
+  font-weight: 500;
+  color: #CA1230;
+}
+.card-text-box .heart-btn {
   position: absolute;
   top: 50%;
   right: 0;
@@ -49,9 +68,9 @@
   background: transparent;
   padding: 0;
   cursor: pointer;
+  margin-top: 20px;
 }
-
-.heart {
+.card-text-box .heart {
   position: absolute;
   inset: 0;
   width: 20px;
@@ -59,27 +78,15 @@
   display: block;
   transition: opacity 0.25s ease;
 }
-
-.heart-line {
+.card-text-box .heart-line {
   opacity: 1;
 }
-
-.heart-fill {
+.card-text-box .heart-fill {
   opacity: 0;
 }
-
-.heart-btn.active .heart-line {
+.card-text-box .heart-btn.active .heart-line {
   opacity: 0;
 }
-
-.heart-btn.active .heart-fill {
+.card-text-box .heart-btn.active .heart-fill {
   opacity: 1;
-}
-
-.product-name {
-  padding-bottom: 10px;
-}
-
-.price {
-  font-weight: 500;
 }

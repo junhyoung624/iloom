@@ -5,7 +5,9 @@
 
     .product-img {
         width: 100%;
-        display: block;
+        height: 100%;
+        object-fit: cover;
+        // display: block;
         transition: opacity 0.3s ease;
     }
 
@@ -59,6 +61,7 @@
 
         .price {
             font-weight: 500;
+            color: #CA1230;
         }
     }
 
