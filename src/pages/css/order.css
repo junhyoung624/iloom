@@ -1,0 +1,103 @@
+.order-list-wrap {
+  margin: 10px;
+}
+
+.order-id-wrap {
+  margin-bottom: 30px;
+}
+.order-id-wrap .unlogged-user-info {
+  margin-bottom: 20px;
+}
+
+.order-item {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  margin-bottom: 40px;
+  max-width: 1280px;
+}
+.order-item .order-main-info {
+  display: flex;
+  align-items: center;
+}
+.order-item .order-main-info .order-date {
+  flex: 0.5;
+  display: grid;
+  gap: 10px;
+  text-align: center;
+}
+.order-item .order-main-info .order-date .order-date-info {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.order-item .order-main-info .order-date .order-state {
+  font-size: 1.1rem;
+  color: #808080;
+}
+.order-item .order-main-info .order-date .order-item-id {
+  color: #bdbdbd;
+}
+.order-item .order-main-info .order-item-img {
+  flex: 0.5;
+  margin: auto;
+  text-align: center;
+}
+.order-item .order-main-info .order-item-img img {
+  width: 200px;
+  height: 200px;
+  margin: auto 0;
+  margin: 10px;
+}
+.order-item .order-main-info .order-item-txt-info {
+  flex: 2;
+  display: grid;
+  gap: 10px;
+  margin: auto 0;
+  padding-left: 70px;
+}
+.order-item .order-main-info .order-item-txt-info .series {
+  padding: 0;
+}
+.order-item .order-main-info .order-item-txt-info .item-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+.order-item .order-main-info .order-item-txt-info .item-color {
+  color: #808080;
+}
+.order-item .order-sub-info {
+  display: flex;
+  border-top: 1px solid #ddd;
+  line-height: 40px;
+  color: #808080;
+}
+.order-item .order-sub-info .left {
+  flex: 0.5;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+.order-item .order-sub-info .right {
+  flex: 2.5;
+  display: flex;
+  justify-content: space-between;
+}
+.order-item .order-sub-info .right .move-btn {
+  width: 30px;
+  height: 30px;
+  margin: auto 0;
+  margin-right: 20px;
+}
+.order-item .order-sub-info .right .move-btn:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+.order-item:hover {
+  border: 1px solid black;
+}
+.order-item:hover .order-sub-info {
+  border-top: 1px solid black;
+}

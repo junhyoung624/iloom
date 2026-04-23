@@ -35338,56 +35338,6 @@ export const productData = [
     "ranking": 1446
   },
   {
-    "id": "HL14E06EL",
-    "series": "타우",
-    "name": "타우 사이드테이블(전면형)",
-    "material": "",
-    "price": "89,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "FKFK",
-          "GYMGY",
-          "IVIIV",
-          "LDDG",
-          "OSBG",
-          "SOGY"
-        ]
-      }
-    ],
-    "originalCategory": "거실",
-    "category2": "테이블",
-    "category3": "멀티테이블",
-    "productImages": [
-      "/images/iloom_images/living-room/table/HL14E06EL_a_LDDG_1.png",
-      "/images/iloom_images/living-room/table/HL14E06EL_a_LDDG_1.png",
-      "/images/iloom_images/living-room/table/HL14E06EL_b_SOGY_1.jpg",
-      "/images/iloom_images/living-room/table/HL14E06EL_a_OSBG_2.png",
-      "/images/iloom_images/living-room/table/HL14E06EL_b_FKFK_2.png",
-      "/images/iloom_images/living-room/table/HL14E06EL_a_GYMGY_3.png",
-      "/images/iloom_images/living-room/table/HL14E06EL_b_IVIIV_3.png",
-      "/images/iloom_images/living-room/table/HL14E06EL_a_LDDG_4.png",
-      "/images/iloom_images/living-room/table/HL14E06EL_b_SOGY_4.png",
-      "/images/iloom_images/living-room/table/HL14E06EL_a_LDDG_5.png",
-      "/images/iloom_images/living-room/table/HL14E06EL_b_SOGY_5.png",
-      "/images/iloom_images/living-room/table/HL14E06EL_a_LDDG_6.png",
-      "/images/iloom_images/living-room/table/HL14E06EL_b_SOGY_6.png",
-      "/images/iloom_images/living-room/table/HL14E06EL_a_LDDG_7.png",
-      "/images/iloom_images/living-room/table/HL14E06EL_b_SOGY_7.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20191212/_1d987263-2102-4e4e-9bd2-857e21952b89.jpg",
-      "https://www.iloom.com/upload/contents/20191212/_75ea76e9-27f2-4dfd-9725-ff5e0b975a9c.jpg",
-      "https://www.iloom.com/upload/contents/20191212/_d88d9009-d579-4a0c-bbc3-e5797ab8ed7d.jpg",
-      "https://www.iloom.com/upload/contents/20191212/_ca45683a-ab41-405c-ad2c-0840ab7031eb.jpg"
-    ],
-    "ranking": 1654
-  },
-  {
     "id": "HLC0E04HL",
     "series": "리타 (Lita)",
     "name": "리타 (Lita) 사이드테이블(높은형)",
