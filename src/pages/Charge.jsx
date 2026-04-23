@@ -6,7 +6,6 @@ import { Link, useLocation, useNavigate } from 'react-router-dom'
 import ChargeModal from './ChargeModal'
 import { useKakaoPostcodePopup } from 'react-daum-postcode'
 import { addOrder } from '../firebase/orderService'
-// import { createOrder } from '../firebase/orderService'
 
 export default function Charge() {
     const { cartItems, items, onAddOrder, createDeliveryDate, onfetchItems } = useProductStore()
@@ -16,11 +15,10 @@ export default function Charge() {
     const [guestName, setGuestName] = useState('')
     const [guestPhone, setGuestPhone] = useState('')
 
-    useEffect(()=> {
+    useEffect(() => {
         onfetchItems()
-    },[])
+    }, [])
 
-    //비회원 우편번호 찾기 컴포넌트 관리
     const [guestForm, setGuestForm] = useState({
         name: "",
         phone: "",
@@ -36,144 +34,71 @@ export default function Charge() {
     const handleGuestChange = (e) => {
         const { name, value } = e.target;
         console.log(e.target.value);
-
-        setGuestForm((prev) => ({
-            ...prev,
-            [name]: value,
-        }));
-
-        setErrors((prev) => ({
-            ...prev,
-            [name]: "",
-        }));
+        setGuestForm((prev) => ({ ...prev, [name]: value }));
+        setErrors((prev) => ({ ...prev, [name]: "" }));
     };
 
-
-    const SCRIPT_URL =
-        "//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js";
+    const SCRIPT_URL = "//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js";
     const open = useKakaoPostcodePopup(SCRIPT_URL);
 
     const handleComplete = (data) => {
         let fullAddress = data.address;
         let extraAddress = '';
-
         if (data.addressType === 'R') {
-            if (data.bname !== '') {
-                extraAddress += data.bname;
-            }
-
+            if (data.bname !== '') extraAddress += data.bname;
             if (data.buildingName !== '') {
                 extraAddress += (extraAddress !== '' ? `, ${data.buildingName}` : data.buildingName);
             }
-
             fullAddress += (extraAddress !== '' ? ` (${extraAddress})` : '');
         }
-        // setZipCode(data.zonecode); //5자리 우편번호
-        // setAddress(fullAddress); //주소
-        // setIsOpen(false);//팝업닫기
-
-        setGuestForm((prev) => ({
-            ...prev,
-            zipCode: data.zonecode,
-            address: fullAddress,
-        }));
-
-        setErrors((prev) => ({
-            ...prev,
-            zipCode: "",
-            address: "",
-        }));
-
+        setGuestForm((prev) => ({ ...prev, zipCode: data.zonecode, address: fullAddress }));
+        setErrors((prev) => ({ ...prev, zipCode: "", address: "" }));
     }
 
     const handlePopupClick = () => {
         open({ onComplete: handleComplete });
     }
 
-
-
     const validateGuestForm = () => {
         const newErrors = {};
-
         const name = guestForm.name.trim();
         const phone = guestForm.phone.trim();
         const email = guestForm.email.trim();
         const zipCode = guestForm.zipCode.trim();
         const address = guestForm.address.trim();
         const extraAddress = guestForm.extraAddress.trim();
-
         const phoneRegex = /^01[0-9]-?\d{3,4}-?\d{4}$/;
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-        if (!name) {
-            newErrors.name = "** 이름을 입력해주세요.";
-        }
-
-        if (!phone) {
-            newErrors.phone = "** 휴대폰 번호를 입력해주세요.";
-        } else if (!phoneRegex.test(phone)) {
-            newErrors.phone = "** 휴대폰 번호 형식이 올바르지 않습니다.";
-        }
-
-        if (!email) {
-            newErrors.email = "** 이메일을 입력해주세요.";
-        } else if (!emailRegex.test(email)) {
-            newErrors.email = "** 이메일 형식이 올바르지 않습니다.";
-        }
-
-        if (!zipCode) {
-            newErrors.zipCode = "** 우편번호를 입력해주세요.";
-        }
-
-        if (!address) {
-            newErrors.address = "** 주소를 입력해주세요.";
-        }
-
-        if (!extraAddress) {
-            newErrors.extraAddress = "** 상세 주소를 입력해주세요.";
-        }
+        if (!name) newErrors.name = "** 이름을 입력해주세요.";
+        if (!phone) newErrors.phone = "** 휴대폰 번호를 입력해주세요.";
+        else if (!phoneRegex.test(phone)) newErrors.phone = "** 휴대폰 번호 형식이 올바르지 않습니다.";
+        if (!email) newErrors.email = "** 이메일을 입력해주세요.";
+        else if (!emailRegex.test(email)) newErrors.email = "** 이메일 형식이 올바르지 않습니다.";
+        if (!zipCode) newErrors.zipCode = "** 우편번호를 입력해주세요.";
+        if (!address) newErrors.address = "** 주소를 입력해주세요.";
+        if (!extraAddress) newErrors.extraAddress = "** 상세 주소를 입력해주세요.";
 
         setErrors(newErrors);
-
         return Object.keys(newErrors).length === 0;
     };
 
-    //product detail에서 상품 state 받아오기
     const location = useLocation();
     const directBuyItem = location.state?.directBuyItem;
 
-
     const orderItems = useMemo(() => {
-        //1. 상세페이지에서 바로 결제하기로 넘어온 경우
         if (directBuyItem) {
             const priceNumber = (
                 String(directBuyItem.price).replace(/,/g, '').replace(/원/g, '')
             );
-
-            return [
-                {
-                    ...directBuyItem,
-                    priceNumber,
-                    totalPrice: priceNumber * directBuyItem.qty,
-                }
-            ];
+            return [{ ...directBuyItem, priceNumber, totalPrice: priceNumber * directBuyItem.qty }];
         }
-
-
-        //2. 장바구니에서 체크된 상품 가져오기
         return cartItems
             .filter((cart) => cart.checked)
             .map((cart) => {
-                const product = items.find(
-                    (item) => String(item.id) === String(cart.id)
-                )
-
+                const product = items.find((item) => String(item.id) === String(cart.id))
                 if (!product) return null
-
-                const priceNumber = Number(
-                    String(product.price).replace(/,/g, '').replace(/원/g, '')
-                )
-
+                const priceNumber = Number(String(product.price).replace(/,/g, '').replace(/원/g, ''))
                 return {
                     ...product,
                     qty: cart.qty,
@@ -198,48 +123,25 @@ export default function Charge() {
 
     const createOrderNumber = () => {
         const now = new Date();
-
         const year = now.getFullYear();
         const month = String(now.getMonth() + 1).padStart(2, "0");
         const date = String(now.getDate()).padStart(2, "0");
-
         const random = Math.random().toString(36).slice(2, 8).toUpperCase();
-
         return `${year}${month}${date}-${random}`;
     };
 
-
-
-    //결제 여부 재확인 팝업
     const [confirmPay, setConfirmPay] = useState(false);
 
-    //결제하기 버튼 클릭시
-    //회원이면 -> 바로 결제 모달
-    //비회원이면 -> 검증 통과 시에만 결제 모달
     const handlePayment = () => {
         if (orderItems.length === 0) return;
-
-        if (user) {
-            setConfirmPay(true);
-            return;
-        }
-
+        if (user) { setConfirmPay(true); return; }
         const isValid = validateGuestForm();
-
-        if (!isValid) {
-            alert("필수 정보를 올바르게 입력해주세요.");
-            return;
-        }
+        if (!isValid) { alert("필수 정보를 올바르게 입력해주세요."); return; }
         setConfirmPay(true);
     }
 
-    //결제 취소
-    const handleClosePopup = () => {
-        setConfirmPay(false);
-    }
+    const handleClosePopup = () => { setConfirmPay(false); }
 
-    //결제가 완료
-    //firebase에도 저장하도록,, (async)
     const handleFinalConfirm = async () => {
         const orderNumber = createOrderNumber();
         const formatGuestPhone = guestForm.phone.replace(/-/g, "");
@@ -249,35 +151,33 @@ export default function Charge() {
             ? {
                 orderId: orderNumber,
                 orderNumber,
-                isGuest: false, //회원
+                isGuest: false,
                 name: user.name,
                 phone: user.phone,
                 email: user.email,
-                userInfo: {
-                    name: user.name,
-                    phone: user.phone,
-                    email: user.email,
-                },
+                userInfo: { name: user.name, phone: user.phone, email: user.email },
                 status: "결제완료",
                 deliveryInfo: {
                     carrier: "일룸 배송팀",
                     trackingNumber: "준비중",
                     estimatedDate: deliveryDate,
                 },
+                // ✅ items 구조 수정 - Order.jsx에서 필요한 필드 포함
                 items: orderItems.map((item) => ({
-                    productId: item.id,
+                    id: item.id,
                     name: item.name,
-                    option: item.color || "",
-                    quantity: item.qty,
+                    series: item.series || "",
+                    color: item.color || "",
+                    qty: item.qty,
                     price: item.priceNumber,
-                    image: item.productImages?.[0] || item.image || "",
+                    productImages: item.productImages || [],
                 })),
                 total: totalPrice,
             }
             : {
                 orderId: orderNumber,
                 orderNumber,
-                isGuest: true, //비회원
+                isGuest: true,
                 name: guestForm.name,
                 phone: formatGuestPhone,
                 email: guestForm.email,
@@ -296,63 +196,29 @@ export default function Charge() {
                     trackingNumber: "준비중",
                     estimatedDate: deliveryDate,
                 },
+                // ✅ items 구조 수정
                 items: orderItems.map((item) => ({
-                    productId: item.id,
+                    id: item.id,
                     name: item.name,
-                    option: item.color || "",
-                    quantity: item.qty,
+                    series: item.series || "",
+                    color: item.color || "",
+                    qty: item.qty,
                     price: item.priceNumber,
-                    image: item.productImages?.[0] || item.image || "",
+                    productImages: item.productImages || [],
                 })),
                 total: totalPrice,
             };
+
         try {
-
-            onAddOrder(orderData); //로컬저장
-            await addOrder(orderData); //firebase저장
-
+            onAddOrder(orderData, user); // ✅ user 추가
+            await addOrder(orderData);
             alert(`결제가 완료되었습니다. 주문번호는 ${orderNumber} 입니다.`);
-
-            {
-                user ? navigate("/order") : navigate(`/orderForGuest/${orderNumber}`)
-            }
+            user ? navigate("/order") : navigate(`/orderForGuest/${orderNumber}`)
         } catch (err) {
             console.log(err);
             alert("주문 저장 중 오류가 발생했습니다.");
         }
-
-
-
     }
-    // const handleFinalConfirm = async () => {
-    //     try {
-    //         await createOrder({
-    //             name: user.name,
-    //             phone: user.phone,
-    //             product: orderItems[0],
-    //             option: orderItems[0].color,
-    //             quantity: orderItems[0].qty,
-    //             items: orderItems.map(item => ({
-    //                 productId: item.id,
-    //                 name: item.name,
-    //                 option: item.color,
-    //                 quantity: item.qty,
-    //                 price: item.priceNumber
-    //             }))
-    //         })
-    //         alert("결제가 완료되었습니다. 주문 내역을 확인하세요")
-    //         onAddOrder({
-    //             items: orderItems,
-    //             total: totalPrice,
-    //         })
-    //         navigate("/order")
-    //     } catch (err) {
-    //         alert("주문 저장 중 오류가 발생했습니다.")
-    //         console.error(err)
-    //     }
-    // }
-
-
 
     return (
         <section className="charge-page">
@@ -363,24 +229,25 @@ export default function Charge() {
                 </div>
 
                 <div className="charge-section-wrap">
-                    {
-                        user && (<> <div className="charge-section">
-                            <h3 className="section-title">주문자 정보</h3>
-                            <div className="info-table">
-                                <div className="info-row">
-                                    <span className="label">보내는 분</span>
-                                    <span className="value">{user?.name || '-'}</span>
-                                </div>
-                                <div className="info-row">
-                                    <span className="label">휴대폰</span>
-                                    <span className="value">{user?.phone || '등록된 번호 없음'}</span>
-                                </div>
-                                <div className="info-row">
-                                    <span className="label">이메일</span>
-                                    <span className="value">{user?.email || '-'}</span>
+                    {user && (
+                        <>
+                            <div className="charge-section">
+                                <h3 className="section-title">주문자 정보</h3>
+                                <div className="info-table">
+                                    <div className="info-row">
+                                        <span className="label">보내는 분</span>
+                                        <span className="value">{user?.name || '-'}</span>
+                                    </div>
+                                    <div className="info-row">
+                                        <span className="label">휴대폰</span>
+                                        <span className="value">{user?.phone || '등록된 번호 없음'}</span>
+                                    </div>
+                                    <div className="info-row">
+                                        <span className="label">이메일</span>
+                                        <span className="value">{user?.email || '-'}</span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
                             <div className="charge-section">
                                 <h3 className="section-title">배송 정보</h3>
@@ -396,7 +263,6 @@ export default function Charge() {
                                             <button type="button" className="mini-btn">변경</button>
                                         </div>
                                     </div>
-
                                     <div className="info-row">
                                         <span className="label">배송 요청사항</span>
                                         <div className="value request-box">
@@ -418,101 +284,127 @@ export default function Charge() {
                     {
                         !user && (
                             <div className="unlogged-user-charge-section">
-                                <div className="title">비회원 주문입니다</div>
-                                <form className='user-form'>
-                                    <div className="unlogged-charge-section">
-                                        <h3 className="section-title">주문자 정보</h3>
-                                        <div className="info-table">
-                                            <div className="info-row">
-                                                <span className="label">보내는 분</span>
-                                                <input type="text"
-                                                    name="name"
-                                                    onChange={handleGuestChange}
-                                                    value={guestForm.name}
-                                                    className="unlogged_input"
-                                                    required />
-                                                {errors.name && <p className="error-text">{errors.name}</p>}
-                                            </div>
-                                            <div className="info-row">
-                                                <span className="label">휴대폰</span>
-                                                <input type="text"
-                                                    name="phone"
-                                                    onChange={handleGuestChange}
-                                                    value={guestForm.phone}
-                                                    className="unlogged_input"
-                                                    required />
-                                                {errors.phone && <p className="error-text">{errors.phone}</p>}
-                                            </div>
-                                            <div className="info-row">
-                                                <span className="label">이메일</span>
-                                                <input type="email"
-                                                    name="email"
-                                                    onChange={handleGuestChange}
-                                                    value={guestForm.email}
-                                                    className="unlogged_input"
-                                                    required />
-                                                {errors.email && <p className="error-text">{errors.email}</p>}
-                                            </div>
+                                <div className="inner">
+                                    <div className="delivery-agreement-area">
+                                        <div className="title">비회원 개인정보 수집 및 이용 동의</div>
+                                        <div className="discription">
+                                            <p class="discription_title">개인정보의 수집 및 이용에 대한 안내</p>
+                                            <p class="discription_title">수집 항목</p>
+                                            <p>주문고객정보 (주문자이름, 이메일, 휴대폰번호)</p>
+                                            <p>배송지정보 (수취인이름, 배송지주소, 휴대폰번호, 전화번호)</p>
+                                            <p>결제정보 (카드정보, 계좌정보)</p>
+                                            <br></br>
+                                            <p class="discription_title">수집 목적</p>
+                                            <p>주문 확인, 주문상품 결제, 주문상품 배송</p>
+                                            <br></br>
+                                            <p class="discription_title">이용 기간</p>
+                                            <p class="fwBd underline">원칙적으로 개인정보 수집 및 이용목적이 달성된 후에 해당 정보를 지체 없이 파기합니다.</p>
+                                            <p class="fwBd underline">단, 관계법령의 규정에 의하여 필요가 있는 경우 일정기간 동안 개인정보를 보관할 수 있습니다.</p>
+                                            <p>귀하는 개인정보 수집 및 이용 동의를 거부할 권리가 있습니다. 단, 거부하는 경우 상품 구매가 불가능합니다. </p>
+                                            <p>
+                                                <br />
+                                                그 밖의 사항은 일룸 개인정보처리방침을 준수합니다.
+                                            </p>
                                         </div>
                                     </div>
-
-                                    <div className="unlogged-charge-section">
-                                        <h3 className="section-title">배송 정보</h3>
-                                        <div className="info-table unlogged-addr-area">
-                                            <div className="info-row">
-
-                                                <div className="value address-box">
-                                                    <div className="search-addr input-zone">
-                                                        <p>배송지 조회</p>
-                                                        <button onClick={handlePopupClick}>우편번호 찾기</button>
-
-                                                    </div>
-
-                                                    <div className="fixed-zipcode-area input-zone">
-                                                        <p>우편번호</p>
+                                    <div className="delivery-info-area">
+                                        <div className="title">비회원 주문정보</div>
+                                        <form className='user-form'>
+                                            <div className="unlogged-charge-section">
+                                                <h3 className="section-title">주문자 정보</h3>
+                                                <div className="info-table unlogged-addr-area">
+                                                    <div className="info-row input-zone">
+                                                        <p className="unlogged-requisite-info">주문자명</p>
                                                         <input type="text"
-                                                            value={guestForm.zipCode}
-                                                            placeholder='우편번호'
-                                                            className="zipcode-input unlogged_input"
-                                                            readOnly
-
-                                                            required />
-                                                        {errors.zipCode && <p className="error-text">{errors.zipCode}</p>}
-
-                                                    </div>
-                                                    <div className="fixed-addr-area input-zone">
-                                                        <p>주소</p>
-                                                        <input type="text"
-                                                            value={guestForm.address}
-                                                            placeholder='주소'
-                                                            className="addr-input unlogged_input"
-                                                            readOnly
-                                                            required />
-                                                        {errors.address && <p className="error-text">{errors.address}</p>}
-                                                    </div>
-                                                    <div className="extra-addr-info input-zone">
-                                                        <p>상세 주소 (도로명 주소를 제외한 상세 주소만 입력해주세요)</p>
-                                                        <input type="text"
-                                                            name='extraAddress'
+                                                            name="name"
                                                             onChange={handleGuestChange}
-                                                            value={guestForm.extraAddress}
-                                                            className="exta-addr-input unlogged_input"
+                                                            value={guestForm.name}
+                                                            className="unlogged_input"
                                                             required />
-                                                        {errors.extraAddress && <p className="error-text">{errors.extraAddress}</p>}
+                                                        {errors.name && <p className="error-text">{errors.name}</p>}
+                                                    </div>
+                                                    <div className="info-row input-zone">
+                                                        <p className="unlogged-requisite-info">휴대폰</p>
+                                                        <input type="text"
+                                                            name="phone"
+                                                            onChange={handleGuestChange}
+                                                            value={guestForm.phone}
+                                                            className="unlogged_input"
+                                                            required />
+                                                        {errors.phone && <p className="error-text">{errors.phone}</p>}
+                                                    </div>
+                                                    <div className="info-row input-zone">
+                                                        <p className="unlogged-requisite-info">이메일</p>
+                                                        <input type="email"
+                                                            name="email"
+                                                            onChange={handleGuestChange}
+                                                            value={guestForm.email}
+                                                            className="unlogged_input"
+                                                            required />
+                                                        {errors.email && <p className="error-text">{errors.email}</p>}
                                                     </div>
                                                 </div>
                                             </div>
 
-                                            <div className="info-row">
-                                                <span className="label">배송 요청사항</span>
-                                                <div className="value request-box">
-                                                    배송 요청사항 선택
+                                            <div className="unlogged-charge-section">
+                                                <h3 className="section-title">배송 정보</h3>
+                                                <div className="info-table unlogged-addr-area">
+                                                    <div className="info-row">
+
+                                                        <div className="value address-box">
+                                                            <div className="search-addr input-zone">
+                                                                <p className='unlogged-requisite-info'>배송지 조회</p>
+                                                                <button onClick={handlePopupClick}>우편번호 찾기</button>
+
+                                                            </div>
+
+                                                            <div className="fixed-zipcode-area input-zone">
+                                                                <p className='unlogged-requisite-info'>우편번호</p>
+                                                                <input type="text"
+                                                                    value={guestForm.zipCode}
+                                                                    placeholder='우편번호'
+                                                                    className="zipcode-input unlogged_input"
+                                                                    readOnly
+
+                                                                    required />
+                                                                {errors.zipCode && <p className="error-text">{errors.zipCode}</p>}
+
+                                                            </div>
+                                                            <div className="fixed-addr-area input-zone">
+                                                                <p className='unlogged-requisite-info'>주소</p>
+                                                                <input type="text"
+                                                                    value={guestForm.address}
+                                                                    placeholder='주소'
+                                                                    className="addr-input unlogged_input"
+                                                                    readOnly
+                                                                    required />
+                                                                {errors.address && <p className="error-text">{errors.address}</p>}
+                                                            </div>
+                                                            <div className="extra-addr-info input-zone">
+                                                                <p ><span className='unlogged-requisite-info'>상세 주소</span> <span>(도로명 주소를 제외한 상세 주소만 입력해주세요)</span></p>
+                                                                <input type="text"
+                                                                    name='extraAddress'
+                                                                    onChange={handleGuestChange}
+                                                                    value={guestForm.extraAddress}
+                                                                    className="exta-addr-input unlogged_input"
+                                                                    required />
+                                                                {errors.extraAddress && <p className="error-text">{errors.extraAddress}</p>}
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div className="info-row">
+                                                        <span className="label">배송 요청사항</span>
+                                                        <div className="value request-box">
+                                                            배송 요청사항 선택
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </form>
                                     </div>
-                                </form>
 
+                                </div>
                             </div>
                         )
                     }
@@ -520,7 +412,6 @@ export default function Charge() {
 
                 <div className="charge-section">
                     <h3 className="section-title">주문 상품</h3>
-
                     <div className="order-head">
                         <span className="col-info">상품정보</span>
                         <span className="col-price">단가</span>
@@ -528,28 +419,19 @@ export default function Charge() {
                         <span className="col-total">총금액</span>
                         <span className="col-status">배송형태</span>
                     </div>
-
                     <div className="order-list">
                         {orderItems.length === 0 ? (
                             <div className="empty-order">결제할 상품이 없습니다.</div>
                         ) : (
                             orderItems.map((item) => (
-                                <div
-                                    className="order-item"
-                                    key={`${item.id}-${item.color || 'default'}`}
-                                >
+                                <div className="order-item" key={`${item.id}-${item.color || 'default'}`}>
                                     <div className="col-info product-info">
                                         <div className="thumb">
-                                            <img
-                                                src={item.productImages?.[0] || item.image}
-                                                alt={item.name}
-                                            />
+                                            <img src={item.productImages?.[0] || item.image} alt={item.name} />
                                         </div>
-
                                         <div className="text-box">
                                             <h4>{item.series || '일룸'}</h4>
                                             <p>{item.name}</p>
-
                                             {item.color && (
                                                 <div className="option-line">
                                                     <span>[필수] 색상: {item.color}</span>
@@ -558,31 +440,15 @@ export default function Charge() {
                                             )}
                                         </div>
                                     </div>
-
-                                    <div className="col-price">
-                                        {formatPrice(item.priceNumber)}
-                                    </div>
-
-                                    <div className="col-qty">
-                                        {item.qty}
-                                    </div>
-
-                                    <div className="col-total">
-                                        {formatPrice(item.totalPrice)}
-                                    </div>
-
-                                    <div className="col-status">
-                                        {item.deliveryType || '택배'}
-                                    </div>
+                                    <div className="col-price">{formatPrice(item.priceNumber)}</div>
+                                    <div className="col-qty">{item.qty}</div>
+                                    <div className="col-total">{formatPrice(item.totalPrice)}</div>
+                                    <div className="col-status">{item.deliveryType || '택배'}</div>
                                 </div>
                             ))
                         )}
                     </div>
-
-                    <p className="delivery-notice">
-                        * 택배 / 시공 상품이 별도 배송될 수 있습니다.
-                    </p>
-
+                    <p className="delivery-notice">* 택배 / 시공 상품이 별도 배송될 수 있습니다.</p>
                     <div className="order-total-box">
                         <span>상품 결제 예정 금액</span>
                         <strong>{formatPrice(totalPrice)}</strong>
@@ -591,72 +457,34 @@ export default function Charge() {
 
                 <div className="charge-section">
                     <h3 className="section-title">결제 수단</h3>
-
                     <div className="payment-methods">
                         <label className="payment-label">
-                            <input
-                                type="radio"
-                                name="payment"
-                                value="card"
-                                checked={paymentMethod === 'card'}
-                                onChange={(e) => setPaymentMethod(e.target.value)}
-                            />
+                            <input type="radio" name="payment" value="card" checked={paymentMethod === 'card'} onChange={(e) => setPaymentMethod(e.target.value)} />
                             <span>신용카드</span>
                         </label>
-
                         <label className="payment-label">
-                            <input
-                                type="radio"
-                                name="payment"
-                                value="bankbook"
-                                checked={paymentMethod === 'bankbook'}
-                                onChange={(e) => setPaymentMethod(e.target.value)}
-                            />
+                            <input type="radio" name="payment" value="bankbook" checked={paymentMethod === 'bankbook'} onChange={(e) => setPaymentMethod(e.target.value)} />
                             <span>무통장 입금</span>
                         </label>
-
                         <label className="payment-label">
-                            <input
-                                type="radio"
-                                name="payment"
-                                value="realtime"
-                                checked={paymentMethod === 'realtime'}
-                                onChange={(e) => setPaymentMethod(e.target.value)}
-                            />
+                            <input type="radio" name="payment" value="realtime" checked={paymentMethod === 'realtime'} onChange={(e) => setPaymentMethod(e.target.value)} />
                             <span>실시간 계좌이체</span>
                         </label>
-
                         <label className="payment-label">
-                            <input
-                                type="radio"
-                                name="payment"
-                                value="naverpay"
-                                checked={paymentMethod === 'naverpay'}
-                                onChange={(e) => setPaymentMethod(e.target.value)}
-                            />
+                            <input type="radio" name="payment" value="naverpay" checked={paymentMethod === 'naverpay'} onChange={(e) => setPaymentMethod(e.target.value)} />
                             <img src="./images/logo-icon/npay.png" alt="npay" className='npay' />
                         </label>
                     </div>
-
                     <div className="payment-notice">
                         <p>1. 고객의 단순한 변심으로 인한 교환, 반품 및 환불을 요구할 때 수반되는 배송비는 고객님께서 부담하셔야합니다.</p>
                         <p>2. 상품을 개봉했거나 설치한 후에는 상품의 재판매가 불가능하므로 고객님의 변심에 대한 교환, 반품이 불가능함을 양지해 주시기 바랍니다.</p>
                     </div>
-
-                    <button
-                        type="button"
-                        className="payment-btn"
-                        disabled={orderItems.length === 0}
-                        onClick={handlePayment}
-                    >
+                    <button type="button" className="payment-btn" disabled={orderItems.length === 0} onClick={handlePayment}>
                         {formatPrice(totalPrice)} 결제하기
                     </button>
                 </div>
             </div>
-            {/* 결제 확인 모달 */}
-            {
-                confirmPay ? <ChargeModal onClose={handleClosePopup} onConfirm={handleFinalConfirm} /> : ""
-            }
+            {confirmPay ? <ChargeModal onClose={handleClosePopup} onConfirm={handleFinalConfirm} /> : ""}
         </section>
     )
 }

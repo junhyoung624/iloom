@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import "./scss/instagram.scss"
+import { TextAnimate } from '../pages/Text-animate'
 
 export default function Instagram() {
     const sectionRef = useRef(null)
@@ -44,8 +45,23 @@ export default function Instagram() {
             <div className="inner">
                 <div className="instagram-box">
                     <div className="instagram-text-box">
-                        <h1>INSTAGRAM</h1>
-                        <p>@iloom_official</p>
+                        <TextAnimate
+                            as="h1"
+                            animation="slideUp"
+                            by="character"
+                            once
+                        >
+                            INSTAGRAM
+                        </TextAnimate>
+                        <TextAnimate
+                            as="p"
+                            animation="slideUp"
+                            by="word"
+                            delay={0.4}
+                            once
+                        >
+                            @iloom_official
+                        </TextAnimate>
                     </div>
 
                     <div className="instagram-img-box">

@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import "../components/scss/sns.scss";
+import { TextAnimate } from '../pages/Text-animate';
 
 export default function Sns() {
     const sectionRef = useRef(null);
@@ -23,27 +24,21 @@ export default function Sns() {
                     cardRefs.current.forEach((card, index) => {
                         setTimeout(() => {
                             card?.classList.add("show");
-                        }, index * 200); // 0.2초 간격
+                        }, index * 200);
                     });
-
-                    obs.unobserve(section); // 한 번만 실행
+                    obs.unobserve(section);
                 }
             },
-            {
-                threshold: 0.2,
-            }
+            { threshold: 0.2 }
         );
 
         observer.observe(section);
-
         return () => observer.disconnect();
     }, []);
 
     const handleMouseEnter = (e) => {
         const video = e.currentTarget.querySelector("video");
-        if (video) {
-            video.play().catch(() => { });
-        }
+        if (video) video.play().catch(() => { });
     };
 
     const handleMouseLeave = (e) => {
@@ -58,8 +53,23 @@ export default function Sns() {
         <section className="sns" ref={sectionRef}>
             <div className="inner">
                 <div className="title-box">
-                    <h2>iloom Moment.</h2>
-                    <p>나의 일상이 화보가 되는 기록</p>
+                    <TextAnimate
+                        as="h2"
+                        animation="slideUp"
+                        by="character"
+                        once
+                    >
+                        iloom Moment.
+                    </TextAnimate>
+                    <TextAnimate
+                        as="p"
+                        animation="slideUp"
+                        by="word"
+                        delay={0.4}
+                        once
+                    >
+                        나의 일상이 화보가 되는 기록
+                    </TextAnimate>
                 </div>
 
                 <div className="sns-grid">
