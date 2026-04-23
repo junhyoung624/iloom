@@ -1,6 +1,6 @@
 @mixin myFlex($jc: space-between, $ai: center, $gap: 30px) {
     display: flex;
-    justify-content:$jc;
+    justify-content: $jc;
     align-items: $ai;
     gap: $gap;
 }
