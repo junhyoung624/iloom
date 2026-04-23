@@ -9,6 +9,9 @@
 
     p {
         text-align: left;
+        font-size: 14px;
+        margin: 12px 0;
+        color: var(--main);
     }
 
     input {
@@ -25,6 +28,7 @@
         width: 100%;
         line-height: 50px;
         background: #303030;
+        border: none;
         color: #fff;
         margin-top: 10px;
         font-size: 18px;
