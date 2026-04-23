@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { useProductStore } from '../store/useProductStore'
 import { useAuthStore } from '../store/useAuthStore'
 import "./scss/headerinner.scss"
+import ScrollProgress from '../pages/ScrollProgress'
 
 const HeaderInner = ({
     onEnter,
@@ -45,6 +46,7 @@ const HeaderInner = ({
     return (
         <>
             <div className="header-inner">
+                <ScrollProgress />
                 <div className="header-left">
                     <div className="ham-btn" onMouseEnter={onEnter}>
                         <img src="/images/logo-icon/ham-white.png" alt="ham-btn" />

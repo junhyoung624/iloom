@@ -38,6 +38,7 @@ import Charge from './pages/Charge'
 import FurniturePage from './components/FurniturePage'
 import { addTestOrder } from './firebase/orderService'
 import OrderForGuest from './pages/OrderForGuest'
+import DockTab from './components/DockTab'
 
 function App() {
   const [isLoading, setIsLoading] = useState(true)
@@ -110,6 +111,7 @@ function App() {
         <Route path='/:originalCategory/:category2/:category3' element={<SubPage />} />
       </Routes>
       <QuickMenu />
+      <DockTab />
       <Footer />
     </>
   )

@@ -111,7 +111,7 @@ export default function Cart() {
 
             <ul className="cart-list">
               {mergedCartItems.map((item) => {
-                const colorInfo = colorData.find((c) => c.productCd === item.id) 
+                const colorInfo = colorData.find((c) => c.productCd === item.id)
 
                 const colorIndex = colorInfo?.colorCd.indexOf(item.color)
                 const colorImg = colorInfo?.localImgPath[colorIndex]

@@ -68,7 +68,7 @@ export default function Instagram() {
                         {instaList.map((item, index) => (
                             <a
                                 key={item.id}
-                                href="https://www.instagram.com/p/DXWXGRAkq5m/?img_index=3"
+                                href="https://www.instagram.com/p/DXZLAyqEosu/"
                                 target="_blank"
                                 rel="noreferrer"
                                 className="instagram-item"

@@ -491,3 +491,184 @@
     }
 
 }
+
+.card-register-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    margin: 8px 0 12px 0;
+    padding: 6px 14px;
+    border: 1px dashed #aaa;
+    background: none;
+    font-size: 13px;
+    color: #555;
+    cursor: pointer;
+    transition: border-color 0.2s, color 0.2s;
+
+    &:hover {
+        border-color: #333;
+        color: #111;
+    }
+}
+
+.card-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-modal {
+    background: #fff;
+    width: 100%;
+    max-width: 480px;
+    padding: 32px;
+    position: relative;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+
+    &-header {
+        margin-bottom: 24px;
+
+        h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+    }
+
+    &-desc {
+        font-size: 13px;
+        color: #888;
+    }
+
+    &-close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: none;
+        border: none;
+        font-size: 16px;
+        color: #999;
+        cursor: pointer;
+
+        &:hover {
+            color: #333;
+        }
+    }
+
+    &-body {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    &-footer {
+        display: flex;
+        justify-content: flex-end;
+        gap: 8px;
+        margin-top: 28px;
+    }
+}
+
+.card-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    label {
+        font-size: 13px;
+        font-weight: 500;
+        color: #333;
+    }
+
+    input,
+    select {
+        padding: 10px 12px;
+        border: 1px solid #ddd;
+        font-size: 14px;
+        outline: none;
+        transition: border-color 0.2s;
+
+        &:focus {
+            border-color: #333;
+        }
+    }
+
+    &-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    &-check {
+        flex-direction: row;
+        align-items: center;
+        gap: 8px;
+
+        input {
+            width: 16px;
+            height: 16px;
+        }
+
+        label {
+            font-weight: 400;
+        }
+    }
+
+    &-separator {
+        font-size: 13px;
+        font-weight: 600;
+        color: #333;
+        padding-top: 8px;
+        border-top: 1px solid #eee;
+    }
+
+    &-desc {
+        font-size: 12px;
+        color: #888;
+        margin-top: -8px;
+    }
+}
+
+.card-expiry {
+    display: flex;
+    gap: 8px;
+
+    select {
+        flex: 1;
+    }
+}
+
+.card-error {
+    font-size: 12px;
+    color: #e53e3e;
+    margin-top: 2px;
+}
+
+.card-cancel-btn {
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    background: none;
+    font-size: 14px;
+    cursor: pointer;
+
+    &:hover {
+        background: #f5f5f5;
+    }
+}
+
+.card-submit-btn {
+    padding: 10px 24px;
+    border: none;
+    background: #111;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+
+    &:hover {
+        background: #333;
+    }
+}
