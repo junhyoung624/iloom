@@ -583,6 +583,15 @@
         padding-inline-start: 1rem;
     }
 
+    .unlogged_input.error {
+        border-color: #e74c3c;
+    }
+
+    .unlogged_input.success {
+        border: 1.5px solid #2ecc71;
+    }
+
+
     .unlogged-requisite-info {
         font-size: 16px;
         line-height: 1.1rem;

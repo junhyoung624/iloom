@@ -12,17 +12,22 @@ import { storeInfoData } from "../data/storeInfoData";
 import { store_region } from "../data/storeRegionCode";
 //매장 선택 select
 import Select from "react-select";
+import { div, img } from 'framer-motion/client'
 
 export default function Charge() {
     const { cartItems, items, onAddOrder, createDeliveryDate, onfetchItems } = useProductStore()
     const { user } = useAuthStore()
     const [paymentMethod, setPaymentMethod] = useState('card')
     const navigate = useNavigate();
-    const [guestName, setGuestName] = useState('')
-    const [guestPhone, setGuestPhone] = useState('')
 
     //비회원 개인정보 수집 동의
     const [isAgree, setIsAgree] = useState(false);
+
+    //비회원 이메일, 전화번호 상태 검사
+    const [fieldStatus, setFieldStatus] = useState({
+        phone: "idle",//아직 검사 안함
+        email: "idle",
+    });
 
     useEffect(() => {
         onfetchItems()
@@ -47,11 +52,6 @@ export default function Charge() {
     const [errors, setErrors] = useState({});
 
     //게스트 방문매장 선택
-
-    const visitedStores = storeInfoData.filter(
-        (store) => store.region_code === guestForm.visitRegionCode
-    );
-
     //지역 리스트
     const regionOptions = [
         { value: "없음", label: "없음" },
@@ -94,7 +94,11 @@ export default function Charge() {
         const { name, value } = e.target;
         console.log(e.target.value);
         setGuestForm((prev) => ({ ...prev, [name]: value }));
-        setErrors((prev) => ({ ...prev, [name]: "" }));
+        if (name === "phone" || name === "email") {
+            validateLiveField(name, value, false);
+        } else {
+            setErrors((prev) => ({ ...prev, [name]: "" }));
+        }
     };
 
     const SCRIPT_URL = "//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js";
@@ -119,6 +123,7 @@ export default function Charge() {
         open({ onComplete: handleComplete });
     }
 
+    //비회원 주문자 정보 입력 검사
     const validateGuestForm = () => {
         const newErrors = {};
         const name = guestForm.name.trim();
@@ -141,6 +146,52 @@ export default function Charge() {
 
         setErrors(newErrors);
         return Object.keys(newErrors).length === 0;
+    };
+
+    //비회원 전화번호, 이메일 실시간 검사
+    const validateLiveField = (name, value, isBlur = false) => {
+        const trimmedValue = value.trim();
+        const phoneRegex = /^01[0-9]-?\d{3,4}-?\d{4}$/;
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        let message = "";
+        let status = "idle";
+
+        if (name === "email") {
+            if (!trimmedValue) {
+                message = isBlur ? "** 이메일이 필요합니다." : "";
+                status = isBlur ? "error" : "idle";
+            } else if (!emailRegex.test(trimmedValue)) {
+                message = "** 유효한 이메일 주소를 입력하세요.";
+                status = "error";
+            } else {
+                message = "";
+                status = "success";
+            }
+        }
+
+        if (name === "phone") {
+            if (!trimmedValue) {
+                message = isBlur ? "** 휴대폰 번호가 필요합니다." : "";
+                status = isBlur ? "error" : "idle";
+            } else if (!phoneRegex.test(trimmedValue)) {
+                message = "** 유효한 휴대폰 번호를 입력하세요.";
+                status = "error";
+            } else {
+                message = "";
+                status = "success";
+            }
+        }
+
+        setErrors((prev) => ({
+            ...prev,
+            [name]: message,
+        }));
+
+        setFieldStatus((prev) => ({
+            ...prev,
+            [name]: status,
+        }));
     };
 
     const location = useLocation();
@@ -402,15 +453,16 @@ export default function Charge() {
                                                             value={guestForm.name}
                                                             className="unlogged_input"
                                                             required />
-                                                        {errors.name && <p className="error-text error-text-right">{errors.name}</p>}
+                                                        {errors.name && <div><img src='' alt='' /><p className="error-text error-text-right">{errors.name}</p></div>}
                                                     </div>
                                                     <div className="info-row input-zone">
                                                         <p className="unlogged-requisite-info">휴대폰</p>
                                                         <input type="text"
                                                             name="phone"
                                                             onChange={handleGuestChange}
+                                                            onBlur={(e) => validateLiveField(e.target.name, e.target.value, true)}
                                                             value={guestForm.phone}
-                                                            className="unlogged_input"
+                                                            className={`unlogged_input ${fieldStatus.phone}`}
                                                             required />
                                                         {errors.phone && <p className="error-text error-text-right">{errors.phone}</p>}
                                                     </div>
@@ -419,8 +471,9 @@ export default function Charge() {
                                                         <input type="email"
                                                             name="email"
                                                             onChange={handleGuestChange}
+                                                            onBlur={(e) => validateLiveField(e.target.name, e.target.value, true)}
                                                             value={guestForm.email}
-                                                            className="unlogged_input"
+                                                            className={`unlogged_input ${fieldStatus.email}`}
                                                             required />
                                                         {errors.email && <p className="error-text error-text-right">{errors.email}</p>}
                                                     </div>
