@@ -16965,7 +16965,8 @@ export const productData = [
     "productImages": [
       "/images/iloom_images/lighting/pendant-lighting/IAL00GA12A_CHC_2.png",
       "/images/iloom_images/lighting/pendant-lighting/IAL00GA12A_GRY_3.png",
-      "/images/iloom_images/lighting/pendant-lighting/IAL00GA12A_RAL_5.png"
+      "/images/iloom_images/lighting/pendant-lighting/IAL00GA12A_RAL_4.png",
+      "/images/iloom_images/lighting/pendant-lighting/IAL00GA12A_TRC_5.png"
     ],
     "mdPick": false,
     "new": false,
@@ -17490,7 +17491,16 @@ export const productData = [
     "name": "&tradition 세타고 포터블 조명",
     "material": "",
     "price": "210,000",
-    "options": [],
+    "options": [
+      {
+        "name": "색상",
+        "values": [
+          "MGP",
+          "RTH",
+          "NFR"
+        ]
+      }
+    ],
     "originalCategory": "조명",
     "category2": "포터블 조명",
     "category3": "",
@@ -18371,9 +18381,7 @@ export const productData = [
       "/images/iloom_images/dining-room/dining-table/IDD0019A_CIASP_1.png",
       "/images/iloom_images/dining-room/dining-table/IDD0019A_CIADG_2.png",
       "/images/iloom_images/dining-room/dining-table/IDD0019A_CTRSP_3.png",
-      "/images/iloom_images/dining-room/dining-table/IDD0019A_CTRSP_3.png",
       "/images/iloom_images/dining-room/dining-table/IDD0019A_CTRDG_4.png",
-      "/images/iloom_images/dining-room/dining-table/IDD0019A_CIASP_5.png",
       "/images/iloom_images/dining-room/dining-table/IDD0019A_CIASP_5.png"
     ],
     "mdPick": false,
@@ -18586,7 +18594,7 @@ export const productData = [
     "category2": "식탁",
     "category3": "6인용식탁",
     "productImages": [
-      "/images/iloom_images/dining-room/dining-table/IDD0021A_NK_1.jpg",
+      "/images/iloom_images/dining-room/dining-table/IDD0021A_1.jpg",
       "/images/iloom_images/dining-room/dining-table/IDD0021A_TGY_2.png",
       "/images/iloom_images/dining-room/dining-table/IDD0021A_NK_3.png"
     ],
@@ -53164,12 +53172,8 @@ export const productData = [
     "productImages": [
       "/images/iloom_images/home-library/bookshelf/HSPC084_NCCBG_1.jpg",
       "/images/iloom_images/home-library/bookshelf/HSPC084_GUDG_2.png",
-      "/images/iloom_images/home-library/bookshelf/HSPC084_GUDG_2.png",
-      "/images/iloom_images/home-library/bookshelf/HSPC084_NCCGG_3.png",
       "/images/iloom_images/home-library/bookshelf/HSPC084_NCCGG_3.png",
       "/images/iloom_images/home-library/bookshelf/HSPC084_WWWW_4.png",
-      "/images/iloom_images/home-library/bookshelf/HSPC084_WWWW_4.png",
-      "/images/iloom_images/home-library/bookshelf/HSPC084_NCCBG_5.png",
       "/images/iloom_images/home-library/bookshelf/HSPC084_NCCBG_5.png"
     ],
     "mdPick": true,
@@ -53210,8 +53214,6 @@ export const productData = [
       "/images/iloom_images/home-library/bookshelf/HSPC164_NCCBG_1.jpg",
       "/images/iloom_images/home-library/bookshelf/HSPC164_GUDG_2.png",
       "/images/iloom_images/home-library/bookshelf/HSPC164_NCCGG_3.png",
-      "/images/iloom_images/home-library/bookshelf/HSPC164_NCCGG_3.png",
-      "/images/iloom_images/home-library/bookshelf/HSPC164_NCCBG_4.png",
       "/images/iloom_images/home-library/bookshelf/HSPC164_NCCBG_4.png"
     ],
     "mdPick": false,
@@ -53254,7 +53256,6 @@ export const productData = [
       "/images/iloom_images/home-library/bookshelf/HSPC184_GUDG_2.png",
       "/images/iloom_images/home-library/bookshelf/HSPC184_NCCGG_3.png",
       "/images/iloom_images/home-library/bookshelf/HSPC184_WWWW_4.png",
-      "/images/iloom_images/home-library/bookshelf/HSPC184_NCCBG_5.png",
       "/images/iloom_images/home-library/bookshelf/HSPC184_NCCBG_5.png"
     ],
     "mdPick": false,
@@ -53332,8 +53333,6 @@ export const productData = [
     "productImages": [
       "/images/iloom_images/home-library/bookshelf/HSPC284_NCCBG_1.jpg",
       "/images/iloom_images/home-library/bookshelf/HSPC284_GUDG_2.png",
-      "/images/iloom_images/home-library/bookshelf/HSPC284_GUDG_2.png",
-      "/images/iloom_images/home-library/bookshelf/HSPC284_NCCBG_3.png",
       "/images/iloom_images/home-library/bookshelf/HSPC284_NCCBG_3.png",
       "/images/iloom_images/home-library/bookshelf/HSPC284_NCCBG_4.png"
     ],
@@ -53374,10 +53373,7 @@ export const productData = [
     "productImages": [
       "/images/iloom_images/home-library/bookshelf/HSPC066_NCCBG_1.jpg",
       "/images/iloom_images/home-library/bookshelf/HSPC066_GUDG_2.png",
-      "/images/iloom_images/home-library/bookshelf/HSPC066_GUDG_2.png",
       "/images/iloom_images/home-library/bookshelf/HSPC066_NCCGG_3.png",
-      "/images/iloom_images/home-library/bookshelf/HSPC066_NCCGG_3.png",
-      "/images/iloom_images/home-library/bookshelf/HSPC066_NCCBG_4.png",
       "/images/iloom_images/home-library/bookshelf/HSPC066_NCCBG_4.png"
     ],
     "mdPick": false,
@@ -53418,12 +53414,8 @@ export const productData = [
     "productImages": [
       "/images/iloom_images/home-library/bookshelf/HSPC086_NCCBG_1.jpg",
       "/images/iloom_images/home-library/bookshelf/HSPC086_GUDG_2.png",
-      "/images/iloom_images/home-library/bookshelf/HSPC086_GUDG_2.png",
-      "/images/iloom_images/home-library/bookshelf/HSPC086_NCCGG_3.png",
       "/images/iloom_images/home-library/bookshelf/HSPC086_NCCGG_3.png",
       "/images/iloom_images/home-library/bookshelf/HSPC086_WWWW_4.png",
-      "/images/iloom_images/home-library/bookshelf/HSPC086_WWWW_4.png",
-      "/images/iloom_images/home-library/bookshelf/HSPC086_NCCBG_5.png",
       "/images/iloom_images/home-library/bookshelf/HSPC086_NCCBG_5.png"
     ],
     "mdPick": false,
@@ -53539,10 +53531,7 @@ export const productData = [
     "category3": "",
     "productImages": [
       "/images/iloom_images/home-library/bookshelf/HSPC266_NCCBG_1.png",
-      "/images/iloom_images/home-library/bookshelf/HSPC266_NCCBG_1.png",
       "/images/iloom_images/home-library/bookshelf/HSPC266_GUDG_2.png",
-      "/images/iloom_images/home-library/bookshelf/HSPC266_GUDG_2.png",
-      "/images/iloom_images/home-library/bookshelf/HSPC266_NCCGG_3.png",
       "/images/iloom_images/home-library/bookshelf/HSPC266_NCCGG_3.png"
     ],
     "mdPick": false,
@@ -53582,10 +53571,7 @@ export const productData = [
     "productImages": [
       "/images/iloom_images/home-library/bookshelf/HSPC286_NCCBG_1.jpg",
       "/images/iloom_images/home-library/bookshelf/HSPC286_GUDG_2.png",
-      "/images/iloom_images/home-library/bookshelf/HSPC286_GUDG_2.png",
       "/images/iloom_images/home-library/bookshelf/HSPC286_NCCGG_3.png",
-      "/images/iloom_images/home-library/bookshelf/HSPC286_NCCGG_3.png",
-      "/images/iloom_images/home-library/bookshelf/HSPC286_NCCBG_4.png",
       "/images/iloom_images/home-library/bookshelf/HSPC286_NCCBG_4.png"
     ],
     "mdPick": false,
@@ -54647,7 +54633,6 @@ export const productData = [
     "category3": "액세서리",
     "productImages": [
       "/images/iloom_images/home-library/bookshelf/HSFB044G_BRZ_1.png",
-      "/images/iloom_images/home-library/bookshelf/HSFB044G_BRZ_1.png",
       "/images/iloom_images/home-library/bookshelf/HSFB044G_BRZ_2.png"
     ],
     "mdPick": false,
@@ -54867,8 +54852,6 @@ export const productData = [
     "productImages": [
       "/images/iloom_images/home-library/desk/HSGD080_IV_1.jpg",
       "/images/iloom_images/home-library/desk/HSGD080_NCC_2.png",
-      "/images/iloom_images/home-library/desk/HSGD080_NCC_2.png",
-      "/images/iloom_images/home-library/desk/HSGD080_IV_3.png",
       "/images/iloom_images/home-library/desk/HSGD080_IV_3.png"
     ],
     "mdPick": false,
@@ -55059,7 +55042,6 @@ export const productData = [
     "productImages": [
       "/images/iloom_images/home-library/desk/HSG01A_IV_1.jpg",
       "/images/iloom_images/home-library/desk/HSG01A_NCC_2.png",
-      "/images/iloom_images/home-library/desk/HSG01A_NCC_2.png",
       "/images/iloom_images/home-library/desk/HSG01A_IV_3.png"
     ],
     "mdPick": false,
@@ -55104,8 +55086,6 @@ export const productData = [
     "productImages": [
       "/images/iloom_images/home-library/desk/HSGD120P_IV_1.jpg",
       "/images/iloom_images/home-library/desk/HSGD120P_NCC_2.png",
-      "/images/iloom_images/home-library/desk/HSGD120P_NCC_2.png",
-      "/images/iloom_images/home-library/desk/HSGD120P_IV_3.png",
       "/images/iloom_images/home-library/desk/HSGD120P_IV_3.png"
     ],
     "mdPick": false,
@@ -55147,8 +55127,6 @@ export const productData = [
     "productImages": [
       "/images/iloom_images/home-library/desk/HSGD160P_IV_1.jpg",
       "/images/iloom_images/home-library/desk/HSGD160P_NCC_2.png",
-      "/images/iloom_images/home-library/desk/HSGD160P_NCC_2.png",
-      "/images/iloom_images/home-library/desk/HSGD160P_IV_3.png",
       "/images/iloom_images/home-library/desk/HSGD160P_IV_3.png"
     ],
     "mdPick": false,
@@ -55190,8 +55168,6 @@ export const productData = [
     "productImages": [
       "/images/iloom_images/home-library/desk/HSGD240P_IV_1.jpg",
       "/images/iloom_images/home-library/desk/HSGD240P_NCC_2.png",
-      "/images/iloom_images/home-library/desk/HSGD240P_NCC_2.png",
-      "/images/iloom_images/home-library/desk/HSGD240P_IV_3.png",
       "/images/iloom_images/home-library/desk/HSGD240P_IV_3.png"
     ],
     "mdPick": false,
@@ -55232,7 +55208,6 @@ export const productData = [
     "category3": "일반형",
     "productImages": [
       "/images/iloom_images/home-library/desk/HSG120HP_IV_1.jpg",
-      "/images/iloom_images/home-library/desk/HSG120HP_NCC_2.png",
       "/images/iloom_images/home-library/desk/HSG120HP_NCC_2.png",
       "/images/iloom_images/home-library/desk/HSG120HP_IV_3.png"
     ],
@@ -55463,7 +55438,6 @@ export const productData = [
     "category3": "일반형",
     "productImages": [
       "/images/iloom_images/home-library/desk/HSUD012_NCC_1.jpg",
-      "/images/iloom_images/home-library/desk/HSUD012_NCC_2.png",
       "/images/iloom_images/home-library/desk/HSUD012_NCC_2.png"
     ],
     "mdPick": false,
@@ -55494,7 +55468,6 @@ export const productData = [
     "category3": "일반형",
     "productImages": [
       "/images/iloom_images/home-library/desk/HSUD014P_NCCGG_1.jpg",
-      "/images/iloom_images/home-library/desk/HSUD014P_NCCGG_2.png",
       "/images/iloom_images/home-library/desk/HSUD014P_NCCGG_2.png"
     ],
     "mdPick": false,
@@ -55525,7 +55498,6 @@ export const productData = [
     "category3": "일반형",
     "productImages": [
       "/images/iloom_images/home-library/desk/HSUD018_NCC_1.jpg",
-      "/images/iloom_images/home-library/desk/HSUD018_NCC_2.png",
       "/images/iloom_images/home-library/desk/HSUD018_NCC_2.png"
     ],
     "mdPick": false,
