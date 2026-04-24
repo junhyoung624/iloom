@@ -79,6 +79,47 @@
         }
     }
 
+    .request-box {
+        .delivery-requirement-select {
+            width: 570px;
+            height: 48px;
+        }
+
+        .delivery-req__control {
+            height: 48px;
+            //border-radius: 8px;
+            //border: 1px solid #ddd;
+            box-shadow: none;
+        }
+
+        .delivery-request-textarea {
+
+            width: 570px;
+            height: 80px;
+            margin-top: 10px;
+
+            border: none;
+            outline: none;
+            resize: none;
+
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+
+        .delivery-request-textarea:focus {
+            border-color: #303030;
+        }
+
+        // .delivery-req__single-value {
+        //     color: #333;
+        // }
+
+        // .delivery-req__single-value.placeholder {
+        //     color: #aaa;
+        // }
+
+    }
+
     .address-top {
         display: flex;
         align-items: center;
@@ -169,6 +210,10 @@
                 border-right: none;
             }
         }
+    }
+
+    .order-item:hover {
+        border: 1px solid black;
     }
 
     .product-info {
@@ -372,6 +417,12 @@
             padding: 40px 30px 40px 40px;
             margin-top: 35px;
             margin-bottom: 34px;
+            background: #f7f7f7;
+
+            .discription-inner {
+                padding: 30px;
+                background: white;
+            }
         }
 
         .discription p,
@@ -391,6 +442,24 @@
         .fwBd {
             font-weight: bold;
         }
+
+        .agree-checkbox {
+            display: flex;
+            gap: 10px;
+
+            img {
+                cursor: pointer;
+            }
+
+            span {
+                //align-items: center;
+                margin: auto 0;
+                cursor: pointer;
+                color: #333;
+            }
+        }
+
+        margin-bottom: 34px;
     }
 
     .error-text {
@@ -399,6 +468,8 @@
         font-size: 1rem;
     }
 
+
+
     .user-form {
         display: flex;
         justify-content: space-between;
@@ -406,6 +477,14 @@
         // border-top: 2px solid #ddd;
         border-width: inherit;
         padding-top: 20px;
+
+        // .unlogged-area-left {
+        //     .error-text {
+        //         color: red;
+        //         font-weight: 700;
+        //         font-size: 1rem;
+        //     }
+        // }
     }
 
     .unlogged-charge-section {
@@ -433,10 +512,24 @@
 
         .unlogged-addr-area {
             .search-addr {
-                button {
-                    width: 570px;
-                    height: 3rem;
+                .inner {
+                    display: flex;
+                    gap: 10px;
+
+                    .zipcode-input {
+                        width: 390px;
+                    }
+
+                    button {
+                        width: 170px;
+                        height: 3rem;
+                        background: black;
+                        color: white;
+                        cursor: pointer;
+                    }
                 }
+
+
             }
 
             .address-box {
@@ -454,11 +547,27 @@
                 display: grid;
                 gap: 10px;
 
-                >p {
+                // >p {
+                //     font-weight: 700;
+                //     color: #222;
+                // }
+
+                .unlogged-requisite-info,
+                .choose-store {
                     font-weight: 700;
                     color: #222;
+                    line-height: 1.1rem;
+                }
+
+                .search-addr-wrap {
+                    line-height: 1rem;
+                }
+
+                .extra-addr-wrap {
+                    line-height: 1rem;
                 }
             }
+
 
         }
 
@@ -473,6 +582,15 @@
         border: 1px solid #808080;
         padding-inline-start: 1rem;
     }
+
+    .unlogged_input.error {
+        border-color: #e74c3c;
+    }
+
+    .unlogged_input.success {
+        border: 1.5px solid #2ecc71;
+    }
+
 
     .unlogged-requisite-info {
         font-size: 16px;
@@ -671,4 +789,35 @@
     &:hover {
         background: #333;
     }
+    //방문매장 선택
+    .visit-store-box {
+        display: grid;
+        gap: 10px;
+        //background: yellow;
+
+        .txt-info {
+            padding: 20px;
+            background: #f7f7f7;
+            border: 1px solid #ddd;
+        }
+
+        .visit-store-select-wrap {
+            display: flex;
+            justify-content: space-between;
+
+            .store-select {
+                width: 280px;
+            }
+        }
+    }
+
+
+
+
+}
+
+.error-text-right {
+    color: red;
+    font-weight: 700;
+    font-size: 1rem;
 }

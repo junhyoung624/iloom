@@ -179,6 +179,10 @@ html {
     }
 }
 
+footer {
+    padding-top: 100px;
+}
+
 @keyframes heroTitleReveal {
     from {
         opacity: 0;

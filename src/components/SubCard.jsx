@@ -26,7 +26,6 @@ const SubCard = ({ item }) => {
         onToggleWishList(item, user)
     }
 
-
     return (
         <div className="sub-card">
             <div className="card-img-box">
@@ -44,8 +43,6 @@ const SubCard = ({ item }) => {
 
             <div className="card-text-box">
                 <div className="series-row">
-                    <h1 className="series-name">{item.series}</h1>
-
                     <button
                         type="button"
                         className={`heart-btn ${isActiveHeart ? "active" : ""}`}
@@ -65,9 +62,11 @@ const SubCard = ({ item }) => {
                         />
                     </button>
                 </div>
-
-                <p className="product-name">{item.name}</p>
-                <p className="price">{item.price} 원</p>
+                <div className="product-info">
+                    <h1 className="series-name">{item.series}</h1>
+                    <p className="product-name">{item.name}</p>
+                    <p className="price">{item.price} 원</p>
+                </div>
             </div>
         </div>
     )
