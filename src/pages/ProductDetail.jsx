@@ -8,6 +8,7 @@ import "./scss/product-detail.scss"
 import { useProductStore } from '../store/useProductStore'
 import { useAuthStore } from '../store/useAuthStore'
 import { Lens } from './Lens'
+import CheckUserModal from './CheckUserModal'
 
 const TABS = ['상세정보', '옵션', '인테리어 팁', '상품평', '제품Q&A', '배송/취소/반품']
 
@@ -83,11 +84,15 @@ export default function ProductDetail() {
         ? (productReviews.reduce((sum, r) => sum + r.rating, 0) / productReviews.length).toFixed(1)
         : '0.0'
 
-    const handleBuy = () => {
-        if (product.options?.length > 0 && !selectedOption) {
-            alert('옵션을 선택해주세요')
-            return
-        }
+
+    //비회원 로그인 구매 확인 모달
+    const [showCheckUserModal, setShowCheckUserModal] = useState(false);
+
+    const handleMoveToLogin = () => {
+        navigate('/login')
+    }
+
+    const handleMoveToGuestCharge = () => {
         navigate('/charge', {
             state: {
                 directBuyItem: {
@@ -97,6 +102,42 @@ export default function ProductDetail() {
                 }
             }
         })
+    }
+
+    const handleBuy = () => {
+        console.log("결제하기 버튼 in");
+        if (product.options?.length > 0 && !selectedOption) {
+            alert('옵션을 선택해주세요')
+            return
+        }
+        {
+            //console.log("ffff");
+            user
+                ? navigate('/charge', {
+                    state: {
+                        directBuyItem: {
+                            ...product,
+                            color: selectedOption,
+                            qty: quantity,
+                        }
+                    }
+                })
+                : setShowCheckUserModal(true);
+        }
+        // if (!user) {
+        //     alert("로그인 후 이용하시겠습니까?");
+        // } else {
+        //     navigate('/charge', {
+        //         state: {
+        //             directBuyItem: {
+        //                 ...product,
+        //                 color: selectedOption,
+        //                 qty: quantity,
+        //             }
+        //         }
+        //     })
+        // }
+
     }
 
     const handleAddCart = () => {
@@ -565,6 +606,21 @@ export default function ProductDetail() {
                     </div>
                 </div>
             )}
+
+            {showCheckUserModal && (
+                <CheckUserModal
+                    moveToLogin={() => {
+                        setShowCheckUserModal(false);
+                        handleMoveToLogin();
+                    }}
+                    moveToGuestCharge={() => {
+                        setShowCheckUserModal(false);
+                        handleMoveToGuestCharge();
+                    }}
+                />
+            )}
         </section>
+
+
     )
 }

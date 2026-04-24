@@ -70,16 +70,16 @@ export default function OrderForGuest() {
                                                         <div className="order-date">
                                                             <p className='order-date-info'>{guestOrder.date}</p>
                                                             <p className='order-state'>주문 확인됨</p>
-                                                            <p className='order-item-id'>품번 : {item.productId}</p>
+                                                            <p className='order-item-id'>품번 : {item.id}</p>
                                                         </div>
                                                         <div className="order-item-img">
-                                                            <img src={item.image} alt="." />
+                                                            <img src={item.productImages[0]} alt="." />
                                                         </div>
                                                         <div className="order-item-txt-info">
                                                             <p className='series'>{item.series}</p>
                                                             <p className="item-name">{item.name}</p>
                                                             <p className="item-price">{item.price}원</p>
-                                                            <p className="item-color">[필수] 색상 : {item.option}</p>
+                                                            <p className="item-color">[필수] 색상 : {item.color}</p>
                                                         </div>
                                                     </div>
                                                     <div className="order-sub-info">
