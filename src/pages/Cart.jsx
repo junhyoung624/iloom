@@ -74,6 +74,7 @@ export default function Cart() {
             <p>장바구니에 담긴 상품이 없습니다.</p>
           </div>
           <div className="empty-box">
+            <img src="/images/logo-icon/nocart.png" alt="nocart" className='no-cart' />
             <p>아직 담긴 상품이 없어요.</p>
             <Link to="/" className="go-shopping-btn">쇼핑하러 가기</Link>
           </div>
@@ -111,7 +112,7 @@ export default function Cart() {
 
             <ul className="cart-list">
               {mergedCartItems.map((item) => {
-                const colorInfo = colorData.find((c) => c.productCd === item.id) 
+                const colorInfo = colorData.find((c) => c.productCd === item.id)
 
                 const colorIndex = colorInfo?.colorCd.indexOf(item.color)
                 const colorImg = colorInfo?.localImgPath[colorIndex]

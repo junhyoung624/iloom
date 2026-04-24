@@ -69,8 +69,9 @@ export const useAuthStore = create((set, get) => ({
             }
 
             await setDoc(userRef, userInfo);
-            alert("회원가입 성공했습니다")
+            await signOut(auth)
 
+            alert("회원가입 성공했습니다")
             return true;
 
         }

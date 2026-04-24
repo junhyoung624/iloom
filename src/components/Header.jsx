@@ -52,11 +52,6 @@ const Header = () => {
 
   useEffect(() => {
     if (user) {
-      if (window.__appLoaded) {
-        setUserMenu(true)
-      } else {
-        setTimeout(() => setUserMenu(true), 1600)
-      }
       loginMenu.current = true
     } else {
       setUserMenu(false)
