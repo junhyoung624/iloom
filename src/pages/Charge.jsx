@@ -7,6 +7,12 @@ import ChargeModal from './ChargeModal'
 import { useKakaoPostcodePopup } from 'react-daum-postcode'
 import { addOrder } from '../firebase/orderService'
 
+//매장 선택 데이터
+import { storeInfoData } from "../data/storeInfoData";
+import { store_region } from "../data/storeRegionCode";
+//매장 선택 select
+import Select from "react-select";
+
 export default function Charge() {
     const { cartItems, items, onAddOrder, createDeliveryDate, onfetchItems } = useProductStore()
     const { user } = useAuthStore()
@@ -14,6 +20,9 @@ export default function Charge() {
     const navigate = useNavigate();
     const [guestName, setGuestName] = useState('')
     const [guestPhone, setGuestPhone] = useState('')
+
+    //비회원 개인정보 수집 동의
+    const [isAgree, setIsAgree] = useState(false);
 
     useEffect(() => {
         onfetchItems()
@@ -27,9 +36,59 @@ export default function Charge() {
         address: "",
         extraAddress: "",
         request: "",
+        customRequest: "",
+        //게스트 방문 매장 변수
+        visitRegionCode: "없음",
+        visitStoreId: "", //매장id
     });
 
+
+
     const [errors, setErrors] = useState({});
+
+    //게스트 방문매장 선택
+
+    const visitedStores = storeInfoData.filter(
+        (store) => store.region_code === guestForm.visitRegionCode
+    );
+
+    //지역 리스트
+    const regionOptions = [
+        { value: "없음", label: "없음" },
+        ...store_region
+            .filter((r) => r.code !== "default")
+            .map((r) => ({
+                value: r.code,
+                label: r.name,
+            })),
+    ];
+
+    //매장 리스트
+    const storeOptions = storeInfoData
+        .filter(store => store.region_code === guestForm.visitRegionCode)
+        .map(store => ({
+            value: store.id,
+            label: store.store_name
+        }));
+
+    const selectedRegionOption =
+        regionOptions.find(opt => opt.value === guestForm.visitRegionCode) || null;
+
+    const selectedStoreOption =
+        storeOptions.find(opt => opt.value === guestForm.visitStoreId) || null;
+
+    //배송 요청사항 리스트
+    const delivery_req_options = [
+        { value: "", label: "배송 요청사항을 입력해주세요" },
+        { value: "부재시 문앞에 놓아주세요.", label: "부재시 문앞에 놓아주세요." },
+        { value: "부재시 경비실에 맡겨 주세요.", label: "부재시 경비실에 맡겨 주세요." },
+        { value: "부재시 전화 또는 문자 주세요.", label: "부재시 전화 또는 문자 주세요." },
+        { value: "배송전에 연락주세요.", label: "배송전에 연락주세요." },
+        { value: "직접입력", label: "직접입력" },
+    ]
+
+    const selectedDeliveryReqOption =
+        delivery_req_options.find((option) => option.value === guestForm.request) || delivery_req_options[0];
 
     const handleGuestChange = (e) => {
         const { name, value } = e.target;
@@ -55,6 +114,7 @@ export default function Charge() {
         setErrors((prev) => ({ ...prev, zipCode: "", address: "" }));
     }
 
+    //결제하기 클릭 시 취소/결제확인 체크하도록
     const handlePopupClick = () => {
         open({ onComplete: handleComplete });
     }
@@ -84,6 +144,8 @@ export default function Charge() {
     };
 
     const location = useLocation();
+
+    //상세페이지에서 바로 결제 / 장바구니에서 결제 구분
     const directBuyItem = location.state?.directBuyItem;
 
     const orderItems = useMemo(() => {
@@ -134,6 +196,12 @@ export default function Charge() {
 
     const handlePayment = () => {
         if (orderItems.length === 0) return;
+
+        //개인정보 수집 동의 체크 여부 확인
+        if (!user && !isAgree) {
+            alert("개인정보 수집 및 이용에 동의해주세요");
+            return;
+        }
         if (user) { setConfirmPay(true); return; }
         const isValid = validateGuestForm();
         if (!isValid) { alert("필수 정보를 올바르게 입력해주세요."); return; }
@@ -146,6 +214,10 @@ export default function Charge() {
         const orderNumber = createOrderNumber();
         const formatGuestPhone = guestForm.phone.replace(/-/g, "");
         const deliveryDate = createDeliveryDate();
+        const finalRequest =
+            guestForm.request === "직접입력"
+                ? guestForm.customRequest
+                : guestForm.request;
 
         const orderData = user
             ? {
@@ -162,7 +234,7 @@ export default function Charge() {
                     trackingNumber: "준비중",
                     estimatedDate: deliveryDate,
                 },
-                // ✅ items 구조 수정 - Order.jsx에서 필요한 필드 포함
+                // items 구조 수정 - Order.jsx에서 필요한 필드 포함
                 items: orderItems.map((item) => ({
                     id: item.id,
                     name: item.name,
@@ -188,7 +260,7 @@ export default function Charge() {
                     zipCode: guestForm.zipCode,
                     address: guestForm.address,
                     extraAddress: guestForm.extraAddress,
-                    request: guestForm.request,
+                    request: finalRequest,
                 },
                 status: "결제완료",
                 deliveryInfo: {
@@ -196,7 +268,7 @@ export default function Charge() {
                     trackingNumber: "준비중",
                     estimatedDate: deliveryDate,
                 },
-                // ✅ items 구조 수정
+                // items 구조 수정
                 items: orderItems.map((item) => ({
                     id: item.id,
                     name: item.name,
@@ -210,7 +282,7 @@ export default function Charge() {
             };
 
         try {
-            onAddOrder(orderData, user); // ✅ user 추가
+            onAddOrder(orderData, user); // user 추가
             await addOrder(orderData);
             alert(`결제가 완료되었습니다. 주문번호는 ${orderNumber} 입니다.`);
             user ? navigate("/order") : navigate(`/orderForGuest/${orderNumber}`)
@@ -279,7 +351,7 @@ export default function Charge() {
                                 </div>
                             </div></>
 
-                        )
+                    )
                     }
                     {
                         !user && (
@@ -288,29 +360,38 @@ export default function Charge() {
                                     <div className="delivery-agreement-area">
                                         <div className="title">비회원 개인정보 수집 및 이용 동의</div>
                                         <div className="discription">
-                                            <p class="discription_title">개인정보의 수집 및 이용에 대한 안내</p>
-                                            <p class="discription_title">수집 항목</p>
-                                            <p>주문고객정보 (주문자이름, 이메일, 휴대폰번호)</p>
-                                            <p>배송지정보 (수취인이름, 배송지주소, 휴대폰번호, 전화번호)</p>
-                                            <p>결제정보 (카드정보, 계좌정보)</p>
-                                            <br></br>
-                                            <p class="discription_title">수집 목적</p>
-                                            <p>주문 확인, 주문상품 결제, 주문상품 배송</p>
-                                            <br></br>
-                                            <p class="discription_title">이용 기간</p>
-                                            <p class="fwBd underline">원칙적으로 개인정보 수집 및 이용목적이 달성된 후에 해당 정보를 지체 없이 파기합니다.</p>
-                                            <p class="fwBd underline">단, 관계법령의 규정에 의하여 필요가 있는 경우 일정기간 동안 개인정보를 보관할 수 있습니다.</p>
-                                            <p>귀하는 개인정보 수집 및 이용 동의를 거부할 권리가 있습니다. 단, 거부하는 경우 상품 구매가 불가능합니다. </p>
-                                            <p>
-                                                <br />
-                                                그 밖의 사항은 일룸 개인정보처리방침을 준수합니다.
-                                            </p>
+                                            <div className="discription-inner">
+                                                <p class="discription_title">개인정보의 수집 및 이용에 대한 안내</p>
+                                                <p class="discription_title">수집 항목</p>
+                                                <p>주문고객정보 (주문자이름, 이메일, 휴대폰번호)</p>
+                                                <p>배송지정보 (수취인이름, 배송지주소, 휴대폰번호, 전화번호)</p>
+                                                <p>결제정보 (카드정보, 계좌정보)</p>
+                                                <br></br>
+                                                <p class="discription_title">수집 목적</p>
+                                                <p>주문 확인, 주문상품 결제, 주문상품 배송</p>
+                                                <br></br>
+                                                <p class="discription_title">이용 기간</p>
+                                                <p class="fwBd underline">원칙적으로 개인정보 수집 및 이용목적이 달성된 후에 해당 정보를 지체 없이 파기합니다.</p>
+                                                <p class="fwBd underline">단, 관계법령의 규정에 의하여 필요가 있는 경우 일정기간 동안 개인정보를 보관할 수 있습니다.</p>
+                                                <p>귀하는 개인정보 수집 및 이용 동의를 거부할 권리가 있습니다. 단, 거부하는 경우 상품 구매가 불가능합니다. </p>
+                                                <p>
+                                                    <br />
+                                                    그 밖의 사항은 일룸 개인정보처리방침을 준수합니다.
+                                                </p>
+                                            </div>
+
+                                        </div>
+                                        <div
+                                            className="agree-checkbox"
+                                            onClick={() => setIsAgree(prev => !prev)}>
+                                            <img src={isAgree ? "./images/logo-icon/order-isChecked-true.png" : "./images/logo-icon/order-isChecked-false.png"} alt="." />
+                                            <span>비회원 구매 약관에 동의합니다.</span>
                                         </div>
                                     </div>
                                     <div className="delivery-info-area">
                                         <div className="title">비회원 주문정보</div>
                                         <form className='user-form'>
-                                            <div className="unlogged-charge-section">
+                                            <div className="unlogged-charge-section unlogged-area-left">
                                                 <h3 className="section-title">주문자 정보</h3>
                                                 <div className="info-table unlogged-addr-area">
                                                     <div className="info-row input-zone">
@@ -321,7 +402,7 @@ export default function Charge() {
                                                             value={guestForm.name}
                                                             className="unlogged_input"
                                                             required />
-                                                        {errors.name && <p className="error-text">{errors.name}</p>}
+                                                        {errors.name && <p className="error-text error-text-right">{errors.name}</p>}
                                                     </div>
                                                     <div className="info-row input-zone">
                                                         <p className="unlogged-requisite-info">휴대폰</p>
@@ -331,7 +412,7 @@ export default function Charge() {
                                                             value={guestForm.phone}
                                                             className="unlogged_input"
                                                             required />
-                                                        {errors.phone && <p className="error-text">{errors.phone}</p>}
+                                                        {errors.phone && <p className="error-text error-text-right">{errors.phone}</p>}
                                                     </div>
                                                     <div className="info-row input-zone">
                                                         <p className="unlogged-requisite-info">이메일</p>
@@ -341,24 +422,106 @@ export default function Charge() {
                                                             value={guestForm.email}
                                                             className="unlogged_input"
                                                             required />
-                                                        {errors.email && <p className="error-text">{errors.email}</p>}
+                                                        {errors.email && <p className="error-text error-text-right">{errors.email}</p>}
+                                                    </div>
+                                                    <div className="info-row input-zone">
+                                                        <p className="choose-store">방문 매장 선택</p>
+                                                        <div className="visit-store-box">
+                                                            <div className="txt-info">
+                                                                <p className="visit-store-sub">
+                                                                    º 주문 제품 선택에 도움을 받은 매장이 있다면 선택해주세요.
+                                                                </p>
+                                                                <p className="visit-store-sub">
+                                                                    º 방문 매장이 없다면 “없음”을 선택해주세요.
+                                                                </p>
+                                                                <p className="visit-store-guide">
+                                                                    ※ 해당 질문은 더 나은 고객 서비스를 위한 참고자료로 활용될 예정입니다.
+                                                                </p>
+                                                            </div>
+
+                                                            <div className="visit-store-select-wrap">
+                                                                <Select
+                                                                    className='store-select'
+                                                                    options={regionOptions}
+                                                                    value={selectedRegionOption}
+                                                                    placeholder="지역 선택"
+
+                                                                    onChange={(selected) => {
+                                                                        setGuestForm(prev => ({
+                                                                            ...prev,
+                                                                            visitRegionCode: selected?.value || "없음",
+                                                                            visitStoreId: ""
+                                                                        }));
+                                                                    }}
+                                                                />
+                                                                {guestForm.visitRegionCode !== "없음" && (
+                                                                    <Select
+                                                                        className='store-select'
+                                                                        options={storeOptions}
+                                                                        value={selectedStoreOption}
+                                                                        placeholder="매장 선택"
+                                                                        isSearchable
+                                                                        onChange={(selected) => {
+                                                                            setGuestForm(prev => ({
+                                                                                ...prev,
+                                                                                visitStoreId: selected?.value || ""
+                                                                            }));
+                                                                        }}
+                                                                    />
+                                                                )}
+
+                                                            </div>
+
+
+                                                            {/* {guestForm.visitStoreId && (
+                                                                <div className="visit-store-detail">
+                                                                    {(() => {
+                                                                        const selectedStore = visitedStores.find(
+                                                                            (store) => store.id === guestForm.visitStoreId
+                                                                        );
+
+                                                                        if (!selectedStore) return null;
+
+                                                                        return (
+                                                                            <>
+                                                                                <p>{selectedStore.store_name}</p>
+                                                                                <p>{selectedStore.address}</p>
+                                                                                <p>{selectedStore.phone}</p>
+                                                                            </>
+                                                                        );
+                                                                    })()}
+                                                                </div>
+                                                            )} */}
+                                                        </div>
+
                                                     </div>
                                                 </div>
                                             </div>
 
-                                            <div className="unlogged-charge-section">
+                                            <div className="unlogged-charge-section unlogged-area-right">
                                                 <h3 className="section-title">배송 정보</h3>
                                                 <div className="info-table unlogged-addr-area">
                                                     <div className="info-row">
 
                                                         <div className="value address-box">
                                                             <div className="search-addr input-zone">
-                                                                <p className='unlogged-requisite-info'>배송지 조회</p>
-                                                                <button onClick={handlePopupClick}>우편번호 찾기</button>
+                                                                <p className='search-addr-wrap'><span className='unlogged-requisite-info'>배송지 조회</span><span> (* 울릉도 지역은 온라인 주문이 불가하오니, 대리점에 직접 방문해주세요.)</span></p>
+                                                                <div className="inner">
+                                                                    <input type="text"
+                                                                        value={guestForm.zipCode}
+                                                                        placeholder='우편번호'
+                                                                        className="zipcode-input unlogged_input"
+                                                                        readOnly
+
+                                                                        required />
+                                                                    <button onClick={handlePopupClick}>우편번호 찾기</button>
+
+                                                                </div>
+                                                                {errors.zipCode && <p className="error-text">{errors.zipCode}</p>}
 
                                                             </div>
 
-                                                            <div className="fixed-zipcode-area input-zone">
+                                                            {/* <div className="fixed-zipcode-area input-zone">
                                                                 <p className='unlogged-requisite-info'>우편번호</p>
                                                                 <input type="text"
                                                                     value={guestForm.zipCode}
@@ -369,7 +532,7 @@ export default function Charge() {
                                                                     required />
                                                                 {errors.zipCode && <p className="error-text">{errors.zipCode}</p>}
 
-                                                            </div>
+                                                            </div> */}
                                                             <div className="fixed-addr-area input-zone">
                                                                 <p className='unlogged-requisite-info'>주소</p>
                                                                 <input type="text"
@@ -381,7 +544,7 @@ export default function Charge() {
                                                                 {errors.address && <p className="error-text">{errors.address}</p>}
                                                             </div>
                                                             <div className="extra-addr-info input-zone">
-                                                                <p ><span className='unlogged-requisite-info'>상세 주소</span> <span>(도로명 주소를 제외한 상세 주소만 입력해주세요)</span></p>
+                                                                <p className='extra-addr-wrap'><span className='unlogged-requisite-info'>상세 주소</span> <span>(도로명 주소를 제외한 상세 주소만 입력해주세요)</span></p>
                                                                 <input type="text"
                                                                     name='extraAddress'
                                                                     onChange={handleGuestChange}
@@ -396,7 +559,37 @@ export default function Charge() {
                                                     <div className="info-row">
                                                         <span className="label">배송 요청사항</span>
                                                         <div className="value request-box">
-                                                            배송 요청사항 선택
+                                                            {/* 배송 요청사항 선택 */}
+                                                            <Select
+                                                                className="delivery-requirement-select"
+                                                                classNamePrefix="delivery-req"
+                                                                options={delivery_req_options}
+                                                                value={selectedDeliveryReqOption}
+                                                                placeholder="배송 요청사항을 선택해주세요"
+                                                                styles={{
+                                                                    singleValue: (base, state) => ({
+                                                                        ...base,
+                                                                        color: state.data.value === "" ? "#aaa" : "#333",
+                                                                    }),
+                                                                }}
+                                                                onChange={(selected) => {
+                                                                    setGuestForm((prev) => ({
+                                                                        ...prev,
+                                                                        request: selected?.value || "",
+                                                                        customRequest: "",
+                                                                    }));
+                                                                }}
+                                                            />
+
+                                                            {guestForm.request === "직접입력" && (
+                                                                <textarea
+                                                                    name="customRequest"
+                                                                    value={guestForm.customRequest}
+                                                                    onChange={handleGuestChange}
+                                                                    className="delivery-request-textarea"
+                                                                    placeholder="배송 요청사항을 직접 입력해주세요."
+                                                                />
+                                                            )}
                                                         </div>
                                                     </div>
                                                 </div>
