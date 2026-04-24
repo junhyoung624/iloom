@@ -70,13 +70,15 @@ export default function ProductDetail() {
     }
 
     const getColorImg = (colorValue) => {
-        const colorItem = colorData.find(c => c.productCd === product.id)
         if (!colorItem) return null
         const codes = Array.isArray(colorItem.colorCd) ? colorItem.colorCd : [colorItem.colorCd]
         const paths = Array.isArray(colorItem.localImgPath) ? colorItem.localImgPath : [colorItem.localImgPath]
         const idx = codes.indexOf(colorValue)
         return idx !== -1 ? paths[idx] : null
     }
+    const colorItem = colorData.find(c => c.productCd === product.id)
+    const firstImg = product.productImages[0] || ''
+    const hasThumbnail = colorItem && !colorItem.colorCd.some(cd => firstImg.includes(cd))
 
     const productQna = commonQna
 
@@ -240,7 +242,7 @@ export default function ProductDetail() {
                                         <li key={j} onClick={() => {
                                             setSelectedOption(v)
                                             setIsDropdownOpen(false)
-                                            setMainImg(j + 1)
+                                            setMainImg(hasThumbnail ? j + 1 : j)
                                         }}>
                                             {getColorImg(v) && (
                                                 <img src={`/images/${getColorImg(v)}`} alt={v} />
@@ -257,10 +259,10 @@ export default function ProductDetail() {
                         <div className="color-product-images">
                             <p className="color-product-label">제품 이미지</p>
                             <div className="color-product-list">
-                                {product.productImages.map((img, i) => (
+                                {(hasThumbnail ? product.productImages.slice(1) : product.productImages).map((img, i) => (
                                     <div key={i}
-                                        className={`color-product-item ${mainImg === i + 1 ? 'active' : ''}`}
-                                        onClick={() => setMainImg(i)}>
+                                        className={`color-product-item ${mainImg === (hasThumbnail ? i + 1 : 1) ? 'active' : ''}`}
+                                        onClick={() => setMainImg(hasThumbnail ? i + 1 : i)}>
                                         <img src={img} alt={`제품이미지${i + 1}`} />
                                     </div>
                                 ))}

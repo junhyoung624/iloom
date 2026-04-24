@@ -11,6 +11,9 @@ export default function WishList() {
     //체크된 항목 저장할 변수 (결제하기에 넘겨줄 변수)
     const [checkedItems, setCheckedItems] = useState([]);
 
+    //선택한 상품 관리 버튼 클릭시 사이드바 나타나게
+    const [isWishSidebarOpen, setIsWishSidebarOpen] = useState(false);
+
     const navigate = useNavigate();
     //체크박스 체크 시 실행할 메서드
     //매개값 : 체크된 항목
@@ -37,6 +40,11 @@ export default function WishList() {
         } else {
             setCheckedItems([]);
         }
+    }
+
+    //체크된 위시(checkedItems) 전체 삭제
+    const handleAllDeleteBtn = () => {
+        setCheckedItems([]);
     }
 
     //선택된 항목의 전체 정보 저장할 변수
@@ -80,9 +88,15 @@ export default function WishList() {
 
 
                                 </div>
-                                <div className="wish-right">
+                                <div className="wish-control-right">
                                     {
-                                        selectedItems.length > 0 && <div className='wish-control-btn'>관리</div>
+                                        selectedItems.length > 0 &&
+                                        <div className='wish-control-btn-wrap'>
+                                            <div className='wish-control-btn wish-control-btn-ctrl'
+                                                onClick={() => setIsWishSidebarOpen(true)}>관리</div>
+                                            <div className='wish-control-btn wish-control-btn-del'
+                                                onClick={handleAllDeleteBtn}>모두 지우기</div>
+                                        </div>
                                     }
 
                                     <div className="checked-wish-area">
@@ -98,7 +112,7 @@ export default function WishList() {
                                             }
                                             {
                                                 extraCount > 0 && (
-                                                    <li>+{extraCount}</li>
+                                                    <li className='extra-wish-count'>+{extraCount}</li>
                                                 )
                                             }
                                         </ul>
@@ -127,7 +141,7 @@ export default function WishList() {
                                             <img src={wish.productImages[0]} alt="." />
                                         </div>
                                         <div className="wish-name-info">
-                                            <p className='series-name'>{wish.series}</p>
+                                            <p className='series-name-in-wish'>{wish.series}</p>
                                             <p className='product-name'>{wish.name}</p>
                                         </div>
                                     </div>
@@ -151,15 +165,52 @@ export default function WishList() {
                             }
                         </ul>
                     </div>
-                    {
-                        wishlist.length > 0 && <div className="delete-all-btn">
+                    {/* {
+                        wishlist.length > 0 && <div className="wish-delete-all-btn">
                             선택상품삭제
                         </div>
-                    }
+                    } */}
 
                 </div>
 
             </div>
+            {/* 선택 상품 관리 사이드바 */}
+            {isWishSidebarOpen && (
+                <div
+                    className="wish-sidebar-overlay"
+                    onClick={() => setIsWishSidebarOpen(false)}>
+                    <div
+                        className="wish-sidebar"
+                        onClick={(e) => e.stopPropagation()}>
+                        <div className="wish-sidebar-header">
+                            <h3>위시리스트 관리</h3>
+                            <button
+                                type="button"
+                                className="wish-sidebar-close"
+                                onClick={() => setIsWishSidebarOpen(false)}
+                            >
+                                ×
+                            </button>
+                        </div>
+
+                        <div className="wish-sidebar-content">
+                            <p>선택한 상품 {selectedItems.length}개</p>
+
+                            <ul className="wish-sidebar-list">
+                                {selectedItems.map((item) => (
+                                    <li key={`wish-side-id-${item.id}`} className="wish-sidebar-item">
+                                        <img src={item.productImages[0]} alt={item.name} />
+                                        <div>
+                                            <p>{item.series}</p>
+                                            <strong>{item.name}</strong>
+                                        </div>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            )}
         </div>
     );
 }

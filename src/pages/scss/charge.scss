@@ -566,12 +566,42 @@
                 .extra-addr-wrap {
                     line-height: 1rem;
                 }
+
+                .validation-alert {
+                    display: flex;
+                    gap: 10px;
+                }
+
+                //방문매장 선택
+                .visit-store-box {
+                    display: grid;
+                    gap: 10px;
+                    //background: yellow;
+
+                    .txt-info {
+                        padding: 20px;
+                        background: #f7f7f7;
+                        border: 1px solid #ddd;
+                    }
+
+                    .visit-store-select-wrap {
+                        display: flex;
+                        justify-content: space-between;
+
+                        .store-select {
+                            width: 280px;
+                        }
+                    }
+                }
+
             }
 
 
         }
 
     }
+
+
 
     .unlogged_input {
         height: 3rem;
@@ -789,27 +819,28 @@
     &:hover {
         background: #333;
     }
-    //방문매장 선택
-    .visit-store-box {
-        display: grid;
-        gap: 10px;
-        //background: yellow;
 
-        .txt-info {
-            padding: 20px;
-            background: #f7f7f7;
-            border: 1px solid #ddd;
-        }
+    // //방문매장 선택
+    // .visit-store-box {
+    //     display: grid;
+    //     gap: 10px;
+    //     //background: yellow;
 
-        .visit-store-select-wrap {
-            display: flex;
-            justify-content: space-between;
+    //     .txt-info {
+    //         padding: 20px;
+    //         background: #f7f7f7;
+    //         border: 1px solid #ddd;
+    //     }
 
-            .store-select {
-                width: 280px;
-            }
-        }
-    }
+    //     .visit-store-select-wrap {
+    //         display: flex;
+    //         justify-content: space-between;
+
+    //         .store-select {
+    //             width: 280px;
+    //         }
+    //     }
+    // }
 
 
 
