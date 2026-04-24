@@ -2,9 +2,11 @@ import React from 'react'
 import MyPageMenu from './MyPageMenu'
 import { useProductStore } from '../store/useProductStore'
 import "./scss/order.scss";
+import { useNavigate } from 'react-router-dom';
 
 const Order = () => {
   //const { cartItems, items } = useProductStore();
+  const navigate = useNavigate();
   const { orderList } = useProductStore();
   return (
     <div className="mypage">
@@ -15,8 +17,13 @@ const Order = () => {
             <p>주문/배송</p>
           </div>
           <div className="order-content">
+            {orderList.length === 0 ? (
+              <div className="empty-content-wrap">
+                <div className='show-empty-info'>주문/배송 내역이 없습니다</div>
+                <div className="show-more-btn" onClick={() => navigate("/")}>더 알아보기</div>
+              </div>
+            ) : (
 
-            {
               orderList.map((order) => (
                 <div className="order-list-wrap">
                   <div className="order-id-wrap">
@@ -77,7 +84,7 @@ const Order = () => {
 
                 </div>
               ))
-            }
+            )}
 
           </div>
         </div>
