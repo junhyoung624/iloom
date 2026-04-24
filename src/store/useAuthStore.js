@@ -2,12 +2,9 @@ import { createUserWithEmailAndPassword, onAuthStateChanged, linkWithPopup, unli
 import { create } from "zustand";
 import { auth, db, googleProvider } from "../firebase/firebase";
 import { deleteDoc, doc, getDoc, setDoc, updateDoc } from "firebase/firestore";
-import { useNavigate } from "react-router-dom";
 
-// import { useNavigate } from "react-router-dom";
 export const useAuthStore = create((set, get) => ({
 
-    // 로그인
     user: null,
 
     // 로그인 상태유지
@@ -24,7 +21,6 @@ export const useAuthStore = create((set, get) => ({
                         email: u.email,
                         name: userInfo?.name,
                         phone: userInfo?.phone,
-
                         birth: userInfo?.birth,
                         gender: userInfo?.gender,
                         address: userInfo?.address,
@@ -36,31 +32,25 @@ export const useAuthStore = create((set, get) => ({
                         providers: u.providerData.map(p => p.providerId)
                     }
                 })
+
                 const { useProductStore } = await import('./useProductStore');
                 await useProductStore.getState().fetchOrderList({ uid: u.uid });
+                await useProductStore.getState().fetchCartItems({ uid: u.uid }); // 장바구니 복원
             } else {
                 set({ user: null })
             }
         })
     },
 
-
-
-
     // 회원가입
     onMember: async ({ uname, email, password, phone }) => {
         try {
             const userMember = await createUserWithEmailAndPassword(auth, email, password)
-            console.log(userMember);
             const user = userMember.user;
 
-            await updateProfile(user, {
-                displayName: uname
-            });
+            await updateProfile(user, { displayName: uname });
 
-            // fireStore 저장
             const userRef = doc(db, "people", user.uid)
-
             const userInfo = {
                 uid: user.uid,
                 name: uname,
@@ -73,20 +63,16 @@ export const useAuthStore = create((set, get) => ({
 
             alert("회원가입 성공했습니다")
             return true;
-
-        }
-        catch (err) {
+        } catch (err) {
             alert("회원가입 에러" + err.message);
             return false
         }
     },
 
-
-    // 이메일 로그인 
+    // 이메일 로그인
     onLogin: async (email, pass) => {
         try {
             const userLogin = await signInWithEmailAndPassword(auth, email, pass)
-            // set({ user: userLogin.user })
             const u = userLogin.user;
 
             const userRef = doc(db, "people", u.uid)
@@ -103,8 +89,7 @@ export const useAuthStore = create((set, get) => ({
                 }
             })
             return true;
-        }
-        catch (err) {
+        } catch (err) {
             alert("로그인 실패" + err.message)
         }
     },
@@ -112,21 +97,23 @@ export const useAuthStore = create((set, get) => ({
     // 로그아웃
     onLogout: async () => {
         await signOut(auth);
+        const { useProductStore } = await import('./useProductStore');
+        useProductStore.getState().clearCartItems();  // 장바구니 초기화
+        useProductStore.getState().clearOrderList();  // 주문 목록 초기화
+        useProductStore.getState().clearWishlist();   // 위시리스트 초기화
         set({ user: null })
     },
 
-    // 구글로그인
+    // 구글 로그인
     onGoogleLogin: async () => {
         try {
             const result = await signInWithPopup(auth, googleProvider);
             const user = result.user;
             const googleEmail = user.email;
 
-            // firebase 저장
             const userRef = doc(db, "people", user.uid)
-            // 이미 회원인지 체크
             const userDoc = await getDoc(userRef)
-            // 회원이 아니면 새로운 정보로 회원가입하기
+
             if (!userDoc.exists()) {
                 const userInfo = {
                     uid: user.uid,
@@ -179,13 +166,11 @@ export const useAuthStore = create((set, get) => ({
         })
     },
 
-
+    // 카카오 로그인
     onKakaoLogin: async () => {
         try {
-            // 1 카카오 SDK 초기화
             if (!window.Kakao.isInitialized()) {
                 window.Kakao.init('15ae98903af08e0b25e2d43e5b601235');
-                console.log(' Kakao SDK 초기화 완료');
             }
 
             const authObj = await new Promise((resolve, reject) => {
@@ -195,15 +180,9 @@ export const useAuthStore = create((set, get) => ({
                     fail: reject,
                 });
             });
-            console.log(' 카카오 로그인 성공:', authObj);
 
-            // 3 사용자 정보 요청 (Promise 기반)
-            const res = await window.Kakao.API.request({
-                url: '/v2/user/me',
-            });
-            console.log(' 카카오 사용자 정보:', res);
+            const res = await window.Kakao.API.request({ url: '/v2/user/me' });
 
-            // 4 사용자 정보 가공
             const uid = res.id.toString();
             const kakaoEmail = res.kakao_account?.email || '';
             const kakaoUser = {
@@ -213,11 +192,8 @@ export const useAuthStore = create((set, get) => ({
                 nickname: res.kakao_account.profile?.nickname || '카카오사용자',
                 photoURL: res.kakao_account.profile?.profile_image_url || '',
                 provider: 'kakao',
-                // createdAt: new Date(),
             };
 
-            // 5 Firestore에 저장
-            // const userRef = doc(db, 'users', uid);
             const userRef = doc(db, 'people', uid);
             const userDoc = await getDoc(userRef);
 
@@ -248,36 +224,13 @@ export const useAuthStore = create((set, get) => ({
 
             alert(`${kakaoUser.nickname}님, 카카오 로그인 성공!`);
             return true;
-        }
-        catch (err) {
-            console.error(' 카카오 로그인 중 오류:', err);
+        } catch (err) {
+            console.error('카카오 로그인 중 오류:', err);
             alert(err.message);
         }
-
-        const currentUser = get().user
-
-        if (currentUser) {
-            const currentUserRef = doc(db, 'people', currentUser.uid)
-            await updateDoc(currentUserRef, {
-                "socials.kakao": { email: kakaoUser.email, linked: true }
-            })
-            set({
-                user: {
-                    ...currentUser,
-                    socials: {
-                        ...currentUser?.socials,
-                        kakao: { email: kakaoUser.email, linked: true }
-                    }
-                }
-            })
-        } else {
-            set({ user: kakaoUser })
-        }
-        alert(`${kakaoUser.nickname}님, 카카오 연동 완료!`)
-        return true
     },
 
-
+    // 네이버 로그인
     onNaverLogin: () => {
         const clientId = import.meta.env.VITE_NAVER_CLIENT_ID;
         const callbackUrl = encodeURIComponent(import.meta.env.VITE_NAVER_CALLBACK_URL);
@@ -289,11 +242,8 @@ export const useAuthStore = create((set, get) => ({
 
     onNaverCallback: async (accessToken) => {
         try {
-            // 네이버 유저 정보 요청 (CORS 때문에 프록시 사용)
             const res = await fetch(`/naver-api/v1/nid/me`, {
-                headers: {
-                    Authorization: `Bearer ${accessToken}`,
-                },
+                headers: { Authorization: `Bearer ${accessToken}` },
             });
             const data = await res.json();
             const profile = data.response;
@@ -307,7 +257,6 @@ export const useAuthStore = create((set, get) => ({
                 provider: 'naver',
             };
 
-            // Firestore 저장
             const userRef = doc(db, 'people', naverUser.uid);
             const userDoc = await getDoc(userRef);
 
@@ -335,7 +284,6 @@ export const useAuthStore = create((set, get) => ({
             }
 
             return true
-
         } catch (err) {
             console.error('네이버 콜백 오류:', err);
             alert(err.message);
@@ -439,21 +387,11 @@ export const useAuthStore = create((set, get) => ({
     },
 
     onKakaoUnlink: () => {
-        set({
-            user: {
-                ...get().user,
-                provider: null
-            }
-        })
+        set({ user: { ...get().user, provider: null } })
     },
 
     onNaverUnlink: () => {
-        set({
-            user: {
-                ...get().user,
-                provider: null
-            }
-        })
+        set({ user: { ...get().user, provider: null } })
     },
 
     // 회원탈퇴
