@@ -1,10 +1,37 @@
-import React from 'react'
+import React, { useRef, useState } from 'react'
 import { Navigation } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
-// import 'swiper/css/navigation'
 import { Link } from 'react-router-dom'
 import "./scss/place.scss"
+
+function SpotlightCard({ children }) {
+    const cardRef = useRef(null)
+    const [spot, setSpot] = useState({ x: 0, y: 0, visible: false })
+
+    const handleMouseMove = (e) => {
+        const rect = cardRef.current.getBoundingClientRect()
+        setSpot({ x: e.clientX - rect.left, y: e.clientY - rect.top, visible: true })
+    }
+    const handleMouseLeave = () => setSpot((s) => ({ ...s, visible: false }))
+
+    return (
+        <div
+            ref={cardRef}
+            className="place-item"
+            onMouseMove={handleMouseMove}
+            onMouseLeave={handleMouseLeave}
+        >
+            {spot.visible && (
+                <div
+                    className="place-spotlight"
+                    style={{ left: spot.x, top: spot.y }}
+                />
+            )}
+            {children}
+        </div>
+    )
+}
 
 export default function Place() {
     const placeList = [
@@ -34,20 +61,18 @@ export default function Place() {
                     modules={[Navigation]}
                     slidesPerView={"auto"}
                     spaceBetween={10}
-                    // loop={true}
                     className="mySwiper"
                 >
                     {placeList.map((item) => (
                         <SwiperSlide key={item.id}>
-                            <div className="place-item">
+                            <SpotlightCard>
                                 <Link to={`/${item.link}`}>
                                     <img src={item.image} alt={item.key} />
                                     <p>{item.key}</p>
                                     <span className="place-message">{item.message}</span>
                                     <p className='place-btn'>더 보기</p>
                                 </Link>
-
-                            </div>
+                            </SpotlightCard>
                         </SwiperSlide>
                     ))}
                 </Swiper>
