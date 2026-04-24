@@ -30560,47 +30560,6 @@ export const productData = [
     "ranking": 1730
   },
   {
-    "id": "ISC00CJ01A",
-    "series": "코모",
-    "name": "코모 등받이 쿠션(패브릭)",
-    "material": "패브릭",
-    "price": "250,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "5T0",
-          "5T1",
-          "5T6"
-        ]
-      }
-    ],
-    "originalCategory": "거실",
-    "category2": "소파",
-    "category3": "소파액세서리",
-    "productImages": [
-      "/images/iloom_images/living-room/sofa/ISC00CJ01A_5T0_1.png",
-      "/images/iloom_images/living-room/sofa/ISC00CJ01A_5T0_1.png",
-      "/images/iloom_images/living-room/sofa/ISC00CJ01A_5T1_2.png",
-      "/images/iloom_images/living-room/sofa/ISC00CJ01A_5T6_3.png",
-      "/images/iloom_images/living-room/sofa/ISC00CJ01A_5T0_4.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20240805/_476bd446-9e77-43bc-8b9b-20c1cdc0501e.jpg",
-      "https://www.iloom.com/upload/contents/20251016/_ad634735-9032-476d-85ab-bb749f1bd737.jpg",
-      "https://www.iloom.com/upload/contents/20240726/_50109a86-1412-4d38-b86b-0c4fce5c4046.jpg",
-      "https://www.iloom.com/upload/contents/20240726/_a3901659-d776-449c-9609-e61741756267.jpg",
-      "https://www.iloom.com/upload/contents/20260205/_269a9207-a6af-49c7-ad09-a5dfa84d50e3.jpg",
-      "https://www.iloom.com/upload/contents/20240726/_3bbcb53b-8c6c-4210-a05a-fc6ec5dcb1ef.jpg",
-      "https://www.iloom.com/upload/contents/20250724/_ee6d4c39-f545-4048-929a-323b06df614a.jpg",
-      "https://www.iloom.com/upload/contents/20260102/_c82a2b36-4b4a-41c9-8785-fbda157f8740.jpg"
-    ],
-    "ranking": 432
-  },
-  {
     "id": "HCS762PLF",
     "series": "캐스터네츠",
     "name": "캐스터네츠 펫 2인 SET(패브릭, 좌)",
