@@ -24,6 +24,11 @@ export default function Sns() {
                     cardRefs.current.forEach((card, index) => {
                         setTimeout(() => {
                             card?.classList.add("show");
+
+                            if (index === 0) {
+                                const video = card?.querySelector("video");
+                                if (video) video.play().catch(() => { });
+                            }
                         }, index * 200);
                     });
                     obs.unobserve(section);
@@ -37,16 +42,31 @@ export default function Sns() {
     }, []);
 
     const handleMouseEnter = (e) => {
+
+        const index = cardRefs.current.indexOf(e.currentTarget);
+        if (index === 0) return;
+
+        const firstCard = cardRefs.current[0];
+        const firstVideo = firstCard?.querySelector("video");
+        if (firstVideo) firstVideo.pause();
+
         const video = e.currentTarget.querySelector("video");
         if (video) video.play().catch(() => { });
     };
 
     const handleMouseLeave = (e) => {
+        const index = cardRefs.current.indexOf(e.currentTarget);
+        if (index === 0) return;
+
         const video = e.currentTarget.querySelector("video");
         if (video) {
             video.pause();
             video.currentTime = 0;
         }
+
+        const firstCard = cardRefs.current[0];
+        const firstVideo = firstCard?.querySelector("video");
+        if (firstVideo) firstVideo.play().catch(() => { });
     };
 
     return (
