@@ -159,10 +159,10 @@ export default function Charge() {
 
         if (name === "email") {
             if (!trimmedValue) {
-                message = isBlur ? "** 이메일이 필요합니다." : "";
+                message = isBlur ? " 이메일이 필요합니다." : "";
                 status = isBlur ? "error" : "idle";
             } else if (!emailRegex.test(trimmedValue)) {
-                message = "** 유효한 이메일 주소를 입력하세요.";
+                message = " 유효한 이메일 주소를 입력하세요.";
                 status = "error";
             } else {
                 message = "";
@@ -172,10 +172,10 @@ export default function Charge() {
 
         if (name === "phone") {
             if (!trimmedValue) {
-                message = isBlur ? "** 휴대폰 번호가 필요합니다." : "";
+                message = isBlur ? " 휴대폰 번호가 필요합니다." : "";
                 status = isBlur ? "error" : "idle";
             } else if (!phoneRegex.test(trimmedValue)) {
-                message = "** 유효한 휴대폰 번호를 입력하세요.";
+                message = " 유효한 휴대폰 번호를 입력하세요.";
                 status = "error";
             } else {
                 message = "";
@@ -453,7 +453,7 @@ export default function Charge() {
                                                             value={guestForm.name}
                                                             className="unlogged_input"
                                                             required />
-                                                        {errors.name && <div><img src='' alt='' /><p className="error-text error-text-right">{errors.name}</p></div>}
+                                                        {errors.name && <p className="error-text error-text-right">{errors.name}</p>}
                                                     </div>
                                                     <div className="info-row input-zone">
                                                         <p className="unlogged-requisite-info">휴대폰</p>
@@ -464,7 +464,7 @@ export default function Charge() {
                                                             value={guestForm.phone}
                                                             className={`unlogged_input ${fieldStatus.phone}`}
                                                             required />
-                                                        {errors.phone && <p className="error-text error-text-right">{errors.phone}</p>}
+                                                        {errors.phone && <div className='validation-alert '><img src='./images/logo-icon/format-alert.png' alt='.' /><p className="error-text error-text-right">{errors.phone}</p></div>}
                                                     </div>
                                                     <div className="info-row input-zone">
                                                         <p className="unlogged-requisite-info">이메일</p>
@@ -475,7 +475,7 @@ export default function Charge() {
                                                             value={guestForm.email}
                                                             className={`unlogged_input ${fieldStatus.email}`}
                                                             required />
-                                                        {errors.email && <p className="error-text error-text-right">{errors.email}</p>}
+                                                        {errors.email && <div className="validation-alert"><img src='./images/logo-icon/format-alert.png' alt='.' /><p className="error-text error-text-right">{errors.email}</p></div>}
                                                     </div>
                                                     <div className="info-row input-zone">
                                                         <p className="choose-store">방문 매장 선택</p>

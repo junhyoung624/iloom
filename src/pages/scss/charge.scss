@@ -566,12 +566,19 @@
                 .extra-addr-wrap {
                     line-height: 1rem;
                 }
+
+                .validation-alert {
+                    display: flex;
+                    gap: 10px;
+                }
             }
 
 
         }
 
     }
+
+
 
     .unlogged_input {
         height: 3rem;
