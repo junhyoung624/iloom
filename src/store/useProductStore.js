@@ -1,6 +1,5 @@
 import { create } from "zustand";
 import { productData } from "../data/productData";
-// import { persist } from "zustand/middleware";
 
 export const useProductStore = create((set, get) => ({
     // 상품 변수, 메서드
@@ -77,7 +76,7 @@ export const useProductStore = create((set, get) => ({
             set({ orderList: data.orderList });
         }
     },
-    
+
     clearWishlist: () => set({ wishlist: [] }),
 
     onAddWishList: (product) => {
@@ -89,125 +88,118 @@ export const useProductStore = create((set, get) => ({
             return;
         }
 
-        set({
-            wishlist: [...wish, product],
-        });
-    },
-
-    onAddWishList: (product) => {
-        const wish = get().wishlist;
-        const existing = wish.find((w) => w.id === product.id);
-
-        if (existing) {
-            alert("이미 있는 제품입니다");
-            return;
-        }
-
-        set({
-            wishlist: [...wish, product],
-        });
+        set({ wishlist: [...wish, product] });
     },
 
     onRemoveWish: (id) => {
         const updateWish = get().wishlist.filter((item) => item.id !== id);
-        set({
-            wishlist: updateWish,
-        })
+        set({ wishlist: updateWish });
     },
 
     // 장바구니
     cartItems: [],
 
+    syncCartToFirestore: async (cartItems) => {
+        const { useAuthStore } = await import('./useAuthStore');
+        const user = useAuthStore.getState().user;
+        if (!user) return;
+        const { doc, setDoc } = await import('firebase/firestore');
+        const { db } = await import('../firebase/firebase');
+        const userRef = doc(db, 'people', user.uid);
+        await setDoc(userRef, { cartItems }, { merge: true });
+    },
+
+    fetchCartItems: async (user) => {
+        if (!user) return;
+        const { doc, getDoc } = await import('firebase/firestore');
+        const { db } = await import('../firebase/firebase');
+        const userRef = doc(db, 'people', user.uid);
+        const snap = await getDoc(userRef);
+        const data = snap.data();
+        if (data?.cartItems) {
+            set({ cartItems: data.cartItems });
+        }
+    },
+
+    clearCartItems: () => set({ cartItems: [] }),
+
     addToCart: (product, selectedOption = {}, qty = 1) => {
         const { cartItems } = get();
         const color = selectedOption.color || "";
-
-        const isSameItem = (item) =>
-            item.id === product.id && item.color === color;
-
+        const isSameItem = (item) => item.id === product.id && item.color === color;
         const existItem = cartItems.find(isSameItem);
 
+        let newCartItems;
         if (existItem) {
-            set({
-                cartItems: cartItems.map((item) =>
-                    isSameItem(item)
-                        ? { ...item, qty: item.qty + qty }
-                        : item
-                ),
-            });
+            newCartItems = cartItems.map((item) =>
+                isSameItem(item) ? { ...item, qty: item.qty + qty } : item
+            );
         } else {
-            set({
-                cartItems: [
-                    ...cartItems,
-                    {
-                        id: product.id,
-                        qty,
-                        checked: true,
-                        color,
-                    },
-                ],
-            });
+            newCartItems = [...cartItems, { id: product.id, qty, checked: true, color }];
         }
+
+        set({ cartItems: newCartItems });
+        get().syncCartToFirestore(newCartItems);
     },
+
     increaseQty: (id, color = "") => {
-        set({
-            cartItems: get().cartItems.map((item) =>
-                item.id === id && item.color === color
-                    ? { ...item, qty: item.qty + 1 }
-                    : item
-            ),
-        });
+        const newCartItems = get().cartItems.map((item) =>
+            item.id === id && item.color === color
+                ? { ...item, qty: item.qty + 1 }
+                : item
+        );
+        set({ cartItems: newCartItems });
+        get().syncCartToFirestore(newCartItems);
     },
 
     decreaseQty: (id, color = "") => {
-        set({
-            cartItems: get().cartItems.map((item) =>
-                item.id === id && item.color === color
-                    ? { ...item, qty: Math.max(1, item.qty - 1) }
-                    : item
-            ),
-        });
+        const newCartItems = get().cartItems.map((item) =>
+            item.id === id && item.color === color
+                ? { ...item, qty: Math.max(1, item.qty - 1) }
+                : item
+        );
+        set({ cartItems: newCartItems });
+        get().syncCartToFirestore(newCartItems);
     },
 
     toggleChecked: (id, color = "") => {
-        set({
-            cartItems: get().cartItems.map((item) =>
-                item.id === id && item.color === color
-                    ? { ...item, checked: !item.checked }
-                    : item
-            ),
-        });
+        const newCartItems = get().cartItems.map((item) =>
+            item.id === id && item.color === color
+                ? { ...item, checked: !item.checked }
+                : item
+        );
+        set({ cartItems: newCartItems });
+        get().syncCartToFirestore(newCartItems);
     },
 
     toggleAllChecked: (checked) => {
-        set({
-            cartItems: get().cartItems.map((item) => ({
-                ...item,
-                checked,
-            })),
-        });
+        const newCartItems = get().cartItems.map((item) => ({ ...item, checked }));
+        set({ cartItems: newCartItems });
+        get().syncCartToFirestore(newCartItems);
     },
 
     removeCartItem: (id, color = "") => {
-        set({
-            cartItems: get().cartItems.filter(
-                (item) => !(item.id === id && item.color === color)
-            ),
-        });
+        const newCartItems = get().cartItems.filter(
+            (item) => !(item.id === id && item.color === color)
+        );
+        set({ cartItems: newCartItems });
+        get().syncCartToFirestore(newCartItems);
     },
 
     changeItemColor: (id, oldColor, newColor) => {
-        set(state => ({
-            cartItems: state.cartItems.map(item =>
-                item.id === id && item.color === oldColor
-                    ? { ...item, color: newColor }
-                    : item
-            )
-        }))
+        const newCartItems = get().cartItems.map((item) =>
+            item.id === id && item.color === oldColor
+                ? { ...item, color: newColor }
+                : item
+        );
+        set({ cartItems: newCartItems });
+        get().syncCartToFirestore(newCartItems);
     },
-    //주문
-    //주문 목록을 저장할 변수
+
+    // 주문
     orderList: [],
+
+    clearOrderList: () => set({ orderList: [] }),
 
     createDeliveryDate: () => {
         const today = new Date();
@@ -223,7 +215,6 @@ export const useProductStore = create((set, get) => ({
         return `${year}.${month}.${date}`;
     },
 
-    //결제를 클릭하면 결제 항목이 주문 목록에 들어가도록
     onAddOrder: async (order, user) => {
         const orderPrev = get().orderList;
         console.log("onAddOrder in", order);
@@ -262,39 +253,27 @@ export const useProductStore = create((set, get) => ({
             cartItems: [],
         });
 
-        // Firestore 저장
         if (user) {
             const { doc, setDoc } = await import('firebase/firestore');
             const { db } = await import('../firebase/firebase');
             const userRef = doc(db, 'people', user.uid);
-            await setDoc(userRef, { orderList: updatedOrderList }, { merge: true });
+            await setDoc(userRef, { orderList: updatedOrderList, cartItems: [] }, { merge: true });
         }
     },
 
-    //비회원 주문 조회 
-    //주문번호로 조회
     findGuestOrderById: (orderNumber) => {
         const orders = get().orderList;
-
         return orders.find(
-            (order) =>
-                order.isGuest &&
-                order.orderNumber === orderNumber
+            (order) => order.isGuest && order.orderNumber === orderNumber
         );
     },
 
-    //전화번호로 조회
     findGuestOrderByPhone: (phone) => {
         const orders = get().orderList;
-
         return orders.find(
-            (order) =>
-                order.isGuest &&
-                order.guestInfo?.phone === phone
+            (order) => order.isGuest && order.guestInfo?.phone === phone
         );
     },
-
-
 
     // 메뉴 생성
     onMakeMenu: () => {

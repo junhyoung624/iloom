@@ -17148,6 +17148,7 @@ export const productData = [
     "mdPick": false,
     "new": false,
     "BestSeller": false,
+    "sale": true,
     "detailImg": [
       "https://www.iloom.com/upload/contents/20250605/_dc4dbd9a-b7ad-4039-8193-a87728c3d810.jpg",
       "https://www.iloom.com/upload/contents/20250605/_1e0fdc6e-f341-4ea5-9c69-8328bbf647e4.jpg",
@@ -17617,6 +17618,7 @@ export const productData = [
     "mdPick": false,
     "new": false,
     "BestSeller": false,
+    "sale": true,
     "detailImg": [
       "https://www.iloom.com/upload/contents/20250605/_6353a3df-7100-4abc-866c-c61b44dae441.jpg",
       "https://www.iloom.com/upload/contents/20250605/_ed7e7b1b-5334-4f7d-97f9-ce58210b219d.jpg",
@@ -22439,6 +22441,7 @@ export const productData = [
     "mdPick": true,
     "new": false,
     "BestSeller": false,
+    "sale": true,
     "detailImg": [
       "https://www.iloom.com/upload/contents/20181227/_1d41b642-377c-4136-b33c-b0269f3849d5.jpg",
       "https://www.iloom.com/upload/contents/20190110/_a543ad88-d939-4412-ab4f-ecb50b09742e.jpg",
@@ -24156,6 +24159,7 @@ export const productData = [
     "mdPick": false,
     "new": false,
     "BestSeller": false,
+    "sale": true,
     "detailImg": [
       "https://www.iloom.com/upload/contents/20251127/_4a0131ca-834e-4115-8709-0e2d858aa39b.jpg",
       "https://www.iloom.com/upload/contents/20250618/_2aeb1c5d-d5a8-409c-8264-0d41512f9d83.jpg",
@@ -36480,6 +36484,7 @@ export const productData = [
     "mdPick": false,
     "new": false,
     "BestSeller": false,
+    "sale": true,
     "detailImg": [
       "https://www.iloom.com/upload/contents/20250107/_89ed2a2d-026f-4dc0-82a6-e7556f49ca66.jpg",
       "https://www.iloom.com/upload/contents/20240530/_c1df4735-2a08-4120-81ca-1ff8878fd112.jpg",
