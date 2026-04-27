@@ -1,0 +1,93 @@
+:root {
+  --main: #303030;
+  --sub: #808080;
+  --line: #c9c9c9;
+}
+
+.magazine .inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  text-align: center;
+}
+.magazine .inner .title-box {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+.magazine .inner .title-box h2 {
+  font-size: 42px;
+  color: var(--main);
+}
+.magazine .inner .title-box p {
+  font-size: 23px;
+  color: var(--sub);
+}
+.magazine .inner .magazine-box {
+  width: 100%;
+  display: flex;
+  gap: 28px;
+}
+.magazine .inner .magazine-card {
+  position: relative;
+  width: calc((100% - 56px) / 3);
+  overflow: hidden;
+  flex-shrink: 0;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.magazine .inner .magazine-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.magazine .inner .magazine-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.magazine .inner .magazine-card .text-box {
+  width: calc(100% - 40px);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 40px;
+  color: #fff;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 2;
+}
+.magazine .inner .magazine-card .text-box h4 {
+  font-size: 16px;
+}
+.magazine .inner .magazine-card .text-box h2 {
+  font-size: 32px;
+  line-height: 1.3;
+}
+.magazine .inner .magazine-card .text-box p {
+  font-size: 14px;
+  line-height: 1.5;
+  min-height: 20px;
+}
+.magazine .inner .magazine-card .text-box .story-button {
+  display: block;
+  width: 100%;
+  margin-top: 8px;
+  background: transparent;
+  color: #fff;
+  padding: 14px 0;
+  border: 1px solid #fff;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  box-sizing: border-box;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.magazine .inner .magazine-card .text-box .story-button:hover {
+  background: var(--main);
+  color: #fff;
+  border: 1px solid var(--main);
+}
