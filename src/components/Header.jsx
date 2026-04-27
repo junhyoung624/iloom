@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom'
 import MainMenu from './MainMenu'
 import HeaderInner from './HeaderInner'
 import UserMenu from './UserMenu'
+import CartPanel from './CartPanel'
 import './scss/header.scss'
 import { useProductStore } from '../store/useProductStore'
 import { useAuthStore } from '../store/useAuthStore'
@@ -19,6 +20,7 @@ const Header = () => {
   const [scrollProgress, setScrollProgress] = useState(0)
   const [isHover, setHover] = useState(false)
   const [userMenu, setUserMenu] = useState(false)
+  const [cartPanel, setCartPanel] = useState(false)   // ✅ 추가
   const [isSearchOpen, setIsSearchOpen] = useState(false)
 
   const userLogin = useRef(null)
@@ -30,32 +32,19 @@ const Header = () => {
   const isHome = location.pathname === '/'
 
   useEffect(() => {
-    if (!isHome) {
-      setScrollProgress(1)
-      return
-    }
-
+    if (!isHome) { setScrollProgress(1); return }
     const handleScroll = () => {
       const scrollY = window.scrollY
-      const progress = Math.min(
-        Math.max((scrollY - HERO_FADE_START) / (HERO_FADE_END - HERO_FADE_START), 0),
-        1
-      )
+      const progress = Math.min(Math.max((scrollY - HERO_FADE_START) / (HERO_FADE_END - HERO_FADE_START), 0), 1)
       setScrollProgress(progress)
     }
-
     window.addEventListener('scroll', handleScroll)
     handleScroll()
-
     return () => window.removeEventListener('scroll', handleScroll)
   }, [isHome])
 
   useEffect(() => {
-    if (user) {
-      loginMenu.current = true
-    } else {
-      setUserMenu(false)
-    }
+    if (user) { loginMenu.current = true } else { setUserMenu(false) }
     userLogin.current = user
   }, [user])
 
@@ -64,13 +53,9 @@ const Header = () => {
     clearTimeout(leaveTimer.current)
     setHover(false)
     setIsSearchOpen(false)
-
-    if (loginMenu.current) {
-      loginMenu.current = false
-      return
-    }
-
+    if (loginMenu.current) { loginMenu.current = false; return }
     setUserMenu(false)
+    setCartPanel(false)
   }, [location.pathname])
 
   useEffect(() => {
@@ -79,53 +64,47 @@ const Header = () => {
     } else {
       document.documentElement.style.overflow = ''
     }
-
-    return () => {
-      document.documentElement.style.overflow = ''
-    }
+    return () => { document.documentElement.style.overflow = '' }
   }, [isSearchOpen])
 
+  useEffect(() => () => { clearTimeout(enterTimer.current); clearTimeout(leaveTimer.current) }, [])
+
+
   useEffect(() => {
-    return () => {
-      clearTimeout(enterTimer.current)
-      clearTimeout(leaveTimer.current)
+    if (cartPanel || userMenu) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
     }
-  }, [])
+    return () => { document.body.style.overflow = '' }
+  }, [cartPanel, userMenu])
 
   const handleMenuEnter = () => {
     clearTimeout(leaveTimer.current)
     clearTimeout(enterTimer.current)
-    enterTimer.current = setTimeout(() => {
-      setHover(true)
-    }, 90)
+    enterTimer.current = setTimeout(() => setHover(true), 90)
   }
 
   const handleMenuLeave = () => {
     clearTimeout(enterTimer.current)
     clearTimeout(leaveTimer.current)
-    leaveTimer.current = setTimeout(() => {
-      setHover(false)
-    }, 140)
+    leaveTimer.current = setTimeout(() => setHover(false), 140)
   }
 
   const handleClick = () => {
-    if (window.__appLoaded) {
-      setUserMenu(true)
-    } else {
-      setTimeout(() => setUserMenu(true), 1600)
-    }
+    if (window.__appLoaded) { setUserMenu(true) }
+    else { setTimeout(() => setUserMenu(true), 1600) }
   }
 
-  const closeBtn = () => {
-    setUserMenu(false)
-  }
+  const closeBtn = () => setUserMenu(false)
 
-  const handleSearchToggle = () => {
-    setIsSearchOpen((prev) => !prev)
-  }
+  const handleSearchToggle = () => setIsSearchOpen((prev) => !prev)
+  const handleSearchClose = () => setIsSearchOpen(false)
 
-  const handleSearchClose = () => {
-    setIsSearchOpen(false)
+
+  const handleCartClick = (e) => {
+    e.preventDefault()
+    setCartPanel((prev) => !prev)
   }
 
   const isScrolled = !isHome || scrollProgress > HEADER_ACTIVE_POINT
@@ -145,6 +124,7 @@ const Header = () => {
           scrollProgress={scrollProgress}
           isScrolled={isScrolled}
           isHome={isHome}
+          onCartClick={handleCartClick}
         />
       </header>
 
@@ -156,13 +136,20 @@ const Header = () => {
         onEnter={handleMenuEnter}
       />
 
+
       <div
-        className={`user-menu-overlay ${userMenu ? 'active' : ''}`}
-        onClick={closeBtn}
+        className={`user-menu-overlay ${userMenu || cartPanel ? 'active' : ''}`}
+        onClick={() => { closeBtn(); setCartPanel(false) }}
       />
+
 
       <div className={`user-menu-wrap ${userMenu ? 'active' : ''}`}>
         <UserMenu userClose={closeBtn} userMenu={userMenu} />
+      </div>
+
+
+      <div className={`user-menu-wrap ${cartPanel ? 'active' : ''}`}>
+        <CartPanel onClose={() => setCartPanel(false)} />
       </div>
 
       <div

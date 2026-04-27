@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useProductStore } from '../store/useProductStore';
+import { useCustomWishStore } from '../store/useCustomWishStore';
 
 import "./scss/wishlist.scss";
 //import "./scss/mypage.scss";
@@ -10,10 +11,18 @@ export default function WishList() {
     const {
         wishlist,
         onRemoveWish,
+    } = useProductStore();
+
+    const {
         wishFolders = [],
         onCreateWishFolder,
         onMoveToWishFolder,
-        onDeleteWishFolder } = useProductStore();
+        onDeleteWishFolder,
+        onRenameWishFolder,
+        onRemoveItemsFromWishFolder,
+        onClearWishFolderItems
+    } = useCustomWishStore();
+
     //체크된 항목 저장할 변수 (결제하기에 넘겨줄 변수)
     const [checkedItems, setCheckedItems] = useState([]);
 
@@ -26,6 +35,13 @@ export default function WishList() {
     const [newFolderName, setNewFolderName] = useState("");
     //커스텀 위시리스트 - 더보기 메뉴 상태 추가
     const [openFolderMenuId, setOpenFolderMenuId] = useState(null);
+
+    //사이드바 종류 분리 - selected/folder
+    const [sidebarMode, setSidebarMode] = useState("selected");
+
+    const [selectedFolderId, setSelectedFolderId] = useState(null);
+    const [editFolderName, setEditFolderName] = useState("");
+
 
     const navigate = useNavigate();
     //체크박스 체크 시 실행할 메서드
@@ -121,68 +137,72 @@ export default function WishList() {
                                 <div
                                     className={`wish-folder-tab-item ${activeFolderId === "all" ? "active" : ""
                                         }`}
+                                    onClick={() => {
+                                        setActiveFolderId("all");
+                                        setOpenFolderMenuId(null);
+                                        setCheckedItems([]);
+                                    }}
                                 >
                                     <button
                                         className="wish-folder-tab-btn"
-                                        onClick={() => {
-                                            setActiveFolderId("all");
-                                            setOpenFolderMenuId(null);
-                                        }}
+                                        type="button"
                                     >
-                                        전체
+                                        <span>전체</span>
+                                        <div className="wish-folder-preview wish-folder-preview-empty">
+                                            <span>ALL</span>
+                                        </div>
                                     </button>
                                 </div>
 
                                 {/* 폴더들 */}
-                                {wishFolders.map((folder) => (
-                                    <div
-                                        key={folder.id}
-                                        className={`wish-folder-tab-item ${activeFolderId === folder.id ? "active" : ""
-                                            }`}
-                                    >
-                                        <button
-                                            className="wish-folder-tab-btn"
+                                {wishFolders.map((folder) => {
+                                    const folderItems = wishlist.filter((item) =>
+                                        folder.itemIds.includes(item.id)
+                                    );
+                                    return (
+                                        <div
+                                            key={folder.id}
+                                            className={`wish-folder-tab-item ${activeFolderId === folder.id ? "active" : ""
+                                                }`}
                                             onClick={() => {
                                                 setActiveFolderId(folder.id);
                                                 setOpenFolderMenuId(null);
+                                                setCheckedItems([]);
                                             }}
                                         >
-                                            {folder.name}
-                                        </button>
+                                            <button
+                                                className="wish-folder-tab-btn"
+                                            >
+                                                <span>{folder.name}</span>
 
-                                        <button
-                                            type="button"
-                                            className="wish-folder-more-btn"
-                                            onClick={(e) => {
-                                                e.stopPropagation();
-                                                setOpenFolderMenuId(
-                                                    openFolderMenuId === folder.id ? null : folder.id
-                                                );
-                                            }}
-                                        >
-                                            ⋯
-                                        </button>
+                                                <div className="wish-folder-preview">
+                                                    {folderItems.slice(0, 3).map((item) => (
+                                                        <img
+                                                            key={item.id}
+                                                            src={item.productImages[0]}
+                                                            alt={item.name}
+                                                        />
+                                                    ))}
+                                                </div>
+                                            </button>
 
-                                        {openFolderMenuId === folder.id && (
-                                            <div className="wish-folder-menu">
-                                                <button
-                                                    type="button"
-                                                    onClick={() => {
-                                                        onDeleteWishFolder(folder.id);
-
-                                                        if (activeFolderId === folder.id) {
-                                                            setActiveFolderId("all");
-                                                        }
-
-                                                        setOpenFolderMenuId(null);
-                                                    }}
-                                                >
-                                                    삭제하기
-                                                </button>
-                                            </div>
-                                        )}
-                                    </div>
-                                ))}
+                                            <button
+                                                type="button"
+                                                className="wish-folder-more-btn"
+                                                onClick={(e) => {
+                                                    e.stopPropagation();
+                                                    setSidebarMode("folder");
+                                                    setSelectedFolderId(folder.id);
+                                                    setEditFolderName(folder.name);
+                                                    setIsWishSidebarOpen(true);
+                                                    setWishSidebarStep("folderMain");
+                                                }}
+                                            >
+                                                ⋯
+                                            </button>
+                                        </div>
+                                    );
+                                })}
                             </div>
                         )}
                         {
@@ -205,6 +225,7 @@ export default function WishList() {
                                         <div className='wish-control-btn-wrap'>
                                             <div className='wish-control-btn wish-control-btn-ctrl'
                                                 onClick={() => {
+                                                    setSidebarMode("selected");
                                                     setIsWishSidebarOpen(true);
                                                     setWishSidebarStep("main")
                                                 }}>관리</div>
@@ -299,20 +320,38 @@ export default function WishList() {
                         onClick={(e) => e.stopPropagation()}
                     >
                         <div className="wish-sidebar-header">
-                            {wishSidebarStep !== "main" && (
+                            {wishSidebarStep !== "main" && wishSidebarStep !== "folderMain" && (
                                 <button
                                     type="button"
                                     className="wish-sidebar-back"
-                                    onClick={() => setWishSidebarStep("main")}
+                                    onClick={() => {
+                                        if (wishSidebarStep === "folderCreate") {
+                                            setWishSidebarStep("folderMove");
+                                        } else {
+                                            setWishSidebarStep(
+                                                sidebarMode === "folder" ? "folderMain" : "main"
+                                            );
+                                        }
+                                    }}
                                 >
                                     ←
                                 </button>
                             )}
 
                             <h3>
-                                {wishSidebarStep === "main" && "위시리스트 관리"}
-                                {wishSidebarStep === "moveList" && "다른 위시리스트로 이동"}
-                                {wishSidebarStep === "createList" && "위시리스트 만들기"}
+                                {sidebarMode === "selected" && wishSidebarStep === "main" && "위시리스트 관리"}
+                                {sidebarMode === "selected" && wishSidebarStep === "moveList" && "다른 위시리스트로 이동"}
+                                {sidebarMode === "selected" && wishSidebarStep === "createList" && "위시리스트 만들기"}
+
+
+                                {sidebarMode === "folder" && wishSidebarStep === "folderMain" && "위시리스트 설정"}
+                                {sidebarMode === "folder" && wishSidebarStep === "renameFolder" && "이름 바꾸기"}
+                                {sidebarMode === "folder" && wishSidebarStep === "folderMove" && "다른 위시리스트로 이동"}
+
+                                <h3>
+                                    {sidebarMode === "folder" && wishSidebarStep === "folderMove" && ""}
+                                    {sidebarMode === "folder" && wishSidebarStep === "folderCreate" && "위시리스트 만들기"}
+                                </h3>
                             </h3>
 
                             <button
@@ -413,6 +452,200 @@ export default function WishList() {
                                     </button>
                                 </>
                             )}
+                            {/* 폴더관리 - 메인 */}
+                            {sidebarMode === "folder" && wishSidebarStep === "folderMain" && (() => {
+                                const targetFolder = wishFolders.find(
+                                    (folder) => folder.id === selectedFolderId
+                                );
+
+                                const folderItems = wishlist.filter((item) =>
+                                    targetFolder?.itemIds.includes(item.id)
+                                );
+
+                                return (
+                                    <>
+                                        <p className="wish-sidebar-desc">
+                                            {targetFolder?.name} · {folderItems.length}개 상품
+                                        </p>
+
+                                        <button
+                                            className="wish-sidebar-menu-btn"
+                                            onClick={() => {
+                                                setEditFolderName(targetFolder?.name || "");
+                                                setWishSidebarStep("renameFolder");
+                                            }}
+                                        >
+                                            위시리스트 이름 바꾸기
+                                            <span>›</span>
+                                        </button>
+
+                                        <button
+                                            className="wish-sidebar-menu-btn"
+                                            onClick={() => {
+                                                onRemoveItemsFromWishFolder(
+                                                    selectedFolderId,
+                                                    targetFolder?.itemIds || []
+                                                );
+                                                setIsWishSidebarOpen(false);
+                                            }}
+                                        >
+                                            여기에 담은 아이템을 목록에서 삭제하기
+                                            <span>›</span>
+                                        </button>
+
+                                        <button
+                                            className="wish-sidebar-menu-btn"
+                                            onClick={() => setWishSidebarStep("folderMove")}
+                                        >
+                                            다른 위시리스트 폴더로 이동하기
+                                            <span>›</span>
+                                        </button>
+
+                                        <button
+                                            className="wish-sidebar-delete-btn"
+                                            onClick={() => {
+                                                onDeleteWishFolder(selectedFolderId);
+
+                                                if (activeFolderId === selectedFolderId) {
+                                                    setActiveFolderId("all");
+                                                }
+
+                                                setIsWishSidebarOpen(false);
+                                            }}
+                                        >
+                                            위시리스트 삭제하기
+                                        </button>
+                                    </>
+                                );
+                            })()}
+                            {/* 폴더관리 - 이름바꾸기 */}
+                            {sidebarMode === "folder" && wishSidebarStep === "renameFolder" && (
+                                <>
+                                    <label className="wish-input-label">
+                                        새 위시리스트 이름
+                                    </label>
+
+                                    <input
+                                        className="wish-folder-input"
+                                        value={editFolderName}
+                                        onChange={(e) => setEditFolderName(e.target.value)}
+                                        placeholder="위시리스트 이름"
+                                    />
+
+                                    <button
+                                        className="wish-submit-btn"
+                                        onClick={() => {
+                                            if (!editFolderName.trim()) return;
+
+                                            onRenameWishFolder(selectedFolderId, editFolderName);
+                                            setWishSidebarStep("folderMain");
+                                        }}
+                                    >
+                                        저장하기
+                                    </button>
+                                </>
+                            )}
+                            {/* 폴더관리 - 선택한 아이템 다른 폴더로 이동 */}
+                            {sidebarMode === "folder" && wishSidebarStep === "folderMove" && (() => {
+                                const targetFolder = wishFolders.find(
+                                    (folder) => folder.id === selectedFolderId
+                                );
+
+                                const itemIdsToMove = targetFolder?.itemIds || [];
+                                const movableFolders = wishFolders.filter(
+                                    (folder) => folder.id !== selectedFolderId
+                                );
+
+                                return (
+                                    <>
+                                        <p className="wish-sidebar-desc">
+                                            이동할 폴더를 선택하세요.
+                                        </p>
+
+                                        <div className="wish-folder-list">
+                                            {movableFolders.length === 0 && (
+                                                <p className="wish-folder-empty">
+                                                    이동할 수 있는 다른 위시리스트가 없습니다.
+                                                </p>
+                                            )}
+
+                                            {movableFolders.map((folder) => (
+                                                <button
+                                                    key={folder.id}
+                                                    className="wish-folder-btn"
+                                                    onClick={() => {
+                                                        onMoveToWishFolder(folder.id, itemIdsToMove);
+                                                        onRemoveItemsFromWishFolder(
+                                                            selectedFolderId,
+                                                            itemIdsToMove
+                                                        );
+
+                                                        setActiveFolderId(folder.id);
+                                                        setIsWishSidebarOpen(false);
+                                                    }}
+                                                >
+                                                    {folder.name}
+                                                </button>
+                                            ))}
+                                        </div>
+
+                                        <button
+                                            className="wish-create-btn"
+                                            onClick={() => {
+                                                setNewFolderName("");
+                                                setWishSidebarStep("folderCreate");
+                                            }}
+                                        >
+                                            + 새 위시리스트 만들기
+                                        </button>
+                                    </>
+                                );
+                            })()}
+                            {/* 폴더관리 - 이동용 새 폴더 만들기 */}
+                            {sidebarMode === "folder" && wishSidebarStep === "folderCreate" && (() => {
+                                const targetFolder = wishFolders.find(
+                                    (folder) => folder.id === selectedFolderId
+                                );
+
+                                const itemIdsToMove = targetFolder?.itemIds || [];
+
+                                return (
+                                    <>
+                                        <label className="wish-input-label">
+                                            새 위시리스트 이름
+                                        </label>
+
+                                        <input
+                                            className="wish-folder-input"
+                                            value={newFolderName}
+                                            onChange={(e) => setNewFolderName(e.target.value)}
+                                            placeholder="위시리스트 이름을 적어주세요"
+                                        />
+
+                                        <button
+                                            className="wish-submit-btn"
+                                            onClick={() => {
+                                                const folderName = newFolderName.trim();
+                                                if (!folderName) return;
+
+                                                const newFolderId = onCreateWishFolder(folderName);
+
+                                                onMoveToWishFolder(newFolderId, itemIdsToMove);
+                                                onRemoveItemsFromWishFolder(
+                                                    selectedFolderId,
+                                                    itemIdsToMove
+                                                );
+
+                                                setNewFolderName("");
+                                                setActiveFolderId(newFolderId);
+                                                setIsWishSidebarOpen(false);
+                                            }}
+                                        >
+                                            만들고 이동하기
+                                        </button>
+                                    </>
+                                );
+                            })()}
                         </div>
                     </div>
                 </div>

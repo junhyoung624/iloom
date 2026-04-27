@@ -6,6 +6,7 @@ import { useProductStore } from '../store/useProductStore'
 import { useAuthStore } from '../store/useAuthStore'
 import WishlistGuardPopup from '../pages/WishlistGuardPopup'
 import InquiryDock from './InquiryDock'
+import { productData } from '../data/productData'
 
 export default function DockTab() {
     const { cartItems } = useProductStore()
@@ -14,6 +15,21 @@ export default function DockTab() {
     const [showPopup, setShowPopup] = useState(false)
     const [showPhone, setShowPhone] = useState(false)
     const [showInquiry, setShowInquiry] = useState(false)
+
+    const cartPreviewItems = cartItems
+        .map((cartItem) => {
+            const product = productData.find((item) => item.id === cartItem.id)
+            if (!product) return null
+
+            return {
+                ...product,
+                qty: cartItem.qty,
+                color: cartItem.color,
+            }
+        })
+        .filter(Boolean)
+        .slice(0, 4)
+
 
     const handleWishlistClick = (e) => {
         if (!user) { e.preventDefault(); setShowPopup(true) }
@@ -44,16 +60,64 @@ export default function DockTab() {
                     <DockSeparator />
 
                     <DockIcon>
-                        <Link to="/cart" style={{ position: "relative" }}>
-                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                <circle cx="9" cy="21" r="1" /><circle cx="20" cy="21" r="1" />
-                                <path d="M1 1h4l2.68 13.39a2 2 0 001.99 1.61h9.72a2 2 0 001.99-1.61L23 6H6" />
-                            </svg>
-                            {cartCount > 0 && (
-                                <span className="dock-cart-badge">{cartCount}</span>
+                        <div className="dock-cart-wrap">
+                            <Link to="/cart" className="dock-cart-link">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                    <circle cx="9" cy="21" r="1" />
+                                    <circle cx="20" cy="21" r="1" />
+                                    <path d="M1 1h4l2.68 13.39a2 2 0 001.99 1.61h9.72a2 2 0 001.99-1.61L23 6H6" />
+                                </svg>
+
+                                {cartCount > 0 && (
+                                    <span className="dock-cart-badge">{cartCount}</span>
+                                )}
+                            </Link>
+
+                            {cartPreviewItems.length > 0 && (
+                                <div className="dock-cart-preview">
+                                    <div className="dock-cart-preview__head">
+                                        <div>
+                                            <span>장바구니 미리보기</span>
+                                            <p>담은 상품을 바로 확인해보세요</p>
+                                        </div>
+                                        <strong>{cartCount}</strong>
+                                    </div>
+
+                                    <div className="dock-cart-preview__list">
+                                        {cartPreviewItems.map((item) => (
+                                            <Link
+                                                to={`/product/${item.id}`}
+                                                className="dock-cart-preview__item"
+                                                key={`${item.id}-${item.color}`}
+                                            >
+                                                <div className="dock-cart-preview__thumb">
+                                                    <img src={item.productImages?.[0]} alt={item.name} />
+
+                                                    {item.qty > 1 && (
+                                                        <span className="dock-cart-preview__qty">x{item.qty}</span>
+                                                    )}
+                                                </div>
+
+                                                <div className="dock-cart-preview__info">
+                                                    <p className="dock-cart-preview__series">{item.series}</p>
+                                                    <p className="dock-cart-preview__name">{item.name}</p>
+                                                    {item.color && (
+                                                        <span className="dock-cart-preview__color">{item.color}</span>
+                                                    )}
+                                                </div>
+                                            </Link>
+                                        ))}
+                                    </div>
+
+                                    {cartItems.length > 4 && (
+                                        <Link to="/cart" className="dock-cart-preview__more">
+                                            +{cartItems.length - 4}개 더 보기
+                                        </Link>
+                                    )}
+                                </div>
                             )}
-                        </Link>
+                        </div>
                     </DockIcon>
 
                     <DockIcon>
@@ -67,7 +131,7 @@ export default function DockTab() {
 
                     <DockSeparator />
 
-                    {/* ✅ 문의 아이콘 */}
+
                     <DockIcon>
                         <button
                             type="button"
