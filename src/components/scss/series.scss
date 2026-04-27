@@ -1,5 +1,5 @@
 @use "../../App.scss" as g;
-@import '../../variables.scss';
+@use '../../variables.scss' as v;
 
 .series {
     width: 100%;

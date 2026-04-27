@@ -52,7 +52,7 @@ const Order = () => {
                                 <p className='order-item-id'>품번 : {item.id}</p>
                               </div>
                               <div className="order-item-img">
-                                <img src={item.productImages?.[0]} alt="." />
+                                <img src={item.productImages?.[0] } alt="." />
                               </div>
                               <div className="order-item-txt-info">
                                 <p className='series'>{item.series}</p>
