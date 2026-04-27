@@ -677,6 +677,7 @@ export default function Charge() {
                 </div>
             </div>
 
+            {/* 결제여부 재확인 모달 */}
             {confirmPay && <ChargeModal onClose={handleClosePopup} onConfirm={handleFinalConfirm} />}
 
             {/* 카드 등록 모달 */}
