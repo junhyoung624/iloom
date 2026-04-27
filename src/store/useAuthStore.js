@@ -35,9 +35,36 @@ export const useAuthStore = create((set, get) => ({
 
                 const { useProductStore } = await import('./useProductStore');
                 await useProductStore.getState().fetchOrderList({ uid: u.uid });
-                await useProductStore.getState().fetchCartItems({ uid: u.uid }); // 장바구니 복원
+                await useProductStore.getState().fetchCartItems({ uid: u.uid });
+
             } else {
-                set({ user: null })
+                const socialUid = localStorage.getItem("social_uid");
+                const socialProvider = localStorage.getItem("social_provider");
+
+                if (socialUid) {
+                    try {
+                        const userRef = doc(db, "people", socialUid);
+                        const userSnap = await getDoc(userRef);
+
+                        if (userSnap.exists()) {
+                            const userInfo = userSnap.data();
+                            set({ user: { ...userInfo, provider: socialProvider } });
+
+                            const { useProductStore } = await import('./useProductStore');
+                            await useProductStore.getState().fetchOrderList({ uid: socialUid });
+                            await useProductStore.getState().fetchCartItems({ uid: socialUid });
+                        } else {
+                            localStorage.removeItem("social_uid");
+                            localStorage.removeItem("social_provider");
+                            set({ user: null });
+                        }
+                    } catch (err) {
+                        console.error("소셜 로그인 복원 실패:", err);
+                        set({ user: null });
+                    }
+                } else {
+                    set({ user: null })
+                }
             }
         })
     },
@@ -97,10 +124,12 @@ export const useAuthStore = create((set, get) => ({
     // 로그아웃
     onLogout: async () => {
         await signOut(auth);
+        localStorage.removeItem("social_uid");
+        localStorage.removeItem("social_provider");
         const { useProductStore } = await import('./useProductStore');
-        useProductStore.getState().clearCartItems();  // 장바구니 초기화
-        useProductStore.getState().clearOrderList();  // 주문 목록 초기화
-        useProductStore.getState().clearWishlist();   // 위시리스트 초기화
+        useProductStore.getState().clearCartItems();
+        useProductStore.getState().clearOrderList();
+        useProductStore.getState().clearWishlist();
         set({ user: null })
     },
 
@@ -219,6 +248,8 @@ export const useAuthStore = create((set, get) => ({
                     "socials.kakao": { email: kakaoEmail, linked: true }
                 });
             } else {
+                localStorage.setItem("social_uid", uid);
+                localStorage.setItem("social_provider", "kakao");
                 set({ user: { ...kakaoUser, socials: { kakao: { email: kakaoEmail, linked: true } } } })
             }
 
@@ -280,6 +311,8 @@ export const useAuthStore = create((set, get) => ({
                     }
                 })
             } else {
+                localStorage.setItem("social_uid", naverUser.uid);
+                localStorage.setItem("social_provider", "naver");
                 set({ user: naverUser })
             }
 
@@ -300,26 +333,44 @@ export const useAuthStore = create((set, get) => ({
             }
             const userRef = doc(db, "people", u.uid)
             if (provider === "google") {
-                if (!auth.currentUser) {
-                    alert("로그인이 필요합니다")
-                    return
-                }
-                await linkWithPopup(auth.currentUser, googleProvider)
-                const googleEmail = auth.currentUser.providerData
-                    .find(p => p.providerId === "google.com")?.email
+                if (auth.currentUser) {
+                    // 이메일/구글 로그인 유저 → 기존 방식 유지
+                    await linkWithPopup(auth.currentUser, googleProvider)
+                    const googleEmail = auth.currentUser.providerData
+                        .find(p => p.providerId === "google.com")?.email
 
-                await updateDoc(userRef, {
-                    "socials.google": { email: googleEmail, linked: true }
-                })
-                set({
-                    user: {
-                        ...get().user,
-                        socials: {
-                            ...get().user?.socials,
-                            google: { email: googleEmail, linked: true }
+                    await updateDoc(userRef, {
+                        "socials.google": { email: googleEmail, linked: true }
+                    })
+                    set({
+                        user: {
+                            ...get().user,
+                            socials: {
+                                ...get().user?.socials,
+                                google: { email: googleEmail, linked: true }
+                            }
                         }
-                    }
-                })
+                    })
+                } else {
+                    // 카카오/네이버 로그인 유저 → 팝업만 띄워서 이메일 저장
+                    const result = await signInWithPopup(auth, googleProvider)
+                    const googleEmail = result.user.email
+
+                    await signOut(auth)
+
+                    await updateDoc(userRef, {
+                        "socials.google": { email: googleEmail, linked: true }
+                    })
+                    set({
+                        user: {
+                            ...get().user,
+                            socials: {
+                                ...get().user?.socials,
+                                google: { email: googleEmail, linked: true }
+                            }
+                        }
+                    })
+                }
             } else if (provider === "kakao") {
                 if (!window.Kakao.isInitialized()) {
                     window.Kakao.init('15ae98903af08e0b25e2d43e5b601235')
@@ -364,7 +415,11 @@ export const useAuthStore = create((set, get) => ({
             const userRef = doc(db, "people", u.uid)
 
             if (provider === "google") {
-                await unlink(auth.currentUser, "google.com")
+                if (auth.currentUser) {
+                    // 이메일/구글 로그인 유저 → Firebase unlink
+                    await unlink(auth.currentUser, "google.com")
+                }
+                // 카카오/네이버 로그인 유저 → Firebase Auth 세션 없으니 그냥 Firestore만 업데이트
             }
 
             await updateDoc(userRef, {
@@ -402,9 +457,16 @@ export const useAuthStore = create((set, get) => ({
 
             await deleteDoc(userRef)
 
-            if (auth.currentUser) {
-                await deleteUser(auth.currentUser)
+            try {
+                if (auth.currentUser) {
+                    await deleteUser(auth.currentUser)
+                }
+            } catch (deleteErr) {
+                console.error("Firebase 유저 삭제 실패:", deleteErr)
             }
+
+            localStorage.removeItem("social_uid")
+            localStorage.removeItem("social_provider")
 
             if (u.provider === "kakao" && window.Kakao?.isInitialized()) {
                 await new Promise((resolve) => {
