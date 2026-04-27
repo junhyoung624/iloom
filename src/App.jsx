@@ -39,12 +39,14 @@ import FurniturePage from './components/FurniturePage'
 import { addTestOrder } from './firebase/orderService'
 import OrderForGuest from './pages/OrderForGuest'
 import DockTab from './components/DockTab'
+import StickyBanner from './components/StickyBanner'
+import InquiryPage from './pages/InquiryPage'
 
 function App() {
   const [isLoading, setIsLoading] = useState(true)
   const { onfetchItems, onMakeMenu, fetchWishlist, clearWishlist } = useProductStore() // ← fetchWishlist, clearWishlist 추가
   const { initAuth, user } = useAuthStore() // ← user 추가
-
+  const [bannerVisible, setBannerVisible] = useState(true)
   useEffect(() => {
     onfetchItems()
     onMakeMenu()
@@ -69,11 +71,19 @@ function App() {
     window.__appLoaded = true
   }
 
+  useEffect(() => {
+    document.documentElement.style.setProperty(
+      '--banner-height',
+      bannerVisible ? '40px' : '0px'
+    )
+  }, [bannerVisible])
+
   return (
     <>
       {isLoading && <LoadingScreen onFinish={handleFinish} />}
 
       <ScrollTop />
+      <StickyBanner onClose={() => setBannerVisible(false)} />
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -98,6 +108,7 @@ function App() {
         <Route path="/company-info" element={<CompanyInfo />} />
         <Route path='/companypage' element={<CompanyPage />} />
         <Route path='/mypage' element={<MyPage />} />
+        <Route path='/inquiry' element={<InquiryPage />} />
         <Route path='/leavepage' element={<LeavePage />} />
         <Route path='/naver-callback' element={<NaverCallback />} />
         <Route path='/product/:id' element={<ProductDetail />} />

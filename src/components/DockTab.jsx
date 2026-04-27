@@ -5,6 +5,7 @@ import "./scss/docktab.scss"
 import { useProductStore } from '../store/useProductStore'
 import { useAuthStore } from '../store/useAuthStore'
 import WishlistGuardPopup from '../pages/WishlistGuardPopup'
+import InquiryDock from './InquiryDock'
 
 export default function DockTab() {
     const { cartItems } = useProductStore()
@@ -12,25 +13,17 @@ export default function DockTab() {
     const cartCount = cartItems.length
     const [showPopup, setShowPopup] = useState(false)
     const [showPhone, setShowPhone] = useState(false)
+    const [showInquiry, setShowInquiry] = useState(false)
 
     const handleWishlistClick = (e) => {
-        if (!user) {
-            e.preventDefault()
-            setShowPopup(true)
-        }
+        if (!user) { e.preventDefault(); setShowPopup(true) }
     }
 
-    const handlePhoneClick = () => {
-        setShowPhone(true)
-    }
+    const handlePhoneClick = () => setShowPhone(true)
 
     useEffect(() => {
         if (!showPhone) return
-
-        const timer = setTimeout(() => {
-            setShowPhone(false)
-        }, 2000)
-
+        const timer = setTimeout(() => setShowPhone(false), 2000)
         return () => clearTimeout(timer)
     }, [showPhone])
 
@@ -54,8 +47,7 @@ export default function DockTab() {
                         <Link to="/cart" style={{ position: "relative" }}>
                             <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
                                 stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                <circle cx="9" cy="21" r="1" />
-                                <circle cx="20" cy="21" r="1" />
+                                <circle cx="9" cy="21" r="1" /><circle cx="20" cy="21" r="1" />
                                 <path d="M1 1h4l2.68 13.39a2 2 0 001.99 1.61h9.72a2 2 0 001.99-1.61L23 6H6" />
                             </svg>
                             {cartCount > 0 && (
@@ -65,11 +57,7 @@ export default function DockTab() {
                     </DockIcon>
 
                     <DockIcon>
-                        <Link
-                            to="/wishlist"
-                            onClick={handleWishlistClick}
-                            style={{ opacity: user ? 1 : 0.4 }}
-                        >
+                        <Link to="/wishlist" onClick={handleWishlistClick} style={{ opacity: user ? 1 : 0.4 }}>
                             <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
                                 stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                 <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
@@ -77,12 +65,25 @@ export default function DockTab() {
                         </Link>
                     </DockIcon>
 
+                    <DockSeparator />
+
+                    {/* ✅ 문의 아이콘 */}
                     <DockIcon>
                         <button
                             type="button"
                             className="dock-phone-btn"
-                            onClick={handlePhoneClick}
+                            onClick={() => setShowInquiry((v) => !v)}
+                            style={{ color: showInquiry ? '#111' : 'inherit' }}
                         >
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                            </svg>
+                        </button>
+                    </DockIcon>
+
+                    <DockIcon>
+                        <button type="button" className="dock-phone-btn" onClick={handlePhoneClick}>
                             <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
                                 stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.08 4.18 2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72c.12.9.34 1.78.66 2.62a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.46-1.18a2 2 0 0 1 2.11-.45c.84.32 1.72.54 2.62.66A2 2 0 0 1 22 16.92z" />
@@ -91,23 +92,11 @@ export default function DockTab() {
                     </DockIcon>
 
                     <DockIcon>
-                        <a
-                            href="https://www.instagram.com/p/DXbydlXkpfn/"
-                            target="_blank"
-                            rel="noreferrer"
-                            className="dock-instagram-btn"
-                            aria-label="인스타그램"
-                        >
-                            <svg
-                                width="22"
-                                height="22"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                            >
+                        <a href="https://www.instagram.com/p/DXbydlXkpfn/"
+                            target="_blank" rel="noreferrer"
+                            className="dock-instagram-btn" aria-label="인스타그램">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                 <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
                                 <path d="M16 11.37a4 4 0 1 1-2.37-3.63 4 4 0 0 1 2.37 3.63z" />
                                 <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
@@ -117,12 +106,8 @@ export default function DockTab() {
                 </Dock>
             </div>
 
-            {showPhone && (
-                <div className="dock-phone-toast">
-                    <span>1577-5670</span>
-                </div>
-            )}
-
+            {showInquiry && <InquiryDock onClose={() => setShowInquiry(false)} />}
+            {showPhone && <div className="dock-phone-toast"><span>1577-5670</span></div>}
             {showPopup && <WishlistGuardPopup onClose={() => setShowPopup(false)} />}
         </div>
     )
