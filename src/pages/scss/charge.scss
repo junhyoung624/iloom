@@ -212,9 +212,7 @@
         }
     }
 
-    .order-item:hover {
-        border: 1px solid black;
-    }
+
 
     .product-info {
         justify-content: flex-start !important;
@@ -851,4 +849,362 @@
     color: red;
     font-weight: 700;
     font-size: 1rem;
+}
+
+
+.discount-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border-top: 1px solid #ddd;
+}
+
+.discount-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 28px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.discount-label {
+    width: 170px;
+    flex-shrink: 0;
+    font-size: 15px;
+    font-weight: 700;
+    color: #222;
+    padding-top: 10px;
+}
+
+.discount-content {
+    flex: 1;
+}
+
+.coupon-select-area {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.coupon-select-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 420px;
+    height: 48px;
+    padding: 0 16px;
+    border: 1px solid #ddd;
+    background: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    transition: border-color 0.2s;
+
+    &:hover {
+        border-color: #333;
+    }
+}
+
+.coupon-placeholder {
+    color: #aaa;
+}
+
+.coupon-selected-name {
+    color: #111;
+    font-weight: 500;
+    flex: 1;
+    text-align: left;
+}
+
+.coupon-count-badge {
+    margin-left: auto;
+    font-size: 12px;
+    color: #888;
+    background: #f5f5f5;
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.coupon-discount-amount {
+    font-size: 16px;
+    font-weight: 700;
+    color: #e44;
+}
+
+.coupon-dropdown {
+    margin-top: 4px;
+    width: 420px;
+    border: 1px solid #ddd;
+    background: #fff;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    list-style: none;
+    padding: 4px 0;
+    z-index: 100;
+    position: relative;
+}
+
+.coupon-dropdown-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 16px;
+    cursor: pointer;
+    transition: background 0.15s;
+    border-bottom: 1px solid #f5f5f5;
+
+    &:last-child {
+        border-bottom: none;
+    }
+
+    &:hover:not(.disabled) {
+        background: #fafafa;
+    }
+
+    &.active {
+        background: #f8f8f8;
+    }
+
+    &.disabled {
+        opacity: 0.4;
+        cursor: not-allowed;
+    }
+}
+
+.coupon-item-left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.coupon-item-discount {
+    font-size: 19px;
+    font-weight: 700;
+    color: #111;
+    min-width: 60px;
+}
+
+.coupon-item-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: #111;
+    margin: 0 0 3px;
+}
+
+.coupon-item-desc {
+    font-size: 12px;
+    color: #888;
+    margin: 0 0 2px;
+}
+
+.coupon-item-expiry {
+    font-size: 11px;
+    color: #bbb;
+    margin: 0;
+}
+
+.coupon-item-unavail {
+    font-size: 11px;
+    color: #bbb;
+    background: #f5f5f5;
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.coupon-item-check {
+    color: #111;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+// 일룸머니
+.money-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 10px;
+}
+
+.money-input-wrap {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid #ddd;
+    padding: 0 12px;
+    height: 48px;
+    width: 420px;
+}
+
+.money-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    color: #111;
+    text-align: right;
+}
+
+.money-unit {
+    font-size: 14px;
+    color: #555;
+}
+
+.money-apply-btn,
+.money-all-btn {
+    height: 32px;
+    padding: 0 12px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+
+.money-apply-btn {
+    border: 1px solid #333;
+    background: #fff;
+    color: #333;
+
+    &:hover {
+        background: #333;
+        color: #fff;
+    }
+}
+
+.money-all-btn {
+    border: 1px solid #888;
+    background: #fff;
+    color: #888;
+
+    &:hover {
+        background: #888;
+        color: #fff;
+    }
+}
+
+.money-info-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 13px;
+    color: #888;
+
+    strong {
+        color: #111;
+        font-weight: 600;
+    }
+}
+
+// 할인 최종 요약
+.discount-summary {
+    padding: 24px 0 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.discount-summary-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+    color: #666;
+
+    &.minus {
+        color: #e44;
+    }
+
+    &.total {
+        padding-top: 14px;
+        border-top: 1px solid #efefef;
+        font-size: 16px;
+        color: #111;
+        font-weight: 600;
+        margin-top: 4px;
+    }
+}
+
+.discount-final-price {
+    font-size: 24px;
+    font-weight: 700;
+    color: #111;
+    letter-spacing: -0.02em;
+}
+
+// ✅ 포인트 혜택 섹션
+.point-max-badge {
+    font-size: 15px;
+    font-weight: 600;
+    color: #2e7d32;
+    margin-left: 12px;
+    vertical-align: middle;
+}
+
+.point-section {
+    border-top: 1px solid #ddd;
+}
+
+.point-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 22px 0;
+    border-bottom: 1px solid #f0f0f0;
+
+    &:last-of-type {
+        border-bottom: none;
+    }
+}
+
+.point-row-label {
+    width: 170px;
+    flex-shrink: 0;
+    font-size: 15px;
+    font-weight: 700;
+    color: #222;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.point-tooltip-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    font-size: 10px;
+    color: #aaa;
+    cursor: pointer;
+}
+
+.point-row-right {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.point-earn {
+    font-size: 15px;
+    font-weight: 600;
+    color: #111;
+}
+
+.point-sub-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 13px;
+    color: #888;
+}
+
+.point-green {
+    color: #2e7d32;
+    font-weight: 600;
+}
+
+.point-notice {
+    font-size: 12px;
+    color: #bbb;
+    margin-top: 8px;
+    padding-bottom: 8px;
 }

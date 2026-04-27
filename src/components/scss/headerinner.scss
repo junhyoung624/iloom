@@ -32,11 +32,12 @@
 
 .search-dropdown {
     position: fixed;
+    top: var(--banner-height, 0px);
     width: 100%;
     background: #fff;
     max-height: 0;
     overflow: hidden;
-    transition: 0.5s ease;
+    transition: 0.5s ease, top 0.3s ease;
     opacity: 0;
     pointer-events: none;
     z-index: 1003;
@@ -125,4 +126,27 @@
 
 .header-scroll-nav li:hover a {
     font-weight: 700;
+}
+
+.user-point {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 30px;
+    margin-bottom: 8px;
+
+    &__label {
+        font-size: 20px;
+        color: #888;
+        font-weight: 400;
+        margin-left: 50px;
+    }
+
+    &__value {
+        font-size: 20px;
+        font-weight: 700;
+        color: #CA1230;
+        letter-spacing: -0.02em;
+        margin-right: 25px;
+    }
 }

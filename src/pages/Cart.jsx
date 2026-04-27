@@ -47,8 +47,7 @@ export default function Cart() {
   }, 0)
 
   const shippingPrice = 0
-  const discountPrice = selectedItems.length > 0 ? totalProductPrice / 10 : 0
-  const finalPrice = totalProductPrice + shippingPrice - discountPrice
+  const finalPrice = totalProductPrice + shippingPrice
 
   const recommendItems = productData
     .filter((item) => !cartItems.some((cart) => cart.id === item.id))
@@ -65,7 +64,7 @@ export default function Cart() {
     }, 50)
   }
 
-  if (mergedCartItems.length === 0) {  // ← 조건부 return은 Hook 다 쓴 다음에
+  if (mergedCartItems.length === 0) {
     return (
       <section className="cart-page empty">
         <div className="inner">
@@ -186,12 +185,9 @@ export default function Cart() {
               <strong>{shippingPrice.toLocaleString()}원</strong>
             </div>
             <div className="summary-row discount">
-              <span>할인금액</span>
-              <strong>{discountPrice.toLocaleString()}원</strong>
+
             </div>
-            <div className="coupon-box">
-              <span>Welcome 고객 10% 할인 적용 중</span>
-            </div>
+
             <div className="summary-total">
               <span>상품 결제 예정금액</span>
               <strong>{finalPrice.toLocaleString()}원</strong>
