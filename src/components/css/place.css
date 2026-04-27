@@ -1,3 +1,9 @@
+:root {
+  --main: #303030;
+  --sub: #808080;
+  --line: #c9c9c9;
+}
+
 .place {
   overflow: hidden;
 }
@@ -8,9 +14,21 @@
 .place .title-box {
   text-align: center;
   margin-bottom: 40px;
+  color: var(--main);
+}
+.place .title-box h2 {
+  font-size: 25px;
+  font-weight: 400;
+  margin-bottom: 25px;
+}
+.place .title-box h3 {
+  font-size: 35px;
+  margin-bottom: 54px;
 }
 .place .title-box p {
+  padding: 60px 0 50px 0;
   font-size: 36px;
+  font-weight: 200;
 }
 .place .place-swiper-wrap {
   padding-left: calc((100vw - 1400px) / 2);
@@ -76,7 +94,7 @@
   left: 50%;
   top: 70%;
   transform: translate(-50%, 10px);
-  color: #d7d7d7;
+  color: var(--line);
   font-size: 16px;
   font-weight: 400;
   width: 100%;
@@ -105,9 +123,9 @@
   cursor: pointer;
 }
 .place .place-item .place-btn:hover {
-  background: #030303;
+  background: var(--main);
   color: #fff;
-  border: 1.3px solid #030303;
+  border: 1.3px solid var(--main);
 }
 
 .swiper-button-next {
@@ -146,4 +164,20 @@
   left: -100px;
   z-index: 111;
   rotate: 180deg;
+}
+
+.place-item {
+  position: relative;
+  overflow: hidden;
+}
+.place-item .place-spotlight {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.13) 0%, rgba(255, 255, 255, 0.05) 70%, transparent 80%);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 3;
+  transition: opacity 0.2s ease;
 }

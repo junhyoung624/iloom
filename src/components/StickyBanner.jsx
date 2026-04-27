@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './scss/stickybanner.scss'
 
 const MESSAGES = [
-    "🛋️ 5월 가정의 달 특별 기획전 — 최대 30% 할인",
+    "🛋️ 카드사 프로모션 무이자할부 / 캐시백 혜택을 만나보세요",
     "🚚 5만원 이상 구매 시 무료배송",
     "✨ 일룸 신규 회원가입 시 5,000원 즉시 할인",
 ]

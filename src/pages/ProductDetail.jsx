@@ -10,6 +10,15 @@ import { useAuthStore } from '../store/useAuthStore'
 import { Lens } from './Lens'
 import CheckUserModal from './CheckUserModal'
 
+import CartModal from '../components/CartModal'
+import ZoomModal from '../components/Zoommodal'
+import ReviewModal from '../components/Reviewmodal'
+import TabDetail from '../components/Tabdetail'
+import TabOption from '../components/Taboption'
+import TabReview from '../components/TabReview'
+import TabQna from '../components/TabQna'
+import TabDelivery from '../components/TabDelivery'
+
 const TABS = ['상세정보', '옵션', '인테리어 팁', '상품평', '제품Q&A', '배송/취소/반품']
 
 export default function ProductDetail() {
@@ -25,10 +34,11 @@ export default function ProductDetail() {
     const [quantity, setQuantity] = useState(1)
     const [activeTab, setActiveTab] = useState('상세정보')
     const [showCartModal, setShowCartModal] = useState(false)
-    const [showWishModal, setShowWishModal] = useState(false)
-    const wished = isWished(id);
+    const [showReviewModal, setShowReviewModal] = useState(false)
+    const [showCheckUserModal, setShowCheckUserModal] = useState(false)
     const [zoomImg, setZoomImg] = useState(null)
     const [productReviews, setProductReviews] = useState(initialData)
+    const wished = isWished(id)
 
     useEffect(() => {
         window.scrollTo(0, 0)
@@ -38,7 +48,6 @@ export default function ProductDetail() {
 
     useEffect(() => {
         if (!product) return
-
         const recentItems = JSON.parse(localStorage.getItem("recentProducts") || "[]")
         const newItem = {
             id: product.id,
@@ -62,11 +71,13 @@ export default function ProductDetail() {
 
     const priceNum = parseInt(product.price.replace(/,/g, ''))
     const totalPrice = (priceNum * quantity).toLocaleString()
+    const colorItem = colorData.find(c => c.productCd === product.id)
+    const firstImg = product.productImages[0] || ''
+    const hasThumbnail = colorItem && !colorItem.colorCd.some(cd => firstImg.includes(cd))
+    const productQna = commonQna
 
     const handleTabClick = (tab) => {
         setActiveTab(tab)
-        const el = document.getElementById('tab-content')
-        if (el) el.scrollIntoView({ behavior: 'smooth' })
     }
 
     const getColorImg = (colorValue) => {
@@ -76,70 +87,17 @@ export default function ProductDetail() {
         const idx = codes.indexOf(colorValue)
         return idx !== -1 ? paths[idx] : null
     }
-    const colorItem = colorData.find(c => c.productCd === product.id)
-    const firstImg = product.productImages[0] || ''
-    const hasThumbnail = colorItem && !colorItem.colorCd.some(cd => firstImg.includes(cd))
 
-    const productQna = commonQna
-
-    const avgRating = productReviews && productReviews.length > 0
-        ? (productReviews.reduce((sum, r) => sum + r.rating, 0) / productReviews.length).toFixed(1)
-        : '0.0'
-
-
-    //비회원 로그인 구매 확인 모달
-    const [showCheckUserModal, setShowCheckUserModal] = useState(false);
-
-    const handleMoveToLogin = () => {
-        navigate('/login')
-    }
-
-    const handleMoveToGuestCharge = () => {
-        navigate('/charge', {
-            state: {
-                directBuyItem: {
-                    ...product,
-                    color: selectedOption,
-                    qty: quantity,
-                }
-            }
-        })
-    }
+    const handleTabClick = (tab) => setActiveTab(tab)
 
     const handleBuy = () => {
-        console.log("결제하기 버튼 in");
         if (product.options?.length > 0 && !selectedOption) {
             alert('옵션을 선택해주세요')
             return
         }
-        {
-            //console.log("ffff");
-            user
-                ? navigate('/charge', {
-                    state: {
-                        directBuyItem: {
-                            ...product,
-                            color: selectedOption,
-                            qty: quantity,
-                        }
-                    }
-                })
-                : setShowCheckUserModal(true);
-        }
-        // if (!user) {
-        //     alert("로그인 후 이용하시겠습니까?");
-        // } else {
-        //     navigate('/charge', {
-        //         state: {
-        //             directBuyItem: {
-        //                 ...product,
-        //                 color: selectedOption,
-        //                 qty: quantity,
-        //             }
-        //         }
-        //     })
-        // }
-
+        user
+            ? navigate('/charge', { state: { directBuyItem: { ...product, color: selectedOption, qty: quantity } } })
+            : setShowCheckUserModal(true)
     }
 
     const handleAddCart = () => {
@@ -151,7 +109,6 @@ export default function ProductDetail() {
         setShowCartModal(true)
     }
 
-    // ↓ 수정된 찜하기 핸들러
     const handleWishClick = () => {
         if (!user) {
             alert('로그인 후 이용해주세요.')
@@ -159,7 +116,10 @@ export default function ProductDetail() {
             return
         }
         onToggleWishList(product, user)
-        setShowWishModal(true)
+    }
+
+    const handleReviewSubmit = (newReview) => {
+        setProductReviews(prev => [newReview, ...prev])
     }
 
     return (
@@ -173,29 +133,31 @@ export default function ProductDetail() {
             </div>
 
             <div className="detail-top">
+                {/* 이미지 영역 */}
                 <div className="image-area">
                     <div className="main-image">
                         <Lens zoomFactor={1.5} lensSize={250}>
                             <img src={product.productImages[mainImg]} alt={product.name} />
                         </Lens>
                     </div>
+                    {hasThumbnail && (
+                        <div className="thumb-list">
+                            <div className={mainImg === 0 ? 'active' : ''} onClick={() => setMainImg(0)}>
+                                <img src={product.productImages[0]} alt="썸네일" />
+                            </div>
+                        </div>
+                    )}
                 </div>
 
+                {/* 정보 영역 */}
                 <div className="info-area">
                     <div className="info-top">
                         <p className="brand">{product.series}</p>
                         <h1 className="product-name">{product.name}</h1>
                         <div className="icon-btns">
-                            {/* ↓ 수정된 찜하기 버튼 */}
-                            <button
-                                className={`wish-btn ${wished ? 'active' : ''}`}
-                                onClick={handleWishClick}
-                            >
-                                <img
-                                    src={wished ? '/images/product-detail/like.png' : '/images/product-detail/unlike.png'}
-                                    alt="wish"
-                                    style={{ width: '24px', height: '21px' }}
-                                />
+                            <button className={`wish-btn ${wished ? 'active' : ''}`} onClick={handleWishClick}>
+                                <img src={wished ? '/images/product-detail/like.png' : '/images/product-detail/unlike.png'}
+                                    alt="wish" style={{ width: '24px', height: '21px' }} />
                             </button>
                             <button className="share-btn" onClick={() => {
                                 navigator.clipboard.writeText(window.location.href)
@@ -208,16 +170,13 @@ export default function ProductDetail() {
                     </div>
 
                     <div className="delivery-info">
-                        <strong>배송기간</strong>
-                        <p>약 10일</p>
-                        <strong>배송비</strong>
-                        <p>무료배송</p>
-                        <strong>배송방법</strong>
-                        <p>설치배송</p>
-                        <strong>제품코드</strong>
-                        <p>{product.id}</p>
+                        <strong>배송기간</strong><p>약 10일</p>
+                        <strong>배송비</strong><p>무료배송</p>
+                        <strong>배송방법</strong><p>설치배송</p>
+                        <strong>제품코드</strong><p>{product.id}</p>
                     </div>
 
+                    {/* 옵션 선택 */}
                     {product.options?.map((opt, i) => (
                         <div key={i} className="option-select">
                             <div className="custom-select" onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
@@ -235,14 +194,14 @@ export default function ProductDetail() {
                                     <img src="/images/product-detail/down-arrow.png" alt="down-arrow" />
                                 </span>
                             </div>
-
                             {isDropdownOpen && (
                                 <ul className="dropdown-list">
                                     {(Array.isArray(opt.values) ? opt.values : [opt.values]).map((v, j) => (
                                         <li key={j} onClick={() => {
                                             setSelectedOption(v)
                                             setIsDropdownOpen(false)
-                                            setMainImg(hasThumbnail ? j + 1 : j)
+                                            const imgIndex = hasThumbnail ? j + 1 : j
+                                            if (product.productImages[imgIndex]) setMainImg(imgIndex)
                                         }}>
                                             {getColorImg(v) && (
                                                 <img src={`/images/${getColorImg(v)}`} alt={v} />
@@ -255,13 +214,14 @@ export default function ProductDetail() {
                         </div>
                     ))}
 
+                    {/* 제품 이미지 목록 */}
                     {product.productImages && product.productImages.length > 0 && (
                         <div className="color-product-images">
                             <p className="color-product-label">제품 이미지</p>
                             <div className="color-product-list">
                                 {(hasThumbnail ? product.productImages.slice(1) : product.productImages).map((img, i) => (
                                     <div key={i}
-                                        className={`color-product-item ${mainImg === (hasThumbnail ? i + 1 : 1) ? 'active' : ''}`}
+                                        className={`color-product-item ${mainImg === (hasThumbnail ? i + 1 : i) ? 'active' : ''}`}
                                         onClick={() => setMainImg(hasThumbnail ? i + 1 : i)}>
                                         <img src={img} alt={`제품이미지${i + 1}`} />
                                     </div>
@@ -270,6 +230,7 @@ export default function ProductDetail() {
                         </div>
                     )}
 
+                    {/* 수량/가격 */}
                     {(selectedOption || product.options?.length === 0) && (
                         <div className="selected-option-box">
                             <div className="selected-info">
@@ -298,41 +259,33 @@ export default function ProductDetail() {
                 </div>
             </div>
 
+            {/* 상품 필수 정보 */}
             <div className="product-info-table">
                 <h3>상품필수정보</h3>
                 <table>
                     <tbody>
                         <tr>
-                            <td>품목</td>
-                            <td>{product.category2}</td>
-                            <td>품명</td>
-                            <td>{product.name}</td>
+                            <td>품목</td><td>{product.category2}</td>
+                            <td>품명</td><td>{product.name}</td>
                         </tr>
                         <tr>
-                            <td>크기(mm/중량kg)</td>
-                            <td>*상품페이지 참고</td>
+                            <td>크기(mm/중량kg)</td><td>*상품페이지 참고</td>
                             <td>색상</td>
                             <td>{Array.isArray(product.options?.find(o => o.name === '색상')?.values)
                                 ? product.options.find(o => o.name === '색상').values.join(', ')
                                 : product.options?.find(o => o.name === '색상')?.values || '*상품페이지 참고'}</td>
                         </tr>
                         <tr>
-                            <td>구성품</td>
-                            <td>*상품페이지 참고</td>
-                            <td>제조자/제조국</td>
-                            <td>일룸OEM/대한민국</td>
+                            <td>구성품</td><td>*상품페이지 참고</td>
+                            <td>제조자/제조국</td><td>일룸OEM/대한민국</td>
                         </tr>
                         <tr>
-                            <td>주요 소재/재질</td>
-                            <td>{product.material || '*상품페이지 참고'}</td>
-                            <td>판매자/수입자</td>
-                            <td>(주)일룸</td>
+                            <td>주요 소재/재질</td><td>{product.material || '*상품페이지 참고'}</td>
+                            <td>판매자/수입자</td><td>(주)일룸</td>
                         </tr>
                         <tr>
-                            <td>배송/설치비용</td>
-                            <td>해당사항 없음</td>
-                            <td>품질보증기준</td>
-                            <td>소비자보호법에 의한 1년 무상 A/S</td>
+                            <td>배송/설치비용</td><td>해당사항 없음</td>
+                            <td>품질보증기준</td><td>소비자보호법에 의한 1년 무상 A/S</td>
                         </tr>
                         <tr>
                             <td>AS/책임자와 전화번호</td>
@@ -342,52 +295,20 @@ export default function ProductDetail() {
                 </table>
             </div>
 
+            {/* 탭 */}
             <div className="tab-nav">
                 {TABS.map(tab => (
-                    <button
-                        key={tab}
+                    <button key={tab}
                         className={`tab-btn ${activeTab === tab ? 'active' : ''}`}
-                        onClick={() => handleTabClick(tab)}
-                    >
+                        onClick={() => handleTabClick(tab)}>
                         {tab}
                     </button>
                 ))}
             </div>
 
             <div id="tab-content" className="tab-content">
-                {activeTab === '상세정보' && (
-                    <div className="tab-detail">
-                        {product.detailImg && product.detailImg.length > 0 ? (
-                            product.detailImg.map((img, i) => (
-                                <img key={i} src={img} alt={`상세이미지${i + 1}`} />
-                            ))
-                        ) : (
-                            <p className="no-content">상세이미지가 없습니다.</p>
-                        )}
-                    </div>
-                )}
-
-                {activeTab === '옵션' && (
-                    <div className="tab-option">
-                        <h3>구매 가능한 옵션</h3>
-                        {product.options?.map((opt, i) => (
-                            <div key={i} className="option-group">
-                                <p className="opt-name">{opt.name}</p>
-                                <div className="opt-values-grid">
-                                    {(Array.isArray(opt.values) ? opt.values : [opt.values]).map((v, j) => (
-                                        <div key={j} className="opt-chip-item">
-                                            {opt.name === '색상' && getColorImg(v) && (
-                                                <img src={`/images/${getColorImg(v)}`} alt={v} className="chip-img" />
-                                            )}
-                                            <span className="opt-chip">{v}</span>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                )}
-
+                {activeTab === '상세정보' && <TabDetail product={product} />}
+                {activeTab === '옵션' && <TabOption product={product} getColorImg={getColorImg} />}
                 {activeTab === '인테리어 팁' && (
                     <div className="tab-interior">
                         <div className="interior-tip">
@@ -401,228 +322,41 @@ export default function ProductDetail() {
                         </div>
                     </div>
                 )}
-
                 {activeTab === '상품평' && (
-                    <div className="tab-review">
-                        <div className="review-summary">
-                            <div className="review-rating-wrap">
-                                <div className="rating-big">{avgRating}</div>
-                            </div>
-                            <div className="review-stars-row">
-                                {'★'.repeat(Math.round(Number(avgRating)))}{'☆'.repeat(5 - Math.round(Number(avgRating)))}
-                            </div>
-                            <p>총 리뷰 {productReviews.length}개</p>
-                        </div>
-
-                        {productReviews.length > 0 ? (
-                            <ul className="review-list">
-                                {productReviews.map(r => (
-                                    <li key={r.id} className="review-item">
-                                        <div className="review-top">
-                                            <span className="stars">{"★".repeat(r.rating)}{"☆".repeat(5 - r.rating)}</span>
-                                            <span className="user">{r.userName}</span>
-                                            <span className="date">{r.date}</span>
-                                        </div>
-                                        <p className="review-title">{r.title}</p>
-                                        <div className="review-img">
-                                            {r.images?.map((img, idx) => (
-                                                <img key={idx} src={img} alt={`review${idx + 1}`}
-                                                    onClick={() => setZoomImg(img)}
-                                                    style={{ cursor: 'pointer' }} />
-                                            ))}
-                                        </div>
-                                        <p className="review-content">{r.content}</p>
-                                        <span className="review-option">옵션: {r.option}</span>
-                                    </li>
-                                ))}
-                            </ul>
-                        ) : (
-                            <p className="no-content">아직 작성한 상품평이 없습니다.</p>
-                        )}
-                        <button className="review-write-btn" onClick={() => alert('로그인 후 이용해주세요')}>
-                            상품평 작성하기
-                        </button>
-                    </div>
+                    <TabReview
+                        productReviews={productReviews}
+                        user={user}
+                        onZoomImg={setZoomImg}
+                        onWriteReview={() => setShowReviewModal(true)}
+                    />
                 )}
-
-                {activeTab === '제품Q&A' && (
-                    <div className="tab-qna">
-                        <div className="qna-header">
-                            <p>구매 전 궁금한 점을 문의해주세요.</p>
-                            <button onClick={() => alert('로그인 후 이용해주세요')}>문의하기</button>
-                        </div>
-                        {productQna && productQna.length > 0 ? (
-                            <ul className="qna-list">
-                                {productQna.map((q) => (
-                                    <li key={q.id} className="qna-item">
-                                        <div className="qna-top">
-                                            <span className={`status ${q.status === '답변완료' ? 'done' : ''}`}>
-                                                {q.status}
-                                            </span>
-                                            <span className="user">{q.user}</span>
-                                            <span className="date">{q.date}</span>
-                                        </div>
-                                        <p className="qna-title">Q.{q.title}</p>
-                                        <p className="qna-content">{q.content}</p>
-                                        {q.answer && (
-                                            <div className="qna-answer">
-                                                <strong>A. 답변:</strong>
-                                                <p>{q.answer}</p>
-                                            </div>
-                                        )}
-                                    </li>
-                                ))}
-                            </ul>
-                        ) : (
-                            <div className="no-content">등록된 문의가 없습니다.</div>
-                        )}
-                    </div>
-                )}
-
-                {activeTab === '배송/취소/반품' && (
-                    <div className="tab-delivery">
-                        <div className="delivery-section">
-                            <h3>01.배송비</h3>
-                            <ul>
-                                <li>- 전국 무료 배송 및 설치를 진행하고 있습니다.</li>
-                                <li>- 제주도는 제주 지역 배송비 부담 시, 온라인 주문도 가능합니다.</li>
-                                <li>- 단, 제주도를 제외한 울릉도 등 도서/산간 지역의 경우 택배상품만 온라인 주문이 가능합니다.</li>
-                            </ul>
-                        </div>
-
-                        <div className="delivery-section">
-                            <h3>※ 제주 지역 배송비 관련</h3>
-                            <ul>
-                                <li>1) 배송비 안내</li>
-                                <li>제주 지역 배송비는 소비자가(정가)의 약 4%입니다.</li>
-                                <li>정확한 금액은 주문 이후 결제안내 알림톡을 통해 확인가능합니다.</li>
-                                <li>2) 배송비 입금</li>
-                                <li>주문 이후 발송되는 결제 안내 알림톡을 통해 결제 가능합니다.</li>
-                            </ul>
-                        </div>
-
-                        <div className="delivery-section">
-                            <h3>02.설치배송 상품 배송안내</h3>
-                            <ul>
-                                <li>일룸은 전문시공기사가 배송과 동시에 설치까지 해드립니다.</li>
-                                <li>배송은 주문 확인 후 영업일 기준 7~10일 (주말, 공휴일 제외) 정도 소요합니다.</li>
-                            </ul>
-                            <div className="delivery-process">
-                                <div className="process-step"><span>주문 당일</span><p>배송예정일 확정 알림톡 발송</p></div>
-                                <div className="process-arrow">▶</div>
-                                <div className="process-step"><span>배송 전 3일까지</span><p>배송일 변경 가능</p></div>
-                                <div className="process-arrow">▶</div>
-                                <div className="process-step"><span>배송 전일 오후</span><p>배송 확정 알림톡 발송</p></div>
-                                <div className="process-arrow">▶</div>
-                                <div className="process-step"><span>배송 당일</span><p>설치완료 후 수령확인 서명진행</p></div>
-                            </div>
-                        </div>
-
-                        <div className="delivery-section">
-                            <h3>03. 택배배송 상품 배송안내</h3>
-                            <ul>
-                                <li>택배 상품은 일반택배로 배송되며 주문 당일 배송예정일 알림톡이 발송됩니다.</li>
-                                <li>택배 송장번호는 배송예정일 전일 배송/조회, 알림톡, AI챗봇 주문조회를 통해 확인할 수 있습니다.</li>
-                            </ul>
-                        </div>
-
-                        <div className="delivery-section">
-                            <h3>04. 배송일 변경</h3>
-                            <ul>
-                                <li>배송예정일로부터 영업일 기준 3일전에 변경 요청바랍니다.</li>
-                                <li>희망 배송일 신청은 AI챗봇으로만 가능합니다.</li>
-                            </ul>
-                        </div>
-
-                        <div className="delivery-section">
-                            <h3>주문취소 및 반품 기준</h3>
-                            <table className="return-table">
-                                <tbody>
-                                    <tr>
-                                        <td>주문 후 ~ 배송 전일</td>
-                                        <td>무상 주문 취소 가능</td>
-                                    </tr>
-                                    <tr>
-                                        <td>배송 당일 ~ 배송 후 7일 이내</td>
-                                        <td>구매 품목별 반품비 부과</td>
-                                    </tr>
-                                    <tr>
-                                        <td>7일 이후</td>
-                                        <td>반품 불가</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-
-                        <div className="delivery-section">
-                            <h3>환불 안내</h3>
-                            <ul>
-                                <li>취소일 또는 반환 받은 날로부터 영업일 3일 이내 환불 처리됩니다.</li>
-                                <li>신용카드 결제의 경우 익월 카드사에서 환급 처리됩니다.</li>
-                                <li>무통장입금의 경우 주문 취소 또는 제품 회수 후 입금 계좌 확인 시 3일 이내 환불됩니다.</li>
-                            </ul>
-                        </div>
-
-                        <div className="delivery-section customer-center">
-                            <h3>고객센터</h3>
-                            <p>일룸 고객센터: <strong>1588-6792</strong></p>
-                            <p>운영시간: 평일 09:00 ~ 18:00 (주말/공휴일 휴무)</p>
-                        </div>
-                    </div>
-                )}
+                {activeTab === '제품Q&A' && <TabQna productQna={productQna} user={user} />}
+                {activeTab === '배송/취소/반품' && <TabDelivery />}
             </div>
 
-            {zoomImg && (
-                <div className="zoom-overlay" onClick={() => setZoomImg(null)}>
-                    <img src={zoomImg} alt="확대이미지" onClick={(e) => e.stopPropagation()} />
-                </div>
-            )}
+            {/* 모달들 */}
+            <ZoomModal zoomImg={zoomImg} onClose={() => setZoomImg(null)} />
 
-            {showCartModal && (
-                <div className="cart-modal-overlay" onClick={() => setShowCartModal(false)}>
-                    <div className="cart-modal" onClick={(e) => e.stopPropagation()}>
-                        <div className="cart-modal-text">
-                            <span className="cart-modal-label">CART</span>
-                            <p className="cart-modal-title">장바구니에 담았습니다.</p>
-                            <p className="cart-modal-sub">장바구니 페이지로 이동합니다.</p>
-                        </div>
-                        <div className="cart-modal-btns">
-                            <button
-                                type="button"
-                                className="cart-modal-continue"
-                                onClick={() => setShowCartModal(false)}
-                            >
-                                쇼핑 계속하기
-                            </button>
-                            <button
-                                type="button"
-                                className="cart-modal-go"
-                                onClick={() => {
-                                    setShowCartModal(false)
-                                    navigate('/cart')
-                                }}
-                            >
-                                이동하기
-                            </button>
-                        </div>
-                    </div>
-                </div>
+            {showCartModal && <CartModal onClose={() => setShowCartModal(false)} />}
+
+            {showReviewModal && (
+                <ReviewModal
+                    onClose={() => setShowReviewModal(false)}
+                    onSubmit={handleReviewSubmit}
+                    user={user}
+                    selectedOption={selectedOption}
+                />
             )}
 
             {showCheckUserModal && (
                 <CheckUserModal
-                    moveToLogin={() => {
-                        setShowCheckUserModal(false);
-                        handleMoveToLogin();
-                    }}
+                    moveToLogin={() => { setShowCheckUserModal(false); navigate('/login') }}
                     moveToGuestCharge={() => {
-                        setShowCheckUserModal(false);
-                        handleMoveToGuestCharge();
+                        setShowCheckUserModal(false)
+                        navigate('/charge', { state: { directBuyItem: { ...product, color: selectedOption, qty: quantity } } })
                     }}
                 />
             )}
         </section>
-
-
     )
 }

@@ -1,3 +1,9 @@
+:root {
+  --main: #303030;
+  --sub: #808080;
+  --line: #c9c9c9;
+}
+
 .series {
   width: 100%;
   overflow: hidden;
@@ -9,17 +15,18 @@
   margin: 0 auto;
 }
 .series .title-box {
-  margin-bottom: 40px;
+  margin-bottom: 60px;
+  text-align: center;
 }
-.series .title-box h1 {
-  font-size: 40px;
+.series .title-box h2 {
+  font-size: 42px;
   font-weight: 700;
   margin-bottom: 12px;
+  margin-top: 120px;
 }
-.series .title-box h3 {
-  font-size: 18px;
-  font-weight: 400;
-  color: #666;
+.series .title-box p {
+  font-size: 23px;
+  color: var(--sub);
 }
 .series .img-slide-wrap {
   width: 100%;
@@ -75,8 +82,8 @@
   transition: 0.3s;
 }
 .series .text-box .series-btn:hover {
-  border: 1.3px solid #030303;
-  background: #030303;
+  border: 1.3px solid var(--main);
+  background: var(--main);
 }
 
 .sns-swiper-wrap {
@@ -108,7 +115,6 @@
   display: flex;
   justify-content: center;
   gap: 32px;
-  padding-top: 60px;
 }
 .item .tab-btn-menu button {
   width: auto;
@@ -119,14 +125,14 @@
   flex: 0 0 auto;
 }
 .item .item-card-wrap {
-  padding-top: 70px;
+  padding-top: 60px;
 }
 
 .series-name {
   display: inline-block;
   border: none;
   background: transparent;
-  color: #888;
+  color: var(--sub);
   cursor: pointer;
   position: relative;
   font-size: 18px;
@@ -140,12 +146,12 @@
   bottom: -8px;
   width: 0;
   height: 2px;
-  background: #111;
+  background: var(--main);
   transition: 0.3s;
 }
 
 .series-name.active {
-  color: #111;
+  color: var(--main);
   font-weight: 700;
 }
 
@@ -159,7 +165,8 @@
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 50px;
-  padding: 130px 0;
+  padding-top: 160px;
+  margin-bottom: 10px;
 }
 
 .breadcrumb-list {
