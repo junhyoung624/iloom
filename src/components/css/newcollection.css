@@ -1,0 +1,53 @@
+:root {
+  --main: #303030;
+  --sub: #808080;
+  --line: #c9c9c9;
+}
+
+.new-collection {
+  width: 100%;
+}
+.new-collection .thumbnail {
+  position: relative;
+  width: 100%;
+}
+.new-collection .thumbnail img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.new-collection .text-box {
+  position: absolute;
+  left: 80px;
+  top: 40%;
+  transform: translateY(-50%);
+  color: #fff;
+}
+.new-collection .text-box h1 {
+  text-align: left;
+  margin: 5px 0;
+  font-size: 40px;
+}
+.new-collection .text-box p {
+  text-align: left;
+  font-size: 18px;
+}
+.new-collection .text-box .btn {
+  position: absolute;
+  left: 0;
+  width: 200px;
+  height: 52px;
+  border: 1.4px solid #fff;
+  color: #fff;
+  margin: 30px 0;
+  transition: 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.new-collection .text-box .btn:hover {
+  border: 1.4px solid var(--main);
+  background: var(--main);
+  color: #fff;
+}
