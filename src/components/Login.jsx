@@ -211,11 +211,11 @@ const Login = () => {
                 <h3>주문 상품</h3>
                 {order.items?.map((item, i) => (
                   <div className="order-item" key={i}>
-                    <img src={item.image} alt={item.name} />
+                    <img src={item.productImages?.[0]} alt={item.name} />
                     <div className="order-info">
                       <span className="item-name">{item.name}</span>
-                      <span>{item.option}</span>
-                      <span>{item.quantity}개</span>
+                      <span>{item.color}</span>
+                      <span>{item.qty}개</span>
                       <span className="item-price">{item.price.toLocaleString()}원</span>
                     </div>
                   </div>
