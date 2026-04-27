@@ -146,13 +146,17 @@
 
 .price-tag-active {
     position: relative;
-    display: block;
-
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
 }
 
 .price-tag-hidden {
     position: relative;
-    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+    pointer-events: none; // 숨겨진 상태에서 마우스 이벤트 차단
 }
 
 .dot-active {

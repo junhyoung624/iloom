@@ -1,0 +1,206 @@
+.inquiry-dock {
+    position: fixed;
+    bottom: 130px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 360px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.14);
+    z-index: 1100;
+    overflow: hidden;
+    animation: inquiryPop 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    @keyframes inquiryPop {
+        from {
+            opacity: 0;
+            transform: translateX(-50%) translateY(16px) scale(0.95);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0) scale(1);
+        }
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px 18px 12px;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    &__title {
+        font-size: 14px;
+        font-weight: 600;
+        color: #111;
+        margin: 0;
+    }
+
+    &__header-right {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    &__mypage-btn {
+        font-size: 11px;
+        color: #888;
+        background: none;
+        border: 1px solid #e5e5e5;
+        border-radius: 99px;
+        padding: 3px 10px;
+        cursor: pointer;
+        transition: all 0.2s;
+
+        &:hover {
+            background: #f5f5f5;
+            color: #333;
+        }
+    }
+
+    &__close {
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #aaa;
+        display: flex;
+        align-items: center;
+        padding: 2px;
+
+        &:hover {
+            color: #333;
+        }
+    }
+
+    &__tabs {
+        display: flex;
+        padding: 10px 12px 0;
+        gap: 6px;
+        overflow-x: auto;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    &__tab {
+        flex-shrink: 0;
+        font-size: 12px;
+        padding: 5px 12px;
+        border-radius: 99px;
+        border: 1px solid #e5e5e5;
+        background: #fff;
+        color: #888;
+        cursor: pointer;
+        transition: all 0.2s;
+
+        &.active {
+            background: #111;
+            color: #fff;
+            border-color: #111;
+        }
+    }
+
+    &__body {
+        padding: 12px 16px 18px;
+        min-height: 140px;
+    }
+
+    &__questions {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    &__question-btn {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 11px 14px;
+        background: #f8f8f8;
+        border: none;
+        border-radius: 10px;
+        font-size: 13px;
+        color: #333;
+        cursor: pointer;
+        text-align: left;
+        transition: background 0.2s;
+
+        &:hover {
+            background: #f0f0f0;
+        }
+    }
+
+    &__custom {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    &__textarea {
+        width: 100%;
+        border: 1px solid #e5e5e5;
+        border-radius: 10px;
+        padding: 12px;
+        font-size: 13px;
+        color: #333;
+        resize: none;
+        outline: none;
+        font-family: inherit;
+        line-height: 1.6;
+        box-sizing: border-box;
+        transition: border-color 0.2s;
+
+        &:focus {
+            border-color: #111;
+        }
+
+        &::placeholder {
+            color: #bbb;
+        }
+    }
+
+    &__submit {
+        width: 100%;
+        padding: 12px;
+        background: #111;
+        color: #fff;
+        border: none;
+        border-radius: 10px;
+        font-size: 13px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: opacity 0.2s;
+
+        &:disabled {
+            opacity: 0.3;
+            cursor: default;
+        }
+
+        &:not(:disabled):hover {
+            opacity: 0.85;
+        }
+    }
+
+    &__success {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 24px 0;
+
+        p {
+            font-size: 14px;
+            color: #333;
+            margin: 0;
+            font-weight: 500;
+        }
+    }
+}

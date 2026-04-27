@@ -77,13 +77,14 @@
 
 .header-scroll-nav-mask {
     position: fixed;
-    top: 62px;
+    top: calc(var(--banner-height, 0px) + 62px);
     left: 0;
     width: 100%;
     height: 48px;
     overflow: hidden;
     z-index: 1001;
     pointer-events: none;
+    transition: top 0.3s ease;
 }
 
 .header-scroll-nav {
