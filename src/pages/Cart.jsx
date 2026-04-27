@@ -191,7 +191,6 @@ export default function Cart() {
             </div>
             <div className="coupon-box">
               <span>Welcome 고객 10% 할인 적용 중</span>
-              <em>최대 3만원</em>
             </div>
             <div className="summary-total">
               <span>상품 결제 예정금액</span>
