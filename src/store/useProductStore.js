@@ -96,6 +96,44 @@ export const useProductStore = create((set, get) => ({
         set({ wishlist: updateWish });
     },
 
+    //커스텀 위시리스트
+    //위시리스트 폴더
+    wishFolders: [],
+
+    //위시리스트 폴더 생성, 삭제
+    onCreateWishFolder: (folderName) => {
+        const newFolder = {
+            id: crypto.randomUUID(),
+            name: folderName,
+            itemIds: [],
+        };
+
+        set((state) => ({
+            wishFolders: [...state.wishFolders, newFolder],
+        }));
+    },
+
+    onMoveToWishFolder: (folderId, itemIds) => {
+        set((state) => ({
+            wishFolders: state.wishFolders.map((folder) =>
+                folder.id === folderId
+                    ? {
+                        ...folder,
+                        itemIds: [...new Set([...folder.itemIds, ...itemIds])],
+                    }
+                    : folder
+            ),
+        }));
+    },
+
+    onDeleteWishFolder: (folderId) => {
+        set((state) => ({
+            wishFolders: state.wishFolders.filter(
+                (folder) => folder.id !== folderId
+            ),
+        }));
+    },
+
     // 장바구니
     cartItems: [],
 
