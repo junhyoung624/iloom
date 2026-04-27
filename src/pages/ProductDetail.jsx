@@ -65,8 +65,6 @@ export default function ProductDetail() {
 
     const handleTabClick = (tab) => {
         setActiveTab(tab)
-        const el = document.getElementById('tab-content')
-        if (el) el.scrollIntoView({ behavior: 'smooth' })
     }
 
     const getColorImg = (colorValue) => {
