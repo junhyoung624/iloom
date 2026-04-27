@@ -3,7 +3,7 @@
     top: 0;
     left: 0;
     right: 0;
-    z-index: 10000; // 헤더(9999)보다 위
+    z-index: 9000;
     background: #111;
     color: #fff;
     height: 40px;
@@ -15,16 +15,18 @@
         height: 100%;
         gap: 12px;
         position: relative;
-        max-width: 1400px;
+        max-width: 100%;
         margin: 0 auto;
         padding: 0 48px;
     }
 
     &__text-wrap {
         overflow: hidden;
+        width: 420px; // 여기 중요
         height: 40px;
         display: flex;
         align-items: center;
+        justify-content: center;
     }
 
     &__text {
@@ -33,6 +35,7 @@
         letter-spacing: 0.02em;
         margin: 0;
         white-space: nowrap;
+        text-align: center;
         transition: opacity 0.3s ease, transform 0.3s ease;
 
         &.fade-in {
@@ -63,7 +66,7 @@
 
     &__close {
         position: absolute;
-        right: -510px;
+        right: 60px;
         top: 50%;
         transform: translateY(-50%);
         background: none;

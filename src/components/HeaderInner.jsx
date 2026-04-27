@@ -12,34 +12,25 @@ const HeaderInner = ({
     isSearchOpen,
     searchClick,
     isScrolled,
-    scrollProgress
+    scrollProgress,
+    onCartClick,
 }) => {
     const { menus, cartItems } = useProductStore()
     const cartCount = cartItems.length
     const { user } = useAuthStore()
-
     const [lastScroll, setLastScroll] = useState(false)
 
     useEffect(() => {
         let lastScrollY = window.scrollY
-
         const handleScrollDirection = () => {
             const currentScrollY = window.scrollY
-
-            if (currentScrollY === 0) {
-                setLastScroll(false)
-            } else if (currentScrollY > lastScrollY) {
-                setLastScroll(false)
-            } else {
-                setLastScroll(true)
-            }
-
+            if (currentScrollY === 0) { setLastScroll(false) }
+            else if (currentScrollY > lastScrollY) { setLastScroll(false) }
+            else { setLastScroll(true) }
             lastScrollY = currentScrollY
         }
-
         window.addEventListener("scroll", handleScrollDirection)
         handleScrollDirection()
-
         return () => window.removeEventListener("scroll", handleScrollDirection)
     }, [])
 
@@ -54,9 +45,7 @@ const HeaderInner = ({
                 </div>
 
                 <h1 className="main-logo">
-                    <Link to="/">
-                        <img src="/images/logo-icon/main-logo-white.png" alt="" />
-                    </Link>
+                    <Link to="/"><img src="/images/logo-icon/main-logo-white.png" alt="" /></Link>
                 </h1>
 
                 <div className="header-right">
@@ -64,48 +53,50 @@ const HeaderInner = ({
                         {user ? (
                             <>
                                 <li>
-                                    <button
-                                        type="button"
-                                        className="icon-btn"
-                                        onClick={searchClick}
-                                    >
+                                    <button type="button" className="icon-btn" onClick={searchClick}>
                                         <img src="/images/logo-icon/search.png" alt="search" />
                                     </button>
                                 </li>
                                 <li>
                                     <button className="user-btn" onClick={userClick}>
                                         <img src="/images/logo-icon/user.png" alt="" />
-                                        <span>{user.name}</span>
+
                                     </button>
                                 </li>
                                 <li>
-                                    <Link to="/cart" className="cart-link">
+                                    <button
+                                        type="button"
+                                        className="cart-link icon-btn"
+                                        onClick={onCartClick}
+                                        style={{ background: 'none', border: 'none', cursor: 'pointer', position: 'relative' }}
+                                    >
                                         <img src="/images/logo-icon/cart.png" alt="" />
                                         {cartCount > 0 && <span className="cart-num">{cartCount}</span>}
-                                    </Link>
+                                    </button>
                                 </li>
                             </>
                         ) : (
                             <>
                                 <li>
-                                    <button
-                                        type="button"
-                                        className="icon-btn"
-                                        onClick={searchClick}
-                                    >
+                                    <button type="button" className="icon-btn" onClick={searchClick}>
                                         <img src="/images/logo-icon/search.png" alt="search" />
                                     </button>
                                 </li>
                                 <li>
                                     <Link to="/login">
-                                        <img src="/images/logo-icon/user.png" alt="" />
+                                        <img src="/images/logo-icon/login-black.png" alt="" />
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link to="/cart" className="cart-link">
+                                    <button
+                                        type="button"
+                                        className="cart-link icon-btn"
+                                        onClick={onCartClick}
+                                        style={{ background: 'none', border: 'none', cursor: 'pointer', position: 'relative' }}
+                                    >
                                         <img src="/images/logo-icon/cart.png" alt="" />
                                         {cartCount > 0 && <span className="cart-num">{cartCount}</span>}
-                                    </Link>
+                                    </button>
                                 </li>
                             </>
                         )}
@@ -117,9 +108,7 @@ const HeaderInner = ({
                 <ul className={`header-scroll-nav header-minus-scroll ${!isSearchOpen && !isHover && lastScroll && isScrolled ? "active" : ""}`}>
                     {menus.map((menu, index) => (
                         <li key={`${menu.key}-${index}`}>
-                            <Link to={menu.link}>
-                                {menu.name}
-                            </Link>
+                            <Link to={menu.link}>{menu.name}</Link>
                         </li>
                     ))}
                 </ul>
