@@ -31,6 +31,7 @@
 
 .recent-view-hover-area {
   position: relative;
+  width: 256px;
   height: 110px;
   margin-left: -176px;
 }
@@ -38,7 +39,7 @@
 .recent-view-box {
   position: absolute;
   top: 0;
-  right: -128px;
+  right: 0;
   width: 80px;
   height: 110px;
 }
