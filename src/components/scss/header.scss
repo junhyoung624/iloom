@@ -3,11 +3,11 @@
 header {
     padding: 20px 70px;
     position: fixed;
-    top: 0;
+    top: var(--banner-height, 0px);
     width: 100%;
     background: transparent;
     z-index: 1002;
-    transition: background 0.48s ease, padding 0.48s ease;
+    transition: background 0.48s ease, padding 0.48s ease, top 0.3s ease;
 
     .header-inner {
         @include g.myFlex($gap: null);
@@ -515,16 +515,17 @@ header {
 }
 
 .scroll-menu {
-    position: absolute;
+    position: fixed;
     display: none;
     background: #F9F9F9;
     width: 100%;
-    top: 70px;
+    top: calc(var(--banner-height, 0px) + 70px);
     left: 0;
     padding: 10px;
     border-top: 1px solid;
     border-bottom: 1px solid;
     z-index: 999;
+    transition: top 0.3s ease;
 
     &.active {
         @include g.myFlex($jc: center, $gap: 50px);

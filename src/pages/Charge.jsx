@@ -251,11 +251,21 @@ export default function Charge() {
         const orderData = user
             ? {
                 orderId: orderNumber, orderNumber, isGuest: false,
-                name: user.name, phone: user.phone, email: user.email,
-                userInfo: { name: user.name, phone: user.phone, email: user.email },
+                name: user.name || "",
+                phone: user.phone || "",   // ✅ undefined 대신 "" 처리
+                email: user.email || "",
+                userInfo: {
+                    name: user.name || "",
+                    phone: user.phone || "",   // ✅
+                    email: user.email || ""
+                },
                 status: "결제완료",
                 deliveryInfo: { carrier: "일룸 배송팀", trackingNumber: "준비중", estimatedDate: deliveryDate },
-                items: orderItems.map((item) => ({ id: item.id, name: item.name, series: item.series || "", color: item.color || "", qty: item.qty, price: item.priceNumber, productImages: item.productImages || [] })),
+                items: orderItems.map((item) => ({
+                    id: item.id, name: item.name, series: item.series || "",
+                    color: item.color || "", qty: item.qty, price: item.priceNumber,
+                    productImages: item.productImages || []
+                })),
                 total: totalPrice,
             }
             : {

@@ -1,0 +1,82 @@
+.sticky-banner {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10000; // 헤더(9999)보다 위
+    background: #111;
+    color: #fff;
+    height: 40px;
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        gap: 12px;
+        position: relative;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 48px;
+    }
+
+    &__text-wrap {
+        overflow: hidden;
+        height: 40px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__text {
+        font-size: 13px;
+        font-weight: 400;
+        letter-spacing: 0.02em;
+        margin: 0;
+        white-space: nowrap;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+
+        &.fade-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        &.fade-out {
+            opacity: 0;
+            transform: translateY(-8px);
+        }
+    }
+
+    &__arrow {
+        background: none;
+        border: none;
+        color: rgba(255, 255, 255, 0.6);
+        cursor: pointer;
+        padding: 4px;
+        display: flex;
+        align-items: center;
+        transition: color 0.2s;
+
+        &:hover {
+            color: #fff;
+        }
+    }
+
+    &__close {
+        position: absolute;
+        right: -510px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        color: rgba(255, 255, 255, 0.6);
+        cursor: pointer;
+        padding: 4px;
+        display: flex;
+        align-items: center;
+        transition: color 0.2s;
+
+        &:hover {
+            color: #fff;
+        }
+    }
+}

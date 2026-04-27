@@ -7,6 +7,7 @@ const UserMenu = ({ userClose }) => {
   const mypage = [
     { link: "/order", name: '주문/배송' },
     { link: "/wishlist", name: '위시리스트' },
+    { link: "/inquiry", name: '내 문의' },
     {
       link: "/mypage", name: '내 정보관리',
       sub: [
@@ -17,7 +18,6 @@ const UserMenu = ({ userClose }) => {
   ]
 
   const navigate = useNavigate();
-
   const { user, onLogout } = useAuthStore();
 
   const handleLogout = () => {
@@ -26,7 +26,6 @@ const UserMenu = ({ userClose }) => {
   }
 
   return (
-
     <div>
       <p className='user-img'><Link to="/"><img src="./images/logo-icon/main-logo-black.png" alt="" /></Link></p>
       <p className='user-name'><strong>{user?.name}</strong> 님 환영합니다!</p>
@@ -42,22 +41,19 @@ const UserMenu = ({ userClose }) => {
         {mypage.map((p, id) => (
           <li key={id}>
             <Link to={`${p.link}`}>{p.name}</Link>
-
-            {
-              p.sub && (
-                <ul className='info-sub-list'>
-                  {p.sub.map((sub, subId) => (
-                    <li key={subId}>
-                      <Link to={sub.link}>{sub.name}</Link>
-                    </li>
-                  ))}
-                </ul>
-              )
-            }
-          </li >
+            {p.sub && (
+              <ul className='info-sub-list'>
+                {p.sub.map((sub, subId) => (
+                  <li key={subId}>
+                    <Link to={sub.link}>{sub.name}</Link>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </li>
         ))}
-      </ul >
-    </div >
+      </ul>
+    </div>
   )
 }
 
