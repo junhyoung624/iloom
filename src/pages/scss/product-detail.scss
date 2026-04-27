@@ -1021,3 +1021,224 @@
         cursor: default;
     }
 }
+
+.review-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 40px;
+    width: 500px;
+    z-index: 1000;
+
+    .modal-close {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        background: none;
+        border: none;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    h2 {
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 24px;
+    }
+
+    .review-modal-rating {
+        margin-bottom: 16px;
+
+        p {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 8px;
+        }
+    }
+
+    .review-modal-field {
+        margin-bottom: 16px;
+
+        p {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 8px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #ddd;
+            font-size: 14px;
+            box-sizing: border-box;
+
+            &:focus {
+                outline: none;
+                border-color: #303030;
+            }
+        }
+
+        textarea {
+            height: 120px;
+            resize: none;
+        }
+    }
+
+    button[type="submit"] {
+        width: 100%;
+        padding: 14px;
+        background: #303030;
+        color: #fff;
+        border: none;
+        font-size: 15px;
+        cursor: pointer;
+        margin-top: 8px;
+
+        &:hover {
+            background: #555;
+        }
+    }
+}
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 999;
+}
+
+.thumb-list {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+
+    div {
+        width: 80px;
+        height: 80px;
+        border: 1px solid #e5e5e5;
+        cursor: pointer;
+        overflow: hidden;
+
+        &.active {
+            border-color: #303030;
+        }
+
+        &:hover {
+            border-color: #808080;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+}
+
+.qna-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 40px;
+    width: 500px;
+    z-index: 1000;
+
+    .modal-close {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        background: none;
+        border: none;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    h2 {
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 24px;
+    }
+
+    .qna-modal-field {
+        margin-bottom: 16px;
+
+        p {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 8px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #ddd;
+            font-size: 14px;
+            box-sizing: border-box;
+
+            &:focus {
+                outline: none;
+                border-color: #303030;
+            }
+        }
+
+        textarea {
+            height: 150px;
+            resize: none;
+        }
+    }
+
+    button[type="submit"] {
+        width: 100%;
+        padding: 14px;
+        background: #303030;
+        color: #fff;
+        border: none;
+        font-size: 15px;
+        cursor: pointer;
+
+        &:hover {
+            background: #555;
+        }
+    }
+
+    .qna-submitted {
+        text-align: center;
+        padding: 20px 0;
+
+        .submitted-icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+
+        h2 {
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        p {
+            font-size: 14px;
+            color: #808080;
+            margin-bottom: 24px;
+        }
+
+        button {
+            padding: 12px 40px;
+            background: #303030;
+            color: #fff;
+            border: none;
+            font-size: 15px;
+            cursor: pointer;
+
+            &:hover {
+                background: #555;
+            }
+        }
+    }
+}
