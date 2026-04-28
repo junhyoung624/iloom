@@ -11,6 +11,7 @@ import SpaceCoordi from './SpaceCoordi'
 import Popup from '../pages/EventPopup'
 import Instagram from './Instagram'
 import { Link } from 'react-router-dom'
+import Product3DViewer from './Product3DViewer'
 
 const HERO_FADE_START = 0
 const HERO_FADE_END = 700
@@ -75,6 +76,7 @@ export default function Home() {
       </section>
 
       <Popup />
+      <Product3DViewer />
       <FurnitureList />
       <BestSellerSection />
       <NewCollection />
