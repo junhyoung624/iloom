@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import { useInquiryStore } from '../store/useInquiryStore'
 import MyPageMenu from './MyPageMenu'
-import { useLocation } from 'react-router-dom'
 import { commonQna } from '../data/qnaData'
 import './scss/inquirypage.scss'
+import InquiryEditModal from '../components/InquiryEditModal'
 
 function AccordionItem({ item, isOpen, onToggle }) {
     return (
@@ -11,11 +11,9 @@ function AccordionItem({ item, isOpen, onToggle }) {
             <button className="accordion-header" onClick={onToggle}>
                 <span className="accordion-q">Q</span>
                 <span className="accordion-title">{item.title}</span>
-                <svg
-                    className="accordion-arrow"
-                    width="16" height="16" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
-                >
+                <svg className="accordion-arrow" width="16" height="16" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" strokeWidth="2"
+                    strokeLinecap="round" strokeLinejoin="round">
                     <polyline points="6 9 12 15 18 9" />
                 </svg>
             </button>
@@ -33,12 +31,15 @@ function AccordionItem({ item, isOpen, onToggle }) {
 }
 
 export default function InquiryPage() {
-    const { inquiries } = useInquiryStore()
+    const { inquiries, deleteInquiry, updateInquiry } = useInquiryStore()
     const [openId, setOpenId] = useState(null)
     const [activeTab, setActiveTab] = useState('faq')
+    const [editTarget, setEditTarget] = useState(null)
 
-    const handleToggle = (id) => {
-        setOpenId((prev) => (prev === id ? null : id))
+    const handleToggle = (id) => setOpenId((prev) => (prev === id ? null : id))
+
+    const handleDelete = (id) => {
+        if (window.confirm('문의를 삭제할까요?')) deleteInquiry(id)
     }
 
     return (
@@ -47,7 +48,6 @@ export default function InquiryPage() {
                 <MyPageMenu />
 
                 <div className="content inquiry-content">
-
                     <div className="inquiry-page-tabs">
                         <button
                             className={`inquiry-page-tab ${activeTab === 'faq' ? 'active' : ''}`}
@@ -66,7 +66,6 @@ export default function InquiryPage() {
                         </button>
                     </div>
 
-
                     {activeTab === 'faq' && (
                         <div className="faq-section">
                             <div className="accordion-list">
@@ -81,7 +80,6 @@ export default function InquiryPage() {
                             </div>
                         </div>
                     )}
-
 
                     {activeTab === 'mine' && (
                         <div className="mine-section">
@@ -104,8 +102,28 @@ export default function InquiryPage() {
                                                     {item.status}
                                                 </span>
                                             </div>
+
                                             <p className="inquiry-item__text">{item.text}</p>
-                                            <span className="inquiry-item__date">{item.createdAt}</span>
+
+                                            <div className="inquiry-item__bottom">
+                                                <span className="inquiry-item__date">{item.createdAt}</span>
+                                                {item.status !== '답변 완료' && (
+                                                    <div className="inquiry-item__actions">
+                                                        <button
+                                                            className="inquiry-item__btn edit"
+                                                            onClick={() => setEditTarget(item)}
+                                                        >
+                                                            수정
+                                                        </button>
+                                                        <button
+                                                            className="inquiry-item__btn delete"
+                                                            onClick={() => handleDelete(item.id)}
+                                                        >
+                                                            삭제
+                                                        </button>
+                                                    </div>
+                                                )}
+                                            </div>
                                         </li>
                                     ))}
                                 </ul>
@@ -114,6 +132,14 @@ export default function InquiryPage() {
                     )}
                 </div>
             </div>
+
+            {editTarget && (
+                <InquiryEditModal
+                    item={editTarget}
+                    onSave={updateInquiry}
+                    onClose={() => setEditTarget(null)}
+                />
+            )}
         </section>
     )
 }
