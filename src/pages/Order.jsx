@@ -42,8 +42,7 @@ const Order = () => {
                       {
                         order.items?.map((item, id) => (
                           <li key={`order id - ${item.id}-${id}`}
-                            className='order-item'
-                            onClick={() => alert("주문 상세로 이동")}>
+                            className='order-item'>
 
                             <div className="order-main-info">
                               <div className="order-date">
