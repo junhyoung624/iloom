@@ -12,6 +12,8 @@ import Popup from '../pages/EventPopup'
 import Instagram from './Instagram'
 import { Link } from 'react-router-dom'
 import Product3DViewer from './Product3DViewer'
+import Reveal from './Reveal'
+import { Helmet } from 'react-helmet-async'
 
 const HERO_FADE_START = 0
 const HERO_FADE_END = 700
@@ -48,6 +50,10 @@ export default function Home() {
 
   return (
     <div className="home">
+      <Helmet>
+        <title>iloom</title>
+        <meta name="description" content="일상 속에서 꾸준히 사랑받는 일룸의 베스트셀러 가구와 홈데코를 만나보세요." />
+      </Helmet>
       <section className="hero-scroll-section">
         <div className="hero-video">
           <video
@@ -76,9 +82,15 @@ export default function Home() {
       </section>
 
       <Popup />
-      <Product3DViewer />
-      <FurnitureList />
-      <BestSellerSection />
+      <Reveal>
+        <Product3DViewer />
+      </Reveal>
+      <Reveal>
+        <FurnitureList />
+      </Reveal>
+      <Reveal>
+        <BestSellerSection />
+      </Reveal>
       <NewCollection />
       <Place />
       <SpaceCoordi />

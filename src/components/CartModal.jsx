@@ -1,5 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
+import NumberFlow from '@number-flow/react'
 
 export default function CartModal({ onClose }) {
     const navigate = useNavigate()

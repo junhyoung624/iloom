@@ -20,7 +20,7 @@ const Header = () => {
   const [scrollProgress, setScrollProgress] = useState(0)
   const [isHover, setHover] = useState(false)
   const [userMenu, setUserMenu] = useState(false)
-  const [cartPanel, setCartPanel] = useState(false)   // ✅ 추가
+  const [cartPanel, setCartPanel] = useState(false)
   const [isSearchOpen, setIsSearchOpen] = useState(false)
 
   const userLogin = useRef(null)

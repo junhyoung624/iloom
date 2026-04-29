@@ -1737,7 +1737,7 @@
     }
 }
 
-// ✅ 간편결제 새 디자인
+
 .simplepay-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -1886,4 +1886,65 @@
     color: #CA1230;
     font-weight: 600;
     margin: 2px 0;
+}
+
+.charge-fixed-paybar {
+    position: fixed;
+    left: 50%;
+    bottom: 120px;
+    transform: translateX(-50%);
+    z-index: 999;
+    width: calc(100% - 48px);
+    max-width: 1200px;
+    height: 78px;
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(16px);
+    border: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    box-shadow: 0 16px 45px rgba(0, 0, 0, 0.14);
+
+    .fixed-pay-info {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        span {
+            font-size: 13px;
+            color: #888;
+            font-weight: 600;
+        }
+
+        strong {
+            font-size: 25px;
+            font-weight: 800;
+            color: #111;
+            letter-spacing: -0.03em;
+        }
+    }
+
+    button {
+        height: 50px;
+        padding: 0 34px;
+        border: none;
+        background: #111;
+        color: #fff;
+        font-size: 15px;
+        font-weight: 800;
+        cursor: pointer;
+        transition: 0.25s ease;
+
+        &:hover {
+            background: #CA1230;
+            transform: translateY(-1px);
+        }
+
+        &:disabled {
+            background: #bbb;
+            cursor: not-allowed;
+            transform: none;
+        }
+    }
 }

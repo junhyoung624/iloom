@@ -4,8 +4,17 @@ npm install react-daum-postcode - 주소 검색 기능
 
 npm install framer-motion - 플러그인
 
+
+------------new----------------------------------------------------
+
 npm install three @react-three/fiber @react-three/drei - 메인 3D모델
 
 npm install framer-motion - 페이지마다 트랜지션주기
 
 npm install react-hot-toast - alert창 바꾸기
+
+npm install react-helmet-async - 모든 세부페이지 주소 바꾸기
+
+npm install canvas-confetti - 결제 완료 폭죽
+
+npm install @number-flow/react - charge 금액 카운트

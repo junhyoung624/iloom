@@ -59,11 +59,6 @@ function App() {
   }, [])
 
   useEffect(() => {
-    addTestOrder()
-  }, [])
-
-  // ← 추가
-  useEffect(() => {
     if (user) {
       fetchWishlist(user)
     } else {

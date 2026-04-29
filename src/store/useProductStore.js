@@ -256,7 +256,7 @@ export const useProductStore = create((set, get) => ({
 
     onAddOrder: async (order, user) => {
         const orderPrev = get().orderList;
-        console.log("onAddOrder in", order);
+
 
         const exists = orderPrev.some(
             (item) => item.orderNumber === order.orderNumber
@@ -361,6 +361,6 @@ export const useProductStore = create((set, get) => ({
         });
 
         set({ menus: menuList });
-        console.log(menuList);
+
     },
 }));

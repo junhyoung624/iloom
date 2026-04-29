@@ -3,6 +3,7 @@ import { useAuthStore } from '../store/useAuthStore'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import "./scss/mypage.scss"
 import MyPageMenu from './MyPageMenu'
+import { Helmet } from 'react-helmet-async'
 
 export default function MyPage() {
     const navigate = useNavigate()
@@ -52,6 +53,10 @@ export default function MyPage() {
 
     return (
         <section className="mypage">
+            <Helmet>
+                <title>마이페이지 | iloom</title>
+                <meta name="description" content="회원 정보 및 주문 내역을 확인하세요." />
+            </Helmet>
             <div className="inner">
                 {/* <aside className="sidebar">
                     <ul>

@@ -14,6 +14,8 @@ import { couponData } from '../data/couponData'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import toast from 'react-hot-toast'
+import confetti from 'canvas-confetti'
+import NumberFlow from '@number-flow/react'
 
 const detectCardIssuer = (number = '') => {
     const n = number.replace(/\s/g, '')
@@ -475,6 +477,13 @@ export default function Charge() {
         try {
             onAddOrder(orderData, user)
             await addOrder(orderData)
+
+            confetti({
+                particleCount: 120,
+                spread: 80,
+                origin: { y: 0.6 },
+                colors: ['#CA1230', '#111111', '#ffffff', '#d4a574'],
+            })
 
             toast(`결제가 완료되었습니다. 주문번호는 ${orderNumber} 입니다.`)
 
@@ -1203,24 +1212,26 @@ export default function Charge() {
                                 <span>{formatPrice(totalPrice)}</span>
                             </div>
 
+
                             {couponDiscount > 0 && (
                                 <div className="discount-summary-row minus">
                                     <span>쿠폰 할인</span>
-                                    <span>− {formatPrice(couponDiscount)}</span>
+                                    <span>− <NumberFlow value={couponDiscount} suffix="원" /></span>
                                 </div>
                             )}
+
 
                             {useMoney > 0 && (
                                 <div className="discount-summary-row minus">
                                     <span>일룸머니 사용</span>
-                                    <span>− {formatPrice(useMoney)}</span>
+                                    <span>− <NumberFlow value={useMoney} suffix="원" /></span>
                                 </div>
                             )}
 
                             <div className="discount-summary-row total">
                                 <span>최종 결제금액</span>
                                 <strong className="discount-final-price">
-                                    {formatPrice(finalPrice)}
+                                    <NumberFlow value={finalPrice} suffix="원" />
                                 </strong>
                             </div>
                         </div>
@@ -1568,6 +1579,20 @@ export default function Charge() {
                 </div>
             </div>
 
+            <div className="charge-fixed-paybar">
+                <div className="fixed-pay-info">
+                    <span>최종 결제금액</span>
+                    <strong><NumberFlow value={finalPrice} suffix="원" /></strong>
+                </div>
+
+                <button
+                    type="button"
+                    disabled={orderItems.length === 0}
+                    onClick={handlePayment}
+                >
+                    결제하기
+                </button>
+            </div>
             {confirmPay && (
                 <ChargeModal
                     onClose={handleClosePopup}

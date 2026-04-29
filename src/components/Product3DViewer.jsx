@@ -1,5 +1,5 @@
 import { Suspense, useEffect, useMemo, useRef, useState } from 'react'
-import { Canvas } from '@react-three/fiber'
+import { Canvas, useFrame, useThree } from '@react-three/fiber'
 import { OrbitControls, useGLTF, Environment, Center } from '@react-three/drei'
 import * as THREE from 'three'
 import "./scss/product3dviewer.scss"
@@ -71,12 +71,10 @@ function Model({ color }) {
             const cloneMaterial = (mat) => {
                 const newMat = mat.clone()
 
-                // 원본 텍스처 유지
                 if (mat.map) {
                     newMat.map = mat.map
                 }
 
-                // 원본 normal/roughness 계열도 최대한 유지
                 if (mat.normalMap) {
                     newMat.normalMap = mat.normalMap
                 }
@@ -120,7 +118,6 @@ function Model({ color }) {
             const applyColor = (mat) => {
                 if (!mat) return
 
-                // 텍스처는 유지하고 색만 입힘
                 if (mat.color) {
                     mat.color.copy(targetColor)
                 }
@@ -150,6 +147,69 @@ function Model({ color }) {
                 position={[0, -0.08, 0]}
             />
         </Center>
+    )
+}
+
+// ✅ 스크롤해서 3D 영역에 도착했을 때 카메라 등장 애니메이션
+function CameraIntro({ play }) {
+    const { camera } = useThree()
+    const controlsRef = useRef(null)
+    const progressRef = useRef(0)
+    const playedRef = useRef(false)
+
+    const startPos = useMemo(() => new THREE.Vector3(-4.8, 2.6, 7.4), [])
+    const endPos = useMemo(() => new THREE.Vector3(-2.2, 1.1, 5.2), [])
+    const target = useMemo(() => new THREE.Vector3(0, -0.1, 0), [])
+
+    useEffect(() => {
+        if (!play || playedRef.current) return
+
+        progressRef.current = 0
+        camera.position.copy(startPos)
+        camera.lookAt(target)
+        camera.updateProjectionMatrix()
+
+        if (controlsRef.current) {
+            controlsRef.current.target.copy(target)
+            controlsRef.current.update()
+        }
+    }, [play, camera, startPos, target])
+
+    useFrame((_, delta) => {
+        if (!play || playedRef.current) return
+
+        progressRef.current += delta * 0.7
+
+        const t = Math.min(progressRef.current, 1)
+
+        // 뾰로롱 느낌: 처음 빠르고 끝은 부드럽게 멈춤
+        const ease = 1 - Math.pow(1 - t, 3)
+
+        camera.position.lerpVectors(startPos, endPos, ease)
+        camera.lookAt(target)
+        camera.updateProjectionMatrix()
+
+        if (controlsRef.current) {
+            controlsRef.current.target.copy(target)
+            controlsRef.current.update()
+        }
+
+        if (t >= 1) {
+            playedRef.current = true
+            camera.position.copy(endPos)
+            camera.lookAt(target)
+            camera.updateProjectionMatrix()
+        }
+    })
+
+    return (
+        <OrbitControls
+            ref={controlsRef}
+            enablePan={false}
+            minDistance={3.8}
+            maxDistance={7}
+            target={[0, -0.1, 0]}
+        />
     )
 }
 
@@ -191,12 +251,36 @@ export default function Product3DViewer() {
     const [showGuide, setShowGuide] = useState(true)
     const [saleTime, setSaleTime] = useState(getSaleTimeLeft)
 
+    // ✅ 3D 박스가 화면에 들어왔는지 감지
+    const viewerRef = useRef(null)
+    const [playCameraIntro, setPlayCameraIntro] = useState(false)
+
     useEffect(() => {
         const timer = setInterval(() => {
             setSaleTime(getSaleTimeLeft())
         }, 1000)
 
         return () => clearInterval(timer)
+    }, [])
+
+    useEffect(() => {
+        if (!viewerRef.current) return
+
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setPlayCameraIntro(true)
+                    observer.disconnect()
+                }
+            },
+            {
+                threshold: 0.35,
+            }
+        )
+
+        observer.observe(viewerRef.current)
+
+        return () => observer.disconnect()
     }, [])
 
     return (
@@ -230,6 +314,7 @@ export default function Product3DViewer() {
             </div>
 
             <div
+                ref={viewerRef}
                 className="viewer-box"
                 onPointerDown={() => setShowGuide(false)}
                 onTouchStart={() => setShowGuide(false)}
@@ -264,12 +349,7 @@ export default function Product3DViewer() {
                         <Model color={selectedColor} />
                     </Suspense>
 
-                    <OrbitControls
-                        enablePan={false}
-                        minDistance={3.8}
-                        maxDistance={7}
-                        target={[0, -0.1, 0]}
-                    />
+                    <CameraIntro play={playCameraIntro} />
                 </Canvas>
             </div>
 

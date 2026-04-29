@@ -19,6 +19,7 @@ import TabReview from '../components/TabReview'
 import TabQna from '../components/TabQna'
 import TabDelivery from '../components/TabDelivery'
 import toast from 'react-hot-toast'
+import { Helmet } from 'react-helmet-async'
 
 const TABS = ['상세정보', '옵션', '인테리어 팁', '상품평', '제품Q&A', '배송/취소/반품']
 
@@ -125,6 +126,10 @@ export default function ProductDetail() {
 
     return (
         <section className="product-detail">
+            <Helmet>
+                <title>{product.name} | iloom</title>
+                <meta name="description" content='{product.series} {product.name} - ${product.price}원' />
+            </Helmet>
             <div className="breadcrumb">
                 <Link to="/"><img src='/images/logo-icon/home-icon.png' alt="home" /></Link>
                 <span>&gt;</span>

@@ -11,14 +11,13 @@ export default function OrderForGuest() {
 
     const { orderList } = useProductStore();
     const { orderNum } = useParams();
-    console.log("param : ", orderNum);
+
 
     const guestOrder = orderList.find(
         (order) => order.orderId === orderNum
     );
 
-    console.log(orderList);
-    console.log(guestOrder);
+
 
 
     if (!guestOrder) {
