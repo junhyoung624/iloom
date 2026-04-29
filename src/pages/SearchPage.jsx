@@ -13,7 +13,8 @@ export default function SearchPage() {
   const keyword = rawKeyword.toLowerCase()
 
   const cateItems = items.filter((item) =>
-    item.name?.toLowerCase().includes(keyword)
+    item.name?.toLowerCase().includes(keyword) ||
+    item.category2?.toLowerCase().includes(keyword)
   )
 
   return (

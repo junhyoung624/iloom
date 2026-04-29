@@ -147,41 +147,64 @@
   border-top: 1px solid #ddd;
   padding: 10px 0;
 }
-.wish-list-title .wish-left {
+.wish-list-title .wish-control-left {
   margin: auto 0;
 }
-.wish-list-title .wish-right {
+.wish-list-title .wish-control-right {
   display: flex;
   flex-direction: row-reverse;
   justify-content: flex-end;
   margin-left: auto;
 }
-.wish-list-title .wish-right .wish-control-btn {
+.wish-list-title .wish-control-right .wish-control-btn-wrap {
+  display: flex;
+  margin-left: 10px;
+}
+.wish-list-title .wish-control-right .wish-control-btn-wrap .wish-control-btn {
   height: 40px;
-  width: 60px;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0 20px;
   line-height: 40px;
   margin: auto 10px;
-  border: 2px solid black;
   border-radius: 30px;
   text-align: center;
-  background: #f1f1f1;
 }
-.wish-list-title .wish-right .wish-control-btn:hover {
-  background: black;
-  color: white;
+.wish-list-title .wish-control-right .wish-control-btn-wrap .wish-control-btn:hover {
+  opacity: 80%;
+  cursor: pointer;
   transition: 0.5s;
 }
-.wish-list-title .wish-right .checked-wish-area {
-  background: yellowgreen;
+.wish-list-title .wish-control-right .wish-control-btn-wrap .wish-control-btn-ctrl {
+  background: black;
+  color: white;
 }
-.wish-list-title .wish-right .checked-wish-area .control-wish-list {
+.wish-list-title .wish-control-right .wish-control-btn-wrap .wish-control-btn-del {
+  background: #f1f1f1;
+  color: black;
+}
+.wish-list-title .wish-control-right .wish-control-btn-wrap .wish-control-btn-del:hover {
+  background: #ddd;
+  color: black;
+}
+.wish-list-title .wish-control-right .checked-wish-area .control-wish-list {
   display: flex;
   flex-direction: row-reverse;
   gap: 10px;
 }
-.wish-list-title .wish-right .checked-wish-area .control-wish-list .checked-wish-thumbnail img {
+.wish-list-title .wish-control-right .checked-wish-area .control-wish-list .checked-wish-thumbnail img {
   width: 60px;
   aspect-ratio: 1/1;
+  border-radius: 50%;
+}
+.wish-list-title .wish-control-right .checked-wish-area .control-wish-list .checked-wish-thumbnail:hover {
+  transform: translateY(-5px);
+  transition: 0.5s;
+}
+.wish-list-title .wish-control-right .checked-wish-area .control-wish-list .extra-wish-count {
+  margin: auto 5px;
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 
 .wish-item {
@@ -190,7 +213,6 @@
   border-top: 1px solid #ddd;
   width: 100%;
   justify-content: space-between;
-  background: skyblue;
 }
 .wish-item .wish-item-left {
   display: flex;
@@ -207,11 +229,10 @@
   min-width: 0;
 }
 .wish-item .wish-name-info {
-  background: yellow;
   min-width: 0;
   width: 210px;
 }
-.wish-item .wish-name-info .series-name {
+.wish-item .wish-name-info .series-name-in-wish {
   padding: 10px;
 }
 .wish-item .wish-name-info .product-name {
@@ -255,6 +276,319 @@
   width: 100%;
   min-width: 205px;
   transition: 0.5s;
+}
+
+.wish-delete-all-btn {
+  width: 205px;
+  border: 1px solid black;
+  padding: 10px 0;
+  text-align: center;
+  margin-left: 40px;
+}
+
+.wish-delete-all-btn:hover {
+  background: black;
+  color: white;
+  transition: 0.5s;
+}
+
+.wish-sidebar-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 1000;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.wish-sidebar {
+  margin-top: 60px;
+  width: 27%;
+  height: 100vh;
+  background: #fff;
+  padding: 32px;
+  box-shadow: -4px 0 20px rgba(0, 0, 0, 0.15);
+  overflow-y: auto;
+  z-index: 1001;
+  animation: wishSidebarSlide 0.25s ease;
+}
+
+@keyframes wishSidebarSlide {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+.wish-sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 24px;
+  padding-top: 20px;
+  border-bottom: 1px solid #eee;
+}
+.wish-sidebar-header h3 {
+  flex: 1;
+  font-size: 22px;
+  font-weight: 700;
+  color: #303030;
+}
+.wish-sidebar-header button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.wish-sidebar-back,
+.wish-sidebar-close {
+  border: none;
+  background: none;
+  width: 34px;
+  height: 34px;
+  font-size: 26px;
+  color: #303030;
+  cursor: pointer;
+}
+
+.wish-sidebar-content {
+  padding-top: 25px;
+}
+
+.wish-sidebar-desc {
+  margin-bottom: 20px;
+  font-size: 15px;
+  color: #666;
+}
+
+.wish-sidebar-menu-btn,
+.wish-folder-btn,
+.wish-create-btn,
+.wish-submit-btn {
+  width: 100%;
+  min-height: 52px;
+  border: 1px solid #ddd;
+  background: #fff;
+  padding: 0 16px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.wish-sidebar-menu-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.wish-sidebar-menu-btn span {
+  font-size: 24px;
+}
+.wish-sidebar-menu-btn:hover {
+  border-color: #303030;
+}
+
+.wish-folder-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.wish-folder-btn:hover {
+  background: #f7f7f7;
+}
+
+.wish-create-btn {
+  margin-top: 8px;
+  border-style: dashed;
+  color: #303030;
+  font-weight: 600;
+}
+
+.wish-input-label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #303030;
+}
+
+.wish-folder-empty {
+  padding: 20px 0;
+  font-size: 14px;
+  color: #888;
+}
+
+.wish-folder-input {
+  width: 100%;
+  height: 52px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 0 14px;
+  font-size: 15px;
+  outline: none;
+  margin-bottom: 16px;
+}
+.wish-folder-input:focus {
+  border-color: #303030;
+}
+
+.wish-submit-btn {
+  background: #303030;
+  color: #fff;
+  border-color: #303030;
+  text-align: center;
+  font-weight: 600;
+}
+
+.wish-folder-tabs {
+  display: flex;
+  gap: 14px;
+  margin-top: 30px;
+  margin-bottom: 28px;
+  overflow-x: auto;
+  padding: 4px 2px 10px;
+}
+
+.wish-folder-tab-item {
+  min-width: 250px;
+  min-height: 92px;
+  padding: 14px 12px;
+  border: 1px solid #e5e5e5;
+  border-radius: 18px;
+  background: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+  position: relative;
+  transition: 0.2s ease;
+}
+.wish-folder-tab-item:hover {
+  border-color: #aaa;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+.wish-folder-tab-item.active {
+  border-color: #303030;
+  background: #303030;
+  color: #fff;
+}
+.wish-folder-tab-item.active .wish-folder-tab-btn {
+  color: #fff;
+}
+.wish-folder-tab-item.active .wish-folder-more-btn {
+  color: #fff;
+}
+.wish-folder-tab-item.active .wish-folder-preview img {
+  border-color: #303030;
+}
+
+.wish-folder-tab-btn {
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  color: #303030;
+  font-size: 15px;
+  font-weight: 700;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+.wish-folder-tab-btn span {
+  max-width: 100px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.wish-folder-preview {
+  display: flex;
+  align-items: center;
+  min-height: 42px;
+}
+.wish-folder-preview img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 3px solid #fff;
+  background: #f5f5f5;
+  margin-left: -10px;
+}
+.wish-folder-preview img:first-child {
+  margin-left: 0;
+}
+
+.wish-folder-more-btn {
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  color: #777;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: 0.2s ease;
+}
+.wish-folder-more-btn:hover {
+  background: rgba(0, 0, 0, 0.08);
+  color: #303030;
+  transform: scale(1.08);
+}
+
+.wish-folder-tab-item.active .wish-folder-more-btn:hover {
+  background: rgba(255, 255, 255, 0.18);
+  color: #fff;
+}
+
+.wish-sidebar-delete-btn {
+  width: 100%;
+  min-height: 52px;
+  border: 1px solid #f0d0d0;
+  background: #fff;
+  color: #d33;
+  padding: 0 16px;
+  margin-top: 12px;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: left;
+  font-weight: 600;
+}
+.wish-sidebar-delete-btn:hover {
+  background: #fff5f5;
+}
+
+.wish-folder-preview-empty {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #f2f2f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wish-folder-preview-empty span {
+  font-size: 11px;
+  font-weight: 700;
+  color: #777;
+}
+
+.wish-folder-tab-item.active .wish-folder-preview-empty {
+  background: rgba(255, 255, 255, 0.18);
+}
+.wish-folder-tab-item.active .wish-folder-preview-empty span {
+  color: #fff;
 }
 
 /* 큰 데스크탑 */

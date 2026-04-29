@@ -199,7 +199,7 @@ export const useAuthStore = create((set, get) => ({
     onKakaoLogin: async () => {
         try {
             if (!window.Kakao.isInitialized()) {
-                window.Kakao.init('15ae98903af08e0b25e2d43e5b601235');
+                window.Kakao.init(import.meta.env.VITE_KAKAO_APP_KEY);
             }
 
             const authObj = await new Promise((resolve, reject) => {
@@ -373,7 +373,7 @@ export const useAuthStore = create((set, get) => ({
                 }
             } else if (provider === "kakao") {
                 if (!window.Kakao.isInitialized()) {
-                    window.Kakao.init('15ae98903af08e0b25e2d43e5b601235')
+                    window.Kakao.init(import.meta.env.VITE_KAKAO_APP_KEY)
                 }
                 const authObj = await new Promise((resolve, reject) => {
                     window.Kakao.Auth.login({
