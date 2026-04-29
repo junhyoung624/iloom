@@ -489,7 +489,7 @@ export default function WishList() {
                                                 setIsWishSidebarOpen(false);
                                             }}
                                         >
-                                            여기에 담은 아이템을 목록에서 삭제하기
+                                            선택상품 목록에서 삭제하기
                                             <span>›</span>
                                         </button>
 

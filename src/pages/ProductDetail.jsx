@@ -76,10 +76,6 @@ export default function ProductDetail() {
     const hasThumbnail = colorItem && !colorItem.colorCd.some(cd => firstImg.includes(cd))
     const productQna = commonQna
 
-    const handleTabClick = (tab) => {
-        setActiveTab(tab)
-    }
-
     const getColorImg = (colorValue) => {
         if (!colorItem) return null
         const codes = Array.isArray(colorItem.colorCd) ? colorItem.colorCd : [colorItem.colorCd]
