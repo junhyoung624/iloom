@@ -14,10 +14,10 @@ export default function ChatBotTest() {
             });
 
             const data = await res.json();
-            console.log(data.answer);
+
             setAnswer(data.answer);
         } catch (error) {
-            console.error(error);
+
             setAnswer("에러남");
         }
     };

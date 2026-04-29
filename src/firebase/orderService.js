@@ -26,7 +26,7 @@ export const addTestOrder = async () => {
         ],
         orderedAt: serverTimestamp()
     })
-    console.log('테스트 주문 추가 완료!')
+
 }
 
 // 휴대폰 조회

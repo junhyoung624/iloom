@@ -18,6 +18,8 @@ import TabOption from '../components/Taboption'
 import TabReview from '../components/TabReview'
 import TabQna from '../components/TabQna'
 import TabDelivery from '../components/TabDelivery'
+import toast from 'react-hot-toast'
+import { Helmet } from 'react-helmet-async'
 
 const TABS = ['상세정보', '옵션', '인테리어 팁', '상품평', '제품Q&A', '배송/취소/반품']
 
@@ -90,7 +92,7 @@ export default function ProductDetail() {
 
     const handleBuy = () => {
         if (product.options?.length > 0 && !selectedOption) {
-            alert('옵션을 선택해주세요')
+            toast('옵션을 선택해주세요')
             return
         }
         user
@@ -100,7 +102,7 @@ export default function ProductDetail() {
 
     const handleAddCart = () => {
         if (product.options?.length > 0 && !selectedOption) {
-            alert('옵션을 선택해주세요')
+            toast('옵션을 선택해주세요')
             return
         }
         addToCart(product, { color: selectedOption }, quantity)
@@ -109,7 +111,7 @@ export default function ProductDetail() {
 
     const handleWishClick = () => {
         if (!user) {
-            alert('로그인 후 이용해주세요.')
+            toast('로그인 후 이용해주세요.')
             navigate('/login')
             return
         }
@@ -122,6 +124,10 @@ export default function ProductDetail() {
 
     return (
         <section className="product-detail">
+            <Helmet>
+                <title>{product.name} | iloom</title>
+                <meta name="description" content='{product.series} {product.name} - ${product.price}원' />
+            </Helmet>
             <div className="breadcrumb">
                 <Link to="/"><img src='/images/logo-icon/home-icon.png' alt="home" /></Link>
                 <span>&gt;</span>
@@ -159,7 +165,7 @@ export default function ProductDetail() {
                             </button>
                             <button className="share-btn" onClick={() => {
                                 navigator.clipboard.writeText(window.location.href)
-                                alert('링크가 복사되었습니다')
+                                toast('링크가 복사되었습니다')
                             }}>
                                 <img src="/images/product-detail/share.png" alt="공유하기"
                                     style={{ width: '27px', height: '27px' }} />

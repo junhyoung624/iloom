@@ -2,6 +2,7 @@ import { createUserWithEmailAndPassword, onAuthStateChanged, linkWithPopup, unli
 import { create } from "zustand";
 import { auth, db, googleProvider } from "../firebase/firebase";
 import { deleteDoc, doc, getDoc, setDoc, updateDoc } from "firebase/firestore";
+import toast from "react-hot-toast";
 
 export const useAuthStore = create((set, get) => ({
 
@@ -88,10 +89,10 @@ export const useAuthStore = create((set, get) => ({
             await setDoc(userRef, userInfo);
             await signOut(auth)
 
-            alert("회원가입 성공했습니다")
+            toast("회원가입 성공했습니다")
             return true;
         } catch (err) {
-            alert("회원가입 에러" + err.message);
+            toast("회원가입 에러" + err.message);
             return false
         }
     },
@@ -117,7 +118,7 @@ export const useAuthStore = create((set, get) => ({
             })
             return true;
         } catch (err) {
-            alert("로그인 실패" + err.message)
+            toast("로그인 실패" + err.message)
         }
     },
 
@@ -179,7 +180,7 @@ export const useAuthStore = create((set, get) => ({
             }
             return true;
         } catch (err) {
-            alert(err.message);
+            toast(err.message);
         }
     },
 
@@ -253,11 +254,11 @@ export const useAuthStore = create((set, get) => ({
                 set({ user: { ...kakaoUser, socials: { kakao: { email: kakaoEmail, linked: true } } } })
             }
 
-            alert(`${kakaoUser.nickname}님, 카카오 로그인 성공!`);
+            toast(`${kakaoUser.nickname}님, 카카오 로그인 성공!`);
             return true;
         } catch (err) {
             console.error('카카오 로그인 중 오류:', err);
-            alert(err.message);
+            toast(err.message);
         }
     },
 
@@ -319,7 +320,7 @@ export const useAuthStore = create((set, get) => ({
             return true
         } catch (err) {
             console.error('네이버 콜백 오류:', err);
-            alert(err.message);
+            toast(err.message);
         }
     },
 
@@ -328,7 +329,7 @@ export const useAuthStore = create((set, get) => ({
         try {
             const u = get().user
             if (!u) {
-                alert("로그인이 필요합니다")
+                toast("로그인이 필요합니다")
                 return
             }
             const userRef = doc(db, "people", u.uid)
@@ -403,9 +404,9 @@ export const useAuthStore = create((set, get) => ({
                 const state = Math.random().toString(36).substring(2)
                 window.location.href = `https://nid.naver.com/oauth2.0/authorize?response_type=token&client_id=${clientId}&redirect_uri=${callbackUrl}&state=${state}`
             }
-            alert(`${provider} 연동 완료!`)
+            toast(`${provider} 연동 완료!`)
         } catch (err) {
-            alert("연동실패:" + err.message)
+            toast("연동실패:" + err.message)
         }
     },
 
@@ -435,9 +436,9 @@ export const useAuthStore = create((set, get) => ({
                     }
                 }
             })
-            alert(`${provider} 연동 해제 완료`)
+            toast(`${provider} 연동 해제 완료`)
         } catch (err) {
-            alert("탈퇴 실패:" + err.message)
+            toast("탈퇴 실패:" + err.message)
         }
     },
 
@@ -479,7 +480,7 @@ export const useAuthStore = create((set, get) => ({
             set({ user: null })
             return true
         } catch (err) {
-            alert("탈퇴 실패:" + err.message)
+            toast("탈퇴 실패:" + err.message)
             return false
         }
     }

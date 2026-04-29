@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom'
 import { useProductStore } from '../store/useProductStore'
 import "./scss/searchpage.scss"
 import SubCard from '../components/SubCard'
+import { Helmet } from 'react-helmet-async'
 
 export default function SearchPage() {
   const { items } = useProductStore()
@@ -19,6 +20,10 @@ export default function SearchPage() {
 
   return (
     <section className="search-page">
+      <Helmet>
+        <title>검색 | iloom</title>
+        <meta name="description" content="일룸의 다양한 가구와 홈데코를 검색해보세요." />
+      </Helmet>
       <div className="inner">
         <div className="search-head">
           <h2 className="search-title">

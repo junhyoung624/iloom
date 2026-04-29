@@ -3,6 +3,7 @@ import { useAuthStore } from '../store/useAuthStore'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import "./scss/mypage.scss"
 import MyPageMenu from './MyPageMenu'
+import toast from 'react-hot-toast'
 
 export default function LeavePage() {
     const { user, onDeleteAccount } = useAuthStore()
@@ -11,13 +12,13 @@ export default function LeavePage() {
 
     const handleLeave = async () => {
         if (!isChecked) {
-            alert("탈퇴 유의사항에 동의해주세요.")
+            toast("탈퇴 유의사항에 동의해주세요.")
             return
         }
         if (window.confirm("정말 탈퇴하시겠습니까?")) {
             const result = await onDeleteAccount()
             if (result) {
-                alert("탈퇴가 완료되었습니다.")
+                toast("탈퇴가 완료되었습니다.")
                 navigate("/")
             }
         }

@@ -5,8 +5,7 @@ import { Link } from 'react-router-dom';
 import SubCard from './Card.jsx';
 
 export default function CoordiItemList(props) {
-    console.log("get data : ", props.data);
-    console.log("current tab : ", props.tab);
+
 
     return (
         <div className='coordi-item-list-wrap'>
