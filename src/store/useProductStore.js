@@ -1,5 +1,6 @@
 import { create } from "zustand";
 import { productData } from "../data/productData";
+import toast from "react-hot-toast";
 
 export const useProductStore = create((set, get) => ({
     // 상품 변수, 메서드
@@ -84,7 +85,7 @@ export const useProductStore = create((set, get) => ({
         const existing = wish.find((w) => w.id === product.id);
 
         if (existing) {
-            alert("이미 있는 제품입니다");
+            toast("이미 있는 제품입니다");
             return;
         }
 
@@ -255,7 +256,7 @@ export const useProductStore = create((set, get) => ({
 
     onAddOrder: async (order, user) => {
         const orderPrev = get().orderList;
-        console.log("onAddOrder in", order);
+
 
         const exists = orderPrev.some(
             (item) => item.orderNumber === order.orderNumber
@@ -360,6 +361,6 @@ export const useProductStore = create((set, get) => ({
         });
 
         set({ menus: menuList });
-        console.log(menuList);
+
     },
 }));

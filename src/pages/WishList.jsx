@@ -6,6 +6,7 @@ import "./scss/wishlist.scss";
 //import "./scss/mypage.scss";
 import { Link, useNavigate } from 'react-router-dom';
 import MyPageMenu from './MyPageMenu';
+import { Helmet } from 'react-helmet-async';
 
 export default function WishList() {
     const {
@@ -47,7 +48,7 @@ export default function WishList() {
     //체크박스 체크 시 실행할 메서드
     //매개값 : 체크된 항목
     const handleChecked = (item) => {
-        console.log(item);
+
         const key = item.id;
 
         setCheckedItems((prev) =>
@@ -55,8 +56,7 @@ export default function WishList() {
         )
     }
 
-    console.log("위시리스트 : ", wishlist);
-    console.log("선택한 항목을 표시하는 key : ", checkedItems);
+
 
     //전체 체크 메서드
     const handleAllChecked = (e) => {
@@ -100,7 +100,7 @@ export default function WishList() {
         checkedItems.includes(item.id)
     );
     const selectedItemIds = selectedItems.map((item) => item.id);
-    console.log("최종 체크된 요소 : ", selectedItems);
+
 
 
 
@@ -114,6 +114,10 @@ export default function WishList() {
 
     return (
         <div className='mypage'>
+            <Helmet>
+                <title>위시리스트 | iloom</title>
+                <meta name="description" content="찜한 상품 목록을 확인하세요." />
+            </Helmet>
             <div className="inner">
                 <MyPageMenu />
                 <div className="content">
@@ -348,10 +352,8 @@ export default function WishList() {
                                 {sidebarMode === "folder" && wishSidebarStep === "renameFolder" && "이름 바꾸기"}
                                 {sidebarMode === "folder" && wishSidebarStep === "folderMove" && "다른 위시리스트로 이동"}
 
-                                <h3>
-                                    {sidebarMode === "folder" && wishSidebarStep === "folderMove" && ""}
-                                    {sidebarMode === "folder" && wishSidebarStep === "folderCreate" && "위시리스트 만들기"}
-                                </h3>
+                                {sidebarMode === "folder" && wishSidebarStep === "folderMove" && ""}
+                                {sidebarMode === "folder" && wishSidebarStep === "folderCreate" && "위시리스트 만들기"}
                             </h3>
 
                             <button

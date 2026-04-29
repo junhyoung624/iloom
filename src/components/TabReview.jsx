@@ -1,4 +1,5 @@
 import React from 'react'
+import toast from 'react-hot-toast'
 import { useNavigate } from 'react-router-dom'
 
 export default function TabReview({ productReviews, user, onZoomImg, onWriteReview }) {
@@ -48,7 +49,7 @@ export default function TabReview({ productReviews, user, onZoomImg, onWriteRevi
 
             <button className="review-write-btn" onClick={() => {
                 if (!user) {
-                    alert('로그인 후 이용해주세요')
+                    toast('로그인 후 이용해주세요')
                     navigate('/login')
                     return
                 }
