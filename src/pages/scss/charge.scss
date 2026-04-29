@@ -38,6 +38,14 @@
         letter-spacing: -0.02em;
     }
 
+    .section-title-price {
+        float: right;
+        font-size: 18px;
+        font-weight: 700;
+        color: #CA1230;
+        margin-top: 8px;
+    }
+
     .info-table {
         display: flex;
         flex-direction: column;
@@ -87,37 +95,22 @@
 
         .delivery-req__control {
             height: 48px;
-            //border-radius: 8px;
-            //border: 1px solid #ddd;
             box-shadow: none;
         }
 
         .delivery-request-textarea {
-
             width: 570px;
             height: 80px;
             margin-top: 10px;
-
-            border: none;
+            border: 1px solid #ddd;
             outline: none;
             resize: none;
-
-            border: 1px solid #ddd;
             padding: 10px;
+
+            &:focus {
+                border-color: #303030;
+            }
         }
-
-        .delivery-request-textarea:focus {
-            border-color: #303030;
-        }
-
-        // .delivery-req__single-value {
-        //     color: #333;
-        // }
-
-        // .delivery-req__single-value.placeholder {
-        //     color: #aaa;
-        // }
-
     }
 
     .address-top {
@@ -212,8 +205,6 @@
         }
     }
 
-
-
     .product-info {
         justify-content: flex-start !important;
         gap: 22px;
@@ -243,7 +234,6 @@
             }
 
             p {
-
                 font-size: 16px;
                 line-height: 1.6;
                 color: #333;
@@ -309,38 +299,12 @@
         }
     }
 
-    .payment-methods {
-        display: flex;
-        align-items: center;
-        gap: 54px;
-        margin-bottom: 28px;
-        flex-wrap: wrap;
-    }
-
-    .payment-label {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        cursor: pointer;
+    .empty-order {
+        padding: 80px 0;
+        text-align: center;
         font-size: 16px;
-        color: #222;
-
-        input {
-            accent-color: #030303;
-            cursor: pointer;
-        }
-
-        span {
-            font-weight: 500;
-        }
-
-        img {
-            width: 80px;
-        }
-    }
-
-    .npay-text {
-        font-weight: 700 !important;
+        color: #777;
+        border-bottom: 1px solid #ddd;
     }
 
     .payment-notice {
@@ -381,14 +345,6 @@
             cursor: not-allowed;
         }
     }
-
-    .empty-order {
-        padding: 80px 0;
-        text-align: center;
-        font-size: 16px;
-        color: #777;
-        border-bottom: 1px solid #ddd;
-    }
 }
 
 // 비회원 주문
@@ -401,7 +357,6 @@
         width: 1200px;
 
         .title {
-            //text-align: center;
             font-size: 28px;
             font-weight: 700;
             padding-bottom: 18px;
@@ -410,6 +365,8 @@
     }
 
     .delivery-agreement-area {
+        margin-bottom: 34px;
+
         .discription {
             border: 1px solid #aaaaaa;
             padding: 40px 30px 40px 40px;
@@ -450,14 +407,11 @@
             }
 
             span {
-                //align-items: center;
                 margin: auto 0;
                 cursor: pointer;
                 color: #333;
             }
         }
-
-        margin-bottom: 34px;
     }
 
     .error-text {
@@ -466,42 +420,25 @@
         font-size: 1rem;
     }
 
-
-
     .user-form {
         display: flex;
         justify-content: space-between;
         gap: 50px;
-        // border-top: 2px solid #ddd;
         border-width: inherit;
         padding-top: 20px;
-
-        // .unlogged-area-left {
-        //     .error-text {
-        //         color: red;
-        //         font-weight: 700;
-        //         font-size: 1rem;
-        //     }
-        // }
     }
 
     .unlogged-charge-section {
-        //width: 100%;
-
-        //display: flex;
         .section-title {
             font-size: 1.2rem;
+            flex: 0.5;
+            border-style: none;
+            padding: 0;
         }
 
         .info-row {
             display: grid;
             gap: 10px;
-        }
-
-        .section-title {
-            flex: 0.5;
-            border-style: none;
-            padding: 0;
         }
 
         .info-table {
@@ -524,10 +461,9 @@
                         background: black;
                         color: white;
                         cursor: pointer;
+                        border: none;
                     }
                 }
-
-
             }
 
             .address-box {
@@ -545,11 +481,6 @@
                 display: grid;
                 gap: 10px;
 
-                // >p {
-                //     font-weight: 700;
-                //     color: #222;
-                // }
-
                 .unlogged-requisite-info,
                 .choose-store {
                     font-weight: 700;
@@ -557,10 +488,7 @@
                     line-height: 1.1rem;
                 }
 
-                .search-addr-wrap {
-                    line-height: 1rem;
-                }
-
+                .search-addr-wrap,
                 .extra-addr-wrap {
                     line-height: 1rem;
                 }
@@ -570,11 +498,9 @@
                     gap: 10px;
                 }
 
-                //방문매장 선택
                 .visit-store-box {
                     display: grid;
                     gap: 10px;
-                    //background: yellow;
 
                     .txt-info {
                         padding: 20px;
@@ -591,20 +517,13 @@
                         }
                     }
                 }
-
             }
-
-
         }
-
     }
-
-
 
     .unlogged_input {
         height: 3rem;
         width: 570px;
-        //flex-grow: 1;
         appearance: none;
         border-style: none;
         border: 1px solid #808080;
@@ -619,230 +538,21 @@
         border: 1.5px solid #2ecc71;
     }
 
-
     .unlogged-requisite-info {
         font-size: 16px;
         line-height: 1.1rem;
-    }
 
-    .unlogged-requisite-info::after {
-        content: '';
-        display: inline-block;
-        width: 4px;
-        height: 4px;
-        margin-left: 2px;
-        border-radius: 50%;
-        background-color: #ff3c3c;
-        vertical-align: text-top;
-    }
-
-}
-
-.card-register-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-    margin: 8px 0 12px 0;
-    padding: 6px 14px;
-    border: 1px dashed #aaa;
-    background: none;
-    font-size: 13px;
-    color: #555;
-    cursor: pointer;
-    transition: border-color 0.2s, color 0.2s;
-
-    &:hover {
-        border-color: #333;
-        color: #111;
-    }
-}
-
-.card-modal-overlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.4);
-    z-index: 9999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.card-modal {
-    background: #fff;
-    width: 100%;
-    max-width: 480px;
-    padding: 32px;
-    position: relative;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
-
-    &-header {
-        margin-bottom: 24px;
-
-        h3 {
-            font-size: 18px;
-            font-weight: 600;
-            margin-bottom: 4px;
+        &::after {
+            content: '';
+            display: inline-block;
+            width: 4px;
+            height: 4px;
+            margin-left: 2px;
+            border-radius: 50%;
+            background-color: #ff3c3c;
+            vertical-align: text-top;
         }
     }
-
-    &-desc {
-        font-size: 13px;
-        color: #888;
-    }
-
-    &-close {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        background: none;
-        border: none;
-        font-size: 16px;
-        color: #999;
-        cursor: pointer;
-
-        &:hover {
-            color: #333;
-        }
-    }
-
-    &-body {
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-    }
-
-    &-footer {
-        display: flex;
-        justify-content: flex-end;
-        gap: 8px;
-        margin-top: 28px;
-    }
-}
-
-.card-field {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-
-    label {
-        font-size: 13px;
-        font-weight: 500;
-        color: #333;
-    }
-
-    input,
-    select {
-        padding: 10px 12px;
-        border: 1px solid #ddd;
-        font-size: 14px;
-        outline: none;
-        transition: border-color 0.2s;
-
-        &:focus {
-            border-color: #333;
-        }
-    }
-
-    &-row {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 12px;
-    }
-
-    &-check {
-        flex-direction: row;
-        align-items: center;
-        gap: 8px;
-
-        input {
-            width: 16px;
-            height: 16px;
-        }
-
-        label {
-            font-weight: 400;
-        }
-    }
-
-    &-separator {
-        font-size: 13px;
-        font-weight: 600;
-        color: #333;
-        padding-top: 8px;
-        border-top: 1px solid #eee;
-    }
-
-    &-desc {
-        font-size: 12px;
-        color: #888;
-        margin-top: -8px;
-    }
-}
-
-.card-expiry {
-    display: flex;
-    gap: 8px;
-
-    select {
-        flex: 1;
-    }
-}
-
-.card-error {
-    font-size: 12px;
-    color: #e53e3e;
-    margin-top: 2px;
-}
-
-.card-cancel-btn {
-    padding: 10px 20px;
-    border: 1px solid #ddd;
-    background: none;
-    font-size: 14px;
-    cursor: pointer;
-
-    &:hover {
-        background: #f5f5f5;
-    }
-}
-
-.card-submit-btn {
-    padding: 10px 24px;
-    border: none;
-    background: #111;
-    color: #fff;
-    font-size: 14px;
-    cursor: pointer;
-
-    &:hover {
-        background: #333;
-    }
-
-    // //방문매장 선택
-    // .visit-store-box {
-    //     display: grid;
-    //     gap: 10px;
-    //     //background: yellow;
-
-    //     .txt-info {
-    //         padding: 20px;
-    //         background: #f7f7f7;
-    //         border: 1px solid #ddd;
-    //     }
-
-    //     .visit-store-select-wrap {
-    //         display: flex;
-    //         justify-content: space-between;
-
-    //         .store-select {
-    //             width: 280px;
-    //         }
-    //     }
-    // }
-
-
-
-
 }
 
 .error-text-right {
@@ -851,7 +561,7 @@
     font-size: 1rem;
 }
 
-
+// 할인 · 쿠폰
 .discount-section {
     display: flex;
     flex-direction: column;
@@ -1092,7 +802,6 @@
     }
 }
 
-// 할인 최종 요약
 .discount-summary {
     padding: 24px 0 8px;
     display: flex;
@@ -1128,7 +837,7 @@
     letter-spacing: -0.02em;
 }
 
-// ✅ 포인트 혜택 섹션
+// 포인트 혜택
 .point-max-badge {
     font-size: 15px;
     font-weight: 600;
@@ -1164,19 +873,6 @@
     gap: 6px;
 }
 
-.point-tooltip-icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    border: 1px solid #ccc;
-    font-size: 10px;
-    color: #aaa;
-    cursor: pointer;
-}
-
 .point-row-right {
     display: flex;
     flex-direction: column;
@@ -1198,8 +894,8 @@
 }
 
 .point-green {
-    color: #2e7d32;
-    font-weight: 600;
+    color: #2e7d32 !important;
+    font-weight: 700;
 }
 
 .point-notice {
@@ -1207,4 +903,1048 @@
     color: #bbb;
     margin-top: 8px;
     padding-bottom: 8px;
+}
+
+// 결제수단
+.payment-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 28px;
+}
+
+.payment-option-box {
+    width: 100%;
+    border: 1.5px solid #e5e5e5;
+    border-radius: 14px;
+    padding: 20px 22px;
+    background: #fff;
+    cursor: pointer;
+    transition: border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+
+    &.active {
+        border-color: #111;
+        background: #fafafa;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+    }
+
+    &:hover:not(.active) {
+        border-color: #bbb;
+        background: #fcfcfc;
+    }
+}
+
+.payment-option-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    width: 100%;
+}
+
+.payment-radio {
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: border-color 0.2s ease;
+
+    .payment-option-box.active & {
+        border-color: #111;
+    }
+}
+
+.radio-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: transparent;
+    transition: background 0.2s ease;
+
+    &.on {
+        background: #111;
+    }
+}
+
+.payment-option-info {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.payment-option-label {
+    font-size: 16px;
+    font-weight: 700;
+    color: #111;
+    line-height: 1.25;
+}
+
+.payment-option-sub {
+    font-size: 13px;
+    font-weight: 500;
+    color: #888;
+    line-height: 1.25;
+}
+
+.point-charge-btn {
+    min-width: 84px;
+    height: 36px;
+    padding: 0 16px;
+    border: 1.5px solid #CA1230;
+    background: #fff;
+    color: #CA1230;
+    font-size: 13px;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+
+    &:hover {
+        background: #CA1230;
+        color: #fff;
+    }
+}
+
+.payment-more-btn {
+    width: 100%;
+    height: 50px;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    background: #fff;
+    color: #555;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+
+    &:hover {
+        border-color: #bbb;
+        background: #fafafa;
+        color: #111;
+    }
+}
+
+.payment-more-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    animation: paymentMoreDown 0.2s ease;
+}
+
+@keyframes paymentMoreDown {
+    from {
+        opacity: 0;
+        transform: translateY(-4px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+// 일룸포인트 로고 자리
+.iloompay-bg {
+    background: #fff3f5;
+    border: 1px solid rgba(202, 18, 48, 0.15);
+}
+
+.iloompay-text {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #CA1230;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+// 네이버/카카오/토스 로고형 버튼
+.payment-simple-logo-box {
+    position: relative;
+    padding: 0;
+    height: 76px;
+    overflow: hidden;
+    border-radius: 14px;
+    background: #fff;
+
+    &.active {
+        border-color: #111;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    }
+
+    &:hover:not(.active) {
+        border-color: #999;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    }
+
+    .simple-logo-row {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        gap: 0;
+    }
+
+    .simple-logo-radio {
+        position: absolute;
+        left: 22px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 3;
+        background: rgba(255, 255, 255, 0.85);
+    }
+
+    .simple-pay-full-logo {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .payment-option-info,
+    .payment-option-label,
+    .payment-option-sub,
+    .simple-pay-logo-wrap {
+        display: none;
+    }
+}
+
+.naverpay-box.payment-simple-logo-box,
+.naverpay-box.payment-simple-logo-box:hover,
+.naverpay-box.payment-simple-logo-box:hover:not(.active),
+.naverpay-box.payment-simple-logo-box.active {
+    background: #03c75a;
+}
+
+.kakaopay-box.payment-simple-logo-box,
+.kakaopay-box.payment-simple-logo-box:hover,
+.kakaopay-box.payment-simple-logo-box:hover:not(.active),
+.kakaopay-box.payment-simple-logo-box.active {
+    background: #ffeb00;
+}
+
+.tosspay-box.payment-simple-logo-box,
+.tosspay-box.payment-simple-logo-box:hover,
+.tosspay-box.payment-simple-logo-box:hover:not(.active),
+.tosspay-box.payment-simple-logo-box.active {
+    background: #f2f7ff;
+}
+
+.naverpay-box .simple-pay-full-logo,
+.naverpay-box:hover .simple-pay-full-logo {
+    background: #01de5a;
+}
+
+.kakaopay-box .simple-pay-full-logo,
+.kakaopay-box:hover .simple-pay-full-logo {
+    background: #ffeb00;
+}
+
+.tosspay-box .simple-pay-full-logo,
+.tosspay-box:hover .simple-pay-full-logo {
+    background: #0050ff;
+}
+
+.simple-pay-center-logo {
+    display: block;
+    object-fit: contain;
+}
+
+.npay-center-logo {
+    width: 112px;
+    height: auto;
+}
+
+.kakaopay-center-logo {
+    width: 126px;
+    height: auto;
+}
+
+.tosspay-center-logo {
+    width: 118px;
+    height: auto;
+}
+
+// 기존 간편결제용 클래스도 혹시 남아있을 때 대비
+.simple-pay-logo-wrap {
+    width: 108px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.simple-pay-logo {
+    display: block;
+    max-width: 82px;
+    max-height: 24px;
+    object-fit: contain;
+}
+
+.naverpay-bg {
+    background: #01de5a;
+}
+
+.kakaopay-bg {
+    background: #ffeb00;
+}
+
+.tosspay-bg {
+    background: #0050ff;
+}
+
+.bankbook-bg,
+.realtime-bg {
+    background: #f4f4f4;
+}
+
+.simple-pay-text {
+    font-size: 15px;
+    font-weight: 800;
+    color: #222;
+    letter-spacing: -0.02em;
+}
+
+// 카드 슬라이더
+.card-slider-section {
+    width: 100%;
+    margin: 18px 0 4px;
+}
+
+.credit-card-swiper {
+    padding: 6px 4px 18px !important;
+}
+
+.card-list-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 16px;
+    border: 1.5px solid #e5e5e5;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: #fff;
+
+    &.selected {
+        border-color: #111;
+        background: #fafafa;
+    }
+}
+
+.card-list-thumb {
+    width: 54px;
+    height: 72px;
+    border-radius: 8px;
+    padding: 8px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-list-thumb-chip {
+    width: 24px;
+    height: 16px;
+    border-radius: 4px;
+    background: linear-gradient(135deg, #d4a843, #f0c060);
+}
+
+.card-list-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.card-list-name {
+    font-size: 15px;
+    font-weight: 700;
+    color: #111;
+    margin: 0 0 4px;
+}
+
+.card-list-number {
+    font-size: 13px;
+    color: #888;
+    margin: 0;
+}
+
+.card-installment-select {
+    width: 100%;
+    height: 34px;
+    border: 1px solid #ddd;
+    font-size: 13px;
+    padding: 0 10px;
+    outline: none;
+    background: #fff;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 6px;
+
+    &:focus {
+        border-color: #333;
+    }
+}
+
+.card-add-btn {
+    width: 220px;
+    height: 138px;
+    border-radius: 14px;
+    border: 2px dashed #ddd;
+    background: #fafafa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    color: #999;
+    font-size: 13px;
+    font-weight: 700;
+    transition: all 0.2s ease;
+
+    &:hover {
+        border-color: #555;
+        color: #555;
+        background: #f5f5f5;
+    }
+}
+
+.card-benefit-banner {
+    height: 42px;
+    margin-top: 8px;
+    padding: 0 14px;
+    border-radius: 10px;
+    background: #f8f8f8;
+    color: #555;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+// 카드 등록 버튼
+.card-register-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    margin: 8px 0 12px 0;
+    padding: 6px 14px;
+    border: 1px dashed #aaa;
+    background: none;
+    font-size: 13px;
+    color: #555;
+    cursor: pointer;
+    transition: border-color 0.2s, color 0.2s;
+
+    &:hover {
+        border-color: #333;
+        color: #111;
+    }
+}
+
+// 모달
+.card-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-modal {
+    background: #fff;
+    width: 100%;
+    max-width: 480px;
+    padding: 32px;
+    position: relative;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+
+    &-header {
+        margin-bottom: 24px;
+
+        h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+    }
+
+    &-desc {
+        font-size: 13px;
+        color: #888;
+    }
+
+    &-close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: none;
+        border: none;
+        font-size: 16px;
+        color: #999;
+        cursor: pointer;
+
+        &:hover {
+            color: #333;
+        }
+    }
+
+    &-body {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    &-footer {
+        display: flex;
+        justify-content: flex-end;
+        gap: 8px;
+        margin-top: 28px;
+    }
+}
+
+.card-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    label {
+        font-size: 13px;
+        font-weight: 500;
+        color: #333;
+    }
+
+    input,
+    select {
+        padding: 10px 12px;
+        border: 1px solid #ddd;
+        font-size: 14px;
+        outline: none;
+        transition: border-color 0.2s;
+
+        &:focus {
+            border-color: #333;
+        }
+    }
+
+    &-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    &-check {
+        flex-direction: row;
+        align-items: center;
+        gap: 8px;
+
+        input {
+            width: 16px;
+            height: 16px;
+        }
+
+        label {
+            font-weight: 400;
+        }
+    }
+
+    &-separator {
+        font-size: 13px;
+        font-weight: 600;
+        color: #333;
+        padding-top: 8px;
+        border-top: 1px solid #eee;
+    }
+
+    &-desc {
+        font-size: 12px;
+        color: #888;
+        margin-top: -8px;
+    }
+}
+
+.card-expiry {
+    display: flex;
+    gap: 8px;
+
+    select {
+        flex: 1;
+    }
+}
+
+.card-error {
+    font-size: 12px;
+    color: #e53e3e;
+    margin-top: 2px;
+}
+
+.card-cancel-btn {
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    background: none;
+    font-size: 14px;
+    cursor: pointer;
+
+    &:hover {
+        background: #f5f5f5;
+    }
+}
+
+.card-submit-btn {
+    padding: 10px 24px;
+    border: none;
+    background: #111;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+
+    &:hover {
+        background: #333;
+    }
+}
+
+// 포인트 충전 모달
+.point-modal-balance {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 16px;
+    background: #fff9f9;
+    border-radius: 8px;
+    border: 1px solid #f5e6e6;
+    margin-bottom: 4px;
+
+    span {
+        font-size: 14px;
+        color: #555;
+    }
+
+    strong {
+        font-size: 20px;
+        letter-spacing: -0.02em;
+    }
+}
+
+.point-charge-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-top: 4px;
+}
+
+.point-charge-amount-btn {
+    padding: 10px 0;
+    border: 1.5px solid #e5e5e5;
+    border-radius: 8px;
+    background: #fff;
+    font-size: 13px;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-weight: 500;
+
+    &:hover {
+        border-color: #333;
+    }
+
+    &.active {
+        border-color: #CA1230;
+        background: #fff5f5;
+        color: #CA1230;
+        font-weight: 700;
+    }
+}
+
+.point-modal-notice {
+    background: #f8f8f8;
+    border-radius: 8px;
+    padding: 12px 14px;
+
+    p {
+        font-size: 12px;
+        color: #999;
+        margin: 0 0 4px;
+
+        &:last-child {
+            margin: 0;
+        }
+    }
+}
+
+// 모바일 대응
+@media (max-width: 768px) {
+    .charge-page {
+        padding: 50px 16px 100px;
+
+        .inner {
+            width: 100%;
+        }
+
+        .charge-title-box {
+            h2 {
+                font-size: 32px;
+            }
+        }
+
+        .section-title {
+            font-size: 22px;
+        }
+
+        .order-head,
+        .order-item {
+            grid-template-columns: 1fr;
+        }
+
+        .order-head {
+            display: none;
+        }
+
+        .order-item {
+            >div {
+                border-right: none;
+                border-bottom: 1px solid #eee;
+            }
+        }
+
+        .payment-btn {
+            height: 60px;
+            font-size: 22px;
+        }
+    }
+
+    .unlogged-user-charge-section {
+        .inner {
+            width: 100%;
+        }
+
+        .user-form {
+            flex-direction: column;
+        }
+
+        .unlogged_input {
+            width: 100%;
+        }
+
+        .unlogged-charge-section {
+            .unlogged-addr-area {
+                .search-addr {
+                    .inner {
+                        width: 100%;
+
+                        .zipcode-input {
+                            width: 100%;
+                        }
+
+                        button {
+                            width: 130px;
+                        }
+                    }
+                }
+
+                .input-zone {
+                    .visit-store-box {
+                        .visit-store-select-wrap {
+                            flex-direction: column;
+                            gap: 10px;
+
+                            .store-select {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .discount-row,
+    .point-row {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .discount-label,
+    .point-row-label {
+        width: auto;
+    }
+
+    .coupon-select-btn,
+    .coupon-dropdown,
+    .money-input-wrap {
+        width: 100%;
+    }
+
+    .payment-option-row {
+        gap: 10px;
+    }
+
+    .simple-pay-logo-wrap {
+        width: 86px;
+        height: 44px;
+    }
+
+    .simple-pay-logo {
+        max-width: 68px;
+    }
+
+    .payment-option-label {
+        font-size: 15px;
+    }
+
+    .payment-option-sub {
+        font-size: 12px;
+    }
+
+    .payment-simple-logo-box {
+        height: 68px;
+
+        .simple-logo-radio {
+            left: 16px;
+        }
+    }
+
+    .npay-center-logo {
+        width: 96px;
+    }
+
+    .kakaopay-center-logo {
+        width: 108px;
+    }
+
+    .tosspay-center-logo {
+        width: 100px;
+    }
+}
+
+
+.simplepay-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.simplepay-card {
+    position: relative;
+    height: 110px;
+    border: 1.5px solid #efefef;
+    border-radius: 16px;
+    background: var(--accent, #f5f5f5);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 14px 16px;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0);
+        transition: background 0.2s ease;
+        border-radius: 16px;
+    }
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+
+        &::before {
+            background: rgba(0, 0, 0, 0.04);
+        }
+    }
+
+    &.active {
+        border-color: rgba(0, 0, 0, 0.3);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        transform: translateY(-1px);
+    }
+}
+
+.simplepay-radio {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+
+    &.on {
+        background: rgba(0, 0, 0, 0.5);
+        border-color: transparent;
+    }
+}
+
+.simplepay-logo-wrap {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+}
+
+.simplepay-logo {
+    height: 22px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+}
+
+.simplepay-text-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    position: relative;
+    z-index: 1;
+}
+
+.simplepay-name {
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: -0.02em;
+
+    &.dark {
+        color: rgba(0, 0, 0, 0.75);
+    }
+
+    &.light {
+        color: rgba(255, 255, 255, 0.95);
+    }
+}
+
+.simplepay-sub {
+    font-size: 11px;
+    font-weight: 400;
+    margin: 0;
+
+    &.dark {
+        color: rgba(0, 0, 0, 0.5);
+    }
+
+    &.light {
+        color: rgba(255, 255, 255, 0.7);
+    }
+}
+
+@media (max-width: 768px) {
+    .simplepay-grid {
+        gap: 8px;
+    }
+
+    .simplepay-card {
+        height: 92px;
+        padding: 10px 12px;
+    }
+
+    .simplepay-name {
+        font-size: 13px;
+    }
+
+    .simplepay-sub {
+        font-size: 10px;
+    }
+
+    .simplepay-logo {
+        height: 18px;
+    }
+}
+
+.coupon-item-preview {
+    font-size: 12px;
+    color: #CA1230;
+    font-weight: 600;
+    margin: 2px 0;
+}
+
+.charge-fixed-paybar {
+    position: fixed;
+    left: 50%;
+    bottom: 120px;
+    transform: translateX(-50%);
+    z-index: 999;
+    width: calc(100% - 48px);
+    max-width: 1200px;
+    height: 78px;
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(16px);
+    border: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    box-shadow: 0 16px 45px rgba(0, 0, 0, 0.14);
+
+    .fixed-pay-info {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        span {
+            font-size: 13px;
+            color: #888;
+            font-weight: 600;
+        }
+
+        strong {
+            font-size: 25px;
+            font-weight: 800;
+            color: #111;
+            letter-spacing: -0.03em;
+        }
+    }
+
+    button {
+        height: 50px;
+        padding: 0 34px;
+        border: none;
+        background: #111;
+        color: #fff;
+        font-size: 15px;
+        font-weight: 800;
+        cursor: pointer;
+        transition: 0.25s ease;
+
+        &:hover {
+            background: #CA1230;
+            transform: translateY(-1px);
+        }
+
+        &:disabled {
+            background: #bbb;
+            cursor: not-allowed;
+            transform: none;
+        }
+    }
 }

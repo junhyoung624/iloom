@@ -1,0 +1,212 @@
+@charset "UTF-8";
+.company-page {
+  padding-top: 200px;
+  padding-bottom: 260px;
+  color: #303030;
+  background: #fff;
+}
+.company-page .inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.company-page .page-title {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+}
+.company-page .contents-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  padding: 80px 0 100px;
+}
+.company-page .tab-btn {
+  position: relative;
+  background: none;
+  border: none;
+  padding: 0 0 14px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #999;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.company-page .tab-btn::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: #303030;
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+.company-page .tab-btn:hover {
+  color: #303030;
+}
+.company-page .tab-btn:hover::after, .company-page .tab-btn.active::after {
+  transform: translateX(-50%) scaleX(1);
+}
+.company-page .tab-btn.active {
+  color: #303030;
+  font-weight: 700;
+}
+.company-page .company-detail-content {
+  padding-top: 10px;
+}
+.company-page .detail-hero {
+  padding-bottom: 80px;
+  border-bottom: 1px solid #e9e9e9;
+  text-align: center;
+}
+.company-page .detail-hero .detail-page-title {
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 18px;
+}
+.company-page .detail-hero .detail-page-desc {
+  font-size: 22px;
+  color: #666;
+  line-height: 1.7;
+}
+.company-page .detail-wrap {
+  padding-top: 100px;
+}
+.company-page .detail-section {
+  margin-bottom: 140px;
+}
+.company-page .section-title {
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.3;
+  text-align: center;
+  margin-bottom: 48px;
+  letter-spacing: -0.02em;
+}
+.company-page .section-text-box {
+  max-width: 980px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  text-align: center;
+}
+.company-page .section-text {
+  font-size: 22px;
+  line-height: 1.9;
+  color: #666;
+  word-break: keep-all;
+}
+.company-page {
+  /* 브랜드 히스토리 핵심 */
+}
+.company-page .timeline-list,
+.company-page .year-list {
+  margin-top: 60px;
+  border-top: 1px solid #e5e5e5;
+}
+.company-page .timeline-item,
+.company-page .year-item {
+  display: flex;
+  justify-content: space-between;
+  text-align: right;
+  align-items: start;
+  padding: 48px 32px;
+  border-bottom: 1px solid #eaeaea;
+  transition: background 0.3s ease;
+}
+.company-page .timeline-item:hover,
+.company-page .year-item:hover {
+  background: #fafafa;
+}
+.company-page .timeline-year,
+.company-page .year {
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1;
+  color: #111;
+  letter-spacing: -0.03em;
+  padding-top: 4px;
+}
+.company-page .timeline-content {
+  max-width: 760px;
+}
+.company-page .timeline-title {
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1.35;
+  margin-bottom: 18px;
+  letter-spacing: -0.02em;
+  color: #222;
+}
+.company-page .timeline-desc,
+.company-page .year-text {
+  font-size: 21px;
+  color: #666;
+  line-height: 1.9;
+  word-break: keep-all;
+}
+.company-page .year-item {
+  padding: 34px 32px;
+}
+.company-page .year-text {
+  font-size: 20px;
+  color: #555;
+}
+.company-page {
+  /* 이미지+텍스트 섹션 */
+}
+.company-page .section-image-text {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 70px;
+  align-items: center;
+}
+.company-page .section-image-text .section-image {
+  overflow: hidden;
+  border-radius: 6px;
+  background: #f5f5f5;
+}
+.company-page .section-image-text .section-image img {
+  width: 100%;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.company-page .section-image-text .section-text-box {
+  max-width: 100%;
+  text-align: left;
+  margin: 0;
+}
+.company-page {
+  /* 카드형 가치 섹션 */
+}
+.company-page .value-card-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 40px;
+}
+.company-page .value-card {
+  padding: 38px 32px;
+  border: 1px solid #e8e8e8;
+  background: #fff;
+}
+.company-page .value-card .value-card-title {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 16px;
+  color: #222;
+}
+.company-page .value-card .value-card-desc {
+  font-size: 18px;
+  color: #666;
+  line-height: 1.85;
+  word-break: keep-all;
+}

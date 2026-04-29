@@ -12,7 +12,7 @@ export default function ScrollProgress() {
             setProgress(percent);
         };
 
-        // --banner-height CSS 변수 감지
+
         const updateBannerHeight = () => {
             const val = getComputedStyle(document.documentElement)
                 .getPropertyValue("--banner-height")
@@ -20,7 +20,7 @@ export default function ScrollProgress() {
             setBannerHeight(parseInt(val) || 0);
         };
 
-        // MutationObserver로 CSS 변수 변경 감지
+
         const observer = new MutationObserver(updateBannerHeight);
         observer.observe(document.documentElement, {
             attributes: true,
@@ -39,13 +39,13 @@ export default function ScrollProgress() {
     return (
         <div style={{
             position: "fixed",
-            top: 61 + bannerHeight,   // ✅ 배너 높이 반영
+            top: 61 + bannerHeight,
             left: 0,
             width: "100%",
             height: "3px",
             zIndex: 9999,
             background: "transparent",
-            transition: "top 0.3s ease",  // ✅ 부드럽게
+            transition: "top 0.3s ease",
         }}>
             <div style={{
                 height: "50%",

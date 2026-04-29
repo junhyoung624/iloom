@@ -5,6 +5,8 @@ import { useProductStore } from '../store/useProductStore'
 import "./scss/cart.scss"
 import CartOptionModal from '../components/CartOptionModal'
 import { colorData } from '../data/colorData'
+import { Helmet } from 'react-helmet-async'
+import NumberFlow from '@number-flow/react'
 
 export default function Cart() {
   const {
@@ -84,6 +86,10 @@ export default function Cart() {
 
   return (
     <section className="cart-page">
+      <Helmet>
+        <title>장바구니 | iloom</title>
+        <meta name="description" content="담아둔 상품을 확인하세요." />
+      </Helmet>
       <div className="inner">
         <div className="cart-title-box">
           <h2>장바구니</h2>
@@ -112,11 +118,10 @@ export default function Cart() {
             <ul className="cart-list">
               {mergedCartItems.map((item) => {
                 const colorInfo = colorData.find((c) => c.productCd === item.id)
-
                 const colorIndex = colorInfo?.colorCd.indexOf(item.color)
                 const colorImg = colorInfo?.localImgPath[colorIndex]
-
                 const itemTotal = Number(item.price.replace(/,/g, '')) * item.qty
+
                 return (
                   <li className="cart-item" key={`${item.id}-${item.color || 'default'}`}>
                     <div className="col-check">
@@ -135,7 +140,8 @@ export default function Cart() {
                         <strong className="brand">일룸</strong>
                         <p className="name">{item.name}</p>
                         <p className="meta">
-                          색상: {item.color || '-'} {colorImg && <img src={`/images/${colorImg}`} alt={item.color} />}</p>
+                          색상: {item.color || '-'} {colorImg && <img src={`/images/${colorImg}`} alt={item.color} />}
+                        </p>
                         <button
                           type="button"
                           className="option-change-btn"
@@ -165,7 +171,7 @@ export default function Cart() {
                     </div>
 
                     <div className="col-price">
-                      <strong>{itemTotal.toLocaleString()}원</strong>
+                      <strong><NumberFlow value={itemTotal} suffix="원" /></strong>
                       <span className="free-delivery">무료</span>
                     </div>
                   </li>
@@ -178,22 +184,20 @@ export default function Cart() {
             <h3>상품 주문 내역</h3>
             <div className="summary-row">
               <span>총 상품 금액</span>
-              <strong>{totalProductPrice.toLocaleString()}원</strong>
+              <strong><NumberFlow value={totalProductPrice} suffix="원" /></strong>
             </div>
             <div className="summary-row">
               <span>배송비</span>
-              <strong>{shippingPrice.toLocaleString()}원</strong>
+              <strong><NumberFlow value={shippingPrice} suffix="원" /></strong>
             </div>
-            <div className="summary-row discount">
-
-            </div>
+            <div className="summary-row discount"></div>
 
             <div className="summary-total">
               <span>상품 결제 예정금액</span>
-              <strong>{finalPrice.toLocaleString()}원</strong>
+              <strong><NumberFlow value={finalPrice} suffix="원" /></strong>
             </div>
             <Link to="/charge" className="charge-btn">
-              {finalPrice.toLocaleString()}원 주문하기
+              <NumberFlow value={finalPrice} suffix="원" /> 주문하기
             </Link>
           </div>
         </div>

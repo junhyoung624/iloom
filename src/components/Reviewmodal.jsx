@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import toast from 'react-hot-toast'
 
 export default function ReviewModal({ onClose, onSubmit, user, selectedOption }) {
     const [reviewRating, setReviewRating] = useState(5)
@@ -8,7 +9,7 @@ export default function ReviewModal({ onClose, onSubmit, user, selectedOption })
     const handleSubmit = (e) => {
         e.preventDefault()
         if (!reviewTitle || !reviewContent) {
-            alert('제목과 내용을 입력해주세요')
+            toast('제목과 내용을 입력해주세요')
             return
         }
         const newReview = {
@@ -22,7 +23,7 @@ export default function ReviewModal({ onClose, onSubmit, user, selectedOption })
             images: []
         }
         onSubmit(newReview)
-        alert('상품평이 등록되었습니다!')
+        toast('상품평이 등록되었습니다!')
         onClose()
     }
 

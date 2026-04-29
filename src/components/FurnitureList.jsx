@@ -1,10 +1,9 @@
 import React from 'react'
-import "./scss/furnitureList.scss"
 import { Link } from 'react-router-dom'
+import "./scss/furnitureList.scss"
 
 export default function FurnitureList() {
-
-    const FurnitureList = [
+    const furnitureList = [
         { id: "1", key: "소파", image: "./images/furnitureList/FList01.png" },
         { id: "2", key: "의자", image: "./images/furnitureList/FList02.png" },
         { id: "3", key: "테이블", image: "./images/furnitureList/FList03.png" },
@@ -12,22 +11,29 @@ export default function FurnitureList() {
         { id: "5", key: "수납", image: "./images/furnitureList/FList05.png" },
         { id: "6", key: "조명", image: "./images/furnitureList/FList06.png" },
     ]
+
     return (
-        <section>
-            <div className='furniture-list'>
+        <section className="furniture-list-section">
+            <div className="furniture-list">
                 <div className="inner">
-                    <ul>
-                        {FurnitureList.map((item, id) => (
-                            <li key={id}>
-                                <div className='furniture-item'>
+                    <div className="furniture-list-title">
+                        <span>FURNITURE CATEGORY</span>
+
+                    </div>
+
+                    <ul className="furniture-list-grid">
+                        {furnitureList.map((item) => (
+                            <li key={item.id}>
+                                <div className="furniture-item">
                                     <Link to={`/furniturepage?furniture=${item.key}`}>
-                                        <img src={item.image} alt={item.key} />
+                                        <div className="furniture-img-box">
+                                            <img src={item.image} alt={item.key} />
+                                        </div>
                                         <p>{item.key}</p>
                                     </Link>
                                 </div>
                             </li>
                         ))}
-
                     </ul>
                 </div>
             </div>

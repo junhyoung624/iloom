@@ -2,6 +2,7 @@ import React, { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { iloomList } from "../data/magazine";
 import "./scss/contentlist.scss"
+import { Helmet } from "react-helmet-async";
 
 const tabs = ["이벤트", "매거진"];
 
@@ -20,6 +21,10 @@ export default function ContentsPage() {
 
   return (
     <section className="contents-page">
+      <Helmet>
+        <title>매거진 | iloom</title>
+        <meta name="description" content="일룸의 인테리어 매거진과 라이프스타일 콘텐츠를 확인해보세요." />
+      </Helmet>
       <div className="inner contents-wrap">
         <h2 className="page-title">{activeTab}</h2>
 
@@ -49,7 +54,7 @@ export default function ContentsPage() {
                     src={getSafeImageUrl(item.thumbnail)}
                     alt={item.title}
                     onError={(e) => {
-                      console.log("썸네일 깨짐:", item.id, item.thumbnail);
+
                       e.currentTarget.style.display = "none";
                     }}
                   />

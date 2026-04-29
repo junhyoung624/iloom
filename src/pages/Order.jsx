@@ -3,6 +3,7 @@ import MyPageMenu from './MyPageMenu'
 import { useProductStore } from '../store/useProductStore'
 import "./scss/order.scss";
 import { useNavigate } from 'react-router-dom';
+import toast from 'react-hot-toast';
 
 const Order = () => {
   //const { cartItems, items } = useProductStore();
@@ -43,7 +44,7 @@ const Order = () => {
                         order.items?.map((item, id) => (
                           <li key={`order id - ${item.id}-${id}`}
                             className='order-item'
-                            onClick={() => alert("주문 상세로 이동")}>
+                            onClick={() => toast("주문 상세로 이동")}>
 
                             <div className="order-main-info">
                               <div className="order-date">
@@ -52,7 +53,7 @@ const Order = () => {
                                 <p className='order-item-id'>품번 : {item.id}</p>
                               </div>
                               <div className="order-item-img">
-                                <img src={item.productImages?.[0] } alt="." />
+                                <img src={item.productImages?.[0]} alt="." />
                               </div>
                               <div className="order-item-txt-info">
                                 <p className='series'>{item.series}</p>
@@ -70,7 +71,7 @@ const Order = () => {
                                 <p>도착예정일 : {order.deliveryDate}</p>
                                 <img src="./images/logo-icon/order-right-arrow.png" alt="."
                                   className='move-btn'
-                                  onClick={() => alert("주문 상세로 이동")} />
+                                  onClick={() => toast("주문 상세로 이동")} />
                               </div>
                             </div>
 
