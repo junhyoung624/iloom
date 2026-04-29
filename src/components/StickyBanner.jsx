@@ -1,8 +1,8 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './scss/stickybanner.scss'
 
 const MESSAGES = [
-    "🛋️ 카드사 프로모션 무이자할부 / 캐시백 혜택을 만나보세요",
+    "🛋️ 카드사 프로모션 무이자 할부 / 캐시백 혜택을 만나보세요",
     "🚚 5만원 이상 구매 시 무료배송",
     "✨ 일룸 신규 회원가입 시 5,000원 즉시 할인",
 ]
@@ -11,6 +11,19 @@ export default function StickyBanner({ onClose }) {
     const [visible, setVisible] = useState(true)
     const [msgIndex, setMsgIndex] = useState(0)
     const [animating, setAnimating] = useState(false)
+
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setAnimating(true)
+            setTimeout(() => {
+                setMsgIndex((i) => (i + 1) % MESSAGES.length)
+                setAnimating(false)
+            }, 300)
+        }, 3000)
+
+        return () => clearInterval(interval)
+    }, [])
 
     const handleNext = () => {
         if (animating) return

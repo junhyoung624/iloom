@@ -671,3 +671,29 @@
     border: 1px solid #111;
     color: #fff;
 }
+
+.banner-text {
+    position: absolute;
+    top: 250px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-size: 80px;
+    font-weight: 500;
+
+    animation: bannerFadeUp 0.7s cubic-bezier(0.25, 0.1, 0.25, 1) both;
+    white-space: nowrap;
+}
+
+
+@keyframes bannerFadeUp {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(24px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}

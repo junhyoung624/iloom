@@ -1,47 +1,101 @@
 .check-user-modal-bg {
     position: fixed;
-    top: 0;
-    left: 0;
+    inset: 0;
     width: 100%;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.5);
-    text-align: center;
+    background: rgba(17, 17, 17, 0.45);
+    backdrop-filter: blur(3px);
+    z-index: 9999;
 
-    .modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    animation: modalFadeIn 0.25s ease;
+
+    .check-user-modal {
+        width: 90%;
+        max-width: 420px;
         background: #fff;
-        padding: 40px;
+        padding: 42px 34px 32px;
+        text-align: center;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.22);
 
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 25px;
-        font-weight: 700;
+        animation: modalUp 0.28s ease;
+    }
 
-        >p {
-            margin-bottom: 20px;
+    .modal-text {
+        h3 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #111;
+            margin-bottom: 12px;
         }
 
-        .button-area {
-            //text-align: center;
-            margin: 10px auto;
-            display: flex;
-            justify-content: space-evenly;
-            //background: yellowgreen;
-
-            button {
-                font-size: 1.1rem;
-                border: 1px solid black;
-                width: 150px;
-                height: 40px;
-            }
-
-            button:hover {
-                background: black;
-                color: white;
-                transition: 0.5s;
-            }
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #555;
+            font-weight: 400;
+            margin-bottom: 30px;
         }
     }
 
+    .button-area {
+        display: flex;
+        gap: 10px;
+
+        button {
+            flex: 1;
+            height: 48px;
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.25s ease;
+        }
+
+        .guest-btn {
+            background: #fff;
+            color: #111;
+            border: 1px solid #ddd;
+
+            &:hover {
+                border-color: #111;
+                background: #f5f5f5;
+            }
+        }
+
+        .login-btn {
+            background: #111;
+            color: #fff;
+            border: 1px solid #111;
+
+            &:hover {
+                background: #333;
+                border-color: #333;
+            }
+        }
+    }
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes modalUp {
+    from {
+        opacity: 0;
+        transform: translateY(16px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
 }

@@ -4,6 +4,7 @@ import { useProductStore } from '../store/useProductStore'
 import { productData } from '../data/productData'
 import { colorData } from '../data/colorData'
 import CartOptionModal from './CartOptionModal'
+import NumberFlow from '@number-flow/react'
 import "./scss/cartpanel.scss"
 
 export default function CartPanel({ onClose }) {
@@ -67,7 +68,6 @@ export default function CartPanel({ onClose }) {
                 </div>
             ) : (
                 <>
-
                     <div className="cart-panel__select-all">
                         <label className="cart-panel__check-label">
                             <input
@@ -78,7 +78,6 @@ export default function CartPanel({ onClose }) {
                             <span>전체선택 ({selectedItems.length}/{mergedCartItems.length})</span>
                         </label>
                     </div>
-
 
                     <ul className="cart-panel__list">
                         {mergedCartItems.map((item) => {
@@ -125,7 +124,6 @@ export default function CartPanel({ onClose }) {
                                         </div>
 
                                         <div className="cart-panel__info-bottom">
-                                            {/* 수량 조절 */}
                                             <div className="cart-panel__qty">
                                                 <button onClick={() => decreaseQty(item.id, item.color)}>−</button>
                                                 <span>{item.qty}</span>
@@ -133,7 +131,9 @@ export default function CartPanel({ onClose }) {
                                             </div>
 
                                             <div className="cart-panel__price-wrap">
-                                                <strong className="cart-panel__price">{itemTotal.toLocaleString()}원</strong>
+                                                <strong className="cart-panel__price">
+                                                    <NumberFlow value={itemTotal} suffix="원" />
+                                                </strong>
                                                 <button
                                                     className="cart-panel__option-btn"
                                                     onClick={() => setOptionModalItem(item)}
@@ -148,28 +148,24 @@ export default function CartPanel({ onClose }) {
                         })}
                     </ul>
 
-                    {/* 가격 요약 */}
                     <div className="cart-panel__summary">
                         <div className="cart-panel__summary-row">
                             <span>총 상품금액</span>
-                            <span>{totalPrice.toLocaleString()}원</span>
+                            <span><NumberFlow value={totalPrice} suffix="원" /></span>
                         </div>
-                        <div className="cart-panel__summary-row discount">
-
-                        </div>
+                        <div className="cart-panel__summary-row discount"></div>
                         <div className="cart-panel__summary-row total">
                             <span>결제 예정금액</span>
-                            <strong>{finalPrice.toLocaleString()}원</strong>
+                            <strong><NumberFlow value={finalPrice} suffix="원" /></strong>
                         </div>
                     </div>
 
-                    {/* 하단 버튼 */}
                     <div className="cart-panel__footer">
                         <Link to="/cart" className="cart-panel__cart-btn" onClick={onClose}>
                             장바구니 바로가기
                         </Link>
                         <Link to="/charge" className="cart-panel__order-btn" onClick={onClose}>
-                            {finalPrice.toLocaleString()}원 주문하기
+                            <NumberFlow value={finalPrice} suffix="원" /> 주문하기
                         </Link>
                     </div>
                 </>

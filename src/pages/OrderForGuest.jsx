@@ -3,6 +3,7 @@ import "./scss/order.scss";
 import "./scss/orderForGuest.scss";
 import { useProductStore } from '../store/useProductStore';
 import { useParams } from 'react-router-dom';
+import toast from 'react-hot-toast';
 
 
 
@@ -10,14 +11,13 @@ export default function OrderForGuest() {
 
     const { orderList } = useProductStore();
     const { orderNum } = useParams();
-    console.log("param : ", orderNum);
+
 
     const guestOrder = orderList.find(
         (order) => order.orderId === orderNum
     );
 
-    console.log(orderList);
-    console.log(guestOrder);
+
 
 
     if (!guestOrder) {
@@ -64,7 +64,7 @@ export default function OrderForGuest() {
                                             guestOrder.items?.map((item, id) => (
                                                 <li key={`order id - ${item.id}-${id}`}
                                                     className='order-item'
-                                                    onClick={() => alert("주문 상세로 이동")}>
+                                                    onClick={() => toast("주문 상세로 이동")}>
 
                                                     <div className="order-main-info">
                                                         <div className="order-date">
@@ -91,7 +91,7 @@ export default function OrderForGuest() {
                                                             <p>도착예정일 : {guestOrder.deliveryDate}</p>
                                                             <img src="../images/logo-icon/order-right-arrow.png" alt="."
                                                                 className='move-btn'
-                                                                onClick={() => alert("주문 상세로 이동")} />
+                                                                onClick={() => toast("주문 상세로 이동")} />
                                                         </div>
                                                     </div>
 

@@ -5,6 +5,7 @@ import { sendPasswordResetEmail } from 'firebase/auth';
 import { auth } from '../firebase/firebase';
 import { getOrderByOrderId, getOrderByPhone } from '../firebase/orderService';
 import { findEmailByNameAndPhone } from '../firebase/userService';
+import { Helmet } from 'react-helmet-async';
 
 const Login = () => {
 
@@ -87,13 +88,13 @@ const Login = () => {
   }
 
   const handleGoogleLogin = async () => {
-    console.log("구글로그인시도");
+
     const result = await onGoogleLogin();
     if (result) navigate("/")
   }
 
   const handleKakaoLogin = async () => {
-    console.log("카카오 로그인 시도");
+
     const result = await onKakaoLogin();
     if (result) navigate("/");
   }
@@ -119,7 +120,10 @@ const Login = () => {
     <div className="login-wrap">
       <h1>회원 로그인</h1>
       <div className="inner">
-
+        <Helmet>
+          <title>로그인 | iloom</title>
+          <meta name="description" content="일룸 계정으로 로그인하세요." />
+        </Helmet>
         <div className="login-left">
           <h2>회원 로그인</h2>
           <form onSubmit={handleSubmit}>

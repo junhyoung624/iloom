@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import toast from 'react-hot-toast'
 
 export default function TabQna({ productQna, user }) {
     const [showQnaModal, setShowQnaModal] = useState(false)
@@ -9,7 +10,7 @@ export default function TabQna({ productQna, user }) {
     const handleSubmit = (e) => {
         e.preventDefault()
         if (!qnaTitle || !qnaContent) {
-            alert('제목과 내용을 입력해주세요')
+            toast('제목과 내용을 입력해주세요')
             return
         }
         setSubmitted(true)
@@ -28,7 +29,7 @@ export default function TabQna({ productQna, user }) {
                 <p>구매 전 궁금한 점을 문의해주세요.</p>
                 <button onClick={() => {
                     if (!user) {
-                        alert('로그인 후 이용해주세요')
+                        toast('로그인 후 이용해주세요')
                         return
                     }
                     setShowQnaModal(true)
