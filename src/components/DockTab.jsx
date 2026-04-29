@@ -156,7 +156,7 @@ export default function DockTab() {
                     </DockIcon>
 
                     <DockIcon>
-                        <a href="https://www.instagram.com/p/DXbydlXkpfn/"
+                        <a href="https://www.instagram.com/iloom_official"
                             target="_blank" rel="noreferrer"
                             className="dock-instagram-btn" aria-label="인스타그램">
                             <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
