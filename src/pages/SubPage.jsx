@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react'
 import { useProductStore } from '../store/useProductStore'
-import { Link, useLocation, useParams } from 'react-router-dom'
+import { Link, useLocation, useNavigate, useParams } from 'react-router-dom'
 import "./scss/subPage.scss"
 import MdPick from '../components/MdPick'
 import SubCard from '../components/SubCard'
@@ -22,9 +22,17 @@ const SubPage = () => {
     const { items, menus, sortType, sortOrder, onSetSort } = useProductStore()
 
     const params = useParams()
+    const navigate = useNavigate()
     const mainCate = params.originalCategory
     const subCate = params.category2
     const thirdCate = params.category3
+    const vaildCategories = menus.map((menu) => menu.name)
+
+    useEffect(() => {
+        if (menus.length > 0 && mainCate && !vaildCategories.includes(mainCate)) {
+            navigate('/not-found', { replace: true })
+        }
+    }, [mainCate, menus])
 
     const location = useLocation()
     const listRef = useRef(null)
@@ -486,6 +494,12 @@ const SubPage = () => {
                             </div>
                         )}
 
+                        {pageItem.length === 0 && (
+                            <div className="empty-state">
+                                <p>조건에 맞는 상품이 없어요.</p>
+                                <button onClick={resetFilter}>필터 초기화</button>
+                            </div>
+                        )}
                         <ul className="sub-product-list">
                             {pageItem.map((item) => (
                                 <li key={item.id}>

@@ -20,6 +20,7 @@ import TabQna from '../components/TabQna'
 import TabDelivery from '../components/TabDelivery'
 import toast from 'react-hot-toast'
 import { Helmet } from 'react-helmet-async'
+import EmptyState from '../components/EmptyState'
 
 const TABS = ['상세정보', '옵션', '인테리어 팁', '상품평', '제품Q&A', '배송/취소/반품']
 
@@ -64,10 +65,12 @@ export default function ProductDetail() {
 
     if (!product) {
         return (
-            <div className="not-found">
-                <p>상품을 찾을 수 없습니다.</p>
-                <button onClick={() => navigate(-1)}>뒤로가기</button>
-            </div>
+            <EmptyState
+                title="상품을 찾을 수 없습니다."
+                desc="상품이 삭제되었거나 주소가 변경되었습니다."
+                buttonText="홈으로 돌아가기"
+                to="/"
+            />
         )
     }
 
@@ -342,7 +345,7 @@ export default function ProductDetail() {
                         onWriteReview={() => setShowReviewModal(true)}
                     />
                 )}
-                {activeTab === '제품Q&A' && <TabQna productQna={productQna} user={user} />}
+                {activeTab === '제품Q&A' && <TabQna productQna={productQna} user={user} product={product} />}
                 {activeTab === '배송/취소/반품' && <TabDelivery />}
             </div>
 

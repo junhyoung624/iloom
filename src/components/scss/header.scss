@@ -561,3 +561,203 @@ header {
         transition: 0.5s;
     }
 }
+
+@media (max-width: 768px) {
+    header {
+        padding: 16px 20px;
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+
+            .header-left {
+                width: 40px; // ← 고정 너비
+                flex-shrink: 0;
+            }
+
+            .main-logo {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+
+                img {
+                    width: 80px;
+                }
+            }
+
+            .header-left {
+                .ham-btn {
+                    img {
+                        width: 20px;
+                    }
+                }
+            }
+
+            .header-right {
+                width: 40px; // ← header-left와 동일하게
+                flex-shrink: 0;
+                display: flex;
+                justify-content: flex-end;
+
+                .gnb-list {
+                    li {
+                        display: none;
+
+                        &:last-child {
+                            display: block; // 장바구니만 표시
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .header-scroll-nav-mask {
+        display: none;
+    }
+
+    .main-menu-wrap {
+        display: none;
+
+        &.active {
+            display: block;
+        }
+    }
+
+    .user-menu-wrap {
+        width: 80%;
+    }
+}
+
+.mobile-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 300;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1001;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s ease;
+
+    &.active {
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
+
+.mobile-menu-drawer {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: -320px;
+    width: 300px;
+    height: 100vh;
+    background: #fff;
+    z-index: 9999;
+    overflow-y: auto;
+    transition: left 0.35s ease;
+    flex-direction: column;
+
+    &.active {
+        left: 0;
+    }
+}
+
+.mobile-menu-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 20px;
+    border-bottom: 1px solid #f0f0f0;
+    z-index: 1003;
+}
+
+.mobile-menu-close {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;
+}
+
+.mobile-main-list {
+    list-style: none;
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f0f0;
+
+    >li {
+        .mobile-main-item {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px 20px;
+            background: none;
+            border: none;
+            font-size: 15px;
+            font-weight: 600;
+            color: #111;
+            cursor: pointer;
+            text-align: left;
+        }
+
+        .mobile-arrow {
+            font-size: 18px;
+            color: #aaa;
+            transition: transform 0.2s;
+
+            &.open {
+                transform: rotate(90deg);
+            }
+        }
+    }
+}
+
+.mobile-sub-list {
+    list-style: none;
+    background: #f9f9f9;
+    padding: 4px 0;
+
+    li a {
+        display: block;
+        padding: 10px 32px;
+        font-size: 14px;
+        color: #555;
+
+        &:hover {
+            color: #111;
+        }
+    }
+}
+
+.mobile-tab-list {
+    list-style: none;
+    padding: 16px 0;
+
+    li a {
+        display: block;
+        padding: 10px 20px;
+        font-size: 14px;
+        color: #777;
+
+        &:hover {
+            color: #111;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .mobile-menu-overlay,
+    .mobile-menu-drawer {
+        display: flex;
+    }
+
+    .main-menu-wrap {
+        display: none !important;
+    }
+}

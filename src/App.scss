@@ -4,3 +4,9 @@
     align-items: $ai;
     gap: $gap;
 }
+
+html,
+body {
+    overflow-x: hidden;
+    max-width: 100%;
+}

@@ -144,3 +144,45 @@
         background-position: -200% 0;
     }
 }
+
+/* ---- 반응형 ---- */
+@media (max-width: 1024px) {
+    .card-text-box {
+        .product-info {
+            .series-name {
+                font-size: 14px;
+            }
+
+            .product-name {
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .sub-card {
+        // 카드 자체에 좌우 여백
+        padding: 0 4px;
+    }
+
+    .card-text-box {
+        .product-info {
+            padding: 0 4px;
+
+            .series-name {
+                font-size: 12px;
+                margin-bottom: 6px;
+            }
+
+            .product-name {
+                font-size: 13px;
+                padding-bottom: 8px;
+            }
+
+            .price {
+                font-size: 13px;
+            }
+        }
+    }
+}
