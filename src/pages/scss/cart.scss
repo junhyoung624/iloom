@@ -352,33 +352,13 @@
     }
 
     &.empty {
-        .empty-box {
-            padding: 100px 20px;
-            border-top: 1px solid #ddd;
-            border-bottom: 1px solid #ddd;
-            text-align: center;
+        .cart-empty-state {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 96px 24px;
 
-            img {
+            .mypage-empty-state__image {
                 width: 150px;
-                padding-bottom: 80px;
-            }
-
-            p {
-                font-size: 18px;
-                color: #666;
-                margin-bottom: 24px;
-            }
-
-            .go-shopping-btn {
-                display: inline-flex;
-                align-items: center;
-                justify-content: center;
-                min-width: 180px;
-                height: 52px;
-                border: 1px solid #222;
-                color: #222;
-                text-decoration: none;
-                font-weight: 600;
             }
         }
     }

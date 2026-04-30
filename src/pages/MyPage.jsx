@@ -172,6 +172,7 @@ export default function MyPage() {
                                 <button className="agree-btn" onClick={() => setIsAgreeOpen(true)}>동의 내용보기</button>
                             </div>
                         </div>
+                        <button className="agree-btn" onClick={() => setIsAgreeOpen(true)}>동의 내용보기</button>
                     </div>
                 </div>
             </section>
