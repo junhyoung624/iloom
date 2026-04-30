@@ -33,6 +33,7 @@ export default function Charge() {
     const { cartItems, items, onAddOrder, createDeliveryDate, onfetchItems } = useProductStore()
     const { user } = useAuthStore()
     const { iloomMoney = 0, iloomPoint = 0 } = useUserAssetStore()
+    const [isSubmitting, serIsSubmitting] = useState(false)
 
     const navigate = useNavigate()
     const location = useLocation()
@@ -400,22 +401,29 @@ export default function Charge() {
                 },
             }
 
-        try {
-            onAddOrder(orderData, user)
-            await addOrder(orderData)
+        const handleFianlConfirm = async () => {
+            if (isSubmitting) return
+            setIsSubmitting(true)
 
-            confetti({
-                particleCount: 120,
-                spread: 80,
-                origin: { y: 0.6 },
-                colors: ['#CA1230', '#111111', '#ffffff', '#d4a574'],
-            })
+            try {
+                onAddOrder(orderData, user)
+                await addOrder(orderData)
 
-            toast(`결제가 완료되었습니다. 주문번호는 ${orderNumber} 입니다.`)
-            user ? navigate('/order') : navigate(`/orderForGuest/${orderNumber}`)
-        } catch (err) {
-            console.log(err)
-            toast('주문 저장 중 오류가 발생했습니다.')
+                confetti({
+                    particleCount: 120,
+                    spread: 80,
+                    origin: { y: 0.6 },
+                    colors: ['#CA1230', '#111111', '#ffffff', '#d4a574'],
+                })
+
+                toast(`결제가 완료되었습니다. 주문번호는 ${orderNumber} 입니다.`)
+                user ? navigate('/order') : navigate(`/orderForGuest/${orderNumber}`)
+            } catch (err) {
+                console.log(err)
+                toast('주문 저장 중 오류가 발생했습니다.')
+            } finally {
+                setIsSubmitting(false)
+            }
         }
     }
 
