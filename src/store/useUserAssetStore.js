@@ -3,6 +3,7 @@ import { create } from 'zustand'
 export const useUserAssetStore = create((set, get) => ({
 
     iloomMoney: 2400,
+    iloomPoint: 0,
 
     // 포인트 적립
     addPoint: (amount) => set((state) => ({ iloomPoint: state.iloomPoint + amount })),
