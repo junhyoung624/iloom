@@ -1,7 +1,16 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './scss/chargeModal.scss'
 
 export default function ChargeModal({ onClose, onConfirm }) {
+    
+    
+    useEffect(() => {
+        const handleEsc = (e) => {
+            if (e.key === 'Escape') onClose()
+        }
+        document.addEventListener('keydown', handleEsc)
+        return () => document.removeEventListener('keydown', handleEsc)
+    }, [onClose])
     return (
         <div className="charge-modal-overlay" onClick={onClose}>
             <div className="charge-confirm-modal" onClick={(e) => e.stopPropagation()}>

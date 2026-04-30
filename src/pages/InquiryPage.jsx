@@ -1,9 +1,10 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useInquiryStore } from '../store/useInquiryStore'
-import MyPageMenu from './MyPageMenu'
 import { commonQna } from '../data/qnaData'
 import './scss/inquirypage.scss'
 import InquiryEditModal from '../components/InquiryEditModal'
+import SubPageEmptyState from '../components/SubPageEmptyState'
+import InquiryDeleteModal from '../components/InquiryDeleteModal'
 
 function AccordionItem({ item, isOpen, onToggle }) {
     return (
@@ -35,58 +36,76 @@ export default function InquiryPage() {
     const [openId, setOpenId] = useState(null)
     const [activeTab, setActiveTab] = useState('faq')
     const [editTarget, setEditTarget] = useState(null)
+    const [deleteTarget, setDeleteTarget] = useState(null)
 
     const handleToggle = (id) => setOpenId((prev) => (prev === id ? null : id))
 
-    const handleDelete = (id) => {
-        if (window.confirm('문의를 삭제할까요?')) deleteInquiry(id)
+    const handleDelete = (item) => {
+        setDeleteTarget(item)
     }
 
+    const confirmDelete = () => {
+        if (!deleteTarget) return
+        deleteInquiry(deleteTarget.id)
+        setDeleteTarget(null)
+    }
+
+    useEffect(() => {
+        const handleEsc = (e) => {
+            if (e.key === 'Escape') {
+                setEditTarget(null)
+                setDeleteTarget(null)
+            }
+        }
+        document.addEventListener('keydown', handleEsc)
+        return () => document.removeEventListener('keydown', handleEsc)
+    }, [])
+
     return (
-        <section className="mypage">
-            <div className="inner">
-                <MyPageMenu />
+        <section className="mypage-inquiry">
+            <div className="content inquiry-content">
+                <div className="inquiry-page-tabs">
+                    <button
+                        className={`inquiry-page-tab ${activeTab === 'faq' ? 'active' : ''}`}
+                        onClick={() => setActiveTab('faq')}
+                    >
+                        자주 묻는 질문
+                    </button>
+                    <button
+                        className={`inquiry-page-tab ${activeTab === 'mine' ? 'active' : ''}`}
+                        onClick={() => setActiveTab('mine')}
+                    >
+                        내 문의
+                        {inquiries.length > 0 && (
+                            <span className="inquiry-page-tab-badge">{inquiries.length}</span>
+                        )}
+                    </button>
+                </div>
 
-                <div className="content inquiry-content">
-                    <div className="inquiry-page-tabs">
-                        <button
-                            className={`inquiry-page-tab ${activeTab === 'faq' ? 'active' : ''}`}
-                            onClick={() => setActiveTab('faq')}
-                        >
-                            자주 묻는 질문
-                        </button>
-                        <button
-                            className={`inquiry-page-tab ${activeTab === 'mine' ? 'active' : ''}`}
-                            onClick={() => setActiveTab('mine')}
-                        >
-                            내 문의
-                            {inquiries.length > 0 && (
-                                <span className="inquiry-page-tab-badge">{inquiries.length}</span>
-                            )}
-                        </button>
-                    </div>
-
-                    {activeTab === 'faq' && (
-                        <div className="faq-section">
-                            <div className="accordion-list">
-                                {commonQna.map((item) => (
-                                    <AccordionItem
-                                        key={item.id}
-                                        item={item}
-                                        isOpen={openId === item.id}
-                                        onToggle={() => handleToggle(item.id)}
-                                    />
-                                ))}
-                            </div>
+                {activeTab === 'faq' && (
+                    <div className="faq-section">
+                        <div className="accordion-list">
+                            {commonQna.map((item) => (
+                                <AccordionItem
+                                    key={item.id}
+                                    item={item}
+                                    isOpen={openId === item.id}
+                                    onToggle={() => handleToggle(item.id)}
+                                />
+                            ))}
                         </div>
-                    )}
+                    </div>
+                )}
 
-                    {activeTab === 'mine' && (
-                        <div className="mine-section">
-                            {inquiries.length === 0 ? (
-                                <div className="inquiry-empty">
+                {activeTab === 'mine' && (
+                    <div className="mine-section">
+                        {inquiries.length === 0 ? (
+                            <SubPageEmptyState
+                                title="문의한 내역이 없습니다."
+                                description=""
+                                icon={
                                     <svg width="40" height="40" viewBox="0 0 24 24" fill="none"
-                                        stroke="#ccc" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                                        stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                                         <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
                                     </svg>
                                     <p>아직 문의 내역이 없어요</p>
@@ -102,9 +121,7 @@ export default function InquiryPage() {
                                                     {item.status}
                                                 </span>
                                             </div>
-
                                             <p className="inquiry-item__text">{item.text}</p>
-
                                             <div className="inquiry-item__bottom">
                                                 <span className="inquiry-item__date">{item.createdAt}</span>
                                                 {item.status !== '답변 완료' && (
@@ -117,7 +134,7 @@ export default function InquiryPage() {
                                                         </button>
                                                         <button
                                                             className="inquiry-item__btn delete"
-                                                            onClick={() => handleDelete(item.id)}
+                                                            onClick={() => handleDelete(item)}
                                                         >
                                                             삭제
                                                         </button>
@@ -133,11 +150,19 @@ export default function InquiryPage() {
                 </div>
             </div>
 
+
             {editTarget && (
                 <InquiryEditModal
                     item={editTarget}
                     onSave={updateInquiry}
                     onClose={() => setEditTarget(null)}
+                />
+            )}
+
+            {deleteTarget && (
+                <InquiryDeleteModal
+                    onClose={() => setDeleteTarget(null)}
+                    onConfirm={confirmDelete}
                 />
             )}
         </section>

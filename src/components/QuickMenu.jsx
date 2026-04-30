@@ -15,7 +15,7 @@ export default function QuickMenu() {
     const [isChatOpen, setIsChatOpen] = useState(false);
     const [message, setMessage] = useState("");
     const [chatList, setChatList] = useState([
-        { role: "bot", text: "안녕하세요! 일룸 챗봇입니다 😊\n아래 자주 묻는 질문을 선택하거나 직접 입력해주세요." }
+        { role: "bot", text: "안녕하세요! 일룸 챗봇입니다 \n아래 자주 묻는 질문을 선택하거나 직접 입력해주세요." }
     ]);
     const [isLoading, setIsLoading] = useState(false);
     const chatBodyRef = useRef(null);

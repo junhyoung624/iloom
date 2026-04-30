@@ -118,6 +118,18 @@ export default function ProductDetail() {
         setProductReviews(prev => [newReview, ...prev])
     }
 
+    useEffect(() => {
+        const handleEsc = (e) => {
+            if (e.key === 'Escape') {
+                setShowReviewModal()
+                setShowCartModal()
+                setShowCheckUserModal()
+            }
+        }
+        document.addEventListener('keydown', handleEsc)
+        return () => document.removeEventListener('keydown', handleEsc)
+    }, [setShowReviewModal, setShowCartModal, setShowCheckUserModal])
+
     return (
         <section className="product-detail">
             <Helmet>
@@ -300,7 +312,7 @@ export default function ProductDetail() {
                 {TABS.map(tab => (
                     <button key={tab}
                         className={`tab-btn ${activeTab === tab ? 'active' : ''}`}
-                        onClick={() => handleTabClick(tab)}>
+                        onClick={() => setActiveTab(tab)}>
                         {tab}
                     </button>
                 ))}

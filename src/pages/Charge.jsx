@@ -398,10 +398,10 @@ export default function Charge() {
                     extraAddress: guestForm.extraAddress,
                     request: finalRequest,
                 },
-            }
+        }
 
         try {
-            onAddOrder(orderData, user)
+            await onAddOrder(orderData, user)
             await addOrder(orderData)
 
             confetti({

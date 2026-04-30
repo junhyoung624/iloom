@@ -5,13 +5,14 @@ import { useCustomWishStore } from '../store/useCustomWishStore';
 import "./scss/wishlist.scss";
 //import "./scss/mypage.scss";
 import { Link, useNavigate } from 'react-router-dom';
-import MyPageMenu from './MyPageMenu';
 import { Helmet } from 'react-helmet-async';
+import SubPageEmptyState from '../components/SubPageEmptyState';
 
 export default function WishList() {
     const {
         wishlist,
         onRemoveWish,
+        onRemoveWishes,
     } = useProductStore();
 
     const {
@@ -101,9 +102,22 @@ export default function WishList() {
     );
     const selectedItemIds = selectedItems.map((item) => item.id);
 
+    const handleSelectedItemsDelete = () => {
+        onRemoveWishes(selectedItemIds);
 
+        wishFolders.forEach((folder) => {
+            const hasSelectedItem = folder.itemIds.some((id) =>
+                selectedItemIds.includes(id)
+            );
 
+            if (hasSelectedItem) {
+                onRemoveItemsFromWishFolder(folder.id, selectedItemIds);
+            }
+        });
 
+        setCheckedItems([]);
+        setIsWishSidebarOpen(false);
+    };
 
     //컨트롤타워
     //최대 8개만 썸네일로 보여주기
@@ -113,206 +127,194 @@ export default function WishList() {
     const extraCount = selectedItems.length - visibleSelectedItems.length;
 
     return (
-        <div className='mypage'>
+        <div className='mypage-wish'>
             <Helmet>
                 <title>위시리스트 | iloom</title>
                 <meta name="description" content="찜한 상품 목록을 확인하세요." />
             </Helmet>
-            <div className="inner">
-                <MyPageMenu />
-                <div className="content">
-                    <div className="page-title">
-                        <p>위시리스트</p>
-                    </div>
-                    <div className="wish-content">
 
-                        {
-                            wishlist.length == 0 &&
-                            <div className="empty-content-wrap">
-                                <div className='show-empty-info'>위시리스트가 비었습니다</div>
-                                <div className="show-more-btn"
-                                    onClick={() => navigate("/")}>더 알아보기</div>
-                            </div>
-                        }
-                        {wishFolders.length > 0 && (
-                            <div className="wish-folder-tabs">
+            <div className="wish-content">
 
-                                {/* 전체 */}
+                {
+                    wishlist.length == 0 &&
+                    <SubPageEmptyState
+                        title="위시리시트가 비었습니다."
+                        actionLabel="쇼핑하기"
+                        imageSrc="/images/logo-icon/wish-none.svg"
+                        onAction={() => navigate("/")}
+                    />
+                }
+                {wishFolders.length > 0 && (
+                    <div className="wish-folder-tabs">
+
+                        {/* 전체 */}
+                        <div
+                            className={`wish-folder-tab-item ${activeFolderId === "all" ? "active" : ""
+                                }`}
+                            onClick={() => {
+                                setActiveFolderId("all");
+                                setOpenFolderMenuId(null);
+                                setCheckedItems([]);
+                            }}
+                        >
+                            <button
+                                className="wish-folder-tab-btn"
+                                type="button"
+                            >
+                                <span>전체</span>
+                                <div className="wish-folder-preview wish-folder-preview-empty">
+                                    <span>ALL</span>
+                                </div>
+                            </button>
+                        </div>
+
+                        {/* 폴더들 */}
+                        {wishFolders.map((folder) => {
+                            const folderItems = wishlist.filter((item) =>
+                                folder.itemIds.includes(item.id)
+                            );
+                            return (
                                 <div
-                                    className={`wish-folder-tab-item ${activeFolderId === "all" ? "active" : ""
+                                    key={folder.id}
+                                    className={`wish-folder-tab-item ${activeFolderId === folder.id ? "active" : ""
                                         }`}
                                     onClick={() => {
-                                        setActiveFolderId("all");
+                                        setActiveFolderId(folder.id);
                                         setOpenFolderMenuId(null);
                                         setCheckedItems([]);
                                     }}
                                 >
                                     <button
                                         className="wish-folder-tab-btn"
-                                        type="button"
                                     >
-                                        <span>전체</span>
-                                        <div className="wish-folder-preview wish-folder-preview-empty">
-                                            <span>ALL</span>
+                                        <span>{folder.name}</span>
+
+                                        <div className="wish-folder-preview">
+                                            {folderItems.slice(0, 3).map((item) => (
+                                                <img
+                                                    key={item.id}
+                                                    src={item.productImages[0]}
+                                                    alt={item.name}
+                                                />
+                                            ))}
                                         </div>
                                     </button>
+
+                                    <button
+                                        type="button"
+                                        className="wish-folder-more-btn"
+                                        onClick={(e) => {
+                                            e.stopPropagation();
+                                            setSidebarMode("folder");
+                                            setSelectedFolderId(folder.id);
+                                            setEditFolderName(folder.name);
+                                            setIsWishSidebarOpen(true);
+                                            setWishSidebarStep("folderMain");
+                                        }}
+                                    >
+                                        ⋯
+                                    </button>
                                 </div>
-
-                                {/* 폴더들 */}
-                                {wishFolders.map((folder) => {
-                                    const folderItems = wishlist.filter((item) =>
-                                        folder.itemIds.includes(item.id)
-                                    );
-                                    return (
-                                        <div
-                                            key={folder.id}
-                                            className={`wish-folder-tab-item ${activeFolderId === folder.id ? "active" : ""
-                                                }`}
-                                            onClick={() => {
-                                                setActiveFolderId(folder.id);
-                                                setOpenFolderMenuId(null);
-                                                setCheckedItems([]);
-                                            }}
-                                        >
-                                            <button
-                                                className="wish-folder-tab-btn"
-                                            >
-                                                <span>{folder.name}</span>
-
-                                                <div className="wish-folder-preview">
-                                                    {folderItems.slice(0, 3).map((item) => (
-                                                        <img
-                                                            key={item.id}
-                                                            src={item.productImages[0]}
-                                                            alt={item.name}
-                                                        />
-                                                    ))}
-                                                </div>
-                                            </button>
-
-                                            <button
-                                                type="button"
-                                                className="wish-folder-more-btn"
-                                                onClick={(e) => {
-                                                    e.stopPropagation();
-                                                    setSidebarMode("folder");
-                                                    setSelectedFolderId(folder.id);
-                                                    setEditFolderName(folder.name);
-                                                    setIsWishSidebarOpen(true);
-                                                    setWishSidebarStep("folderMain");
-                                                }}
-                                            >
-                                                ⋯
-                                            </button>
-                                        </div>
-                                    );
-                                })}
-                            </div>
-                        )}
-                        {
-                            wishlist.length > 0 &&
-                            <div className="wish-list-title">
-                                <div className="wish-control-left">
-                                    <input type="checkbox"
-                                        className='wish-check-box'
-                                        checked={
-                                            filteredWishlist.length > 0 &&
-                                            selectedItems.length === filteredWishlist.length
-                                        }
-                                        onChange={handleAllChecked} />
-
-
-                                </div>
-                                <div className="wish-control-right">
-                                    {
-                                        selectedItems.length > 0 &&
-                                        <div className='wish-control-btn-wrap'>
-                                            <div className='wish-control-btn wish-control-btn-ctrl'
-                                                onClick={() => {
-                                                    setSidebarMode("selected");
-                                                    setIsWishSidebarOpen(true);
-                                                    setWishSidebarStep("main")
-                                                }}>관리</div>
-                                            <div className='wish-control-btn wish-control-btn-del'
-                                                onClick={handleAllDeleteBtn}>모두 지우기</div>
-                                        </div>
-                                    }
-
-                                    <div className="checked-wish-area">
-                                        <ul className='control-wish-list'>
-
-                                            {
-                                                visibleSelectedItems.map((item, id) => (
-                                                    <li key={id}
-                                                        className='checked-wish-thumbnail'>
-                                                        <img src={item.productImages[0]} alt="." />
-                                                    </li>
-                                                ))
-                                            }
-                                            {
-                                                extraCount > 0 && (
-                                                    <li className='extra-wish-count'>+{extraCount}</li>
-                                                )
-                                            }
-                                        </ul>
-
-                                    </div>
-                                </div>
-
-                            </div>
-                        }
-
-                        <ul className="wish-list">
-
-                            {filteredWishlist.length > 0 && filteredWishlist.map((wish, id) => {
-                                return <li key={id} className='wish-item'>
-                                    <div className="check-area">
-                                        <input
-                                            type="checkbox"
-                                            className='wish-check-box'
-                                            onChange={() => handleChecked(wish)}
-                                            checked={checkedItems.includes(wish.id)}
-                                        />
-                                    </div>
-                                    <div className="wish-item-left">
-
-                                        <div className="wish-img-info">
-                                            <img src={wish.productImages[0]} alt="." />
-                                        </div>
-                                        <div className="wish-name-info">
-                                            <p className='series-name-in-wish'>{wish.series}</p>
-                                            <p className='product-name'>{wish.name}</p>
-                                        </div>
-                                    </div>
-
-                                    <div className="wish-item-right">
-                                        <div className="wish-price-info">
-                                            <p>{wish.price} 원</p>
-                                        </div>
-                                        <div className="wish-button">
-                                            <Link to={`/product/${wish.id}`}><div className="detail-btn wish-btn">상세보기</div></Link>
-                                            <div className="delete-btn wish-btn"
-                                                onClick={() => onRemoveWish(wish.id)}
-                                            >삭제</div>
-                                        </div>
-                                    </div>
-
-                                </li>
-                            })
-
-
-                            }
-                        </ul>
+                            );
+                        })}
                     </div>
-                    {/* {
-                        wishlist.length > 0 && <div className="wish-delete-all-btn">
-                            선택상품삭제
+                )}
+                {
+                    wishlist.length > 0 &&
+                    <div className="wish-list-title">
+                        <div className="wish-control-left">
+                            <input type="checkbox"
+                                className='wish-check-box'
+                                checked={
+                                    filteredWishlist.length > 0 &&
+                                    selectedItems.length === filteredWishlist.length
+                                }
+                                onChange={handleAllChecked} />
+
+
                         </div>
-                    } */}
+                        <div className="wish-control-right">
+                            {
+                                selectedItems.length > 0 &&
+                                <div className='wish-control-btn-wrap'>
+                                    <div className='wish-control-btn wish-control-btn-ctrl'
+                                        onClick={() => {
+                                            setSidebarMode("selected");
+                                            setIsWishSidebarOpen(true);
+                                            setWishSidebarStep("main")
+                                        }}>관리</div>
+                                    <div className='wish-control-btn wish-control-btn-del'
+                                        onClick={handleAllDeleteBtn}>모두 지우기</div>
+                                </div>
+                            }
 
-                </div>
+                            <div className="checked-wish-area">
+                                <ul className='control-wish-list'>
 
+                                    {
+                                        visibleSelectedItems.map((item, id) => (
+                                            <li key={id}
+                                                className='checked-wish-thumbnail'>
+                                                <img src={item.productImages[0]} alt="." />
+                                            </li>
+                                        ))
+                                    }
+                                    {
+                                        extraCount > 0 && (
+                                            <li className='extra-wish-count'>+{extraCount}</li>
+                                        )
+                                    }
+                                </ul>
+
+                            </div>
+                        </div>
+
+                    </div>
+                }
+
+                <ul className="wish-list">
+
+                    {filteredWishlist.length > 0 && filteredWishlist.map((wish, id) => {
+                        return <li key={id} className='wish-item'>
+                            <div className="check-area">
+                                <input
+                                    type="checkbox"
+                                    className='wish-check-box'
+                                    onChange={() => handleChecked(wish)}
+                                    checked={checkedItems.includes(wish.id)}
+                                />
+                            </div>
+                            <div className="wish-item-left">
+
+                                <div className="wish-img-info">
+                                    <img src={wish.productImages[0]} alt="." />
+                                </div>
+                                <div className="wish-name-info">
+                                    <p className='series-name-in-wish'>{wish.series}</p>
+                                    <p className='product-name'>{wish.name}</p>
+                                </div>
+                            </div>
+
+                            <div className="wish-item-right">
+                                <div className="wish-price-info">
+                                    <p>{wish.price} 원</p>
+                                </div>
+                                <div className="wish-button">
+                                    <Link to={`/product/${wish.id}`}><div className="detail-btn wish-btn">상세보기</div></Link>
+                                    <div className="delete-btn wish-btn"
+                                        onClick={() => onRemoveWish(wish.id)}
+                                    >삭제</div>
+                                </div>
+                            </div>
+
+                        </li>
+                    })
+
+
+                    }
+                </ul>
             </div>
+
             {/* 선택 상품 관리 사이드바 */}
             {isWishSidebarOpen && (
                 <div
@@ -386,6 +388,12 @@ export default function WishList() {
                                     >
                                         위시리스트 만들기
                                         <span>›</span>
+                                    </button>
+                                    <button
+                                        className="wish-sidebar-delete-btn"
+                                        onClick={handleSelectedItemsDelete}
+                                    >
+                                        선택한 상품 삭제하기
                                     </button>
                                 </>
                             )}
