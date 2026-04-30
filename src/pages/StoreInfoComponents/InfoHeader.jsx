@@ -13,10 +13,7 @@ export default function InfoHeader({
     setSelectedSubRegion,
     storeRegion,
 }) {
-    //tab 상태 저장
-    //keyword, location
-    // const [selectedSearchType, setSelectedSearchType] = useState("keyword");
-    // console.log(selectedSearchType);
+
 
     return (
         <div className='store-control-header'>

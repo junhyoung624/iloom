@@ -38835,7 +38835,7 @@ export const productData = [
     ],
     "ranking": 444
   },
-  
+
   {
     "id": "HSO146AMPN",
     "series": "로이",
@@ -40881,7 +40881,7 @@ export const productData = [
     "productImages": [
       "/images/iloom_images/study-room/bed/IBM0008A_1.png",
       "/images/iloom_images/study-room/bed/IBM0008A_OSGY_3.png",
-      "/images/iloom_images/study-room/bed/IBM0008A_SPGY_4.png",      
+      "/images/iloom_images/study-room/bed/IBM0008A_SPGY_4.png",
       "/images/iloom_images/study-room/bed/IBM0008A_OSLU_2.png",
       "/images/iloom_images/study-room/bed/IBM0008A_OSDN_6.png"
     ],
@@ -52985,6 +52985,45 @@ export const productData = [
       "https://www.iloom.com/upload/contents/20240715/_f9cd7686-8e45-4197-928f-80c406391b34.jpg",
       "https://www.iloom.com/upload/contents/20240715/_957c639f-8b29-4100-aa9b-68d14847c937.jpg",
       "https://www.iloom.com/upload/contents/20240715/_2cc79980-045b-4cf4-b28d-1d14428caa27.jpg"
+    ],
+    "ranking": 296
+  },
+  {
+    "id": "ISS00DG00A",
+    "series": "파베",
+    "name": "파베 스툴(패브릭)",
+    "material": "패브릭",
+    "price": "250,000원",
+    "options": [
+      {
+        "name": "색상",
+        "values": [
+          "5Z1",
+          "6A2L"
+        ]
+      }
+    ],
+    "originalCategory": "거실",
+    "category2": "소파",
+    "category3": "패브릭소파",
+    "productImages": [
+      "/images/iloom_images/living-room/sofa/ISS00DG00A_1.jpg",
+      "/images/iloom_images/living-room/sofa/ISS00DG00A_5Z1_3.jpg",
+      "/images/iloom_images/living-room/sofa/ISS00DG00A_6A2L_2.jpg"
+
+    ],
+    "mdPick": false,
+    "new": false,
+    "BestSeller": false,
+    "detailImg": [
+      "https://www.iloom.com/upload/contents/20251211/_60fe5eaf-0a98-464b-96bc-8e013c6c5d3f.jpg",
+      "https://www.iloom.com/upload/contents/20251211/_39caf841-3630-48dc-8de1-aa42a95e24ff.jpg",
+      "https://www.iloom.com/upload/contents/20251211/_74cb6a1a-80c0-4452-8e90-8a7c77856af9.jpg",
+      "https://www.iloom.com/upload/contents/20251211/_b38db0d6-32f5-485c-a3b5-051620b78bc7.jpg",
+      "https://www.iloom.com/upload/contents/20251211/_eb0901e1-b662-4874-a659-477667bbfc88.gif",
+      "https://www.iloom.com/upload/contents/20260427/_fccf97fc-617d-48d2-8d59-f733df147c80.jpg",
+      "https://www.iloom.com/upload/contents/20260427/_5bd32244-a2ea-4591-95c3-5c48b460f038.jpg",
+      "https://www.iloom.com/upload/contents/20251113/_df6edd18-28dc-4c2a-bc11-999af1d80bc0.jpg",
     ],
     "ranking": 296
   }

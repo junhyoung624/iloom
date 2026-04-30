@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 export default function KeywordSearch({ keyword, setKeyword }) {
 
-    console.log(window.location.pathname);
+
 
     const [input, setInput] = useState("");
 
