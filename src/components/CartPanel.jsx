@@ -1,11 +1,12 @@
 import { useMemo, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useProductStore } from '../store/useProductStore'
 import { productData } from '../data/productData'
 import { colorData } from '../data/colorData'
 import CartOptionModal from './CartOptionModal'
 import NumberFlow from '@number-flow/react'
 import "./scss/cartpanel.scss"
+import toast from 'react-hot-toast'
 
 export default function CartPanel({ onClose }) {
     const {
@@ -29,6 +30,17 @@ export default function CartPanel({ onClose }) {
             })
             .filter(Boolean)
     }, [cartItems])
+
+    const navigate = useNavigate()
+
+    const handleCharge = () => {
+        if (selectedItems.length === 0) {
+            toast('주문할 상품을 선택해주세요.')
+            return
+        }
+        onClose()
+        navigate('/charge')
+    }
 
     const allChecked = mergedCartItems.length > 0 && mergedCartItems.every((item) => item.checked)
     const selectedItems = mergedCartItems.filter((item) => item.checked)
@@ -164,9 +176,9 @@ export default function CartPanel({ onClose }) {
                         <Link to="/cart" className="cart-panel__cart-btn" onClick={onClose}>
                             장바구니 바로가기
                         </Link>
-                        <Link to="/charge" className="cart-panel__order-btn" onClick={onClose}>
-                            <NumberFlow value={finalPrice} suffix="원" /> 주문하기
-                        </Link>
+                        <button className="cart-panel__order-btn" onClick={handleCharge}>
+                            <NumberFlow value={finalPrice} suffix="원" />주문하기
+                        </button>
                     </div>
                 </>
             )}

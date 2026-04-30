@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import './App.scss'
 import Header from './components/Header'
+import NotFound from './pages/NotFound'
 
 import { Route, Routes } from 'react-router-dom'
 import { Toaster } from 'react-hot-toast'
@@ -127,6 +128,8 @@ function App() {
           <Route path="/:originalCategory" element={<PageTransition><SubPage /></PageTransition>} />
           <Route path="/:originalCategory/:category2" element={<PageTransition><SubPage /></PageTransition>} />
           <Route path="/:originalCategory/:category2/:category3" element={<PageTransition><SubPage /></PageTransition>} />
+          <Route path="/not-found" element={<PageTransition><NotFound /></PageTransition>} />
+          <Route path="*" element={<PageTransition><NotFound /></PageTransition>} />
           <Route
             element={
               <PageTransition>

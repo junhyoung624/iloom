@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import toast from 'react-hot-toast'
+import { useInquiryStore } from '../store/useInquiryStore'
 
-export default function TabQna({ productQna, user }) {
+export default function TabQna({ productQna, user, product }) {
+    const { addInquiry, inquiries } = useInquiryStore()
     const [showQnaModal, setShowQnaModal] = useState(false)
     const [qnaTitle, setQnaTitle] = useState('')
     const [qnaContent, setQnaContent] = useState('')
@@ -13,6 +15,14 @@ export default function TabQna({ productQna, user }) {
             toast('제목과 내용을 입력해주세요')
             return
         }
+
+        addInquiry({
+            category: '제품 Q&A',
+            text: `[${qnaTitle}] ${qnaContent}`,
+            productId: product?.id || '',
+            productName: product?.name || '',
+        })
+
         setSubmitted(true)
     }
 
@@ -90,15 +100,20 @@ export default function TabQna({ productQna, user }) {
                                 <form onSubmit={handleSubmit}>
                                     <div className="qna-modal-field">
                                         <p>제목</p>
-                                        <input type="text" placeholder="제목을 입력하세요"
+                                        <input
+                                            type="text"
+                                            placeholder="제목을 입력하세요"
                                             value={qnaTitle}
-                                            onChange={(e) => setQnaTitle(e.target.value)} />
+                                            onChange={(e) => setQnaTitle(e.target.value)}
+                                        />
                                     </div>
                                     <div className="qna-modal-field">
                                         <p>문의 내용</p>
-                                        <textarea placeholder="문의 내용을 입력해주세요"
+                                        <textarea
+                                            placeholder="문의 내용을 입력해주세요"
                                             value={qnaContent}
-                                            onChange={(e) => setQnaContent(e.target.value)} />
+                                            onChange={(e) => setQnaContent(e.target.value)}
+                                        />
                                     </div>
                                     <button type="submit">문의 완료</button>
                                 </form>

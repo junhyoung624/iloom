@@ -98,6 +98,13 @@ export default function FurniturePage() {
                         <button className={sortType === "new" ? "active" : ""} onClick={() => onSetSort("new", "asc")}>신상품순</button>
                         <button className={sortType === "name" ? "active" : ""} onClick={() => onSetSort("name", "asc")}>상품명순</button>
                     </div>
+
+                    {pageItem.length === 0 && (
+                        <div className="empty-state">
+                            <p>'{rawKeyword}'에 대한 검색 결ㄹ과가 없어요</p>
+                            <Link to="/">홈으로 돌아가기</Link>
+                        </div>
+                    )}
                     <ul className="sub-product-list">
                         {pageItem.map((item) => (
                             <li key={item.id}>
