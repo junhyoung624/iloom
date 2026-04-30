@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import toast from 'react-hot-toast'
 
 export default function TabQna({ productQna, user }) {
@@ -22,6 +22,17 @@ export default function TabQna({ productQna, user }) {
         setQnaTitle('')
         setQnaContent('')
     }
+
+    useEffect(() => {
+        const handleEsc = (e) => {
+            if (e.key === 'Escape') {
+                setShowQnaModal()
+                setSubmitted()
+            }
+        }
+        document.addEventListener('keydown', handleEsc)
+        return () => document.removeEventListener('keydown', handleEsc)
+    }, [setShowQnaModal, setSubmitted])
 
     return (
         <div className="tab-qna">
@@ -69,7 +80,6 @@ export default function TabQna({ productQna, user }) {
 
                         {submitted ? (
                             <div className="qna-submitted">
-                                <p className="submitted-icon">✅</p>
                                 <h2>문의가 접수되었습니다.</h2>
                                 <p>답변은 영업일 기준 1~3일 내에 등록됩니다.</p>
                                 <button onClick={handleClose}>확인</button>

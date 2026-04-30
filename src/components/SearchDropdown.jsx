@@ -33,9 +33,7 @@ export default function SearchDropdown({ isSearchOpen, setIsSearchOpen, isScroll
     }, [items])
 
     const handleKeyDown = (e) => {
-        if (e.key === "Enter") {
-            handleSearchAll()
-        }
+        if (e.key === "Enter") handleSearchAll()
     }
 
     const currentItems =

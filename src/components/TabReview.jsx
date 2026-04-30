@@ -1,4 +1,4 @@
-import React from 'react'
+
 import toast from 'react-hot-toast'
 import { useNavigate } from 'react-router-dom'
 
@@ -8,7 +8,7 @@ export default function TabReview({ productReviews, user, onZoomImg, onWriteRevi
     const avgRating = productReviews && productReviews.length > 0
         ? (productReviews.reduce((sum, r) => sum + r.rating, 0) / productReviews.length).toFixed(1)
         : '0.0'
-
+        
     return (
         <div className="tab-review">
             <div className="review-summary">

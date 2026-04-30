@@ -1,44 +1,22 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useInquiryStore } from '../store/useInquiryStore'
 import { useNavigate } from 'react-router-dom'
+import { useAuthStore } from '../store/useAuthStore'
 import "./scss/inquirydock.scss"
 
 const TABS = [
-    {
-        label: '배송 문의',
-        questions: [
-            '배송은 얼마나 걸리나요?',
-            '배송 현황을 확인하고 싶어요',
-            '배송지를 변경하고 싶어요',
-        ],
-    },
-    {
-        label: '제품 문의',
-        questions: [
-            '제품 색상/사이즈를 확인하고 싶어요',
-            '제품 재고가 있나요?',
-            '설치 서비스가 가능한가요?',
-        ],
-    },
-    {
-        label: '교환/반품',
-        questions: [
-            '교환 신청은 어떻게 하나요?',
-            '반품 절차를 알고 싶어요',
-            '환불은 언제 처리되나요?',
-        ],
-    },
-    {
-        label: '직접 입력',
-        questions: [],
-    },
+    { label: '배송 문의', questions: ['배송은 얼마나 걸리나요?', '배송 현황을 확인하고 싶어요', '배송지를 변경하고 싶어요'] },
+    { label: '제품 문의', questions: ['제품 색상/사이즈를 확인하고 싶어요', '제품 재고가 있나요?', '설치 서비스가 가능한가요?'] },
+    { label: '교환/반품', questions: ['교환 신청은 어떻게 하나요?', '반품 절차를 알고 싶어요', '환불은 언제 처리되나요?'] },
+    { label: '직접 입력', questions: [] },
 ]
 
-export default function InquiryDock({ onClose }) {
+export default function InquiryDock({ onClose, onLoginPopup }) {
     const [activeTab, setActiveTab] = useState(0)
     const [customText, setCustomText] = useState('')
     const [submitted, setSubmitted] = useState(false)
     const { addInquiry } = useInquiryStore()
+    const { user } = useAuthStore()
     const navigate = useNavigate()
 
     const handleQuickSubmit = (question) => {
@@ -55,12 +33,26 @@ export default function InquiryDock({ onClose }) {
         setTimeout(() => { setSubmitted(false); onClose() }, 1800)
     }
 
+    const handleMyInquiry = () => {
+        if (!user) { onLoginPopup(); return }
+        onClose()
+        navigate('/inquiry')
+    }
+
+    useEffect(() => {
+        const handleEsc = (e) => {
+            if (e.key === 'Escape') onClose()
+        }
+        document.addEventListener('keydown', handleEsc)
+        return () => document.removeEventListener('keydown', handleEsc)
+    }, [])
+
     return (
         <div className="inquiry-dock">
             <div className="inquiry-dock__header">
                 <p className="inquiry-dock__title">무엇을 도와드릴까요?</p>
                 <div className="inquiry-dock__header-right">
-                    <button className="inquiry-dock__mypage-btn" onClick={() => { onClose(); navigate('/inquiry') }}>
+                    <button className="inquiry-dock__mypage-btn" onClick={handleMyInquiry}>
                         내 문의 보기
                     </button>
                     <button className="inquiry-dock__close" onClick={onClose}>
@@ -94,7 +86,6 @@ export default function InquiryDock({ onClose }) {
                         <p>문의가 접수됐어요!</p>
                     </div>
                 ) : activeTab < TABS.length - 1 ? (
-
                     <ul className="inquiry-dock__questions">
                         {TABS[activeTab].questions.map((q, i) => (
                             <li key={i}>
@@ -109,7 +100,6 @@ export default function InquiryDock({ onClose }) {
                         ))}
                     </ul>
                 ) : (
-
                     <div className="inquiry-dock__custom">
                         <textarea
                             className="inquiry-dock__textarea"

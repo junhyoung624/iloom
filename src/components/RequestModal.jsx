@@ -1,4 +1,15 @@
+import { useEffect } from "react"
+
 export default function RequestModal({ requestDraft, setRequestDraft, onClose, onConfirm }) {
+
+    useEffect(() => {
+        const handleEsc = (e) => {
+            if (e.key === 'Escape') onClose()
+        }
+        document.addEventListener('keydown', handleEsc)
+        return () => document.removeEventListener('keydown', handleEsc)
+    }, [onClose])
+
     return (
         <div className="card-modal-overlay" onClick={onClose}>
             <div className="card-modal" onClick={(e) => e.stopPropagation()}>
