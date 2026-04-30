@@ -414,7 +414,7 @@ export default function Charge() {
             toast(`결제가 완료되었습니다. 주문번호는 ${orderNumber} 입니다.`)
             user ? navigate('/order') : navigate(`/orderForGuest/${orderNumber}`)
         } catch (err) {
-            console.log(err)
+
             toast('주문 저장 중 오류가 발생했습니다.')
         }
     }

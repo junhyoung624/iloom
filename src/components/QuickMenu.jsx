@@ -23,7 +23,7 @@ export default function QuickMenu() {
 
     useEffect(() => {
         const stored = JSON.parse(localStorage.getItem("recentProducts") || "[]");
-        setRecentProducts(stored.slice(0, 3));
+        setRecentProducts(stored.slice(0, 5));
     }, [location.pathname]);
 
     // 새 메시지 올 때마다 스크롤 하단
@@ -90,7 +90,7 @@ export default function QuickMenu() {
                     <img src="/images/quick-menu/chatbot.png" alt="챗봇" />
                 </button>
                 <div className="recent-view-hover-area">
-                    <div className={`recent-view-box ${recentProducts.length >= 3 ? "has-3" : recentProducts.length === 2 ? "has-2" : ""}`}>
+                    <div className={`recent-view-box ${recentProducts.length >= 5 ? "has-5" : recentProducts.length === 2 ? "has-2" : ""}`}>
                         <p className="recent-view-title">최근 본 상품</p>
                         <ul className="recent-view-list">
                             {recentProducts.length > 0 ? (

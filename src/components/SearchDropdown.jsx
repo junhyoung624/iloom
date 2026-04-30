@@ -3,10 +3,19 @@ import { Link, useNavigate } from 'react-router-dom'
 import { useProductStore } from '../store/useProductStore'
 import "./scss/searchdropdown.scss"
 
+const FALLBACK_IMAGE = '/images/no-image.png'
+
+const getImage = (item, index) => {
+    return item?.productImages?.[index] || item?.productImages?.[0] || FALLBACK_IMAGE
+}
+
 export default function SearchDropdown({ isSearchOpen, setIsSearchOpen, isScrolled }) {
     const { items, searchWordAll, onSetSearchWordAll } = useProductStore()
     const [activeMenu, setActiveMenu] = useState("md")
     const [hoveredItem, setHoveredItem] = useState(null)
+    const [previewDefaultSrc, setPreviewDefaultSrc] = useState(FALLBACK_IMAGE)
+    const [previewHoverSrc, setPreviewHoverSrc] = useState(FALLBACK_IMAGE)
+
     const navigate = useNavigate()
 
     const keyword = searchWordAll.trim().toLowerCase()
@@ -32,12 +41,6 @@ export default function SearchDropdown({ isSearchOpen, setIsSearchOpen, isScroll
         return items.filter((item) => item.new).slice(0, 8)
     }, [items])
 
-    const handleKeyDown = (e) => {
-        if (e.key === "Enter") {
-            handleSearchAll()
-        }
-    }
-
     const currentItems =
         activeMenu === "md"
             ? mdItems
@@ -54,6 +57,20 @@ export default function SearchDropdown({ isSearchOpen, setIsSearchOpen, isScroll
     }, [isSearching, cateItems, currentItems])
 
     useEffect(() => {
+        if (!hoveredItem) {
+            setPreviewDefaultSrc(FALLBACK_IMAGE)
+            setPreviewHoverSrc(FALLBACK_IMAGE)
+            return
+        }
+
+        const defaultImage = getImage(hoveredItem, 0)
+        const hoverImage = getImage(hoveredItem, 1)
+
+        setPreviewDefaultSrc(defaultImage)
+        setPreviewHoverSrc(hoverImage)
+    }, [hoveredItem])
+
+    useEffect(() => {
         if (!isSearchOpen) {
             onSetSearchWordAll("")
         }
@@ -66,6 +83,22 @@ export default function SearchDropdown({ isSearchOpen, setIsSearchOpen, isScroll
 
         setIsSearchOpen(false)
         navigate(`/searchpage?keyword=${encodeURIComponent(keyword)}`)
+        onSetSearchWordAll("")
+    }
+
+    const handleKeyDown = (e) => {
+        if (e.key === "Enter") {
+            handleSearchAll()
+        }
+
+        if (e.key === "Escape") {
+            setIsSearchOpen(false)
+            onSetSearchWordAll("")
+        }
+    }
+
+    const handleLinkClick = () => {
+        setIsSearchOpen(false)
         onSetSearchWordAll("")
     }
 
@@ -128,6 +161,7 @@ export default function SearchDropdown({ isSearchOpen, setIsSearchOpen, isScroll
                                         key={item.id}
                                         className={`keyword-item ${hoveredItem?.id === item.id ? "active" : ""}`}
                                         onMouseEnter={() => setHoveredItem(item)}
+                                        onClick={handleLinkClick}
                                     >
                                         <span>{item.name}</span>
                                     </Link>
@@ -139,6 +173,7 @@ export default function SearchDropdown({ isSearchOpen, setIsSearchOpen, isScroll
                                         key={item.id}
                                         className={`keyword-item ${hoveredItem?.id === item.id ? "active" : ""}`}
                                         onMouseEnter={() => setHoveredItem(item)}
+                                        onClick={handleLinkClick}
                                     >
                                         <span>{item.name}</span>
                                     </Link>
@@ -146,7 +181,7 @@ export default function SearchDropdown({ isSearchOpen, setIsSearchOpen, isScroll
 
                                 {isSearching && cateItems.length === 0 && (
                                     <div className="no-result">
-                                        <img src="./images/logo-icon/iconmonstr-error-lined.svg" alt="" />
+                                        <img src="/images/logo-icon/iconmonstr-error-lined.svg" alt="" />
                                         검색 결과가 없습니다
                                     </div>
                                 )}
@@ -157,15 +192,18 @@ export default function SearchDropdown({ isSearchOpen, setIsSearchOpen, isScroll
                                     <Link
                                         to={`/product/${hoveredItem.id}`}
                                         className="keyword-preview-link"
+                                        onClick={handleLinkClick}
                                     >
                                         <div className="preview-img">
                                             <img
-                                                src={hoveredItem.productImages?.[0]}
+                                                src={previewDefaultSrc}
                                                 alt={hoveredItem.name}
+                                                onError={() => setPreviewDefaultSrc(FALLBACK_IMAGE)}
                                             />
                                             <img
-                                                src={hoveredItem.productImages?.[1]}
+                                                src={previewHoverSrc}
                                                 alt={hoveredItem.name}
+                                                onError={() => setPreviewHoverSrc(previewDefaultSrc || FALLBACK_IMAGE)}
                                             />
                                         </div>
                                     </Link>

@@ -1,16 +1,16 @@
 import React, { useEffect } from 'react';
 
 export default function StoreKakaoMap({ stores = [], selectedStore, setSelectedStoreId }) {
-    console.log("store kakao map in");
+
 
     useEffect(() => {
 
         if (!window.kakao) return;
 
         window.kakao.maps.load(() => {
-            console.log("window kakao in");
+
             const container = document.getElementById("map");
-            console.log("map container", container);
+
 
             if (!container) return;
 
@@ -22,7 +22,7 @@ export default function StoreKakaoMap({ stores = [], selectedStore, setSelectedS
             //맵 사이즈
             const map = new window.kakao.maps.Map(container, options);
             // if (!map) return;
-            // console.log("map created", map);
+
 
             // const handleResize = () => {
             //     const center = map.getCenter();

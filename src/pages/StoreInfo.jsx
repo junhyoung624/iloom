@@ -21,7 +21,7 @@ const StoreInfo = () => {
 
 
   //const control_header = document.querySelector(".control-header").offsetHeight;
-  //console.log("control-header : ", control_header);
+
   const newStoreInfo = storeInfoData.map((store) => ({
     ...store,
     latitude: Number(store.latitude),
@@ -47,7 +47,7 @@ const StoreInfo = () => {
 
     return matchKeyword && matchRegion && matchSubRegion;
   });
-  console.log(filteredStoreInfo);
+
   const selectedStore =
     filteredStoreInfo.find((store) => store.id === selectedStoreId) || null;
 
