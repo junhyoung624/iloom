@@ -1,9 +1,10 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useInquiryStore } from '../store/useInquiryStore'
 import MyPageMenu from './MyPageMenu'
 import { commonQna } from '../data/qnaData'
 import './scss/inquirypage.scss'
 import InquiryEditModal from '../components/InquiryEditModal'
+import InquiryDeleteModal from '../components/InquiryDeleteModal'
 
 function AccordionItem({ item, isOpen, onToggle }) {
     return (
@@ -35,12 +36,30 @@ export default function InquiryPage() {
     const [openId, setOpenId] = useState(null)
     const [activeTab, setActiveTab] = useState('faq')
     const [editTarget, setEditTarget] = useState(null)
+    const [deleteTarget, setDeleteTarget] = useState(null)
 
     const handleToggle = (id) => setOpenId((prev) => (prev === id ? null : id))
 
-    const handleDelete = (id) => {
-        if (window.confirm('문의를 삭제할까요?')) deleteInquiry(id)
+    const handleDelete = (item) => {
+        setDeleteTarget(item)
     }
+
+    const confirmDelete = () => {
+        if (!deleteTarget) return
+        deleteInquiry(deleteTarget.id)
+        setDeleteTarget(null)
+    }
+
+    useEffect(() => {
+        const handleEsc = (e) => {
+            if (e.key === 'Escape') {
+                setEditTarget(null)
+                setDeleteTarget(null)
+            }
+        }
+        document.addEventListener('keydown', handleEsc)
+        return () => document.removeEventListener('keydown', handleEsc)
+    }, [])
 
     return (
         <section className="mypage">
@@ -102,9 +121,7 @@ export default function InquiryPage() {
                                                     {item.status}
                                                 </span>
                                             </div>
-
                                             <p className="inquiry-item__text">{item.text}</p>
-
                                             <div className="inquiry-item__bottom">
                                                 <span className="inquiry-item__date">{item.createdAt}</span>
                                                 {item.status !== '답변 완료' && (
@@ -117,7 +134,7 @@ export default function InquiryPage() {
                                                         </button>
                                                         <button
                                                             className="inquiry-item__btn delete"
-                                                            onClick={() => handleDelete(item.id)}
+                                                            onClick={() => handleDelete(item)}
                                                         >
                                                             삭제
                                                         </button>
@@ -138,6 +155,13 @@ export default function InquiryPage() {
                     item={editTarget}
                     onSave={updateInquiry}
                     onClose={() => setEditTarget(null)}
+                />
+            )}
+
+            {deleteTarget && (
+                <InquiryDeleteModal
+                    onClose={() => setDeleteTarget(null)}
+                    onConfirm={confirmDelete}
                 />
             )}
         </section>
