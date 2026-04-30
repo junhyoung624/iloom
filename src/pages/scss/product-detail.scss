@@ -318,12 +318,14 @@
     gap: 8px;
     margin-bottom: 14px;
 
+
     button {
         flex: 1;
         height: 50px;
         border: 1px solid #303030;
         background: none;
         cursor: pointer;
+        transition: 0.3s;
 
         &:hover {
             color: #fff;

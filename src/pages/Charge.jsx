@@ -399,7 +399,7 @@ export default function Charge() {
                     extraAddress: guestForm.extraAddress,
                     request: finalRequest,
                 },
-            }
+        }
 
         const handleFianlConfirm = async () => {
             if (isSubmitting) return

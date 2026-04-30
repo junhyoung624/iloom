@@ -30,37 +30,41 @@
     }
 }
 
-
 .recent-view-hover-area {
     position: relative;
-    width: 256px;
+    width: 80px;
     height: 110px;
-    margin-left: -176px;
-
 }
 
 .recent-view-box {
     position: absolute;
-    top: 0;
     right: 0;
-    width: 80px;
+    width: 528px;
     height: 110px;
+    pointer-events: none;
+
+    &:hover {
+        pointer-events: auto;
+    }
 }
 
 .recent-view-title {
     font-size: 14px;
     font-weight: 500;
     color: #666;
-    text-align: center;
+    text-align: right;
     margin-bottom: 10px;
+    white-space: nowrap;
 }
 
 .recent-view-list {
-    position: relative;
+    position: absolute;
+    right: 0;
     width: 80px;
     height: 80px;
     margin: 0;
     padding: 0;
+    overflow: visible;
 }
 
 .recent-view-list li {
@@ -88,25 +92,28 @@
     }
 }
 
-
 .recent-view-list li:nth-child(1) {
-    z-index: 3;
+    z-index: 5;
+    pointer-events: auto;
 }
 
-
 .recent-view-list li:nth-child(2) {
-    z-index: 2;
-
-    .recent-view-item {
-        opacity: 0;
-        transform: translateX(0) translateY(0);
-        pointer-events: none;
-    }
+    z-index: 4;
 }
 
 .recent-view-list li:nth-child(3) {
-    z-index: 1;
+    z-index: 3;
+}
 
+.recent-view-list li:nth-child(4) {
+    z-index: 2;
+}
+
+.recent-view-list li:nth-child(5) {
+    z-index: 1;
+}
+
+.recent-view-list li:nth-child(n + 2) {
     .recent-view-item {
         opacity: 0;
         transform: translateX(0) translateY(0);
@@ -114,25 +121,44 @@
     }
 }
 
-/* hover 유지 영역을 hover 기준으로 */
-.recent-view-hover-area:hover .recent-view-list li:nth-child(2) .recent-view-item {
+.recent-view-box:hover .recent-view-list li:nth-child(2) .recent-view-item {
     opacity: 1;
     transform: translateX(-88px) translateY(0);
     pointer-events: auto;
 }
 
-.recent-view-hover-area:hover .recent-view-list li:nth-child(3) .recent-view-item {
+.recent-view-box:hover .recent-view-list li:nth-child(3) .recent-view-item {
     opacity: 1;
     transform: translateX(-176px) translateY(0);
     pointer-events: auto;
 }
 
-.recent-view-hover-area:hover .recent-view-list li:nth-child(2) .recent-view-item:hover {
+.recent-view-box:hover .recent-view-list li:nth-child(4) .recent-view-item {
+    opacity: 1;
+    transform: translateX(-264px) translateY(0);
+    pointer-events: auto;
+}
+
+.recent-view-box:hover .recent-view-list li:nth-child(5) .recent-view-item {
+    opacity: 1;
+    transform: translateX(-352px) translateY(0);
+    pointer-events: auto;
+}
+
+.recent-view-box:hover .recent-view-list li:nth-child(2) .recent-view-item:hover {
     transform: translateX(-88px) translateY(-4px);
 }
 
-.recent-view-hover-area:hover .recent-view-list li:nth-child(3) .recent-view-item:hover {
+.recent-view-box:hover .recent-view-list li:nth-child(3) .recent-view-item:hover {
     transform: translateX(-176px) translateY(-4px);
+}
+
+.recent-view-box:hover .recent-view-list li:nth-child(4) .recent-view-item:hover {
+    transform: translateX(-264px) translateY(-4px);
+}
+
+.recent-view-box:hover .recent-view-list li:nth-child(5) .recent-view-item:hover {
+    transform: translateX(-352px) translateY(-4px);
 }
 
 .recent-view-list li:nth-child(1) .recent-view-item:hover {

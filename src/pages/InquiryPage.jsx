@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react'
 import { useInquiryStore } from '../store/useInquiryStore'
-import MyPageMenu from './MyPageMenu'
 import { commonQna } from '../data/qnaData'
 import './scss/inquirypage.scss'
 import InquiryEditModal from '../components/InquiryEditModal'
+import SubPageEmptyState from '../components/SubPageEmptyState'
 import InquiryDeleteModal from '../components/InquiryDeleteModal'
 
 function AccordionItem({ item, isOpen, onToggle }) {
@@ -62,50 +62,50 @@ export default function InquiryPage() {
     }, [])
 
     return (
-        <section className="mypage">
-            <div className="inner">
-                <MyPageMenu />
+        <section className="mypage-inquiry">
+            <div className="content inquiry-content">
+                <div className="inquiry-page-tabs">
+                    <button
+                        className={`inquiry-page-tab ${activeTab === 'faq' ? 'active' : ''}`}
+                        onClick={() => setActiveTab('faq')}
+                    >
+                        자주 묻는 질문
+                    </button>
+                    <button
+                        className={`inquiry-page-tab ${activeTab === 'mine' ? 'active' : ''}`}
+                        onClick={() => setActiveTab('mine')}
+                    >
+                        내 문의
+                        {inquiries.length > 0 && (
+                            <span className="inquiry-page-tab-badge">{inquiries.length}</span>
+                        )}
+                    </button>
+                </div>
 
-                <div className="content inquiry-content">
-                    <div className="inquiry-page-tabs">
-                        <button
-                            className={`inquiry-page-tab ${activeTab === 'faq' ? 'active' : ''}`}
-                            onClick={() => setActiveTab('faq')}
-                        >
-                            자주 묻는 질문
-                        </button>
-                        <button
-                            className={`inquiry-page-tab ${activeTab === 'mine' ? 'active' : ''}`}
-                            onClick={() => setActiveTab('mine')}
-                        >
-                            내 문의
-                            {inquiries.length > 0 && (
-                                <span className="inquiry-page-tab-badge">{inquiries.length}</span>
-                            )}
-                        </button>
-                    </div>
-
-                    {activeTab === 'faq' && (
-                        <div className="faq-section">
-                            <div className="accordion-list">
-                                {commonQna.map((item) => (
-                                    <AccordionItem
-                                        key={item.id}
-                                        item={item}
-                                        isOpen={openId === item.id}
-                                        onToggle={() => handleToggle(item.id)}
-                                    />
-                                ))}
-                            </div>
+                {activeTab === 'faq' && (
+                    <div className="faq-section">
+                        <div className="accordion-list">
+                            {commonQna.map((item) => (
+                                <AccordionItem
+                                    key={item.id}
+                                    item={item}
+                                    isOpen={openId === item.id}
+                                    onToggle={() => handleToggle(item.id)}
+                                />
+                            ))}
                         </div>
-                    )}
+                    </div>
+                )}
 
-                    {activeTab === 'mine' && (
-                        <div className="mine-section">
-                            {inquiries.length === 0 ? (
-                                <div className="inquiry-empty">
+                {activeTab === 'mine' && (
+                    <div className="mine-section">
+                        {inquiries.length === 0 ? (
+                            <SubPageEmptyState
+                                title="문의한 내역이 없습니다."
+                                description=""
+                                icon={
                                     <svg width="40" height="40" viewBox="0 0 24 24" fill="none"
-                                        stroke="#ccc" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                                        stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                                         <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
                                     </svg>
                                     <p>아직 문의 내역이 없어요</p>
@@ -149,6 +149,7 @@ export default function InquiryPage() {
                     )}
                 </div>
             </div>
+
 
             {editTarget && (
                 <InquiryEditModal

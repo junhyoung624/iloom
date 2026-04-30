@@ -35,7 +35,7 @@ export default function LocationSearch({
 
 
     const getSelected_1 = (selected) => {
-        console.log(selected);
+
         if (!selected) return;
         setSelectedRegion(selected.value);
         setSelectedSubRegion("시/군/구");
@@ -44,7 +44,7 @@ export default function LocationSearch({
     }
     const getSelected_2 = (selected) => {
         if (!selected) return;
-        console.log(selected);
+
         setSelectedSubRegion(selected.value);
     }
     return (

@@ -8,6 +8,7 @@ import { colorData } from '../data/colorData'
 import { Helmet } from 'react-helmet-async'
 import NumberFlow from '@number-flow/react'
 import toast from 'react-hot-toast'
+import SubPageEmptyState from '../components/SubPageEmptyState'
 
 export default function Cart() {
   const {
@@ -85,11 +86,14 @@ export default function Cart() {
             <h2>장바구니</h2>
             <p>장바구니에 담긴 상품이 없습니다.</p>
           </div>
-          <div className="empty-box">
-            <img src="/images/logo-icon/nocart.png" alt="nocart" className='no-cart' />
-            <p>아직 담긴 상품이 없어요.</p>
-            <Link to="/" className="go-shopping-btn">쇼핑하러 가기</Link>
-          </div>
+          <SubPageEmptyState
+            className="cart-empty-state"
+            imageSrc="/images/logo-icon/nocart.png"
+            imageAlt="cart empty"
+            title="아직 담긴 상품이 없어요."
+            actionLabel="쇼핑하기"
+            actionTo="/"
+          />
         </div>
       </section>
     )

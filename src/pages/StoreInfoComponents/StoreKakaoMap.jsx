@@ -1,16 +1,21 @@
 import React, { useEffect } from 'react';
 
 export default function StoreKakaoMap({ stores = [], selectedStore, setSelectedStoreId }) {
-    console.log("store kakao map in");
+
 
     useEffect(() => {
+        let resizeObserver = null;
+        let resizeTimer = null;
+        let handleResize = null;
+        let isMounted = true;
 
         if (!window.kakao) return;
 
         window.kakao.maps.load(() => {
+            if (!isMounted) return;
             console.log("window kakao in");
             const container = document.getElementById("map");
-            console.log("map container", container);
+
 
             if (!container) return;
 
@@ -22,15 +27,7 @@ export default function StoreKakaoMap({ stores = [], selectedStore, setSelectedS
             //맵 사이즈
             const map = new window.kakao.maps.Map(container, options);
             // if (!map) return;
-            // console.log("map created", map);
 
-            // const handleResize = () => {
-            //     const center = map.getCenter();
-            //     map.relayout();
-            //     map.setCenter(center);
-            // }
-
-            // window.addEventListener("resize", handleResize);
 
 
             const bounds = new window.kakao.maps.LatLngBounds();
@@ -132,10 +129,43 @@ export default function StoreKakaoMap({ stores = [], selectedStore, setSelectedS
             } else if (markers.length > 0) {
                 map.setBounds(bounds);
             }
+
+            handleResize = () => {
+                window.clearTimeout(resizeTimer);
+                resizeTimer = window.setTimeout(() => {
+                    if (!isMounted) return;
+
+                    const center = selectedStore
+                        ? new window.kakao.maps.LatLng(
+                            Number(selectedStore.latitude),
+                            Number(selectedStore.longitude)
+                        )
+                        : map.getCenter();
+
+                    map.relayout();
+                    map.setCenter(center);
+                }, 80);
+            };
+
+            window.addEventListener("resize", handleResize);
+
+            if (window.ResizeObserver) {
+                resizeObserver = new window.ResizeObserver(handleResize);
+                resizeObserver.observe(container);
+            }
         });
-        // return () => {
-        //     window.removeEventListener("resize", handleResize);
-        // };
+        return () => {
+            isMounted = false;
+            window.clearTimeout(resizeTimer);
+
+            if (handleResize) {
+                window.removeEventListener("resize", handleResize);
+            }
+
+            if (resizeObserver) {
+                resizeObserver.disconnect();
+            }
+        };
         //}, [stores]);
     }, [stores, selectedStore, setSelectedStoreId]);
 

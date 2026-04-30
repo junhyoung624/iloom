@@ -46,10 +46,13 @@ import InquiryPage from './pages/InquiryPage'
 import { useLocation } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
 import PageTransition from './components/PageTransition'
+import MyPageLayout from './pages/MyPageLayout'
+import { useCustomWishStore } from './store/useCustomWishStore'
 
 function App() {
   const [isLoading, setIsLoading] = useState(true)
   const { onfetchItems, onMakeMenu, fetchWishlist, clearWishlist } = useProductStore() // ← fetchWishlist, clearWishlist 추가
+  const { fetchWishFolders, clearWishFolders } = useCustomWishStore()
   const { initAuth, user } = useAuthStore()
   const location = useLocation()
   const [bannerVisible, setBannerVisible] = useState(true)
@@ -62,8 +65,10 @@ function App() {
   useEffect(() => {
     if (user) {
       fetchWishlist(user)
+      fetchWishFolders(user)
     } else {
       clearWishlist()
+      clearWishFolders()
     }
   }, [user])
 
@@ -94,7 +99,7 @@ function App() {
           <Route path="/member" element={<PageTransition><Member /></PageTransition>} />
           <Route path="/cart" element={<PageTransition><Cart /></PageTransition>} />
           <Route path="/charge" element={<PageTransition><Charge /></PageTransition>} />
-          <Route path="/order" element={<PageTransition><Order /></PageTransition>} />
+          {/* <Route path="/order" element={<PageTransition><Order /></PageTransition>} /> */}
           <Route path="/orderForGuest/:orderNum" element={<PageTransition><OrderForGuest /></PageTransition>} />
           <Route path="/searchpage" element={<PageTransition><SearchPage /></PageTransition>} />
 
@@ -109,12 +114,12 @@ function App() {
           <Route path="/notice" element={<PageTransition><Notice /></PageTransition>} />
           <Route path="/company-info" element={<PageTransition><CompanyInfo /></PageTransition>} />
           <Route path="/companypage" element={<PageTransition><CompanyPage /></PageTransition>} />
-          <Route path="/mypage" element={<PageTransition><MyPage /></PageTransition>} />
-          <Route path="/inquiry" element={<PageTransition><InquiryPage /></PageTransition>} />
-          <Route path="/leavepage" element={<PageTransition><LeavePage /></PageTransition>} />
+          {/* <Route path="/mypage" element={<PageTransition><MyPage /></PageTransition>} /> */}
+          {/* <Route path="/inquiry" element={<PageTransition><InquiryPage /></PageTransition>} /> */}
+          {/* <Route path="/leavepage" element={<PageTransition><LeavePage /></PageTransition>} /> */}
           <Route path="/naver-callback" element={<PageTransition><NaverCallback /></PageTransition>} />
           <Route path="/product/:id" element={<PageTransition><ProductDetail /></PageTransition>} />
-          <Route path="/wishlist" element={<PageTransition><WishList /></PageTransition>} />
+          {/* <Route path="/wishlist" element={<PageTransition><WishList /></PageTransition>} /> */}
 
           <Route path="/furniturepage" element={<PageTransition><FurniturePage /></PageTransition>} />
           <Route path="/new" element={<PageTransition><NewBestPage /></PageTransition>} />
@@ -125,6 +130,22 @@ function App() {
           <Route path="/:originalCategory/:category2/:category3" element={<PageTransition><SubPage /></PageTransition>} />
           <Route path="/not-found" element={<PageTransition><NotFound /></PageTransition>} />
           <Route path="*" element={<PageTransition><NotFound /></PageTransition>} />
+          <Route
+            element={
+              <PageTransition>
+                <MyPageLayout />
+              </PageTransition>
+            }
+          >
+            <Route path="/order" element={<Order />} />
+            <Route path="/mypage" element={<MyPage />} />
+            <Route path="/wishlist" element={<WishList />} />
+            <Route path="/inquiry" element={<InquiryPage />} />
+            <Route path="/leavepage" element={<LeavePage />} />
+          </Route>
+
+          <Route path="/cart" element={<PageTransition><Cart /></PageTransition>} />
+          <Route path="/charge" element={<PageTransition><Charge /></PageTransition>} />
         </Routes>
       </AnimatePresence>
       <QuickMenu />
