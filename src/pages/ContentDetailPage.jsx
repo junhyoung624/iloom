@@ -21,7 +21,6 @@ export default function DetailPage() {
         return <MagazineDetail data={detailData} />;
     }
 
-
     if (detailData.category === "이벤트") {
         return <EventDetail data={detailData} />;
     }
@@ -36,16 +35,11 @@ export default function DetailPage() {
 
 function getSafeImageUrl(url = "") {
     if (!url) return "";
-
-    return url.replace(
-        "https://www.iloom.com/",
-        "https://cdn.iloom.com/"
-    );
+    return url.replace("https://www.iloom.com/", "https://cdn.iloom.com/");
 }
 
 function DetailImage({ src, alt }) {
     const safeSrc = getSafeImageUrl(src);
-
     return (
         <div className="item-image">
             <img
@@ -80,18 +74,29 @@ function RenderItemImages({ item }) {
     if (item.images?.length > 0) {
         return <DetailImageGroup images={item.images} alt={item.title} />;
     }
-
     if (item.image) {
         return <DetailImage src={item.image} alt={item.title} />;
     }
-
     return null;
 }
 
 function MagazineDetail({ data }) {
     return (
         <section className="detail-page magazine-detail">
+            <ul className="breadcrumb-list">
+                <li>
+                    <Link to="/"><img src="/images/logo-icon/home-icon.png" alt="" /></Link>
+                </li>
+                <li><img src="/images/logo-icon/arrow-right.png" alt="" /></li>
+                <li>
+                    <Link to="/magazine">매거진</Link>
+                </li>
+                <li><img src="/images/logo-icon/arrow-right.png" alt="" /></li>
+                <li>{data.title}</li>
+            </ul>
+
             <div className="inner">
+
                 <div className="detail-top">
                     <div className="detail-head">
                         <p className="detail-category">{data.category}</p>
@@ -100,7 +105,6 @@ function MagazineDetail({ data }) {
                             <p className="detail-subtitle">{data.subtitle}</p>
                         )}
                     </div>
-
                     <div className="detail-meta">
                         {data.intro && <p className="detail-intro">{data.intro}</p>}
                         {data.editor && <p className="detail-editor">{data.editor}</p>}
@@ -111,12 +115,10 @@ function MagazineDetail({ data }) {
                     {data.sections?.map((section, sectionIdx) => (
                         <section className="detail-section" key={sectionIdx}>
                             <h3 className="section-title">{section.sectionTitle}</h3>
-
                             <div className="section-items">
                                 {section.items?.map((item, itemIdx) => (
                                     <article className="section-item" key={itemIdx}>
                                         <RenderItemImages item={item} />
-
                                         <div className="item-text">
                                             {item.title && <h4 className="item-title">{item.title}</h4>}
                                             {item.desc && <p className="item-desc">{item.desc}</p>}
@@ -129,7 +131,7 @@ function MagazineDetail({ data }) {
                 </div>
 
                 <div className="detail-bottom">
-                    <Link to="/magazine" className="back-btn">
+                    <Link to="/contents" className="back-btn">
                         목록으로 돌아가기
                     </Link>
                 </div>
@@ -138,11 +140,24 @@ function MagazineDetail({ data }) {
     );
 }
 
-
 function EventDetail({ data }) {
     return (
         <section className="detail-page event-detail">
+            <ul className="breadcrumb-list">
+                <li>
+                    <Link to="/"><img src="/images/logo-icon/home-icon.png" alt="" /></Link>
+                </li>
+                <li><img src="/images/logo-icon/arrow-right.png" alt="" /></li>
+                <li>
+                    <Link to="/magazine">이벤트</Link>
+                </li>
+                <li><img src="/images/logo-icon/arrow-right.png" alt="" /></li>
+                <li>{data.title}</li>
+            </ul>
             <div className="inner">
+
+
+
                 <div className="detail-top event-top">
                     <div className="detail-head">
                         <p className="detail-category">{data.category}</p>
@@ -151,7 +166,6 @@ function EventDetail({ data }) {
                             <p className="detail-subtitle">{data.subtitle}</p>
                         )}
                     </div>
-
                     <div className="detail-meta">
                         {data.intro && <p className="detail-intro">{data.intro}</p>}
                         {data.period && <p className="detail-date">{data.period}</p>}
@@ -164,11 +178,9 @@ function EventDetail({ data }) {
                             {section.sectionTitle && (
                                 <h3 className="section-title">{section.sectionTitle}</h3>
                             )}
-
                             {section.items?.map((item, itemIdx) => (
                                 <article className="event-article" key={itemIdx}>
                                     <RenderItemImages item={item} />
-
                                     {item.title && <h4 className="item-title">{item.title}</h4>}
                                     {item.desc && <p className="item-desc">{item.desc}</p>}
                                 </article>
@@ -178,7 +190,7 @@ function EventDetail({ data }) {
                 </div>
 
                 <div className="detail-bottom">
-                    <Link to="/magazine" className="back-btn">
+                    <Link to="/contents" className="back-btn">
                         목록으로 돌아가기
                     </Link>
                 </div>

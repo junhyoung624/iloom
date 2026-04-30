@@ -352,10 +352,8 @@ export default function WishList() {
                                 {sidebarMode === "folder" && wishSidebarStep === "renameFolder" && "이름 바꾸기"}
                                 {sidebarMode === "folder" && wishSidebarStep === "folderMove" && "다른 위시리스트로 이동"}
 
-                                <h3>
-                                    {sidebarMode === "folder" && wishSidebarStep === "folderMove" && ""}
-                                    {sidebarMode === "folder" && wishSidebarStep === "folderCreate" && "위시리스트 만들기"}
-                                </h3>
+                                {sidebarMode === "folder" && wishSidebarStep === "folderMove" && ""}
+                                {sidebarMode === "folder" && wishSidebarStep === "folderCreate" && "위시리스트 만들기"}
                             </h3>
 
                             <button
