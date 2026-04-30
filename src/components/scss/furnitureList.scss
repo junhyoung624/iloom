@@ -89,6 +89,30 @@
     }
 }
 
+@media (max-width: 1024px) {
+    .furniture-list-section {
+        padding: 80px 20px;
+    }
+
+    .furniture-list {
+        .inner {
+            width: 100%;
+        }
+
+        .furniture-list-grid {
+            gap: 14px;
+        }
+
+        img {
+            width: 160px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+    }
+}
+
 @media (max-width: 768px) {
     .furniture-list-section {
         padding: 70px 16px;
@@ -120,7 +144,7 @@
 
 
         img {
-            width: 96px;
+            width: 130px;
         }
 
         p {

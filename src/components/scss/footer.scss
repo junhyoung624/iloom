@@ -99,3 +99,172 @@ footer {
         }
     }
 }
+
+@media (max-width: 1024px) {
+    footer {
+        .footer-inner {
+            .footer-left {
+                padding: 60px 0 40px 60px;
+            }
+
+            .footer-center {
+                padding: 60px 0 40px 60px;
+            }
+
+            .footer-right {
+                padding: 60px 60px 40px 0;
+            }
+
+            .footer-logo img {
+                max-width: 150px;
+            }
+
+            .footer-slogan {
+                margin-top: 32px;
+                font-size: 12px;
+            }
+
+            .footer-sns {
+                margin-top: 28px;
+
+                img {
+                    width: 25px;
+                }
+            }
+
+            .footer-links {
+                gap: 20px;
+                padding-top: 28px;
+                font-size: 14px;
+            }
+
+            .footer-copy {
+                margin-top: 24px;
+                font-size: 13px;
+            }
+
+            .footer-certifications {
+                img {
+                    height: 25px;
+                }
+            }
+
+            .footer-inquiry-links {
+                margin-top: 28px;
+                font-size: 14px;
+            }
+
+            .footer-customer {
+                font-size: 20px;
+                gap: 16px;
+            }
+
+            .footer-hours {
+                font-size: 13px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    footer {
+        .footer-inner {
+            flex-direction: column;
+
+            .footer-left {
+                width: 100%;
+                padding: 40px 20px 30px;
+                border-top: 0.7px solid #000;
+            }
+
+            .footer-center {
+                width: 100%;
+                padding: 30px 20px;
+                border-left: none;
+                border-top: 0.7px solid #000;
+            }
+
+            .footer-right {
+                width: 100%;
+                padding: 30px 20px 40px;
+                border-top: 0.7px solid #000;
+            }
+
+            .footer-logo img {
+                max-width: 160px;
+            }
+
+            .footer-slogan {
+                margin-top: 24px;
+                font-size: 13px;
+            }
+
+            .footer-sns {
+                margin-top: 24px;
+
+                img {
+                    width: 32px;
+                }
+            }
+
+            .footer-links {
+                flex-wrap: wrap;
+                gap: 16px;
+                padding-top: 24px;
+                font-size: 13px;
+            }
+
+            .footer-copy {
+                margin-top: 20px;
+                font-size: 12px;
+            }
+
+            .footer-certifications {
+                justify-content: flex-start;
+                margin-top: 20px;
+
+                img {
+                    height: 30px;
+                }
+            }
+
+            .footer-inquiry-links {
+                margin-top: 24px;
+                text-align: left;
+                font-size: 13px;
+            }
+
+            .footer-customer {
+                justify-content: flex-start;
+                margin-top: 16px;
+                font-size: 20px;
+            }
+
+            .footer-hours {
+                text-align: left;
+                font-size: 13px;
+            }
+
+            .footer-logo img {
+                max-width: 100px; // 로고 더 축소
+            }
+
+            .footer-slogan {
+                font-size: 12px;
+            }
+
+            .footer-center {
+                font-size: 12px;
+                line-height: 1.7;
+            }
+
+            .footer-links {
+                font-size: 12px;
+            }
+
+            .footer-copy {
+                font-size: 11px;
+            }
+        }
+    }
+}

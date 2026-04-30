@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { productData } from '../data/productData'
 import { useProductStore } from '../store/useProductStore'
 import "./scss/cart.scss"
@@ -7,6 +7,8 @@ import CartOptionModal from '../components/CartOptionModal'
 import { colorData } from '../data/colorData'
 import { Helmet } from 'react-helmet-async'
 import NumberFlow from '@number-flow/react'
+import toast from 'react-hot-toast'
+import SubPageEmptyState from '../components/SubPageEmptyState'
 
 export default function Cart() {
   const {
@@ -21,6 +23,16 @@ export default function Cart() {
   } = useProductStore()
 
   const [optionModalItem, setOptionModalItem] = useState(null)
+
+  const navigate = useNavigate()
+
+  const handleCharge = () => {
+    if (selectedItems.length === 0) {
+      toast('주문할 상품을 선택해주세요.')
+      return
+    }
+    navigate('/charge')
+  }
 
   const mergedCartItems = useMemo(() => {
     return cartItems
@@ -74,11 +86,14 @@ export default function Cart() {
             <h2>장바구니</h2>
             <p>장바구니에 담긴 상품이 없습니다.</p>
           </div>
-          <div className="empty-box">
-            <img src="/images/logo-icon/nocart.png" alt="nocart" className='no-cart' />
-            <p>아직 담긴 상품이 없어요.</p>
-            <Link to="/" className="go-shopping-btn">쇼핑하러 가기</Link>
-          </div>
+          <SubPageEmptyState
+            className="cart-empty-state"
+            imageSrc="/images/logo-icon/nocart.png"
+            imageAlt="cart empty"
+            title="아직 담긴 상품이 없어요."
+            actionLabel="쇼핑하기"
+            actionTo="/"
+          />
         </div>
       </section>
     )
@@ -196,9 +211,9 @@ export default function Cart() {
               <span>상품 결제 예정금액</span>
               <strong><NumberFlow value={finalPrice} suffix="원" /></strong>
             </div>
-            <Link to="/charge" className="charge-btn">
-              <NumberFlow value={finalPrice} suffix="원" /> 주문하기
-            </Link>
+            <button className="charge-btn" onClick={handleCharge}>
+              <NumberFlow value={finalPrice} suffix="원" />주문하기
+            </button>
           </div>
         </div>
 

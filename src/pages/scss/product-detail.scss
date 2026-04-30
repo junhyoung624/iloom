@@ -318,12 +318,14 @@
     gap: 8px;
     margin-bottom: 14px;
 
+
     button {
         flex: 1;
         height: 50px;
         border: 1px solid #303030;
         background: none;
         cursor: pointer;
+        transition: 0.3s;
 
         &:hover {
             color: #fff;
@@ -1238,6 +1240,416 @@
 
             &:hover {
                 background: #555;
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .detail-top {
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    .image-area {
+        flex: none;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .info-area {
+        .info-top {
+            .product-name {
+                font-size: 26px;
+            }
+        }
+
+        .delivery-info {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 6px 12px;
+            align-items: center;
+            margin-top: 0;
+
+            strong {
+                font-size: 13px;
+                margin: 0;
+            }
+
+            p {
+                font-size: 13px;
+            }
+        }
+    }
+
+    .color-product-images {
+        .color-product-list {
+            .color-product-item {
+                width: 74px;
+                height: 74px;
+            }
+        }
+    }
+
+    .product-info-table {
+        table {
+            td {
+                font-size: 13px;
+                padding: 10px 12px;
+            }
+        }
+    }
+
+    .tab-nav {
+        .tab-btn {
+            padding: 14px 18px;
+            font-size: 13px;
+        }
+    }
+
+    // 상품평
+    .tab-review {
+        .review-list {
+            .review-img {
+                img {
+                    width: 120px;
+                    height: 150px;
+                }
+            }
+        }
+    }
+
+    // 배송
+    .tab-delivery {
+        max-width: 100%;
+
+        .return-grid {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    // 장바구니 모달
+    .cart-modal {
+        width: 460px;
+        padding: 44px 36px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .product-detail {
+        padding: 24px 20px 100px;
+    }
+
+    .breadcrumb {
+        margin: 70px 0 24px;
+    }
+
+    .detail-top {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .image-area {
+        flex: none;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .info-area {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .breadcrumb {
+        margin: 60px 0 24px;
+        font-size: 12px;
+    }
+
+    .detail-top {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .image-area {
+        flex: none;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .info-area {
+        .info-top {
+            margin-bottom: 24px;
+
+            .brand {
+                font-size: 18px;
+            }
+
+            .product-name {
+                font-size: 22px;
+                margin-bottom: 25px;
+            }
+        }
+
+        .delivery-info {
+            flex-wrap: wrap;
+            font-size: 13px;
+            margin-bottom: 24px;
+
+            strong {
+                font-size: 13px;
+            }
+
+            p {
+                font-size: 13px;
+            }
+        }
+    }
+
+    .color-product-images {
+        .color-product-list {
+            .color-product-item {
+                width: 64px;
+                height: 64px;
+            }
+        }
+    }
+
+    .total-price-row {
+        strong {
+            font-size: 20px;
+        }
+    }
+
+    .action-btns {
+        button {
+            height: 44px;
+            font-size: 14px;
+        }
+    }
+
+    .product-info-table {
+        overflow-x: auto;
+
+        table {
+            min-width: 500px;
+
+            td {
+                font-size: 12px;
+                padding: 8px 6px;
+
+                &:nth-child(odd) {
+                    width: auto;
+                    white-space: normal;
+                    font-size: 10px;
+                }
+
+                &:nth-child(even) {
+                    width: auto;
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+
+    .tab-nav {
+        overflow-x: hidden;
+        flex-wrap: wrap;
+
+        .tab-btn {
+            padding: 10px 8px;
+            font-size: 12px;
+        }
+    }
+
+    .delivery-process {
+        flex-direction: column;
+        gap: 8px;
+
+        .process-arrow {
+            transform: rotate(90deg);
+            justify-content: center;
+        }
+    }
+
+    .return-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .cart-modal {
+        width: calc(100% - 32px);
+        padding: 32px 24px;
+
+        .cart-modal-title {
+            font-size: 20px;
+        }
+
+        .cart-modal-sub {
+            font-size: 14px;
+        }
+    }
+
+    .review-modal,
+    .qna-modal {
+        width: calc(100% - 32px);
+        padding: 28px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .tab-content {
+        padding: 24px 0;
+    }
+
+    // 상세정보
+    .tab-detail {
+        img {
+            width: 100%;
+        }
+    }
+
+    // 옵션
+    .tab-option {
+        h3 {
+            font-size: 14px;
+        }
+
+        .option-group {
+            .opt-name {
+                font-size: 12px;
+            }
+
+            .opt-values-grid {
+                .opt-chip-item {
+                    .chip-img {
+                        width: 36px;
+                        height: 36px;
+                    }
+
+                    .opt-chip {
+                        font-size: 12px;
+                        padding: 3px 8px;
+                    }
+                }
+            }
+        }
+    }
+
+    // 인테리어 팁
+    .tab-interior {
+        .interior-tip {
+            max-width: 100%;
+
+            h3 {
+                font-size: 14px;
+            }
+
+            ul li {
+                font-size: 13px;
+                padding: 10px 0;
+            }
+        }
+    }
+
+    // 상품평
+    .tab-review {
+        .review-summary {
+            .rating-big {
+                font-size: 28px;
+            }
+        }
+
+        .review-stars-row {
+            font-size: 16px;
+        }
+
+        p {
+            font-size: 14px;
+        }
+
+        .review-list {
+            .review-item {
+                .review-title {
+                    font-size: 13px;
+                }
+
+                .review-content {
+                    font-size: 13px;
+                }
+            }
+
+            .review-img {
+                img {
+                    width: 100px;
+                    height: 120px;
+                }
+            }
+        }
+    }
+
+    // Q&A
+    .tab-qna {
+        .qna-header {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 12px;
+
+            p {
+                font-size: 12px;
+            }
+
+            button {
+                font-size: 13px;
+            }
+        }
+
+        .qna-list {
+            .qna-item {
+                .qna-title {
+                    font-size: 13px;
+                }
+
+                .qna-content {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+
+    // 배송/취소/반품
+    .tab-delivery {
+        max-width: 100%;
+
+        .delivery-section {
+            h3 {
+                font-size: 14px;
+            }
+
+            h4 {
+                font-size: 13px;
+            }
+
+            p,
+            ul li {
+                font-size: 12px;
+            }
+        }
+
+        .return-table {
+            font-size: 12px;
+
+            td {
+                padding: 8px 10px;
+            }
+        }
+
+        .custom-center {
+            p {
+                font-size: 12px;
+            }
+
+            strong {
+                font-size: 13px;
             }
         }
     }

@@ -4,8 +4,7 @@ import "../scss/dropdown.scss";
 
 export default function DropDown({ data, selected, value, placeholder }) {
 
-    //const optionList = data.map(item => ({ value: item.value, label: item.label }));
-    //console.log("option list : ", optionList);
+
     const handleChange = (option) => {
 
         selected(option);

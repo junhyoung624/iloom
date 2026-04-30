@@ -22,3 +22,45 @@
         }
     }
 }
+
+@media (max-width: 1024px) {
+    .space-coordi-wrap {
+        .inner {
+            max-width: 100%;
+            padding: 0 20px;
+        }
+
+        .title-box {
+            margin-top: 80px;
+
+            h2 {
+                font-size: 32px;
+            }
+
+            p {
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .space-coordi-wrap {
+        .inner {
+            padding: 0 16px;
+        }
+
+        .title-box {
+            margin-top: 50px;
+            margin-bottom: 30px;
+
+            h2 {
+                font-size: 24px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+        }
+    }
+}
