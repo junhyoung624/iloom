@@ -12,7 +12,7 @@ export default function DetailPage() {
         return (
             <div className="detail-empty">
                 <h2>데이터가 없습니다.</h2>
-                <Link to="/contents">목록으로 돌아가기</Link>
+                <Link to="/magazine">목록으로 돌아가기</Link>
             </div>
         );
     }
@@ -28,7 +28,7 @@ export default function DetailPage() {
     return (
         <div className="detail-empty">
             <h2>잘못된 접근입니다.</h2>
-            <Link to="/contents">목록으로 돌아가기</Link>
+            <Link to="/magazine">목록으로 돌아가기</Link>
         </div>
     );
 }
@@ -131,7 +131,7 @@ function MagazineDetail({ data }) {
                 </div>
 
                 <div className="detail-bottom">
-                    <Link to="/contents" className="back-btn">
+                    <Link to="/magazine" className="back-btn">
                         목록으로 돌아가기
                     </Link>
                 </div>
@@ -190,7 +190,7 @@ function EventDetail({ data }) {
                 </div>
 
                 <div className="detail-bottom">
-                    <Link to="/contents" className="back-btn">
+                    <Link to="/magazine" className="back-btn">
                         목록으로 돌아가기
                     </Link>
                 </div>
