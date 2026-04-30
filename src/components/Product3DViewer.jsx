@@ -2,14 +2,31 @@ import { Suspense, useEffect, useMemo, useRef, useState } from 'react'
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
 import { OrbitControls, useGLTF, Environment, Center } from '@react-three/drei'
 import * as THREE from 'three'
-import "./scss/product3dviewer.scss"
+import './scss/product3dviewer.scss'
 import PaveSofaCards from '../pages/PaveSofaCards'
 
-const MODEL_PATH = '/models/sofa.glb'
+const MODEL_LIST = [
+    {
+        key: 'two',
+        name: '2인용',
+        path: '/models/sofa02.glb',
+        scale: 1.9,
+        position: [0, -0.08, 0],
+        camera: [-2.2, 1.1, 5.2],
+    },
+    {
+        key: 'three',
+        name: '3인용',
+        path: '/models/sofa.glb',
+        scale: 1.9,
+        position: [0, -0.08, 0],
+        camera: [-2.2, 1.1, 5.2],
+    },
+]
 
 const colors = [
-    { name: '베이지', value: '#d8d1c5' },
-    { name: '그레이', value: '#b8b8b8' },
+    { name: '베이지', value: '#e3ddcd' },
+    { name: '그레이', value: '#cfcfcf' },
 ]
 
 const SALE_DAYS = 7
@@ -55,8 +72,8 @@ function getSaleTimeLeft() {
     }
 }
 
-function Model({ color }) {
-    const { scene } = useGLTF(MODEL_PATH)
+function Model({ model, color }) {
+    const { scene } = useGLTF(model.path)
     const modelRef = useRef()
 
     const clonedScene = useMemo(() => {
@@ -71,26 +88,15 @@ function Model({ color }) {
             const cloneMaterial = (mat) => {
                 const newMat = mat.clone()
 
-                if (mat.map) {
-                    newMat.map = mat.map
-                }
+                if (mat.map) newMat.map = mat.map
+                if (mat.normalMap) newMat.normalMap = mat.normalMap
+                if (mat.roughnessMap) newMat.roughnessMap = mat.roughnessMap
+                if (mat.aoMap) newMat.aoMap = mat.aoMap
 
-                if (mat.normalMap) {
-                    newMat.normalMap = mat.normalMap
-                }
-
-                if (mat.roughnessMap) {
-                    newMat.roughnessMap = mat.roughnessMap
-                }
-
-                if (mat.aoMap) {
-                    newMat.aoMap = mat.aoMap
-                }
-
-                if ('roughness' in newMat) newMat.roughness = 1.3
+                if ('roughness' in newMat) newMat.roughness = 1
                 if ('metalness' in newMat) newMat.metalness = 0
-                if ('envMapIntensity' in newMat) newMat.envMapIntensity = 0.10
-                if (newMat.normalScale) newMat.normalScale.set(1, 1)
+                if ('envMapIntensity' in newMat) newMat.envMapIntensity = 0.025
+                if (newMat.normalScale) newMat.normalScale.set(0.85, 0.85)
 
                 newMat.needsUpdate = true
 
@@ -122,10 +128,10 @@ function Model({ color }) {
                     mat.color.copy(targetColor)
                 }
 
-                if ('roughness' in mat) mat.roughness = 0.9
+                if ('roughness' in mat) mat.roughness = 1
                 if ('metalness' in mat) mat.metalness = 0
-                if ('envMapIntensity' in mat) mat.envMapIntensity = 0.14
-                if (mat.normalScale) mat.normalScale.set(1, 1)
+                if ('envMapIntensity' in mat) mat.envMapIntensity = 0.035
+                if (mat.normalScale) mat.normalScale.set(0.85, 0.85)
 
                 mat.needsUpdate = true
             }
@@ -136,22 +142,21 @@ function Model({ color }) {
                 applyColor(child.material)
             }
         })
-    }, [color])
+    }, [color, model.path])
 
     return (
-        <Center>
+        <Center key={model.path}>
             <primitive
                 ref={modelRef}
                 object={clonedScene}
-                scale={1.9}
-                position={[0, -0.08, 0]}
+                scale={model.scale}
+                position={model.position}
             />
         </Center>
     )
 }
 
-// ✅ 스크롤해서 3D 영역에 도착했을 때 카메라 등장 애니메이션
-function CameraIntro({ play }) {
+function CameraIntro({ play, introKey }) {
     const { camera } = useThree()
     const controlsRef = useRef(null)
     const progressRef = useRef(0)
@@ -162,9 +167,11 @@ function CameraIntro({ play }) {
     const target = useMemo(() => new THREE.Vector3(0, -0.1, 0), [])
 
     useEffect(() => {
-        if (!play || playedRef.current) return
+        if (!play) return
 
+        playedRef.current = false
         progressRef.current = 0
+
         camera.position.copy(startPos)
         camera.lookAt(target)
         camera.updateProjectionMatrix()
@@ -173,16 +180,14 @@ function CameraIntro({ play }) {
             controlsRef.current.target.copy(target)
             controlsRef.current.update()
         }
-    }, [play, camera, startPos, target])
+    }, [play, introKey, camera, startPos, target])
 
     useFrame((_, delta) => {
         if (!play || playedRef.current) return
 
-        progressRef.current += delta * 0.7
+        progressRef.current += delta * 0.75
 
         const t = Math.min(progressRef.current, 1)
-
-        // 뾰로롱 느낌: 처음 빠르고 끝은 부드럽게 멈춤
         const ease = 1 - Math.pow(1 - t, 3)
 
         camera.position.lerpVectors(startPos, endPos, ease)
@@ -239,7 +244,7 @@ function DragGuide() {
 
                 <div className="viewer-guide-text">
                     <strong>드래그해서 돌려보세요</strong>
-                    <span>드래그해서 3D 뷰를 확인할 수 있어요</span>
+                    <span>마우스로 회전하며 3D 뷰를 확인할 수 있어요</span>
                 </div>
             </div>
         </div>
@@ -247,13 +252,20 @@ function DragGuide() {
 }
 
 export default function Product3DViewer() {
+    const [selectedModelKey, setSelectedModelKey] = useState(MODEL_LIST[0].key)
     const [selectedColor, setSelectedColor] = useState(colors[0].value)
     const [showGuide, setShowGuide] = useState(true)
     const [saleTime, setSaleTime] = useState(getSaleTimeLeft)
 
-    // ✅ 3D 박스가 화면에 들어왔는지 감지
     const viewerRef = useRef(null)
     const [playCameraIntro, setPlayCameraIntro] = useState(false)
+    const [introKey, setIntroKey] = useState(0)
+
+    const selectedModel =
+        MODEL_LIST.find((model) => model.key === selectedModelKey) || MODEL_LIST[0]
+
+    const selectedColorName =
+        colors.find((color) => color.value === selectedColor)?.name || ''
 
     useEffect(() => {
         const timer = setInterval(() => {
@@ -270,6 +282,7 @@ export default function Product3DViewer() {
             ([entry]) => {
                 if (entry.isIntersecting) {
                     setPlayCameraIntro(true)
+                    setIntroKey((prev) => prev + 1)
                     observer.disconnect()
                 }
             },
@@ -283,10 +296,25 @@ export default function Product3DViewer() {
         return () => observer.disconnect()
     }, [])
 
+    const handleModelClick = (modelKey) => {
+        setSelectedModelKey(modelKey)
+        setShowGuide(false)
+
+        if (playCameraIntro) {
+            setIntroKey((prev) => prev + 1)
+        }
+    }
+
+    const handleColorClick = (colorValue) => {
+        setSelectedColor(colorValue)
+        setShowGuide(false)
+    }
+
     return (
         <section className="home-3d-viewer">
             <div className="viewer-text sale-viewer-text">
                 <div className="sale-title-row">
+
                     <span className="sale-dday">
                         {saleTime.isEnded ? 'SALE END' : `D-${saleTime.day}`}
                     </span>
@@ -313,61 +341,93 @@ export default function Product3DViewer() {
                 </div>
             </div>
 
+
             <div
                 ref={viewerRef}
                 className="viewer-box"
                 onPointerDown={() => setShowGuide(false)}
                 onTouchStart={() => setShowGuide(false)}
             >
+
                 {showGuide && <DragGuide />}
 
                 <Canvas
                     shadows
-                    camera={{ position: [-2.2, 1.1, 5.2], fov: 28 }}
+                    camera={{ position: selectedModel.camera, fov: 28 }}
                     gl={{ alpha: true, antialias: true }}
                     onCreated={({ gl }) => {
                         gl.toneMapping = THREE.ACESFilmicToneMapping
-                        gl.toneMappingExposure = 6.5
+                        gl.toneMappingExposure = 7
                     }}
                 >
-                    <ambientLight intensity={0.65} />
+                    <ambientLight intensity={0.85} />
 
                     <directionalLight
                         position={[4, 5, 4]}
-                        intensity={0.9}
+                        intensity={0.78}
                         castShadow
                     />
 
                     <directionalLight
                         position={[-3, 2, -3]}
-                        intensity={0.12}
+                        intensity={0.15}
                     />
 
-                    <Environment preset="apartment" environmentIntensity={0.15} />
+                    <Environment preset="studio" environmentIntensity={0.045} />
 
                     <Suspense fallback={null}>
-                        <Model color={selectedColor} />
+                        <Model
+                            key={selectedModel.path}
+                            model={selectedModel}
+                            color={selectedColor}
+                        />
                     </Suspense>
 
-                    <CameraIntro play={playCameraIntro} />
+                    <CameraIntro
+                        play={playCameraIntro}
+                        introKey={`${selectedModel.key}-${introKey}`}
+                    />
                 </Canvas>
             </div>
 
-            <div className="viewer-color-list">
-                {colors.map((color) => (
-                    <button
-                        key={color.value}
-                        type="button"
-                        className={`viewer-color-btn ${selectedColor === color.value ? 'active' : ''}`}
-                        onClick={() => setSelectedColor(color.value)}
-                    >
-                        <span
-                            className="viewer-color-dot"
-                            style={{ background: color.value }}
-                        />
-                        {color.name}
-                    </button>
-                ))}
+            <div className="viewer-option-bar">
+                <div className="viewer-option-group">
+                    <span className="viewer-option-label">사이즈</span>
+
+                    <div className="viewer-model-tabs">
+                        {MODEL_LIST.map((model) => (
+                            <button
+                                key={model.key}
+                                type="button"
+                                className={selectedModelKey === model.key ? 'active' : ''}
+                                onClick={() => handleModelClick(model.key)}
+                            >
+                                {model.name}
+                            </button>
+                        ))}
+                    </div>
+                </div>
+
+                <div className="viewer-option-group">
+                    <span className="viewer-option-label">컬러</span>
+
+                    <div className="viewer-color-list">
+                        {colors.map((color) => (
+                            <button
+                                key={color.value}
+                                type="button"
+                                className={`viewer-color-btn ${selectedColor === color.value ? 'active' : ''}`}
+                                onClick={() => handleColorClick(color.value)}
+                            >
+                                <span
+                                    className="viewer-color-dot"
+                                    style={{ background: color.value }}
+                                />
+                                {color.name}
+                            </button>
+                        ))}
+                    </div>
+                </div>
             </div>
 
             <PaveSofaCards />
@@ -375,4 +435,5 @@ export default function Product3DViewer() {
     )
 }
 
-useGLTF.preload(MODEL_PATH)
+useGLTF.preload('/models/sofa.glb')
+useGLTF.preload('/models/sofa02.glb')
