@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import toast from 'react-hot-toast'
 
 export default function PointChargeModal({ iloomPoint, onClose }) {
@@ -12,6 +12,16 @@ export default function PointChargeModal({ iloomPoint, onClose }) {
         toast(`${pointChargeAmount.toLocaleString()}P 충전이 완료되었습니다!`)
         onClose()
     }
+
+    
+    
+    useEffect(() => {
+        const handleEsc = (e) => {
+            if (e.key === 'Escape') onClose()
+        }
+        document.addEventListener('keydown', handleEsc)
+        return () => document.removeEventListener('keydown', handleEsc)
+    }, [onClose])
 
     return (
         <div className="card-modal-overlay" onClick={onClose}>

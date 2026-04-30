@@ -521,6 +521,17 @@
   padding: 3px 8px;
   display: inline-block;
 }
+.tab-review .review-list .review-img {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.tab-review .review-list .review-img img {
+  width: 150px;
+  height: 180px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 .tab-review .review-write-btn {
   display: block;
   margin: 28px auto 0;
@@ -860,4 +871,215 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+.zoom-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.zoom-overlay img {
+  max-width: 80vw;
+  max-height: 80vh;
+  -o-object-fit: contain;
+     object-fit: contain;
+  cursor: default;
+}
+
+.review-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 40px;
+  width: 500px;
+  z-index: 1000;
+}
+.review-modal .modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+.review-modal h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+.review-modal .review-modal-rating {
+  margin-bottom: 16px;
+}
+.review-modal .review-modal-rating p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 8px;
+}
+.review-modal .review-modal-field {
+  margin-bottom: 16px;
+}
+.review-modal .review-modal-field p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 8px;
+}
+.review-modal .review-modal-field input,
+.review-modal .review-modal-field textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+.review-modal .review-modal-field input:focus,
+.review-modal .review-modal-field textarea:focus {
+  outline: none;
+  border-color: #303030;
+}
+.review-modal .review-modal-field textarea {
+  height: 120px;
+  resize: none;
+}
+.review-modal button[type=submit] {
+  width: 100%;
+  padding: 14px;
+  background: #303030;
+  color: #fff;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+  margin-top: 8px;
+}
+.review-modal button[type=submit]:hover {
+  background: #555;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 9999;
+}
+
+.thumb-list {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+.thumb-list div {
+  width: 80px;
+  height: 80px;
+  border: 1px solid #e5e5e5;
+  cursor: pointer;
+  overflow: hidden;
+}
+.thumb-list div.active {
+  border-color: #303030;
+}
+.thumb-list div:hover {
+  border-color: #808080;
+}
+.thumb-list div img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.qna-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 40px;
+  width: 500px;
+  z-index: 1000;
+}
+.qna-modal .modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+.qna-modal h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+.qna-modal .qna-modal-field {
+  margin-bottom: 16px;
+}
+.qna-modal .qna-modal-field p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 8px;
+}
+.qna-modal .qna-modal-field input,
+.qna-modal .qna-modal-field textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+.qna-modal .qna-modal-field input:focus,
+.qna-modal .qna-modal-field textarea:focus {
+  outline: none;
+  border-color: #303030;
+}
+.qna-modal .qna-modal-field textarea {
+  height: 150px;
+  resize: none;
+}
+.qna-modal button[type=submit] {
+  width: 100%;
+  padding: 14px;
+  background: #303030;
+  color: #fff;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+}
+.qna-modal button[type=submit]:hover {
+  background: #555;
+}
+.qna-modal .qna-submitted {
+  text-align: center;
+  padding: 20px 0;
+}
+.qna-modal .qna-submitted .submitted-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+.qna-modal .qna-submitted h2 {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+.qna-modal .qna-submitted p {
+  font-size: 14px;
+  color: #808080;
+  margin-bottom: 24px;
+}
+.qna-modal .qna-submitted button {
+  padding: 12px 40px;
+  background: #303030;
+  color: #fff;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+}
+.qna-modal .qna-submitted button:hover {
+  background: #555;
 }

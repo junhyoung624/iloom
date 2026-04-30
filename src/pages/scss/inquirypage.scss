@@ -329,3 +329,90 @@
         justify-content: flex-end;
     }
 }
+
+.delete-modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.4);
+    animation: fadeIn 0.2s ease;
+
+    @keyframes fadeIn {
+        from { opacity: 0 }
+        to { opacity: 1 }
+    }
+}
+
+.delete-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10000;
+    width: 600px;
+    background: #fff;
+    padding: 30px 40px 40px;
+    animation: popIn 0.25s ease;
+
+    @keyframes popIn {
+        from { opacity: 0; transform: translate(-50%, -48%) scale(0.97) }
+        to   { opacity: 1; transform: translate(-50%, -50%) scale(1) }
+    }
+
+    &__title {
+        font-size: 22px;
+        font-weight: 700;
+        color: #222;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    &__content {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    &__heading {
+        font-size: 20px;
+        font-weight: 700;
+        color: #222;
+        margin-bottom: 12px;
+    }
+
+    &__desc {
+        font-size: 14px;
+        color: #777;
+    }
+
+    &__footer {
+        display: flex;
+        gap: 10px;
+
+        button {
+            flex: 1;
+            height: 54px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+    }
+
+    &__cancel {
+        background: #fff;
+        border: 1px solid #ccc;
+        color: #222;
+
+        &:hover {
+            background: #f5f5f5;
+        }
+    }
+
+    &__confirm {
+        background: #222;
+        color: #fff;
+        border: none;
+
+        &:hover {
+            background: #000;
+        }
+    }
+}

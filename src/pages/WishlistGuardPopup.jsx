@@ -18,7 +18,6 @@ export default function WishlistGuardPopup({ onClose }) {
                 onClick={onClose}
                 style={{
                     position: "fixed", inset: 0,
-                    background: "rgba(0,0,0,0.45)",
                     zIndex: 9998,
                     backdropFilter: "blur(2px)",
                     animation: "fadeIn 0.2s ease",
@@ -28,14 +27,14 @@ export default function WishlistGuardPopup({ onClose }) {
 
             <div style={{
                 position: "fixed",
-                top: "-100%", left: "50%",
+                top: "-250%", left: "50%",
                 transform: "translate(-50%, -50%)",
                 background: "#fff",
                 padding: "40px 36px 32px",
                 zIndex: 9999,
                 width: 320,
                 textAlign: "center",
-                boxShadow: "0 20px 60px rgba(0,0,0,0.18)",
+                boxShadow: "0 20px 60px rgba(0,0,0,0.25), 0 0 0 1px rgba(0,0,0,0.06)",
                 animation: "popIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)",
             }}>
 

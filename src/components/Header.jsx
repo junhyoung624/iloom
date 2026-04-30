@@ -102,7 +102,7 @@ const Header = () => {
 
   const handleSearchToggle = () => {
     setIsSearchOpen((prev) => !prev)
-    setHover(false) 
+    setHover(false)
   }
   const handleSearchClose = () => setIsSearchOpen(false)
 
@@ -117,6 +117,20 @@ const Header = () => {
   const isScrolled = !isHome || scrollProgress > HEADER_ACTIVE_POINT
   const isDarkHeader = isHome && !isScrolled && (isHover || isSearchOpen)
   const isHeaderActive = isScrolled || isSearchOpen || isHover
+
+  useEffect(() => {
+    const handleEsc = (e) => {
+      if (e.key === "Escape") {
+        setIsSearchOpen(false)
+        setUserMenu(false)
+        setCartPanel(false)
+      }
+    }
+    if (isSearchOpen) document.addEventListener("keydown", handleEsc)
+    if (userMenu) document.addEventListener("keydown", handleEsc)
+    if (cartPanel) document.addEventListener("keydown", handleEsc)
+    return () => document.removeEventListener("keydown", handleEsc)
+  }, [isSearchOpen, userMenu, cartPanel])
 
   return (
     <>
