@@ -11983,6 +11983,7 @@ export const productData = [
     "category3": "매트리스",
     "productImages": [
       "/images/iloom_images/kids-room/bed/IMP11AW00A_a_XX_1.png",
+      "/images/iloom_images/kids-room/bed/IMP11AW00A_a_XX_1.png"
     ],
     "mdPick": true,
     "new": false,
@@ -31777,7 +31778,7 @@ export const productData = [
       "/images/iloom_images/living-room/sofa/ISB0055A_6A2L_2.png",
       "/images/iloom_images/living-room/sofa/ISB0055A_5Z1_3.png"
     ],
-    "mdPick": false,
+    "mdPick": true,
     "new": false,
     "BestSeller": false,
     "detailImg": [

@@ -1,9 +1,10 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useInquiryStore } from '../store/useInquiryStore'
 import { commonQna } from '../data/qnaData'
 import './scss/inquirypage.scss'
 import InquiryEditModal from '../components/InquiryEditModal'
 import SubPageEmptyState from '../components/SubPageEmptyState'
+import InquiryDeleteModal from '../components/InquiryDeleteModal'
 
 function AccordionItem({ item, isOpen, onToggle }) {
     return (
@@ -35,12 +36,30 @@ export default function InquiryPage() {
     const [openId, setOpenId] = useState(null)
     const [activeTab, setActiveTab] = useState('faq')
     const [editTarget, setEditTarget] = useState(null)
+    const [deleteTarget, setDeleteTarget] = useState(null)
 
     const handleToggle = (id) => setOpenId((prev) => (prev === id ? null : id))
 
-    const handleDelete = (id) => {
-        if (window.confirm('문의를 삭제할까요?')) deleteInquiry(id)
+    const handleDelete = (item) => {
+        setDeleteTarget(item)
     }
+
+    const confirmDelete = () => {
+        if (!deleteTarget) return
+        deleteInquiry(deleteTarget.id)
+        setDeleteTarget(null)
+    }
+
+    useEffect(() => {
+        const handleEsc = (e) => {
+            if (e.key === 'Escape') {
+                setEditTarget(null)
+                setDeleteTarget(null)
+            }
+        }
+        document.addEventListener('keydown', handleEsc)
+        return () => document.removeEventListener('keydown', handleEsc)
+    }, [])
 
     return (
         <section className="mypage-inquiry">
@@ -89,46 +108,46 @@ export default function InquiryPage() {
                                         stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                                         <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
                                     </svg>
-                                }
-                            />
-                        ) : (
-                            <ul className="inquiry-list">
-                                {inquiries.map((item) => (
-                                    <li key={item.id} className="inquiry-item">
-                                        <div className="inquiry-item__top">
-                                            <span className="inquiry-item__category">{item.category}</span>
-                                            <span className={`inquiry-item__status ${item.status === '답변 완료' ? 'done' : ''}`}>
-                                                {item.status}
-                                            </span>
-                                        </div>
-
-                                        <p className="inquiry-item__text">{item.text}</p>
-
-                                        <div className="inquiry-item__bottom">
-                                            <span className="inquiry-item__date">{item.createdAt}</span>
-                                            {item.status !== '답변 완료' && (
-                                                <div className="inquiry-item__actions">
-                                                    <button
-                                                        className="inquiry-item__btn edit"
-                                                        onClick={() => setEditTarget(item)}
-                                                    >
-                                                        수정
-                                                    </button>
-                                                    <button
-                                                        className="inquiry-item__btn delete"
-                                                        onClick={() => handleDelete(item.id)}
-                                                    >
-                                                        삭제
-                                                    </button>
-                                                </div>
-                                            )}
-                                        </div>
-                                    </li>
-                                ))}
-                            </ul>
-                        )}
-                    </div>
-                )}
+                                    <p>아직 문의 내역이 없어요</p>
+                                    <span>독 메뉴의 말풍선 아이콘으로 문의를 남겨보세요</span>
+                                </div>
+                            ) : (
+                                <ul className="inquiry-list">
+                                    {inquiries.map((item) => (
+                                        <li key={item.id} className="inquiry-item">
+                                            <div className="inquiry-item__top">
+                                                <span className="inquiry-item__category">{item.category}</span>
+                                                <span className={`inquiry-item__status ${item.status === '답변 완료' ? 'done' : ''}`}>
+                                                    {item.status}
+                                                </span>
+                                            </div>
+                                            <p className="inquiry-item__text">{item.text}</p>
+                                            <div className="inquiry-item__bottom">
+                                                <span className="inquiry-item__date">{item.createdAt}</span>
+                                                {item.status !== '답변 완료' && (
+                                                    <div className="inquiry-item__actions">
+                                                        <button
+                                                            className="inquiry-item__btn edit"
+                                                            onClick={() => setEditTarget(item)}
+                                                        >
+                                                            수정
+                                                        </button>
+                                                        <button
+                                                            className="inquiry-item__btn delete"
+                                                            onClick={() => handleDelete(item)}
+                                                        >
+                                                            삭제
+                                                        </button>
+                                                    </div>
+                                                )}
+                                            </div>
+                                        </li>
+                                    ))}
+                                </ul>
+                            )}
+                        </div>
+                    )}
+                </div>
             </div>
 
 
@@ -137,6 +156,13 @@ export default function InquiryPage() {
                     item={editTarget}
                     onSave={updateInquiry}
                     onClose={() => setEditTarget(null)}
+                />
+            )}
+
+            {deleteTarget && (
+                <InquiryDeleteModal
+                    onClose={() => setDeleteTarget(null)}
+                    onConfirm={confirmDelete}
                 />
             )}
         </section>

@@ -417,20 +417,6 @@
 
 }
 
-.order-item:hover {
-    border: 1px solid black;
-
-    .order-sub-info {
-        .status {
-            border-top: 1px solid black;
-
-        }
-
-        border-top: 1px solid black;
-
-    }
-}
-
 @media (max-width: 768px) {
     .order-filter-bar {
         flex-direction: column;
