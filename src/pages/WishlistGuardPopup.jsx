@@ -39,18 +39,6 @@ export default function WishlistGuardPopup({ onClose }) {
                 animation: "popIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)",
             }}>
 
-                <div style={{
-                    width: 56, height: 56,
-                    borderRadius: "50%",
-                    background: "#fff0f3",
-                    display: "flex", alignItems: "center", justifyContent: "center",
-                    margin: "0 auto 16px",
-                }}>
-                    <svg width="26" height="26" viewBox="0 0 24 24" fill="#ff4d6d"
-                        stroke="#ff4d6d" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
-                    </svg>
-                </div>
 
                 <h3 style={{ fontSize: 17, fontWeight: 700, margin: "0 0 8px", color: "#111" }}>
                     로그인이 필요해요
