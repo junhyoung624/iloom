@@ -12,7 +12,7 @@ export default function DetailPage() {
         return (
             <div className="detail-empty">
                 <h2>데이터가 없습니다.</h2>
-                <Link to="/contents">목록으로 돌아가기</Link>
+                <Link to="/magazine">목록으로 돌아가기</Link>
             </div>
         );
     }
