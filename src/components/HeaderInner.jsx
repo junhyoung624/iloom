@@ -7,6 +7,7 @@ import ScrollProgress from '../pages/ScrollProgress'
 
 const HeaderInner = ({
     onEnter,
+    onHamClick,
     userClick,
     isHover,
     isSearchOpen,
@@ -39,7 +40,7 @@ const HeaderInner = ({
             <div className="header-inner">
                 <ScrollProgress />
                 <div className="header-left">
-                    <div className="ham-btn" onMouseEnter={onEnter}>
+                    <div className="ham-btn" onMouseEnter={onEnter} onClick={onHamClick}>
                         <img src="/images/logo-icon/ham-white.png" alt="ham-btn" />
                     </div>
                 </div>

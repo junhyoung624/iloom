@@ -588,10 +588,10 @@ export default function Charge() {
                         />
 
                         <div className="discount-summary">
-                            <div className="discount-summary-row">
+                            {/* <div className="discount-summary-row">
                                 <span>상품금액</span>
                                 <span>{formatPrice(totalPrice)}</span>
-                            </div>
+                            </div> */}
 
                             {couponDiscount > 0 && (
                                 <div className="discount-summary-row minus">

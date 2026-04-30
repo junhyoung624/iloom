@@ -303,7 +303,8 @@ export default function ProductDetail() {
                 {TABS.map(tab => (
                     <button key={tab}
                         className={`tab-btn ${activeTab === tab ? 'active' : ''}`}
-                        onClick={() => handleTabClick(tab)}>
+                        onClick={() => setActiveTab(tab)}
+                    >
                         {tab}
                     </button>
                 ))}
@@ -333,7 +334,7 @@ export default function ProductDetail() {
                         onWriteReview={() => setShowReviewModal(true)}
                     />
                 )}
-                {activeTab === '제품Q&A' && <TabQna productQna={productQna} user={user} />}
+                {activeTab === '제품Q&A' && <TabQna productQna={productQna} user={user} product={product} />}
                 {activeTab === '배송/취소/반품' && <TabDelivery />}
             </div>
 

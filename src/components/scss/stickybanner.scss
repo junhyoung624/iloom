@@ -83,3 +83,25 @@
         }
     }
 }
+
+@media (max-width: 768px) {
+    .sticky-banner {
+        &__inner {
+            padding: 0 40px;
+        }
+
+        &__text-wrap {
+            width: calc(100% - 100px);
+        }
+
+        &__text {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        &__close {
+            right: 8px;
+        }
+    }
+}

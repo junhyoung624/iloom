@@ -368,3 +368,15 @@
         }
     }
 }
+
+@media (max-width: 768px) {
+    .dock-cart-preview {
+        width: calc(100vw - 32px);
+        left: 50%;
+        transform: translateX(-50%) translateY(0) scale(0.96);
+    }
+
+    .dock-cart-wrap::before {
+        width: 100vw;
+    }
+}

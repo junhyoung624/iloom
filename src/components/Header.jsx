@@ -22,6 +22,7 @@ const Header = () => {
   const [userMenu, setUserMenu] = useState(false)
   const [cartPanel, setCartPanel] = useState(false)
   const [isSearchOpen, setIsSearchOpen] = useState(false)
+  const [mobileMenu, setMobileMenu] = useState(false)
 
   const userLogin = useRef(null)
   const loginMenu = useRef(false)
@@ -86,6 +87,15 @@ const Header = () => {
     setIsSearchOpen(false)
   }
 
+  const handleHamClick = () => {
+    if (window.innerWidth <= 1024) {
+      setMobileMenu(prev => !prev)
+    } else {
+      setHover(prev => !prev)
+    }
+    setIsSearchOpen(false)
+  }
+
   const handleMenuLeave = () => {
     clearTimeout(enterTimer.current)
     clearTimeout(leaveTimer.current)
@@ -102,7 +112,7 @@ const Header = () => {
 
   const handleSearchToggle = () => {
     setIsSearchOpen((prev) => !prev)
-    setHover(false) 
+    setHover(false)
   }
   const handleSearchClose = () => setIsSearchOpen(false)
 
@@ -123,6 +133,7 @@ const Header = () => {
       <header className={`${isHeaderActive ? 'active' : ''} ${isDarkHeader ? 'menu-dark' : ''}`}>
         <HeaderInner
           onEnter={handleMenuEnter}
+          onHamClick={handleHamClick}
           userClick={handleClick}
           isHover={isHover}
           isSearchOpen={isSearchOpen}
@@ -141,12 +152,14 @@ const Header = () => {
         isScrolled={isScrolled}
         onSend={handleMenuLeave}
         onEnter={handleMenuEnter}
+        isMobileOpen={mobileMenu}
+        onMobileClose={() => setMobileMenu(false)}
       />
 
 
       <div
-        className={`user-menu-overlay ${userMenu || cartPanel ? 'active' : ''}`}
-        onClick={() => { closeBtn(); setCartPanel(false) }}
+        className={`user-menu-overlay ${userMenu || cartPanel || mobileMenu ? 'active' : ''}`}
+        onClick={() => { closeBtn(); setCartPanel(false); setMobileMenu(false) }}
       />
 
 

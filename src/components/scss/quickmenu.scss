@@ -325,3 +325,19 @@
         opacity: 1;
     }
 }
+
+@media (max-width: 768px) {
+    .quick-menu-wrap {
+        right: 16px;
+        bottom: 120px;
+        gap: 6px;
+    }
+
+    .quick-btn {
+        width: 48px;
+    }
+
+    .recent-view-hover-area {
+        display: none; // 최근 본 상품은 모바일에서 숨김
+    }
+}

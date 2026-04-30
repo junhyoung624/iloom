@@ -25,7 +25,7 @@ html {
 
 .hero-scroll-section {
     position: relative;
-    height: 220vh;
+    height: 120vh;
     margin-top: -100px;
 }
 
@@ -63,7 +63,7 @@ html {
         align-items: center;
 
         .hero-title {
-            font-size: 50px;
+            font-size: 3.125rem;
             text-align: center;
             font-weight: 600;
             margin-bottom: 18px;
@@ -81,7 +81,7 @@ html {
         }
 
         .hero-desc {
-            font-size: 37px;
+            font-size: 2.3125rem;
             text-align: center;
             font-weight: 200;
             line-height: 1.6;
@@ -174,6 +174,48 @@ html {
 
             .hero-cta {
                 animation: heroCtaReveal 0.8s ease 1.9s forwards;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .hero-desc {
+                font-size: 1.5rem;
+            }
+
+            .hero-cta {
+                min-width: 200px;
+                height: 54px;
+                margin-top: 70px;
+
+                .hero-cta__label {
+                    font-size: 13px;
+                }
+            }
+        }
+
+        @media (max-width: 768px) {
+            width: 90%;
+
+            .hero-title {
+                font-size: 1.4rem;
+            }
+
+            .hero-desc {
+                font-size: 1rem;
+            }
+
+            .hero-cta {
+                min-width: 160px;
+                height: 44px;
+                margin-top: 40px;
+
+                .hero-cta__label {
+                    font-size: 11px;
+                }
             }
         }
     }

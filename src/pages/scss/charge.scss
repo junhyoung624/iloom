@@ -1602,6 +1602,7 @@
 
         .inner {
             width: 100%;
+            padding: 0 16px;
         }
 
         .charge-title-box {
@@ -1631,8 +1632,73 @@
         }
 
         .payment-btn {
-            height: 60px;
-            font-size: 22px;
+            height: 52px;
+            font-size: 16px;
+        }
+
+        .product-info {
+            flex-direction: column;
+
+            .thumb {
+                width: 100%;
+                height: 200px;
+                flex-shrink: 0;
+            }
+
+            .text-box {
+                text-align: center;
+
+                h4 {
+                    font-size: 16px;
+                    margin-bottom: 8px;
+                    text-align: center;
+                }
+
+                p {
+                    font-size: 14px;
+                    margin-bottom: 12px;
+                }
+            }
+        }
+
+        .order-item {
+            flex-direction: row;
+            align-items: flex-start;
+            padding: 16px;
+        }
+
+        .order-total-box {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 8px;
+
+            strong {
+                font-size: 22px;
+            }
+        }
+
+        .request-box {
+
+            .delivery-requirement-select,
+            .delivery-request-textarea {
+                width: 100%;
+            }
+        }
+
+        .address-box strong,
+        .request-box strong {
+            font-size: 18px;
+        }
+
+        .info-row {
+            .label {
+                width: 90px;
+                font-size: 14px;
+            }
+
+            .value {
+                font-size: 14px;
+            }
         }
     }
 
@@ -1678,6 +1744,34 @@
                     }
                 }
             }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .money-row {
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .money-input-wrap {
+            width: 100%;
+            flex: none;
+
+            .money-input {
+                width: 130px;
+            }
+        }
+
+        .money-apply-btn,
+        .money-all-btn {
+            flex: 1;
+            height: 36px;
+            width: 20px;
+            font-size: 11px;
+        }
+
+        .money-info-row {
+            font-size: 12px;
         }
     }
 
@@ -1863,24 +1957,33 @@
 
 @media (max-width: 768px) {
     .simplepay-grid {
+        grid-template-columns: repeat(3, 1fr);
         gap: 8px;
     }
 
     .simplepay-card {
-        height: 92px;
-        padding: 10px 12px;
+        height: 90px;
+        padding: 12px;
+    }
+
+    .simplepay-text-wrap {
+        gap: 4px;
     }
 
     .simplepay-name {
-        font-size: 13px;
+        font-size: 12px;
+        white-space: normal;
+        line-height: 1.3;
     }
 
     .simplepay-sub {
-        font-size: 10px;
+        font-size: 8px;
+        white-space: normal;
+        line-height: 1.3;
     }
 
     .simplepay-logo {
-        height: 18px;
+        height: 16px;
     }
 }
 
@@ -1897,9 +2000,9 @@
     bottom: 120px;
     transform: translateX(-50%);
     z-index: 999;
-    width: calc(100% - 48px);
+    width: calc(100% - 32px);
     max-width: 1200px;
-    height: 78px;
+    height: 60px;
     background: rgba(255, 255, 255, 0.94);
     backdrop-filter: blur(16px);
     border: 1px solid #eee;
@@ -1912,16 +2015,16 @@
     .fixed-pay-info {
         display: flex;
         flex-direction: column;
-        gap: 5px;
+        gap: 2px;
 
         span {
-            font-size: 13px;
+            font-size: 11px;
             color: #888;
             font-weight: 600;
         }
 
         strong {
-            font-size: 25px;
+            font-size: 18px;
             font-weight: 800;
             color: #111;
             letter-spacing: -0.03em;
@@ -1929,12 +2032,12 @@
     }
 
     button {
-        height: 50px;
-        padding: 0 34px;
+        height: 38px;
+        padding: 0 16px;
         border: none;
         background: #111;
         color: #fff;
-        font-size: 15px;
+        font-size: 13px;
         font-weight: 800;
         cursor: pointer;
         transition: 0.25s ease;
@@ -1949,5 +2052,107 @@
             cursor: not-allowed;
             transform: none;
         }
+    }
+}
+
+@media (max-width: 768px) {
+    .charge-page {
+        font-size: 14px;
+
+        .charge-title-box {
+            h2 {
+                font-size: 24px;
+                padding-top: 30px;
+            }
+
+            p {
+                font-size: 13px;
+            }
+        }
+
+        .section-title {
+            font-size: 18px;
+        }
+
+        .info-row {
+            .label {
+                font-size: 13px;
+            }
+
+            .value {
+                font-size: 13px;
+            }
+        }
+
+        .address-box strong,
+        .request-box strong {
+            font-size: 16px;
+        }
+
+        .order-total-box {
+            span {
+                font-size: 14px;
+            }
+
+            strong {
+                font-size: 20px;
+            }
+        }
+
+        .discount-summary-row {
+            font-size: 13px;
+        }
+
+        .discount-final-price {
+            font-size: 18px;
+        }
+
+        .payment-option-label {
+            font-size: 14px;
+        }
+
+        .payment-option-sub {
+            font-size: 12px;
+        }
+
+        .point-row-label {
+            font-size: 13px;
+        }
+
+        .point-earn {
+            font-size: 13px;
+        }
+
+        .point-sub-row {
+            font-size: 12px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .card-modal {
+        width: calc(100% - 32px);
+        padding: 24px 20px;
+        max-height: 90vh;
+        overflow-y: auto;
+
+        &-header h3 {
+            font-size: 16px;
+        }
+    }
+
+    .card-field {
+
+        input,
+        select {
+            font-size: 14px;
+            padding: 10px;
+        }
+    }
+
+    .card-cancel-btn,
+    .card-submit-btn {
+        padding: 10px 16px;
+        font-size: 13px;
     }
 }
