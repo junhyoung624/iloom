@@ -29,7 +29,7 @@ export default function MyPage() {
             await onUpdate(form)
             setIsOpen(false)
         } catch (err) {
-            console.log("저장 실패:", err)
+
         }
     }
 
