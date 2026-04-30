@@ -67,8 +67,8 @@
 
 //체크박스
 .wish-check-box {
-    appearance: none;
-    -webkit-appearance: none;
+    // appearance: none;
+    // -webkit-appearance: none;
     width: 20px;
     height: 20px;
     border-radius: 5px;
@@ -76,26 +76,26 @@
     margin: 10px;
 }
 
-.wish-check-box:after {
-    content: "v";
-    font-size: 16px;
-    color: white;
-    display: none;
-    text-align: center;
-}
+// .wish-check-box:after {
+//     content: "v";
+//     font-size: 16px;
+//     color: white;
+//     display: none;
+//     text-align: center;
+// }
 
-.wish-check-box:hover {
-    background: #a5a5a5;
-}
+// .wish-check-box:hover {
+//     background: #a5a5a5;
+// }
 
-.wish-check-box:checked {
-    background: black;
-}
+// .wish-check-box:checked {
+//     background: black;
+// }
 
 
-.wish-check-box:checked::after {
-    display: block;
-}
+// .wish-check-box:checked::after {
+//     display: block;
+// }
 
 .wish-list-title {
     margin-top: 50px;

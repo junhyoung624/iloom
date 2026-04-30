@@ -1,0 +1,68 @@
+.delivery-status-bar {
+    display: flex;
+    width: 100%;
+    margin: 24px 0 28px;
+    padding: 22px 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.delivery-step-wrap {
+    flex: 1;
+    position: relative;
+}
+
+.delivery-step-top {
+    display: flex;
+    align-items: center;
+}
+
+.step-circle {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #d9dde5;
+    color: #777;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 700;
+    z-index: 2;
+
+    &.active {
+        background: #1f5eff;
+        color: #fff;
+    }
+}
+
+.step-line {
+    flex: 1;
+    height: 2px;
+    background: #d9dde5;
+    margin: 0 16px;
+
+    &.active {
+        background: #1f5eff;
+    }
+}
+
+.step-text {
+    margin-top: 12px;
+}
+
+.step-label {
+    font-size: 15px;
+    font-weight: 700;
+    color: #777;
+
+    &.current {
+        color: #1f5eff;
+    }
+}
+
+.step-desc {
+    margin-top: 4px;
+    font-size: 13px;
+    color: #777;
+}
