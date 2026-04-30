@@ -18,6 +18,7 @@ const StoreInfo = () => {
   const [selectedSubRegion, setSelectedSubRegion] = useState("시/군/구");
   const [keyword, setKeyword] = useState("");
   const [selectedStoreId, setSelectedStoreId] = useState(null);
+  const [isStoreListOpen, setIsStoreListOpen] = useState(true);
 
 
   //const control_header = document.querySelector(".control-header").offsetHeight;
@@ -71,7 +72,7 @@ const StoreInfo = () => {
           매장안내
         </div>
         <div className="store-info-main">
-          <div className="store-control">
+          <div className={`store-control ${isStoreListOpen ? "" : "is-list-closed"}`}>
             {/* Info header : 검색 입력값 변경 이벤트 전달 */}
             <div className="control-header">
               <InfoHeader
@@ -88,7 +89,20 @@ const StoreInfo = () => {
             </div>
 
             {/* Info body : 왼쪽 매장 리스트 렌더링, 클릭한 매장 선택 */}
-            <div className="control-body">
+            <button
+              type="button"
+              className="control-toggle"
+              aria-expanded={isStoreListOpen}
+              aria-controls="store-list-panel"
+              onClick={() => setIsStoreListOpen((prev) => !prev)}
+            >
+              <span>{isStoreListOpen ? "매장 목록 닫기" : "매장 목록 열기"}</span>
+              <span className="control-toggle-icon" aria-hidden="true">
+                {isStoreListOpen ? "−" : "+"}
+              </span>
+            </button>
+
+            <div className="control-body" id="store-list-panel">
               <InfoBody
                 stores={filteredStoreInfo}
                 selectedStoreId={selectedStoreId}

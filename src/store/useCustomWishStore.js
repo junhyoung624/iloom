@@ -1,94 +1,104 @@
 import { create } from "zustand";
-import { persist } from "zustand/middleware";
 
-export const useCustomWishStore = create(
-    persist(
-        (set, get) => ({
+const syncWishFoldersToFirestore = async (wishFolders) => {
+    const { useAuthStore } = await import("./useAuthStore");
+    const user = useAuthStore.getState().user;
 
-            //커스텀 위시리스트
-            //위시리스트 폴더
-            wishFolders: [],
+    if (!user?.uid) return;
 
-            //위시리스트 폴더 생성, 이동, 삭제
-            onCreateWishFolder: (folderName) => {
-                const newFolder = {
-                    id: crypto.randomUUID(),
-                    name: folderName,
-                    itemIds: [],
-                };
+    const { doc, setDoc } = await import("firebase/firestore");
+    const { db } = await import("../firebase/firebase");
+    const userRef = doc(db, "people", user.uid);
 
-                set((state) => ({
-                    wishFolders: [...state.wishFolders, newFolder],
-                }));
+    await setDoc(userRef, { wishFolders }, { merge: true });
+};
 
-                return newFolder.id;
-            },
+export const useCustomWishStore = create((set, get) => ({
+    wishFolders: [],
 
-            onMoveToWishFolder: (folderId, itemIds) => {
-                set((state) => ({
-                    wishFolders: state.wishFolders.map((folder) =>
-                        folder.id === folderId
-                            ? {
-                                ...folder,
-                                itemIds: [...new Set([...folder.itemIds, ...itemIds])],
-                            }
-                            : folder
-                    ),
-                }));
-            },
-
-            onDeleteWishFolder: (folderId) => {
-                set((state) => ({
-                    wishFolders: state.wishFolders.filter(
-                        (folder) => folder.id !== folderId
-                    ),
-                }));
-            },
-
-            // 위시리스트 폴더 이름 변경
-            onRenameWishFolder: (folderId, newName) => {
-                set((state) => ({
-                    wishFolders: state.wishFolders.map((folder) =>
-                        folder.id === folderId
-                            ? { ...folder, name: newName }
-                            : folder
-                    ),
-                }));
-            },
-
-            // 특정 폴더에서 상품 제거
-            onRemoveItemsFromWishFolder: (folderId, itemIds) => {
-                set((state) => ({
-                    wishFolders: state.wishFolders.map((folder) =>
-                        folder.id === folderId
-                            ? {
-                                ...folder,
-                                itemIds: folder.itemIds.filter(
-                                    (id) => !itemIds.includes(id)
-                                ),
-                            }
-                            : folder
-                    ),
-                }));
-            },
-
-            // 특정 폴더의 모든 상품 제거
-            onClearWishFolderItems: (folderId) => {
-                set((state) => ({
-                    wishFolders: state.wishFolders.map((folder) =>
-                        folder.id === folderId
-                            ? { ...folder, itemIds: [] }
-                            : folder
-                    ),
-                }));
-            },
-
-
-
-        }),
-        {
-            name: "custom-wish-storage"
-
+    fetchWishFolders: async (user) => {
+        if (!user?.uid) {
+            set({ wishFolders: [] });
+            return;
         }
-    )
-);
+
+        const { doc, getDoc } = await import("firebase/firestore");
+        const { db } = await import("../firebase/firebase");
+        const userRef = doc(db, "people", user.uid);
+        const snap = await getDoc(userRef);
+        const data = snap.data();
+
+        set({ wishFolders: data?.wishFolders || [] });
+    },
+
+    clearWishFolders: () => set({ wishFolders: [] }),
+
+    onCreateWishFolder: (folderName) => {
+        const newFolder = {
+            id: crypto.randomUUID(),
+            name: folderName,
+            itemIds: [],
+        };
+
+        const nextWishFolders = [...get().wishFolders, newFolder];
+        set({ wishFolders: nextWishFolders });
+        syncWishFoldersToFirestore(nextWishFolders);
+
+        return newFolder.id;
+    },
+
+    onMoveToWishFolder: (folderId, itemIds) => {
+        const nextWishFolders = get().wishFolders.map((folder) =>
+            folder.id === folderId
+                ? {
+                    ...folder,
+                    itemIds: [...new Set([...folder.itemIds, ...itemIds])],
+                }
+                : folder
+        );
+
+        set({ wishFolders: nextWishFolders });
+        syncWishFoldersToFirestore(nextWishFolders);
+    },
+
+    onDeleteWishFolder: (folderId) => {
+        const nextWishFolders = get().wishFolders.filter(
+            (folder) => folder.id !== folderId
+        );
+
+        set({ wishFolders: nextWishFolders });
+        syncWishFoldersToFirestore(nextWishFolders);
+    },
+
+    onRenameWishFolder: (folderId, newName) => {
+        const nextWishFolders = get().wishFolders.map((folder) =>
+            folder.id === folderId ? { ...folder, name: newName } : folder
+        );
+
+        set({ wishFolders: nextWishFolders });
+        syncWishFoldersToFirestore(nextWishFolders);
+    },
+
+    onRemoveItemsFromWishFolder: (folderId, itemIds) => {
+        const nextWishFolders = get().wishFolders.map((folder) =>
+            folder.id === folderId
+                ? {
+                    ...folder,
+                    itemIds: folder.itemIds.filter((id) => !itemIds.includes(id)),
+                }
+                : folder
+        );
+
+        set({ wishFolders: nextWishFolders });
+        syncWishFoldersToFirestore(nextWishFolders);
+    },
+
+    onClearWishFolderItems: (folderId) => {
+        const nextWishFolders = get().wishFolders.map((folder) =>
+            folder.id === folderId ? { ...folder, itemIds: [] } : folder
+        );
+
+        set({ wishFolders: nextWishFolders });
+        syncWishFoldersToFirestore(nextWishFolders);
+    },
+}));

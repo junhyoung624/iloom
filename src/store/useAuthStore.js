@@ -116,6 +116,10 @@ export const useAuthStore = create((set, get) => ({
                     providers: u.providerData.map(p => p.providerId)
                 }
             })
+
+            const { useProductStore } = await import('./useProductStore');
+            await useProductStore.getState().fetchOrderList({ uid: u.uid });
+            await useProductStore.getState().fetchCartItems({ uid: u.uid });
             return true;
         } catch (err) {
             toast("로그인 실패" + err.message)
@@ -128,9 +132,11 @@ export const useAuthStore = create((set, get) => ({
         localStorage.removeItem("social_uid");
         localStorage.removeItem("social_provider");
         const { useProductStore } = await import('./useProductStore');
+        const { useCustomWishStore } = await import('./useCustomWishStore');
         useProductStore.getState().clearCartItems();
         useProductStore.getState().clearOrderList();
         useProductStore.getState().clearWishlist();
+        useCustomWishStore.getState().clearWishFolders();
         set({ user: null })
     },
 
@@ -178,6 +184,10 @@ export const useAuthStore = create((set, get) => ({
                     }
                 });
             }
+
+            const { useProductStore } = await import('./useProductStore');
+            await useProductStore.getState().fetchOrderList({ uid: user.uid });
+            await useProductStore.getState().fetchCartItems({ uid: user.uid });
             return true;
         } catch (err) {
             toast(err.message);
@@ -254,6 +264,11 @@ export const useAuthStore = create((set, get) => ({
                 set({ user: { ...kakaoUser, socials: { kakao: { email: kakaoEmail, linked: true } } } })
             }
 
+            const productOwnerUid = get().user?.uid || uid;
+            const { useProductStore } = await import('./useProductStore');
+            await useProductStore.getState().fetchOrderList({ uid: productOwnerUid });
+            await useProductStore.getState().fetchCartItems({ uid: productOwnerUid });
+
             toast(`${kakaoUser.nickname}님, 카카오 로그인 성공!`);
             return true;
         } catch (err) {
@@ -316,6 +331,11 @@ export const useAuthStore = create((set, get) => ({
                 localStorage.setItem("social_provider", "naver");
                 set({ user: naverUser })
             }
+
+            const productOwnerUid = get().user?.uid || naverUser.uid;
+            const { useProductStore } = await import('./useProductStore');
+            await useProductStore.getState().fetchOrderList({ uid: productOwnerUid });
+            await useProductStore.getState().fetchCartItems({ uid: productOwnerUid });
 
             return true
         } catch (err) {
@@ -468,6 +488,8 @@ export const useAuthStore = create((set, get) => ({
 
             localStorage.removeItem("social_uid")
             localStorage.removeItem("social_provider")
+            const { useCustomWishStore } = await import('./useCustomWishStore');
+            useCustomWishStore.getState().clearWishFolders();
 
             if (u.provider === "kakao" && window.Kakao?.isInitialized()) {
                 await new Promise((resolve) => {

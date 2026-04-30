@@ -31,6 +31,16 @@ export const useProductStore = create((set, get) => ({
     // 위시리스트
     wishlist: [],
 
+    syncWishlistToFirestore: async (wishlist) => {
+        const { useAuthStore } = await import('./useAuthStore');
+        const user = useAuthStore.getState().user;
+        if (!user) return;
+        const { doc, setDoc } = await import('firebase/firestore');
+        const { db } = await import('../firebase/firebase');
+        const userRef = doc(db, 'people', user.uid);
+        await setDoc(userRef, { wishlist }, { merge: true });
+    },
+
     isWished: (id) => {
         const wishlist = get().wishlist;
         return wishlist.some((item) => item.id === id);
@@ -73,9 +83,7 @@ export const useProductStore = create((set, get) => ({
         const userRef = doc(db, 'people', user.uid);
         const snap = await getDoc(userRef);
         const data = snap.data();
-        if (data?.orderList) {
-            set({ orderList: data.orderList });
-        }
+        set({ orderList: data?.orderList || [] });
     },
 
     clearWishlist: () => set({ wishlist: [] }),
@@ -92,9 +100,12 @@ export const useProductStore = create((set, get) => ({
         set({ wishlist: [...wish, product] });
     },
 
-    onRemoveWish: (id) => {
-        const updateWish = get().wishlist.filter((item) => item.id !== id);
+    onRemoveWish: (id) => get().onRemoveWishes([id]),
+
+    onRemoveWishes: (ids) => {
+        const updateWish = get().wishlist.filter((item) => !ids.includes(item.id));
         set({ wishlist: updateWish });
+        get().syncWishlistToFirestore(updateWish);
     },
 
     // 장바구니
@@ -117,9 +128,7 @@ export const useProductStore = create((set, get) => ({
         const userRef = doc(db, 'people', user.uid);
         const snap = await getDoc(userRef);
         const data = snap.data();
-        if (data?.cartItems) {
-            set({ cartItems: data.cartItems });
-        }
+        set({ cartItems: data?.cartItems || [] });
     },
 
     clearCartItems: () => set({ cartItems: [] }),
@@ -231,19 +240,24 @@ export const useProductStore = create((set, get) => ({
         const allItems = get().items;
         const enrichedItems = order.items.map((cartItem) => {
             const product = allItems.find((p) => p.id === cartItem.id);
-            return { ...product, ...cartItem };
+            return {
+                ...product,
+                ...cartItem,
+                cancelStatus: cartItem.cancelStatus || "none",
+            };
         });
 
         const newOrder = {
             id: Date.now(),
             date: now.toLocaleDateString(),
+            createdAt: now.toISOString(),
             hours: now.getHours(),
             minutes: now.getMinutes(),
             seconds: now.getSeconds(),
             deliveryDate,
             price: order.total,
-            state: "결제완료",
             ...order,
+            state: order.state || "payment",
             items: enrichedItems,
         };
 
@@ -280,21 +294,31 @@ export const useProductStore = create((set, get) => ({
     // none      // 취소 신청 안 함
     // pending   // 취소 대기중
     // done      // 취소 완료
-    onRequestCancelOrder: (orderNumber, itemId) =>
-        set((state) => ({
-            orderList: state.orderList.map((order) =>
-                order.orderNumber === orderNumber
-                    ? {
-                        ...order,
-                        items: order.items.map((item) =>
-                            item.id === itemId
-                                ? { ...item, cancelStatus: "pending" }
-                                : item
-                        ),
-                    }
-                    : order
-            ),
-        })),
+    onRequestCancelOrder: async (orderNumber, itemId) => {
+        const updatedOrderList = get().orderList.map((order) =>
+            order.orderNumber === orderNumber
+                ? {
+                    ...order,
+                    items: order.items.map((item) =>
+                        item.id === itemId
+                            ? { ...item, cancelStatus: "pending" }
+                            : item
+                    ),
+                }
+                : order
+        );
+
+        set({ orderList: updatedOrderList });
+
+        const { useAuthStore } = await import('./useAuthStore');
+        const user = useAuthStore.getState().user;
+        if (!user) return;
+
+        const { doc, setDoc } = await import('firebase/firestore');
+        const { db } = await import('../firebase/firebase');
+        const userRef = doc(db, 'people', user.uid);
+        await setDoc(userRef, { orderList: updatedOrderList }, { merge: true });
+    },
 
     // 메뉴 생성
     onMakeMenu: () => {
