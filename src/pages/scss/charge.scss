@@ -588,6 +588,7 @@
 
 .discount-content {
     flex: 1;
+    position: relative;
 }
 
 .coupon-select-area {
@@ -641,7 +642,10 @@
 }
 
 .coupon-dropdown {
-    margin-top: 4px;
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    margin-top: 0;
     width: 420px;
     border: 1px solid #ddd;
     background: #fff;
@@ -649,7 +653,6 @@
     list-style: none;
     padding: 4px 0;
     z-index: 100;
-    position: relative;
 }
 
 .coupon-dropdown-item {

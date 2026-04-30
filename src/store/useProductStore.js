@@ -97,44 +97,6 @@ export const useProductStore = create((set, get) => ({
         set({ wishlist: updateWish });
     },
 
-    //커스텀 위시리스트
-    //위시리스트 폴더
-    wishFolders: [],
-
-    //위시리스트 폴더 생성, 삭제
-    onCreateWishFolder: (folderName) => {
-        const newFolder = {
-            id: crypto.randomUUID(),
-            name: folderName,
-            itemIds: [],
-        };
-
-        set((state) => ({
-            wishFolders: [...state.wishFolders, newFolder],
-        }));
-    },
-
-    onMoveToWishFolder: (folderId, itemIds) => {
-        set((state) => ({
-            wishFolders: state.wishFolders.map((folder) =>
-                folder.id === folderId
-                    ? {
-                        ...folder,
-                        itemIds: [...new Set([...folder.itemIds, ...itemIds])],
-                    }
-                    : folder
-            ),
-        }));
-    },
-
-    onDeleteWishFolder: (folderId) => {
-        set((state) => ({
-            wishFolders: state.wishFolders.filter(
-                (folder) => folder.id !== folderId
-            ),
-        }));
-    },
-
     // 장바구니
     cartItems: [],
 
@@ -235,7 +197,7 @@ export const useProductStore = create((set, get) => ({
         get().syncCartToFirestore(newCartItems);
     },
 
-    // 주문
+    // === 주문 ===
     orderList: [],
 
     clearOrderList: () => set({ orderList: [] }),
@@ -313,6 +275,26 @@ export const useProductStore = create((set, get) => ({
             (order) => order.isGuest && order.guestInfo?.phone === phone
         );
     },
+
+    //주문 취소
+    // none      // 취소 신청 안 함
+    // pending   // 취소 대기중
+    // done      // 취소 완료
+    onRequestCancelOrder: (orderNumber, itemId) =>
+        set((state) => ({
+            orderList: state.orderList.map((order) =>
+                order.orderNumber === orderNumber
+                    ? {
+                        ...order,
+                        items: order.items.map((item) =>
+                            item.id === itemId
+                                ? { ...item, cancelStatus: "pending" }
+                                : item
+                        ),
+                    }
+                    : order
+            ),
+        })),
 
     // 메뉴 생성
     onMakeMenu: () => {
