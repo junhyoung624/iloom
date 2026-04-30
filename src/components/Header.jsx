@@ -83,6 +83,7 @@ const Header = () => {
     clearTimeout(leaveTimer.current)
     clearTimeout(enterTimer.current)
     enterTimer.current = setTimeout(() => setHover(true), 90)
+    setIsSearchOpen(false)
   }
 
   const handleMenuLeave = () => {
@@ -92,18 +93,24 @@ const Header = () => {
   }
 
   const handleClick = () => {
+    setIsSearchOpen(false)
     if (window.__appLoaded) { setUserMenu(true) }
     else { setTimeout(() => setUserMenu(true), 1600) }
   }
 
   const closeBtn = () => setUserMenu(false)
 
-  const handleSearchToggle = () => setIsSearchOpen((prev) => !prev)
+  const handleSearchToggle = () => {
+    setIsSearchOpen((prev) => !prev)
+    setHover(false) 
+  }
   const handleSearchClose = () => setIsSearchOpen(false)
 
 
   const handleCartClick = (e) => {
     e.preventDefault()
+    setUserMenu(false)
+    setIsSearchOpen(false)
     setCartPanel((prev) => !prev)
   }
 
