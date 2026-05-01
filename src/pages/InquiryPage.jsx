@@ -152,24 +152,20 @@ export default function InquiryPage() {
                 )}
             </div>
 
-            {
-                editTarget && (
-                    <InquiryEditModal
-                        item={editTarget}
-                        onSave={updateInquiry}
-                        onClose={() => setEditTarget(null)}
-                    />
-                )
-            }
+            {editTarget && (
+                <InquiryEditModal
+                    item={editTarget}
+                    onSave={updateInquiry}
+                    onClose={() => setEditTarget(null)}
+                />
+            )}
 
-            {
-                deleteTarget && (
-                    <InquiryDeleteModal
-                        onClose={() => setDeleteTarget(null)}
-                        onConfirm={confirmDelete}
-                    />
-                )
-            }
-        </section >
+            {deleteTarget && (
+                <InquiryDeleteModal
+                    onClose={() => setDeleteTarget(null)}
+                    onConfirm={confirmDelete}
+                />
+            )}
+        </section>
     )
 }
