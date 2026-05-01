@@ -104,67 +104,72 @@ export default function InquiryPage() {
                                 title="문의한 내역이 없습니다."
                                 description=""
                                 icon={
-                                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none"
-                                        stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
-                                    </svg>
-                                    <p>아직 문의 내역이 없어요</p>
-                                    <span>독 메뉴의 말풍선 아이콘으로 문의를 남겨보세요</span>
-                                </div>
-                            ) : (
-                                <ul className="inquiry-list">
-                                    {inquiries.map((item) => (
-                                        <li key={item.id} className="inquiry-item">
-                                            <div className="inquiry-item__top">
-                                                <span className="inquiry-item__category">{item.category}</span>
-                                                <span className={`inquiry-item__status ${item.status === '답변 완료' ? 'done' : ''}`}>
-                                                    {item.status}
-                                                </span>
-                                            </div>
-                                            <p className="inquiry-item__text">{item.text}</p>
-                                            <div className="inquiry-item__bottom">
-                                                <span className="inquiry-item__date">{item.createdAt}</span>
-                                                {item.status !== '답변 완료' && (
-                                                    <div className="inquiry-item__actions">
-                                                        <button
-                                                            className="inquiry-item__btn edit"
-                                                            onClick={() => setEditTarget(item)}
-                                                        >
-                                                            수정
-                                                        </button>
-                                                        <button
-                                                            className="inquiry-item__btn delete"
-                                                            onClick={() => handleDelete(item)}
-                                                        >
-                                                            삭제
-                                                        </button>
-                                                    </div>
-                                                )}
-                                            </div>
-                                        </li>
-                                    ))}
-                                </ul>
-                            )}
-                        </div>
-                    )}
-                </div>
+                                    <>
+                                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                                        </svg>
+                                        <p>아직 문의 내역이 없어요</p>
+                                        <span>독 메뉴의 말풍선 아이콘으로 문의를 남겨보세요</span>
+                                    </>
+                                }
+                            />
+                        ) : (
+                            <ul className="inquiry-list">
+                                {inquiries.map((item) => (
+                                    <li key={item.id} className="inquiry-item">
+                                        <div className="inquiry-item__top">
+                                            <span className="inquiry-item__category">{item.category}</span>
+                                            <span className={`inquiry-item__status ${item.status === '답변 완료' ? 'done' : ''}`}>
+                                                {item.status}
+                                            </span>
+                                        </div>
+                                        <p className="inquiry-item__text">{item.text}</p>
+                                        <div className="inquiry-item__bottom">
+                                            <span className="inquiry-item__date">{item.createdAt}</span>
+                                            {item.status !== '답변 완료' && (
+                                                <div className="inquiry-item__actions">
+                                                    <button
+                                                        className="inquiry-item__btn edit"
+                                                        onClick={() => setEditTarget(item)}
+                                                    >
+                                                        수정
+                                                    </button>
+                                                    <button
+                                                        className="inquiry-item__btn delete"
+                                                        onClick={() => handleDelete(item)}
+                                                    >
+                                                        삭제
+                                                    </button>
+                                                </div>
+                                            )}
+                                        </div>
+                                    </li>
+                                ))}
+                            </ul>
+                        )}
+                    </div>
+                )}
             </div>
 
+            {
+                editTarget && (
+                    <InquiryEditModal
+                        item={editTarget}
+                        onSave={updateInquiry}
+                        onClose={() => setEditTarget(null)}
+                    />
+                )
+            }
 
-            {editTarget && (
-                <InquiryEditModal
-                    item={editTarget}
-                    onSave={updateInquiry}
-                    onClose={() => setEditTarget(null)}
-                />
-            )}
-
-            {deleteTarget && (
-                <InquiryDeleteModal
-                    onClose={() => setDeleteTarget(null)}
-                    onConfirm={confirmDelete}
-                />
-            )}
-        </section>
+            {
+                deleteTarget && (
+                    <InquiryDeleteModal
+                        onClose={() => setDeleteTarget(null)}
+                        onConfirm={confirmDelete}
+                    />
+                )
+            }
+        </section >
     )
 }

@@ -41,9 +41,9 @@ export default function SearchDropdown({ isSearchOpen, setIsSearchOpen, isScroll
         return items.filter((item) => item.new).slice(0, 8)
     }, [items])
 
-    const handleKeyDown = (e) => {
-        if (e.key === "Enter") handleSearchAll()
-    }
+    // const handleKeyDown = (e) => {
+    //     if (e.key === "Enter") handleSearchAll()
+    // }
 
     const currentItems =
         activeMenu === "md"
