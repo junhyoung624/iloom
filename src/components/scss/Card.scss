@@ -109,7 +109,7 @@
     .compare-btn {
         position: absolute;
         top: 50%;
-        right: 28px; // 하트(20px) + 간격(8px)
+        right: 28px;        // 하트(20px) + 간격(8px)
         transform: translateY(-50%);
         margin-top: 20px;
 
@@ -235,7 +235,7 @@
 
     .card-text-box {
         .compare-btn {
-            right: 26px; // 모바일에서 간격 소폭 조정
+            right: 26px;    // 모바일에서 간격 소폭 조정
         }
 
         .product-info {
