@@ -547,7 +547,7 @@ const SubPage = () => {
                     </div>
                 </div>
             </div>
-            <CompareFloatBar />
+            {/* <CompareFloatBar /> */}
         </div>
     )
 }
