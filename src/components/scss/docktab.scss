@@ -13,9 +13,12 @@
         -webkit-backdrop-filter: blur(12px);
         border: 1px solid rgba(0, 0, 0, 0.08);
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        overflow: visible;
     }
 
     .dock-icon {
+        position: relative;
+        overflow: visible;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -48,18 +51,35 @@
     }
 }
 
+/* 장바구니 */
+.dock-cart-wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dock-cart-link {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
 .dock-cart-badge {
     position: absolute;
-    top: 0px;
+    top: 0;
     right: -4px;
-    bottom: auto;
-    left: auto;
-
     min-width: 18px;
     height: 18px;
     padding: 0 5px;
     border-radius: 999px;
-
     background: #111;
     color: #fff;
     border: 1px solid #fff;
@@ -73,120 +93,27 @@
     line-height: 1;
 
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.18);
-
     transform: none !important;
     transition: none !important;
     pointer-events: none;
 }
 
-.dock-phone-btn {
-    border: none;
-    background: transparent;
-    padding: 0;
-    margin: 0;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: inherit;
-}
-
-.dock-phone-toast {
-    position: fixed;
-    bottom: 80px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #111;
-    color: #fff;
-    padding: 12px 18px;
-    border-radius: 999px;
-    font-size: 15px;
-    font-weight: 600;
-    z-index: 9999;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
-    animation: dockPhonePop 0.25s ease;
-}
-
-@keyframes dockPhonePop {
-    from {
-        opacity: 0;
-        transform: translateX(-50%) translateY(10px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateX(-50%) translateY(0);
-    }
-}
-
-.dock-instagram-btn,
-.dock-phone-btn {
-    border: none;
-    background: transparent;
-    padding: 0;
-    margin: 0;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: inherit;
-    text-decoration: none;
-}
-
-.dock-phone-toast {
-    position: fixed;
-    bottom: 110px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #111;
-    color: #fff;
-    padding: 12px 18px;
-    border-radius: 999px;
-    font-size: 15px;
-    font-weight: 600;
-    z-index: 9999;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
-    animation: dockPhonePop 0.25s ease;
-}
-
-@keyframes dockPhonePop {
-    from {
-        opacity: 0;
-        transform: translateX(-50%) translateY(10px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateX(-50%) translateY(0);
-    }
-}
-
-.dock-cart-wrap {
-    position: relative;
-    width: 100%;
-    height: 100%;
-
-    &::before {
-        content: "";
+/* 
+    핵심:
+    기본 상태에서는 pointer-events: none 이라서
+    DockTab 위쪽 빈 영역을 절대 안 잡음.
+    active 붙었을 때만 살아남.
+*/
+.dock-cart-bridge {
     position: absolute;
     left: 50%;
     bottom: 100%;
-    width: 60px;
-    height: 20px;
+    width: 420px;
+    height: 86px;
     transform: translateX(-50%);
     background: transparent;
-    pointer-events: auto;
-    z-index: 1000;
-    }
-
-    &:hover {
-        .dock-cart-preview {
-            opacity: 1;
-            visibility: visible;
-            pointer-events: auto;
-            transform: translateX(-50%) translateY(-12px) scale(1);
-        }
-    }
+    pointer-events: none;
+    z-index: 1001;
 }
 
 .dock-cart-preview {
@@ -220,6 +147,7 @@
         background: #fff;
         border-right: 1px solid rgba(0, 0, 0, 0.08);
         border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        pointer-events: none;
     }
 
     &__head {
@@ -296,7 +224,7 @@
         img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: contain;
             display: block;
         }
     }
@@ -369,14 +297,83 @@
     }
 }
 
+.dock-cart-wrap.active {
+    .dock-cart-bridge {
+        pointer-events: auto;
+    }
+
+    .dock-cart-preview {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateX(-50%) translateY(-12px) scale(1);
+    }
+}
+
+/* 버튼 공통 */
+.dock-phone-btn,
+.dock-instagram-btn {
+    border: none;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: inherit;
+    text-decoration: none;
+
+    svg {
+        width: 22px;
+        height: 22px;
+    }
+}
+
+/* 전화번호 토스트 */
+.dock-phone-toast {
+    position: fixed;
+    bottom: 110px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #111;
+    color: #fff;
+    padding: 12px 18px;
+    border-radius: 999px;
+    font-size: 15px;
+    font-weight: 600;
+    z-index: 9999;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+    animation: dockPhonePop 0.25s ease;
+}
+
+@keyframes dockPhonePop {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
 @media (max-width: 768px) {
+    .dock-cart-bridge {
+        width: calc(100vw - 32px);
+    }
+
     .dock-cart-preview {
         width: calc(100vw - 32px);
         left: 50%;
+        bottom: 82px;
         transform: translateX(-50%) translateY(0) scale(0.96);
     }
 
-    .dock-cart-wrap::before {
-        width: 100vw;
+    .dock-cart-wrap.active {
+        .dock-cart-preview {
+            transform: translateX(-50%) translateY(-12px) scale(1);
+        }
     }
 }
