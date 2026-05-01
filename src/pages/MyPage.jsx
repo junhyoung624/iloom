@@ -63,7 +63,7 @@ export default function MyPage() {
     }, [])
 
     return (
-        <section className="mypage-member-info">
+        <div className="mypage-member-info">
             <Helmet>
                 <title>마이페이지 | iloom</title>
                 <meta name="description" content="회원 정보 및 주문 내역을 확인하세요." />
@@ -268,6 +268,6 @@ export default function MyPage() {
                     </div>
                 </div>
             )}
-        </section>
+        </div>
     )
 } 
