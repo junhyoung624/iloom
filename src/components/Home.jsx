@@ -16,10 +16,11 @@ import Reveal from './Reveal'
 import { Helmet } from 'react-helmet-async'
 
 const HERO_FADE_START = 0
-const HERO_FADE_END = 700
+const HERO_FADE_END = 1500
+const HERO_OVERLAY_MAX = 0.8
 
 export default function Home() {
-  const [overlayOpacity, setOverlayOpacity] = useState(0.7)
+  const [overlayOpacity, setOverlayOpacity] = useState(HERO_OVERLAY_MAX)
   const [heroAnimate, setHeroAnimate] = useState(false)
 
   useEffect(() => {
@@ -31,7 +32,7 @@ export default function Home() {
         1
       )
 
-      const nextOpacity = 0.5 * (1 - progress)
+      const nextOpacity = HERO_OVERLAY_MAX * (1 - progress)
       setOverlayOpacity(nextOpacity)
     }
 

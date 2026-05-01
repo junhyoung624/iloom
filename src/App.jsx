@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 import './App.scss'
-import Header from './components/Header'
+
 import NotFound from './pages/NotFound'
 
 import { Route, Routes } from 'react-router-dom'
@@ -48,6 +48,9 @@ import { AnimatePresence } from 'framer-motion'
 import PageTransition from './components/PageTransition'
 import MyPageLayout from './pages/MyPageLayout'
 import { useCustomWishStore } from './store/useCustomWishStore'
+import Header from './components/Header'
+import ComparePage from './pages/ComparePage'
+import CompareBar from './components/CompareBar'
 
 function App() {
   const [isLoading, setIsLoading] = useState(true)
@@ -146,10 +149,12 @@ function App() {
 
           <Route path="/cart" element={<PageTransition><Cart /></PageTransition>} />
           <Route path="/charge" element={<PageTransition><Charge /></PageTransition>} />
+          <Route path="/compare" element={<ComparePage />} />
         </Routes>
       </AnimatePresence>
       <QuickMenu />
       <DockTab />
+      <CompareBar />
       <Footer />
 
       <Toaster

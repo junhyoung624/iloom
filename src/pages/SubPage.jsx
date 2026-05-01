@@ -6,6 +6,7 @@ import MdPick from '../components/MdPick'
 import SubCard from '../components/SubCard'
 import Breadcrumb from '../components/Breadcrumb'
 
+
 const SubPage = () => {
     const bannerImgData = [
         { category: "침실", imgUrl: "./images/subpage-images/bed-room.jpg" },
@@ -285,8 +286,17 @@ const SubPage = () => {
 
                     <div className="sub-price-filter-box">
                         <div className="sub-range-inputs">
+                            <div
+                                className="sub-range-track"
+                                style={{
+                                    left: `${maxPrice === minPrice ? 0 : ((priceRange[0] - minPrice) / (maxPrice - minPrice)) * 100}%`,
+                                    right: `${maxPrice === minPrice ? 0 : 100 - ((priceRange[1] - minPrice) / (maxPrice - minPrice)) * 100}%`,
+                                }}
+                            />
+
                             <input
                                 type="range"
+                                className="sub-range-min"
                                 min={minPrice}
                                 max={maxPrice}
                                 step={10000}
@@ -298,8 +308,10 @@ const SubPage = () => {
                                     ])
                                 }
                             />
+
                             <input
                                 type="range"
+                                className="sub-range-max"
                                 min={minPrice}
                                 max={maxPrice}
                                 step={10000}
@@ -495,7 +507,7 @@ const SubPage = () => {
                         )}
 
                         {pageItem.length === 0 && (
-                            <div className="empty-state">
+                            <div className="subpage-empty-state">
                                 <p>조건에 맞는 상품이 없어요.</p>
                                 <button onClick={resetFilter}>필터 초기화</button>
                             </div>
@@ -503,9 +515,7 @@ const SubPage = () => {
                         <ul className="sub-product-list">
                             {pageItem.map((item) => (
                                 <li key={item.id}>
-                                    <Link to={`/product/${item.id}`}>
-                                        <SubCard item={item} />
-                                    </Link>
+                                    <SubCard item={item} showCompare={true} />
                                 </li>
                             ))}
                         </ul>
@@ -537,6 +547,7 @@ const SubPage = () => {
                     </div>
                 </div>
             </div>
+            <CompareFloatBar />
         </div>
     )
 }
