@@ -1,5 +1,6 @@
 import React, { useMemo, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
+import toast from 'react-hot-toast';
 import { useProductStore } from '../store/useProductStore'
 import { deliverySteps } from '../data/deliverySteps';
 import DeliveryStatusBar from './OrderComponents/DeliveryStatusBar';
@@ -141,14 +142,36 @@ const Order = () => {
     setOpenStatusId((prev) => (prev === id ? null : id));
   };
 
-  const handleCancelOrder = async (orderNumber, itemId) => {
-    const confirmCancel = window.confirm("주문 취소를 요청하시겠습니까?");
-    if (!confirmCancel) return;
-
+  const requestCancelOrder = async (orderNumber, itemId, toastId) => {
+    toast.dismiss(toastId);
     await onRequestCancelOrder(orderNumber, itemId);
     setActiveTab("cancel");
     setOpenStatusId(null);
-    alert("주문 취소가 접수되었습니다.");
+    toast("주문 취소가 접수되었습니다.");
+  };
+
+  const handleCancelOrder = (orderNumber, itemId) => {
+    toast.custom((t) => (
+      <div className="order-cancel-toast">
+        <p>주문 취소를 요청하시겠습니까?</p>
+        <div className="order-cancel-toast__actions">
+          <button
+            type="button"
+            className="order-cancel-toast__btn"
+            onClick={() => toast.dismiss(t.id)}
+          >
+            닫기
+          </button>
+          <button
+            type="button"
+            className="order-cancel-toast__btn confirm"
+            onClick={() => requestCancelOrder(orderNumber, itemId, t.id)}
+          >
+            요청
+          </button>
+        </div>
+      </div>
+    ), { id: `order-cancel-${orderNumber}-${itemId}`, duration: 5000 });
   };
 
   const renderProductItem = (order, item) => {
@@ -160,7 +183,7 @@ const Order = () => {
       <li
         key={statusToggleId}
         className="order-item"
-        onClick={() => alert("주문 상세로 이동")}
+        onClick={() => toast("주문 상세로 이동", { id: "order-detail-toast" })}
       >
         <div className="order-main-info">
           <div className="order-date">
