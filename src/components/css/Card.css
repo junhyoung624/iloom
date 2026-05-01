@@ -95,8 +95,9 @@
 }
 .card-text-box .compare-btn {
   position: absolute;
-  top: 25%;
+  top: 50%;
   right: 28px;
+  transform: translateY(-50%);
   margin-top: 20px;
   display: flex;
   align-items: center;
@@ -190,6 +191,9 @@
 @media (max-width: 768px) {
   .sub-card {
     padding: 0 4px;
+  }
+  .card-text-box .compare-btn {
+    right: 26px;
   }
   .card-text-box .product-info {
     padding: 0 4px;

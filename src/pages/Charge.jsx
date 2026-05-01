@@ -33,7 +33,7 @@ export default function Charge() {
     const { cartItems, items, onAddOrder, createDeliveryDate, onfetchItems } = useProductStore()
     const { user } = useAuthStore()
     const { iloomMoney = 0, iloomPoint = 0 } = useUserAssetStore()
-    const [isSubmitting, serIsSubmitting] = useState(false)
+    const [isSubmitting, setIsSubmitting] = useState(false)
 
     const navigate = useNavigate()
     const location = useLocation()
@@ -347,6 +347,9 @@ export default function Charge() {
     }
 
     const handleFinalConfirm = async () => {
+        if (isSubmitting) return
+        setIsSubmitting(true)
+
         const orderNumber = createOrderNumber()
         const formatGuestPhone = guestForm.phone.replace(/-/g, '')
         const deliveryDate = createDeliveryDate()
@@ -399,31 +402,26 @@ export default function Charge() {
                     extraAddress: guestForm.extraAddress,
                     request: finalRequest,
                 },
-        }
-
-        const handleFianlConfirm = async () => {
-            if (isSubmitting) return
-            setIsSubmitting(true)
-
-            try {
-                onAddOrder(orderData, user)
-                await addOrder(orderData)
-
-                confetti({
-                    particleCount: 120,
-                    spread: 80,
-                    origin: { y: 0.6 },
-                    colors: ['#CA1230', '#111111', '#ffffff', '#d4a574'],
-                })
-
-                toast(`결제가 완료되었습니다. 주문번호는 ${orderNumber} 입니다.`)
-                user ? navigate('/order') : navigate(`/orderForGuest/${orderNumber}`)
-            } catch (err) {
-                console.log(err)
-                toast('주문 저장 중 오류가 발생했습니다.')
-            } finally {
-                setIsSubmitting(false)
             }
+
+        try {
+            onAddOrder(orderData, user)
+            await addOrder(orderData)
+
+            confetti({
+                particleCount: 120,
+                spread: 80,
+                origin: { y: 0.6 },
+                colors: ['#CA1230', '#111111', '#ffffff', '#d4a574'],
+            })
+
+            toast(`결제가 완료되었습니다. 주문번호는 ${orderNumber} 입니다.`)
+            user ? navigate('/order') : navigate(`/orderForGuest/${orderNumber}`)
+        } catch (err) {
+            console.log(err)
+            toast('주문 저장 중 오류가 발생했습니다.')
+        } finally {
+            setIsSubmitting(false)
         }
     }
 

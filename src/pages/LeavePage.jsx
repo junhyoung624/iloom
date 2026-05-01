@@ -6,7 +6,6 @@ import MyPageMenu from './MyPageMenu'
 
 import toast from 'react-hot-toast'
 import LeaveModal from '../components/LeaveModal'
-import MyPageMenu from './MyPageMenu'
 
 export default function LeavePage() {
     const { onDeleteAccount } = useAuthStore()
