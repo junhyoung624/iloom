@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Dock, DockIcon, DockSeparator } from '../pages/Dock'
 import { Link, useLocation } from 'react-router-dom'
 import "./scss/docktab.scss"
@@ -12,38 +12,78 @@ export default function DockTab() {
     const { cartItems } = useProductStore()
     const { user } = useAuthStore()
     const location = useLocation()
+
     const isCartPage = location.pathname === '/cart'
     const cartCount = cartItems.length
+
     const [showPopup, setShowPopup] = useState(false)
     const [showPhone, setShowPhone] = useState(false)
     const [showInquiry, setShowInquiry] = useState(false)
     const [showLoginPopup, setShowLoginPopup] = useState(false)
+    const [showCartPreview, setShowCartPreview] = useState(false)
+
+    const cartTimerRef = useRef(null)
 
     const cartPreviewItems = cartItems
         .map((cartItem) => {
-            const product = productData.find((item) => item.id === cartItem.id)
+            const product = productData.find((item) => String(item.id) === String(cartItem.id))
             if (!product) return null
             return { ...product, qty: cartItem.qty, color: cartItem.color }
         })
         .filter(Boolean)
         .slice(0, 4)
 
-    // 페이지 변경 시 문의 팝업 닫기
     useEffect(() => {
         setShowInquiry(false)
+        setShowCartPreview(false)
     }, [location.pathname])
 
-    const handleWishlistClick = (e) => {
-        if (!user) { e.preventDefault(); setShowPopup(true) }
+    useEffect(() => {
+        return () => {
+            if (cartTimerRef.current) clearTimeout(cartTimerRef.current)
+        }
+    }, [])
+
+    const openCartPreview = () => {
+        if (isCartPage) return
+        if (cartPreviewItems.length === 0) return
+
+        if (cartTimerRef.current) clearTimeout(cartTimerRef.current)
+
         setShowInquiry(false)
+        setShowCartPreview(true)
+    }
+
+    const closeCartPreview = () => {
+        if (cartTimerRef.current) clearTimeout(cartTimerRef.current)
+
+        cartTimerRef.current = setTimeout(() => {
+            setShowCartPreview(false)
+        }, 120)
+    }
+
+    const keepCartPreview = () => {
+        if (cartTimerRef.current) clearTimeout(cartTimerRef.current)
+    }
+
+    const handleWishlistClick = (e) => {
+        if (!user) {
+            e.preventDefault()
+            setShowPopup(true)
+        }
+
+        setShowInquiry(false)
+        setShowCartPreview(false)
     }
 
     const handlePhoneClick = () => {
         setShowPhone(true)
         setShowInquiry(false)
+        setShowCartPreview(false)
     }
 
     const handleInquiryClick = () => {
+        setShowCartPreview(false)
         setShowInquiry((v) => !v)
     }
 
@@ -54,6 +94,7 @@ export default function DockTab() {
 
     useEffect(() => {
         if (!showPhone) return
+
         const timer = setTimeout(() => setShowPhone(false), 2000)
         return () => clearTimeout(timer)
     }, [showPhone])
@@ -63,7 +104,10 @@ export default function DockTab() {
             <div className="dock-tab">
                 <Dock iconSize={40} iconMagnification={50} iconDistance={120}>
                     <DockIcon>
-                        <Link to="/" onClick={() => setShowInquiry(false)}>
+                        <Link to="/" onClick={() => {
+                            setShowInquiry(false)
+                            setShowCartPreview(false)
+                        }}>
                             <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
                                 stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                 <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
@@ -74,8 +118,12 @@ export default function DockTab() {
 
                     <DockSeparator />
 
-                    <DockIcon onMouseEnter={() => !isCartPage && setShowInquiry(false)}>
-                        <div className="dock-cart-wrap">
+                    <DockIcon>
+                        <div
+                            className={`dock-cart-wrap ${showCartPreview ? 'active' : ''}`}
+                            onMouseEnter={openCartPreview}
+                            onMouseLeave={closeCartPreview}
+                        >
                             <Link to="/cart" className="dock-cart-link">
                                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
                                     stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -83,49 +131,68 @@ export default function DockTab() {
                                     <circle cx="20" cy="21" r="1" />
                                     <path d="M1 1h4l2.68 13.39a2 2 0 001.99 1.61h9.72a2 2 0 001.99-1.61L23 6H6" />
                                 </svg>
+
                                 {cartCount > 0 && (
                                     <span className="dock-cart-badge">{cartCount}</span>
                                 )}
                             </Link>
 
                             {!isCartPage && cartPreviewItems.length > 0 && (
-                                <div className="dock-cart-preview">
-                                    <div className="dock-cart-preview__head">
-                                        <div>
-                                            <span>장바구니 미리보기</span>
-                                            <p>담은 상품을 바로 확인해보세요</p>
+                                <>
+                                    <div className="dock-cart-bridge" />
+
+                                    <div
+                                        className="dock-cart-preview"
+                                        onMouseEnter={keepCartPreview}
+                                        onMouseLeave={closeCartPreview}
+                                    >
+                                        <div className="dock-cart-preview__head">
+                                            <div>
+                                                <span>장바구니 미리보기</span>
+                                                <p>담은 상품을 바로 확인해보세요</p>
+                                            </div>
+                                            <strong>{cartCount}</strong>
                                         </div>
-                                        <strong>{cartCount}</strong>
-                                    </div>
-                                    <div className="dock-cart-preview__list">
-                                        {cartPreviewItems.map((item) => (
+
+                                        <div className="dock-cart-preview__list">
+                                            {cartPreviewItems.map((item) => (
+                                                <Link
+                                                    to={`/product/${item.id}`}
+                                                    className="dock-cart-preview__item"
+                                                    key={`${item.id}-${item.color || 'default'}`}
+                                                    onClick={() => setShowCartPreview(false)}
+                                                >
+                                                    <div className="dock-cart-preview__thumb">
+                                                        <img src={item.productImages?.[0]} alt={item.name} />
+
+                                                        {item.qty > 1 && (
+                                                            <span className="dock-cart-preview__qty">x{item.qty}</span>
+                                                        )}
+                                                    </div>
+
+                                                    <div className="dock-cart-preview__info">
+                                                        <p className="dock-cart-preview__series">{item.series}</p>
+                                                        <p className="dock-cart-preview__name">{item.name}</p>
+
+                                                        {item.color && (
+                                                            <span className="dock-cart-preview__color">{item.color}</span>
+                                                        )}
+                                                    </div>
+                                                </Link>
+                                            ))}
+                                        </div>
+
+                                        {cartItems.length > 4 && (
                                             <Link
-                                                to={`/product/${item.id}`}
-                                                className="dock-cart-preview__item"
-                                                key={`${item.id}-${item.color}`}
+                                                to="/cart"
+                                                className="dock-cart-preview__more"
+                                                onClick={() => setShowCartPreview(false)}
                                             >
-                                                <div className="dock-cart-preview__thumb">
-                                                    <img src={item.productImages?.[0]} alt={item.name} />
-                                                    {item.qty > 1 && (
-                                                        <span className="dock-cart-preview__qty">x{item.qty}</span>
-                                                    )}
-                                                </div>
-                                                <div className="dock-cart-preview__info">
-                                                    <p className="dock-cart-preview__series">{item.series}</p>
-                                                    <p className="dock-cart-preview__name">{item.name}</p>
-                                                    {item.color && (
-                                                        <span className="dock-cart-preview__color">{item.color}</span>
-                                                    )}
-                                                </div>
+                                                +{cartItems.length - 4}개 더 보기
                                             </Link>
-                                        ))}
+                                        )}
                                     </div>
-                                    {cartItems.length > 4 && (
-                                        <Link to="/cart" className="dock-cart-preview__more">
-                                            +{cartItems.length - 4}개 더 보기
-                                        </Link>
-                                    )}
-                                </div>
+                                </>
                             )}
                         </div>
                     </DockIcon>
@@ -165,10 +232,17 @@ export default function DockTab() {
                     </DockIcon>
 
                     <DockIcon>
-                        <a href="https://www.instagram.com/iloom_official"
-                            target="_blank" rel="noreferrer"
-                            onClick={() => setShowInquiry(false)}
-                            className="dock-instagram-btn" aria-label="인스타그램">
+                        <a
+                            href="https://www.instagram.com/iloom_official"
+                            target="_blank"
+                            rel="noreferrer"
+                            onClick={() => {
+                                setShowInquiry(false)
+                                setShowCartPreview(false)
+                            }}
+                            className="dock-instagram-btn"
+                            aria-label="인스타그램"
+                        >
                             <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
                                 stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                 <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
@@ -180,9 +254,27 @@ export default function DockTab() {
                 </Dock>
             </div>
 
-            {showInquiry && <InquiryDock onClose={() => setShowInquiry(false)} onLoginPopup={handleLoginPopup} />}
-            {showPhone && <div className="dock-phone-toast"><span>1577-5670</span></div>}
-            {(showPopup || showLoginPopup) && <WishlistGuardPopup onClose={() => { setShowPopup(false); setShowLoginPopup(false) }} />}
+            {showInquiry && (
+                <InquiryDock
+                    onClose={() => setShowInquiry(false)}
+                    onLoginPopup={handleLoginPopup}
+                />
+            )}
+
+            {showPhone && (
+                <div className="dock-phone-toast">
+                    <span>1577-5670</span>
+                </div>
+            )}
+
+            {(showPopup || showLoginPopup) && (
+                <WishlistGuardPopup
+                    onClose={() => {
+                        setShowPopup(false)
+                        setShowLoginPopup(false)
+                    }}
+                />
+            )}
         </div>
     )
 }
