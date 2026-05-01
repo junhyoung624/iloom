@@ -1,64 +1,30 @@
 @charset "UTF-8";
-.mypage .inner {
-  display: flex;
-  gap: 60px;
-  width: 1440px;
-  margin: 0 auto;
-  padding: 80px 0;
-}
-.mypage .sidebar {
-  width: 180px;
-  flex-shrink: 0;
-  text-align: left;
-}
-.mypage .sidebar ul {
-  padding: 0;
-  margin: 0;
-}
-.mypage .sidebar ul li {
-  padding: 14px 0;
-}
-.mypage .sidebar ul li a {
-  font-size: 18px;
-  color: #808080;
-}
-.mypage .sidebar ul li a:hover {
-  color: #303030;
-}
-.mypage .sidebar ul li.active {
-  display: inline-block;
-  border-bottom: 2px solid #303030;
-}
-.mypage .sidebar ul li.active a {
-  font-weight: 700;
-  color: #303030;
-}
-.mypage .content {
+.mypage-member-info .member-content {
   flex: 1;
 }
-.mypage .content h2 {
+.mypage-member-info .member-content h2 {
   font-size: 32px;
   font-weight: 700;
   text-align: center;
   color: #303030;
 }
-.mypage .content h3 {
+.mypage-member-info .member-content h3 {
   font-size: 18px;
   font-weight: 600;
   margin: 20px 15px;
   color: #808080;
   text-align: left;
 }
-.mypage .info-section {
+.mypage-member-info .info-section {
   margin-bottom: 45px;
 }
-.mypage .info-section .info-box {
+.mypage-member-info .info-section .info-box {
   display: flex;
   border: 1px solid #c9c9c9;
   gap: 90px;
   padding: 32px;
 }
-.mypage .info-section .profile {
+.mypage-member-info .info-section .profile {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -68,16 +34,16 @@
   flex-shrink: 0;
   padding-left: 50px;
 }
-.mypage .info-section .profile p {
+.mypage-member-info .info-section .profile p {
   font-size: 24px;
   font-weight: 500;
 }
-.mypage .info-section .profile strong {
+.mypage-member-info .info-section .profile strong {
   font-size: 40px;
   font-weight: 700;
   padding-bottom: 25px;
 }
-.mypage .info-section .profile button {
+.mypage-member-info .info-section .profile button {
   display: inline-block;
   border: none;
   border-bottom: 2px solid #c9c9c9;
@@ -87,11 +53,11 @@
   color: #c9c9c9;
   text-align: left;
 }
-.mypage .info-section .profile button:hover {
+.mypage-member-info .info-section .profile button:hover {
   color: #808080;
   border-bottom: 2px solid #808080;
 }
-.mypage .info-section .info-view {
+.mypage-member-info .info-section .info-view {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto;
@@ -99,18 +65,18 @@
   flex: 1;
   align-content: center;
 }
-.mypage .info-section .info-view .info-item {
+.mypage-member-info .info-section .info-view .info-item {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.mypage .info-section .info-view .info-item > label {
+.mypage-member-info .info-section .info-view .info-item > label {
   font-size: 14px;
   font-weight: 600;
   color: #808080;
   text-align: left;
 }
-.mypage .info-section .info-view .info-item p {
+.mypage-member-info .info-section .info-view .info-item p {
   font-size: 12px;
   color: #c9c9c9;
   font-weight: 400;
@@ -120,20 +86,20 @@
   margin: 0;
   text-align: left;
 }
-.mypage .info-section .info-view .birth-box {
+.mypage-member-info .info-section .info-view .birth-box {
   display: flex;
   align-items: center;
   gap: 8px;
 }
-.mypage .info-section .info-view .birth-box p {
+.mypage-member-info .info-section .info-view .birth-box p {
   flex: 1;
 }
-.mypage .info-section .info-view .birth-box .gender-box {
+.mypage-member-info .info-section .info-view .birth-box .gender-box {
   display: flex;
   gap: 10px;
   margin-left: 20px;
 }
-.mypage .info-section .info-view .birth-box label {
+.mypage-member-info .info-section .info-view .birth-box label {
   display: flex;
   align-items: center;
   gap: 4px;
@@ -141,11 +107,11 @@
   color: #c9c9c9;
   cursor: default;
 }
-.mypage .info-section .phone-box {
+.mypage-member-info .info-section .phone-box {
   display: flex;
   gap: 8px;
 }
-.mypage .info-section .phone-box p {
+.mypage-member-info .info-section .phone-box p {
   flex: 1;
 }
 
@@ -344,6 +310,9 @@
   margin-bottom: 45px;
 }
 
+.leave-section {
+  margin-top: 30px;
+}
 .leave-section .leave-box {
   border: 1px solid #c9c9c9;
   padding: 32px;

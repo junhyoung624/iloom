@@ -160,7 +160,6 @@ const Order = () => {
       <li
         key={statusToggleId}
         className="order-item"
-        onClick={() => alert("주문 상세로 이동")}
       >
         <div className="order-main-info">
           <div className="order-date">

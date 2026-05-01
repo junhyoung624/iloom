@@ -4,6 +4,7 @@ import './scss/Card.scss'
 import { useAuthStore } from '../store/useAuthStore'
 import { Link, useNavigate } from 'react-router-dom'
 import toast from 'react-hot-toast'
+import { useCompareStore } from '../store/useCompareStore'
 
 const FALLBACK_IMAGE = '/images/no-image.png'
 
@@ -21,6 +22,9 @@ const SubCard = ({ item }) => {
     const [defaultSrc, setDefaultSrc] = useState(getImage(item, 1))
     const [hoverSrc, setHoverSrc] = useState(getImage(item, 0))
 
+    const { compareList, onToggleCompare } = useCompareStore()
+    const isCompared = compareList.some((c) => c.id === item.id)
+
     const isLiked = wishlist.some((wishItem) => wishItem.id === item.id)
     const isActiveHeart = isLiked || isHoverHeart
 
@@ -36,6 +40,16 @@ const SubCard = ({ item }) => {
 
         onToggleWishList(item, user)
         toast.success(isLiked ? '위시리스트에서 삭제되었습니다.' : '위시리스트에 추가되었습니다.')
+    }
+
+
+    const handleCompareClick = (e) => {
+        e.preventDefault()
+        e.stopPropagation()
+        const success = onToggleCompare(item)
+        if (success === false) {
+            toast.error('최대 3개까지만 비교할 수 있어요.')
+        }
     }
 
     return (
@@ -85,6 +99,15 @@ const SubCard = ({ item }) => {
                                 alt="찜한 하트"
                                 className="heart heart-fill"
                             />
+                        </button>
+                        <button
+                            type="button"
+                            className={`compare-btn ${isCompared ? 'active' : ''}`}
+                            onClick={handleCompareClick}
+                            aria-label="비교 추가"
+                        >
+                            <span className="compare-dot" />
+                            <span className="compare-label">{isCompared ? '비교중' : '비교'}</span>
                         </button>
                     </div>
 
