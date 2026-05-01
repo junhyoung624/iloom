@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useAuthStore } from '../store/useAuthStore'
 import { useNavigate } from 'react-router-dom'
 import "./scss/mypage.scss"
+import MyPageMenu from './MyPageMenu'
 
 import toast from 'react-hot-toast'
 import LeaveModal from '../components/LeaveModal'
