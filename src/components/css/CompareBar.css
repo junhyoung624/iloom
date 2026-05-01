@@ -1,0 +1,273 @@
+@charset "UTF-8";
+/* ---- FAB ---- */
+.compare-fab {
+  position: fixed;
+  left: 50px;
+  bottom: 50px;
+  z-index: 9998;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: none;
+  background: #1a1a1a;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+.compare-fab:hover {
+  background: #333;
+  transform: scale(1.08);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+.compare-fab.open {
+  background: #444;
+  transform: scale(0.95);
+}
+.compare-fab.has-items {
+  background: #1a1a1a;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+.compare-fab .fab-icon {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+}
+.compare-fab .fab-badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #CA1230;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #fff;
+}
+
+/* ---- 사이드바 ---- */
+.compare-sidebar {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%) translateX(-110%);
+  z-index: 9997;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 500px;
+  height: 100vh;
+  padding: 40px 32px;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-left: none;
+  box-shadow: 4px 0 24px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.32s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.32s ease;
+}
+.compare-sidebar.visible {
+  transform: translateY(-50%) translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+.compare-sidebar__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  flex-shrink: 0;
+}
+.compare-sidebar__title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a1a1a;
+  letter-spacing: -0.3px;
+}
+.compare-sidebar__clear {
+  background: none;
+  border: none;
+  font-size: 13px;
+  color: #999;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s;
+}
+.compare-sidebar__clear:hover {
+  color: #333;
+}
+.compare-sidebar__slots {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1;
+}
+.compare-sidebar__go {
+  flex-shrink: 0;
+  width: 100%;
+  padding: 18px 0;
+  background: #1a1a1a;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  letter-spacing: -0.2px;
+}
+.compare-sidebar__go:hover:not(:disabled) {
+  background: #333;
+}
+.compare-sidebar__go:disabled {
+  background: #d0d0d0;
+  cursor: not-allowed;
+}
+
+/* ---- 슬롯 ---- */
+.compare-slot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 20px 16px;
+  border-radius: 12px;
+  border: 1px dashed #ddd;
+  flex: 1;
+  position: relative;
+  transition: border-color 0.2s;
+  text-align: center;
+}
+.compare-slot.filled {
+  border-style: solid;
+  border-color: #1a1a1a;
+  justify-content: flex-start;
+  padding-top: 28px;
+}
+.compare-slot.empty {
+  background: #fafafa;
+}
+.compare-slot .slot-img {
+  width: 100%;
+  height: 260px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+.compare-slot .slot-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+  padding: 0 8px;
+}
+.compare-slot .slot-series {
+  font-size: 13px;
+  color: #999;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+}
+.compare-slot .slot-name {
+  font-size: 16px;
+  color: #1a1a1a;
+  font-weight: 600;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  width: 100%;
+}
+.compare-slot .slot-price {
+  font-size: 15px;
+  font-weight: 700;
+  color: #CA1230;
+  margin-top: 2px;
+}
+.compare-slot .slot-remove {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  background: none;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  color: #030303;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 3px 7px;
+  line-height: 1;
+  transition: all 0.2s;
+}
+.compare-slot .slot-remove:hover {
+  font-weight: bold;
+  color: #030303;
+}
+.compare-slot .slot-placeholder {
+  font-size: 14px;
+  color: #bbb;
+}
+
+/* ---- 백드롭 ---- */
+.compare-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 9996;
+  background: transparent;
+}
+
+/* ---- 반응형 ---- */
+@media (max-width: 768px) {
+  .compare-fab {
+    left: 16px;
+    bottom: 24px;
+  }
+  .compare-sidebar {
+    left: 0;
+    right: 0;
+    top: auto;
+    bottom: 0;
+    transform: translateY(110%);
+    width: 100%;
+    height: auto;
+    max-height: 70vh;
+    border-radius: 16px 16px 0 0;
+    border: 1px solid #e0e0e0;
+    border-bottom: none;
+    border-left: 1px solid #e0e0e0;
+    padding: 20px 16px;
+    gap: 12px;
+  }
+  .compare-sidebar.visible {
+    transform: translateY(0);
+  }
+  .compare-sidebar__slots {
+    flex-direction: row;
+    overflow-x: auto;
+    flex: none;
+  }
+  .compare-sidebar .compare-slot {
+    min-width: 200px;
+    flex-shrink: 0;
+    flex: none;
+  }
+  .compare-sidebar .compare-slot .slot-img {
+    height: 120px;
+  }
+  .compare-sidebar .compare-slot .slot-name {
+    font-size: 14px;
+  }
+}

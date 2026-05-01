@@ -507,7 +507,7 @@ const SubPage = () => {
                         )}
 
                         {pageItem.length === 0 && (
-                            <div className="empty-state">
+                            <div className="subpage-empty-state">
                                 <p>조건에 맞는 상품이 없어요.</p>
                                 <button onClick={resetFilter}>필터 초기화</button>
                             </div>

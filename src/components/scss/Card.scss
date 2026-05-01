@@ -98,12 +98,7 @@
 
     .series-row {
         position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        min-height: 32px;
-        margin-bottom: 8px;
+        height: 40px; // 하트 margin-top: 20px + 높이 확보
     }
 
     .series-name {
@@ -207,6 +202,67 @@
 
         svg {
             opacity: 1;
+        }
+    }
+
+    // ---- 비교 버튼 ----
+    .compare-btn {
+        position: absolute;
+        top: 25%;
+        right: 28px; // 하트(20px) + 간격(8px)
+        margin-top: 20px;
+
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+
+        .compare-dot {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: #ccc;
+            flex-shrink: 0;
+            transition: background 0.2s;
+            position: relative;
+        }
+
+        .compare-label {
+            font-size: 12px;
+            color: #888;
+            transition: color 0.2s;
+            white-space: nowrap;
+        }
+
+        &.active {
+            .compare-dot {
+                background: #4caf50;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -60%) rotate(45deg);
+                    width: 3px;
+                    height: 6px;
+                    border-right: 1.5px solid #fff;
+                    border-bottom: 1.5px solid #fff;
+                }
+            }
+
+            .compare-label {
+                color: #4caf50;
+                font-weight: 600;
+            }
+        }
+
+        &:hover:not(.active) {
+            .compare-dot { background: #999; }
+            .compare-label { color: #555; }
         }
     }
 }

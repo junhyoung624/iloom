@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useAuthStore } from '../store/useAuthStore'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import "./scss/mypage.scss"
@@ -51,8 +51,19 @@ export default function MyPage() {
 
     const location = useLocation()
 
+    useEffect(() => {
+        const handleEsc = (e) => {
+            if (e.key === 'Escape') {
+                setIsAgreeOpen(false)
+                setIsOpen(false)
+            }
+        }
+        document.addEventListener('keydown', handleEsc)
+        return () => document.removeEventListener('keydown', handleEsc)
+    }, [])
+
     return (
-        <section className="mypage-member-info">
+        <div className="mypage-member-info">
             <Helmet>
                 <title>마이페이지 | iloom</title>
                 <meta name="description" content="회원 정보 및 주문 내역을 확인하세요." />
@@ -257,6 +268,6 @@ export default function MyPage() {
                     </div>
                 </div>
             )}
-        </section>
+        </div>
     )
 } 

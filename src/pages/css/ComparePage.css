@@ -1,0 +1,125 @@
+.compare-page {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 40px 24px 120px;
+}
+.compare-page__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+.compare-page__header h1 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.btn-clear {
+  background: none;
+  border: 1px solid #ccc;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: all 0.2s;
+}
+.btn-clear:hover {
+  border-color: #333;
+}
+
+.compare-table-wrap {
+  overflow-x: auto;
+}
+
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+.compare-table th,
+.compare-table td {
+  padding: 20px 16px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+  vertical-align: middle;
+}
+.compare-table th.row-label,
+.compare-table td.row-label {
+  text-align: left;
+  font-size: 13px;
+  font-weight: 600;
+  color: #888;
+  width: 100px;
+  background: #fafafa;
+}
+.compare-table .row-image td {
+  padding: 12px 16px;
+}
+
+.compare-img {
+  width: 180px;
+  height: 180px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
+}
+
+.remove-col {
+  background: none;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 4px 10px;
+  font-size: 11px;
+  cursor: pointer;
+  color: #999;
+  transition: all 0.2s;
+}
+.remove-col:hover {
+  border-color: #e55;
+  color: #e55;
+}
+
+.color-swatches {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+}
+.color-swatches .swatch {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  display: inline-block;
+}
+.color-swatches .color-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  font-size: 12px;
+  color: #555;
+  background: #fafafa;
+  letter-spacing: 0.5px;
+}
+
+.no-data {
+  color: #ccc;
+}
+
+.compare-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 100px 0;
+  color: #888;
+}
+.compare-empty button {
+  background: #1a1a1a;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+}

@@ -62,7 +62,7 @@ export default function InquiryPage() {
     }, [])
 
     return (
-        <section className="mypage-inquiry">
+        <div className="mypage-inquiry">
             <div className="content inquiry-content">
                 <div className="inquiry-page-tabs">
                     <button
@@ -102,15 +102,15 @@ export default function InquiryPage() {
                         {inquiries.length === 0 ? (
                             <SubPageEmptyState
                                 title="문의한 내역이 없습니다."
-                                description=""
+                                description="아직 문의 내역이 없어요. 
+                                        독 메뉴의 말풍선 아이콘으로 문의를 남겨보세요"
                                 icon={
                                     <>
                                         <svg width="40" height="40" viewBox="0 0 24 24" fill="none"
                                             stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                                             <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
                                         </svg>
-                                        <p>아직 문의 내역이 없어요</p>
-                                        <span>독 메뉴의 말풍선 아이콘으로 문의를 남겨보세요</span>
+
                                     </>
                                 }
                             />
@@ -166,6 +166,6 @@ export default function InquiryPage() {
                     onConfirm={confirmDelete}
                 />
             )}
-        </section>
+        </div>
     )
 }

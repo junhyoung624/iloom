@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --main: #303030;
   --sub: #808080;
@@ -17,6 +18,7 @@
 .card-img-box .default {
   position: relative;
   z-index: 1;
+  opacity: 1;
 }
 .card-img-box .hover {
   position: absolute;
@@ -35,6 +37,7 @@
 
 .card-text-box .series-row {
   position: relative;
+  height: 40px;
 }
 .card-text-box .product-info {
   text-align: center;
@@ -89,4 +92,117 @@
 }
 .card-text-box .heart-btn.active .heart-fill {
   opacity: 1;
+}
+.card-text-box .compare-btn {
+  position: absolute;
+  top: 25%;
+  right: 28px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+.card-text-box .compare-btn .compare-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #ccc;
+  flex-shrink: 0;
+  transition: background 0.2s;
+  position: relative;
+}
+.card-text-box .compare-btn .compare-label {
+  font-size: 12px;
+  color: #888;
+  transition: color 0.2s;
+  white-space: nowrap;
+}
+.card-text-box .compare-btn.active .compare-dot {
+  background: #4caf50;
+}
+.card-text-box .compare-btn.active .compare-dot::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%) rotate(45deg);
+  width: 3px;
+  height: 6px;
+  border-right: 1.5px solid #fff;
+  border-bottom: 1.5px solid #fff;
+}
+.card-text-box .compare-btn.active .compare-label {
+  color: #4caf50;
+  font-weight: 600;
+}
+.card-text-box .compare-btn:hover:not(.active) .compare-dot {
+  background: #999;
+}
+.card-text-box .compare-btn:hover:not(.active) .compare-label {
+  color: #555;
+}
+
+.sub-card {
+  transition: transform 0.28s ease;
+}
+.sub-card:hover {
+  transform: translateY(-4px);
+}
+.sub-card .card-img-box {
+  overflow: hidden;
+}
+.sub-card .product-img {
+  transition: transform 0.35s ease, opacity 0.35s ease;
+}
+.sub-card:hover .product-img.default {
+  transform: scale(1.04);
+}
+
+.card-img-skeleton {
+  width: 100%;
+  aspect-ratio: 3/4;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+/* ---- 반응형 ---- */
+@media (max-width: 1024px) {
+  .card-text-box .product-info .series-name {
+    font-size: 14px;
+  }
+  .card-text-box .product-info .product-name {
+    font-size: 15px;
+  }
+}
+@media (max-width: 768px) {
+  .sub-card {
+    padding: 0 4px;
+  }
+  .card-text-box .product-info {
+    padding: 0 4px;
+  }
+  .card-text-box .product-info .series-name {
+    font-size: 12px;
+    margin-bottom: 6px;
+  }
+  .card-text-box .product-info .product-name {
+    font-size: 13px;
+    padding-bottom: 8px;
+  }
+  .card-text-box .product-info .price {
+    font-size: 13px;
+  }
 }

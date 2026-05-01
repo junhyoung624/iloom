@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { useAuthStore } from '../store/useAuthStore'
 import { useNavigate } from 'react-router-dom'
 import "./scss/mypage.scss"
@@ -6,9 +6,10 @@ import MyPageMenu from './MyPageMenu'
 
 import toast from 'react-hot-toast'
 import LeaveModal from '../components/LeaveModal'
+import MyPageMenu from './MyPageMenu'
 
 export default function LeavePage() {
-    const { user, onDeleteAccount } = useAuthStore()
+    const { onDeleteAccount } = useAuthStore()
     const [isChecked, setIsChecked] = useState(false)
 
     // 팝업 상태
@@ -35,14 +36,9 @@ export default function LeavePage() {
     }
 
     return (
-        <section className="mypage">
+        <div className="mypage-leave-page">
             <div className="inner">
-                <MyPageMenu />
-
                 <div className="content">
-                    <div className="leave-title">
-                        <h2>회원탈퇴</h2>
-                    </div>
 
                     <div className="leave-section">
                         <div className="leave-box">
@@ -92,6 +88,6 @@ export default function LeavePage() {
                     onConfirm={confirmLeave}
                 />
             )}
-        </section>
+        </div>
     )
 }
