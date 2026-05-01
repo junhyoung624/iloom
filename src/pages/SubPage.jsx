@@ -547,7 +547,6 @@ const SubPage = () => {
                     </div>
                 </div>
             </div>
-            <CompareFloatBar />
         </div>
     )
 }
