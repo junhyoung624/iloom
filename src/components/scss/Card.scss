@@ -1,140 +1,63 @@
 @use '../../variables.scss' as v;
 
-.sub-card-link {
-    display: block;
-    cursor: pointer;
-    text-decoration: none;
-    color: inherit;
-}
+.card-img-box {
+    position: relative;
 
-.sub-card {
-    width: 100%;
-    transition: transform 0.28s ease;
-
-    &:hover {
-        transform: translateY(-4px);
-    }
-
-    .card-img-box {
-        position: relative;
+    .product-img {
         width: 100%;
-        aspect-ratio: 1 / 1;
-        overflow: hidden;
-        background: transparent;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        .product-img {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: auto;
-            height: 78%;
-            max-width: 88%;
-            max-height: 78%;
-            object-fit: contain;
-            display: block;
-            background: transparent;
-            transform: translate(-50%, -50%);
-            transition: opacity 0.35s ease, transform 0.35s ease;
-        }
-
-        .default {
-            z-index: 1;
-            opacity: 1;
-            transform: translate(-50%, -50%) scale(1);
-        }
-
-        .hover {
-            z-index: 2;
-            opacity: 0;
-            transform: translate(-50%, -50%) scale(1);
-        }
-
-        &.loaded {
-            .card-img-skeleton {
-                display: none;
-            }
-        }
+        height: 100%;
+        object-fit: cover;
+        transition: opacity 0.3s ease;
     }
 
-    &:hover {
-        .hover {
-            opacity: 1;
-            transform: translate(-50%, -50%) scale(1.02);
-        }
+    .default {
+        position: relative;
+        z-index: 1;
+        opacity: 1;
+    }
 
-        .default {
-            opacity: 0;
-            transform: translate(-50%, -50%) scale(1.02);
-        }
+    .hover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        z-index: 2;
     }
 }
 
-.card-img-skeleton {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, #f7f7f7 25%, #eeeeee 50%, #f7f7f7 75%);
-    background-size: 200% 100%;
-    animation: shimmer 1.4s infinite;
-    z-index: 0;
-}
-
-@keyframes shimmer {
-    0% {
-        background-position: 200% 0;
+.sub-card:hover {
+    .hover {
+        opacity: 1;
     }
 
-    100% {
-        background-position: -200% 0;
+    .default {
+        opacity: 0;
     }
 }
 
 .card-text-box {
-    padding-top: 10px;
-
     .series-row {
         position: relative;
-        height: 40px; // 하트 margin-top: 20px + 높이 확보
-    }
-
-    .series-name {
-        width: 100%;
-        margin: 0;
-        padding: 0 86px;
-        text-align: center;
-        color: var(--sub);
-        font-size: 16px;
-        font-weight: 300;
-        line-height: 1.2;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-
-    .card-action-row {
-        position: absolute;
-        top: 50%;
-        right: 0;
-        transform: translateY(-50%);
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        gap: 8px;
-        z-index: 5;
+        height: 40px;
     }
 
     .product-info {
         text-align: center;
 
+        .series-name {
+            margin: 0;
+            text-align: center;
+            color: var(--sub);
+            font-size: 16px;
+            font-weight: 300;
+            padding: 10px 0 0 0;
+            margin-bottom: 10px;
+        }
+
         .product-name {
             padding-bottom: 13px;
             color: var(--main);
             font-size: 17px;
-            line-height: 1.4;
         }
 
         .price {
@@ -142,74 +65,52 @@
             color: #CA1230;
         }
     }
-}
 
-.compare-inline-btn {
-    position: static;
-    height: 30px;
-    padding: 0;
-    border: none;
-    background: transparent;
-    color: #333;
-    font-size: 12px;
-    font-weight: 600;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-    transition: 0.2s;
-    flex-shrink: 0;
-
-    .compare-check-circle {
-        width: 15px;
-        height: 15px;
-        border-radius: 50%;
-        border: 1px solid #bbb;
-        background: #bbb;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        transition: 0.2s;
-        flex-shrink: 0;
+    .heart-btn {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 20px;
+        border: none;
+        background: transparent;
+        padding: 0;
+        cursor: pointer;
+        margin-top: 20px;
     }
 
-    svg {
+    .heart {
+        position: absolute;
+        inset: 0;
+        width: 20px;
+        height: 20px;
+        display: block;
+        transition: opacity 0.25s ease;
+    }
+
+    .heart-line {
+        opacity: 1;
+    }
+
+    .heart-fill {
         opacity: 0;
-        transition: 0.2s;
     }
 
-    &:hover {
-        color: #20b26b;
-
-        .compare-check-circle {
-            border-color: #20b26b;
-            background: #20b26b;
-        }
-
-        svg {
-            opacity: 1;
-        }
+    .heart-btn.active .heart-line {
+        opacity: 0;
     }
 
-    &.active {
-        color: #20b26b;
-
-        .compare-check-circle {
-            border-color: #20b26b;
-            background: #20b26b;
-        }
-
-        svg {
-            opacity: 1;
-        }
+    .heart-btn.active .heart-fill {
+        opacity: 1;
     }
 
     // ---- 비교 버튼 ----
     .compare-btn {
         position: absolute;
-        top: 25%;
+        top: 50%;
         right: 28px; // 하트(20px) + 간격(8px)
+        transform: translateY(-50%);
         margin-top: 20px;
 
         display: flex;
@@ -261,98 +162,68 @@
         }
 
         &:hover:not(.active) {
-            .compare-dot { background: #999; }
-            .compare-label { color: #555; }
-        }
-    }
-}
+            .compare-dot {
+                background: #999;
+            }
 
-.heart-btn {
-    position: relative;
-    width: 24px;
-    height: 24px;
-    min-width: 24px;
-    border: none;
-    background: transparent;
-    padding: 0;
-    margin: 0;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    transform: none;
-
-    .heart {
-        position: absolute;
-        inset: 0;
-        width: 24px;
-        height: 24px;
-        display: block;
-        transition: opacity 0.25s ease;
-    }
-
-    .heart-line {
-        opacity: 1;
-    }
-
-    .heart-fill {
-        opacity: 0;
-    }
-
-    &.active {
-        .heart-line {
-            opacity: 0;
-        }
-
-        .heart-fill {
-            opacity: 1;
-        }
-    }
-}
-
-.compare-checked {
-    .compare-inline-btn {
-        color: #20b26b;
-
-        .compare-check-circle {
-            border-color: #20b26b;
-            background: #20b26b;
-        }
-
-        svg {
-            opacity: 1;
-        }
-    }
-}
-
-@media (max-width: 1024px) {
-    .card-text-box {
-        .series-name {
-            font-size: 14px;
-            padding: 0 80px;
-        }
-
-        .product-info {
-            .product-name {
-                font-size: 15px;
+            .compare-label {
+                color: #555;
             }
         }
     }
+}
 
-    .compare-inline-btn {
-        height: 28px;
-        font-size: 11px;
+.sub-card {
+    transition: transform 0.28s ease;
+
+    &:hover {
+        transform: translateY(-4px);
     }
 
-    .heart-btn {
-        width: 22px;
-        height: 22px;
-        min-width: 22px;
+    .card-img-box {
+        overflow: hidden;
+    }
 
-        .heart {
-            width: 22px;
-            height: 22px;
+    .product-img {
+        transition: transform 0.35s ease, opacity 0.35s ease;
+    }
+
+    &:hover {
+        .product-img.default {
+            transform: scale(1.04);
+        }
+    }
+}
+
+.card-img-skeleton {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.4s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: 200% 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+/* ---- 반응형 ---- */
+@media (max-width: 1024px) {
+    .card-text-box {
+        .product-info {
+            .series-name {
+                font-size: 14px;
+            }
+
+            .product-name {
+                font-size: 15px;
+            }
         }
     }
 }
@@ -363,23 +234,17 @@
     }
 
     .card-text-box {
-        padding-top: 8px;
-
-        .series-row {
-            min-height: 28px;
-        }
-
-        .series-name {
-            font-size: 12px;
-            padding: 0 70px;
-        }
-
-        .card-action-row {
-            gap: 6px;
+        .compare-btn {
+            right: 26px; // 모바일에서 간격 소폭 조정
         }
 
         .product-info {
             padding: 0 4px;
+
+            .series-name {
+                font-size: 12px;
+                margin-bottom: 6px;
+            }
 
             .product-name {
                 font-size: 13px;
@@ -389,28 +254,6 @@
             .price {
                 font-size: 13px;
             }
-        }
-    }
-
-    .compare-inline-btn {
-        height: 26px;
-        font-size: 10px;
-        gap: 4px;
-
-        .compare-check-circle {
-            width: 13px;
-            height: 13px;
-        }
-    }
-
-    .heart-btn {
-        width: 20px;
-        height: 20px;
-        min-width: 20px;
-
-        .heart {
-            width: 20px;
-            height: 20px;
         }
     }
 }
