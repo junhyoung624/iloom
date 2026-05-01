@@ -5,6 +5,7 @@ import "./scss/mypage.scss"
 
 import toast from 'react-hot-toast'
 import LeaveModal from '../components/LeaveModal'
+import MyPageMenu from './MyPageMenu'
 
 export default function LeavePage() {
     const { onDeleteAccount } = useAuthStore()
@@ -37,9 +38,6 @@ export default function LeavePage() {
         <div className="mypage-leave-page">
             <div className="inner">
                 <div className="content">
-                    <div className="leave-title">
-                        <h2>회원탈퇴</h2>
-                    </div>
 
                     <div className="leave-section">
                         <div className="leave-box">

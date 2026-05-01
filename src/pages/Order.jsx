@@ -183,7 +183,6 @@ const Order = () => {
       <li
         key={statusToggleId}
         className="order-item"
-        onClick={() => toast("주문 상세로 이동", { id: "order-detail-toast" })}
       >
         <div className="order-main-info">
           <div className="order-date">

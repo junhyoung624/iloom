@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useAuthStore } from '../store/useAuthStore'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import "./scss/mypage.scss"
@@ -50,6 +50,17 @@ export default function MyPage() {
     }
 
     const location = useLocation()
+
+    useEffect(() => {
+        const handleEsc = (e) => {
+            if (e.key === 'Escape') {
+                setIsAgreeOpen(false)
+                setIsOpen(false)
+            }
+        }
+        document.addEventListener('keydown', handleEsc)
+        return () => document.removeEventListener('keydown', handleEsc)
+    }, [])
 
     return (
         <div className="mypage-member-info">
