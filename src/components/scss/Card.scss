@@ -162,8 +162,13 @@
         }
 
         &:hover:not(.active) {
-            .compare-dot { background: #999; }
-            .compare-label { color: #555; }
+            .compare-dot {
+                background: #999;
+            }
+
+            .compare-label {
+                color: #555;
+            }
         }
     }
 }
