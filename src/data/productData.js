@@ -2288,14 +2288,8 @@ export const productData = [
     "category3": "",
     "productImages": [
       "/images/iloom_images/bedroom/storage/HP311621_a_1.jpg",
-      "/images/iloom_images/living-room/living-cabinet/HP311621_b_1.jpg",
-      "/images/iloom_images/living-room/living-cabinet/HP311621_c_1.jpg",
       "/images/iloom_images/bedroom/storage/HP311621_a_default_2.png",
-      "/images/iloom_images/living-room/living-cabinet/HP311621_b_LDGYM_2.png",
-      "/images/iloom_images/living-room/living-cabinet/HP311621_c_OSGYM_2.png",
       "/images/iloom_images/bedroom/storage/HP311621_a_default_3.png",
-      "/images/iloom_images/living-room/living-cabinet/HP311621_b_LDGYM_3.png",
-      "/images/iloom_images/living-room/living-cabinet/HP311621_c_OSGYM_3.png"
     ],
     "mdPick": false,
     "new": false,
@@ -18718,7 +18712,6 @@ export const productData = [
     "category3": "6인용식탁",
     "productImages": [
       "/images/iloom_images/dining-room/dining-table/HT90Y19HF_BIA_1.png",
-      "/images/iloom_images/dining-room/dining-table/HT90Y19HF_BIA_2.png"
     ],
     "mdPick": false,
     "new": false,

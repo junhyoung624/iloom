@@ -54,7 +54,7 @@ const Header = () => {
     clearTimeout(leaveTimer.current)
     setHover(false)
     setIsSearchOpen(false)
-    if (loginMenu.current) { loginMenu.current = false; return }
+    if (loginMenu.current) { loginMenu.current = false; }
     setUserMenu(false)
     setCartPanel(false)
   }, [location.pathname])
