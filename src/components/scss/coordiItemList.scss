@@ -23,21 +23,16 @@
         margin: 0 auto 16px;
     }
 
-    //width: 200px;
     margin-top: 30px;
 
     .name {
-        // font-size: 16px;
         font-weight: 500;
     }
 
     .subName {
         width: 200px;
         margin: 0 auto;
-        // font-size: 18px;
-        // font-weight: 600;
         padding: 10px 0;
-
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -66,6 +61,64 @@
             img {
                 transform: translateY(-4px);
             }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .coordi-item-list {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+    }
+
+    .coordi-item {
+        margin-top: 20px;
+
+        img {
+            max-width: 180px;
+        }
+
+        .subName {
+            width: 100%;
+        }
+
+        .price {
+            font-size: 14px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .coordi-item-list {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+
+    .coordi-item {
+        margin-top: 12px;
+
+        img {
+            max-width: 100%;
+            margin-bottom: 8px;
+        }
+
+        .name {
+            font-size: 12px;
+        }
+
+        .subName {
+            width: 100%;
+            font-size: 12px;
+            padding: 6px 0;
+        }
+
+        .price {
+            font-size: 12px;
+            padding-top: 4px;
+        }
+
+        &:hover {
+            transform: translateY(-4px);
         }
     }
 }

@@ -77,10 +77,11 @@ const MainMenu = ({ menus, isHover, isScrolled, onSend, onEnter, isMobileOpen, o
             </p>
           </div>
         </div>
-      </div>
+      </div >
 
       {/* 모바일/태블릿 드로어 메뉴 */}
-      <div className={`mobile-menu-drawer ${isMobileOpen ? 'active' : ''}`}>
+      <div div className={`mobile-menu-drawer ${isMobileOpen ? 'active' : ''}`
+      } style={{ display: 'flex' }}>
         <div className="mobile-menu-header">
           <img src="/images/logo-icon/main-logo-white.png" alt="iloom" style={{ filter: 'invert(1)', width: '80px' }} />
           <button className="mobile-menu-close" onClick={onMobileClose}>✕</button>
@@ -139,7 +140,7 @@ const MainMenu = ({ menus, isHover, isScrolled, onSend, onEnter, isMobileOpen, o
             </li>
           ))}
         </ul>
-      </div>
+      </div >
     </>
   )
 }

@@ -40,7 +40,7 @@ const HeaderInner = ({
             <div className="header-inner">
                 <ScrollProgress />
                 <div className="header-left">
-                    <div className="ham-btn" onMouseEnter={onEnter} onClick={onHamClick}>
+                    <div className="ham-btn" onClick={onHamClick}>
                         <img src="/images/logo-icon/ham-white.png" alt="ham-btn" />
                     </div>
                 </div>

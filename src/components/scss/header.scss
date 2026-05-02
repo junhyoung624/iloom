@@ -12,7 +12,6 @@ header {
     .header-inner {
         @include g.myFlex($gap: null);
 
-
         .main-logo {
             position: absolute;
             left: 50%;
@@ -87,7 +86,6 @@ header {
                 img {
                     filter: invert(1);
                 }
-
             }
         }
 
@@ -96,7 +94,6 @@ header {
         }
 
         .gnb-list {
-
             .cart-num {
                 filter: invert(1);
             }
@@ -155,8 +152,6 @@ header {
                             color: #fff;
                         }
                     }
-
-
                 }
             }
         }
@@ -172,7 +167,6 @@ header {
     padding-top: 60px;
     z-index: 1000;
     background: rgba(34, 33, 33, 0.8);
-
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
@@ -262,7 +256,6 @@ header {
                 top: 0;
                 z-index: 100;
                 height: 500px;
-
                 opacity: 0;
                 visibility: hidden;
                 pointer-events: none;
@@ -285,7 +278,6 @@ header {
                         top: 0;
                         width: 250px;
                         height: 500px;
-
                         opacity: 0;
                         visibility: hidden;
                         pointer-events: none;
@@ -317,7 +309,6 @@ header {
                 top: 0;
                 width: 100%;
                 height: 100%;
-
             }
 
             img {
@@ -386,12 +377,6 @@ header {
 
         .menu-img-wrap {
             .text-box {
-                // color: #000;
-
-                img {
-                    // filter: invert(1);
-                }
-
                 .magazine-button {
                     a {
                         color: #fff;
@@ -562,79 +547,11 @@ header {
     }
 }
 
-@media (max-width: 768px) {
-    header {
-        padding: 16px 20px;
-
-        .header-inner {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            position: relative;
-
-            .header-left {
-                width: 40px; // ← 고정 너비
-                flex-shrink: 0;
-            }
-
-            .main-logo {
-                position: absolute;
-                left: 50%;
-                transform: translateX(-50%);
-
-                img {
-                    width: 80px;
-                }
-            }
-
-            .header-left {
-                .ham-btn {
-                    img {
-                        width: 20px;
-                    }
-                }
-            }
-
-            .header-right {
-                width: 40px; // ← header-left와 동일하게
-                flex-shrink: 0;
-                display: flex;
-                justify-content: flex-end;
-
-                .gnb-list {
-                    li {
-                        display: none;
-
-                        &:last-child {
-                            display: block; // 장바구니만 표시
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    .header-scroll-nav-mask {
-        display: none;
-    }
-
-    .main-menu-wrap {
-        display: none;
-
-        &.active {
-            display: block;
-        }
-    }
-
-    .user-menu-wrap {
-        width: 80%;
-    }
-}
-
+// 모바일 드로어 - 기본값을 flex로, left로 숨김 처리
 .mobile-menu-overlay {
     position: fixed;
     top: 0;
-    left: 300;
+    left: 0;
     right: 0;
     bottom: 0;
     background: rgba(0, 0, 0, 0.45);
@@ -642,6 +559,7 @@ header {
     opacity: 0;
     pointer-events: none;
     transition: 0.3s ease;
+    display: none;
 
     &.active {
         opacity: 1;
@@ -650,20 +568,20 @@ header {
 }
 
 .mobile-menu-drawer {
-    display: none;
+    display: flex; // none 대신 flex - left로 숨김
+    flex-direction: column;
     position: fixed;
     top: 0;
-    left: -320px;
+    left: -320px; // 평소엔 화면 밖
     width: 300px;
     height: 100vh;
     background: #fff;
     z-index: 9999;
     overflow-y: auto;
     transition: left 0.35s ease;
-    flex-direction: column;
 
     &.active {
-        left: 0;
+        left: 0; // 클릭 시 화면 안으로
     }
 }
 
@@ -671,9 +589,8 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 20px;
+    padding: 20px;
     border-bottom: 1px solid #f0f0f0;
-    z-index: 1003;
 }
 
 .mobile-menu-close {
@@ -750,14 +667,94 @@ header {
     }
 }
 
+// 1024px 이하 - 모바일 드로어 오버레이 활성화, 데스크탑 메뉴 숨김
 @media (max-width: 1024px) {
-
-    .mobile-menu-overlay,
-    .mobile-menu-drawer {
-        display: flex;
+    .mobile-menu-overlay {
+        display: block;
     }
 
     .main-menu-wrap {
         display: none !important;
+
+        &.active {
+            display: none !important;
+        }
+    }
+}
+
+// 768px 이하
+@media (max-width: 768px) {
+    header {
+        padding: 16px 20px;
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+
+            .header-left {
+                width: 40px;
+                flex-shrink: 0;
+
+                .ham-btn {
+                    img {
+                        width: 20px;
+                    }
+                }
+            }
+
+            .main-logo {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+
+                img {
+                    width: 80px;
+                }
+            }
+
+            .header-right {
+                flex-shrink: 0;
+                display: flex;
+                justify-content: flex-end;
+
+                .gnb-list {
+                    display: flex;
+                    gap: 14px;
+                    align-items: center;
+
+                    li {
+                        display: block;
+
+                        img {
+                            width: 20px;
+                            height: 20px;
+                        }
+
+                        .user-btn span {
+                            display: none;
+                        }
+
+                        .cart-num {
+                            top: -8px;
+                            right: -10px;
+                            width: 16px;
+                            height: 16px;
+                            font-size: 10px;
+                            line-height: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .header-scroll-nav-mask {
+        display: none;
+    }
+
+    .user-menu-wrap {
+        width: 100%;
     }
 }
