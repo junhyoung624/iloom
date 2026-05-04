@@ -352,6 +352,91 @@
     }
 }
 
+// ─── 추천 상품 카드 (추가된 부분) ────────────────────────────────────────────
+.chatbot-product-cards {
+    padding: 4px 0;
+
+    .chatbot-product-label {
+        font-size: 11px;
+        color: #aaa;
+        margin: 0 0 6px;
+        font-weight: 500;
+    }
+
+    .chatbot-product-card {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        border: 1px solid #eee;
+        border-radius: 10px;
+        padding: 10px;
+        margin-bottom: 6px;
+        text-decoration: none;
+        color: inherit;
+        background: #fff;
+        cursor: pointer;
+        transition: box-shadow 0.2s;
+
+        &:hover {
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        img {
+            width: 52px;
+            height: 52px;
+            object-fit: cover;
+            border-radius: 6px;
+            flex-shrink: 0;
+        }
+
+        .chatbot-product-info {
+            flex: 1;
+            min-width: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .chatbot-product-series {
+            font-size: 11px;
+            color: #999;
+        }
+
+        .chatbot-product-name {
+            font-size: 13px;
+            font-weight: 600;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .chatbot-product-bottom {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .chatbot-product-price {
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .chatbot-product-tag {
+            font-size: 10px;
+            background: #222;
+            color: #fff;
+            border-radius: 4px;
+            padding: 2px 5px;
+        }
+
+        .chatbot-product-arrow {
+            color: #bbb;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+    }
+}
+
 @media (max-width: 768px) {
     .quick-menu-wrap {
         right: 16px;
@@ -364,6 +449,29 @@
     }
 
     .recent-view-hover-area {
-        display: none; // 최근 본 상품은 모바일에서 숨김
+        display: none;
+    }
+}
+
+// 챗봇 마크다운 
+.chatbot-message.bot {
+    p {
+        margin: 0 0 6px;
+        &:last-child { margin-bottom: 0; }
+    }
+
+    ul, ol {
+        margin: 4px 0;
+        padding-left: 16px;
+
+        li {
+            margin-bottom: 4px;
+            line-height: 1.5;
+        }
+    }
+
+    strong {
+        font-weight: 700;
+        color: #111;
     }
 }
