@@ -66,3 +66,30 @@
     font-size: 13px;
     color: #777;
 }
+
+@media (max-width: 768px) {
+    .delivery-status-bar {
+        flex-direction: column;
+        gap: 14px;
+        padding: 18px 0;
+    }
+
+    .delivery-step-wrap {
+        display: grid;
+        grid-template-columns: 32px 1fr;
+        gap: 12px;
+    }
+
+    .delivery-step-top {
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .step-line {
+        display: none;
+    }
+
+    .step-text {
+        margin-top: 0;
+    }
+}
