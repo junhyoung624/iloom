@@ -52986,7 +52986,7 @@ export const productData = [
     "series": "파베",
     "name": "파베 스툴(패브릭)",
     "material": "패브릭",
-    "price": "250,000원",
+    "price": "250,000",
     "options": [
       {
         "name": "색상",
