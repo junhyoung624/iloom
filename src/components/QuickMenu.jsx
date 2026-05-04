@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import ReactMarkdown from "react-markdown";
 import { Link, useLocation } from "react-router-dom";
 import "./scss/quickmenu.scss";
 import { commonQna } from "../data/qnaData";
@@ -26,7 +27,6 @@ export default function QuickMenu() {
         setRecentProducts(stored.slice(0, 5));
     }, [location.pathname]);
 
-    // 새 메시지 올 때마다 스크롤 하단
     useEffect(() => {
         if (chatBodyRef.current) {
             chatBodyRef.current.scrollTop = chatBodyRef.current.scrollHeight
@@ -37,7 +37,6 @@ export default function QuickMenu() {
         if (e.key === "Enter") sendMessage();
     };
 
-    // 자주묻는질문 버튼 클릭
     const handleQuickQuestion = (qnaId) => {
         const item = commonQna.find((q) => q.id === qnaId)
         if (!item) return
@@ -61,12 +60,18 @@ export default function QuickMenu() {
             const res = await fetch("http://localhost:4000/api/chat", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ message: userMessage }),
+                body: JSON.stringify({ message: userMessage, history: chatList }),
             });
             const data = await res.json();
+
+            // 봇 답변 + 추천 상품 카드 같이 저장
             setChatList((prev) => [
                 ...prev,
-                { role: "bot", text: data.answer || data.error || "답변을 불러오지 못했습니다." },
+                {
+                    role: "bot",
+                    text: data.answer || data.error || "답변을 불러오지 못했습니다.",
+                    products: data.products || [],
+                },
             ]);
         } catch (error) {
             setChatList((prev) => [
@@ -80,6 +85,13 @@ export default function QuickMenu() {
 
     const handleScrollTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
+    useEffect(() => {
+        const handleEsc = (e) => {
+            if (e.key === "Escape") setIsChatOpen()
+        }
+        document.addEventListener('keydown', handleEsc)
+        return () => document.removeEventListener('keydown', handleEsc)
+    }, [setIsChatOpen])
     return (
         <>
             <div className="quick-menu-wrap">
@@ -118,8 +130,46 @@ export default function QuickMenu() {
 
                     <div className="chatbot-body" ref={chatBodyRef}>
                         {chatList.map((chat, idx) => (
-                            <div key={idx} className={`chatbot-message ${chat.role === "user" ? "user" : "bot"}`}>
-                                {chat.text}
+                            <div key={idx} style={{ display: "flex", flexDirection: "column", alignItems: chat.role === "user" ? "flex-end" : "flex-start" }}>
+                                <div className={`chatbot-message ${chat.role === "user" ? "user" : "bot"}`}>
+                                    {chat.role === "bot"
+                                        ? <ReactMarkdown>{chat.text}</ReactMarkdown>
+                                        : chat.text}
+                                </div>
+
+                                {/* 추천 상품 카드 — bot 메시지에 products 있을 때만 */}
+                                {chat.role === "bot" && chat.products?.length > 0 && (
+                                    <div className="chatbot-product-cards">
+                                        <p className="chatbot-product-label">추천 상품 바로가기</p>
+                                        {chat.products.map((p) => (
+                                            <Link
+                                                key={p.id}
+                                                to={`/product/${p.id}`}
+                                                className="chatbot-product-card"
+                                                onClick={() => setIsChatOpen(false)}
+                                            >
+                                                {p.image && (
+                                                    <img
+                                                        src={p.image}
+                                                        alt={p.name}
+                                                        onError={e => e.target.style.display = "none"}
+                                                    />
+                                                )}
+                                                <div className="chatbot-product-info">
+                                                    <span className="chatbot-product-series">{p.series}</span>
+                                                    <span className="chatbot-product-name">{p.name}</span>
+                                                    <div className="chatbot-product-bottom">
+                                                        <span className="chatbot-product-price">{p.price}원</span>
+                                                        {p.tags.map(tag => (
+                                                            <span key={tag} className="chatbot-product-tag">{tag}</span>
+                                                        ))}
+                                                    </div>
+                                                </div>
+                                                <span className="chatbot-product-arrow">›</span>
+                                            </Link>
+                                        ))}
+                                    </div>
+                                )}
                             </div>
                         ))}
 
