@@ -18,3 +18,5 @@ npm install react-helmet-async - 모든 세부페이지 주소 바꾸기
 npm install canvas-confetti - 결제 완료 폭죽
 
 npm install @number-flow/react - charge 금액 카운트
+
+npm install react-markdown - 챗봇 마크다운 

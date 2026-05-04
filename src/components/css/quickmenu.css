@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .quick-menu-wrap {
   position: fixed;
   right: 70px;
@@ -31,33 +30,38 @@
 
 .recent-view-hover-area {
   position: relative;
-  width: 256px;
+  width: 80px;
   height: 110px;
-  margin-left: -176px;
 }
 
 .recent-view-box {
   position: absolute;
-  top: 0;
   right: 0;
-  width: 80px;
+  width: 528px;
   height: 110px;
+  pointer-events: none;
+}
+.recent-view-box:hover {
+  pointer-events: auto;
 }
 
 .recent-view-title {
   font-size: 14px;
   font-weight: 500;
   color: #666;
-  text-align: center;
+  text-align: right;
   margin-bottom: 10px;
+  white-space: nowrap;
 }
 
 .recent-view-list {
-  position: relative;
+  position: absolute;
+  right: 0;
   width: 80px;
   height: 80px;
   margin: 0;
   padding: 0;
+  overflow: visible;
 }
 
 .recent-view-list li {
@@ -86,46 +90,70 @@
 }
 
 .recent-view-list li:nth-child(1) {
-  z-index: 3;
+  z-index: 5;
+  pointer-events: auto;
 }
 
 .recent-view-list li:nth-child(2) {
-  z-index: 2;
-}
-.recent-view-list li:nth-child(2) .recent-view-item {
-  opacity: 0;
-  transform: translateX(0) translateY(0);
-  pointer-events: none;
+  z-index: 4;
 }
 
 .recent-view-list li:nth-child(3) {
+  z-index: 3;
+}
+
+.recent-view-list li:nth-child(4) {
+  z-index: 2;
+}
+
+.recent-view-list li:nth-child(5) {
   z-index: 1;
 }
-.recent-view-list li:nth-child(3) .recent-view-item {
+
+.recent-view-list li:nth-child(n+2) .recent-view-item {
   opacity: 0;
   transform: translateX(0) translateY(0);
   pointer-events: none;
 }
 
-/* hover 유지 영역을 hover 기준으로 */
-.recent-view-hover-area:hover .recent-view-list li:nth-child(2) .recent-view-item {
+.recent-view-box:hover .recent-view-list li:nth-child(2) .recent-view-item {
   opacity: 1;
   transform: translateX(-88px) translateY(0);
   pointer-events: auto;
 }
 
-.recent-view-hover-area:hover .recent-view-list li:nth-child(3) .recent-view-item {
+.recent-view-box:hover .recent-view-list li:nth-child(3) .recent-view-item {
   opacity: 1;
   transform: translateX(-176px) translateY(0);
   pointer-events: auto;
 }
 
-.recent-view-hover-area:hover .recent-view-list li:nth-child(2) .recent-view-item:hover {
+.recent-view-box:hover .recent-view-list li:nth-child(4) .recent-view-item {
+  opacity: 1;
+  transform: translateX(-264px) translateY(0);
+  pointer-events: auto;
+}
+
+.recent-view-box:hover .recent-view-list li:nth-child(5) .recent-view-item {
+  opacity: 1;
+  transform: translateX(-352px) translateY(0);
+  pointer-events: auto;
+}
+
+.recent-view-box:hover .recent-view-list li:nth-child(2) .recent-view-item:hover {
   transform: translateX(-88px) translateY(-4px);
 }
 
-.recent-view-hover-area:hover .recent-view-list li:nth-child(3) .recent-view-item:hover {
+.recent-view-box:hover .recent-view-list li:nth-child(3) .recent-view-item:hover {
   transform: translateX(-176px) translateY(-4px);
+}
+
+.recent-view-box:hover .recent-view-list li:nth-child(4) .recent-view-item:hover {
+  transform: translateX(-264px) translateY(-4px);
+}
+
+.recent-view-box:hover .recent-view-list li:nth-child(5) .recent-view-item:hover {
+  transform: translateX(-352px) translateY(-4px);
 }
 
 .recent-view-list li:nth-child(1) .recent-view-item:hover {
@@ -303,4 +331,109 @@
     transform: scale(1);
     opacity: 1;
   }
+}
+.chatbot-product-cards {
+  padding: 4px 0;
+}
+.chatbot-product-cards .chatbot-product-label {
+  font-size: 11px;
+  color: #aaa;
+  margin: 0 0 6px;
+  font-weight: 500;
+}
+.chatbot-product-cards .chatbot-product-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 6px;
+  text-decoration: none;
+  color: inherit;
+  background: #fff;
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+}
+.chatbot-product-cards .chatbot-product-card:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.chatbot-product-cards .chatbot-product-card img {
+  width: 52px;
+  height: 52px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+.chatbot-product-cards .chatbot-product-card .chatbot-product-info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.chatbot-product-cards .chatbot-product-card .chatbot-product-series {
+  font-size: 11px;
+  color: #999;
+}
+.chatbot-product-cards .chatbot-product-card .chatbot-product-name {
+  font-size: 13px;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.chatbot-product-cards .chatbot-product-card .chatbot-product-bottom {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.chatbot-product-cards .chatbot-product-card .chatbot-product-price {
+  font-size: 12px;
+  font-weight: 700;
+}
+.chatbot-product-cards .chatbot-product-card .chatbot-product-tag {
+  font-size: 10px;
+  background: #222;
+  color: #fff;
+  border-radius: 4px;
+  padding: 2px 5px;
+}
+.chatbot-product-cards .chatbot-product-card .chatbot-product-arrow {
+  color: #bbb;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .quick-menu-wrap {
+    right: 16px;
+    bottom: 120px;
+    gap: 6px;
+  }
+  .quick-btn {
+    width: 48px;
+  }
+  .recent-view-hover-area {
+    display: none;
+  }
+}
+.chatbot-message.bot p {
+  margin: 0 0 6px;
+}
+.chatbot-message.bot p:last-child {
+  margin-bottom: 0;
+}
+.chatbot-message.bot ul, .chatbot-message.bot ol {
+  margin: 4px 0;
+  padding-left: 16px;
+}
+.chatbot-message.bot ul li, .chatbot-message.bot ol li {
+  margin-bottom: 4px;
+  line-height: 1.5;
+}
+.chatbot-message.bot strong {
+  font-weight: 700;
+  color: #111;
 }
