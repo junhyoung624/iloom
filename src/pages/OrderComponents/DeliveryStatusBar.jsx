@@ -7,10 +7,11 @@ const getStepIndex = (status) => {
     return index === -1 ? 0 : index;
 };
 
-const DeliveryStatusBar = ({ status = "before" }) => {
+const DeliveryStatusBar = ({ status = "payment" }) => {
     const currentStep = getStepIndex(status);
+
     return (
-        <div className="delivery-status-bar">
+        <div className="delivery-status-bar" aria-label="배송 진행 상태">
             {deliverySteps.map((step, index) => {
                 const isActive = index <= currentStep;
                 const isCurrent = index === currentStep;
@@ -18,7 +19,10 @@ const DeliveryStatusBar = ({ status = "before" }) => {
                 return (
                     <div className="delivery-step-wrap" key={step.key}>
                         <div className="delivery-step-top">
-                            <div className={`step-circle ${isActive ? "active" : ""}`}>
+                            <div
+                                className={`step-circle ${isActive ? "active" : ""}`}
+                                aria-current={isCurrent ? "step" : undefined}
+                            >
                                 {isActive ? "✓" : index + 1}
                             </div>
 
@@ -38,6 +42,6 @@ const DeliveryStatusBar = ({ status = "before" }) => {
             })}
         </div>
     );
-}
+};
 
 export default DeliveryStatusBar;

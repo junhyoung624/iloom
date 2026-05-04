@@ -294,14 +294,42 @@ export const useProductStore = create((set, get) => ({
     // none      // 취소 신청 안 함
     // pending   // 취소 대기중
     // done      // 취소 완료
-    onRequestCancelOrder: async (orderNumber, itemId) => {
+    onRequestDeliveryDateChange: async (orderNumber, requestedDeliveryDate) => {
+        const updatedOrderList = get().orderList.map((order) =>
+            order.orderNumber === orderNumber
+                ? {
+                    ...order,
+                    requestedDeliveryDate,
+                    deliveryChangeStatus: "requested",
+                }
+                : order
+        );
+
+        set({ orderList: updatedOrderList });
+
+        const { useAuthStore } = await import('./useAuthStore');
+        const user = useAuthStore.getState().user;
+        if (!user) return;
+
+        const { doc, setDoc } = await import('firebase/firestore');
+        const { db } = await import('../firebase/firebase');
+        const userRef = doc(db, 'people', user.uid);
+        await setDoc(userRef, { orderList: updatedOrderList }, { merge: true });
+    },
+
+    onRequestCancelOrder: async (orderNumber, itemId, cancelReason = "") => {
         const updatedOrderList = get().orderList.map((order) =>
             order.orderNumber === orderNumber
                 ? {
                     ...order,
                     items: order.items.map((item) =>
                         item.id === itemId
-                            ? { ...item, cancelStatus: "pending" }
+                            ? {
+                                ...item,
+                                cancelStatus: "pending",
+                                cancelReason,
+                                cancelRequestedAt: new Date().toISOString(),
+                            }
                             : item
                     ),
                 }
