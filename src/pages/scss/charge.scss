@@ -134,10 +134,14 @@
     }
 
     .mini-btn {
-        margin-top: 12px;
-        min-width: 54px;
-        height: 28px;
-        padding: 0 14px;
+        flex: 0 0 auto;
+        width: auto;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: auto;
+        height: auto;
+        padding: 4px 10px;
         border: 1px solid #cfcfcf;
         background: #fff;
         color: #555;
