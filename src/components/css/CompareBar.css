@@ -40,12 +40,12 @@
   position: absolute;
   top: -4px;
   right: -4px;
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
   background: #CA1230;
   color: #fff;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
   display: flex;
   align-items: center;
@@ -110,9 +110,11 @@
   flex-direction: column;
   gap: 16px;
   flex: 1;
+  overflow-y: auto;
 }
 .compare-sidebar__go {
   flex-shrink: 0;
+  margin-top: auto;
   width: 100%;
   padding: 18px 0;
   background: #1a1a1a;
@@ -124,6 +126,7 @@
   cursor: pointer;
   transition: background 0.2s;
   letter-spacing: -0.2px;
+  font-family: inherit;
 }
 .compare-sidebar__go:hover:not(:disabled) {
   background: #333;
@@ -143,7 +146,8 @@
   padding: 20px 16px;
   border-radius: 12px;
   border: 1px dashed #ddd;
-  flex: 1;
+  flex: none;
+  height: 180px;
   position: relative;
   transition: border-color 0.2s;
   text-align: center;
@@ -152,14 +156,16 @@
   border-style: solid;
   border-color: #1a1a1a;
   justify-content: flex-start;
-  padding-top: 28px;
+  padding-top: 20px;
+  height: auto;
+  min-height: 180px;
 }
 .compare-slot.empty {
   background: #fafafa;
 }
 .compare-slot .slot-img {
   width: 100%;
-  height: 260px;
+  height: 150px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 8px;
@@ -182,7 +188,7 @@
   width: 100%;
 }
 .compare-slot .slot-name {
-  font-size: 16px;
+  font-size: 14px;
   color: #1a1a1a;
   font-weight: 600;
   line-height: 1.4;
@@ -193,7 +199,7 @@
   width: 100%;
 }
 .compare-slot .slot-price {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 700;
   color: #CA1230;
   margin-top: 2px;
@@ -203,9 +209,9 @@
   top: 10px;
   right: 12px;
   background: none;
-  border: 1px solid #fff;
+  border: 1px solid #eee;
   border-radius: 4px;
-  color: #030303;
+  color: #999;
   font-size: 16px;
   cursor: pointer;
   padding: 3px 7px;
@@ -213,8 +219,8 @@
   transition: all 0.2s;
 }
 .compare-slot .slot-remove:hover {
-  font-weight: bold;
-  color: #030303;
+  border-color: #333;
+  color: #333;
 }
 .compare-slot .slot-placeholder {
   font-size: 14px;
@@ -263,11 +269,13 @@
     min-width: 200px;
     flex-shrink: 0;
     flex: none;
+    height: auto;
+    min-height: 120px;
   }
   .compare-sidebar .compare-slot .slot-img {
-    height: 120px;
+    height: 100px;
   }
   .compare-sidebar .compare-slot .slot-name {
-    font-size: 14px;
+    font-size: 13px;
   }
 }

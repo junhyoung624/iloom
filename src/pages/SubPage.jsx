@@ -259,6 +259,14 @@ const SubPage = () => {
 
     const activeFilterCount = activeFilterTags.length
 
+    useEffect(() => {
+        const handleEsc = (e) => {
+            if (e.key === "Escape") setIsFilterOpen();
+        }
+        document.addEventListener('keydown', handleEsc)
+        return () => document.removeEventListener('keydown', handleEsc)
+    },[setIsFilterOpen])
+
     return (
         <div className='sub-page-wrap'>
             {!subCate && !thirdCate && (

@@ -5,6 +5,7 @@ import './scss/inquirypage.scss'
 import InquiryEditModal from '../components/InquiryEditModal'
 import SubPageEmptyState from '../components/SubPageEmptyState'
 import InquiryDeleteModal from '../components/InquiryDeleteModal'
+import { useAuthStore } from '../store/useAuthStore'
 
 function AccordionItem({ item, isOpen, onToggle }) {
     return (
@@ -32,11 +33,12 @@ function AccordionItem({ item, isOpen, onToggle }) {
 }
 
 export default function InquiryPage() {
-    const { inquiries, deleteInquiry, updateInquiry } = useInquiryStore()
+    const { inquiries, deleteInquiry, updateInquiry, loadInquiries } = useInquiryStore()
     const [openId, setOpenId] = useState(null)
     const [activeTab, setActiveTab] = useState('faq')
     const [editTarget, setEditTarget] = useState(null)
     const [deleteTarget, setDeleteTarget] = useState(null)
+    const {user} = useAuthStore();
 
     const handleToggle = (id) => setOpenId((prev) => (prev === id ? null : id))
 
@@ -49,6 +51,10 @@ export default function InquiryPage() {
         deleteInquiry(deleteTarget.id)
         setDeleteTarget(null)
     }
+
+    useEffect(() => {
+        loadInquiries(user)
+    },[user])
 
     useEffect(() => {
         const handleEsc = (e) => {

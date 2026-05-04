@@ -94,6 +94,7 @@ function App() {
       <ScrollTop />
       <StickyBanner onClose={() => setBannerVisible(false)} />
       <Header />
+      <div style={{flex: 1, alignItems: 'flex-start' }} >
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<PageTransition><Home /></PageTransition>} />
@@ -152,6 +153,7 @@ function App() {
           <Route path="/compare" element={<ComparePage />} />
         </Routes>
       </AnimatePresence>
+      </div>
       <QuickMenu />
       <DockTab />
       <CompareBar />
