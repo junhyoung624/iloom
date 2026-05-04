@@ -134,14 +134,10 @@
     }
 
     .mini-btn {
-        flex: 0 0 auto;
-        width: auto;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        min-width: auto;
-        height: auto;
-        padding: 4px 10px;
+        margin-top: 12px;
+        min-width: 54px;
+        height: 28px;
+        padding: 0 14px;
         border: 1px solid #cfcfcf;
         background: #fff;
         color: #555;
@@ -1753,24 +1749,29 @@
 
     @media (max-width: 768px) {
         .money-row {
-            flex-wrap: wrap;
-            gap: 8px;
+            flex-wrap: nowrap;
+            gap: 6px;
+            align-items: center;
         }
 
         .money-input-wrap {
-            width: 100%;
-            flex: none;
+            flex: 1;
+            min-width: 0;
+            height: 44px;
+            padding: 0 8px;
 
             .money-input {
-                width: 130px;
+                width: 100%;
+                font-size: 14px;
             }
         }
 
         .money-apply-btn,
         .money-all-btn {
-            flex: 1;
+            flex-shrink: 0;
+            width: auto;
             height: 36px;
-            width: 20px;
+            padding: 0 10px;
             font-size: 11px;
         }
 
