@@ -33,13 +33,7 @@ export default function PaveSofaCards() {
             <div className="inner">
                 <div className="pave-sofa-grid">
                     {sofaCards.map((item) => (
-                        <Link
-                            key={item.cardKey}
-                            to={`/product/${item.id}`}
-                            className="pave-sofa-card-link"
-                        >
-                            <SubCard item={item} />
-                        </Link>
+                        <SubCard key={item.id} item={item} />
                     ))}
                 </div>
             </div>

@@ -85,6 +85,13 @@ export default function Series() {
                         ))}
                     </ul>
                 </div>
+
+                <div className="section-more-wrap">
+                    <Link to="/series" className="section-more-btn">
+                        <span>시리즈 더 보러가기</span>
+                        <span className="section-more-arrow">→</span>
+                    </Link>
+                </div>
             </div>
         </section>
     )

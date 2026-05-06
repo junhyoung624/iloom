@@ -26,7 +26,8 @@
     transition: all 0.2s;
 
     &:hover {
-        border-color: #333;
+        background: #333;
+        color: #fff;
     }
 }
 
@@ -80,8 +81,8 @@
     transition: all 0.2s;
 
     &:hover {
-        border-color: #e55;
-        color: #e55;
+        background: #303030;
+        color: #fff;
     }
 }
 

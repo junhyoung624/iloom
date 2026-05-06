@@ -24,7 +24,8 @@
   transition: all 0.2s;
 }
 .btn-clear:hover {
-  border-color: #333;
+  background: #333;
+  color: #fff;
 }
 
 .compare-table-wrap {
@@ -75,8 +76,8 @@
   transition: all 0.2s;
 }
 .remove-col:hover {
-  border-color: #e55;
-  color: #e55;
+  background: #303030;
+  color: #fff;
 }
 
 .color-swatches {

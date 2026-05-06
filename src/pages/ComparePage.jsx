@@ -64,8 +64,8 @@ const ComparePage = () => {
         <div className="compare-page" style={{ paddingTop: "200px" }}>
             <div className="compare-page__header">
                 <h1>상품 비교</h1>
-                <button className="btn-clear" onClick={() => { clearCompare(); navigate(-1) }}>
-                    초기화 후 돌아가기
+                <button className="btn-clear" onClick={() => { navigate(-1) }}>
+                    돌아가기
                 </button>
             </div>
 
