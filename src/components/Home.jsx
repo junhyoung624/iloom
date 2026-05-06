@@ -15,6 +15,7 @@ import Product3DViewer from './Product3DViewer'
 import Reveal from './Reveal'
 import { Helmet } from 'react-helmet-async'
 
+
 const HERO_FADE_START = 0
 const HERO_FADE_END = 1500
 const HERO_OVERLAY_MAX = 0.8
