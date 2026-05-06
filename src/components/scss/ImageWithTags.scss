@@ -28,29 +28,56 @@
         //margin-top: 100px;
     }
 
+
+    .tab-menu-list {
+        display: flex;
+        justify-content: center;
+        gap: 32px;
+    }
+
+    .tab-menu-name {
+        position: relative;
+        padding: 6px 2px;
+        border: none;
+        background: transparent;
+        color: #999;
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: 600;
+        transition: color 0.3s;
+    }
+
+    /* underline 기본 */
     .tab-menu-name::after {
         content: "";
-        display: block;
-        width: 0;
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+        width: 0%;
         height: 2px;
         background: var(--main);
-        margin: 6px auto 0;
-        transition: 0.3s;
+        transition: width 0.3s ease;
     }
 
-    // .tab-menu-name.active {
-    //     color: #111;
-    //     font-weight: 700;
-    // }
+    /* hover */
+    .tab-menu-name:hover {
+        color: #000;
+    }
 
-    // .tab-menu-name.active::after {
-    //     width: 100%;
-    // }
+    .tab-menu-name:hover::after {
+        width: 100%;
+    }
 
-    .tab-active {
+    /* active 상태 */
+    .tab-menu-name.tab-active {
         color: var(--main);
-        font-weight: 700;
+        font-weight: 600;
     }
+
+    .tab-menu-name.tab-active::after {
+        width: 100%;
+    }
+
 
     .tab-active::after {
         width: 100%;
