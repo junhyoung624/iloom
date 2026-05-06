@@ -499,7 +499,7 @@ const SubPage = () => {
                                             onClick={tag.onRemove}
                                         >
                                             <span>{tag.label}</span>
-                                            <b>×</b>
+                                            <b>x</b>
                                         </button>
                                     ))}
                                 </div>

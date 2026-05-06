@@ -10,6 +10,7 @@ export default function MyPage() {
     const { user, onUpdate, onSocialLink, onSocialUnlink, onKakaoLogin, onNaverLogin, onKakaoUnlink, onNaverUnlink } = useAuthStore()
     const [isOpen, setIsOpen] = useState(false)
     const [isAgreeOpen, setIsAgreeOpen] = useState(false)
+    const [isUnlinkModalOpen, setIsUnlinkModalOpen] = useState(false)
 
     const [form, setForm] = useState({
         birth: user?.birth || "",
@@ -41,9 +42,7 @@ export default function MyPage() {
             .filter(p => user?.socials?.[p]?.linked === true).length
 
         if (linkedCount <= 1) {
-            if (window.confirm("마지막 연동 계정입니다. 회원탈퇴 페이지로 이동할까요?")) {
-                navigate("/leavepage")
-            }
+            setIsUnlinkModalOpen(true)
             return
         }
         await onSocialUnlink(provider)
@@ -56,6 +55,7 @@ export default function MyPage() {
             if (e.key === 'Escape') {
                 setIsAgreeOpen(false)
                 setIsOpen(false)
+                setIsUnlinkModalOpen(false)
             }
         }
         document.addEventListener('keydown', handleEsc)
@@ -185,8 +185,7 @@ export default function MyPage() {
                 </div>
             </div>
 
-
-            {/* 팝업 */}
+            {/* 내 정보 변경 팝업 */}
             {isOpen && (
                 <div className="modal-overlay" onClick={() => setIsOpen(false)}>
                     <div className="modal" onClick={(e) => e.stopPropagation()}>
@@ -226,7 +225,7 @@ export default function MyPage() {
                 </div>
             )}
 
-            {/* 동의내용팝업 */}
+            {/* 동의내용 팝업 */}
             {isAgreeOpen && (
                 <div className="modal-overlay" onClick={() => setIsAgreeOpen(false)}>
                     <div className="modal" onClick={(e) => e.stopPropagation()}>
@@ -268,6 +267,33 @@ export default function MyPage() {
                     </div>
                 </div>
             )}
+
+            {/* 마지막 연동 계정 경고 팝업 */}
+            {isUnlinkModalOpen && (
+                <div className="leave-overlay">
+                    <div className="leave-modal">
+                        <div className="leave-modal__content">
+                            <p className="leave-modal__title">
+                                마지막 연동 계정입니다.
+                            </p>
+                            <p className="leave-modal__desc">
+                                회원탈퇴 페이지로 이동할까요?
+                            </p>
+                        </div>
+                        <div className="leave-modal__footer">
+                            <button className="leave-modal__cancel" onClick={() => setIsUnlinkModalOpen(false)}>
+                                취소
+                            </button>
+                            <button className="leave-modal__confirm" onClick={() => {
+                                setIsUnlinkModalOpen(false)
+                                navigate("/leavepage")
+                            }}>
+                                이동하기
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            )}
         </div>
     )
-} 
+}
