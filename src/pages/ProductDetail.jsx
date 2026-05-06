@@ -5,7 +5,6 @@ import toast from 'react-hot-toast'
 
 import { productData } from '../data/productData'
 import { colorData } from '../data/colorData'
-import { productReviews as initialData } from '../data/reviewData'
 import { commonQna } from '../data/qnaData'
 
 import { useProductStore } from '../store/useProductStore'
@@ -45,7 +44,6 @@ export default function ProductDetail() {
     const [showReviewModal, setShowReviewModal] = useState(false)
     const [showCheckUserModal, setShowCheckUserModal] = useState(false)
     const [zoomImg, setZoomImg] = useState(null)
-    const [productReviews, setProductReviews] = useState(initialData)
 
     const wished = wishlist?.some((item) => String(item.id) === String(id))
 
@@ -62,7 +60,6 @@ export default function ProductDetail() {
         setIsDropdownOpen(false)
     }, [id])
 
-    // Helmet이 특정 상황에서 늦게 먹거나 씹힐 때 대비용
     useEffect(() => {
         if (!product) return
         document.title = pageTitle
@@ -191,10 +188,6 @@ export default function ProductDetail() {
         }
 
         onToggleWishList(product, user)
-    }
-
-    const handleReviewSubmit = (newReview) => {
-        setProductReviews((prev) => [newReview, ...prev])
     }
 
     return (
@@ -532,7 +525,7 @@ export default function ProductDetail() {
 
                 {activeTab === '상품평' && (
                     <TabReview
-                        productReviews={productReviews}
+                        productId={id}
                         user={user}
                         onZoomImg={setZoomImg}
                         onWriteReview={() => setShowReviewModal(true)}
@@ -562,9 +555,10 @@ export default function ProductDetail() {
             {showReviewModal && (
                 <ReviewModal
                     onClose={() => setShowReviewModal(false)}
-                    onSubmit={handleReviewSubmit}
                     user={user}
                     selectedOption={selectedOption}
+                    productId={id}
+                    onSuccess={() => setShowReviewModal(false)}
                 />
             )}
 
