@@ -129,17 +129,45 @@
         display: flex;
         justify-content: center;
         gap: 32px;
-        // margin-top: 40px;
-        // padding-top: 60px;
-
 
         button {
-            width: auto;
-            padding: 0;
+            position: relative;
+            padding: 6px 2px;
             border: none;
             background: transparent;
             cursor: pointer;
-            flex: 0 0 auto;
+            font-size: 18px;
+            font-weight: 600;
+            color: #999;
+            transition: color 0.3s;
+        }
+
+        button::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            width: 0%;
+            height: 2px;
+            background: var(--main);
+            transition: width 0.3s ease;
+        }
+
+        button:hover {
+            color: #000;
+        }
+
+        button:hover::after {
+            width: 100%;
+        }
+
+        button.active {
+            color: var(--main);
+            font-weight: 600;
+        }
+
+        button.active::after {
+            width: 100%;
         }
     }
 
@@ -197,6 +225,8 @@
     // padding-top: 80px;
     padding-left: 150px;
 }
+
+
 
 @media (max-width: 1024px) {
     .series {

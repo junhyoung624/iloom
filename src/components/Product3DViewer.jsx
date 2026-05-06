@@ -1,10 +1,69 @@
-import { Suspense, useEffect, useMemo, useRef, useState } from 'react'
+import { Suspense, useEffect, useMemo, useRef, useState, useCallback } from 'react'
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
 import { OrbitControls, useGLTF, Environment, Html } from '@react-three/drei'
 import * as THREE from 'three'
 import './scss/product3dviewer.scss'
 import PaveSofaCards from '../pages/PaveSofaCards'
 import { rotate } from 'three/tsl'
+
+const QUALITY_STATS = [
+    {
+        id: 'compress',
+        label: '반복 압축 테스트',
+        desc: '동일 하중 가압 후\n형태 변형률 2.1% 이하',
+        target: 100000,
+        suffix: '회',
+        compare: '업계 기준 5만 회',
+        score: 97,
+    },
+    {
+        id: 'restore',
+        label: '폼 복원율',
+        desc: '압축 후 24시간 내\n원형 복원 비율',
+        target: 98,
+        suffix: '%',
+        compare: '업계 평균 85%',
+        score: 98,
+    },
+    {
+        id: 'load',
+        label: '최대 하중 테스트',
+        desc: '프레임 파손 없이\n견딘 최대 집중 하중',
+        target: 280,
+        suffix: 'kg',
+        compare: '업계 기준 150kg',
+        score: 93,
+    },
+    {
+        id: 'uv',
+        label: '자외선 내색 테스트',
+        desc: 'UV 조사 후\n색차 ΔE 1.2 이하 유지',
+        target: 5000,
+        suffix: '시간',
+        compare: '업계 기준 1000시간',
+        score: 91,
+    },
+    {
+        id: 'warranty',
+        label: '무상 보증 기간',
+        desc: '프레임·스프링·폼\n전 구성품 보증',
+        target: 3,
+        suffix: '년',
+        compare: '업계 평균 1년',
+        score: 100,
+        scoreLabel: '업계 최장',
+    },
+    {
+        id: 'density',
+        label: '우레탄 폼 밀도',
+        desc: '고반발 고밀도 폼\n체중 분산 최적화',
+        target: 40,
+        suffix: 'kg/m³',
+        compare: '일반 제품 18~25',
+        score: 88,
+        scoreLabel: '프리미엄급',
+    },
+]
 
 const MODEL_LIST = [
     {
@@ -435,7 +494,104 @@ function DragGuide() {
     )
 }
 
+function QualityStats() {
+    const [animated, setAnimated] = useState(false)
+    const wrapRef = useRef(null)
+    const rafRefs = useRef([])
+
+    useEffect(() => {
+        const el = wrapRef.current
+        if (!el) return
+        const obs = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setAnimated(true)
+                    obs.disconnect()
+                }
+            },
+            { threshold: 0.15 }
+        )
+        obs.observe(el)
+        return () => obs.disconnect()
+    }, [])
+
+    useEffect(() => {
+        if (!animated) return
+        const counters = wrapRef.current?.querySelectorAll('.qs-count')
+        counters?.forEach((el, i) => {
+            const target = parseFloat(el.dataset.target)
+            const suffix = el.dataset.suffix
+            const duration = 1400 + i * 100
+            const startTime = performance.now()
+            const tick = (now) => {
+                const t = Math.min((now - startTime) / duration, 1)
+                const ease = 1 - Math.pow(1 - t, 4)
+                const val = target * ease
+                const display = target >= 1000
+                    ? Math.round(val).toLocaleString()
+                    : Math.round(val)
+                el.textContent = display + suffix
+                if (t < 1) {
+                    rafRefs.current[i] = requestAnimationFrame(tick)
+                }
+            }
+            rafRefs.current[i] = requestAnimationFrame(tick)
+        })
+        return () => rafRefs.current.forEach((id) => cancelAnimationFrame(id))
+    }, [animated])
+
+    return (
+        <div className="qs-wrap" ref={wrapRef}>
+            <div className="qs-intro">
+
+                <h3>숫자로 증명하는 파베 소파</h3>
+                <p>국제 가구 내구성 기준 KS G 4213 기반 자체 테스트 결과</p>
+            </div>
+            <div className="qs-grid">
+                {QUALITY_STATS.map((stat, i) => (
+                    <div
+                        className={`qs-card ${animated ? 'visible' : ''}`}
+                        key={stat.id}
+                        style={{ transitionDelay: `${i * 0.07}s` }}
+                    >
+                        <div className="qs-card-head">
+                            <span className="qs-pass">PASS</span>
+                        </div>
+                        <div className="qs-num">
+                            <span
+                                className="qs-count"
+                                data-target={stat.target}
+                                data-suffix={stat.suffix}
+                            >
+                                0{stat.suffix}
+                            </span>
+                        </div>
+                        <div className="qs-card-label">
+                            <strong>{stat.label}</strong>
+                            <span>{stat.desc}</span>
+                        </div>
+                        <div className="qs-bar">
+                            <div
+                                className="qs-bar-fill"
+                                style={{ width: animated ? `${stat.score}%` : '0%' }}
+                            />
+                        </div>
+                        <div className="qs-bar-meta">
+                            <span>{stat.compare}</span>
+                            <span>{stat.scoreLabel ?? `${stat.score}점`}</span>
+                        </div>
+                    </div>
+                ))}
+            </div>
+            <p className="qs-footnote">
+                * 자체 품질관리 연구소 측정 기준 · 외부 공인 시험기관 성적서 보유
+            </p>
+        </div>
+    )
+}
+
 export default function Product3DViewer() {
+    const [activeTab, setActiveTab] = useState('viewer')
     const [selectedModelKey, setSelectedModelKey] = useState(MODEL_LIST[0].key)
     const [selectedColor, setSelectedColor] = useState(colors[0].value)
     const [showGuide, setShowGuide] = useState(true)
@@ -503,138 +659,171 @@ export default function Product3DViewer() {
 
     return (
         <section className="home-3d-viewer">
-            <div className="viewer-text sale-viewer-text">
-                <div className="sale-title-row">
-                    <span className="sale-dday">
-                        {saleTime.isEnded ? 'SALE END' : `D-${saleTime.day}`}
-                    </span>
-                </div>
 
-                <h2>가정의 달, 파베 소파 특별 세일</h2>
-                <p>
-                    가족이 함께 머무는 거실을 더 포근하게,
-                    지금 파베 패브릭 소파를 10% 할인된 혜택으로 만나보세요.
-                </p>
-
-                <div className="sale-timer">
-                    <div className="sale-time-box">
-                        <strong>{saleTime.hours}</strong>
-                    </div>
-                    <em>:</em>
-                    <div className="sale-time-box">
-                        <strong>{saleTime.minutes}</strong>
-                    </div>
-                    <em>:</em>
-                    <div className="sale-time-box">
-                        <strong>{saleTime.seconds}</strong>
-                    </div>
-                </div>
-            </div>
-
-            <div
-                ref={viewerRef}
-                className="viewer-box"
-                onPointerDown={() => setShowGuide(false)}
-                onTouchStart={() => setShowGuide(false)}
-                style={{ pointerEvents: showGuide ? 'none' : 'auto' }}
-            >
-                {showGuide && <DragGuide />}
-
-                <Canvas
-                    shadows
-                    camera={{ position: selectedModel.camera, fov: 28 }}
-                    gl={{ alpha: true, antialias: true }}
-                    onCreated={({ gl }) => {
-                        gl.toneMapping = THREE.ACESFilmicToneMapping
-                        gl.toneMappingExposure = 7
-                    }}
+            {/* 탭 네비게이션 */}
+            <div className="viewer-tab-nav">
+                <button
+                    type="button"
+                    className={`viewer-tab-btn ${activeTab === 'viewer' ? 'active' : ''}`}
+                    onClick={() => setActiveTab('viewer')}
                 >
-                    <ambientLight intensity={0.85} />
+                    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                        <rect x="2" y="4" width="16" height="12" rx="2" />
+                        <path d="M7 16v2M13 16v2M5 18h10" />
+                    </svg>
+                    3D 쇼룸
+                </button>
+                <button
+                    type="button"
+                    className={`viewer-tab-btn ${activeTab === 'quality' ? 'active' : ''}`}
+                    onClick={() => setActiveTab('quality')}
+                >
+                    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M10 2L3 5.5v4.5c0 4 2.8 7.5 7 8.5 4.2-1 7-4.5 7-8.5V5.5L10 2z" />
+                        <path d="M7 10l2 2 4-4" />
+                    </svg>
+                    품질 테스트
+                </button>
+            </div>
 
-                    <directionalLight
-                        position={[4, 5, 4]}
-                        intensity={0.78}
-                        castShadow
-                    />
+            {/* 3D 쇼룸 패널 */}
+            <div className={`viewer-tab-panel ${activeTab === 'viewer' ? 'active' : ''}`}>
+                <div className="viewer-text sale-viewer-text">
+                    <div className="sale-title-row">
+                        <span className="sale-dday">
+                            {saleTime.isEnded ? 'SALE END' : `D-${saleTime.day}`}
+                        </span>
+                    </div>
 
-                    <directionalLight
-                        position={[-3, 2, -3]}
-                        intensity={0.15}
-                    />
+                    <h2>가정의 달, 파베 소파 특별 세일</h2>
+                    <p>
+                        가족이 함께 머무는 거실을 더 포근하게,
+                        지금 파베 패브릭 소파를 10% 할인된 혜택으로 만나보세요.
+                    </p>
 
-                    <Environment preset="studio" environmentIntensity={0.045} />
+                    <div className="sale-timer">
+                        <div className="sale-time-box">
+                            <strong>{saleTime.hours}</strong>
+                        </div>
+                        <em>:</em>
+                        <div className="sale-time-box">
+                            <strong>{saleTime.minutes}</strong>
+                        </div>
+                        <em>:</em>
+                        <div className="sale-time-box">
+                            <strong>{saleTime.seconds}</strong>
+                        </div>
+                    </div>
+                </div>
 
-                    <Suspense
-                        fallback={
-                            <Html center>
-                                <div className="viewer-loading">
-                                    3D 모델 불러오는 중...
-                                </div>
-                            </Html>
-                        }
+                <div
+                    ref={viewerRef}
+                    className="viewer-box"
+                    onPointerDown={() => setShowGuide(false)}
+                    onTouchStart={() => setShowGuide(false)}
+                    style={{ pointerEvents: showGuide ? 'none' : 'auto' }}
+                >
+                    {showGuide && <DragGuide />}
+
+                    <Canvas
+                        shadows
+                        camera={{ position: selectedModel.camera, fov: 28 }}
+                        gl={{ alpha: true, antialias: true }}
+                        onCreated={({ gl }) => {
+                            gl.toneMapping = THREE.ACESFilmicToneMapping
+                            gl.toneMappingExposure = 7
+                        }}
                     >
-                        <SceneModels
-                            key={`${selectedModel.key}-${selectedColor}`}
-                            selectedModel={selectedModel}
-                            color={renderColor}
-                            stoolColor={renderStoolColor}
+                        <ambientLight intensity={0.85} />
+
+                        <directionalLight
+                            position={[4, 5, 4]}
+                            intensity={0.78}
+                            castShadow
                         />
-                    </Suspense>
 
-                    <CameraController
-                        play={playCameraIntro}
-                        introKey={`${selectedModel.key}-${introKey}`}
-                        cameraPosition={selectedModel.camera}
-                        targetPosition={selectedModel.target}
-                        enabled={!showGuide}
-                    />
-                </Canvas>
-            </div>
+                        <directionalLight
+                            position={[-3, 2, -3]}
+                            intensity={0.15}
+                        />
 
-            <div className="viewer-current-option">
-                현재 선택한 옵션은
-                <strong> {selectedModel.optionName} / {selectedColorOption.name}</strong>
-                입니다.
-            </div>
+                        <Environment preset="studio" environmentIntensity={0.045} />
 
-            <div className="viewer-option-bar">
-                <div className="viewer-option-group">
-                    <span className="viewer-option-label">쇼룸 구성</span>
+                        <Suspense
+                            fallback={
+                                <Html center>
+                                    <div className="viewer-loading">
+                                        3D 모델 불러오는 중...
+                                    </div>
+                                </Html>
+                            }
+                        >
+                            <SceneModels
+                                key={`${selectedModel.key}-${selectedColor}`}
+                                selectedModel={selectedModel}
+                                color={renderColor}
+                                stoolColor={renderStoolColor}
+                            />
+                        </Suspense>
 
-                    <div className="viewer-model-tabs">
-                        {MODEL_LIST.map((model) => (
-                            <button
-                                key={model.key}
-                                type="button"
-                                className={selectedModelKey === model.key ? 'active' : ''}
-                                onClick={() => handleModelClick(model.key)}
-                            >
-                                {model.name}
-                            </button>
-                        ))}
-                    </div>
+                        <CameraController
+                            play={playCameraIntro}
+                            introKey={`${selectedModel.key}-${introKey}`}
+                            cameraPosition={selectedModel.camera}
+                            targetPosition={selectedModel.target}
+                            enabled={!showGuide}
+                        />
+                    </Canvas>
                 </div>
 
-                <div className="viewer-option-group">
-                    <span className="viewer-option-label">패브릭 컬러</span>
+                <div className="viewer-current-option">
+                    현재 선택한 옵션은
+                    <strong> {selectedModel.optionName} / {selectedColorOption.name}</strong>
+                    입니다.
+                </div>
 
-                    <div className="viewer-color-list">
-                        {colors.map((color) => (
-                            <button
-                                key={color.value}
-                                type="button"
-                                className={`viewer-color-btn ${selectedColor === color.value ? 'active' : ''}`}
-                                onClick={() => handleColorClick(color.value)}
-                            >
-                                <span
-                                    className="viewer-color-dot"
-                                    style={{ background: color.value }}
-                                />
-                                {color.name}
-                            </button>
-                        ))}
+                <div className="viewer-option-bar">
+                    <div className="viewer-option-group">
+                        <span className="viewer-option-label">쇼룸 구성</span>
+                        <div className="viewer-model-tabs">
+                            {MODEL_LIST.map((model) => (
+                                <button
+                                    key={model.key}
+                                    type="button"
+                                    className={selectedModelKey === model.key ? 'active' : ''}
+                                    onClick={() => handleModelClick(model.key)}
+                                >
+                                    {model.name}
+                                </button>
+                            ))}
+                        </div>
+                    </div>
+
+                    <div className="viewer-option-group">
+                        <span className="viewer-option-label">패브릭 컬러</span>
+                        <div className="viewer-color-list">
+                            {colors.map((color) => (
+                                <button
+                                    key={color.value}
+                                    type="button"
+                                    className={`viewer-color-btn ${selectedColor === color.value ? 'active' : ''}`}
+                                    onClick={() => handleColorClick(color.value)}
+                                >
+                                    <span
+                                        className="viewer-color-dot"
+                                        style={{ background: color.value }}
+                                    />
+                                    {color.name}
+                                </button>
+                            ))}
+                        </div>
                     </div>
                 </div>
+            </div>
+
+            {/* 품질 테스트 패널 */}
+            <div className={`viewer-tab-panel ${activeTab === 'quality' ? 'active' : ''}`}>
+                <QualityStats />
             </div>
 
             <PaveSofaCards />

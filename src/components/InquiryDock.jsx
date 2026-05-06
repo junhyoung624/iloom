@@ -20,14 +20,14 @@ export default function InquiryDock({ onClose, onLoginPopup }) {
     const navigate = useNavigate()
 
     const handleQuickSubmit = (question) => {
-        addInquiry({ category: TABS[activeTab].label, text: question })
+        addInquiry(user, { category: TABS[activeTab].label, text: question })
         setSubmitted(true)
         setTimeout(() => { setSubmitted(false); onClose() }, 1800)
     }
 
     const handleCustomSubmit = () => {
         if (!customText.trim()) return
-        addInquiry({ category: '직접 입력', text: customText.trim() })
+        addInquiry(user, { category: '직접 입력', text: customText.trim() })
         setCustomText('')
         setSubmitted(true)
         setTimeout(() => { setSubmitted(false); onClose() }, 1800)

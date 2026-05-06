@@ -19,9 +19,7 @@ export default function NewCollection() {
                 </div>
             </div>
             <div className="inner">
-
                 <ul className="item-card-wrap">
-
                     {newItems.map((item, index) => (
                         <li key={index}>
                             <Link
@@ -35,6 +33,13 @@ export default function NewCollection() {
                     ))}
                 </ul>
             </div>
-        </section >
+
+            <div className="section-more-wrap">
+                <Link to="/new" className="section-more-btn">
+                    <span>신상품 더 보러가기</span>
+                    <span className="section-more-arrow">→</span>
+                </Link>
+            </div>
+        </section>
     )
 }

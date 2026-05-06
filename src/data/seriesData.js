@@ -90,7 +90,7 @@ export const seriesListEn = [
 
   {
     id: "series-012",
-    nameKo: "앤트레디션",
+    nameKo: "&tradition",
     nameEn: "And Tradition",
     slug: "and-tradition",
     image: "./images/series-card/and-tradition.jpg",
@@ -138,7 +138,7 @@ export const seriesListEn = [
   },
   {
     id: "series-018",
-    nameKo: "아고",
+    nameKo: "AGO",
     nameEn: "Ago",
     slug: "ago",
     image: "./images/series-card/ago.jpg",
@@ -146,7 +146,7 @@ export const seriesListEn = [
   },
   {
     id: "series-019",
-    nameKo: "베스트버그",
+    nameKo: "Wastberg",
     nameEn: "Vestberg",
     slug: "vestberg",
     image: "./images/series-card/vestberg.jpg",
@@ -354,7 +354,7 @@ export const seriesListEn = [
   },
   {
     id: "series-045",
-    nameKo: "링키 S",
+    nameKo: "링키",
     nameEn: "Linky S",
     slug: "linky-s",
     image: "./images/series-card/linky-s.jpg",
@@ -575,14 +575,6 @@ export const seriesListEn = [
     slug: "delta-dual",
     image: "./images/series-card/delta-dual.jpg",
     bannerImage: "./images/series-banner/delta-dual.jpg"
-  },
-  {
-    id: "series-111",
-    nameKo: "맨하탄",
-    nameEn: "Manhattan",
-    slug: "manhattan",
-    image: "./images/series-card/manhattan.jpg",
-    bannerImage: "./images/series-banner/manhattan.jpg"
   },
   {
     id: "series-112",

@@ -1,0 +1,211 @@
+.best-img-wrap {
+    position: relative;
+    width: 100%;
+
+    >img {
+        display: block;
+        width: 100%;
+        aspect-ratio: 3 / 4;
+        object-fit: cover;
+    }
+}
+
+
+.best-dot-list {
+    position: absolute;
+    inset: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    pointer-events: none;
+}
+
+
+.best-dot-li {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    pointer-events: auto;
+    z-index: 10;
+
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        border: 1.5px solid rgba(255, 255, 255, 0.5);
+        animation: best-dot-pulse 2.4s ease-out infinite;
+        pointer-events: none;
+    }
+}
+
+@keyframes best-dot-pulse {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.7;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(2.4);
+        opacity: 0;
+    }
+}
+
+
+.best-dot-area {
+    box-sizing: border-box;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.45);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+
+    &::after {
+        content: "";
+        display: block;
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background: #fff;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+        transition: transform 0.2s ease;
+    }
+
+    .best-dot-li:hover & {
+        transform: scale(1.1);
+
+        &::after {
+            transform: scale(0.72);
+        }
+    }
+}
+
+
+.best-price-tag {
+    position: absolute;
+    width: 240px;
+    z-index: 20;
+    transition: opacity 0.22s ease, visibility 0.22s ease, transform 0.22s ease;
+
+    &--visible {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+
+    &--hidden {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(4px);
+        pointer-events: none;
+    }
+}
+
+
+.best-tag-inner {
+    display: flex;
+    align-items: stretch;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.07);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06), 0 12px 32px rgba(0, 0, 0, 0.10);
+
+
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+    }
+}
+
+.best-tag-img {
+    width: 72px;
+    flex-shrink: 0;
+    background: #F5F1EC;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+
+.best-tag-info {
+    flex: 1;
+    min-width: 0;
+    padding: 10px 10px 10px 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3px;
+
+    .best-tag-series {
+        font-size: 10px;
+        color: var(--sub);
+        letter-spacing: 0.06em;
+    }
+
+    .best-tag-name {
+        font-size: 12px;
+        font-weight: 600;
+        color: var(--main);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .best-tag-price {
+        font-size: 12px;
+        font-weight: 700;
+        color: var(--main);
+    }
+}
+
+
+.best-tag-btn-area {
+    border-left: 1.5px solid rgba(223, 223, 223, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 12px;
+
+    .best-tag-arrow-btn {
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        background: var(--main);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.2s, transform 0.2s;
+        cursor: pointer;
+
+        img {
+            width: 13px;
+            height: 13px;
+            filter: invert(1);
+        }
+
+        &:hover {
+            background: #505050;
+            transform: scale(1.08);
+        }
+    }
+}

@@ -10,3 +10,9 @@
 //     overflow-x: hidden;
 //     max-width: 100%;
 // }
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}

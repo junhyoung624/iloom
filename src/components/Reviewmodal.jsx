@@ -1,37 +1,58 @@
 import React, { useState } from 'react'
 import toast from 'react-hot-toast'
+import { db } from '../firebase/firebase'
+import { collection, addDoc, doc, updateDoc, serverTimestamp } from 'firebase/firestore'
 
-export default function ReviewModal({ onClose, onSubmit, user, selectedOption }) {
-    const [reviewRating, setReviewRating] = useState(5)
-    const [reviewTitle, setReviewTitle] = useState('')
-    const [reviewContent, setReviewContent] = useState('')
+export default function ReviewModal({ onClose, onSuccess, user, selectedOption, productId, editData }) {
+    const isEdit = !!editData
 
-    const handleSubmit = (e) => {
+    const [reviewRating, setReviewRating] = useState(editData?.rating || 5)
+    const [reviewTitle, setReviewTitle] = useState(editData?.title || '')
+    const [reviewContent, setReviewContent] = useState(editData?.content || '')
+
+    const handleSubmit = async (e) => {
         e.preventDefault()
         if (!reviewTitle || !reviewContent) {
             toast('제목과 내용을 입력해주세요')
             return
         }
-        const newReview = {
-            id: Date.now(),
-            userName: user?.name || '익명',
-            rating: reviewRating,
-            date: new Date().toISOString().split('T')[0],
-            title: reviewTitle,
-            content: reviewContent,
-            option: selectedOption || '',
-            images: []
+
+        try {
+            if (isEdit) {
+                await updateDoc(doc(db, 'reviews', editData.id), {
+                    rating: reviewRating,
+                    title: reviewTitle,
+                    content: reviewContent,
+                    updatedAt: serverTimestamp(),
+                })
+                toast('수정되었습니다.')
+            } else {
+                await addDoc(collection(db, 'reviews'), {
+                    productId: String(productId),
+                    userId: user.uid,
+                    userName: user.name || '익명',
+                    rating: reviewRating,
+                    title: reviewTitle,
+                    content: reviewContent,
+                    option: selectedOption || '',
+                    images: [],
+                    date: new Date().toISOString().split('T')[0],
+                    createdAt: serverTimestamp(),
+                })
+                toast('상품평이 등록되었습니다!')
+            }
+            onSuccess()
+        } catch (err) {
+            console.error(err)
+            toast.error('오류가 발생했습니다.')
         }
-        onSubmit(newReview)
-        toast('상품평이 등록되었습니다!')
-        onClose()
     }
 
     return (
         <div className="modal-overlay" onClick={onClose}>
             <div className="review-modal" onClick={(e) => e.stopPropagation()}>
                 <button className="modal-close" onClick={onClose}>✕</button>
-                <h2>상품평 작성</h2>
+                <h2>{isEdit ? '상품평 수정' : '상품평 작성'}</h2>
                 <form onSubmit={handleSubmit}>
                     <div className="review-modal-rating">
                         <p>별점</p>
@@ -57,7 +78,7 @@ export default function ReviewModal({ onClose, onSubmit, user, selectedOption })
                             value={reviewContent}
                             onChange={(e) => setReviewContent(e.target.value)} />
                     </div>
-                    <button type="submit">등록하기</button>
+                    <button type="submit">{isEdit ? '수정하기' : '등록하기'}</button>
                 </form>
             </div>
         </div>
