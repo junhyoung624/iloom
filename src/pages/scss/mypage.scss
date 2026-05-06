@@ -532,3 +532,127 @@ h3 {
         background: #000;
     }
 }
+
+@media (max-width: 1024px) {
+    .mypage-member-info {
+        .info-section {
+            .info-box {
+                flex-direction: column;
+                gap: 30px;
+                padding: 24px;
+            }
+
+            .profile {
+                padding-left: 0;
+                width: 100%;
+            }
+
+            .info-view {
+                gap: 24px 30px;
+            }
+        }
+
+        .sns-section {
+            .sns-box {
+                flex-direction: column;
+                gap: 20px;
+                padding: 24px;
+            }
+        }
+
+        .agree-section {
+            .agree-box {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+            }
+
+            .agree-btn {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .mypage-member-info {
+        .member-content {
+            h2 {
+                font-size: 24px;
+            }
+
+            h3 {
+                font-size: 15px;
+            }
+        }
+
+        .info-section {
+            .info-box {
+                padding: 16px;
+                gap: 20px;
+            }
+
+            .profile {
+                align-items: center;
+
+                strong {
+                    font-size: 28px;
+                }
+
+                p {
+                    font-size: 18px;
+                }
+            }
+
+            .info-view {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .birth-box {
+                align-items: flex-start;
+
+                .gender-box {
+                    margin-left: 0;
+                }
+            }
+        }
+
+        .sns-section {
+            .sns-item {
+                gap: 16px;
+
+                img {
+                    width: 40px;
+                    height: 40px;
+                }
+
+                p {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        .agree-section {
+            .agree-box {
+                padding: 20px 16px;
+            }
+
+            .agree-content {
+                label {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    .modal {
+        width: 90%;
+        padding: 24px 16px;
+    }
+
+    .leave-modal {
+        width: 90%;
+        padding: 24px 16px;
+    }
+}
