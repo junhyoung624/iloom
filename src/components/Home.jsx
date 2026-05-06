@@ -14,7 +14,7 @@ import { Link } from 'react-router-dom'
 import Product3DViewer from './Product3DViewer'
 import Reveal from './Reveal'
 import { Helmet } from 'react-helmet-async'
-import MySpline from './MySpline'
+
 
 const HERO_FADE_START = 0
 const HERO_FADE_END = 1500
@@ -95,7 +95,6 @@ export default function Home() {
       </Reveal>
       <NewCollection />
       <Place />
-      <MySpline />
       <SpaceCoordi />
       <Series />
       <Sns />
