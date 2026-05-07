@@ -2,16 +2,16 @@
     margin-top: 60px;
 
     .inner {
-        max-width: 1900px;
+        max-width: 1520px;
     }
 
 }
 
 .store-info-title {
     color: black;
-    font-size: 28px;
+    font-size: 24px;
     text-align: center;
-    padding: 20px 0;
+    padding: 16px 0;
 }
 
 .store-info-main {
@@ -19,18 +19,56 @@
     min-height: 760px;
 
     .store-map {
+        position: relative;
         width: 100%;
         min-height: 760px;
-        height: calc(100vh - 210px);
+        height: min(760px, calc(100vh - 160px));
+    }
+}
+
+.store-region-quick {
+    position: absolute;
+    top: 16px;
+    left: 472px;
+    right: 16px;
+    z-index: 9;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 8px;
+    pointer-events: none;
+
+    button {
+        appearance: none;
+        min-width: 46px;
+        height: 31px;
+        padding: 0 12px;
+        border: 1px solid rgba(30, 30, 30, 0.14);
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.94);
+        color: #222;
+        font-size: 13px;
+        font-weight: 500;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+        cursor: pointer;
+        pointer-events: auto;
+        transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    }
+
+    button:hover,
+    button.is-active {
+        border-color: #111;
+        background: #111;
+        color: #fff;
     }
 }
 
 .store-control {
-    width: 550px;
-    max-width: calc(100% - 40px);
+    width: 440px;
+    max-width: calc(100% - 32px);
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: 16px;
+    left: 16px;
     z-index: 10;
     background: #fff;
     box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
@@ -45,8 +83,8 @@
 
     .control-body {
         //background: greenyellow;
-        height: min(520px, calc(100vh - 360px));
-        min-height: 260px;
+        height: min(416px, calc(100vh - 320px));
+        min-height: 208px;
         overflow: hidden;
         transition: height 0.3s ease, min-height 0.3s ease;
         //overflow: scroll;
@@ -68,13 +106,13 @@
     justify-content: space-between;
     width: 100%;
     height: 46px;
-    padding: 0 18px;
+    padding: 0 14px;
     border: 0;
     border-top: 1px solid #e1e1e1;
     border-bottom: 1px solid #e1e1e1;
     background: #fff;
     color: #222;
-    font-size: 15px;
+    font-size: 13px;
     cursor: pointer;
 }
 
@@ -91,7 +129,7 @@
     border-radius: 50%;
     background: #222;
     color: #fff;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1;
 }
 
@@ -99,13 +137,13 @@
     display: flex;
     justify-content: space-evenly;
     //z-index: 10;
-    font-size: 20px;
+    font-size: 16px;
 
     li {
         width: 100%;
         text-align: center;
         position: relative;
-        padding: 20px 0;
+        padding: 16px 0;
     }
 }
 
@@ -150,10 +188,11 @@
     .keyword {
         outline: none;
         width: 100%;
-        height: 60px;
+        height: 48px;
         border-style: none;
-        padding-left: 20px;
+        padding-left: 16px;
         background: rgb(243, 243, 243);
+        font-size: 14px;
     }
 
     .keyword:focus {
@@ -165,7 +204,7 @@
         appearance: none;
         border-style: none;
         position: absolute;
-        right: 20px;
+        right: 16px;
         top: 50%;
         transform: translateY(-50%);
     }
@@ -213,6 +252,25 @@
         }
     }
 
+    .store-region-quick {
+        top: 16px;
+        left: 16px;
+        right: 16px;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding-bottom: 8px;
+        scrollbar-width: none;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        button {
+            flex: 0 0 auto;
+        }
+    }
+
     .store-control {
         order: 2;
         position: relative;
@@ -224,8 +282,8 @@
         box-shadow: none;
 
         .control-body {
-            height: min(520px, 58vh);
-            min-height: 320px;
+            height: min(416px, 58vh);
+            min-height: 256px;
             overflow: hidden;
             transition: height 0.3s ease, min-height 0.3s ease;
         }
@@ -266,15 +324,15 @@
 
     .store-info-main {
         .store-map {
-            height: 460px;
-            min-height: 460px;
+            height: 480px;
+            min-height: 480px;
         }
     }
 
     .store-control {
         .control-body {
-            height: min(420px, 52vh);
-            min-height: 280px;
+            height: min(336px, 52vh);
+            min-height: 224px;
         }
 
         &.is-list-closed {

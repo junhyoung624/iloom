@@ -1,5 +1,5 @@
 import React from 'react';
-import "../scss/StoreListItem.scss";
+import "../scss/storeListItem.scss";
 
 export default function StoreListItem({ storeType, storeName, storeAddress, storePhoneNumber }) {
     return (
