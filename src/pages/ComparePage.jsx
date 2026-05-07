@@ -1,6 +1,6 @@
 import React from 'react'
 import { useCompareStore } from '../store/useCompareStore'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import './scss/ComparePage.scss'
 
 const FALLBACK = '/images/no-image.png'
@@ -12,6 +12,7 @@ const ROWS = [
     { label: '가격', key: 'price' },
     { label: '색상 옵션', key: 'colors' },
     { label: '카테고리', key: 'category2' },
+    { label: '', key: 'actions' },
 ]
 
 const ComparePage = () => {
@@ -31,11 +32,13 @@ const ComparePage = () => {
         switch (key) {
             case 'image':
                 return (
-                    <img
-                        src={item.productImages?.[0] || FALLBACK}
-                        alt={item.name}
-                        className="compare-img"
-                    />
+                    <Link to={`/product/${item.id}`}>
+                        <img
+                            src={item.productImages?.[0] || FALLBACK}
+                            alt={item.name}
+                            className="compare-img"
+                        />
+                    </Link>
                 )
             case 'price':
                 return <strong>{item.price}원</strong>
@@ -52,6 +55,18 @@ const ComparePage = () => {
                             ))
                             : <span className="no-data">-</span>
                         }
+                    </div>
+                )
+
+            case 'actions':
+                return (
+                    <div className="compare-actions">
+                        <button
+                            className="btn-buy"
+                            onClick={() => navigate(`/product/${item.id}`)}
+                        >
+                            결제하기
+                        </button>
                     </div>
                 )
 
