@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useCompareStore } from '../store/useCompareStore'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import './scss/CompareBar.scss'
 
 const FALLBACK = '/images/no-image.png'
@@ -35,7 +35,7 @@ const CompareBar = () => {
                     <rect x="14" y="3" width="8" height="18" rx="1" />
                 </svg>
                 {hasItems && (
-                    <span className="fab-badge">{compareList.length}</span>
+                    <span className="fab-badge">{compareList.length }</span>
                 )}
             </button>
 
@@ -55,18 +55,20 @@ const CompareBar = () => {
                             <div key={idx} className={`compare-slot ${item ? 'filled' : 'empty'}`}>
                                 {item ? (
                                     <>
-                                        <img
-                                            src={item.productImages?.[0] || FALLBACK}
-                                            alt={item.name}
-                                            className="slot-img"
-                                        />
-                                        <div className="slot-info">
-                                            <span className="slot-series">{item.series}</span>
-                                            <span className="slot-name">{item.name}</span>
-                                            <span className="slot-price">
-                                                {item.price}원
-                                            </span>
-                                        </div>
+                                        <Link to={`/product/${item.id}`} onClick={() => setIsOpen(false)}>
+                                            <img
+                                                src={item.productImages?.[0] || FALLBACK}
+                                                alt={item.name}
+                                                className="slot-img"
+                                            />
+                                            <div className="slot-info">
+                                                <span className="slot-series">{item.series}</span>
+                                                <span className="slot-name">{item.name}</span>
+                                                <span className="slot-price">
+                                                    {item.price}원
+                                                </span>
+                                            </div>
+                                        </Link>
                                         <button
                                             className="slot-remove"
                                             onClick={() => removeCompareItem(item.id)}
@@ -74,6 +76,7 @@ const CompareBar = () => {
                                         >
                                             ✕
                                         </button>
+
                                     </>
                                 ) : (
                                     <span className="slot-placeholder">+ 상품을 선택하세요</span>

@@ -1,14 +1,71 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import { Navigation } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import "./scss/bestseller.scss"
+import "./scss/bestseller-dot.scss"
 import 'swiper/css'
 import 'swiper/css/navigation'
 import { Link } from 'react-router-dom'
 
+
+const DOT_POSITIONS = [
+  [{ x: 40, y: 65 }, { x: 65, y: 38 }],
+  [{ x: 45, y: 65 }, { x: 45, y: 17 }],
+  [{ x: 40, y: 55 }, { x: 85, y: 55 }],
+  [{ x: 90, y: 45 }, { x: 25, y: 60 }],
+  [{ x: 43, y: 58 }, { x: 75, y: 55 }],
+  [{ x: 30, y: 50 }, { x: 63, y: 65 }],
+]
+
+function BestDot({ product, position }) {
+  const [visible, setVisible] = useState(false)
+
+  const isRight = position.x > 50
+  const isBottom = position.y > 50
+
+  return (
+    <li
+      className="best-dot-li"
+      style={{ left: `${position.x}%`, top: `${position.y}%` }}
+      onMouseEnter={() => setVisible(true)}
+      onMouseLeave={() => setVisible(false)}
+    >
+      <div className="best-dot-area" />
+
+      <div
+        className={`best-price-tag ${visible ? 'best-price-tag--visible' : 'best-price-tag--hidden'}`}
+        style={{
+          right: isRight ? '24px' : 'auto',
+          left: isRight ? 'auto' : '24px',
+          bottom: isBottom ? '24px' : 'auto',
+          top: isBottom ? 'auto' : '24px',
+        }}
+      >
+        <div className="best-tag-inner">
+          <div className="best-tag-img">
+            <img src={product.image} alt={product.name} />
+          </div>
+          <div className="best-tag-info">
+            <p className="best-tag-series">{product.serise}</p>
+            <p className="best-tag-name">{product.name}</p>
+            <p className="best-tag-price">{product.price}</p>
+          </div>
+          <div className="best-tag-btn-area">
+            <Link to={`/product/${product.id}`}>
+              <div className="best-tag-arrow-btn">
+                <img src="./images/spaceCoordi/pricetag_icon/arrow.png" alt="상품 보기" />
+              </div>
+            </Link>
+          </div>
+        </div>
+      </div>
+    </li>
+  )
+}
+
 export default function Best() {
-  const prevRef = useRef(null);
-  const nextRef = useRef(null);
+  const prevRef = useRef(null)
+  const nextRef = useRef(null)
 
   const bestList = [
     {
@@ -75,39 +132,60 @@ export default function Best() {
             nextEl: nextRef.current,
           }}
           onBeforeInit={(swiper) => {
-            swiper.params.navigation.prevEl = prevRef.current;
-            swiper.params.navigation.nextEl = nextRef.current;
+            swiper.params.navigation.prevEl = prevRef.current
+            swiper.params.navigation.nextEl = nextRef.current
           }}
           slidesPerView={3}
           spaceBetween={30}
           loop={true}
         >
-          {bestList.map((item) => (
+          {bestList.map((item, slideIndex) => (
             <SwiperSlide key={item.id}>
               <div className="best-item">
-                <Link>
+                <div className="best-img-wrap">
                   <img src={item.image} alt={item.key} />
-                </Link>
-                <ul className="best-product-list">
-                  {item.product.map((rel) => (
-                    <li key={rel.id}>
-                      <Link to={`/product/${rel.id}`}>
-                        <div className="best-img-box">
-                          <img src={rel.image} alt={rel.name} />
-                        </div>
-                        <div className="product-info">
-                          <p className='serise'>{rel.serise}</p>
-                          <p className='name'>{rel.name}</p>
-                          <p className='price'>{rel.price}</p>
-                        </div>
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
+                  <ul className="best-dot-list">
+                    {item.product.map((product, dotIndex) => (
+                      <BestDot
+                        key={product.id}
+                        product={product}
+                        position={
+                          DOT_POSITIONS[slideIndex]?.[dotIndex] ??
+                          { x: 30 + dotIndex * 30, y: 50 }
+                        }
+                      />
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <ul className="best-product-list">
+                    {item.product.map((rel) => (
+                      <li key={rel.id}>
+                        <Link to={`/product/${rel.id}`}>
+                          <div className="best-img-box">
+                            <img src={rel.image} alt={rel.name} />
+                          </div>
+                          <div className="product-info">
+                            <p className='serise'>{rel.serise}</p>
+                            <p className='name'>{rel.name}</p>
+                            <p className='price'>{rel.price}</p>
+                          </div>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </SwiperSlide>
           ))}
         </Swiper>
+      </div>
+
+      <div className="section-more-wrap">
+        <Link to="/BestSeller" className="section-more-btn">
+          <span>베스트셀러 더 보러가기</span>
+          <span className="section-more-arrow">→</span>
+        </Link>
       </div>
     </section>
   )
