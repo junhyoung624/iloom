@@ -1,37 +1,7 @@
-import React, { useRef, useState } from 'react'
-import { Navigation } from 'swiper/modules'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import 'swiper/css'
+import React, { useEffect, useRef } from 'react'
+import { motion, useMotionValue, animate } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import "./scss/place.scss"
-
-function SpotlightCard({ children }) {
-    const cardRef = useRef(null)
-    const [spot, setSpot] = useState({ x: 0, y: 0, visible: false })
-
-    const handleMouseMove = (e) => {
-        const rect = cardRef.current.getBoundingClientRect()
-        setSpot({ x: e.clientX - rect.left, y: e.clientY - rect.top, visible: true })
-    }
-    const handleMouseLeave = () => setSpot((s) => ({ ...s, visible: false }))
-
-    return (
-        <div
-            ref={cardRef}
-            className="place-item"
-            onMouseMove={handleMouseMove}
-            onMouseLeave={handleMouseLeave}
-        >
-            {spot.visible && (
-                <div
-                    className="place-spotlight"
-                    style={{ left: spot.x, top: spot.y }}
-                />
-            )}
-            {children}
-        </div>
-    )
-}
 
 export default function Place() {
     const placeList = [
@@ -44,6 +14,36 @@ export default function Place() {
         { id: "7", link: "키즈룸", key: "kidsroom", image: "./images/place/kidsroom.png", message: "상상과 웃음이 자라나는 곳" },
     ]
 
+    const loopList = [...placeList, ...placeList, ...placeList]
+    const ITEM_WIDTH = 355
+    const TOTAL_WIDTH = ITEM_WIDTH * placeList.length
+
+    const x = useMotionValue(0)
+    const animRef = useRef(null)
+
+    const startAnimation = (from) => {
+        const remaining = TOTAL_WIDTH - Math.abs(from % TOTAL_WIDTH)
+        const fullDuration = 30
+        const remainingDuration = (remaining / TOTAL_WIDTH) * fullDuration
+
+        animRef.current = animate(x, from - remaining, {
+            duration: remainingDuration,
+            ease: 'linear',
+            onComplete: () => {
+                x.set(0)
+                startAnimation(0)
+            }
+        })
+    }
+
+    useEffect(() => {
+        startAnimation(x.get())
+        return () => animRef.current?.stop()
+    }, [])
+
+    const handleMouseEnter = () => animRef.current?.stop()
+    const handleMouseLeave = () => startAnimation(x.get())
+
     return (
         <section className="place">
             <div className="inner">
@@ -55,27 +55,23 @@ export default function Place() {
                 </div>
             </div>
 
-            <div className="place-swiper-wrap">
-                <Swiper
-                    navigation={true}
-                    modules={[Navigation]}
-                    slidesPerView={"auto"}
-                    spaceBetween={10}
-                    className="mySwiper"
+            <div className="place-swiper-wrap" style={{ overflow: 'hidden' }}>
+                <motion.div
+                    style={{ display: 'flex', gap: '10px', width: 'max-content', x }}
+                    onMouseEnter={handleMouseEnter}
+                    onMouseLeave={handleMouseLeave}
                 >
-                    {placeList.map((item) => (
-                        <SwiperSlide key={item.id}>
-                            <SpotlightCard>
-                                <Link to={`/${item.link}`}>
-                                    <img src={item.image} alt={item.key} />
-                                    <p>{item.key}</p>
-                                    <span className="place-message">{item.message}</span>
-                                    <p className='place-btn'>더 보기</p>
-                                </Link>
-                            </SpotlightCard>
-                        </SwiperSlide>
+                    {loopList.map((item, index) => (
+                        <div key={index} className="place-item">
+                            <Link to={`/${item.link}`}>
+                                <img src={item.image} alt={item.key} />
+                                <p>{item.key}</p>
+                                <span className="place-message">{item.message}</span>
+                                <p className='place-btn'>더 보기</p>
+                            </Link>
+                        </div>
                     ))}
-                </Swiper>
+                </motion.div>
             </div>
         </section>
     )
