@@ -376,7 +376,7 @@ export const useAuthStore = create((set, get) => ({
                     // 카카오/네이버 로그인 유저 → 팝업만 띄워서 이메일 저장
                     const result = await signInWithPopup(auth, googleProvider)
                     const googleEmail = result.user.email
-
+                    await new Promise(resolve => setTimeout(resolve, 500))
                     await signOut(auth)
 
                     await updateDoc(userRef, {
