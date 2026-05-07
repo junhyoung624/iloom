@@ -93,10 +93,18 @@ export default function Home() {
       <Reveal>
         <BestSellerSection />
       </Reveal>
-      <NewCollection />
-      <Place />
-      <SpaceCoordi />
-      <Series />
+      <Reveal>
+        <NewCollection />
+      </Reveal>
+      <Reveal>
+        <Place />
+      </Reveal>
+      <Reveal>
+        <SpaceCoordi />
+      </Reveal>
+      <Reveal>
+        <Series />
+      </Reveal>
       <Sns />
       <Instagram />
       <Magazine />

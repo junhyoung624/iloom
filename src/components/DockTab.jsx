@@ -102,7 +102,7 @@ export default function DockTab() {
     return (
         <div className='dock-tab-wrap'>
             <div className="dock-tab">
-                <Dock iconSize={40} iconMagnification={50} iconDistance={120}>
+                <Dock iconSize={40} iconMagnification={40} iconDistance={0}>
                     <DockIcon>
                         <Link to="/" onClick={() => {
                             setShowInquiry(false)

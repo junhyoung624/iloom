@@ -1,39 +1,10 @@
-import React, { useRef, useState } from 'react'
-import { Navigation } from 'swiper/modules'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import 'swiper/css'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import "./scss/place.scss"
 
-function SpotlightCard({ children }) {
-    const cardRef = useRef(null)
-    const [spot, setSpot] = useState({ x: 0, y: 0, visible: false })
-
-    const handleMouseMove = (e) => {
-        const rect = cardRef.current.getBoundingClientRect()
-        setSpot({ x: e.clientX - rect.left, y: e.clientY - rect.top, visible: true })
-    }
-    const handleMouseLeave = () => setSpot((s) => ({ ...s, visible: false }))
-
-    return (
-        <div
-            ref={cardRef}
-            className="place-item"
-            onMouseMove={handleMouseMove}
-            onMouseLeave={handleMouseLeave}
-        >
-            {spot.visible && (
-                <div
-                    className="place-spotlight"
-                    style={{ left: spot.x, top: spot.y }}
-                />
-            )}
-            {children}
-        </div>
-    )
-}
-
 export default function Place() {
+    const [activeIndex, setActiveIndex] = useState(null)
+
     const placeList = [
         { id: "1", link: "거실", key: "livingroom", image: "./images/place/livingroom.png", message: "대화의 온기가 깊어지는 곳" },
         { id: "2", link: "주방", key: "diningroom", image: "./images/place/diningroom.png", message: "함께하는 식사가 더 특별해지는 곳" },
@@ -53,29 +24,46 @@ export default function Place() {
                     <img src="/images/place/line.png" alt="" />
                     <p>일룸이 제안하는 새로운 일상</p>
                 </div>
-            </div>
 
-            <div className="place-swiper-wrap">
-                <Swiper
-                    navigation={true}
-                    modules={[Navigation]}
-                    slidesPerView={"auto"}
-                    spaceBetween={10}
-                    className="mySwiper"
-                >
-                    {placeList.map((item) => (
-                        <SwiperSlide key={item.id}>
-                            <SpotlightCard>
-                                <Link to={`/${item.link}`}>
+                <div className="accordion-wrap">
+                    {placeList.map((item, index) => (
+                        <div
+                            key={item.id}
+                            className={`accordion-item ${activeIndex === index ? 'active' : ''}`}
+                            onMouseEnter={() => setActiveIndex(index)}
+                            onMouseLeave={() => setActiveIndex(null)}
+                        >
+                            <Link to={`/${item.link}`}>
+                                <div className="accordion-image-wrap">
                                     <img src={item.image} alt={item.key} />
-                                    <p>{item.key}</p>
-                                    <span className="place-message">{item.message}</span>
-                                    <p className='place-btn'>더 보기</p>
-                                </Link>
-                            </SpotlightCard>
-                        </SwiperSlide>
+
+                                    <div className="accordion-label">
+                                        <span className="label-vertical">{item.link}</span>
+                                    </div>
+
+                                    <div className="accordion-content">
+                                        <p className="accordion-key">{item.key}</p>
+                                        <p className="accordion-message">{item.message}</p>
+                                        <button className="accordion-btn">더 보기</button>
+                                    </div>
+
+                                    <div className="accordion-overlay" />
+                                </div>
+                                <div className="accordion-label">
+                                    <span className="label-vertical">{item.link}</span>
+                                </div>
+
+                                <div className="accordion-content">
+                                    <p className="accordion-key">{item.key}</p>
+                                    <p className="accordion-message">{item.message}</p>
+                                    <button className="accordion-btn">더 보기</button>
+                                </div>
+
+                                <div className="accordion-overlay" />
+                            </Link>
+                        </div>
                     ))}
-                </Swiper>
+                </div>
             </div>
         </section>
     )
