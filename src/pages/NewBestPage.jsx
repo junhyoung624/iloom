@@ -125,11 +125,9 @@ const NewBestPage = () => {
                             <button className={sortType === "name" ? "active" : ""} onClick={() => onSetSort("name", "asc")}>상품명순</button>
                         </div>
                         <ul className="sub-product-list">
-                            {pageItem.map((item, id) => (
-                                <li key={id}>
-                                    <Link to={`/product/${item.id}`}>
+                            {pageItem.map((item) => (
+                                <li key={item.id}>
                                         <SubCard item={item} />
-                                    </Link>
                                 </li>
                             ))}
                         </ul>

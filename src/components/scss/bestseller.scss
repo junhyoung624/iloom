@@ -26,28 +26,33 @@
 }
 
 .best-swiper-wrap {
-    position: relative;
 
-    .best-prev,
-    .best-next {
-        position: absolute;
-        top: 36%;
-        transform: translateY(-50%);
-        z-index: 10;
-        background: none;
-        border: none;
-        font-size: 60px;
-        line-height: 1;
-        cursor: pointer;
-        color: var(--line);
-    }
 
-    .best-prev {
-        left: 20%;
-    }
+    .best-swiper-arrow {
+        position: relative;
+        width: 1550px;
+        margin: 0 auto;
 
-    .best-next {
-        right: 20%;
+        .best-prev,
+        .best-next {
+            position: absolute;
+            top: 270px;
+            z-index: 10;
+            background: none;
+            border: none;
+            font-size: 60px;
+            line-height: 1;
+            cursor: pointer;
+            color: var(--line);
+        }
+
+        .best-prev {
+            left: 0px;
+        }
+
+        .best-next {
+            right: 0px;
+        }
     }
 
     .swiper {

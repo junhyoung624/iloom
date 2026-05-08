@@ -62,6 +62,7 @@ export default function Place() {
                     slidesPerView={"auto"}
                     spaceBetween={10}
                     className="mySwiper"
+                    loop={true}
                 >
                     {placeList.map((item) => (
                         <SwiperSlide key={item.id}>
