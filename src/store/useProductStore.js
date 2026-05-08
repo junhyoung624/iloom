@@ -1,6 +1,7 @@
 import { create } from "zustand";
 import { productData } from "../data/productData";
 import toast from "react-hot-toast";
+import { addDays } from 'date-fns'
 
 export const useProductStore = create((set, get) => ({
     // 상품 변수, 메서드
@@ -235,7 +236,8 @@ export const useProductStore = create((set, get) => ({
         if (exists) return;
 
         const now = new Date();
-        const deliveryDate = get().createDeliveryDate();
+        const randomDays = Math.floor(Math.random() * 10) + 1;
+        const deliveryDate = addDays(now, randomDays).toISOString()
 
         const allItems = get().items;
         const enrichedItems = order.items.map((cartItem) => {

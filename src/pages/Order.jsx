@@ -3,9 +3,9 @@ import { useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
 import { useProductStore } from '../store/useProductStore';
 import { deliverySteps } from '../data/deliverySteps';
-import DeliveryStatusBar from './OrderComponents/DeliveryStatusBar';
 import SubPageEmptyState from '../components/SubPageEmptyState';
 import "./scss/order.scss";
+import { formatOrderDate, getAutoDeliveryStatus } from '../utils/calcOrderDate';
 
 const periodOptions = [
   { label: "1개월", value: 1 },
@@ -19,33 +19,18 @@ const cancelSections = [
   { key: "done", label: "취소 완료" },
 ];
 
+const completedSections = [
+  { key: "done", label: "배송 완료" },
+];
+
+const deliveryFlowSteps = deliverySteps;
+
 const cancelReasonOptions = [
   "배송 일정 변경",
   "상품을 다시 선택할 예정",
   "주문 정보 오입력",
   "단순 변심",
 ];
-
-const statusAliases = {
-  before: "payment",
-  "결제완료": "payment",
-  "결제 완료": "payment",
-  "상품준비중": "ready",
-  "상품 준비중": "ready",
-  "배송일확정": "scheduled",
-  "배송일 확정": "scheduled",
-  "배송중": "shipping",
-  "배송 중": "shipping",
-  "배송/설치중": "shipping",
-  "배송완료": "done",
-  "배송 완료": "done",
-  "설치완료": "done",
-};
-
-const getOrderStatus = (order) => {
-  const status = order.orderStatus || order.state || "payment";
-  return statusAliases[status] || status;
-};
 
 const getStepIndex = (status) => {
   const index = deliverySteps.findIndex((step) => step.key === status);
@@ -119,9 +104,10 @@ const Order = () => {
     onRequestCancelOrder,
     onRequestDeliveryDateChange,
   } = useProductStore();
+
   const [activeTab, setActiveTab] = useState("delivery");
+  const [selectedDeliveryStatus, setSelectedDeliveryStatus] = useState("all");
   const [selectedPeriod, setSelectedPeriod] = useState(1);
-  const [openStatusId, setOpenStatusId] = useState(null);
   const [detailId, setDetailId] = useState(null);
   const [dateChangeTarget, setDateChangeTarget] = useState(null);
   const [requestedDate, setRequestedDate] = useState("");
@@ -131,7 +117,7 @@ const Order = () => {
   const ordersWithMeta = useMemo(() => {
     return orderList.map((order) => {
       const orderDate = parseOrderDate(order);
-      const orderStatus = getOrderStatus(order);
+      const orderStatus = getAutoDeliveryStatus(order);
 
       return {
         ...order,
@@ -151,12 +137,33 @@ const Order = () => {
     return ordersWithMeta.filter((order) => isWithinPeriod(order.orderDate, selectedPeriod));
   }, [ordersWithMeta, selectedPeriod]);
 
+  const deliveryStatusCounts = useMemo(() => {
+    return periodOrders.reduce((counts, order) => {
+      const itemCount = order.items.filter((item) => item.cancelStatus === "none").length;
+      if (itemCount === 0) return counts;
+
+      return {
+        ...counts,
+        all: counts.all + itemCount,
+        [order.orderStatus]: (counts[order.orderStatus] || 0) + itemCount,
+      };
+    }, { all: 0 });
+  }, [periodOrders]);
+
   const visibleCount = periodOrders.reduce((count, order) => {
-    const itemCount = order.items.filter((item) =>
-      activeTab === "delivery"
-        ? item.cancelStatus === "none"
-        : item.cancelStatus !== "none"
-    ).length;
+    const itemCount = order.items.filter((item) => {
+      if (activeTab === "delivery") {
+        return item.cancelStatus === "none"
+          && order.orderStatus !== "done"
+          && (selectedDeliveryStatus === "all" || order.orderStatus === selectedDeliveryStatus);
+      }
+
+      if (activeTab === "completed") {
+        return item.cancelStatus === "none" && order.orderStatus === "done";
+      }
+
+      return item.cancelStatus !== "none";
+    }).length;
 
     return count + itemCount;
   }, 0);
@@ -164,6 +171,13 @@ const Order = () => {
   const getVisibleItems = (order, sectionKey) => {
     return order.items.filter((item) => {
       if (activeTab === "delivery") {
+        return order.orderStatus === sectionKey
+          && order.orderStatus !== "done"
+          && (selectedDeliveryStatus === "all" || order.orderStatus === selectedDeliveryStatus)
+          && item.cancelStatus === "none";
+      }
+
+      if (activeTab === "completed") {
         return order.orderStatus === sectionKey && item.cancelStatus === "none";
       }
 
@@ -183,13 +197,15 @@ const Order = () => {
 
   const handleChangeTab = (tab) => {
     setActiveTab(tab);
-    setOpenStatusId(null);
+    setSelectedDeliveryStatus(tab === "completed" ? "done" : "all");
     setDetailId(null);
     scrollToPageTop();
   };
 
-  const handleToggleStatus = (id) => {
-    setOpenStatusId((prev) => (prev === id ? null : id));
+  const handleSelectDeliveryStatus = (status) => {
+    setDetailId(null);
+    setSelectedDeliveryStatus(status);
+    setActiveTab(status === "done" ? "completed" : "delivery");
   };
 
   const openDateChange = (order) => {
@@ -243,7 +259,7 @@ const Order = () => {
           </div>
           <div>
             <span>배송 예정일</span>
-            <strong>{order.deliveryDate || "확인 중"}</strong>
+            <strong>{formatOrderDate(order.deliveryDate) || "확인 중"}</strong>
           </div>
           <div>
             <span>주문 금액</span>
@@ -276,8 +292,6 @@ const Order = () => {
 
   const renderProductItem = (order, item) => {
     const itemKey = `${order.orderNumber}-${item.id}-${item.itemIndex}`;
-    const statusToggleId = `${itemKey}-status`;
-    const isStatusOpen = openStatusId === statusToggleId;
     const isDetailOpen = detailId === itemKey;
     const isCancelable = order.orderStatus === "payment" && item.cancelStatus === "none";
     const canRequestDateChange = ["payment", "ready", "scheduled"].includes(order.orderStatus)
@@ -316,22 +330,12 @@ const Order = () => {
 
             <div className="right">
               <p>
-                배송 예정일: {order.deliveryDate || "확인 중"}
+                배송 예정일: {formatOrderDate(order.deliveryDate) || "확인 중"}
                 {order.deliveryChangeStatus === "requested" && (
                   <span className="request-badge">변경 요청중</span>
                 )}
               </p>
               <div className="btn-group">
-                {item.cancelStatus === "none" && (
-                  <button
-                    type="button"
-                    className={`status-toggle-btn ${isStatusOpen ? "active" : ""}`}
-                    onClick={() => handleToggleStatus(statusToggleId)}
-                  >
-                    {isStatusOpen ? "배송상태 닫기" : "배송조회"}
-                  </button>
-                )}
-
                 <button
                   type="button"
                   className={`status-toggle-btn ${isDetailOpen ? "active" : ""}`}
@@ -362,15 +366,6 @@ const Order = () => {
               </div>
             </div>
           </div>
-
-          {isStatusOpen && item.cancelStatus === "none" && (
-            <div className="status">
-              <p className="txt-area">배송 상태</p>
-              <div className="show-status-area">
-                <DeliveryStatusBar status={order.orderStatus} />
-              </div>
-            </div>
-          )}
 
           {renderDetailPanel(order, item)}
         </div>
@@ -430,6 +425,39 @@ const Order = () => {
     );
   };
 
+  const renderDeliveryStatusFilter = () => {
+    if (!["delivery", "completed"].includes(activeTab) || deliveryStatusCounts.all === 0) return null;
+
+    return (
+      <div className="order-status-filter" aria-label="배송 상태 필터">
+        {deliveryFlowSteps.map((step, index) => {
+          const count = deliveryStatusCounts[step.key] || 0;
+          const hasItems = count > 0;
+          const isSelected = activeTab === "completed"
+            ? step.key === "done"
+            : selectedDeliveryStatus === step.key;
+
+          return (
+            <button
+              type="button"
+              key={step.key}
+              className={`status-filter-step ${hasItems ? "has-items" : ""} ${isSelected ? "selected" : ""}`}
+              disabled={!hasItems}
+              onClick={() => handleSelectDeliveryStatus(step.key)}
+            >
+              <span className="status-filter-top">
+                <span className="status-filter-circle">{index + 1}</span>
+                {index !== deliveryFlowSteps.length - 1 && <span className="status-filter-line" />}
+              </span>
+              <span className="status-filter-label">{step.label}</span>
+              <span className="status-filter-count">{count}</span>
+            </button>
+          );
+        })}
+      </div>
+    );
+  };
+
   return (
     <div className="order-content">
       {orderList.length === 0 ? (
@@ -452,6 +480,13 @@ const Order = () => {
                   onClick={() => handleChangeTab("delivery")}
                 >
                   주문배송
+                </button>
+                <button
+                  type="button"
+                  className={activeTab === "completed" ? "active" : ""}
+                  onClick={() => handleChangeTab("completed")}
+                >
+                  배송완료
                 </button>
                 <button
                   type="button"
@@ -481,9 +516,29 @@ const Order = () => {
           </div>
 
           <div className="order-summary">
-            <strong>{activeTab === "delivery" ? "주문배송" : "취소/반품 내역"}</strong>
-            <span>{visibleCount}개 상품</span>
+            <div className="order-summary__title">
+              <strong>
+                {activeTab === "delivery"
+                  ? "주문배송"
+                  : activeTab === "completed"
+                    ? "배송완료"
+                    : "취소/반품 내역"}
+              </strong>
+              <span>{visibleCount}개 상품</span>
+            </div>
+
+            {["delivery", "completed"].includes(activeTab) && (
+              <button
+                type="button"
+                className={`order-summary__all-btn ${activeTab === "delivery" && selectedDeliveryStatus === "all" ? "active" : ""}`}
+                onClick={() => handleSelectDeliveryStatus("all")}
+              >
+                진행중 전체
+              </button>
+            )}
           </div>
+
+          {renderDeliveryStatusFilter()}
 
           {visibleCount === 0 ? (
             <SubPageEmptyState
@@ -496,8 +551,13 @@ const Order = () => {
           ) : (
             <div className="order-list-wrap">
               {activeTab === "delivery"
-                ? deliverySteps.map(renderSection)
-                : cancelSections.map(renderSection)}
+                ? deliveryFlowSteps
+                  .filter((step) => step.key !== "done")
+                  .filter((step) => selectedDeliveryStatus === "all" || step.key === selectedDeliveryStatus)
+                  .map(renderSection)
+                : activeTab === "completed"
+                  ? completedSections.map(renderSection)
+                  : cancelSections.map(renderSection)}
             </div>
           )}
         </>

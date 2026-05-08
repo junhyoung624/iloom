@@ -23,7 +23,7 @@ export default function Place() {
 
     const startAnimation = (from) => {
         const remaining = TOTAL_WIDTH - Math.abs(from % TOTAL_WIDTH)
-        const fullDuration = 30
+        const fullDuration = 60
         const remainingDuration = (remaining / TOTAL_WIDTH) * fullDuration
 
         animRef.current = animate(x, from - remaining, {
