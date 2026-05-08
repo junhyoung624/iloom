@@ -28,6 +28,7 @@ import CardRegisterModal from '../components/CardRegisterModal'
 import AddressModal from '../components/AddressModal'
 import RequestModal from '../components/RequestModal'
 import PointChargeModal from '../components/PointChargeModal'
+import OrderCompletePopup from '../components/OrderCompletePopup'
 
 export default function Charge() {
     const { cartItems, items, onAddOrder, createDeliveryDate, onfetchItems } = useProductStore()
@@ -405,15 +406,29 @@ export default function Charge() {
             onAddOrder(orderData, user)
             await addOrder(orderData)
 
-            confetti({
+            const myCanvas = document.createElement('canvas')
+            myCanvas.style.position = 'fixed'
+            myCanvas.style.inset = '0'
+            myCanvas.style.width = '100%'
+            myCanvas.style.height = '100%'
+            myCanvas.style.zIndex = '9999'
+            myCanvas.style.pointerEvents = 'none'
+            document.body.appendChild(myCanvas)
+
+            const myConfetti = confetti.create(myCanvas, { resize: true })
+            myConfetti({
                 particleCount: 120,
                 spread: 80,
                 origin: { y: 0.6 },
                 colors: ['#CA1230', '#111111', '#ffffff', '#d4a574'],
+            }).then(() => {
+                document.body.removeChild(myCanvas)
             })
 
             toast(`결제가 완료되었습니다. 주문번호는 ${orderNumber} 입니다.`)
-            user ? navigate('/order') : navigate(`/orderForGuest/${orderNumber}`)
+            setCompletedOrderData(orderData)
+            setShowOrderComplete(true)
+            setConfirmPay(false)
         } catch (err) {
             console.log(err)
             toast('주문 저장 중 오류가 발생했습니다.')
@@ -483,6 +498,9 @@ export default function Charge() {
         setRequestForm({ ...requestDraft })
         setShowRequestModal(false)
     }
+
+    const [showOrderComplete, setShowOrderComplete] = useState(false)
+    const [completedOrderData, setCompletedOrderData] = useState(null)
 
     return (
         <section className="charge-page">
@@ -679,6 +697,16 @@ export default function Charge() {
                     setRequestDraft={setRequestDraft}
                     onClose={() => setShowRequestModal(false)}
                     onConfirm={handleRequestConfirm}
+                />
+            )}
+
+            {showOrderComplete && completedOrderData && (
+                <OrderCompletePopup
+                    orderData={completedOrderData}
+                    onClose={() => {
+                        setShowOrderComplete(false)
+                        user ? navigate('/order') : navigate(`/orderForGuest/${completedOrderData.orderNumber}`)
+                    }}
                 />
             )}
         </section>
