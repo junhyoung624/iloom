@@ -56,31 +56,24 @@ export default function Place() {
                     <p>일룸이 제안하는 새로운 일상</p>
                 </div>
 
-            <div className="place-swiper-wrap" style={{ overflow: 'hidden' }}>
-                <motion.div
-                    style={{ display: 'flex', gap: '10px', width: 'max-content', x }}
-                    onMouseEnter={handleMouseEnter}
-                    onMouseLeave={handleMouseLeave}
->
-                <Swiper
-                    navigation={true}
-                    modules={[Navigation]}
-                    slidesPerView={"auto"}
-                    spaceBetween={10}
-                    className="mySwiper"
-                    loop={true}
-                >
-                    {loopList.map((item, index) => (
-                        <div key={index} className="place-item">
-                            <Link to={`/${item.link}`}>
-                                <img src={item.image} alt={item.key} />
-                                <p>{item.key}</p>
-                                <span className="place-message">{item.message}</span>
-                                <p className='place-btn'>더 보기</p>
-                            </Link>
-                        </div>
-                    ))}
-                </motion.div>
+                <div className="place-swiper-wrap" style={{ overflow: 'hidden' }}>
+                    <motion.div
+                        style={{ display: 'flex', gap: '10px', width: 'max-content', x }}
+                        onMouseEnter={handleMouseEnter}
+                        onMouseLeave={handleMouseLeave}
+                    >
+                        {loopList.map((item, index) => (
+                            <div key={index} className="place-item">
+                                <Link to={`/${item.link}`}>
+                                    <img src={item.image} alt={item.key} />
+                                    <p>{item.key}</p>
+                                    <span className="place-message">{item.message}</span>
+                                    <p className="place-btn">더 보기</p>
+                                </Link>
+                            </div>
+                        ))}
+                    </motion.div>
+                </div>
             </div>
         </section>
     )

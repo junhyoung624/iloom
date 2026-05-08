@@ -6,6 +6,7 @@ import { deliverySteps } from '../data/deliverySteps';
 import DeliveryStatusBar from './OrderComponents/DeliveryStatusBar';
 import SubPageEmptyState from '../components/SubPageEmptyState';
 import "./scss/order.scss";
+import { formatOrderDate, getAutoDeliveryStatus } from '../utils/calcOrderDate';
 
 const periodOptions = [
   { label: "1개월", value: 1 },
@@ -19,33 +20,16 @@ const cancelSections = [
   { key: "done", label: "취소 완료" },
 ];
 
+const completedSections = [
+  { key: "done", label: "배송 완료" },
+];
+
 const cancelReasonOptions = [
   "배송 일정 변경",
   "상품을 다시 선택할 예정",
   "주문 정보 오입력",
   "단순 변심",
 ];
-
-const statusAliases = {
-  before: "payment",
-  "결제완료": "payment",
-  "결제 완료": "payment",
-  "상품준비중": "ready",
-  "상품 준비중": "ready",
-  "배송일확정": "scheduled",
-  "배송일 확정": "scheduled",
-  "배송중": "shipping",
-  "배송 중": "shipping",
-  "배송/설치중": "shipping",
-  "배송완료": "done",
-  "배송 완료": "done",
-  "설치완료": "done",
-};
-
-const getOrderStatus = (order) => {
-  const status = order.orderStatus || order.state || "payment";
-  return statusAliases[status] || status;
-};
 
 const getStepIndex = (status) => {
   const index = deliverySteps.findIndex((step) => step.key === status);
@@ -119,6 +103,7 @@ const Order = () => {
     onRequestCancelOrder,
     onRequestDeliveryDateChange,
   } = useProductStore();
+
   const [activeTab, setActiveTab] = useState("delivery");
   const [selectedPeriod, setSelectedPeriod] = useState(1);
   const [openStatusId, setOpenStatusId] = useState(null);
@@ -131,7 +116,7 @@ const Order = () => {
   const ordersWithMeta = useMemo(() => {
     return orderList.map((order) => {
       const orderDate = parseOrderDate(order);
-      const orderStatus = getOrderStatus(order);
+      const orderStatus = getAutoDeliveryStatus(order);
 
       return {
         ...order,
@@ -152,11 +137,17 @@ const Order = () => {
   }, [ordersWithMeta, selectedPeriod]);
 
   const visibleCount = periodOrders.reduce((count, order) => {
-    const itemCount = order.items.filter((item) =>
-      activeTab === "delivery"
-        ? item.cancelStatus === "none"
-        : item.cancelStatus !== "none"
-    ).length;
+    const itemCount = order.items.filter((item) => {
+      if (activeTab === "delivery") {
+        return item.cancelStatus === "none" && order.orderStatus !== "done";
+      }
+
+      if (activeTab === "completed") {
+        return item.cancelStatus === "none" && order.orderStatus === "done";
+      }
+
+      return item.cancelStatus !== "none";
+    }).length;
 
     return count + itemCount;
   }, 0);
@@ -164,6 +155,12 @@ const Order = () => {
   const getVisibleItems = (order, sectionKey) => {
     return order.items.filter((item) => {
       if (activeTab === "delivery") {
+        return order.orderStatus === sectionKey
+          && order.orderStatus !== "done"
+          && item.cancelStatus === "none";
+      }
+
+      if (activeTab === "completed") {
         return order.orderStatus === sectionKey && item.cancelStatus === "none";
       }
 
@@ -243,7 +240,7 @@ const Order = () => {
           </div>
           <div>
             <span>배송 예정일</span>
-            <strong>{order.deliveryDate || "확인 중"}</strong>
+            <strong>{formatOrderDate(order.deliveryDate) || "확인 중"}</strong>
           </div>
           <div>
             <span>주문 금액</span>
@@ -316,7 +313,7 @@ const Order = () => {
 
             <div className="right">
               <p>
-                배송 예정일: {order.deliveryDate || "확인 중"}
+                배송 예정일: {formatOrderDate(order.deliveryDate) || "확인 중"}
                 {order.deliveryChangeStatus === "requested" && (
                   <span className="request-badge">변경 요청중</span>
                 )}
@@ -455,6 +452,13 @@ const Order = () => {
                 </button>
                 <button
                   type="button"
+                  className={activeTab === "completed" ? "active" : ""}
+                  onClick={() => handleChangeTab("completed")}
+                >
+                  배송완료
+                </button>
+                <button
+                  type="button"
                   className={activeTab === "cancel" ? "active" : ""}
                   onClick={() => handleChangeTab("cancel")}
                 >
@@ -481,7 +485,13 @@ const Order = () => {
           </div>
 
           <div className="order-summary">
-            <strong>{activeTab === "delivery" ? "주문배송" : "취소/반품 내역"}</strong>
+            <strong>
+              {activeTab === "delivery"
+                ? "주문배송"
+                : activeTab === "completed"
+                  ? "배송완료"
+                  : "취소/반품 내역"}
+            </strong>
             <span>{visibleCount}개 상품</span>
           </div>
 
@@ -496,8 +506,10 @@ const Order = () => {
           ) : (
             <div className="order-list-wrap">
               {activeTab === "delivery"
-                ? deliverySteps.map(renderSection)
-                : cancelSections.map(renderSection)}
+                ? deliverySteps.filter((step) => step.key !== "done").map(renderSection)
+                : activeTab === "completed"
+                  ? completedSections.map(renderSection)
+                  : cancelSections.map(renderSection)}
             </div>
           )}
         </>
