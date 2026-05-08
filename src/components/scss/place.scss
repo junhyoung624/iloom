@@ -2,6 +2,7 @@
 
 .place {
     overflow: hidden;
+    padding: 120px 0;
 
     .inner {
         width: 1400px;
@@ -10,302 +11,341 @@
 
     .title-box {
         text-align: center;
-        margin-bottom: 40px;
+        margin-bottom: 50px;
         color: var(--main);
 
         h2 {
             font-size: 25px;
             font-weight: 400;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
 
         h3 {
-            font-size: 35px;
-            margin-bottom: 54px;
+            font-size: 40px;
+            font-weight: 600;
+            margin-bottom: 45px;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
         }
 
         p {
-            padding: 60px 0 50px 0;
-            font-size: 36px;
-
+            padding-top: 45px;
+            font-size: 34px;
             font-weight: 200;
-
         }
     }
+}
 
     .place-swiper-wrap {
         // padding-left: calc((100vw - 1400px) / 2);
     }
 
-    .mySwiper {
-        width: 100%;
-        overflow: visible;
+.accordion-wrap {
+    display: flex;
+    width: 100%;
+    height: 620px;
+    gap: 12px;
+}
 
-        .swiper-slide {
-            width: 345px !important;
+.accordion-item {
+    position: relative;
+
+    flex: 1;
+
+    overflow: hidden;
+
+    border-radius: 26px;
+
+    cursor: pointer;
+
+    transition:
+        flex 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+        width 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+        transform 0.6s ease;
+
+    // 기본 카드
+    &:not(.active) {
+
+        .accordion-image-wrap {
+            aspect-ratio: auto;
+            height: 100%;
+        }
+
+        .accordion-content {
+            opacity: 0;
+            pointer-events: none;
         }
     }
 
-    .place-item {
-        position: relative;
+    // 활성 카드
+    &.active {
+        flex: 0 0 calc(620px * 16 / 9);
 
-        a {
-            position: relative;
-            display: block;
-            width: 345px;
-            height: 530px;
-            overflow: hidden;
+        .accordion-image-wrap {
+            aspect-ratio: 16 / 9;
+            height: auto;
+        }
 
-            &::after {
-                content: "";
-                position: absolute;
-                inset: 0;
-                background: rgba(0, 0, 0, 0);
-                transition: 0.3s;
-                z-index: 1;
-            }
-
-            &:hover::after {
-                background: rgba(0, 0, 0, 0.4);
-            }
-
-            &:hover .place-message {
-                opacity: 1;
-                transform: translate(-50%, 0);
-            }
-
-            &:hover button {
-                transform: translate(-50%, -50%);
-            }
+        .accordion-overlay {
+            background: rgba(0, 0, 0, 0.45);
+            backdrop-filter: blur(3px);
         }
 
         img {
-            width: 345px;
-            height: 530px;
-            object-fit: cover;
-            display: block;
+            transform: scale(1.08);
+            filter: brightness(0.92);
         }
 
-        p {
-            position: absolute;
-            left: 50%;
-            top: 48%;
-            transform: translate(-50%, -50%);
-            color: #fff;
-            font-size: 36px;
-            font-weight: 600;
-            width: 100%;
-            text-align: center;
-            z-index: 2;
-            margin: 0;
-            text-transform: uppercase;
-        }
-
-        .place-message {
-            position: absolute;
-            left: 50%;
-            top: 70%;
-            transform: translate(-50%, 10px);
-            color: var(--line);
-            font-size: 16px;
-            font-weight: 400;
-            width: 100%;
-            text-align: center;
-            z-index: 2;
+        .accordion-label {
             opacity: 0;
-            transition: 0.3s;
-            margin: 0;
-            white-space: nowrap;
+            transform: translate(-50%, -20%);
         }
 
-        .place-btn {
-            width: 300px;
-            position: absolute;
-            left: 50%;
-            top: 88%;
-            transform: translate(-50%, -30%);
-            color: #fff;
-            font-weight: 400;
-            text-align: center;
-            background: transparent;
-            border: 1.3px solid #fff;
-            font-size: 18px;
-            padding: 12px 0;
-            transition: 0.3s;
-            z-index: 2;
-            cursor: pointer;
-
-            &:hover {
-                background: var(--main);
-                color: #fff;
-                border: 1.3px solid var(--main);
-            }
+        .accordion-content {
+            opacity: 1;
         }
+
+        .accordion-key {
+            opacity: 1;
+            transform: translateY(0);
+            transition-delay: 0.15s;
+        }
+
+        .accordion-message {
+            opacity: 1;
+            transform: translateY(0);
+            transition-delay: 0.3s;
+        }
+
+        .accordion-btn {
+            opacity: 1;
+            transform: translateY(0);
+            transition-delay: 0.45s;
+        }
+    }
+
+    &:hover {
+        transform: translateY(-4px);
+    }
+
+    a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
     }
 }
 
-.swiper-button-next {
-    color: #fff;
-    position: absolute;
-    top: 50%;
-    right: 100px;
-    z-index: 111;
-}
+// ---------------- IMAGE WRAP ----------------
 
-.swiper-button-prev {
-    color: #fff;
-    position: absolute;
-    top: 50%;
-    left: -100px;
-    z-index: 111;
-    transform: rotate(180deg);
-}
-
-.sns-swiper-wrap {
+.accordion-image-wrap {
     position: relative;
-}
 
-.swiper-button-next {
-    color: #fff;
-    position: absolute;
-    top: 50%;
-    right: 100px;
-    z-index: 111;
-}
+    width: 100%;
+    height: 100%;
 
-.swiper-button-prev {
-    color: #fff;
-    position: absolute;
-    top: 50%;
-    left: -100px;
-    z-index: 111;
-    rotate: calc(180deg);
-}
-
-
-
-.place-item {
-    position: relative;
     overflow: hidden;
 
-    .place-spotlight {
-        position: absolute;
-        width: 300px;
-        height: 300px;
-        border-radius: 50%;
-        background: radial-gradient(circle,
-                rgba(255, 255, 255, 0.13) 0%,
-                rgba(255, 255, 255, 0.05) 70%,
-                transparent 80%);
-        transform: translate(-50%, -50%);
-        pointer-events: none;
-        z-index: 3;
-        transition: opacity 0.2s ease;
+    transition:
+        aspect-ratio 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+        height 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.accordion-image-wrap img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform 1.3s cubic-bezier(0.22, 1, 0.36, 1),
+        filter 0.8s ease;
+}
+
+// ---------------- OVERLAY ----------------
+
+.accordion-overlay {
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.18);
+
+    z-index: 1;
+
+    transition:
+        background 0.7s ease,
+        backdrop-filter 0.7s ease;
+}
+
+// ---------------- DEFAULT LABEL ----------------
+
+.accordion-label {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    z-index: 3;
+
+    transition:
+        opacity 0.45s ease,
+        transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+
+    .label-vertical {
+        writing-mode: initial;
+        text-orientation: initial;
+
+        color: #fff;
+
+        font-size: 24px;
+        font-weight: 500;
+
+        letter-spacing: 0.08em;
+
+        white-space: nowrap;
     }
 }
 
-@media (max-width: 1024px) {
-    .place {
-        .inner {
-            width: 100%;
-            padding: 0 20px;
-        }
+// ---------------- ACTIVE CONTENT ----------------
 
-        .title-box {
-            h2 {
-                font-size: 20px;
-            }
+.accordion-content {
+    position: absolute;
 
-            h3 {
-                font-size: 28px;
-            }
+    left: 50%;
+    top: 50%;
 
-            p {
-                font-size: 28px;
-            }
-        }
+    transform: translate(-50%, -50%);
 
-        .place-swiper-wrap {
-            padding-left: 20px;
-        }
+    width: 100%;
 
-        .mySwiper {
-            .swiper-slide {
-                width: 280px !important;
-            }
-        }
+    padding: 0 40px;
 
-        .place-item {
-            a {
-                width: 280px;
-                height: 420px;
-            }
+    text-align: center;
 
-            img {
-                width: 280px;
-                height: 420px;
-            }
+    z-index: 4;
 
-            .place-btn {
-                width: 240px;
-                font-size: 15px;
-            }
-        }
+    opacity: 0;
+
+    transition: opacity 0.5s ease;
+}
+
+.accordion-key,
+.accordion-message,
+.accordion-btn {
+    opacity: 0;
+
+    transform: translateY(40px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.accordion-key {
+    color: #fff;
+
+    font-size: 48px;
+    font-weight: 700;
+
+    margin-bottom: 18px;
+
+    letter-spacing: 0.04em;
+}
+
+.accordion-message {
+    color: rgba(255, 255, 255, 0.88);
+
+    font-size: 16px;
+    font-weight: 300;
+
+    margin-bottom: 34px;
+
+    line-height: 1.6;
+}
+
+.accordion-btn {
+    width: 190px;
+    height: 54px;
+
+    border-radius: 999px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    border: 1px solid rgba(255, 255, 255, 0.75);
+
+    color: #fff;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    backdrop-filter: blur(10px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 1s cubic-bezier(0.22, 1, 0.36, 1),
+        background 0.35s ease,
+        border-color 0.35s ease;
+
+    &:hover {
+        background: var(--main);
+        border-color: var(--main);
+
+        transform: translateY(-4px);
+    }
+}
+
+// ---------------- RESPONSIVE ----------------
+
+@media (max-width: 1440px) {
+
+    .place .inner {
+        width: 100%;
+        padding: 0 20px;
     }
 }
 
 @media (max-width: 768px) {
-    .place {
-        .inner {
-            width: 100%;
-            padding: 0 16px;
+
+    .accordion-wrap {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .accordion-item {
+        flex: none !important;
+        height: 90px;
+
+        transition:
+            height 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+            transform 0.4s ease;
+
+        &.active {
+            height: 56vw;
         }
+    }
 
-        .title-box {
-            h2 {
-                font-size: 16px;
-            }
+    .accordion-label .label-vertical {
+        font-size: 18px;
+    }
 
-            h3 {
-                font-size: 22px;
-            }
+    .accordion-key {
+        font-size: 28px;
+    }
 
-            p {
-                font-size: 20px;
-                padding: 30px 0;
-            }
-        }
+    .accordion-message {
+        font-size: 13px;
+    }
 
-        .place-swiper-wrap {
-            padding-left: 16px;
-        }
-
-        .mySwiper {
-            .swiper-slide {
-                width: 220px !important;
-            }
-        }
-
-        .place-item {
-            a {
-                width: 220px;
-                height: 340px;
-            }
-
-            img {
-                width: 220px;
-                height: 340px;
-            }
-
-            p {
-                font-size: 24px;
-            }
-
-            .place-btn {
-                width: 180px;
-                font-size: 13px;
-                padding: 10px 0;
-            }
-        }
+    .accordion-btn {
+        width: 130px;
+        height: 42px;
+        font-size: 12px;
     }
 }
