@@ -531,7 +531,8 @@ header {
     }
 }
 
-.user-menu-wrap {
+.user-menu-wrap,
+.cart-panel-wrap {
     position: fixed;
     top: 0;
     right: -9999px;
@@ -540,10 +541,11 @@ header {
     background: #fff;
     z-index: 9999;
     border: 1px solid #ddd;
+    transition: 0.5s;
 
     &.active {
         right: 0;
-        transition: 0.5s;
+        
     }
 }
 

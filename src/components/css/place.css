@@ -6,6 +6,7 @@
 
 .place {
   overflow: hidden;
+  padding: 120px 0;
 }
 .place .inner {
   width: 1400px;
@@ -13,171 +14,185 @@
 }
 .place .title-box {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
   color: var(--main);
 }
 .place .title-box h2 {
   font-size: 25px;
   font-weight: 400;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 .place .title-box h3 {
-  font-size: 35px;
-  margin-bottom: 54px;
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 45px;
+}
+.place .title-box img {
+  display: block;
+  margin: 0 auto;
 }
 .place .title-box p {
-  padding: 60px 0 50px 0;
-  font-size: 36px;
+  padding-top: 45px;
+  font-size: 34px;
   font-weight: 200;
 }
-.place .place-swiper-wrap {
-  padding-left: calc((100vw - 1400px) / 2);
-}
-.place .mySwiper {
-  width: 100%;
-  overflow: visible;
-}
-.place .mySwiper .swiper-slide {
-  width: 345px !important;
-}
-.place .place-item {
-  position: relative;
-}
-.place .place-item a {
-  position: relative;
-  display: block;
-  width: 345px;
-  height: 530px;
+
+.place-swiper-wrap {
   overflow: hidden;
-}
-.place .place-item a::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0);
-  transition: 0.3s;
-  z-index: 1;
-}
-.place .place-item a:hover::after {
-  background: rgba(0, 0, 0, 0.4);
-}
-.place .place-item a:hover .place-message {
-  opacity: 1;
-  transform: translate(-50%, 0);
-}
-.place .place-item a:hover button {
-  transform: translate(-50%, -50%);
-}
-.place .place-item img {
-  width: 345px;
-  height: 530px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  display: block;
-}
-.place .place-item p {
-  position: absolute;
-  left: 50%;
-  top: 48%;
-  transform: translate(-50%, -50%);
-  color: #fff;
-  font-size: 36px;
-  font-weight: 600;
-  width: 100%;
-  text-align: center;
-  z-index: 2;
-  margin: 0;
-  text-transform: uppercase;
-}
-.place .place-item .place-message {
-  position: absolute;
-  left: 50%;
-  top: 70%;
-  transform: translate(-50%, 10px);
-  color: var(--line);
-  font-size: 16px;
-  font-weight: 400;
-  width: 100%;
-  text-align: center;
-  z-index: 2;
-  opacity: 0;
-  transition: 0.3s;
-  margin: 0;
-  white-space: nowrap;
-}
-.place .place-item .place-btn {
-  width: 300px;
-  position: absolute;
-  left: 50%;
-  top: 88%;
-  transform: translate(-50%, -30%);
-  color: #fff;
-  font-weight: 400;
-  text-align: center;
-  background: transparent;
-  border: 1.3px solid #fff;
-  font-size: 18px;
-  padding: 12px 0;
-  transition: 0.3s;
-  z-index: 2;
-  cursor: pointer;
-}
-.place .place-item .place-btn:hover {
-  background: var(--main);
-  color: #fff;
-  border: 1.3px solid var(--main);
-}
-
-.swiper-button-next {
-  color: #fff;
-  position: absolute;
-  top: 50%;
-  right: 100px;
-  z-index: 111;
-}
-
-.swiper-button-prev {
-  color: #fff;
-  position: absolute;
-  top: 50%;
-  left: -100px;
-  z-index: 111;
-  transform: rotate(180deg);
-}
-
-.sns-swiper-wrap {
-  position: relative;
-}
-
-.swiper-button-next {
-  color: #fff;
-  position: absolute;
-  top: 50%;
-  right: 100px;
-  z-index: 111;
-}
-
-.swiper-button-prev {
-  color: #fff;
-  position: absolute;
-  top: 50%;
-  left: -100px;
-  z-index: 111;
-  rotate: 180deg;
 }
 
 .place-item {
   position: relative;
+  width: 345px;
+  height: 620px;
+  flex-shrink: 0;
   overflow: hidden;
+  cursor: pointer;
 }
-.place-item .place-spotlight {
+.place-item:hover .place-overlay {
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(3px);
+}
+.place-item:hover img {
+  transform: scale(1.08);
+  filter: brightness(0.92);
+}
+.place-item:hover .place-label {
+  opacity: 0;
+  transform: translate(-50%, -20%);
+}
+.place-item:hover .place-content {
+  opacity: 1;
+}
+.place-item:hover .place-key {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.15s;
+}
+.place-item:hover .place-message {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.3s;
+}
+.place-item:hover .place-btn {
+  opacity: 1;
+  transform: translateY(0);
+}
+.place-item a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
+
+.place-item img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 1.3s cubic-bezier(0.22, 1, 0.36, 1), filter 0.8s ease;
+}
+
+.place-overlay {
   position: absolute;
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.13) 0%, rgba(255, 255, 255, 0.05) 70%, transparent 80%);
+  inset: 0;
+  background: rgba(0, 0, 0, 0.18);
+  z-index: 1;
+  transition: background 0.7s ease, backdrop-filter 0.7s ease;
+}
+
+.place-label {
+  position: absolute;
+  left: 50%;
+  top: 50%;
   transform: translate(-50%, -50%);
-  pointer-events: none;
   z-index: 3;
-  transition: opacity 0.2s ease;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+  transition: opacity 0.45s ease, transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.place-content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  padding: 0 30px;
+  text-align: center;
+  z-index: 4;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.place-key,
+.place-message,
+.place-btn {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.place-key {
+  color: #fff;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  letter-spacing: 0.04em;
+}
+
+.place-message {
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 15px;
+  font-weight: 300;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.place-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 190px;
+  height: 54px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  transition: opacity 0.8s ease, transform 1s cubic-bezier(0.22, 1, 0.36, 1), background 0.35s ease, border-color 0.35s ease;
+}
+.place-btn:hover {
+  background: var(--main);
+  border-color: var(--main);
+}
+
+@media (max-width: 1440px) {
+  .place .inner {
+    width: 100%;
+    padding: 0 20px;
+  }
+}
+@media (max-width: 768px) {
+  .place-item {
+    width: 260px;
+    height: 420px;
+  }
+  .place-key {
+    font-size: 24px;
+  }
+  .place-message {
+    font-size: 13px;
+  }
+  .place-btn {
+    width: 130px;
+    height: 42px;
+    font-size: 12px;
+  }
 }
