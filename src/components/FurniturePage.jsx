@@ -1,144 +1,370 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useMemo, useRef, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { useProductStore } from '../store/useProductStore'
 import SubCard from '../components/SubCard'
+import "./scss/furnitureList.scss"
 
 export default function FurniturePage() {
     const { items, sortType, sortOrder, onSetSort } = useProductStore()
     const location = useLocation()
-    const listRef = useRef(null);
+    const listRef = useRef(null)
 
     const params = new URLSearchParams(location.search)
     const rawKeyword = params.get("furniture") || ""
     const keyword = rawKeyword.toLowerCase()
 
-    let cateItems = items.filter((item) =>
+
+    const baseCateItems = items.filter((item) =>
         item.name?.toLowerCase().includes(keyword) ||
         item.category2?.toLowerCase().includes(keyword) ||
         item.originalCategory?.toLowerCase().includes(keyword) ||
-        item.category3.toLowerCase().includes(keyword)
+        item.category3?.toLowerCase().includes(keyword)
     )
 
+    const parsePrice = (price) => Number(String(price).replace(/[^\d]/g, ""))
 
+    const priceList = baseCateItems.map((item) => parsePrice(item.price))
+    const minPrice = priceList.length ? Math.min(...priceList) : 0
+    const maxPrice = priceList.length ? Math.max(...priceList) : 0
+
+
+    const seriesOptions = useMemo(() => {
+        return [...new Set(baseCateItems.map((item) => item.series).filter(Boolean))]
+    }, [baseCateItems])
+
+
+    const [isFilterOpen, setIsFilterOpen] = useState(false)
+    const [selectedSeries, setSelectedSeries] = useState([])
+    const [priceRange, setPriceRange] = useState([minPrice, maxPrice])
+    const [featureFilters, setFeatureFilters] = useState({
+        bestseller: false,
+        mdPick: false,
+        newItem: false,
+    })
+
+    useEffect(() => {
+        setPriceRange([minPrice, maxPrice])
+        setSelectedSeries([])
+        setFeatureFilters({ bestseller: false, mdPick: false, newItem: false })
+    }, [location.search, minPrice, maxPrice])
+
+
+    useEffect(() => {
+        const handleEsc = (e) => { if (e.key === "Escape") setIsFilterOpen(false) }
+        document.addEventListener('keydown', handleEsc)
+        return () => document.removeEventListener('keydown', handleEsc)
+    }, [])
+
+    const toggleSeries = (seriesName) => {
+        setSelectedSeries((prev) =>
+            prev.includes(seriesName)
+                ? prev.filter((v) => v !== seriesName)
+                : [...prev, seriesName]
+        )
+    }
+
+    const handleFeatureFilter = (key) => {
+        setFeatureFilters((prev) => ({ ...prev, [key]: !prev[key] }))
+    }
+
+    const resetFilter = () => {
+        setSelectedSeries([])
+        setPriceRange([minPrice, maxPrice])
+        setFeatureFilters({ bestseller: false, mdPick: false, newItem: false })
+    }
+
+
+    let cateItems = baseCateItems.filter((item) => {
+        const itemPrice = parsePrice(item.price)
+        const matchPrice = itemPrice >= priceRange[0] && itemPrice <= priceRange[1]
+        const matchSeries = selectedSeries.length === 0 || selectedSeries.includes(item.series)
+        const matchBest = !featureFilters.bestseller || Number(item.ranking) > 0
+        const matchMdPick = !featureFilters.mdPick || item.mdPick === true
+        const matchNew = !featureFilters.newItem || Number(item.new) === 1
+        return matchPrice && matchSeries && matchBest && matchMdPick && matchNew
+    })
 
     if (sortType) {
         cateItems = [...cateItems].sort((a, b) => {
             switch (sortType) {
                 case "price":
-                    const aPrice = Number(String(a.price).replace(/,/g, ""));
-                    const bPrice = Number(String(b.price).replace(/,/g, ""));
-                    return sortOrder === "asc" ? aPrice - bPrice : bPrice - aPrice;
-                case "ranking":
-                    return b.ranking - a.ranking
-                case "new":
-                    return Number(b.new) - Number(a.new)
-                case "name":
-                    return a.name.localeCompare(b.name)
-                default:
-                    return 0;
+                    return sortOrder === "asc"
+                        ? parsePrice(a.price) - parsePrice(b.price)
+                        : parsePrice(b.price) - parsePrice(a.price)
+                case "ranking": return b.ranking - a.ranking
+                case "new": return Number(b.new) - Number(a.new)
+                case "name": return a.name.localeCompare(b.name)
+                default: return 0
             }
         })
     }
 
+
     const [currentPage, setCurrentPage] = useState(1)
-    const itemPage = 20;
-    const totalPages = Math.ceil(cateItems.length / itemPage);
+    const itemPage = 20
+    const totalPages = Math.ceil(cateItems.length / itemPage)
 
-    const pageGroupSize = 5;
-    const startPage = Math.floor((currentPage - 1) / pageGroupSize) * pageGroupSize + 1;
-    const endPage = Math.min(startPage + pageGroupSize - 1, totalPages);
+    const pageGroupSize = 5
+    const startPage = Math.floor((currentPage - 1) / pageGroupSize) * pageGroupSize + 1
+    const endPage = Math.min(startPage + pageGroupSize - 1, totalPages)
+    const visiblePages = Array.from({ length: endPage - startPage + 1 }, (_, i) => startPage + i)
+    const pageItem = cateItems.slice((currentPage - 1) * itemPage, currentPage * itemPage)
 
-    const visiblePages = Array.from(
-        { length: endPage - startPage + 1 },
-        (_, i) => startPage + i
-    );
-
-    const pageItem = cateItems.slice(
-        (currentPage - 1) * itemPage,
-        currentPage * itemPage
-    )
+    useEffect(() => { setCurrentPage(1) }, [location.search, selectedSeries, priceRange, featureFilters, sortType, sortOrder])
 
     const pageTop = (page) => {
-        setCurrentPage(page);
-        listRef.current?.scrollIntoView({ behavior: "smooth" });
+        setCurrentPage(page)
+        listRef.current?.scrollIntoView({ behavior: "smooth" })
     }
 
-    useEffect(() => {
-        setCurrentPage(1)
-    }, [location.pathname])
 
+    const formatWon = (value) => `${Math.floor(value / 10000).toLocaleString()}만원`
+    const isDefaultPriceRange = priceRange[0] === minPrice && priceRange[1] === maxPrice
 
+    const activeFilterTags = [
+        ...selectedSeries.map((series) => ({
+            key: `series-${series}`,
+            label: series,
+            onRemove: () => toggleSeries(series),
+        })),
+        ...(!isDefaultPriceRange ? [{
+            key: "price-range",
+            label: `${formatWon(priceRange[0])} ~ ${formatWon(priceRange[1])}`,
+            onRemove: () => setPriceRange([minPrice, maxPrice]),
+        }] : []),
+        ...(featureFilters.bestseller ? [{ key: "feature-bestseller", label: "BESTSELLER", onRemove: () => handleFeatureFilter("bestseller") }] : []),
+        ...(featureFilters.mdPick ? [{ key: "feature-mdpick", label: "MD PICK", onRemove: () => handleFeatureFilter("mdPick") }] : []),
+        ...(featureFilters.newItem ? [{ key: "feature-new", label: "NEW", onRemove: () => handleFeatureFilter("newItem") }] : []),
+    ]
+
+    const activeFilterCount = activeFilterTags.length
 
     return (
-        <section className="sub-page">
-            <ul className="breadcrumb-list">
-                <li>
-                    <Link to="/"><img src="/images/logo-icon/home-icon.png" alt="" /></Link>
-                </li>
-                <li><img src="/images/logo-icon/arrow-right.png" alt="" /></li>
-                <li>
-                    <Link to={`/furniturepage?furniture=${keyword}`}>{keyword}</Link>
-                </li>
-            </ul>
-            <div className="inner">
-                <div className="search-head">
-                    <h2 className="search-title" ref={listRef}>
-                        {rawKeyword} 전체보기
-                    </h2>
-                    <p className="search-count">
-                        {cateItems.length}개의 상품이 있습니다.
-                    </p>
+        <div className="sub-page-wrap">
+
+            <div
+                className={`sub-filter-dim ${isFilterOpen ? "active" : ""}`}
+                onClick={() => setIsFilterOpen(false)}
+            />
+
+            <div className={`sub-filter-panel ${isFilterOpen ? "active" : ""}`}>
+                <div className="sub-filter-panel-head">
+                    <h2>필터</h2>
+                    <button type="button" onClick={() => setIsFilterOpen(false)}>×</button>
                 </div>
-                <div className="line"></div>
 
-                <div className="sub-product-list-wrap">
-                    <div className="sort-wrap">
-                        <button className={sortType === "price" ? "active" : ""} onClick={() => onSetSort("price", "desc")}>가격순</button>
-                        <button className={sortType === "ranking" ? "active" : ""} onClick={() => onSetSort("ranking", "asc")}>인기순</button>
-                        <button className={sortType === "new" ? "active" : ""} onClick={() => onSetSort("new", "asc")}>신상품순</button>
-                        <button className={sortType === "name" ? "active" : ""} onClick={() => onSetSort("name", "asc")}>상품명순</button>
-                    </div>
 
-                    {pageItem.length === 0 && (
-                        <div className="empty-state">
-                            <p>'{rawKeyword}'에 대한 검색 결ㄹ과가 없어요</p>
-                            <Link to="/">홈으로 돌아가기</Link>
+                <div className="sub-filter-section">
+                    <div className="sub-filter-title-row"><h3>가격</h3></div>
+                    <div className="sub-price-filter-box">
+                        <div className="sub-range-inputs">
+                            <div
+                                className="sub-range-track"
+                                style={{
+                                    left: `${maxPrice === minPrice ? 0 : ((priceRange[0] - minPrice) / (maxPrice - minPrice)) * 100}%`,
+                                    right: `${maxPrice === minPrice ? 0 : 100 - ((priceRange[1] - minPrice) / (maxPrice - minPrice)) * 100}%`,
+                                }}
+                            />
+                            <input
+                                type="range" className="sub-range-min"
+                                min={minPrice} max={maxPrice} step={10000} value={priceRange[0]}
+                                onChange={(e) => setPriceRange([Math.min(Number(e.target.value), priceRange[1]), priceRange[1]])}
+                            />
+                            <input
+                                type="range" className="sub-range-max"
+                                min={minPrice} max={maxPrice} step={10000} value={priceRange[1]}
+                                onChange={(e) => setPriceRange([priceRange[0], Math.max(Number(e.target.value), priceRange[0])])}
+                            />
                         </div>
-                    )}
-                    <ul className="sub-product-list">
-                        {pageItem.map((item) => (
-                            <li key={item.id}>
-                                <Link to={`/product/${item.id}`}>
-                                    <SubCard key={item.id} item={item} />
-                                </Link>
-                            </li>
-                        ))}
-                    </ul>
+                        <div className="sub-price-labels">
+                            <span>{formatWon(priceRange[0])}</span>
+                            <span>{formatWon(priceRange[1])}</span>
+                        </div>
+                    </div>
+                </div>
 
-                    <ul className="pagination">
-                        {startPage > 1 && (
-                            <li>
-                                <button onClick={() => pageTop(startPage - 1)}>{"<"}</button>
-                            </li>
-                        )}
-                        {visiblePages.map(page => (
-                            <li key={page}>
-                                <button
-                                    className={currentPage === page ? "active" : ""}
-                                    onClick={() => pageTop(page)}
-                                >
-                                    {page}
-                                </button>
+
+                <div className="sub-filter-section">
+                    <div className="sub-filter-title-row"><h3>시리즈</h3></div>
+                    <ul className="sub-series-filter-list">
+                        {seriesOptions.map((seriesName) => (
+                            <li key={seriesName}>
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        checked={selectedSeries.includes(seriesName)}
+                                        onChange={() => toggleSeries(seriesName)}
+                                    />
+                                    <span>{seriesName}</span>
+                                </label>
                             </li>
                         ))}
-                        {endPage < totalPages && (
-                            <li>
-                                <button onClick={() => pageTop(endPage + 1)}>{">"}</button>
-                            </li>
-                        )}
                     </ul>
+                </div>
+
+
+                <div className="sub-filter-section">
+                    <div className="sub-filter-title-row"><h3>상품 구분</h3></div>
+                    <ul className="sub-feature-filter-list">
+                        <li>
+                            <label>
+                                <input type="checkbox" checked={featureFilters.bestseller} onChange={() => handleFeatureFilter("bestseller")} />
+                                <span>BESTSELLER</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" checked={featureFilters.mdPick} onChange={() => handleFeatureFilter("mdPick")} />
+                                <span>MD PICK</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" checked={featureFilters.newItem} onChange={() => handleFeatureFilter("newItem")} />
+                                <span>NEW</span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+
+                <div className="sub-filter-bottom-btns">
+                    <button type="button" className="sub-reset-btn" onClick={resetFilter}>초기화</button>
+                    <button type="button" className="sub-apply-btn" onClick={() => setIsFilterOpen(false)}>적용하기</button>
                 </div>
             </div>
-        </section>
+
+
+            <section className="sub-page">
+                <ul className="breadcrumb-list">
+                    <li>
+                        <Link to="/"><img src="/images/logo-icon/home-icon.png" alt="" /></Link>
+                    </li>
+                    <li><img src="/images/logo-icon/arrow-right.png" alt="" /></li>
+                    <li>
+                        <Link to={`/furniturepage?furniture=${keyword}`}>{rawKeyword}</Link>
+                    </li>
+                </ul>
+
+                <div className="inner">
+                    <div className="search-head">
+                        <h2 className="search-title" ref={listRef}>
+                            {rawKeyword} 전체보기
+                        </h2>
+                        <p className="search-count">{cateItems.length}개의 상품이 있습니다.</p>
+                    </div>
+                    <div className="line" />
+
+                    <div className="sub-product-list-wrap">
+
+                        <div className="sub-filter-sort-wrap">
+                            <div className="sub-filter-sort-btn-group">
+                                <button
+                                    className={sortType === "price" && sortOrder === "desc" ? "active" : ""}
+                                    onClick={() => onSetSort("price", "desc")}
+                                >가격 높은순</button>
+                                <button
+                                    className={sortType === "price" && sortOrder === "asc" ? "active" : ""}
+                                    onClick={() => onSetSort("price", "asc")}
+                                >가격 낮은순</button>
+                                <button
+                                    className={sortType === "ranking" ? "active" : ""}
+                                    onClick={() => onSetSort("ranking", "desc")}
+                                >인기순</button>
+                                <button
+                                    className={sortType === "new" ? "active" : ""}
+                                    onClick={() => onSetSort("new", "desc")}
+                                >신상품순</button>
+                                <button
+                                    className={sortType === "name" ? "active" : ""}
+                                    onClick={() => onSetSort("name", "asc")}
+                                >상품명순</button>
+                            </div>
+
+                            <button
+                                type="button"
+                                className="sub-filter-open-btn"
+                                onClick={() => setIsFilterOpen(true)}
+                            >
+                                <img src="/images/logo-icon/ham-black.png" alt="filter" className="filter" />
+                                필터
+                                {activeFilterCount > 0 && (
+                                    <span className="sub-filter-count-badge">{activeFilterCount}</span>
+                                )}
+                            </button>
+                        </div>
+
+
+                        {activeFilterTags.length > 0 && (
+                            <div className="sub-active-filter-wrap">
+                                <div className="sub-active-filter-tags">
+                                    {activeFilterTags.map((tag) => (
+                                        <button
+                                            key={tag.key}
+                                            type="button"
+                                            className="sub-active-filter-tag"
+                                            onClick={tag.onRemove}
+                                        >
+                                            <span>{tag.label}</span>
+                                            <b>x</b>
+                                        </button>
+                                    ))}
+                                </div>
+                                <button
+                                    type="button"
+                                    className="sub-active-filter-reset"
+                                    onClick={resetFilter}
+                                >
+                                    전체 초기화
+                                </button>
+                            </div>
+                        )}
+
+
+                        {pageItem.length === 0 && (
+                            <div className="subpage-empty-state">
+                                <p>'{rawKeyword}'에 대한 검색 결과가 없어요.</p>
+                                {activeFilterCount > 0
+                                    ? <button onClick={resetFilter}>필터 초기화</button>
+                                    : <Link to="/">홈으로 돌아가기</Link>
+                                }
+                            </div>
+                        )}
+
+
+                        <ul className="sub-product-list">
+                            {pageItem.map((item) => (
+                                <li key={item.id}>
+                                    <SubCard item={item} showCompare={true} />
+                                </li>
+                            ))}
+                        </ul>
+
+
+                        <ul className="pagination">
+                            {startPage > 1 && (
+                                <li>
+                                    <button onClick={() => pageTop(startPage - 1)}>{"<"}</button>
+                                </li>
+                            )}
+                            {visiblePages.map((page) => (
+                                <li key={page}>
+                                    <button
+                                        className={currentPage === page ? "active" : ""}
+                                        onClick={() => pageTop(page)}
+                                    >
+                                        {page}
+                                    </button>
+                                </li>
+                            ))}
+                            {endPage < totalPages && (
+                                <li>
+                                    <button onClick={() => pageTop(endPage + 1)}>{">"}</button>
+                                </li>
+                            )}
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
     )
 }

@@ -49,7 +49,7 @@ export const useAuthStore = create((set, get) => ({
 
                         if (userSnap.exists()) {
                             const userInfo = userSnap.data();
-                            set({ user: { ...userInfo, provider: socialProvider } });
+                            set({ user: { ...userInfo, uid: userInfo?.uid || socialUid, provider: socialProvider } });
 
                             const { useProductStore } = await import('./useProductStore');
                             await useProductStore.getState().fetchOrderList({ uid: socialUid });

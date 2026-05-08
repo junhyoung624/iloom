@@ -1,9 +1,11 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { motion, useMotionValue, animate } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import "./scss/place.scss"
 
 export default function Place() {
+    const [activeIndex, setActiveIndex] = useState(null)
+
     const placeList = [
         { id: "1", link: "거실", key: "livingroom", image: "./images/place/livingroom.png", message: "대화의 온기가 깊어지는 곳" },
         { id: "2", link: "주방", key: "diningroom", image: "./images/place/diningroom.png", message: "함께하는 식사가 더 특별해지는 곳" },
@@ -53,7 +55,6 @@ export default function Place() {
                     <img src="/images/place/line.png" alt="" />
                     <p>일룸이 제안하는 새로운 일상</p>
                 </div>
-            </div>
 
             <div className="place-swiper-wrap" style={{ overflow: 'hidden' }}>
                 <motion.div

@@ -6,11 +6,30 @@ import { storeInfoData } from '../data/storeInfoData'
 import { store_region } from '../data/storeRegionCode'
 import StoreKakaoMap from './StoreInfoComponents/StoreKakaoMap'
 
+const STORE_REGION_QUICK_FILTERS = [
+  { code: "default", name: "전체" },
+  { code: "A02001", name: "서울" },
+  { code: "A02010", name: "경기" },
+  { code: "A02002", name: "인천" },
+  { code: "A02008", name: "부산" },
+  { code: "A02006", name: "대구" },
+  { code: "A02003", name: "대전" },
+  { code: "A02005", name: "광주" },
+  { code: "A02007", name: "울산" },
+  { code: "A02004", name: "세종" },
+  { code: "A02011", name: "강원" },
+  { code: "A02012", name: "충청" },
+  { code: "A02013", name: "전라" },
+  { code: "A02014", name: "경상" },
+  { code: "A02009", name: "제주" },
+]
+
 const StoreInfo = () => {
 
+  const defaultSubRegion = store_region[0]?.sub_region?.[0] || "시/군/구"
   const [selectedSearch, setSelectedSearch] = useState("keyword")
   const [selectedRegion, setSelectedRegion] = useState("default")
-  const [selectedSubRegion, setSelectedSubRegion] = useState("시/군/구")
+  const [selectedSubRegion, setSelectedSubRegion] = useState(defaultSubRegion)
   const [keyword, setKeyword] = useState("")
   const [selectedStoreId, setSelectedStoreId] = useState(null)
   const [isStoreListOpen, setIsStoreListOpen] = useState(true);
@@ -36,7 +55,7 @@ const StoreInfo = () => {
 
     const matchSubRegion =
       selectedSearch !== "location" ||
-      selectedSubRegion === "시/군/구" ||
+      selectedSubRegion === defaultSubRegion ||
       store.address.includes(selectedSubRegion)
 
     return matchKeyword && matchRegion && matchSubRegion
@@ -55,8 +74,26 @@ const StoreInfo = () => {
   }, [filteredStoreInfo, selectedStoreId])
 
   useEffect(() => {
-    setSelectedSubRegion("시/군/구")
-  }, [selectedRegion])
+    setSelectedSubRegion(defaultSubRegion)
+  }, [selectedRegion, defaultSubRegion])
+
+  const handleRegionQuickSelect = (regionCode) => {
+    setSelectedSearch("location")
+    setKeyword("")
+    setSelectedRegion(regionCode)
+    setSelectedSubRegion(defaultSubRegion)
+    setSelectedStoreId(null)
+  }
+
+  const handleSearchTypeChange = (searchType) => {
+    setSelectedSearch(searchType)
+
+    if (searchType === "keyword") {
+      setSelectedRegion("default")
+      setSelectedSubRegion(defaultSubRegion)
+      setSelectedStoreId(null)
+    }
+  }
 
   useEffect(() => {
     if (window.kakao && window.kakao.maps) {
@@ -84,7 +121,7 @@ const StoreInfo = () => {
             <div className="control-header">
               <InfoHeader
                 selectedSearch={selectedSearch}
-                setSelectedSearch={setSelectedSearch}
+                setSelectedSearch={handleSearchTypeChange}
                 keyword={keyword}
                 setKeyword={setKeyword}
                 selectedRegion={selectedRegion}
@@ -117,11 +154,29 @@ const StoreInfo = () => {
             </div>
           </div>
           <div className="store-map">
+            <div className="store-region-quick" aria-label="지역별 매장 보기">
+              {STORE_REGION_QUICK_FILTERS.map((region) => (
+                <button
+                  key={region.code}
+                  type="button"
+                  className={
+                    selectedSearch === "location" && selectedRegion === region.code
+                      ? "is-active"
+                      : ""
+                  }
+                  onClick={() => handleRegionQuickSelect(region.code)}
+                >
+                  {region.name}
+                </button>
+              ))}
+            </div>
             {kakaoReady && (
               <StoreKakaoMap
                 stores={filteredStoreInfo}
                 selectedStore={selectedStore}
-                setSelectedStoreId={setSelectedStoreId} />
+                selectedRegion={selectedRegion}
+                setSelectedStoreId={setSelectedStoreId}
+                onRegionSelect={handleRegionQuickSelect} />
             )}
           </div>
         </div>

@@ -34,7 +34,7 @@ export const useProductStore = create((set, get) => ({
     syncWishlistToFirestore: async (wishlist) => {
         const { useAuthStore } = await import('./useAuthStore');
         const user = useAuthStore.getState().user;
-        if (!user) return;
+        if (!user?.uid) return;
         const { doc, setDoc } = await import('firebase/firestore');
         const { db } = await import('../firebase/firebase');
         const userRef = doc(db, 'people', user.uid);
@@ -65,7 +65,7 @@ export const useProductStore = create((set, get) => ({
     },
 
     fetchWishlist: async (user) => {
-        if (!user) return;
+        if (!user?.uid) return;
         const { doc, getDoc } = await import('firebase/firestore');
         const { db } = await import('../firebase/firebase');
         const userRef = doc(db, 'people', user.uid);
@@ -77,7 +77,7 @@ export const useProductStore = create((set, get) => ({
     },
 
     fetchOrderList: async (user) => {
-        if (!user) return;
+        if (!user?.uid) return;
         const { doc, getDoc } = await import('firebase/firestore');
         const { db } = await import('../firebase/firebase');
         const userRef = doc(db, 'people', user.uid);
@@ -114,7 +114,7 @@ export const useProductStore = create((set, get) => ({
     syncCartToFirestore: async (cartItems) => {
         const { useAuthStore } = await import('./useAuthStore');
         const user = useAuthStore.getState().user;
-        if (!user) return;
+        if (!user?.uid) return;
         const { doc, setDoc } = await import('firebase/firestore');
         const { db } = await import('../firebase/firebase');
         const userRef = doc(db, 'people', user.uid);
@@ -122,7 +122,7 @@ export const useProductStore = create((set, get) => ({
     },
 
     fetchCartItems: async (user) => {
-        if (!user) return;
+        if (!user?.uid) return;
         const { doc, getDoc } = await import('firebase/firestore');
         const { db } = await import('../firebase/firebase');
         const userRef = doc(db, 'people', user.uid);
@@ -309,7 +309,7 @@ export const useProductStore = create((set, get) => ({
 
         const { useAuthStore } = await import('./useAuthStore');
         const user = useAuthStore.getState().user;
-        if (!user) return;
+        if (!user?.uid) return;
 
         const { doc, setDoc } = await import('firebase/firestore');
         const { db } = await import('../firebase/firebase');
@@ -340,7 +340,7 @@ export const useProductStore = create((set, get) => ({
 
         const { useAuthStore } = await import('./useAuthStore');
         const user = useAuthStore.getState().user;
-        if (!user) return;
+        if (!user?.uid) return;
 
         const { doc, setDoc } = await import('firebase/firestore');
         const { db } = await import('../firebase/firebase');
