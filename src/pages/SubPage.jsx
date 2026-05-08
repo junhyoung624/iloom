@@ -1,10 +1,11 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react'
 import { useProductStore } from '../store/useProductStore'
-import { Link, useLocation, useNavigate, useParams } from 'react-router-dom'
+import { useLocation, useNavigate, useParams } from 'react-router-dom'
 import "./scss/subPage.scss"
 import MdPick from '../components/MdPick'
 import SubCard from '../components/SubCard'
 import Breadcrumb from '../components/Breadcrumb'
+import SubCategoryTabs from '../components/common/SubCategoryTabs'
 
 
 const SubPage = () => {
@@ -424,15 +425,7 @@ const SubPage = () => {
                 <div className="inner">
                     <h1 ref={listRef}>{categoryName}</h1>
 
-                    {tabItems.length > 0 && (
-                        <ul className="menu-tab">
-                            {tabItems.map((t) => (
-                                <li key={t.label} className={t.active ? "active" : ""}>
-                                    <Link to={t.to}>{t.label}</Link>
-                                </li>
-                            ))}
-                        </ul>
-                    )}
+                    {tabItems.length > 0 && <SubCategoryTabs items={tabItems} />}
 
                     {mdPick.length > 0 && (
                         <div className="md-pick-wrap">

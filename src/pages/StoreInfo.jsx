@@ -27,8 +27,8 @@ const STORE_REGION_QUICK_FILTERS = [
 const StoreInfo = () => {
 
   const defaultSubRegion = store_region[0]?.sub_region?.[0] || "시/군/구"
-  const [selectedSearch, setSelectedSearch] = useState("keyword")
-  const [selectedRegion, setSelectedRegion] = useState("default")
+  const [selectedSearch, setSelectedSearch] = useState("location")
+  const [selectedRegion, setSelectedRegion] = useState("A02001")
   const [selectedSubRegion, setSelectedSubRegion] = useState(defaultSubRegion)
   const [keyword, setKeyword] = useState("")
   const [selectedStoreId, setSelectedStoreId] = useState(null)
