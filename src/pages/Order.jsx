@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
 import { useProductStore } from '../store/useProductStore';
@@ -128,17 +128,6 @@ const Order = () => {
   const [cancelTarget, setCancelTarget] = useState(null);
   const [cancelReason, setCancelReason] = useState(cancelReasonOptions[0]);
 
-  useEffect(() => {
-    const handleEsc = (e) => {
-      if (e.key === "Escape") {
-        setCancelTarget(null)
-        setDateChangeTarget(null)
-      }
-    }
-    document.addEventListener("keydown", handleEsc)
-    return () => document.removeEventListener("keydown", handleEsc)
-  }, [])
-
   const ordersWithMeta = useMemo(() => {
     return orderList.map((order) => {
       const orderDate = parseOrderDate(order);
@@ -182,6 +171,23 @@ const Order = () => {
     });
   };
 
+  const scrollToPageTop = () => {
+    requestAnimationFrame(() => {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "auto",
+      });
+    });
+  };
+
+  const handleChangeTab = (tab) => {
+    setActiveTab(tab);
+    setOpenStatusId(null);
+    setDetailId(null);
+    scrollToPageTop();
+  };
+
   const handleToggleStatus = (id) => {
     setOpenStatusId((prev) => (prev === id ? null : id));
   };
@@ -216,8 +222,7 @@ const Order = () => {
       cancelReason
     );
     setCancelTarget(null);
-    setActiveTab("cancel");
-    setOpenStatusId(null);
+    handleChangeTab("cancel");
     toast("주문 취소가 접수되었습니다.");
   };
 
@@ -444,14 +449,14 @@ const Order = () => {
                 <button
                   type="button"
                   className={activeTab === "delivery" ? "active" : ""}
-                  onClick={() => setActiveTab("delivery")}
+                  onClick={() => handleChangeTab("delivery")}
                 >
                   주문배송
                 </button>
                 <button
                   type="button"
                   className={activeTab === "cancel" ? "active" : ""}
-                  onClick={() => setActiveTab("cancel")}
+                  onClick={() => handleChangeTab("cancel")}
                 >
                   취소/반품 내역
                 </button>

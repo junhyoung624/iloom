@@ -1,0 +1,235 @@
+:root {
+  --main: #303030;
+  --sub: #808080;
+  --line: #c9c9c9;
+}
+
+.best .inner {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.best .title-box {
+  text-align: center;
+  margin-top: 150px;
+  margin-bottom: 50px;
+}
+.best .title-box h2 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--main);
+}
+.best .title-box p {
+  font-size: 23px;
+  color: var(--sub);
+}
+
+.best-swiper-wrap .best-swiper-arrow {
+  position: relative;
+  width: 1550px;
+  margin: 0 auto;
+}
+.best-swiper-wrap .best-swiper-arrow .best-prev,
+.best-swiper-wrap .best-swiper-arrow .best-next {
+  position: absolute;
+  top: 270px;
+  z-index: 10;
+  background: none;
+  border: none;
+  font-size: 60px;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--line);
+}
+.best-swiper-wrap .best-swiper-arrow .best-prev {
+  left: 0px;
+}
+.best-swiper-wrap .best-swiper-arrow .best-next {
+  right: 0px;
+}
+.best-swiper-wrap .swiper {
+  width: 1440px;
+}
+.best-swiper-wrap .swiper-slide {
+  height: auto;
+}
+.best-swiper-wrap .best-item {
+  width: 100%;
+}
+.best-swiper-wrap .best-item > a > img {
+  width: 100%;
+  aspect-ratio: 3/4;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.best-product-list {
+  padding-top: 20px;
+  margin: 0;
+}
+.best-product-list a {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+.best-product-list a img {
+  width: 120px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.best-product-list .product-info {
+  padding-left: 30px;
+  color: var(--main);
+}
+.best-product-list .product-info .serise {
+  font-weight: 300;
+  color: var(--sub);
+}
+.best-product-list .product-info .name {
+  padding-top: 5px;
+  font-size: 17px;
+}
+.best-product-list .product-info .price {
+  font-weight: 500;
+  padding-top: 13px;
+  color: #CA1230;
+}
+
+.section-more-wrap {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  padding: 50px 0 80px;
+}
+
+.section-more-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 36px;
+  color: var(--main);
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s ease;
+}
+.section-more-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--main);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: 0;
+}
+.section-more-btn span {
+  position: relative;
+  z-index: 1;
+}
+.section-more-btn .section-more-arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+.section-more-btn:hover {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.section-more-btn:hover::before {
+  transform: translateX(0);
+}
+.section-more-btn:hover .section-more-arrow {
+  transform: translateX(4px);
+}
+
+@media (max-width: 1024px) {
+  .best .inner {
+    width: 100%;
+    padding: 0 20px;
+  }
+  .best .title-box {
+    margin-top: 80px;
+    margin-bottom: 36px;
+  }
+  .best .title-box h2 {
+    font-size: 32px;
+  }
+  .best .title-box p {
+    font-size: 18px;
+  }
+  .best-swiper-wrap .swiper {
+    width: 100%;
+  }
+  .best-swiper-wrap .best-prev {
+    left: 10px;
+  }
+  .best-swiper-wrap .best-next {
+    right: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .best .inner {
+    width: 100%;
+    padding: 0 16px;
+  }
+  .best .title-box {
+    margin-top: 40px;
+    margin-bottom: 24px;
+  }
+  .best .title-box h2 {
+    font-size: 22px;
+  }
+  .best .title-box p {
+    font-size: 13px;
+  }
+  .best-swiper-wrap .swiper {
+    width: 100%;
+    padding: 0 8px;
+    box-sizing: border-box;
+  }
+  .best-swiper-wrap .best-prev {
+    left: 2px;
+    font-size: 36px;
+  }
+  .best-swiper-wrap .best-next {
+    right: 2px;
+    font-size: 36px;
+  }
+  .best-product-list {
+    padding: 12px 16px 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .best-product-list a {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 0;
+  }
+  .best-product-list a img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 4px;
+  }
+  .best-product-list .product-info {
+    padding-left: 0;
+    padding-top: 8px;
+  }
+  .best-product-list .product-info .serise {
+    font-size: 11px;
+  }
+  .best-product-list .product-info .name {
+    font-size: 13px;
+    padding-top: 4px;
+  }
+  .best-product-list .product-info .price {
+    font-size: 13px;
+    font-weight: 700;
+    padding-top: 4px;
+  }
+}

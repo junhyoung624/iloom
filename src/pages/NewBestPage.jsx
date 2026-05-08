@@ -360,9 +360,9 @@ const NewBestPage = () => {
 
                         {/* ── 상품 목록 ────────────────────────── */}
                         <ul className="sub-product-list">
-                            {pageItem.map((item, id) => (
-                                <li key={id}>
-                                    <SubCard item={item} showCompare={true} />
+                            {pageItem.map((item) => (
+                                <li key={item.id}>
+                                        <SubCard item={item} />
                                 </li>
                             ))}
                         </ul>

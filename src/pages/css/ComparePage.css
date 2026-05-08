@@ -124,3 +124,24 @@
   border-radius: 6px;
   cursor: pointer;
 }
+
+.compare-actions {
+  display: flex;
+  gap: 8px;
+  padding: 8px 0;
+}
+.compare-actions .btn-buy {
+  width: 60%;
+  padding: 8px 0px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  background: #030303;
+  color: #fff;
+  margin: 0 auto;
+}
+.compare-actions .btn-buy:hover {
+  background: #444;
+  transition: 0.3s;
+}

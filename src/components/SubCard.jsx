@@ -44,6 +44,7 @@ const SubCard = ({ item }) => {
     const handleCompareClick = (e) => {
         e.preventDefault()
         e.stopPropagation()
+        toast("비교 상품에 추가되었습니다")
 
         const success = onToggleCompare(item)
         if (success === false) {
@@ -85,6 +86,7 @@ const SubCard = ({ item }) => {
                             className={`compare-btn ${isCompared ? 'active' : ''}`}
                             onClick={handleCompareClick}
                             aria-label="비교 추가"
+                            
                         >
                             <span className="compare-dot" />
                             <span className="compare-label">{isCompared ? '비교중' : '비교'}</span>

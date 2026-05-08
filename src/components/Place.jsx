@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
+import { motion, useMotionValue, animate } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import "./scss/place.scss"
 
@@ -15,6 +16,36 @@ export default function Place() {
         { id: "7", link: "키즈룸", key: "kidsroom", image: "./images/place/kidsroom.png", message: "상상과 웃음이 자라나는 곳" },
     ]
 
+    const loopList = [...placeList, ...placeList, ...placeList]
+    const ITEM_WIDTH = 355
+    const TOTAL_WIDTH = ITEM_WIDTH * placeList.length
+
+    const x = useMotionValue(0)
+    const animRef = useRef(null)
+
+    const startAnimation = (from) => {
+        const remaining = TOTAL_WIDTH - Math.abs(from % TOTAL_WIDTH)
+        const fullDuration = 30
+        const remainingDuration = (remaining / TOTAL_WIDTH) * fullDuration
+
+        animRef.current = animate(x, from - remaining, {
+            duration: remainingDuration,
+            ease: 'linear',
+            onComplete: () => {
+                x.set(0)
+                startAnimation(0)
+            }
+        })
+    }
+
+    useEffect(() => {
+        startAnimation(x.get())
+        return () => animRef.current?.stop()
+    }, [])
+
+    const handleMouseEnter = () => animRef.current?.stop()
+    const handleMouseLeave = () => startAnimation(x.get())
+
     return (
         <section className="place">
             <div className="inner">
@@ -25,45 +56,31 @@ export default function Place() {
                     <p>일룸이 제안하는 새로운 일상</p>
                 </div>
 
-                <div className="accordion-wrap">
-                    {placeList.map((item, index) => (
-                        <div
-                            key={item.id}
-                            className={`accordion-item ${activeIndex === index ? 'active' : ''}`}
-                            onMouseEnter={() => setActiveIndex(index)}
-                            onMouseLeave={() => setActiveIndex(null)}
-                        >
+            <div className="place-swiper-wrap" style={{ overflow: 'hidden' }}>
+                <motion.div
+                    style={{ display: 'flex', gap: '10px', width: 'max-content', x }}
+                    onMouseEnter={handleMouseEnter}
+                    onMouseLeave={handleMouseLeave}
+>
+                <Swiper
+                    navigation={true}
+                    modules={[Navigation]}
+                    slidesPerView={"auto"}
+                    spaceBetween={10}
+                    className="mySwiper"
+                    loop={true}
+                >
+                    {loopList.map((item, index) => (
+                        <div key={index} className="place-item">
                             <Link to={`/${item.link}`}>
-                                <div className="accordion-image-wrap">
-                                    <img src={item.image} alt={item.key} />
-
-                                    <div className="accordion-label">
-                                        <span className="label-vertical">{item.link}</span>
-                                    </div>
-
-                                    <div className="accordion-content">
-                                        <p className="accordion-key">{item.key}</p>
-                                        <p className="accordion-message">{item.message}</p>
-                                        <button className="accordion-btn">더 보기</button>
-                                    </div>
-
-                                    <div className="accordion-overlay" />
-                                </div>
-                                <div className="accordion-label">
-                                    <span className="label-vertical">{item.link}</span>
-                                </div>
-
-                                <div className="accordion-content">
-                                    <p className="accordion-key">{item.key}</p>
-                                    <p className="accordion-message">{item.message}</p>
-                                    <button className="accordion-btn">더 보기</button>
-                                </div>
-
-                                <div className="accordion-overlay" />
+                                <img src={item.image} alt={item.key} />
+                                <p>{item.key}</p>
+                                <span className="place-message">{item.message}</span>
+                                <p className='place-btn'>더 보기</p>
                             </Link>
                         </div>
                     ))}
-                </div>
+                </motion.div>
             </div>
         </section>
     )

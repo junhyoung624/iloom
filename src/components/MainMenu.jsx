@@ -80,8 +80,8 @@ const MainMenu = ({ menus, isHover, isScrolled, onSend, onEnter, isMobileOpen, o
       </div >
 
       {/* 모바일/태블릿 드로어 메뉴 */}
-      <div div className={`mobile-menu-drawer ${isMobileOpen ? 'active' : ''}`
-      } style={{ display: 'flex' }}>
+      <div className={`mobile-menu-drawer ${isMobileOpen ? 'active' : ''}`
+      }>
         <div className="mobile-menu-header">
           <img src="/images/logo-icon/main-logo-white.png" alt="iloom" style={{ filter: 'invert(1)', width: '80px' }} />
           <button className="mobile-menu-close" onClick={onMobileClose}>✕</button>
