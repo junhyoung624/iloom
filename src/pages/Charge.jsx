@@ -39,11 +39,10 @@ export default function Charge() {
     const location = useLocation()
     const directBuyItem = location.state?.directBuyItem
 
-    // ── 결제 수단 ──────────────────────────────────────────────
+
     const [paymentMethod, setPaymentMethod] = useState('card')
     const [showMorePayment, setShowMorePayment] = useState(false)
 
-    // ── 카드 ───────────────────────────────────────────────────
     const [showCardForm, setShowCardForm] = useState(false)
     const [cardForm, setCardForm] = useState({
         name: '',
@@ -57,10 +56,8 @@ export default function Charge() {
     const [registeredCards, setRegisteredCards] = useState([])
     const [selectedCardIndex, setSelectedCardIndex] = useState(0)
 
-    // ── 포인트 충전 모달 ───────────────────────────────────────
     const [showPointModal, setShowPointModal] = useState(false)
 
-    // ── 배송지 모달 ────────────────────────────────────────────
     const [showAddressModal, setShowAddressModal] = useState(false)
     const [addressForm, setAddressForm] = useState({
         name: '삼조네',
@@ -69,7 +66,7 @@ export default function Charge() {
     })
     const [addressDraft, setAddressDraft] = useState({ ...addressForm })
 
-    // ── 배송 요청사항 모달 ─────────────────────────────────────
+
     const [showRequestModal, setShowRequestModal] = useState(false)
     const [requestForm, setRequestForm] = useState({
         message: '도착하시기 전에 연락주시고, 직접 설치해주세요',
@@ -78,16 +75,16 @@ export default function Charge() {
     })
     const [requestDraft, setRequestDraft] = useState({ ...requestForm })
 
-    // ── 쿠폰 ───────────────────────────────────────────────────
+
     const [couponOpen, setCouponOpen] = useState(false)
     const [selectedCoupon, setSelectedCoupon] = useState(null)
 
-    // ── 일룸머니 ───────────────────────────────────────────────
+
     const [useMoney, setUseMoney] = useState(0)
     const [moneyInput, setMoneyInput] = useState('')
     const [usePoint, setUsePoint] = useState(0)
 
-    // ── 비회원 폼 ──────────────────────────────────────────────
+
     const [guestForm, setGuestForm] = useState({
         name: '',
         phone: '',
@@ -104,14 +101,14 @@ export default function Charge() {
     const [isAgree, setIsAgree] = useState(false)
     const [fieldStatus, setFieldStatus] = useState({ phone: 'idle', email: 'idle' })
 
-    // ── 최종 결제 확인 모달 ────────────────────────────────────
+
     const [confirmPay, setConfirmPay] = useState(false)
 
     useEffect(() => {
         onfetchItems()
     }, [])
 
-    // ── Select 옵션 ────────────────────────────────────────────
+
     const regionOptions = [
         { value: '없음', label: '없음' },
         ...store_region
@@ -141,7 +138,7 @@ export default function Charge() {
     const selectedDeliveryReqOption =
         delivery_req_options.find((o) => o.value === guestForm.request) || delivery_req_options[0]
 
-    // ── 카카오 주소 검색 ───────────────────────────────────────
+
     const SCRIPT_URL = '//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js'
     const open = useKakaoPostcodePopup(SCRIPT_URL)
 
@@ -161,7 +158,7 @@ export default function Charge() {
         setErrors((prev) => ({ ...prev, zipCode: '', address: '' }))
     }
 
-    // ── 비회원 폼 핸들러 ───────────────────────────────────────
+
     const validateLiveField = (name, value, isBlur = false) => {
         const trimmedValue = value.trim()
         const phoneRegex = /^01[0-9]-?\d{3,4}-?\d{4}$/
@@ -233,7 +230,7 @@ export default function Charge() {
         return Object.keys(newErrors).length === 0
     }
 
-    // ── 주문 아이템 계산 ───────────────────────────────────────
+
     const orderItems = useMemo(() => {
         if (directBuyItem) {
             const priceNumber = Number(
@@ -289,7 +286,7 @@ export default function Charge() {
         return number.toLocaleString('ko-KR') + '원'
     }
 
-    // ── 쿠폰 핸들러 ────────────────────────────────────────────
+
     const handleCouponSelect = (coupon) => {
         if (selectedCoupon?.id === coupon.id) {
             setSelectedCoupon(null)
@@ -299,7 +296,7 @@ export default function Charge() {
         setCouponOpen(false)
     }
 
-    // ── 일룸머니 핸들러 ────────────────────────────────────────
+
     const handleMoneyApply = () => {
         const val = Number(moneyInput.replace(/,/g, ''))
         const max = Math.min(iloomMoney, totalPrice - couponDiscount - usePoint)
@@ -312,7 +309,7 @@ export default function Charge() {
         setMoneyInput(max.toLocaleString())
     }
 
-    // ── 결제 처리 ──────────────────────────────────────────────
+
     const createOrderNumber = () => {
         const now = new Date()
         const year = now.getFullYear()
@@ -425,7 +422,7 @@ export default function Charge() {
         }
     }
 
-    // ── 카드 핸들러 ────────────────────────────────────────────
+
     const handleCardChange = (e) => {
         const { name, value, type, checked } = e.target
         setCardForm((prev) => ({ ...prev, [name]: type === 'checkbox' ? checked : value }))
@@ -466,7 +463,7 @@ export default function Charge() {
         toast('카드가 등록되었습니다.')
     }
 
-    // ── 배송지 / 요청사항 모달 핸들러 ─────────────────────────
+
     const handleOpenAddress = () => {
         setAddressDraft({ ...addressForm })
         setShowAddressModal(true)
@@ -558,7 +555,7 @@ export default function Charge() {
                     formatPrice={formatPrice}
                 />
 
-                {/* 할인 · 쿠폰 섹션 */}
+
                 <div className="charge-section">
                     <h3 className="section-title">할인 · 쿠폰</h3>
 

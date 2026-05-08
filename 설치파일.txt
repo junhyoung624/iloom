@@ -21,6 +21,8 @@ npm install @number-flow/react - charge 금액 카운트
 
 npm install react-markdown - 챗봇 마크다운 
 
+npm install lenis - 스크롤 무겁게
+
 npm.cmd exec -- mapshaper public/data/skorea-provinces-2018-geo.json -simplify 0.05% keep-shapes -o force format=geojson public/data/skorea-provinces-ui.geojson
 
 

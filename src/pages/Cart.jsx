@@ -212,7 +212,7 @@ export default function Cart() {
               <strong><NumberFlow value={finalPrice} suffix="원" /></strong>
             </div>
             <button className="charge-btn" onClick={handleCharge}>
-              <NumberFlow value={finalPrice} suffix="원" />주문하기
+              결제하러 가기
             </button>
           </div>
         </div>

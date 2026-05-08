@@ -348,21 +348,17 @@ function ModelPart({ part, color, stoolColor }) {
         </group>
     )
 }
-
 function SceneModels({ selectedModel, color, stoolColor }) {
     const groupRef = useRef()
 
     useEffect(() => {
         if (!groupRef.current) return
 
-        // 먼저 이전 보정값 초기화
         groupRef.current.position.set(0, 0, 0)
 
-        // 조합 전체 기준 박스 계산
         const box = new THREE.Box3().setFromObject(groupRef.current)
         const center = box.getCenter(new THREE.Vector3())
 
-        // 전체 조합을 화면 중앙으로 이동
         groupRef.current.position.x -= center.x
         groupRef.current.position.z -= center.z
     }, [selectedModel.key, color, stoolColor])
@@ -380,8 +376,14 @@ function SceneModels({ selectedModel, color, stoolColor }) {
         </group>
     )
 }
-
-function CameraController({ play, introKey, cameraPosition, targetPosition, enabled }) {
+function CameraController({
+    play,
+    introKey,
+    cameraPosition,
+    targetPosition,
+    enabled,
+    zoomLevel
+}) {
     const { camera } = useThree()
     const controlsRef = useRef(null)
     const progressRef = useRef(0)
@@ -396,6 +398,13 @@ function CameraController({ play, introKey, cameraPosition, targetPosition, enab
         () => new THREE.Vector3(...targetPosition),
         [targetPosition]
     )
+
+    useEffect(() => {
+        const zoom = THREE.MathUtils.lerp(30, 14, zoomLevel)
+
+        camera.fov = zoom
+        camera.updateProjectionMatrix()
+    }, [zoomLevel, camera])
 
     useEffect(() => {
         if (!play) {
@@ -596,6 +605,7 @@ export default function Product3DViewer() {
     const [selectedColor, setSelectedColor] = useState(colors[0].value)
     const [showGuide, setShowGuide] = useState(true)
     const [saleTime, setSaleTime] = useState(getSaleTimeLeft)
+    const [zoomLevel, setZoomLevel] = useState(0)
 
     const viewerRef = useRef(null)
     const [playCameraIntro, setPlayCameraIntro] = useState(false)
@@ -772,9 +782,25 @@ export default function Product3DViewer() {
                             cameraPosition={selectedModel.camera}
                             targetPosition={selectedModel.target}
                             enabled={!showGuide}
+                            zoomLevel={zoomLevel}
                         />
                     </Canvas>
+                    <div className="viewer-zoom-bar">
+                        <span>＋</span>
+
+                        <input
+                            type="range"
+                            min="0"
+                            max="1"
+                            step="0.01"
+                            value={zoomLevel}
+                            onChange={(e) => setZoomLevel(Number(e.target.value))}
+                        />
+
+                        <span>－</span>
+                    </div>
                 </div>
+
 
                 <div className="viewer-current-option">
                     현재 선택한 옵션은
