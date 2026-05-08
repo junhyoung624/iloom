@@ -21,6 +21,11 @@ img {
 html {
     scrollbar-gutter: stable;
     font-family: 'Pretendard', sans-serif;
+    overflow-x: clip;
+}
+
+body {
+    overflow-x: clip;
 }
 
 .hero-scroll-section {

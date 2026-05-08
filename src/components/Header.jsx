@@ -54,31 +54,52 @@ const Header = () => {
     clearTimeout(leaveTimer.current)
     setHover(false)
     setIsSearchOpen(false)
-    if (loginMenu.current) { loginMenu.current = false; }
+    if (loginMenu.current) { loginMenu.current = false }
     setUserMenu(false)
     setCartPanel(false)
   }, [location.pathname])
 
   useEffect(() => {
-    if (isSearchOpen) {
-      document.documentElement.style.overflow = 'hidden'
+    const isLocked = cartPanel || userMenu || isSearchOpen
+    if (isLocked) {
+      const scrollY = window.scrollY
+      document.body.style.position = 'fixed'
+      document.body.style.top = `-${scrollY}px`
+      document.body.style.width = '100%'
     } else {
-      document.documentElement.style.overflow = ''
+      const scrollY = document.body.style.top
+      document.body.style.position = ''
+      document.body.style.top = ''
+      document.body.style.width = ''
+      window.scrollTo(0, parseInt(scrollY || '0') * -1)
     }
-    return () => { document.documentElement.style.overflow = '' }
-  }, [isSearchOpen])
+    return () => {
+      const scrollY = document.body.style.top
+      document.body.style.position = ''
+      document.body.style.top = ''
+      document.body.style.width = ''
+      if (scrollY) window.scrollTo(0, parseInt(scrollY) * -1)
+    }
+  }, [cartPanel, userMenu, isSearchOpen])
 
-  useEffect(() => () => { clearTimeout(enterTimer.current); clearTimeout(leaveTimer.current) }, [])
-
+  useEffect(() => () => {
+    clearTimeout(enterTimer.current)
+    clearTimeout(leaveTimer.current)
+  }, [])
 
   useEffect(() => {
-    if (cartPanel || userMenu) {
-      document.body.style.overflow = 'hidden'
-    } else {
-      document.body.style.overflow = ''
+    const handleEsc = (e) => {
+      if (e.key === "Escape") {
+        setIsSearchOpen(false)
+        setUserMenu(false)
+        setCartPanel(false)
+      }
     }
-    return () => { document.body.style.overflow = '' }
-  }, [cartPanel, userMenu])
+    if (isSearchOpen) document.addEventListener("keydown", handleEsc)
+    if (userMenu) document.addEventListener("keydown", handleEsc)
+    if (cartPanel) document.addEventListener("keydown", handleEsc)
+    return () => document.removeEventListener("keydown", handleEsc)
+  }, [isSearchOpen, userMenu, cartPanel])
 
   const handleMenuEnter = () => {
     clearTimeout(leaveTimer.current)
@@ -114,8 +135,8 @@ const Header = () => {
     setIsSearchOpen((prev) => !prev)
     setHover(false)
   }
-  const handleSearchClose = () => setIsSearchOpen(false)
 
+  const handleSearchClose = () => setIsSearchOpen(false)
 
   const handleCartClick = (e) => {
     e.preventDefault()
@@ -127,20 +148,6 @@ const Header = () => {
   const isScrolled = !isHome || scrollProgress > HEADER_ACTIVE_POINT
   const isDarkHeader = isHome && !isScrolled && (isHover || isSearchOpen)
   const isHeaderActive = isScrolled || isSearchOpen || isHover
-
-  useEffect(() => {
-    const handleEsc = (e) => {
-      if (e.key === "Escape") {
-        setIsSearchOpen(false)
-        setUserMenu(false)
-        setCartPanel(false)
-      }
-    }
-    if (isSearchOpen) document.addEventListener("keydown", handleEsc)
-    if (userMenu) document.addEventListener("keydown", handleEsc)
-    if (cartPanel) document.addEventListener("keydown", handleEsc)
-    return () => document.removeEventListener("keydown", handleEsc)
-  }, [isSearchOpen, userMenu, cartPanel])
 
   return (
     <>
@@ -170,19 +177,16 @@ const Header = () => {
         onMobileClose={() => setMobileMenu(false)}
       />
 
-
       <div
         className={`user-menu-overlay ${userMenu || cartPanel || mobileMenu ? 'active' : ''}`}
         onClick={() => { closeBtn(); setCartPanel(false); setMobileMenu(false) }}
       />
 
-
       <div className={`user-menu-wrap ${userMenu ? 'active' : ''}`}>
         <UserMenu userClose={closeBtn} userMenu={userMenu} />
       </div>
 
-
-      <div className={`user-menu-wrap ${cartPanel ? 'active' : ''}`}>
+      <div className={`cart-panel-wrap ${cartPanel ? 'active' : ''}`}>
         <CartPanel onClose={() => setCartPanel(false)} />
       </div>
 
