@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import "./scss/furnitureList.scss"
 
@@ -12,18 +12,41 @@ export default function FurnitureList() {
         { id: "6", key: "조명", image: "./images/furnitureList/FList06.png" },
     ]
 
+    const [visibleItems, setVisibleItems] = useState([])
+    const sectionRef = useRef(null)
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    furnitureList.forEach((_, i) => {
+                        setTimeout(() => {
+                            setVisibleItems(prev => [...prev, i])
+                        }, i * 120)
+                    })
+                    observer.disconnect()
+                }
+            },
+            { threshold: 0.2 }
+        )
+        if (sectionRef.current) observer.observe(sectionRef.current)
+        return () => observer.disconnect()
+    }, [])
+
     return (
-        <section className="furniture-list-section">
+        <section className="furniture-list-section" ref={sectionRef}>
             <div className="furniture-list">
                 <div className="inner">
                     <div className="furniture-list-title">
                         <span>FURNITURE CATEGORY</span>
-
                     </div>
 
                     <ul className="furniture-list-grid">
-                        {furnitureList.map((item) => (
-                            <li key={item.id}>
+                        {furnitureList.map((item, index) => (
+                            <li
+                                key={item.id}
+                                className={`furniture-list-item ${visibleItems.includes(index) ? 'visible' : ''}`}
+                            >
                                 <div className="furniture-item">
                                     <Link to={`/furniturepage?furniture=${item.key}`}>
                                         <div className="furniture-img-box">

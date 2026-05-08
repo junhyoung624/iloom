@@ -218,6 +218,9 @@
 }
 
 .order-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
     padding: 0;
     margin: 0;
 }
@@ -226,10 +229,9 @@
 .order-item {
     display: flex;
     flex-direction: column;
-    border-top: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
-    // margin-bottom: 16px;
+    border: 1px solid #ddd;
     max-width: 1280px;
+    background: #fff;
 
     .order-main-info {
         display: flex;
