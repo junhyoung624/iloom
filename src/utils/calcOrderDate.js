@@ -51,9 +51,9 @@ export const getDeliveryDday = (deliveryDate, now = new Date()) => {
 }
 
 export const getAutoDeliveryStatus = (order, now = new Date()) => {
-    const savedStatus = order.orderStatus || order.state || 'payment'
-    const createdAt = toDate(order.createdAt)
-    const deliveryDate = toDate(order.deliveryDate)
+    const savedStatus = order?.orderStatus || order?.state || 'payment'
+    const createdAt = toDate(order?.createdAt)
+    const deliveryDate = toDate(order?.deliveryDate)
 
     if (!createdAt) return savedStatus
 
@@ -64,6 +64,7 @@ export const getAutoDeliveryStatus = (order, now = new Date()) => {
     if (daysFromOrder < 2) return 'ready'
     if (daysFromOrder < 3) return 'scheduled'
     if (!deliveryDate) return savedStatus
-    if (deliveryDate && isBefore(now, deliveryDate)) return 'shipping'
+    if (isBefore(now, deliveryDate)) return 'shipping'
     return 'done'
 }
+
