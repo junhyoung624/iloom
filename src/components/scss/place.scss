@@ -39,57 +39,20 @@
     }
 }
 
-    .place-swiper-wrap {
-        // padding-left: calc((100vw - 1400px) / 2);
-    }
-
-.accordion-wrap {
-    display: flex;
-    width: 100%;
-    height: 620px;
-    gap: 12px;
+.place-swiper-wrap {
+    overflow: hidden;
 }
 
-.accordion-item {
+.place-item {
     position: relative;
-
-    flex: 1;
-
+    width: 345px;
+    height: 620px;
+    flex-shrink: 0;
     overflow: hidden;
-
-    border-radius: 26px;
-
     cursor: pointer;
 
-    transition:
-        flex 0.9s cubic-bezier(0.22, 1, 0.36, 1),
-        width 0.9s cubic-bezier(0.22, 1, 0.36, 1),
-        transform 0.6s ease;
-
-    // 기본 카드
-    &:not(.active) {
-
-        .accordion-image-wrap {
-            aspect-ratio: auto;
-            height: 100%;
-        }
-
-        .accordion-content {
-            opacity: 0;
-            pointer-events: none;
-        }
-    }
-
-    // 활성 카드
-    &.active {
-        flex: 0 0 calc(620px * 16 / 9);
-
-        .accordion-image-wrap {
-            aspect-ratio: 16 / 9;
-            height: auto;
-        }
-
-        .accordion-overlay {
+    &:hover {
+        .place-overlay {
             background: rgba(0, 0, 0, 0.45);
             backdrop-filter: blur(3px);
         }
@@ -99,36 +62,31 @@
             filter: brightness(0.92);
         }
 
-        .accordion-label {
+        .place-label {
             opacity: 0;
             transform: translate(-50%, -20%);
         }
 
-        .accordion-content {
+        .place-content {
             opacity: 1;
         }
 
-        .accordion-key {
+        .place-key {
             opacity: 1;
             transform: translateY(0);
             transition-delay: 0.15s;
         }
 
-        .accordion-message {
+        .place-message {
             opacity: 1;
             transform: translateY(0);
             transition-delay: 0.3s;
         }
 
-        .accordion-btn {
+        .place-btn {
             opacity: 1;
             transform: translateY(0);
-            transition-delay: 0.45s;
         }
-    }
-
-    &:hover {
-        transform: translateY(-4px);
     }
 
     a {
@@ -139,154 +97,94 @@
     }
 }
 
-// ---------------- IMAGE WRAP ----------------
-
-.accordion-image-wrap {
-    position: relative;
-
+.place-item img {
     width: 100%;
     height: 100%;
-
-    overflow: hidden;
-
-    transition:
-        aspect-ratio 0.9s cubic-bezier(0.22, 1, 0.36, 1),
-        height 0.9s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.accordion-image-wrap img {
-    width: 100%;
-    height: 100%;
-
     object-fit: cover;
-
     transition:
         transform 1.3s cubic-bezier(0.22, 1, 0.36, 1),
         filter 0.8s ease;
 }
 
-// ---------------- OVERLAY ----------------
-
-.accordion-overlay {
+.place-overlay {
     position: absolute;
     inset: 0;
-
     background: rgba(0, 0, 0, 0.18);
-
     z-index: 1;
-
     transition:
         background 0.7s ease,
         backdrop-filter 0.7s ease;
 }
 
-// ---------------- DEFAULT LABEL ----------------
-
-.accordion-label {
+.place-label {
     position: absolute;
-
     left: 50%;
     top: 50%;
-
     transform: translate(-50%, -50%);
-
     z-index: 3;
-
+    color: #fff;
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    white-space: nowrap;
     transition:
         opacity 0.45s ease,
         transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
-
-    .label-vertical {
-        writing-mode: initial;
-        text-orientation: initial;
-
-        color: #fff;
-
-        font-size: 24px;
-        font-weight: 500;
-
-        letter-spacing: 0.08em;
-
-        white-space: nowrap;
-    }
 }
 
-// ---------------- ACTIVE CONTENT ----------------
-
-.accordion-content {
+.place-content {
     position: absolute;
-
     left: 50%;
     top: 50%;
-
     transform: translate(-50%, -50%);
-
     width: 100%;
-
-    padding: 0 40px;
-
+    padding: 0 30px;
     text-align: center;
-
     z-index: 4;
-
     opacity: 0;
-
     transition: opacity 0.5s ease;
 }
 
-.accordion-key,
-.accordion-message,
-.accordion-btn {
+.place-key,
+.place-message,
+.place-btn {
     opacity: 0;
-
     transform: translateY(40px);
-
     transition:
         opacity 0.8s ease,
         transform 1s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.accordion-key {
+.place-key {
     color: #fff;
-
-    font-size: 48px;
+    font-size: 36px;
     font-weight: 700;
-
-    margin-bottom: 18px;
-
+    margin-bottom: 14px;
     letter-spacing: 0.04em;
 }
 
-.accordion-message {
+.place-message {
     color: rgba(255, 255, 255, 0.88);
-
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 300;
-
-    margin-bottom: 34px;
-
+    margin-bottom: 30px;
     line-height: 1.6;
 }
 
-.accordion-btn {
+.place-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     width: 190px;
     height: 54px;
-
     border-radius: 999px;
-
     background: rgba(255, 255, 255, 0.08);
-
     border: 1px solid rgba(255, 255, 255, 0.75);
-
     color: #fff;
-
     font-size: 15px;
     font-weight: 500;
-
     cursor: pointer;
-
     backdrop-filter: blur(10px);
-
     transition:
         opacity 0.8s ease,
         transform 1s cubic-bezier(0.22, 1, 0.36, 1),
@@ -296,15 +194,10 @@
     &:hover {
         background: var(--main);
         border-color: var(--main);
-
-        transform: translateY(-4px);
     }
 }
 
-// ---------------- RESPONSIVE ----------------
-
 @media (max-width: 1440px) {
-
     .place .inner {
         width: 100%;
         padding: 0 20px;
@@ -312,38 +205,20 @@
 }
 
 @media (max-width: 768px) {
-
-    .accordion-wrap {
-        flex-direction: column;
-        height: auto;
+    .place-item {
+        width: 260px;
+        height: 420px;
     }
 
-    .accordion-item {
-        flex: none !important;
-        height: 90px;
-
-        transition:
-            height 0.7s cubic-bezier(0.22, 1, 0.36, 1),
-            transform 0.4s ease;
-
-        &.active {
-            height: 56vw;
-        }
+    .place-key {
+        font-size: 24px;
     }
 
-    .accordion-label .label-vertical {
-        font-size: 18px;
-    }
-
-    .accordion-key {
-        font-size: 28px;
-    }
-
-    .accordion-message {
+    .place-message {
         font-size: 13px;
     }
 
-    .accordion-btn {
+    .place-btn {
         width: 130px;
         height: 42px;
         font-size: 12px;

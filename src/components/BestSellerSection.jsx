@@ -1,12 +1,11 @@
-import React, { useRef, useState } from 'react'
-import { Navigation } from 'swiper/modules'
+import React, { useEffect, useRef, useState } from 'react'
+import { Autoplay, Navigation } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import "./scss/bestseller.scss"
 import "./scss/bestseller-dot.scss"
 import 'swiper/css'
 import 'swiper/css/navigation'
 import { Link } from 'react-router-dom'
-
 
 const DOT_POSITIONS = [
   [{ x: 40, y: 65 }, { x: 65, y: 38 }],
@@ -19,7 +18,6 @@ const DOT_POSITIONS = [
 
 function BestDot({ product, position }) {
   const [visible, setVisible] = useState(false)
-
   const isRight = position.x > 50
   const isBottom = position.y > 50
 
@@ -31,7 +29,6 @@ function BestDot({ product, position }) {
       onMouseLeave={() => setVisible(false)}
     >
       <div className="best-dot-area" />
-
       <div
         className={`best-price-tag ${visible ? 'best-price-tag--visible' : 'best-price-tag--hidden'}`}
         style={{
@@ -66,6 +63,9 @@ function BestDot({ product, position }) {
 export default function Best() {
   const prevRef = useRef(null)
   const nextRef = useRef(null)
+  const sectionRef = useRef(null)
+
+  const [visibleItems, setVisibleItems] = useState([])
 
   const bestList = [
     {
@@ -112,8 +112,26 @@ export default function Best() {
     }
   ]
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          bestList.forEach((_, i) => {
+            setTimeout(() => {
+              setVisibleItems(prev => [...prev, i])
+            }, i * 120)
+          })
+          observer.disconnect()
+        }
+      },
+      { threshold: 0.2 }
+    )
+    if (sectionRef.current) observer.observe(sectionRef.current)
+    return () => observer.disconnect()
+  }, [])
+
   return (
-    <section className="best">
+    <section className="best" ref={sectionRef}>
       <div className="inner">
         <div className="title-box">
           <h2>iloom best seller</h2>
@@ -122,12 +140,11 @@ export default function Best() {
       </div>
 
       <div className="best-swiper-wrap">
-        <div className="best-swiper-arrow">
-          <button ref={prevRef} className="best-prev">&#8249;</button>
-          <button ref={nextRef} className="best-next">&#8250;</button>
-        </div>
+        <button ref={prevRef} className="best-prev">&#8249;</button>
+        <button ref={nextRef} className="best-next">&#8250;</button>
+
         <Swiper
-          modules={[Navigation]}
+          modules={[Navigation, Autoplay]}
           navigation={{
             prevEl: prevRef.current,
             nextEl: nextRef.current,
@@ -139,10 +156,16 @@ export default function Best() {
           slidesPerView={3}
           spaceBetween={30}
           loop={true}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
         >
           {bestList.map((item, slideIndex) => (
             <SwiperSlide key={item.id}>
-              <div className="best-item">
+              <div
+                className={`best-item ${visibleItems.includes(slideIndex) ? 'visible' : ''}`}
+              >
                 <div className="best-img-wrap">
                   <img src={item.image} alt={item.key} />
                   <ul className="best-dot-list">

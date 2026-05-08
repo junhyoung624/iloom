@@ -9,7 +9,7 @@ export default function CartModal({ onClose }) {
         <div className="cart-modal-overlay" onClick={onClose}>
             <div className="cart-modal" onClick={(e) => e.stopPropagation()}>
                 <div className="cart-modal-text">
-                    <span className="cart-modal-label">CART</span>
+
                     <p className="cart-modal-title">장바구니에 담았습니다.</p>
                     <p className="cart-modal-sub">장바구니 페이지로 이동합니다.</p>
                 </div>

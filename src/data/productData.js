@@ -31751,7 +31751,7 @@ export const productData = [
   {
     "id": "ISB0055A",
     "series": "파베",
-    "name": "파베 3인(패브릭)",
+    "name": "파베 2인(패브릭)",
     "material": "패브릭",
     "price": "990,000",
     "options": [
@@ -31789,7 +31789,7 @@ export const productData = [
   {
     "id": "ISB0054A",
     "series": "파베",
-    "name": "파베 4인(패브릭)",
+    "name": "파베 3인(패브릭)",
     "material": "패브릭",
     "price": "1,290,000",
     "options": [

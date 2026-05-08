@@ -15,6 +15,7 @@ export const spaceCoordiData = [
                 tag_position_code: "translateY(1.8rem)",
                 //url:
                 src: "./images/spaceCoordi/livingroom/products/console.png",
+                hover_src: "/images/iloom_images/living-room/storage/HC70Y18EL_1.jpg",
                 default: true,
             },
             {
@@ -26,6 +27,7 @@ export const spaceCoordiData = [
                 tag_position_code: "translateX(1.8rem) translateY(-1.5rem)",
                 //url:
                 src: "./images/spaceCoordi/livingroom/products/lp.png",
+                hover_src: "/images/iloom_images/living-room/storage/HC80Y12EEL_1.jpg",
                 default: false,
             },
             {
@@ -37,6 +39,7 @@ export const spaceCoordiData = [
                 tag_position_code: "translateX(-50%) translateY(1.8rem)",
                 //url:
                 src: "./images/spaceCoordi/livingroom/products/table.png",
+                hover_src: "/images/iloom_images/living-room/sofa/IDV0000A_1.jpg",
                 default: false,
             },
             {
@@ -48,6 +51,7 @@ export const spaceCoordiData = [
                 tag_position_code: "translateX(1.8rem) translateY(-50%) translateY(-1.5rem)",
                 //url:
                 src: "./images/spaceCoordi/livingroom/products/light.png",
+                hover_src: "/images/iloom_images/lighting/portable-lighting/IAL00NT00A_STB_1.png",
                 default: false,
 
             },
@@ -60,6 +64,7 @@ export const spaceCoordiData = [
                 tag_position_code: "translateX(-100%) translateX(-0.5rem) translateY(-1.5rem)",
                 //url:
                 src: "./images/spaceCoordi/livingroom/products/sofa.png",
+                hover_src: "/images/iloom_images/living-room/sofa/ISB0018A_5T0_1.png",
                 default: false,
             },
         ],
@@ -82,6 +87,7 @@ export const spaceCoordiData = [
                 tag_position_code: "translateY(1.8rem)",
                 //url:
                 src: "./images/spaceCoordi/bedroom/products/bed.png",
+                hover_src: "/images/iloom_images/bedroom/bed/IBF0024A_1.jpg",
                 default: true,
             },
             {
@@ -92,7 +98,9 @@ export const spaceCoordiData = [
                 position: { x: 664, y: 400 },
                 tag_position_code: "translateX(1.8rem) translateY(-1.5rem)",
                 //url:
+
                 src: "./images/spaceCoordi/bedroom/products/table.png",
+                hover_src: "/./images/spaceCoordi/bedroom/products/table.png",
                 default: false,
             },
             {
@@ -104,6 +112,7 @@ export const spaceCoordiData = [
                 tag_position_code: "translateX(1.8rem) translateY(-1.5rem)",
                 //url:
                 src: "./images/spaceCoordi/bedroom/products/chair.png",
+                hover_src: "/images/iloom_images/bedroom/vanity/ITY40AN00A_a_1.jpg",
                 default: false,
             },
             {
@@ -115,6 +124,7 @@ export const spaceCoordiData = [
                 tag_position_code: "translateY(1.8rem)",
                 //url:
                 src: "./images/spaceCoordi/bedroom/products/sofa.png",
+                hover_src: "/images/iloom_images/living-room/sofa/ISR20AJ00A_1.jpg",
                 default: false,
 
             },
@@ -127,6 +137,7 @@ export const spaceCoordiData = [
                 tag_position_code: "translateX(-100%) translateX(-0.5rem) translateY(-1.5rem)",
                 //url:
                 src: "./images/spaceCoordi/bedroom/products/light.png",
+                hover_src: "/images/iloom_images/lighting/portable-lighting/IAL00NT02A_MGP_2.png",
                 default: false,
             },
         ],
@@ -149,6 +160,7 @@ export const spaceCoordiData = [
                 tag_position_code: "translateY(1.8rem)",
                 //url:
                 src: "./images/spaceCoordi/diningroom/products/chair.png",
+                hover_src: "/images/iloom_images/dining-room/dining-chair/HCH0014R_1.jpg",
                 default: true,
             },
             {
@@ -161,6 +173,7 @@ export const spaceCoordiData = [
                 tag_position_code: "translateY(-100%) translateY(-0.4rem)",
                 //url:
                 src: "./images/spaceCoordi/diningroom/products/table.png",
+                hover_src: "/images/iloom_images/dining-room/dining-table/IDD0021A_1.jpg",
                 default: false,
             },
             {
@@ -173,6 +186,7 @@ export const spaceCoordiData = [
                 tag_position_code: "translateY(1.8rem)",
                 //url:
                 src: "./images/spaceCoordi/diningroom/products/glass_door.png",
+                hover_src: "/images/iloom_images/dining-room/storage/IKB0009A_1.jpg",
                 default: false,
             },
             {
@@ -185,6 +199,7 @@ export const spaceCoordiData = [
                 tag_position_code: "translateX(-100%) translateX(-0.5rem) translateY(-1.5rem)",
                 //url:
                 src: "./images/spaceCoordi/diningroom/products/light_drawer.png",
+                hover_src: "/images/iloom_images/dining-room/storage/HCB1E10L_1.jpg",
                 default: false,
             },
             {
@@ -197,6 +212,7 @@ export const spaceCoordiData = [
                 tag_position_code: "translateY(1.8rem)",
                 //url:
                 src: "./images/spaceCoordi/diningroom/products/pentry.png",
+                hover_src: "/images/iloom_images/dining-room/dining-chair/HC60Y082H_1.jpg",
                 default: false,
             },
         ],
@@ -219,6 +235,7 @@ export const spaceCoordiData = [
                 tag_position_code: "translateY(1.8rem)",
                 //url:
                 src: "./images/spaceCoordi/libraryroom/products/bookshelf_long.png",
+                hover_src: "/images/iloom_images/home-library/bookshelf/HSFC086NA_1.jpg",
                 default: true,
             },
             {
@@ -231,6 +248,7 @@ export const spaceCoordiData = [
                 tag_position_code: "translateX(1.8rem) translateY(-1.5rem)",
                 //url:
                 src: "./images/spaceCoordi/libraryroom/products/table_brown.png",
+                hover_src: "/images/iloom_images/home-library/desk/HSVD015_1.jpg",
                 default: false,
             },
             {
@@ -243,6 +261,7 @@ export const spaceCoordiData = [
                 tag_position_code: "translateX(-50%) translateY(1.8rem)",
                 //url:
                 src: "./images/spaceCoordi/libraryroom/products/bookshelf.png",
+                hover_src: "/images/iloom_images/home-library/bookshelf/HSFC162N_1.jpg",
                 default: false,
             },
             {
@@ -255,6 +274,7 @@ export const spaceCoordiData = [
                 tag_position_code: "translateX(-50%) translateY(-100%) translateY(-0.4rem)",
                 //url:
                 src: "./images/spaceCoordi/libraryroom/products/table_white.png",
+                hover_src: "/images/iloom_images/dining-room/dining-table/HSUD018T_1.jpg",
                 default: false,
             },
             {
@@ -267,6 +287,7 @@ export const spaceCoordiData = [
                 tag_position_code: "translateX(1.8rem) translateY(-1.5rem)",
                 //url:
                 src: "./images/spaceCoordi/libraryroom/products/chair.png",
+                hover_src: "/images/iloom_images/home-library/chair/HCH3601L_1.jpg",
                 default: false,
             },
         ],
