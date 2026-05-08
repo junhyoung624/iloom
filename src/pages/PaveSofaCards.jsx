@@ -9,8 +9,8 @@ export default function PaveSofaCards() {
 
     const sofaCards = useMemo(() => {
         const targets = [
+            (item) => item.series === '파베' && item.category2 === '소파' && item.name.includes('2인'),
             (item) => item.series === '파베' && item.category2 === '소파' && item.name.includes('3인'),
-            (item) => item.series === '파베' && item.category2 === '소파' && item.name.includes('4인'),
             (item) => item.series === '파베' && item.name.includes('스툴'),
         ]
 

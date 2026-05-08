@@ -51,7 +51,6 @@ import ComparePage from './pages/ComparePage'
 import CompareBar from './components/CompareBar'
 
 
-
 function App() {
   const [isLoading, setIsLoading] = useState(true)
   const { onfetchItems, onMakeMenu, fetchWishlist, clearWishlist } = useProductStore()
@@ -163,8 +162,9 @@ function App() {
           },
         }}
       />
-    </>
+</>
   )
+
 }
 
 export default App
