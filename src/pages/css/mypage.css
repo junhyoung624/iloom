@@ -52,6 +52,7 @@
   font-weight: 600;
   color: #c9c9c9;
   text-align: left;
+  cursor: pointer;
 }
 .mypage-member-info .info-section .profile button:hover {
   color: #808080;
@@ -455,4 +456,87 @@ h3 {
 }
 .leave-modal__confirm:hover {
   background: #000;
+}
+
+@media (max-width: 1024px) {
+  .mypage-member-info .info-section .info-box {
+    flex-direction: column;
+    gap: 30px;
+    padding: 24px;
+  }
+  .mypage-member-info .info-section .profile {
+    padding-left: 0;
+    width: 100%;
+  }
+  .mypage-member-info .info-section .info-view {
+    gap: 24px 30px;
+  }
+  .mypage-member-info .sns-section .sns-box {
+    flex-direction: column;
+    gap: 20px;
+    padding: 24px;
+  }
+  .mypage-member-info .agree-section .agree-box {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .mypage-member-info .agree-section .agree-btn {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .mypage-member-info .member-content h2 {
+    font-size: 24px;
+  }
+  .mypage-member-info .member-content h3 {
+    font-size: 15px;
+  }
+  .mypage-member-info .info-section .info-box {
+    padding: 16px;
+    gap: 20px;
+  }
+  .mypage-member-info .info-section .profile {
+    align-items: center;
+  }
+  .mypage-member-info .info-section .profile strong {
+    font-size: 28px;
+  }
+  .mypage-member-info .info-section .profile p {
+    font-size: 18px;
+  }
+  .mypage-member-info .info-section .info-view {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .mypage-member-info .info-section .birth-box {
+    align-items: flex-start;
+  }
+  .mypage-member-info .info-section .birth-box .gender-box {
+    margin-left: 0;
+  }
+  .mypage-member-info .sns-section .sns-item {
+    gap: 16px;
+  }
+  .mypage-member-info .sns-section .sns-item img {
+    width: 40px;
+    height: 40px;
+  }
+  .mypage-member-info .sns-section .sns-item p {
+    font-size: 14px;
+  }
+  .mypage-member-info .agree-section .agree-box {
+    padding: 20px 16px;
+  }
+  .mypage-member-info .agree-section .agree-content label {
+    font-size: 14px;
+  }
+  .modal {
+    width: 90%;
+    padding: 24px 16px;
+  }
+  .leave-modal {
+    width: 90%;
+    padding: 24px 16px;
+  }
 }

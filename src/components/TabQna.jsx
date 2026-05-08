@@ -16,7 +16,7 @@ export default function TabQna({ productQna, user, product }) {
             return
         }
 
-        addInquiry({
+        addInquiry(user, {
             category: '제품 Q&A',
             text: `[${qnaTitle}] ${qnaContent}`,
             productId: product?.id || '',
