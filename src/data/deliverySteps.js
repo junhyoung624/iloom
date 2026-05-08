@@ -21,7 +21,7 @@ export const deliverySteps = [
     },
     {
         key: "done",
-        label: "설치완료",
+        label: "배송완료",
         desc: "상품 배송과 설치가 완료되었습니다.",
     },
 ];

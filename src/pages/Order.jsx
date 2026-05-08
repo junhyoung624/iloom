@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
 import { useProductStore } from '../store/useProductStore';
 import { deliverySteps } from '../data/deliverySteps';
-import DeliveryStatusBar from './OrderComponents/DeliveryStatusBar';
 import SubPageEmptyState from '../components/SubPageEmptyState';
 import "./scss/order.scss";
 import { formatOrderDate, getAutoDeliveryStatus } from '../utils/calcOrderDate';
@@ -23,6 +22,8 @@ const cancelSections = [
 const completedSections = [
   { key: "done", label: "배송 완료" },
 ];
+
+const deliveryFlowSteps = deliverySteps;
 
 const cancelReasonOptions = [
   "배송 일정 변경",
@@ -105,8 +106,8 @@ const Order = () => {
   } = useProductStore();
 
   const [activeTab, setActiveTab] = useState("delivery");
+  const [selectedDeliveryStatus, setSelectedDeliveryStatus] = useState("all");
   const [selectedPeriod, setSelectedPeriod] = useState(1);
-  const [openStatusId, setOpenStatusId] = useState(null);
   const [detailId, setDetailId] = useState(null);
   const [dateChangeTarget, setDateChangeTarget] = useState(null);
   const [requestedDate, setRequestedDate] = useState("");
@@ -136,10 +137,25 @@ const Order = () => {
     return ordersWithMeta.filter((order) => isWithinPeriod(order.orderDate, selectedPeriod));
   }, [ordersWithMeta, selectedPeriod]);
 
+  const deliveryStatusCounts = useMemo(() => {
+    return periodOrders.reduce((counts, order) => {
+      const itemCount = order.items.filter((item) => item.cancelStatus === "none").length;
+      if (itemCount === 0) return counts;
+
+      return {
+        ...counts,
+        all: counts.all + itemCount,
+        [order.orderStatus]: (counts[order.orderStatus] || 0) + itemCount,
+      };
+    }, { all: 0 });
+  }, [periodOrders]);
+
   const visibleCount = periodOrders.reduce((count, order) => {
     const itemCount = order.items.filter((item) => {
       if (activeTab === "delivery") {
-        return item.cancelStatus === "none" && order.orderStatus !== "done";
+        return item.cancelStatus === "none"
+          && order.orderStatus !== "done"
+          && (selectedDeliveryStatus === "all" || order.orderStatus === selectedDeliveryStatus);
       }
 
       if (activeTab === "completed") {
@@ -157,6 +173,7 @@ const Order = () => {
       if (activeTab === "delivery") {
         return order.orderStatus === sectionKey
           && order.orderStatus !== "done"
+          && (selectedDeliveryStatus === "all" || order.orderStatus === selectedDeliveryStatus)
           && item.cancelStatus === "none";
       }
 
@@ -180,13 +197,15 @@ const Order = () => {
 
   const handleChangeTab = (tab) => {
     setActiveTab(tab);
-    setOpenStatusId(null);
+    setSelectedDeliveryStatus(tab === "completed" ? "done" : "all");
     setDetailId(null);
     scrollToPageTop();
   };
 
-  const handleToggleStatus = (id) => {
-    setOpenStatusId((prev) => (prev === id ? null : id));
+  const handleSelectDeliveryStatus = (status) => {
+    setDetailId(null);
+    setSelectedDeliveryStatus(status);
+    setActiveTab(status === "done" ? "completed" : "delivery");
   };
 
   const openDateChange = (order) => {
@@ -273,8 +292,6 @@ const Order = () => {
 
   const renderProductItem = (order, item) => {
     const itemKey = `${order.orderNumber}-${item.id}-${item.itemIndex}`;
-    const statusToggleId = `${itemKey}-status`;
-    const isStatusOpen = openStatusId === statusToggleId;
     const isDetailOpen = detailId === itemKey;
     const isCancelable = order.orderStatus === "payment" && item.cancelStatus === "none";
     const canRequestDateChange = ["payment", "ready", "scheduled"].includes(order.orderStatus)
@@ -319,16 +336,6 @@ const Order = () => {
                 )}
               </p>
               <div className="btn-group">
-                {item.cancelStatus === "none" && (
-                  <button
-                    type="button"
-                    className={`status-toggle-btn ${isStatusOpen ? "active" : ""}`}
-                    onClick={() => handleToggleStatus(statusToggleId)}
-                  >
-                    {isStatusOpen ? "배송상태 닫기" : "배송조회"}
-                  </button>
-                )}
-
                 <button
                   type="button"
                   className={`status-toggle-btn ${isDetailOpen ? "active" : ""}`}
@@ -359,15 +366,6 @@ const Order = () => {
               </div>
             </div>
           </div>
-
-          {isStatusOpen && item.cancelStatus === "none" && (
-            <div className="status">
-              <p className="txt-area">배송 상태</p>
-              <div className="show-status-area">
-                <DeliveryStatusBar status={order.orderStatus} />
-              </div>
-            </div>
-          )}
 
           {renderDetailPanel(order, item)}
         </div>
@@ -424,6 +422,39 @@ const Order = () => {
         </div>
         {sectionOrders.map(({ order, items }) => renderOrderCard(order, items))}
       </section>
+    );
+  };
+
+  const renderDeliveryStatusFilter = () => {
+    if (!["delivery", "completed"].includes(activeTab) || deliveryStatusCounts.all === 0) return null;
+
+    return (
+      <div className="order-status-filter" aria-label="배송 상태 필터">
+        {deliveryFlowSteps.map((step, index) => {
+          const count = deliveryStatusCounts[step.key] || 0;
+          const hasItems = count > 0;
+          const isSelected = activeTab === "completed"
+            ? step.key === "done"
+            : selectedDeliveryStatus === step.key;
+
+          return (
+            <button
+              type="button"
+              key={step.key}
+              className={`status-filter-step ${hasItems ? "has-items" : ""} ${isSelected ? "selected" : ""}`}
+              disabled={!hasItems}
+              onClick={() => handleSelectDeliveryStatus(step.key)}
+            >
+              <span className="status-filter-top">
+                <span className="status-filter-circle">{index + 1}</span>
+                {index !== deliveryFlowSteps.length - 1 && <span className="status-filter-line" />}
+              </span>
+              <span className="status-filter-label">{step.label}</span>
+              <span className="status-filter-count">{count}</span>
+            </button>
+          );
+        })}
+      </div>
     );
   };
 
@@ -485,15 +516,29 @@ const Order = () => {
           </div>
 
           <div className="order-summary">
-            <strong>
-              {activeTab === "delivery"
-                ? "주문배송"
-                : activeTab === "completed"
-                  ? "배송완료"
-                  : "취소/반품 내역"}
-            </strong>
-            <span>{visibleCount}개 상품</span>
+            <div className="order-summary__title">
+              <strong>
+                {activeTab === "delivery"
+                  ? "주문배송"
+                  : activeTab === "completed"
+                    ? "배송완료"
+                    : "취소/반품 내역"}
+              </strong>
+              <span>{visibleCount}개 상품</span>
+            </div>
+
+            {["delivery", "completed"].includes(activeTab) && (
+              <button
+                type="button"
+                className={`order-summary__all-btn ${activeTab === "delivery" && selectedDeliveryStatus === "all" ? "active" : ""}`}
+                onClick={() => handleSelectDeliveryStatus("all")}
+              >
+                진행중 전체
+              </button>
+            )}
           </div>
+
+          {renderDeliveryStatusFilter()}
 
           {visibleCount === 0 ? (
             <SubPageEmptyState
@@ -506,7 +551,10 @@ const Order = () => {
           ) : (
             <div className="order-list-wrap">
               {activeTab === "delivery"
-                ? deliverySteps.filter((step) => step.key !== "done").map(renderSection)
+                ? deliveryFlowSteps
+                  .filter((step) => step.key !== "done")
+                  .filter((step) => selectedDeliveryStatus === "all" || step.key === selectedDeliveryStatus)
+                  .map(renderSection)
                 : activeTab === "completed"
                   ? completedSections.map(renderSection)
                   : cancelSections.map(renderSection)}
