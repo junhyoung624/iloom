@@ -171,6 +171,23 @@ const Order = () => {
     });
   };
 
+  const scrollToPageTop = () => {
+    requestAnimationFrame(() => {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "auto",
+      });
+    });
+  };
+
+  const handleChangeTab = (tab) => {
+    setActiveTab(tab);
+    setOpenStatusId(null);
+    setDetailId(null);
+    scrollToPageTop();
+  };
+
   const handleToggleStatus = (id) => {
     setOpenStatusId((prev) => (prev === id ? null : id));
   };
@@ -205,8 +222,7 @@ const Order = () => {
       cancelReason
     );
     setCancelTarget(null);
-    setActiveTab("cancel");
-    setOpenStatusId(null);
+    handleChangeTab("cancel");
     toast("주문 취소가 접수되었습니다.");
   };
 
@@ -433,14 +449,14 @@ const Order = () => {
                 <button
                   type="button"
                   className={activeTab === "delivery" ? "active" : ""}
-                  onClick={() => setActiveTab("delivery")}
+                  onClick={() => handleChangeTab("delivery")}
                 >
                   주문배송
                 </button>
                 <button
                   type="button"
                   className={activeTab === "cancel" ? "active" : ""}
-                  onClick={() => setActiveTab("cancel")}
+                  onClick={() => handleChangeTab("cancel")}
                 >
                   취소/반품 내역
                 </button>
