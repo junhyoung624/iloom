@@ -1,0 +1,297 @@
+.ocp-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 3000;
+    background: rgba(0, 0, 0, 0.48);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    animation: ocpFadeIn 0.3s ease;
+}
+
+.ocp-modal {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    background: #fff;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.22);
+    animation: ocpSlideUp 0.35s ease;
+    overflow: hidden;
+    // border-radius: 10px;
+}
+
+.ocp-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: rgba(0, 0, 0, 0.08);
+    border-radius: 50%;
+    color: #555;
+    font-size: 14px;
+    cursor: pointer;
+    z-index: 20;
+    transition: 0.2s;
+
+    &:hover {
+        background: #111;
+        color: #fff;
+    }
+}
+
+/* ------------------------- */
+/* TAG AREA */
+/* ------------------------- */
+
+.ocp-tag-wrap {
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    padding-top: 120px;
+    margin-bottom: 18px;
+
+    overflow: hidden;
+}
+
+/* 고정 rope */
+
+.ocp-rope {
+    position: absolute;
+    top: -70px;
+    left: 50%;
+
+    width: 6px;
+    height: 118px;
+
+    transform: translateX(-50%);
+
+    background: linear-gradient(to right,
+            #d9d9d9 0%,
+            #d9d9d9 50%,
+            #c6c6c6 100%);
+
+    z-index: 5;
+
+    border-radius: 2px;
+}
+
+/* 회전만 하는 영역 */
+
+.ocp-tag-swing {
+    position: relative;
+
+    width: 180px;
+    height: 210px;
+
+    transform-origin: 50% -60px;
+
+    animation: tagSwing 3s ease-in-out infinite;
+
+    z-index: 3;
+}
+
+/* 실제 tag */
+
+.ocp-tag {
+    position: absolute;
+    top: -120px;
+    left: 50%;
+
+    width: 340px;
+
+    transform: translateX(-50%);
+}
+
+.ocp-tag-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+
+
+}
+
+/* ------------------------- */
+/* BODY */
+/* ------------------------- */
+
+.ocp-body {
+    padding: 0 40px 40px;
+    text-align: center;
+
+    h3 {
+        font-size: 22px;
+        font-weight: 700;
+        color: #111;
+        margin: 0 0 6px;
+        letter-spacing: -0.03em;
+    }
+
+    >p {
+        font-size: 13px;
+        color: #999;
+        margin: 0 0 24px;
+    }
+}
+
+.ocp-info-box {
+    background: #f7f7f7;
+    padding: 20px 24px 16px;
+    text-align: left;
+    margin-bottom: 24px;
+    // border-radius: 8px;
+}
+
+.ocp-info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    font-size: 14px;
+    color: #444;
+    border-bottom: 1px solid #ebebeb;
+
+    &:last-child {
+        border-bottom: none;
+    }
+
+    span:first-child {
+        color: #888;
+        flex-shrink: 0;
+        margin-right: 12px;
+    }
+
+    span:last-child {
+        text-align: right;
+    }
+
+    &.total {
+        padding-top: 16px;
+        margin-top: 4px;
+        border-top: 2px solid #e0e0e0;
+        border-bottom: none;
+
+        span {
+            font-size: 16px;
+            font-weight: 700;
+            color: #111;
+        }
+
+        strong {
+            font-size: 26px;
+            font-weight: 800;
+            color: #111;
+            letter-spacing: -0.03em;
+        }
+    }
+
+    &.point span:last-child {
+        color: #CA1230;
+        font-weight: 600;
+    }
+}
+
+.ocp-confirm-btn {
+    width: 100%;
+    height: 54px;
+    background: #3a3a3a;
+    color: #fff;
+    border: none;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.22s ease;
+    letter-spacing: -0.02em;
+    // border-radius: 6px;
+
+    &:hover {
+        background: #111;
+    }
+}
+
+/* ------------------------- */
+/* ANIMATION */
+/* ------------------------- */
+
+@keyframes tagSwing {
+    0% {
+        transform: rotate(-5deg);
+    }
+
+    50% {
+        transform: rotate(5deg);
+    }
+
+    100% {
+        transform: rotate(-5deg);
+    }
+}
+
+@keyframes ocpFadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes ocpSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* ------------------------- */
+/* MOBILE */
+/* ------------------------- */
+
+@media (max-width: 480px) {
+
+    .ocp-modal {
+        max-width: 100%;
+    }
+
+    .ocp-tag-wrap {
+        padding-top: 100px;
+    }
+
+    .ocp-rope {
+        height: 98px;
+    }
+
+    .ocp-tag-swing {
+        width: 150px;
+        height: 175px;
+    }
+
+    .ocp-tag {
+        width: 150px;
+        height: 175px;
+        top: 18px;
+    }
+
+    .ocp-body {
+        padding: 0 20px 28px;
+
+        h3 {
+            font-size: 18px;
+        }
+    }
+
+    .ocp-info-row.total strong {
+        font-size: 22px;
+    }
+}

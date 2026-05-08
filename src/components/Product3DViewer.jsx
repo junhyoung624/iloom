@@ -382,7 +382,7 @@ function CameraController({
     cameraPosition,
     targetPosition,
     enabled,
-    zoomLevel
+
 }) {
     const { camera } = useThree()
     const controlsRef = useRef(null)
@@ -399,12 +399,7 @@ function CameraController({
         [targetPosition]
     )
 
-    useEffect(() => {
-        const zoom = THREE.MathUtils.lerp(30, 14, zoomLevel)
 
-        camera.fov = zoom
-        camera.updateProjectionMatrix()
-    }, [zoomLevel, camera])
 
     useEffect(() => {
         if (!play) {
@@ -463,8 +458,8 @@ function CameraController({
             ref={controlsRef}
             enabled={enabled}
             enablePan={false}
-            minDistance={3.8}
-            maxDistance={7.4}
+            enableZoom={true}
+            enableRotate={true}
             target={targetPosition}
         />
     )
@@ -605,7 +600,7 @@ export default function Product3DViewer() {
     const [selectedColor, setSelectedColor] = useState(colors[0].value)
     const [showGuide, setShowGuide] = useState(true)
     const [saleTime, setSaleTime] = useState(getSaleTimeLeft)
-    const [zoomLevel, setZoomLevel] = useState(0)
+
 
     const viewerRef = useRef(null)
     const [playCameraIntro, setPlayCameraIntro] = useState(false)
@@ -731,6 +726,7 @@ export default function Product3DViewer() {
                     className="viewer-box"
                     onPointerDown={() => setShowGuide(false)}
                     onTouchStart={() => setShowGuide(false)}
+                    onWheel={(e) => e.stopPropagation()}
                     style={{ pointerEvents: showGuide ? 'none' : 'auto' }}
                 >
                     {showGuide && <DragGuide />}
@@ -745,18 +741,8 @@ export default function Product3DViewer() {
                         }}
                     >
                         <ambientLight intensity={0.85} />
-
-                        <directionalLight
-                            position={[4, 5, 4]}
-                            intensity={0.78}
-                            castShadow
-                        />
-
-                        <directionalLight
-                            position={[-3, 2, -3]}
-                            intensity={0.15}
-                        />
-
+                        <directionalLight position={[4, 5, 4]} intensity={0.78} castShadow />
+                        <directionalLight position={[-3, 2, -3]} intensity={0.15} />
                         <Environment preset="studio" environmentIntensity={0.045} />
 
                         <Suspense
@@ -782,25 +768,9 @@ export default function Product3DViewer() {
                             cameraPosition={selectedModel.camera}
                             targetPosition={selectedModel.target}
                             enabled={!showGuide}
-                            zoomLevel={zoomLevel}
                         />
                     </Canvas>
-                    <div className="viewer-zoom-bar">
-                        <span>＋</span>
-
-                        <input
-                            type="range"
-                            min="0"
-                            max="1"
-                            step="0.01"
-                            value={zoomLevel}
-                            onChange={(e) => setZoomLevel(Number(e.target.value))}
-                        />
-
-                        <span>－</span>
-                    </div>
                 </div>
-
 
                 <div className="viewer-current-option">
                     현재 선택한 옵션은
@@ -853,6 +823,7 @@ export default function Product3DViewer() {
             </div>
 
             <PaveSofaCards />
+
         </section>
     )
 }
