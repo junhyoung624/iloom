@@ -1,38 +1,48 @@
 .store-list-item-wrap {
-    padding: 20px;
-    margin-left: 10px;
+    padding: 12px 14px;
+    margin-left: 0;
+
+    p {
+        margin: 0;
+    }
 }
 
 .store-item-top {
     color: #808080;
-    font-size: 20px;
-    margin-bottom: 15px;
+    font-size: 12px;
+    margin-bottom: 6px;
 }
 
 .store-item-main {
     .store-main-info {
-        font-size: 24px;
+        font-size: 16px;
         font-weight: 700;
-        margin-bottom: 15px;
+        margin-bottom: 6px;
     }
 
     .store-sub-info {
         color: #808080;
-        font-size: 20px;
-        gap: 10px;
+        font-size: 13px;
+        gap: 6px;
+        line-height: 1.4;
 
         .addr {
             display: flex;
-            gap: 10px;
-            margin-bottom: 10px;
+            gap: 6px;
+            margin-bottom: 5px;
             //padding-bottom: 10px;
         }
 
         .phone {
             display: flex;
-            gap: 10px;
+            gap: 6px;
             // margin-bottom: 10px;
             //padding-bottom: 10px;
+        }
+
+        img {
+            width: 14px;
+            height: 14px;
         }
     }
 }

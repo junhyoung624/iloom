@@ -51,7 +51,7 @@
     }
 }
 
-/* 장바구니 */
+
 .dock-cart-wrap {
     position: relative;
     width: 100%;
@@ -98,12 +98,7 @@
     pointer-events: none;
 }
 
-/* 
-    핵심:
-    기본 상태에서는 pointer-events: none 이라서
-    DockTab 위쪽 빈 영역을 절대 안 잡음.
-    active 붙었을 때만 살아남.
-*/
+
 .dock-cart-bridge {
     position: absolute;
     left: 50%;
@@ -310,7 +305,7 @@
     }
 }
 
-/* 버튼 공통 */
+
 .dock-phone-btn,
 .dock-instagram-btn {
     border: none;
@@ -330,7 +325,7 @@
     }
 }
 
-/* 전화번호 토스트 */
+
 .dock-phone-toast {
     position: fixed;
     bottom: 110px;

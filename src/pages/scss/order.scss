@@ -226,8 +226,9 @@
 .order-item {
     display: flex;
     flex-direction: column;
-    border: 1px solid #ddd;
-    margin-bottom: 16px;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    // margin-bottom: 16px;
     max-width: 1280px;
 
     .order-main-info {
