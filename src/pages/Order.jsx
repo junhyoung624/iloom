@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
 import { useProductStore } from '../store/useProductStore';
@@ -127,17 +127,6 @@ const Order = () => {
   const [requestedDate, setRequestedDate] = useState("");
   const [cancelTarget, setCancelTarget] = useState(null);
   const [cancelReason, setCancelReason] = useState(cancelReasonOptions[0]);
-
-  useEffect(() => {
-    const handleEsc = (e) => {
-      if (e.key === "Escape") {
-        setCancelTarget(null)
-        setDateChangeTarget(null)
-      }
-    }
-    document.addEventListener("keydown", handleEsc)
-    return () => document.removeEventListener("keydown", handleEsc)
-  }, [])
 
   const ordersWithMeta = useMemo(() => {
     return orderList.map((order) => {

@@ -74,7 +74,7 @@ export default function MyPage() {
                     <div className="info-box">
                         <div className="profile">
                             <p>반가워요!</p>
-                            <strong>{user?.name}님</strong>
+                            <strong>{user?.name || user?.nicname || user?.displayname || '회원'}님</strong>
                             <button onClick={() => setIsOpen(true)}>내 정보 변경</button>
                         </div>
 
