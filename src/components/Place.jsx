@@ -60,6 +60,14 @@ export default function Place() {
                     style={{ display: 'flex', gap: '10px', width: 'max-content', x }}
                     onMouseEnter={handleMouseEnter}
                     onMouseLeave={handleMouseLeave}
+>
+                <Swiper
+                    navigation={true}
+                    modules={[Navigation]}
+                    slidesPerView={"auto"}
+                    spaceBetween={10}
+                    className="mySwiper"
+                    loop={true}
                 >
                     {loopList.map((item, index) => (
                         <div key={index} className="place-item">
