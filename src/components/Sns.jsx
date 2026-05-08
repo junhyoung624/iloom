@@ -5,6 +5,7 @@ import { TextAnimate } from '../pages/Text-animate';
 export default function Sns() {
     const cardRefs = useRef([]);
     const tabCardRefs = useRef([]);
+    const isFirstRender = useRef(true);
 
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
     const [activeTab, setActiveTab] = useState("short");
@@ -32,14 +33,25 @@ export default function Sns() {
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
+    const showCardsSequentially = (refs) => {
+        refs.forEach((card, index) => {
+            setTimeout(() => {
+                card?.classList.add("show");
+                if (index === 0) {
+                    card?.querySelector("video")?.play().catch(() => { });
+                }
+            }, index * 180);
+        });
+    };
 
     useEffect(() => {
         const refs = activeTab === "short" ? cardRefs.current : tabCardRefs.current;
+        const validRefs = refs.filter(Boolean);
 
+        // 모든 카드 초기화
         [...cardRefs.current, ...tabCardRefs.current].forEach(card => {
             if (!card) return;
             card.classList.remove("show");
-
             const video = card.querySelector("video");
             if (video) {
                 video.pause();
@@ -47,43 +59,59 @@ export default function Sns() {
             }
         });
 
-        // 순차 등장
-        refs.forEach((card, index) => {
-            setTimeout(() => {
-                card?.classList.add("show");
+        if (isFirstRender.current) {
+            // 최초 로딩: IntersectionObserver로 스크롤 감지
+            isFirstRender.current = false;
 
-                if (index === 0) {
-                    const video = card?.querySelector("video");
-                    video?.play().catch(() => { });
-                }
-            }, index * 180);
-        });
+            const observer = new IntersectionObserver(
+                (entries, obs) => {
+                    const visible = entries.filter(e => e.isIntersecting);
+                    if (visible.length === 0) return;
 
-    }, [activeTab]);
+                    // 첫 감지 시 전체 순차 등장
+                    showCardsSequentially(validRefs);
+                    obs.disconnect();
+                },
+                { threshold: 0.1 }
+            );
+
+            const raf = requestAnimationFrame(() => {
+                validRefs.forEach(card => observer.observe(card));
+            });
+
+            return () => {
+                cancelAnimationFrame(raf);
+                observer.disconnect();
+            };
+
+        } else {
+            // 탭 전환: 바로 순차 등장
+            const raf = requestAnimationFrame(() => {
+                showCardsSequentially(validRefs);
+            });
+
+            return () => cancelAnimationFrame(raf);
+        }
+
+    }, [activeTab, isMobile]);
 
     const handleMouseEnter = (e, type) => {
         const refs = type === "short" ? cardRefs.current : tabCardRefs.current;
         const index = refs.indexOf(e.currentTarget);
-
         if (index === 0) return;
-
         refs[0]?.querySelector("video")?.pause();
-
         e.currentTarget.querySelector("video")?.play().catch(() => { });
     };
 
     const handleMouseLeave = (e, type) => {
         const refs = type === "short" ? cardRefs.current : tabCardRefs.current;
         const index = refs.indexOf(e.currentTarget);
-
         if (index === 0) return;
-
         const video = e.currentTarget.querySelector("video");
         if (video) {
             video.pause();
             video.currentTime = 0;
         }
-
         refs[0]?.querySelector("video")?.play().catch(() => { });
     };
 

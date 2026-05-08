@@ -49,8 +49,7 @@ import { useCustomWishStore } from './store/useCustomWishStore'
 import Header from './components/Header'
 import ComparePage from './pages/ComparePage'
 import CompareBar from './components/CompareBar'
-import 'lenis/dist/lenis.css'
-import { ReactLenis } from 'lenis/react'
+
 
 
 function App() {
@@ -90,7 +89,7 @@ function App() {
   }, [bannerVisible])
 
   return (
-    <ReactLenis root>
+    <>
       {isLoading && <LoadingScreen onFinish={handleFinish} />}
 
       <ScrollTop />
@@ -164,7 +163,7 @@ function App() {
           },
         }}
       />
-    </ReactLenis>
+    </>
   )
 }
 
