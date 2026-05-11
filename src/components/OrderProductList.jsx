@@ -1,4 +1,14 @@
+import { colorData } from "../data/colorData"
 export default function OrderProductList({ orderItems, totalPrice, formatPrice }) {
+    const getColorInfo = (productId, colorCode) => {
+        const found = colorData.find(c => c.productCd === String(productId))
+        console.log('found:', found, 'productId:', productId)
+        if (!found) return null
+        const idx = found.colorCd.indexOf(colorCode)
+        console.log('idx:', idx, 'colorCode:', colorCode)
+        if (idx === -1) return null
+         return '/images/' + found.localImgPath[idx]
+    }
     return (
         <div className="charge-section">
             <h3 className="section-title">주문 상품</h3>
@@ -32,12 +42,23 @@ export default function OrderProductList({ orderItems, totalPrice, formatPrice }
                                     <h4>{item.series || '일룸'}</h4>
                                     <p>{item.name}</p>
 
-                                    {item.color && (
-                                        <div className="option-line">
-                                            <span>[필수] 색상: {item.color}</span>
-                                            <span className="color-dot"></span>
-                                        </div>
-                                    )}
+                                    {item.color && (() => {
+                                        const imgPath = getColorInfo(item.id, item.color)
+                                        return (
+                                            <div className="option-line">
+                                                <span>[필수] 색상: {item.color}</span>
+                                                {imgPath && (
+                                                    <img
+                                                        src={imgPath}
+                                                        alt={item.color}
+                                                        className="color-dot"
+                                                        style={{ width: '20px', height: '20px', borderRadius: '50%', objectFit: 'cover' }}
+                                                    />
+                                                )}
+                                            </div>
+                                        )
+                                    })()}
+
                                 </div>
                             </div>
 

@@ -97,7 +97,7 @@ export default function Notice() {
               <br />
               수 있습니다.
             </p>
-            <Link to="/">매장 안내 바로가기</Link>
+            <Link to="/store-info">매장 안내 바로가기</Link>
           </div>
         </div>
 
