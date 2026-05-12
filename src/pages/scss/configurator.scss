@@ -1,0 +1,519 @@
+// ── Configurator Page ─────────────────────────────────────
+//  레이아웃: 좌측 = 스크롤 트리거 영역(sticky 3D 캔버스) / 우측 = 사이드바
+
+.cfg-page {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 60px;
+  align-items: flex-start;
+}
+
+// ── 뷰어 영역 (스크롤 트리거) ───────────────────────────────
+.cfg-viewer-area {
+  width: calc(100% - 360px);  // 전체에서 사이드바 딱 빼기
+  flex-shrink: 0;
+  position: relative;
+  min-height: 240vh;
+}
+
+.cfg-viewer-sticky {
+  position: sticky;
+  top: 60px;
+  height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  padding: 20px 24px 16px;
+  gap: 12px;
+}
+
+.cfg-viewer-label {
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #999;
+  margin: 0;
+  text-align: center;
+  width: 100%;
+}
+
+.cfg-canvas-wrap {
+  flex: 1;
+  width: 100%;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+
+  canvas {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+
+// ── 화살표 오버레이 ──────────────────────────────────────────
+.cfg-canvas-arrows {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.cfg-arrow {
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(17, 17, 17, 0.72);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: all;
+  transition: background 0.15s, transform 0.15s;
+  backdrop-filter: blur(4px);
+
+  &:hover {
+    background: rgba(17, 17, 17, 0.92);
+    transform: scale(1.1);
+  }
+
+  &--right {
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &:hover { transform: translateY(-50%) scale(1.1); }
+  }
+
+  &--top {
+    top: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    &:hover { transform: translateX(-50%) scale(1.1); }
+  }
+}
+
+// ── 스크롤 힌트 ──────────────────────────────────────────────
+.cfg-scroll-hint {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: #888;
+  text-transform: uppercase;
+  pointer-events: none;
+  transition: opacity 0.4s;
+  animation: cfg-bounce 2s ease-in-out infinite;
+
+  &.hidden { opacity: 0; }
+}
+
+@keyframes cfg-bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50%       { transform: translateX(-50%) translateY(5px); }
+}
+
+// ── 뷰 인디케이터 ────────────────────────────────────────────
+.cfg-view-indicator {
+  width: 80px;
+
+  &__bar {
+    width: 100%;
+    height: 2px;
+    background: #d8d4ce;
+    border-radius: 99px;
+    overflow: hidden;
+  }
+
+  &__fill {
+    height: 100%;
+    background: #333;
+    border-radius: 99px;
+    transition: width 0.05s linear;
+  }
+}
+
+// ── 스크롤 공간 ──────────────────────────────────────────────
+.cfg-scroll-spacer {
+  height: 120vh;
+}
+
+// ── 사이드바 ─────────────────────────────────────────────────
+.cfg-sidebar {
+  width: 360px;
+  flex-shrink: 0;
+  height: calc(100vh - 60px);
+  position: sticky;
+  top: 60px;
+  overflow-y: auto;
+  background: #fff;
+  border-left: 1px solid #ebebeb;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 26px 40px;
+
+  &::-webkit-scrollbar { width: 3px; }
+  &::-webkit-scrollbar-thumb { background: #e0e0e0; border-radius: 99px; }
+
+  &__top { margin-bottom: 24px; }
+
+  &__brand {
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    color: #aaa;
+    margin: 0 0 5px;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    font-size: 26px;
+    font-weight: 700;
+    color: #111;
+    letter-spacing: -0.02em;
+    margin: 0;
+  }
+}
+
+// ── 섹션 ─────────────────────────────────────────────────────
+.cfg-section {
+  padding: 20px 0;
+  border-bottom: 1px solid #f0f0f0;
+
+  &__label-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+  }
+
+  &__label {
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    color: #aaa;
+    text-transform: uppercase;
+    margin: 0 0 14px;
+    font-weight: 500;
+  }
+
+  &__cell-tag {
+    font-size: 11px;
+    font-weight: 700;
+    color: #3A80E9;
+    background: #EBF2FF;
+    padding: 3px 9px;
+    border-radius: 99px;
+    letter-spacing: 0;
+  }
+}
+
+// ── 스테퍼 ───────────────────────────────────────────────────
+.cfg-grid-control {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    span { font-size: 14px; color: #444; font-weight: 500; }
+  }
+
+  &__hint { font-size: 11px; color: #bbb; margin: 0; }
+}
+
+.cfg-stepper {
+  display: flex;
+  align-items: center;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  overflow: hidden;
+
+  button {
+    width: 32px;
+    height: 32px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 17px;
+    color: #555;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.12s;
+
+    &:hover:not(:disabled) { background: #f5f5f5; }
+    &:disabled { color: #ddd; cursor: not-allowed; }
+  }
+
+  span {
+    min-width: 34px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+    color: #111;
+    border-left: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+    line-height: 32px;
+  }
+}
+
+// ── 패널 버튼 ────────────────────────────────────────────────
+.cfg-panel-list {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-bottom: 18px;
+}
+
+.cfg-panel-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 11px 14px;
+  border: 1.5px solid #e5e5e5;
+  border-radius: 9px;
+  background: none;
+  cursor: pointer;
+  transition: border-color 0.14s, background 0.14s;
+
+  &__name { font-size: 14px; color: #333; font-weight: 500; }
+  &__price { font-size: 12px; color: #aaa; }
+
+  &.active {
+    border-color: #111;
+    background: #fafafa;
+
+    .cfg-panel-btn__name { color: #111; font-weight: 700; }
+    .cfg-panel-btn__price { color: #555; }
+  }
+}
+
+// ── 색상 ─────────────────────────────────────────────────────
+.cfg-color-block {
+  &__title {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    color: #bbb;
+    text-transform: uppercase;
+    margin: 0 0 10px;
+    font-weight: 500;
+  }
+}
+
+.cfg-color-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 7px;
+  margin-bottom: 8px;
+}
+
+.cfg-color-swatch {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 6px;
+  background: var(--swatch);
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: transform 0.12s, border-color 0.12s;
+  position: relative;
+
+  &.active {
+    border-color: #111;
+    transform: scale(1.1);
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: -5px;
+      border: 1.5px solid #111;
+      border-radius: 9px;
+    }
+  }
+}
+
+.cfg-color-name {
+  font-size: 12px;
+  color: #888;
+  letter-spacing: 0.04em;
+  margin: 0;
+}
+
+// ── 전체 적용 ────────────────────────────────────────────────
+.cfg-apply-all {
+  margin-top: 14px;
+
+  button {
+    width: 100%;
+    padding: 9px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background: none;
+    font-size: 13px;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.14s;
+
+    &:hover { background: #111; color: #fff; border-color: #111; }
+  }
+}
+
+// ── 프레임 뱃지 ──────────────────────────────────────────────
+.cfg-frame-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 13px;
+  background: #f8f8f8;
+  border-radius: 8px;
+  border: 1px solid #e5e5e5;
+  font-size: 13px;
+  color: #444;
+  font-weight: 500;
+
+  &__dot {
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ececec 25%, #aaa 100%);
+    border: 1px solid #ccc;
+    flex-shrink: 0;
+  }
+}
+
+// ── 가격 요약 ────────────────────────────────────────────────
+.cfg-summary {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #f0f0f0;
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #777;
+  }
+
+  &__total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 13px;
+    border-top: 1.5px solid #111;
+    margin-top: 4px;
+
+    span { font-size: 14px; font-weight: 600; color: #111; }
+    strong { font-size: 21px; font-weight: 700; color: #111; letter-spacing: -0.02em; }
+  }
+}
+
+// ── 주문 버튼 ────────────────────────────────────────────────
+.cfg-order-btn {
+  margin-top: 16px;
+  width: 100%;
+  padding: 15px;
+  background: #111;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 0.02em;
+  transition: opacity 0.16s;
+
+  &:hover { opacity: 0.82; }
+}
+
+// ── 높이 타입 버튼 ─────────────────────────────────────────
+.cfg-height-btns {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.cfg-height-btn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 8px;
+  border: 1.5px solid #e5e5e5;
+  border-radius: 9px;
+  background: none;
+  cursor: pointer;
+  transition: border-color 0.14s, background 0.14s;
+  font-size: 12px;
+  color: #555;
+  font-weight: 500;
+
+  &.active {
+    border-color: #111;
+    background: #fafafa;
+    color: #111;
+    font-weight: 700;
+  }
+
+  &__bar {
+    width: 36px;
+    background: #ccc;
+    border-radius: 3px;
+    transition: background 0.14s;
+
+    &--full  { height: 24px; }
+    &--half  { height: 12px; }
+  }
+
+  &.active &__bar { background: #555; }
+}
+
+// ── 고무 발 패드 옵션 ─────────────────────────────────────────
+.cfg-foot-pad {
+  margin-top: 14px;
+
+  &__label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-size: 13px;
+    color: #333;
+    font-weight: 500;
+
+    input[type="checkbox"] {
+      accent-color: #111;
+      cursor: pointer;
+      width: 15px;
+      height: 15px;
+    }
+
+    span:last-child { // price
+      margin-left: auto;
+      color: #888;
+      font-weight: 400;
+    }
+  }
+
+  &__desc {
+    margin: 5px 0 0 23px;
+    font-size: 11px;
+    color: #bbb;
+    letter-spacing: 0.02em;
+  }
+}

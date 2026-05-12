@@ -10,8 +10,8 @@ const MainMenu = ({ menus, isHover, isScrolled, onSend, onEnter, isMobileOpen, o
     { key: "BestSeller", label: "베스트셀러" },
     { key: "series", label: "시리즈" },
     { key: "store-info", label: "매장안내" },
-    { key: "magazine", label: "매거진" },
-    { key: "magazine", label: "이벤트" },
+    { key: "magazine", label: "매거진/이벤트" },
+    { key: "customize", label: "커스터마이즈" },
     { key: "notice", label: "공지사항" },
     { key: "companypage", label: "회사소개" }
   ]
