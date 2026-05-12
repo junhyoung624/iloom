@@ -7,6 +7,7 @@ import 'swiper/css/navigation'
 import "./scss/series.scss"
 import { productData } from '../data/productData'
 import Card from './Card'
+import ButtonTabs from './common/ButtonTabs'
 
 const tabs = ["에디", "하이프", "레마", "코모"]
 
@@ -57,19 +58,12 @@ export default function Series() {
                 </div>
 
                 <div className="item">
-                    <div className="tab-btn-menu">
-                        {tabs.map((tab, id) => (
-                            <button
-                                type="button"
-                                key={id}
-                                className={activeTab === tab ?
-                                    "series-name active" : "series-name"}
-                                onClick={() => setActiveTab(tab)}
-                            >
-                                {tab}
-                            </button>
-                        ))}
-                    </div>
+                    <ButtonTabs
+                        items={tabs}
+                        activeKey={activeTab}
+                        onChange={setActiveTab}
+                        ariaLabel="series tabs"
+                    />
 
                     <ul className="item-card-wrap">
                         {seriesItem.map((item, index) => (

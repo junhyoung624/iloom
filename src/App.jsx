@@ -49,6 +49,7 @@ import { useCustomWishStore } from './store/useCustomWishStore'
 import Header from './components/Header'
 import ComparePage from './pages/ComparePage'
 import CompareBar from './components/CompareBar'
+import Configurator from './pages/Configurator.jsx'
 
 
 function App() {
@@ -121,6 +122,7 @@ function App() {
             <Route path="/furniturepage" element={<PageTransition><FurniturePage /></PageTransition>} />
             <Route path="/new" element={<PageTransition><NewBestPage /></PageTransition>} />
             <Route path="/BestSeller" element={<PageTransition><NewBestPage /></PageTransition>} />
+            <Route path="/customize" element={<Configurator />} />
             <Route path="/compare" element={<ComparePage />} />
 
             {/* 마이페이지 레이아웃 */}
@@ -162,7 +164,7 @@ function App() {
           },
         }}
       />
-</>
+    </>
   )
 
 }

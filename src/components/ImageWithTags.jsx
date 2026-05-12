@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import "./scss/ImageWithTags.scss";
 import { spaceCoordiData } from '../data/spaceCoordiData.js';
 import CoordiItemList from './CoordiItemList.jsx';
+import ButtonTabs from './common/ButtonTabs.jsx';
 
 
 export default function ImageWithTags() {
@@ -20,10 +21,6 @@ export default function ImageWithTags() {
         const defaultItem = currentProductList.filter((item) => item.default).map((item) => item.id);
         setVisibleTags(defaultItem);
     }, [selectedTab]);
-
-    const handleTabBtn = (tab) => {
-        setSelectedTab(tab);
-    }
 
     const handleShopBtn = () => {
         const isAllSelected = visibleTags.length === allIdArr.length;
@@ -49,15 +46,12 @@ export default function ImageWithTags() {
     return (
         <div>
             <div className='shoppable-area-wrap'>
-                <div className="tab-menu">
-                    <ul className='tab-menu-list'>
-                        {tab_menu.map((tab, id) =>
-                            <li key={id}
-                                className={`tab-menu-name ${selectedTab === tab ? "tab-active" : ""}`}
-                                onClick={() => handleTabBtn(tab)}>{tab}</li>
-                        )}
-                    </ul>
-                </div>
+                <ButtonTabs
+                    items={tab_menu}
+                    activeKey={selectedTab}
+                    onChange={setSelectedTab}
+                    ariaLabel="space coordination tabs"
+                />
                 <div>
                     <span>
                         <img src={spaceCoordiData.filter(item => item.tab === selectedTab)[0].space_image_url} alt="." />

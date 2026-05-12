@@ -4,7 +4,6 @@ import { OrbitControls, useGLTF, Environment, Html } from '@react-three/drei'
 import * as THREE from 'three'
 import './scss/product3dviewer.scss'
 import PaveSofaCards from '../pages/PaveSofaCards'
-import { rotate } from 'three/tsl'
 
 const QUALITY_STATS = [
     {
@@ -155,22 +154,16 @@ const colors = [
     { name: '그레이', value: '#cfcfcf', renderValue: '#c8d2d4' },
 ]
 
-const SALE_DAYS = 7
+const SALE_DAYS = 60
 
 function getSaleTimeLeft() {
+
     const now = new Date()
-    const savedEndDate = localStorage.getItem('familySaleEndDate')
 
-    let endDate
+    const endDate = new Date()
 
-    if (savedEndDate) {
-        endDate = new Date(savedEndDate)
-    } else {
-        endDate = new Date()
-        endDate.setDate(now.getDate() + SALE_DAYS)
-        endDate.setHours(23, 59, 59, 999)
-        localStorage.setItem('familySaleEndDate', endDate.toISOString())
-    }
+    endDate.setDate(now.getDate() + SALE_DAYS)
+    endDate.setHours(23, 59, 59, 999)
 
     const diff = endDate.getTime() - now.getTime()
 
@@ -185,9 +178,18 @@ function getSaleTimeLeft() {
     }
 
     const day = Math.ceil(diff / (1000 * 60 * 60 * 24))
-    const hours = String(Math.floor((diff / (1000 * 60 * 60)) % 24)).padStart(2, '0')
-    const minutes = String(Math.floor((diff / (1000 * 60)) % 60)).padStart(2, '0')
-    const seconds = String(Math.floor((diff / 1000) % 60)).padStart(2, '0')
+
+    const hours = String(
+        Math.floor((diff / (1000 * 60 * 60)) % 24)
+    ).padStart(2, '0')
+
+    const minutes = String(
+        Math.floor((diff / (1000 * 60)) % 60)
+    ).padStart(2, '0')
+
+    const seconds = String(
+        Math.floor((diff / 1000) % 60)
+    ).padStart(2, '0')
 
     return {
         day,
@@ -599,7 +601,23 @@ export default function Product3DViewer() {
     const [selectedModelKey, setSelectedModelKey] = useState(MODEL_LIST[0].key)
     const [selectedColor, setSelectedColor] = useState(colors[0].value)
     const [showGuide, setShowGuide] = useState(true)
-    const [saleTime, setSaleTime] = useState(getSaleTimeLeft)
+    const [saleTime, setSaleTime] = useState({
+        day: 60,
+        hours: '00',
+        minutes: '00',
+        seconds: '00',
+        isEnded: false,
+    })
+
+    useEffect(() => {
+        setSaleTime(getSaleTimeLeft())
+
+        const timer = setInterval(() => {
+            setSaleTime(getSaleTimeLeft())
+        }, 1000)
+
+        return () => clearInterval(timer)
+    }, [])
 
 
     const viewerRef = useRef(null)
@@ -732,7 +750,7 @@ export default function Product3DViewer() {
                     {showGuide && <DragGuide />}
 
                     <Canvas
-                        shadows
+                        shadows={{ type: THREE.PCFShadowMap }}
                         camera={{ position: selectedModel.camera, fov: 28 }}
                         gl={{ alpha: true, antialias: true }}
                         onCreated={({ gl }) => {

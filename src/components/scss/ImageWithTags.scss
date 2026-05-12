@@ -1,92 +1,14 @@
 .shoppable-area-wrap {
     position: relative;
-    //background: yellowgreen;
-    //border: 2px solid blue;
     max-width: 1440px;
     margin: 0 auto;
 
-    //margin: 10px;
-    .tab-menu-list {
-        display: flex;
-        //justify-content: space-evenly;
-        justify-content: center;
-
-        // li {
-        //     background: yellow;
-        // }
+    .base-tabs {
+        margin-bottom: 36px;
     }
-
-    .tab-menu-name {
-        padding: 10px 18px;
-        border: none;
-        background: transparent;
-        color: var(--sub);
-        cursor: pointer;
-        position: relative;
-        margin-bottom: 20px;
-        //font-size: 18px;
-        //margin-top: 100px;
-    }
-
-
-    .tab-menu-list {
-        display: flex;
-        justify-content: center;
-        gap: 32px;
-    }
-
-    .tab-menu-name {
-        position: relative;
-        padding: 6px 2px;
-        border: none;
-        background: transparent;
-        color: #999;
-        cursor: pointer;
-        font-size: 18px;
-        font-weight: 600;
-        transition: color 0.3s;
-    }
-
-    /* underline 기본 */
-    .tab-menu-name::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: -6px;
-        width: 0%;
-        height: 2px;
-        background: var(--main);
-        transition: width 0.3s ease;
-    }
-
-    /* hover */
-    .tab-menu-name:hover {
-        color: #000;
-    }
-
-    .tab-menu-name:hover::after {
-        width: 100%;
-    }
-
-    /* active 상태 */
-    .tab-menu-name.tab-active {
-        color: var(--main);
-        font-weight: 600;
-    }
-
-    .tab-menu-name.tab-active::after {
-        width: 100%;
-    }
-
-
-    .tab-active::after {
-        width: 100%;
-    }
-
 }
 
 .dot-and-box-wrap {
-    //position: relative;
     top: 0;
     left: 0;
     background: goldenrod;
@@ -101,22 +23,11 @@
     height: 60px;
 }
 
-// .dot-area {
-//     background: black;
-// }
 .dot-area {
-    //will-change: opacity, visibility;
     box-sizing: border-box;
-    // transition: border-color 250ms ease-in-out, opacity 250ms ease-in-out, visibility 250ms ease-in-out;
-    // transform: scale(0.999);
-    // padding: 0;
     width: 1.5rem;
     height: 1.5rem;
-    // border: 1px solid; // background-clip: padding-box;
     position: absolute;
-    // background-color: #ddd;
-    // opacity: 0;
-    // //visibility: hidden;
     border-radius: 64px;
     line-height: .5;
     display: flex;
@@ -124,8 +35,6 @@
     justify-content: center;
     background: rgba(0, 0, 0, 0.5);
 }
-
-
 
 .dot-area::after {
     content: "";
@@ -137,22 +46,11 @@
     height: .65rem;
     border-radius: 64px;
     transition: transform 250ms ease-in-out;
-
 }
 
 .dot-area:hover::after {
-    // width: .45rem;
-    // height: .45rem;
     transform: scale(0.8);
-
 }
-
-// .dot-area:hover::before {
-//     top: -0.7rem;
-//     left: -0.7rem;
-//     right: -0.7rem;
-//     bottom: -0.7rem;
-// }
 
 .dot-area::before {
     content: "";
@@ -162,14 +60,7 @@
     right: -0.5rem;
     bottom: -0.5rem;
     display: block;
-
-    // background: black;
-    // opacity: 50%;
-    // border-radius: 50%;
-    // border: 2px solid #ddd;
 }
-
-
 
 .price-tag-active {
     position: relative;
@@ -183,7 +74,7 @@
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.25s ease, visibility 0.25s ease;
-    pointer-events: none; // 숨겨진 상태에서 마우스 이벤트 차단
+    pointer-events: none;
 }
 
 .dot-active {
@@ -196,14 +87,13 @@
 
 .shop-btn-active {
     opacity: 0.9;
-    // border: 1px solid black;
-    // border-radius: 50%;
 }
 
 .price-tag-inner {
     display: flex;
     height: 80px;
-
+    background: white;
+    opacity: 90%;
 
     .img-info {
         width: 80px;
@@ -212,8 +102,6 @@
 
         img {
             transform: scale(0.5);
-            // justify-content: center;
-            // align-items: center;
         }
     }
 
@@ -241,38 +129,23 @@
 
         >p {
             white-space: nowrap;
-            /* 줄바꿈 방지 */
             overflow: hidden;
-            /* 영역 밖 숨김 */
             text-overflow: ellipsis;
-            /* 말줄임표 처리 */
             display: -webkit-box;
             -webkit-line-clamp: 1;
             line-clamp: 1;
             -webkit-box-orient: vertical;
         }
-
     }
 
     .button-area {
         border-left: 1.5px solid rgba(223, 223, 223, 1);
-
         height: 80px;
         display: flex;
         align-items: center;
-
-
 
         .tag_arrow_btn:hover {
             transform: scale(1.2);
         }
     }
-
-
-    background: white;
-    //padding: 5px 0;
-    opacity: 90%;
-    //width: 200px;
-    display: flex;
-    //flex-direction: column;
 }
