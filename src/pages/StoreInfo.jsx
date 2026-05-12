@@ -102,7 +102,7 @@ const StoreInfo = () => {
     }
 
     const mapScript = document.createElement("script")
-    mapScript.src = `https://dapi.kakao.com/v2/maps/sdk.js?appkey=${import.meta.env.VITE_KAKAO_MAP_KEY}&libraries=services,clusterer&autoload=false`
+    mapScript.src = `https://dapi.kakao.com/v2/maps/sdk.js?appkey=${import.meta.env.VITE_KAKAO_KEY}&libraries=services,clusterer&autoload=false`
     mapScript.onload = () => window.kakao.maps.load(() => {
       setKakaoReady(true)
     })
@@ -175,8 +175,7 @@ const StoreInfo = () => {
                 stores={filteredStoreInfo}
                 selectedStore={selectedStore}
                 selectedRegion={selectedRegion}
-                setSelectedStoreId={setSelectedStoreId}
-                onRegionSelect={handleRegionQuickSelect} />
+                setSelectedStoreId={setSelectedStoreId} />
             )}
           </div>
         </div>
