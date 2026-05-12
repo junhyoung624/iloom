@@ -5,7 +5,7 @@ import { useProductStore } from '../store/useProductStore';
 import { deliverySteps } from '../data/deliverySteps';
 import SubPageEmptyState from '../components/SubPageEmptyState';
 import "./scss/order.scss";
-import { formatOrderDate, getAutoDeliveryStatus } from '../utils/calcOrderDate';
+import { formatOrderDate, getAutoDeliveryStatus, toDate } from '../utils/calcOrderDate';
 
 const periodOptions = [
   { label: "1개월", value: 1 },
@@ -24,6 +24,10 @@ const completedSections = [
 ];
 
 const deliveryFlowSteps = deliverySteps;
+const inProgressDeliveryStatuses = deliveryFlowSteps
+  .filter((step) => step.key !== "done")
+  .map((step) => step.key);
+const isInProgressDeliveryStatus = (status) => inProgressDeliveryStatuses.includes(status);
 
 const cancelReasonOptions = [
   "배송 일정 변경",
@@ -48,22 +52,7 @@ const getCancelLabel = (status) => {
 };
 
 const parseOrderDate = (order) => {
-  if (order.createdAt) {
-    const createdAtDate = new Date(order.createdAt);
-    if (!Number.isNaN(createdAtDate.getTime())) return createdAtDate;
-  }
-
-  if (order.date) {
-    const normalizedDate = String(order.date)
-      .replace(/\s/g, "")
-      .replace(/\.$/, "")
-      .replace(/\./g, "-")
-      .replace(/\//g, "-");
-    const date = new Date(normalizedDate);
-    if (!Number.isNaN(date.getTime())) return date;
-  }
-
-  return new Date(0);
+  return toDate(order.createdAt) || toDate(order.date) || new Date(0);
 };
 
 const isWithinPeriod = (date, period) => {
@@ -142,11 +131,16 @@ const Order = () => {
       const itemCount = order.items.filter((item) => item.cancelStatus === "none").length;
       if (itemCount === 0) return counts;
 
-      return {
+      const nextCounts = {
         ...counts,
-        all: counts.all + itemCount,
         [order.orderStatus]: (counts[order.orderStatus] || 0) + itemCount,
       };
+
+      if (isInProgressDeliveryStatus(order.orderStatus)) {
+        nextCounts.all = counts.all + itemCount;
+      }
+
+      return nextCounts;
     }, { all: 0 });
   }, [periodOrders]);
 
@@ -154,7 +148,7 @@ const Order = () => {
     const itemCount = order.items.filter((item) => {
       if (activeTab === "delivery") {
         return item.cancelStatus === "none"
-          && order.orderStatus !== "done"
+          && isInProgressDeliveryStatus(order.orderStatus)
           && (selectedDeliveryStatus === "all" || order.orderStatus === selectedDeliveryStatus);
       }
 
@@ -172,7 +166,7 @@ const Order = () => {
     return order.items.filter((item) => {
       if (activeTab === "delivery") {
         return order.orderStatus === sectionKey
-          && order.orderStatus !== "done"
+          && isInProgressDeliveryStatus(order.orderStatus)
           && (selectedDeliveryStatus === "all" || order.orderStatus === selectedDeliveryStatus)
           && item.cancelStatus === "none";
       }
@@ -200,6 +194,19 @@ const Order = () => {
     setSelectedDeliveryStatus(tab === "completed" ? "done" : "all");
     setDetailId(null);
     scrollToPageTop();
+  };
+
+  const handleChangePeriod = (period) => {
+    setSelectedPeriod(period);
+    setDetailId(null);
+
+    if (activeTab === "delivery") {
+      setSelectedDeliveryStatus("all");
+    }
+
+    if (activeTab === "completed") {
+      setSelectedDeliveryStatus("done");
+    }
   };
 
   const handleSelectDeliveryStatus = (status) => {
@@ -426,7 +433,8 @@ const Order = () => {
   };
 
   const renderDeliveryStatusFilter = () => {
-    if (!["delivery", "completed"].includes(activeTab) || deliveryStatusCounts.all === 0) return null;
+    const hasStatusItems = deliveryFlowSteps.some((step) => (deliveryStatusCounts[step.key] || 0) > 0);
+    if (!["delivery", "completed"].includes(activeTab) || !hasStatusItems) return null;
 
     return (
       <div className="order-status-filter" aria-label="배송 상태 필터">
@@ -458,18 +466,39 @@ const Order = () => {
     );
   };
 
+  const getEmptyStateContent = () => {
+    if (activeTab === "delivery") {
+      if (selectedDeliveryStatus === "all") {
+        return {
+          title: "배송 진행중인 상품이 없습니다.",
+          description: "배송이 완료된 상품은 배송완료 탭에서 확인할 수 있습니다.",
+        };
+      }
+
+      return {
+        title: `${getStatusLabel(selectedDeliveryStatus)} 상품이 없습니다.`,
+        description: "다른 배송 상태를 선택하거나 조회 기간을 변경해보세요.",
+      };
+    }
+
+    if (activeTab === "completed") {
+      return {
+        title: "배송 완료된 상품이 없습니다.",
+        description: "배송이 완료되면 이곳에서 따로 확인할 수 있습니다.",
+      };
+    }
+
+    return {
+      title: "조회된 취소/반품 내역이 없습니다.",
+      description: "취소 또는 반품 접수 내역이 생기면 이곳에서 확인할 수 있습니다.",
+    };
+  };
+
+  const emptyStateContent = getEmptyStateContent();
+
   return (
     <div className="order-content">
-      {orderList.length === 0 ? (
-        <SubPageEmptyState
-          title="주문내역이 없습니다."
-          description="마음에 드는 상품을 담고 주문을 시작해보세요."
-          actionLabel="쇼핑하러 가기"
-          imageSrc="/images/logo-icon/order-none.svg"
-          onAction={() => navigate("/")}
-        />
-      ) : (
-        <>
+      <>
           <div className="order-filter-bar">
             <div className="order-filter-group">
               <span className="order-filter-label">주문 구분</span>
@@ -506,7 +535,7 @@ const Order = () => {
                     type="button"
                     key={option.label}
                     className={selectedPeriod === option.value ? "active" : ""}
-                    onClick={() => setSelectedPeriod(option.value)}
+                    onClick={() => handleChangePeriod(option.value)}
                   >
                     {option.label}
                   </button>
@@ -542,8 +571,8 @@ const Order = () => {
 
           {visibleCount === 0 ? (
             <SubPageEmptyState
-              title="조회된 주문내역이 없습니다."
-              description="조회 기간을 변경하거나 쇼핑을 계속해보세요."
+              title={emptyStateContent.title}
+              description={emptyStateContent.description}
               actionLabel="쇼핑하러 가기"
               imageSrc="/images/logo-icon/order-none.svg"
               onAction={() => navigate("/")}
@@ -552,7 +581,7 @@ const Order = () => {
             <div className="order-list-wrap">
               {activeTab === "delivery"
                 ? deliveryFlowSteps
-                  .filter((step) => step.key !== "done")
+                  .filter((step) => isInProgressDeliveryStatus(step.key))
                   .filter((step) => selectedDeliveryStatus === "all" || step.key === selectedDeliveryStatus)
                   .map(renderSection)
                 : activeTab === "completed"
@@ -560,8 +589,7 @@ const Order = () => {
                   : cancelSections.map(renderSection)}
             </div>
           )}
-        </>
-      )}
+      </>
 
       {dateChangeTarget && (
         <div className="order-modal-backdrop" onClick={() => setDateChangeTarget(null)}>

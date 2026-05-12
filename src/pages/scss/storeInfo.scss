@@ -2,7 +2,8 @@
     margin-top: 60px;
 
     .inner {
-        max-width: 1520px;
+        max-width: none;
+        width: 100%;
     }
 
 }
@@ -83,8 +84,8 @@
 
     .control-body {
         //background: greenyellow;
-        height: min(416px, calc(100vh - 320px));
-        min-height: 208px;
+        height: min(560px, calc(100vh - 260px));
+        min-height: 420px;
         overflow: hidden;
         transition: height 0.3s ease, min-height 0.3s ease;
         //overflow: scroll;

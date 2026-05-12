@@ -750,7 +750,7 @@ export default function Product3DViewer() {
                     {showGuide && <DragGuide />}
 
                     <Canvas
-                        shadows
+                        shadows={{ type: THREE.PCFShadowMap }}
                         camera={{ position: selectedModel.camera, fov: 28 }}
                         gl={{ alpha: true, antialias: true }}
                         onCreated={({ gl }) => {

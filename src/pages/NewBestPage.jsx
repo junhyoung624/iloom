@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom'
 import { useProductStore } from '../store/useProductStore'
 import SubCard from '../components/SubCard'
 import "./scss/subPage.scss"
+import NewBestTabs from '../components/common/NewBestTabs'
 
 const NewBestPage = () => {
     const bannerImgList = [
@@ -272,17 +273,11 @@ const NewBestPage = () => {
                     <h1 ref={listRef}>{pageName}</h1>
 
                     {/* 카테고리 탭 */}
-                    <ul className="menu-tab">
-                        {tabMenu.map((tab, id) => (
-                            <li
-                                key={id}
-                                className={selectTab === tab ? "active" : ""}
-                                onClick={() => setSelectTab(tab)}
-                            >
-                                <Link>{tab}</Link>
-                            </li>
-                        ))}
-                    </ul>
+                    <NewBestTabs
+                        tabs={tabMenu}
+                        activeTab={selectTab}
+                        onChange={setSelectTab}
+                    />
 
                     <div className="sub-product-list-wrap">
 

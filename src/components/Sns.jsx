@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import "../components/scss/sns.scss";
 import { TextAnimate } from '../pages/Text-animate';
+import ButtonTabs from './common/ButtonTabs';
 
 export default function Sns() {
     const cardRefs = useRef([]);
@@ -8,7 +9,7 @@ export default function Sns() {
     const isFirstRender = useRef(true);
 
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
-    const [activeTab, setActiveTab] = useState("short");
+    const [activeTab, setActiveTab] = useState("Short");
 
     const videoList = [
         { id: 1, src: "./images/video/sns-video01.mp4" },
@@ -45,7 +46,7 @@ export default function Sns() {
     };
 
     useEffect(() => {
-        const refs = activeTab === "short" ? cardRefs.current : tabCardRefs.current;
+        const refs = activeTab === "Short" ? cardRefs.current : tabCardRefs.current;
         const validRefs = refs.filter(Boolean);
 
         // 모든 카드 초기화
@@ -96,7 +97,7 @@ export default function Sns() {
     }, [activeTab, isMobile]);
 
     const handleMouseEnter = (e, type) => {
-        const refs = type === "short" ? cardRefs.current : tabCardRefs.current;
+        const refs = type === "Short" ? cardRefs.current : tabCardRefs.current;
         const index = refs.indexOf(e.currentTarget);
         if (index === 0) return;
         refs[0]?.querySelector("video")?.pause();
@@ -104,7 +105,7 @@ export default function Sns() {
     };
 
     const handleMouseLeave = (e, type) => {
-        const refs = type === "short" ? cardRefs.current : tabCardRefs.current;
+        const refs = type === "Short" ? cardRefs.current : tabCardRefs.current;
         const index = refs.indexOf(e.currentTarget);
         if (index === 0) return;
         const video = e.currentTarget.querySelector("video");
@@ -114,6 +115,8 @@ export default function Sns() {
         }
         refs[0]?.querySelector("video")?.play().catch(() => { });
     };
+
+    const tab_menu = ["Short", "Wide"];
 
     return (
         <section className="sns">
@@ -127,7 +130,7 @@ export default function Sns() {
                     </TextAnimate>
                 </div>
 
-                <div className="sns-tab">
+                {/* <div className="sns-tab">
                     <button
                         className={activeTab === "short" ? "active" : ""}
                         onClick={() => setActiveTab("short")}
@@ -140,17 +143,23 @@ export default function Sns() {
                     >
                         Wide
                     </button>
-                </div>
+                </div> */}
 
-                {activeTab === "short" && (
+                <ButtonTabs
+                    items={tab_menu}
+                    activeKey={activeTab}
+                    onChange={setActiveTab}
+                    ariaLabel="sns tabs" />
+
+                {activeTab === "Short" && (
                     <div className="sns-grid">
                         {visibleList.map((item, index) => (
                             <div
                                 className="video-card"
                                 key={item.id}
                                 ref={(el) => (cardRefs.current[index] = el)}
-                                onMouseEnter={(e) => handleMouseEnter(e, "short")}
-                                onMouseLeave={(e) => handleMouseLeave(e, "short")}
+                                onMouseEnter={(e) => handleMouseEnter(e, "Short")}
+                                onMouseLeave={(e) => handleMouseLeave(e, "Short")}
                             >
                                 <video src={item.src} muted playsInline loop preload="auto" />
                                 <div className="dim"></div>
@@ -159,15 +168,15 @@ export default function Sns() {
                     </div>
                 )}
 
-                {activeTab === "wide" && (
+                {activeTab === "Wide" && (
                     <div className="sns-grid wide">
                         {wideVideoList.map((item, index) => (
                             <div
                                 className="video-card"
                                 key={item.id}
                                 ref={(el) => (tabCardRefs.current[index] = el)}
-                                onMouseEnter={(e) => handleMouseEnter(e, "wide")}
-                                onMouseLeave={(e) => handleMouseLeave(e, "wide")}
+                                onMouseEnter={(e) => handleMouseEnter(e, "Wide")}
+                                onMouseLeave={(e) => handleMouseLeave(e, "Wide")}
                             >
                                 <video src={item.src} muted playsInline loop preload="auto" />
                                 <div className="dim"></div>
