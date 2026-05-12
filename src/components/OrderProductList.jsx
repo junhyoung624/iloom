@@ -1,4 +1,14 @@
+import { colorData } from "../data/colorData"
 export default function OrderProductList({ orderItems, totalPrice, formatPrice }) {
+    const getColorInfo = (productId, colorCode) => {
+        const found = colorData.find(c => c.productCd === String(productId))
+        console.log('found:', found, 'productId:', productId)
+        if (!found) return null
+        const idx = found.colorCd.indexOf(colorCode)
+        console.log('idx:', idx, 'colorCode:', colorCode)
+        if (idx === -1) return null
+         return '/images/' + found.localImgPath[idx]
+    }
     return (
         <div className="charge-section">
             <h3 className="section-title">주문 상품</h3>
@@ -15,38 +25,75 @@ export default function OrderProductList({ orderItems, totalPrice, formatPrice }
                 {orderItems.length === 0 ? (
                     <div className="empty-order">결제할 상품이 없습니다.</div>
                 ) : (
-                    orderItems.map((item) => (
-                        <div
-                            className="order-item"
-                            key={`${item.id}-${item.color || 'default'}`}
-                        >
-                            <div className="col-info product-info">
-                                <div className="thumb">
-                                    <img
-                                        src={item.productImages?.[0] || item.image}
-                                        alt={item.name}
-                                    />
+                    orderItems.map((item) => {
+                        const imgSrc = item.productImages?.[0] || item.image || ''
+                        return (
+                            <div
+                                className="order-item"
+                                key={`${item.id}-${item.color || 'default'}`}
+                            >
+                                <div className="col-info product-info">
+                                    <div className="thumb">
+                                        {imgSrc ? (
+                                            <img
+                                                src={imgSrc}
+                                                alt={item.name}
+                                                style={{
+                                                    width: '100%',
+                                                    height: '100%',
+                                                    objectFit: 'cover',
+                                                    display: 'block',
+                                                }}
+                                            />
+                                        ) : (
+                                            <div style={{
+                                                width: '100%',
+                                                height: '100%',
+                                                background: '#f3f3f3',
+                                                display: 'flex',
+                                                alignItems: 'center',
+                                                justifyContent: 'center',
+                                                fontSize: 11,
+                                                color: '#bbb',
+                                                letterSpacing: '0.06em',
+                                                textTransform: 'uppercase',
+                                            }}>
+                                                No Image
+                                            </div>
+                                        )}
+                                    </div>
+
+                                    <div className="text-box">
+                                        <h4>{item.series || '일룸'}</h4>
+                                        <p>{item.name}</p>
+
+                                    {item.color && (() => {
+                                        const imgPath = getColorInfo(item.id, item.color)
+                                        return (
+                                            <div className="option-line">
+                                                <span>[필수] 색상: {item.color}</span>
+                                                <span className="color-dot"></span>
+                                                {imgPath && (
+                                                    <img
+                                                        src={imgPath}
+                                                        alt={item.color}
+                                                        className="color-dot"
+                                                        style={{ width: '20px', height: '20px', borderRadius: '50%', objectFit: 'cover' }}
+                                                    />
+                                                )}
+                                            </div>
+                                        )
+                                    })()}
+
                                 </div>
 
-                                <div className="text-box">
-                                    <h4>{item.series || '일룸'}</h4>
-                                    <p>{item.name}</p>
-
-                                    {item.color && (
-                                        <div className="option-line">
-                                            <span>[필수] 색상: {item.color}</span>
-                                            <span className="color-dot"></span>
-                                        </div>
-                                    )}
-                                </div>
+                                <div className="col-price">{formatPrice(item.priceNumber)}</div>
+                                <div className="col-qty">{item.qty}</div>
+                                <div className="col-total">{formatPrice(item.totalPrice)}</div>
+                                <div className="col-status">{item.deliveryType || '택배'}</div>
                             </div>
-
-                            <div className="col-price">{formatPrice(item.priceNumber)}</div>
-                            <div className="col-qty">{item.qty}</div>
-                            <div className="col-total">{formatPrice(item.totalPrice)}</div>
-                            <div className="col-status">{item.deliveryType || '택배'}</div>
-                        </div>
-                    ))
+                        )
+                    })
                 )}
             </div>
 

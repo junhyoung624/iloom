@@ -177,7 +177,6 @@
     justify-content: center;
     width: 190px;
     height: 54px;
-    border-radius: 999px;
     background: rgba(255, 255, 255, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.75);
     color: #fff;
@@ -222,5 +221,221 @@
         width: 130px;
         height: 42px;
         font-size: 12px;
+    }
+}
+
+.place-item {
+    position: relative;
+    width: 345px;
+    height: 620px;
+    flex-shrink: 0;
+    overflow: hidden;
+    cursor: pointer;
+
+    --x: 50%;
+    --y: 50%;
+
+    &:hover {
+        .place-overlay {
+            background: rgba(0, 0, 0, 0.45);
+            backdrop-filter: blur(3px);
+        }
+
+        .place-light {
+            opacity: 1;
+        }
+
+        img {
+            transform: scale(1.08);
+            filter: brightness(0.92);
+        }
+
+        .place-label {
+            opacity: 0;
+            transform: translate(-50%, -20%);
+        }
+
+        .place-content {
+            opacity: 1;
+        }
+
+        .place-key {
+            opacity: 1;
+            transform: translateY(0);
+            transition-delay: 0.15s;
+        }
+
+        .place-message {
+            opacity: 1;
+            transform: translateY(0);
+            transition-delay: 0.3s;
+        }
+
+        .place-btn {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+    }
+}
+
+.place-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    transition:
+        transform 1.3s cubic-bezier(0.22, 1, 0.36, 1),
+        filter 0.8s ease;
+}
+
+.place-overlay {
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.18);
+
+    z-index: 1;
+
+    transition:
+        background 0.7s ease,
+        backdrop-filter 0.7s ease;
+}
+
+/* 손전등 효과 */
+
+.place-light {
+    position: absolute;
+    inset: 0;
+
+    z-index: 2;
+
+    pointer-events: none;
+
+    opacity: 0;
+
+    transition: opacity 0.35s ease;
+
+    background:
+        radial-gradient(240px circle at var(--x) var(--y),
+            rgba(255, 255, 255, 0.22),
+            rgba(255, 255, 255, 0.1) 25%,
+            rgba(255, 255, 255, 0.04) 45%,
+            transparent 72%);
+}
+
+.place-label {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    z-index: 3;
+
+    color: #fff;
+
+    font-size: 24px;
+    font-weight: 500;
+
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+
+    transition:
+        opacity 0.45s ease,
+        transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.place-content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 100%;
+    padding: 0 30px;
+
+    text-align: center;
+
+    z-index: 4;
+
+    opacity: 0;
+
+    transition: opacity 0.5s ease;
+}
+
+.place-key,
+.place-message,
+.place-btn {
+    opacity: 0;
+
+    transform: translateY(40px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.place-key {
+    color: #fff;
+
+    font-size: 36px;
+    font-weight: 700;
+
+    margin-bottom: 14px;
+
+    letter-spacing: 0.04em;
+}
+
+.place-message {
+    color: rgba(255, 255, 255, 0.88);
+
+    font-size: 15px;
+    font-weight: 300;
+
+    margin-bottom: 30px;
+
+    line-height: 1.6;
+}
+
+.place-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 190px;
+    height: 54px;
+
+
+
+    background: rgba(255, 255, 255, 0.08);
+
+    border: 1px solid rgba(255, 255, 255, 0.75);
+
+    color: #fff;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    backdrop-filter: blur(10px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 1s cubic-bezier(0.22, 1, 0.36, 1),
+        background 0.35s ease,
+        border-color 0.35s ease;
+
+    &:hover {
+        background: var(--main);
+        border-color: var(--main);
     }
 }
