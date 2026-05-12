@@ -140,9 +140,6 @@ export default function Best() {
       </div>
 
       <div className="best-swiper-wrap">
-        <button ref={prevRef} className="best-prev">&#8249;</button>
-        <button ref={nextRef} className="best-next">&#8250;</button>
-
         <Swiper
           modules={[Navigation, Autoplay]}
           navigation={{
