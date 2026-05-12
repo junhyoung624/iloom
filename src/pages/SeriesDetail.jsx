@@ -5,6 +5,7 @@ import { productData } from '../data/productData'
 import SubCard from '../components/SubCard'
 import "./scss/seriesdetail.scss"
 import "../pages/scss/subPage.scss"
+import ButtonTabs from '../components/common/ButtonTabs'
 
 export default function SeriesDetail() {
     const { slug } = useParams()
@@ -292,17 +293,12 @@ export default function SeriesDetail() {
 
                     {/* 카테고리 탭 */}
                     {tabMenu.length > 1 && (
-                        <ul className="menu-tab">
-                            {tabMenu.map((tab, i) => (
-                                <li
-                                    key={i}
-                                    className={selectTab === tab ? "active" : ""}
-                                    onClick={() => setSelectTab(tab)}
-                                >
-                                    <Link>{tab}</Link>
-                                </li>
-                            ))}
-                        </ul>
+                        <ButtonTabs
+                            items={tabMenu}
+                            activeKey={selectTab}
+                            onChange={setSelectTab}
+                            ariaLabel="series product category tabs"
+                        />
                     )}
 
                     <div className="sub-product-list-wrap">

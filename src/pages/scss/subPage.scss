@@ -90,24 +90,6 @@
         }
     }
 
-    .menu-tab {
-        @include g.myFlex($jc: center);
-        margin-top: 20px;
-        cursor: pointer;
-
-        li {
-            &:hover a {
-                font-weight: bold;
-                border-bottom: 3px solid;
-            }
-
-            &.active a {
-                font-weight: bold;
-                border-bottom: 3px solid;
-            }
-        }
-    }
-
     .sub-line {
         border: 1px solid #c9c9c9;
         margin-top: 130px;

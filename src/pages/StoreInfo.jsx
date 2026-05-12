@@ -27,8 +27,8 @@ const STORE_REGION_QUICK_FILTERS = [
 const StoreInfo = () => {
 
   const defaultSubRegion = store_region[0]?.sub_region?.[0] || "시/군/구"
-  const [selectedSearch, setSelectedSearch] = useState("keyword")
-  const [selectedRegion, setSelectedRegion] = useState("default")
+  const [selectedSearch, setSelectedSearch] = useState("location")
+  const [selectedRegion, setSelectedRegion] = useState("A02001")
   const [selectedSubRegion, setSelectedSubRegion] = useState(defaultSubRegion)
   const [keyword, setKeyword] = useState("")
   const [selectedStoreId, setSelectedStoreId] = useState(null)
@@ -102,7 +102,7 @@ const StoreInfo = () => {
     }
 
     const mapScript = document.createElement("script")
-    mapScript.src = `https://dapi.kakao.com/v2/maps/sdk.js?appkey=${import.meta.env.VITE_KAKAO_MAP_KEY}&libraries=services,clusterer&autoload=false`
+    mapScript.src = `https://dapi.kakao.com/v2/maps/sdk.js?appkey=${import.meta.env.VITE_KAKAO_KEY}&libraries=services,clusterer&autoload=false`
     mapScript.onload = () => window.kakao.maps.load(() => {
       setKakaoReady(true)
     })
@@ -175,8 +175,7 @@ const StoreInfo = () => {
                 stores={filteredStoreInfo}
                 selectedStore={selectedStore}
                 selectedRegion={selectedRegion}
-                setSelectedStoreId={setSelectedStoreId}
-                onRegionSelect={handleRegionQuickSelect} />
+                setSelectedStoreId={setSelectedStoreId} />
             )}
           </div>
         </div>
