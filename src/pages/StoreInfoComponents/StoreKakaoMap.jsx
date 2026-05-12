@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
-import { storeRegionUiPolygons } from '../../data/storeRegionUiPolygons';
+
+const KAKAO_MAP_KEY = import.meta.env.VITE_KAKAO_KEY;
 
 const REGION_VIEW_OPTIONS = {
     A02012: { center: [36.63, 127.18], level: 9 },
@@ -9,35 +10,57 @@ const REGION_VIEW_OPTIONS = {
 const FIRST_STORE_VIEW_REGIONS = ["A02011", "A02013", "A02014"];
 const DEFAULT_KOREA_VIEW = { center: [36.25, 127.9], level: 12 };
 
-const polygonStyle = (isActive = false) => ({
-    strokeWeight: isActive ? 3 : 2,
-    strokeColor: isActive ? "#111111" : "#555555",
-    strokeOpacity: isActive ? 0.95 : 0.7,
-    fillColor: isActive ? "#111111" : "#ffffff",
-    fillOpacity: isActive ? 0.08 : 0.01,
-});
+const loadKakaoMapScript = () => {
+    return new Promise((resolve, reject) => {
+        if (window.kakao && window.kakao.maps) {
+            window.kakao.maps.load(resolve);
+            return;
+        }
+
+        const existingScript = document.querySelector("#kakao-map-script");
+
+        if (existingScript) {
+            existingScript.addEventListener("load", () => {
+                window.kakao.maps.load(resolve);
+            });
+            return;
+        }
+
+        const script = document.createElement("script");
+        script.id = "kakao-map-script";
+        script.src = `https://dapi.kakao.com/v2/maps/sdk.js?appkey=${KAKAO_MAP_KEY}&autoload=false&libraries=services,clusterer`;
+        script.async = true;
+
+        script.onload = () => {
+            window.kakao.maps.load(resolve);
+        };
+
+        script.onerror = reject;
+
+        document.head.appendChild(script);
+    });
+};
 
 export default function StoreKakaoMap({
     stores = [],
     selectedStore,
     selectedRegion = "default",
     setSelectedStoreId,
-    onRegionSelect,
 }) {
     useEffect(() => {
         let resizeObserver = null;
         let resizeTimer = null;
         let handleResize = null;
         let isMounted = true;
-        const boundaryPolygons = [];
+        let clusterer = null;
+        let markers = [];
 
-        if (!window.kakao) return;
-
-        window.kakao.maps.load(() => {
+        loadKakaoMapScript().then(() => {
             if (!isMounted) return;
 
             const container = document.getElementById("map");
             if (!container) return;
+            container.innerHTML = "";
 
             const map = new window.kakao.maps.Map(container, {
                 center: new window.kakao.maps.LatLng(37.5665, 126.9780),
@@ -45,21 +68,21 @@ export default function StoreKakaoMap({
             });
 
             const bounds = new window.kakao.maps.LatLngBounds();
-            const clusterer = new window.kakao.maps.MarkerClusterer({
+            clusterer = new window.kakao.maps.MarkerClusterer({
                 map,
                 averageCenter: true,
                 minLevel: 8,
             });
 
             const markerImage = new window.kakao.maps.MarkerImage(
-                './images/storeInfo/map-pin.svg',
+                "./images/storeInfo/map-pin.svg",
                 new window.kakao.maps.Size(30, 30),
-                { offset: new window.kakao.maps.Point(27, 69) }
+                { offset: new window.kakao.maps.Point(15, 30) }
             );
 
             let openedInfoWindow = null;
 
-            const markers = stores
+            markers = stores
                 .filter((store) => store.latitude && store.longitude)
                 .map((store) => {
                     const position = new window.kakao.maps.LatLng(
@@ -75,9 +98,35 @@ export default function StoreKakaoMap({
 
                     const infowindow = new window.kakao.maps.InfoWindow({
                         content: `
-                            <div style="padding:10px; min-width:240px; font-size:13px; line-height:1.5;">
-                                <strong style="display:block; margin-bottom:4px;">${store.store_name}</strong>
-                                <div style="margin-top:4px;">${store.phone}</div>
+                            <div style="
+                                box-sizing:border-box;
+                                width:260px;
+                                min-height:92px;
+                                padding:12px 14px 13px;
+                                color:#222;
+                                font-size:13px;
+                                line-height:1.45;
+                                word-break:keep-all;
+                                overflow-wrap:anywhere;
+                            ">
+                                <strong style="
+                                    display:block;
+                                    margin-bottom:6px;
+                                    color:#111;
+                                    font-size:14px;
+                                    line-height:1.3;
+                                    font-weight:700;
+                                ">${store.store_name}</strong>
+                                <div style="
+                                    color:#555;
+                                    line-height:1.45;
+                                ">${store.address || ""}</div>
+                                <div style="
+                                    margin-top:7px;
+                                    color:#111;
+                                    line-height:1.35;
+                                    white-space:normal;
+                                ">${store.phone || ""}</div>
                             </div>
                         `,
                         removable: true,
@@ -96,9 +145,14 @@ export default function StoreKakaoMap({
                     bounds.extend(position);
                     return marker;
                 });
-            const visibleRegionCodes = new Set(stores.map((store) => store.region_code));
 
             const fitBoundsWithMaxLevel = () => {
+                if (markers.length === 0) {
+                    map.setCenter(new window.kakao.maps.LatLng(...DEFAULT_KOREA_VIEW.center));
+                    map.setLevel(DEFAULT_KOREA_VIEW.level);
+                    return;
+                }
+
                 map.setBounds(bounds);
 
                 if (selectedRegion !== "default" && map.getLevel() > 8) {
@@ -131,42 +185,6 @@ export default function StoreKakaoMap({
                 map.setLevel(regionView.level);
             };
 
-            const drawProvinceBoundaries = () => {
-                if (selectedRegion !== "default") return;
-
-                storeRegionUiPolygons
-                    .filter((region) => visibleRegionCodes.has(region.code))
-                    .forEach((region) => {
-                        const polygon = new window.kakao.maps.Polygon({
-                            map,
-                            path: region.path.map(([lat, lng]) => new window.kakao.maps.LatLng(lat, lng)),
-                            zIndex: 1,
-                            ...polygonStyle(false),
-                        });
-
-                        window.kakao.maps.event.addListener(polygon, "mouseover", () => {
-                            polygon.setOptions({
-                                strokeWeight: 3,
-                                strokeOpacity: 1,
-                                strokeColor: "#111111",
-                                fillColor: "#111111",
-                                fillOpacity: 0.05,
-                            });
-                        });
-
-                        window.kakao.maps.event.addListener(polygon, "mouseout", () => {
-                            polygon.setOptions(polygonStyle(false));
-                        });
-
-                        window.kakao.maps.event.addListener(polygon, "click", () => {
-                            onRegionSelect?.(region.code);
-                        });
-
-                        boundaryPolygons.push(polygon);
-                    });
-            };
-
-            drawProvinceBoundaries();
             clusterer.addMarkers(markers);
 
             if (selectedStore) {
@@ -180,7 +198,7 @@ export default function StoreKakaoMap({
             } else if (selectedRegion === "default") {
                 map.setCenter(new window.kakao.maps.LatLng(...DEFAULT_KOREA_VIEW.center));
                 map.setLevel(DEFAULT_KOREA_VIEW.level);
-            } else if (markers.length > 0) {
+            } else {
                 moveToRegionView();
             }
 
@@ -207,12 +225,17 @@ export default function StoreKakaoMap({
                 resizeObserver = new window.ResizeObserver(handleResize);
                 resizeObserver.observe(container);
             }
+        }).catch((error) => {
+            console.error("Failed to load Kakao map script", error);
         });
 
         return () => {
             isMounted = false;
             window.clearTimeout(resizeTimer);
-            boundaryPolygons.forEach((polygon) => polygon.setMap(null));
+            if (clusterer) {
+                clusterer.clear();
+            }
+            markers.forEach((marker) => marker.setMap(null));
 
             if (handleResize) {
                 window.removeEventListener("resize", handleResize);
@@ -222,7 +245,7 @@ export default function StoreKakaoMap({
                 resizeObserver.disconnect();
             }
         };
-    }, [stores, selectedStore, selectedRegion, setSelectedStoreId, onRegionSelect]);
+    }, [stores, selectedStore, selectedRegion, setSelectedStoreId]);
 
     return (
         <div id='map' style={{ width: "100%", height: "100%", background: "#f5f5f5" }}>

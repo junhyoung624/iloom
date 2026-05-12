@@ -1,6 +1,7 @@
 import {
     addDays,
     differenceInDays,
+    differenceInMinutes,
     format,
     isBefore,
     isValid,
@@ -57,12 +58,13 @@ export const getAutoDeliveryStatus = (order, now = new Date()) => {
 
     if (!createdAt) return savedStatus
 
-    const daysFromOrder = differenceInDays(now, createdAt)
+    const minutesFromOrder = differenceInMinutes(now, createdAt)
 
     if (isBefore(now, createdAt)) return 'payment'
-    if (daysFromOrder < 1) return 'payment'
-    if (daysFromOrder < 2) return 'ready'
-    if (daysFromOrder < 3) return 'scheduled'
+    if (minutesFromOrder < 1) return 'payment'
+    if (minutesFromOrder < 2) return 'ready'
+    if (minutesFromOrder < 3) return 'scheduled'
+    if (minutesFromOrder >= 4) return 'done'
     if (!deliveryDate) return savedStatus
     if (isBefore(now, deliveryDate)) return 'shipping'
     return 'done'
