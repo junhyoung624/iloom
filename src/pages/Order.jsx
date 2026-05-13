@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
 import { useProductStore } from '../store/useProductStore';
@@ -249,6 +249,17 @@ const Order = () => {
     toast("주문 취소가 접수되었습니다.");
   };
 
+  useEffect(() => {
+    const handleEsc = (e) => {
+      if (e.key === "Escape") {
+        openDateChange(false);
+        setCancelTarget(false);
+      }
+    }
+    document.addEventListener("keydown", handleEsc);
+    return () => document.removeEventListener("keydown", handleEsc);
+  }, [openDateChange, setCancelTarget])
+
   const renderDetailPanel = (order, item) => {
     const detailKey = `${order.orderNumber}-${item.id}-${item.itemIndex}`;
     if (detailId !== detailKey) return null;
@@ -317,7 +328,11 @@ const Order = () => {
           </div>
 
           <div className="order-item-img">
-            <img src={item.productImages?.[0]} alt={item.name || "주문 상품"} />
+            <img
+              src={item.productImages?.[0]}
+              alt={item.name || "주문 상품"}
+              style={item._custom ? { aspectRatio: 'auto', objectFit: 'contain', width: '100%' } : {}}
+            />
           </div>
 
           <div className="order-item-txt-info">
@@ -499,96 +514,96 @@ const Order = () => {
   return (
     <div className="order-content">
       <>
-          <div className="order-filter-bar">
-            <div className="order-filter-group">
-              <span className="order-filter-label">주문 구분</span>
-              <div className="order-tab-list" role="tablist" aria-label="주문배송 메뉴">
-                <button
-                  type="button"
-                  className={activeTab === "delivery" ? "active" : ""}
-                  onClick={() => handleChangeTab("delivery")}
-                >
-                  주문배송
-                </button>
-                <button
-                  type="button"
-                  className={activeTab === "completed" ? "active" : ""}
-                  onClick={() => handleChangeTab("completed")}
-                >
-                  배송완료
-                </button>
-                <button
-                  type="button"
-                  className={activeTab === "cancel" ? "active" : ""}
-                  onClick={() => handleChangeTab("cancel")}
-                >
-                  취소/반품 내역
-                </button>
-              </div>
-            </div>
-
-            <div className="order-filter-group">
-              <span className="order-filter-label">조회 기간</span>
-              <div className="order-period-list" aria-label="조회 기간">
-                {periodOptions.map((option) => (
-                  <button
-                    type="button"
-                    key={option.label}
-                    className={selectedPeriod === option.value ? "active" : ""}
-                    onClick={() => handleChangePeriod(option.value)}
-                  >
-                    {option.label}
-                  </button>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          <div className="order-summary">
-            <div className="order-summary__title">
-              <strong>
-                {activeTab === "delivery"
-                  ? "주문배송"
-                  : activeTab === "completed"
-                    ? "배송완료"
-                    : "취소/반품 내역"}
-              </strong>
-              <span>{visibleCount}개 상품</span>
-            </div>
-
-            {["delivery", "completed"].includes(activeTab) && (
+        <div className="order-filter-bar">
+          <div className="order-filter-group">
+            <span className="order-filter-label">주문 구분</span>
+            <div className="order-tab-list" role="tablist" aria-label="주문배송 메뉴">
               <button
                 type="button"
-                className={`order-summary__all-btn ${activeTab === "delivery" && selectedDeliveryStatus === "all" ? "active" : ""}`}
-                onClick={() => handleSelectDeliveryStatus("all")}
+                className={activeTab === "delivery" ? "active" : ""}
+                onClick={() => handleChangeTab("delivery")}
               >
-                진행중 전체
+                주문배송
               </button>
-            )}
+              <button
+                type="button"
+                className={activeTab === "completed" ? "active" : ""}
+                onClick={() => handleChangeTab("completed")}
+              >
+                배송완료
+              </button>
+              <button
+                type="button"
+                className={activeTab === "cancel" ? "active" : ""}
+                onClick={() => handleChangeTab("cancel")}
+              >
+                취소/반품 내역
+              </button>
+            </div>
           </div>
 
-          {renderDeliveryStatusFilter()}
-
-          {visibleCount === 0 ? (
-            <SubPageEmptyState
-              title={emptyStateContent.title}
-              description={emptyStateContent.description}
-              actionLabel="쇼핑하러 가기"
-              imageSrc="/images/logo-icon/order-none.svg"
-              onAction={() => navigate("/")}
-            />
-          ) : (
-            <div className="order-list-wrap">
-              {activeTab === "delivery"
-                ? deliveryFlowSteps
-                  .filter((step) => isInProgressDeliveryStatus(step.key))
-                  .filter((step) => selectedDeliveryStatus === "all" || step.key === selectedDeliveryStatus)
-                  .map(renderSection)
-                : activeTab === "completed"
-                  ? completedSections.map(renderSection)
-                  : cancelSections.map(renderSection)}
+          <div className="order-filter-group">
+            <span className="order-filter-label">조회 기간</span>
+            <div className="order-period-list" aria-label="조회 기간">
+              {periodOptions.map((option) => (
+                <button
+                  type="button"
+                  key={option.label}
+                  className={selectedPeriod === option.value ? "active" : ""}
+                  onClick={() => handleChangePeriod(option.value)}
+                >
+                  {option.label}
+                </button>
+              ))}
             </div>
+          </div>
+        </div>
+
+        <div className="order-summary">
+          <div className="order-summary__title">
+            <strong>
+              {activeTab === "delivery"
+                ? "주문배송"
+                : activeTab === "completed"
+                  ? "배송완료"
+                  : "취소/반품 내역"}
+            </strong>
+            <span>{visibleCount}개 상품</span>
+          </div>
+
+          {["delivery", "completed"].includes(activeTab) && (
+            <button
+              type="button"
+              className={`order-summary__all-btn ${activeTab === "delivery" && selectedDeliveryStatus === "all" ? "active" : ""}`}
+              onClick={() => handleSelectDeliveryStatus("all")}
+            >
+              진행중 전체
+            </button>
           )}
+        </div>
+
+        {renderDeliveryStatusFilter()}
+
+        {visibleCount === 0 ? (
+          <SubPageEmptyState
+            title={emptyStateContent.title}
+            description={emptyStateContent.description}
+            actionLabel="쇼핑하러 가기"
+            imageSrc="/images/logo-icon/order-none.svg"
+            onAction={() => navigate("/")}
+          />
+        ) : (
+          <div className="order-list-wrap">
+            {activeTab === "delivery"
+              ? deliveryFlowSteps
+                .filter((step) => isInProgressDeliveryStatus(step.key))
+                .filter((step) => selectedDeliveryStatus === "all" || step.key === selectedDeliveryStatus)
+                .map(renderSection)
+              : activeTab === "completed"
+                ? completedSections.map(renderSection)
+                : cancelSections.map(renderSection)}
+          </div>
+        )}
       </>
 
       {dateChangeTarget && (
