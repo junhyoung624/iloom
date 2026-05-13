@@ -14,9 +14,9 @@ export default function Footer() {
                         당신의 모든 순간이 일룸과 함께 다정하기를.
                     </p>
                     <div className="footer-sns">
-                        <img src="./images/footer/icon-facebook.png" alt="" />
-                        <img src="./images/footer/icon-instagram.png" alt="" />
-                        <img src="./images/footer/icon-blog.png" alt="" />
+                        <Link to="https://www.facebook.com/myiloom"><img src="./images/footer/icon-facebook.png" alt="" /></Link>
+                        <Link to="https://www.instagram.com/iloom_official/"><img src="./images/footer/icon-instagram.png" alt="" /></Link>
+                        <Link to="https://blog.naver.com/iloom_blog"><img src="./images/footer/icon-blog.png" alt="" /></Link>
                     </div>
                 </div>
 
