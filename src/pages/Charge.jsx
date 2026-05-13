@@ -372,6 +372,7 @@ export default function Charge() {
                 qty: item.qty,
                 price: item.priceNumber,
                 productImages: item.productImages || [],
+                _custom: item._custom || false,
             })),
             total: finalPrice,
         }
