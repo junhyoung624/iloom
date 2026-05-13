@@ -6,6 +6,7 @@ import MdPick from '../components/MdPick'
 import SubCard from '../components/SubCard'
 import Breadcrumb from '../components/Breadcrumb'
 import SubCategoryTabs from '../components/common/SubCategoryTabs'
+import SubPageEmptyState from '../components/SubPageEmptyState'
 
 
 const SubPage = () => {
@@ -266,7 +267,7 @@ const SubPage = () => {
         }
         document.addEventListener('keydown', handleEsc)
         return () => document.removeEventListener('keydown', handleEsc)
-    },[setIsFilterOpen])
+    }, [setIsFilterOpen])
 
     return (
         <div className='sub-page-wrap'>
@@ -508,10 +509,14 @@ const SubPage = () => {
                         )}
 
                         {pageItem.length === 0 && (
-                            <div className="subpage-empty-state">
-                                <p>조건에 맞는 상품이 없어요.</p>
-                                <button onClick={resetFilter}>필터 초기화</button>
-                            </div>
+                            <SubPageEmptyState
+                                className="subpage-empty-state"
+                                imageSrc="/images/logo-icon/no-image.svg"
+                                imageAlt="filter empty"
+                                title="조건에 맞는 상품이 없어요"
+                                actionLabel="필터 초기화"
+                                onAction={resetFilter}
+                            />
                         )}
                         <ul className="sub-product-list">
                             {pageItem.map((item) => (

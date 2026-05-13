@@ -229,7 +229,6 @@ export const useProductStore = create((set, get) => ({
     onAddOrder: async (order, user) => {
         const orderPrev = get().orderList;
 
-
         const exists = orderPrev.some(
             (item) => item.orderNumber === order.orderNumber
         );
@@ -237,10 +236,16 @@ export const useProductStore = create((set, get) => ({
 
         const now = new Date();
         const randomDays = Math.floor(Math.random() * 10) + 1;
-        const deliveryDate = addDays(now, randomDays).toISOString()
+        const deliveryDate = addDays(now, randomDays).toISOString();
 
         const allItems = get().items;
         const enrichedItems = order.items.map((cartItem) => {
+            if (cartItem._custom) {
+                return {
+                    ...cartItem,
+                    cancelStatus: cartItem.cancelStatus || "none",
+                };
+            }
             const product = allItems.find((p) => p.id === cartItem.id);
             return {
                 ...product,

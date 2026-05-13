@@ -14,7 +14,6 @@ import { useProductStore } from './store/useProductStore'
 import Magazine from './pages/Magazine'
 import Series from './pages/Series'
 import StoreInfo from './pages/StoreInfo'
-import Event from './pages/Event'
 import Notice from './pages/Notice'
 import CompanyInfo from './pages/CompanyInfo'
 import Footer from './components/Footer'
@@ -105,6 +104,8 @@ function App() {
             <Route path="/member" element={<PageTransition><Member /></PageTransition>} />
             <Route path="/cart" element={<PageTransition><Cart /></PageTransition>} />
             <Route path="/charge" element={<PageTransition><Charge /></PageTransition>} />
+            <Route path="/order/guest/phone/:phone" element={<PageTransition><OrderForGuest /></PageTransition>} />
+            <Route path="/order/guest/:orderNum" element={<PageTransition><OrderForGuest /></PageTransition>} />
             <Route path="/orderForGuest/:orderNum" element={<PageTransition><OrderForGuest /></PageTransition>} />
             <Route path="/searchpage" element={<PageTransition><SearchPage /></PageTransition>} />
             <Route path="/oauth" element={<PageTransition><OAuth /></PageTransition>} />
@@ -113,7 +114,6 @@ function App() {
             <Route path="/series" element={<PageTransition><Series /></PageTransition>} />
             <Route path="/series/:slug" element={<PageTransition><SeriesDetail /></PageTransition>} />
             <Route path="/store-info" element={<PageTransition><StoreInfo /></PageTransition>} />
-            <Route path="/event" element={<PageTransition><Event /></PageTransition>} />
             <Route path="/notice" element={<PageTransition><Notice /></PageTransition>} />
             <Route path="/company-info" element={<PageTransition><CompanyInfo /></PageTransition>} />
             <Route path="/companypage" element={<PageTransition><CompanyPage /></PageTransition>} />

@@ -3,7 +3,7 @@ import { useCompareStore } from '../store/useCompareStore'
 import { Link, useNavigate } from 'react-router-dom'
 import './scss/CompareBar.scss'
 
-const FALLBACK = '/images/no-image.png'
+const FALLBACK = '/images/logo-icon/no-image.png'
 
 const CompareBar = () => {
     const { compareList, removeCompareItem, clearCompare } = useCompareStore()
@@ -35,7 +35,7 @@ const CompareBar = () => {
                     <rect x="14" y="3" width="8" height="18" rx="1" />
                 </svg>
                 {hasItems && (
-                    <span className="fab-badge">{compareList.length }</span>
+                    <span className="fab-badge">{compareList.length}</span>
                 )}
             </button>
 

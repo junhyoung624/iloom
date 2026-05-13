@@ -7,7 +7,7 @@ const UserMenu = ({ userClose }) => {
   const navigate = useNavigate();
 
   const { user, onLogout } = useAuthStore();
-  const { iloomMoney } = useUserAssetStore();
+  const { iloomPoint } = useUserAssetStore();
 
   const mypage = [
     { link: "/order", name: '주문/배송' },
@@ -41,9 +41,9 @@ const UserMenu = ({ userClose }) => {
       </p>
 
       <div className="user-point">
-        <span className="user-point__label">일룸 머니</span>
-        <span className="user-point__value">
-          {(iloomMoney || 0).toLocaleString()}P
+        <span className="user-point__label">일룸 포인트</span>
+        <span className="user-point__value" style={{ color: '#CA1230' }}>
+          {(iloomPoint || 0).toLocaleString()}P
         </span>
       </div>
 

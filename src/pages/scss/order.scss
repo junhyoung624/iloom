@@ -439,18 +439,20 @@
 
         .order-item-img {
             flex: 0.5;
-
             margin: auto;
             text-align: center;
 
             img {
-                //width: 100%;
-                max-width: 200px;
-                //height: 200px;
-                height: auto;
-                aspect-ratio: 1/1.06;
-                margin: auto 0;
-                margin: 10px;
+                width: 200px;
+                height: 200px;
+                object-fit: cover;
+                display: block;
+                margin: 10px auto;
+
+                &.img-custom {
+                    object-fit: contain;
+                    background: #f7f7f7;
+                }
             }
         }
 
@@ -465,16 +467,28 @@
 
 
             .series {
-
                 padding: 0;
+                font-size: 16px;
+                color: #333;
+                line-height: 1.6;
             }
 
             .item-name {
-                font-size: 1.1rem;
-                font-weight: 600;
+                font-size: 20px;
+                font-weight: 700;
+                color: #111;
+                letter-spacing: -0.02em;
+                margin-bottom: 4px;
+            }
+
+            .item-price {
+                font-size: 15px;
+                color: #333;
+                margin-bottom: 4px;
             }
 
             .item-color {
+                font-size: 14px;
                 color: #808080;
             }
         }
