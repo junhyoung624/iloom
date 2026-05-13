@@ -1,81 +1,166 @@
+// ── 브레드크럼 ─────────────────────────────────────────────────
+.breadcrumb-list {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    list-style: none;
+    padding: 120px 48px 0;
+    max-width: 1440px;
+    margin: 0 auto;
+    box-sizing: border-box;
+
+    li {
+        display: flex;
+        align-items: center;
+        font-size: 13px;
+        color: #aaa;
+
+        a {
+            color: #aaa;
+            text-decoration: none;
+            transition: color 0.2s;
+
+            &:hover {
+                color: #111;
+            }
+        }
+
+        img {
+            width: 14px;
+            opacity: 0.35;
+        }
+
+        &:last-child {
+            color: #111;
+            font-weight: 500;
+        }
+    }
+}
+
+// ── 공통 레이아웃 ──────────────────────────────────────────────
 .detail-page {
-    padding: 150px 0 120px;
+    padding: 48px 0 160px;
     background: #fff;
     color: #111;
 
     .inner {
-        width: 100%;
-        max-width: 1200px;
+        max-width: 860px;
         margin: 0 auto;
-        padding: 0 20px;
+        padding: 0 24px;
         box-sizing: border-box;
     }
 
+    // ── 하단 버튼 ──────────────────────────────────────────────
+    .detail-bottom {
+        margin-top: 100px;
+        padding-top: 48px;
+        border-top: 1px solid #e8e8e8;
+        display: flex;
+        justify-content: center;
+    }
+
+    .back-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 13px 28px;
+        border: 1.5px solid #111;
+        background: #fff;
+        color: #111;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: background 0.22s, color 0.22s;
+
+        &::before {
+            content: '←';
+            transition: transform 0.22s;
+        }
+
+        &:hover {
+            background: #111;
+            color: #fff;
+
+            &::before {
+                transform: translateX(-4px);
+            }
+        }
+    }
+}
+
+// ══════════════════════════════════════════════════════════════
+//  매거진 디테일
+// ══════════════════════════════════════════════════════════════
+.magazine-detail {
+
+    // ── 헤더 ──────────────────────────────────────────────────
     .detail-top {
-        display: block;
-        padding-bottom: 36px;
-        margin-bottom: 56px;
-        border-bottom: 1px solid #e5e5e5;
+        padding: 64px 0 56px;
+        margin-bottom: 0;
+        border-bottom: 1px solid #e8e8e8;
         text-align: center;
     }
 
     .detail-category {
-        font-size: 14px;
-        font-weight: 600;
-        color: #888;
-        margin-bottom: 12px;
-        letter-spacing: -0.02em;
-        padding-top: 50px;
+        display: inline-block;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: #CA1230;
+        margin-bottom: 20px;
     }
 
     .detail-title {
-        font-size: 34px;
-        font-weight: 700;
-        line-height: 1.35;
+        font-size: 42px;
+        font-weight: 800;
+        line-height: 1.22;
         letter-spacing: -0.03em;
-        margin-bottom: 14px;
+        color: #111;
+        margin-bottom: 18px;
         word-break: keep-all;
-    }
-
-    .detail-date,
-    .detail-subtitle,
-    .detail-intro,
-    .detail-editor {
-        word-break: keep-all;
-    }
-
-    .detail-date {
-        font-size: 15px;
-        color: #666;
-        margin-bottom: 12px;
     }
 
     .detail-subtitle {
-        font-size: 18px;
-        font-weight: 500;
-        line-height: 1.6;
-        color: #333;
-        margin-bottom: 12px;
+        font-size: 17px;
+        font-weight: 400;
+        color: #555;
+        line-height: 1.75;
+        margin-bottom: 28px;
+        word-break: keep-all;
+    }
+
+    .detail-meta {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
     }
 
     .detail-intro {
-        max-width: 860px;
-        margin: 0 auto;
-        font-size: 15px;
-        line-height: 1.8;
-        color: #555;
+        font-size: 16px;
+        line-height: 1.9;
+        color: #666;
+        word-break: keep-all;
+        max-width: 640px;
     }
 
     .detail-editor {
-        font-size: 14px;
-        color: #777;
-        margin-top: 14px;
+        font-size: 12px;
+        color: #bbb;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
     }
 
+    // ── 섹션 ──────────────────────────────────────────────────
     .detail-sections {
         display: flex;
         flex-direction: column;
-        gap: 80px;
+        gap: 88px;
+        padding-top: 80px;
     }
 
     .detail-section {
@@ -83,11 +168,14 @@
     }
 
     .section-title {
-        font-size: 24px;
+        font-size: 13px;
         font-weight: 700;
-        line-height: 1.45;
-        letter-spacing: -0.03em;
-        margin-bottom: 24px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: #CA1230;
+        margin-bottom: 36px;
+        padding-bottom: 14px;
+        border-bottom: 1px solid #e8e8e8;
         word-break: keep-all;
     }
 
@@ -97,115 +185,304 @@
         gap: 64px;
     }
 
-    .section-item,
-    .event-article,
-    .news-article {
+    .section-item {
         width: 100%;
     }
 
+    // ── 이미지 ────────────────────────────────────────────────
     .item-images {
         display: flex;
         flex-direction: column;
-        gap: 20px;
-        margin-bottom: 20px;
+        gap: 10px;
+        margin-bottom: 28px;
     }
 
     .item-image {
         width: 100%;
         overflow: hidden;
-        background: #f8f8f8;
+        background: #f5f5f5;
+
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
     }
 
-    .item-image img {
-        display: block;
-        width: 100%;
-        height: auto;
-    }
-
+    // ── 아이템 텍스트 ─────────────────────────────────────────
     .item-text {
         max-width: 100%;
     }
 
     .item-title {
-        font-size: 21px;
+        font-size: 20px;
         font-weight: 700;
-        line-height: 1.5;
         letter-spacing: -0.02em;
-        margin-bottom: 10px;
+        line-height: 1.5;
         color: #111;
+        margin-bottom: 14px;
         word-break: keep-all;
     }
 
     .item-desc {
         font-size: 15px;
-        line-height: 1.85;
-        color: #444;
+        line-height: 2;
+        color: #555;
         white-space: pre-line;
         word-break: keep-all;
     }
+}
 
-    .detail-bottom {
-        margin-top: 80px;
-        display: flex;
-        justify-content: center;
+// ══════════════════════════════════════════════════════════════
+//  이벤트 디테일
+// ══════════════════════════════════════════════════════════════
+.event-detail {
+
+    .detail-top {
+        padding: 64px 0 48px;
+        border-bottom: 1px solid #e8e8e8;
+        text-align: center;
     }
 
-    .back-btn {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        min-width: 170px;
-        height: 50px;
-        padding: 0 24px;
-        border: 1px solid #111;
-        background: #fff;
+    .detail-category {
+        display: inline-block;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: #CA1230;
+        margin-bottom: 16px;
+    }
+
+    .detail-title {
+        font-size: 38px;
+        font-weight: 800;
+        line-height: 1.25;
+        letter-spacing: -0.03em;
         color: #111;
-        font-size: 15px;
-        font-weight: 600;
-        text-decoration: none;
-        transition: 0.25s ease;
+        margin-bottom: 14px;
+        word-break: keep-all;
     }
 
-    .back-btn:hover {
-        background: #111;
-        color: #fff;
+    .detail-subtitle {
+        font-size: 17px;
+        color: #555;
+        line-height: 1.7;
+        margin-bottom: 20px;
+        word-break: keep-all;
+    }
+
+    .detail-meta {
+        margin-top: 16px;
+    }
+
+    .detail-intro {
+        font-size: 15px;
+        line-height: 1.85;
+        color: #666;
+        word-break: keep-all;
+        margin-bottom: 10px;
+    }
+
+    .detail-date {
+        display: inline-block;
+        font-size: 12px;
+        color: #999;
+        letter-spacing: 0.06em;
+        background: #f5f5f5;
+        padding: 6px 14px;
+        margin-top: 8px;
+    }
+
+    .detail-sections {
+        display: flex;
+        flex-direction: column;
+        gap: 64px;
+        padding-top: 72px;
+    }
+
+    .detail-section {
+        width: 100%;
+    }
+
+    .section-title {
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        color: #111;
+        margin-bottom: 28px;
+        padding-bottom: 14px;
+        border-bottom: 1.5px solid #111;
+        word-break: keep-all;
+    }
+
+    .event-article {
+        width: 100%;
+        margin-bottom: 48px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .item-images {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 24px;
+    }
+
+    .item-image {
+        width: 100%;
+        background: #f5f5f5;
+        overflow: hidden;
+
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .item-title {
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        color: #111;
+        margin-bottom: 12px;
+        word-break: keep-all;
+    }
+
+    .item-desc {
+        font-size: 15px;
+        line-height: 1.95;
+        color: #555;
+        white-space: pre-line;
+        word-break: keep-all;
     }
 }
 
+// ── 빈 상태 ───────────────────────────────────────────────────
 .detail-empty {
     min-height: 60vh;
-    padding: 120px 20px;
+    padding: 160px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 24px;
     text-align: center;
 
     h2 {
-        font-size: 28px;
+        font-size: 22px;
         font-weight: 700;
         color: #111;
+        letter-spacing: -0.02em;
     }
 
     a {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        min-width: 170px;
-        height: 50px;
-        padding: 0 24px;
-        border: 1px solid #111;
-        background: #fff;
+        padding: 13px 28px;
+        border: 1.5px solid #111;
         color: #111;
-        font-size: 15px;
+        font-size: 13px;
         font-weight: 600;
         text-decoration: none;
-        transition: 0.25s ease;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        transition: background 0.22s, color 0.22s;
+
+        &:hover {
+            background: #111;
+            color: #fff;
+        }
+    }
+}
+
+// ── 태블릿 ────────────────────────────────────────────────────
+@media (max-width: 1024px) {
+    .breadcrumb-list {
+        padding: 100px 28px 0;
     }
 
-    a:hover {
-        background: #111;
-        color: #fff;
+    .detail-page .inner {
+        padding: 0 28px;
+    }
+
+    .magazine-detail .detail-title {
+        font-size: 34px;
+    }
+
+    .event-detail .detail-title {
+        font-size: 30px;
+    }
+}
+
+// ── 모바일 ────────────────────────────────────────────────────
+@media (max-width: 768px) {
+    .breadcrumb-list {
+        padding: 80px 16px 0;
+        flex-wrap: wrap;
+    }
+
+    .detail-page {
+        padding: 32px 0 100px;
+
+        .inner {
+            padding: 0 16px;
+        }
+    }
+
+    .magazine-detail {
+        .detail-top {
+            padding: 40px 0 36px;
+        }
+
+        .detail-title {
+            font-size: 26px;
+        }
+
+        .detail-subtitle {
+            font-size: 15px;
+        }
+
+        .detail-sections {
+            gap: 56px;
+            padding-top: 48px;
+        }
+
+        .section-items {
+            gap: 44px;
+        }
+
+        .item-title {
+            font-size: 17px;
+        }
+
+        .item-desc {
+            font-size: 14px;
+        }
+    }
+
+    .event-detail {
+        .detail-title {
+            font-size: 24px;
+        }
+
+        .detail-sections {
+            padding-top: 44px;
+            gap: 48px;
+        }
+
+        .section-title {
+            font-size: 16px;
+        }
+
+        .item-title {
+            font-size: 16px;
+        }
+
+        .item-desc {
+            font-size: 14px;
+        }
     }
 }
