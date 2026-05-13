@@ -11,7 +11,7 @@
 
 // ── 뷰어 영역 (스크롤 트리거) ───────────────────────────────
 .cfg-viewer-area {
-  width: calc(100% - 360px); // 전체에서 사이드바 딱 빼기
+  width: calc(100% - 360px);  // 전체에서 사이드바 딱 빼기
   flex-shrink: 0;
   position: relative;
   min-height: 240vh;
@@ -44,6 +44,7 @@
   flex: 1;
   width: 100%;
   position: relative;
+  border-radius: 12px;
   overflow: hidden;
 
   canvas {
@@ -64,6 +65,7 @@
   position: absolute;
   width: 36px;
   height: 36px;
+  border-radius: 50%;
   background: rgba(17, 17, 17, 0.72);
   border: none;
   cursor: pointer;
@@ -84,9 +86,7 @@
     top: 50%;
     transform: translateY(-50%);
 
-    &:hover {
-      transform: translateY(-50%) scale(1.1);
-    }
+    &:hover { transform: translateY(-50%) scale(1.1); }
   }
 
   &--top {
@@ -94,9 +94,7 @@
     left: 50%;
     transform: translateX(-50%);
 
-    &:hover {
-      transform: translateX(-50%) scale(1.1);
-    }
+    &:hover { transform: translateX(-50%) scale(1.1); }
   }
 }
 
@@ -118,21 +116,12 @@
   transition: opacity 0.4s;
   animation: cfg-bounce 2s ease-in-out infinite;
 
-  &.hidden {
-    opacity: 0;
-  }
+  &.hidden { opacity: 0; }
 }
 
 @keyframes cfg-bounce {
-
-  0%,
-  100% {
-    transform: translateX(-50%) translateY(0);
-  }
-
-  50% {
-    transform: translateX(-50%) translateY(5px);
-  }
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50%       { transform: translateX(-50%) translateY(5px); }
 }
 
 // ── 뷰 인디케이터 ────────────────────────────────────────────
@@ -143,12 +132,14 @@
     width: 100%;
     height: 2px;
     background: #d8d4ce;
+    border-radius: 99px;
     overflow: hidden;
   }
 
   &__fill {
     height: 100%;
     background: #333;
+    border-radius: 99px;
     transition: width 0.05s linear;
   }
 }
@@ -172,17 +163,10 @@
   flex-direction: column;
   padding: 30px 26px 40px;
 
-  &::-webkit-scrollbar {
-    width: 3px;
-  }
+  &::-webkit-scrollbar { width: 3px; }
+  &::-webkit-scrollbar-thumb { background: #e0e0e0; border-radius: 99px; }
 
-  &::-webkit-scrollbar-thumb {
-    background: #e0e0e0;
-  }
-
-  &__top {
-    margin-bottom: 24px;
-  }
+  &__top { margin-bottom: 24px; }
 
   &__brand {
     font-size: 11px;
@@ -228,6 +212,7 @@
     color: #3A80E9;
     background: #EBF2FF;
     padding: 3px 9px;
+    border-radius: 99px;
     letter-spacing: 0;
   }
 }
@@ -243,24 +228,17 @@
     align-items: center;
     justify-content: space-between;
 
-    span {
-      font-size: 14px;
-      color: #444;
-      font-weight: 500;
-    }
+    span { font-size: 14px; color: #444; font-weight: 500; }
   }
 
-  &__hint {
-    font-size: 11px;
-    color: #bbb;
-    margin: 0;
-  }
+  &__hint { font-size: 11px; color: #bbb; margin: 0; }
 }
 
 .cfg-stepper {
   display: flex;
   align-items: center;
   border: 1px solid #e5e5e5;
+  border-radius: 8px;
   overflow: hidden;
 
   button {
@@ -276,14 +254,8 @@
     justify-content: center;
     transition: background 0.12s;
 
-    &:hover:not(:disabled) {
-      background: #f5f5f5;
-    }
-
-    &:disabled {
-      color: #ddd;
-      cursor: not-allowed;
-    }
+    &:hover:not(:disabled) { background: #f5f5f5; }
+    &:disabled { color: #ddd; cursor: not-allowed; }
   }
 
   span {
@@ -312,33 +284,20 @@
   justify-content: space-between;
   padding: 11px 14px;
   border: 1.5px solid #e5e5e5;
+  border-radius: 9px;
   background: none;
   cursor: pointer;
   transition: border-color 0.14s, background 0.14s;
 
-  &__name {
-    font-size: 14px;
-    color: #333;
-    font-weight: 500;
-  }
-
-  &__price {
-    font-size: 12px;
-    color: #aaa;
-  }
+  &__name { font-size: 14px; color: #333; font-weight: 500; }
+  &__price { font-size: 12px; color: #aaa; }
 
   &.active {
     border-color: #111;
     background: #fafafa;
 
-    .cfg-panel-btn__name {
-      color: #111;
-      font-weight: 700;
-    }
-
-    .cfg-panel-btn__price {
-      color: #555;
-    }
+    .cfg-panel-btn__name { color: #111; font-weight: 700; }
+    .cfg-panel-btn__price { color: #555; }
   }
 }
 
@@ -364,6 +323,7 @@
 .cfg-color-swatch {
   width: 100%;
   aspect-ratio: 1;
+  border-radius: 6px;
   background: var(--swatch);
   border: 2px solid transparent;
   cursor: pointer;
@@ -379,6 +339,7 @@
       position: absolute;
       inset: -5px;
       border: 1.5px solid #111;
+      border-radius: 9px;
     }
   }
 }
@@ -398,17 +359,14 @@
     width: 100%;
     padding: 9px;
     border: 1px solid #e0e0e0;
+    border-radius: 8px;
     background: none;
     font-size: 13px;
     color: #666;
     cursor: pointer;
     transition: all 0.14s;
 
-    &:hover {
-      background: #111;
-      color: #fff;
-      border-color: #111;
-    }
+    &:hover { background: #111; color: #fff; border-color: #111; }
   }
 }
 
@@ -419,6 +377,7 @@
   gap: 8px;
   padding: 9px 13px;
   background: #f8f8f8;
+  border-radius: 8px;
   border: 1px solid #e5e5e5;
   font-size: 13px;
   color: #444;
@@ -427,6 +386,7 @@
   &__dot {
     width: 13px;
     height: 13px;
+    border-radius: 50%;
     background: linear-gradient(135deg, #ececec 25%, #aaa 100%);
     border: 1px solid #ccc;
     flex-shrink: 0;
@@ -457,18 +417,8 @@
     border-top: 1.5px solid #111;
     margin-top: 4px;
 
-    span {
-      font-size: 14px;
-      font-weight: 600;
-      color: #111;
-    }
-
-    strong {
-      font-size: 21px;
-      font-weight: 700;
-      color: #111;
-      letter-spacing: -0.02em;
-    }
+    span { font-size: 14px; font-weight: 600; color: #111; }
+    strong { font-size: 21px; font-weight: 700; color: #111; letter-spacing: -0.02em; }
   }
 }
 
@@ -480,15 +430,14 @@
   background: #111;
   color: #fff;
   border: none;
+  border-radius: 10px;
   font-size: 15px;
   font-weight: 700;
   cursor: pointer;
   letter-spacing: 0.02em;
   transition: opacity 0.16s;
 
-  &:hover {
-    opacity: 0.82;
-  }
+  &:hover { opacity: 0.82; }
 }
 
 // ── 높이 타입 버튼 ─────────────────────────────────────────
@@ -506,6 +455,7 @@
   gap: 8px;
   padding: 12px 8px;
   border: 1.5px solid #e5e5e5;
+  border-radius: 9px;
   background: none;
   cursor: pointer;
   transition: border-color 0.14s, background 0.14s;
@@ -523,20 +473,14 @@
   &__bar {
     width: 36px;
     background: #ccc;
+    border-radius: 3px;
     transition: background 0.14s;
 
-    &--full {
-      height: 24px;
-    }
-
-    &--half {
-      height: 12px;
-    }
+    &--full  { height: 24px; }
+    &--half  { height: 12px; }
   }
 
-  &.active &__bar {
-    background: #555;
-  }
+  &.active &__bar { background: #555; }
 }
 
 // ── 고무 발 패드 옵션 ─────────────────────────────────────────
@@ -559,8 +503,7 @@
       height: 15px;
     }
 
-    span:last-child {
-      // price
+    span:last-child { // price
       margin-left: auto;
       color: #888;
       font-weight: 400;
@@ -572,5 +515,130 @@
     font-size: 11px;
     color: #bbb;
     letter-spacing: 0.02em;
+  }
+}
+
+// ── 악세사리 리스트 ───────────────────────────────────────────
+.cfg-accessory-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cfg-acc-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border: 1.5px solid #e5e5e5;
+  border-radius: 9px;
+  background: none;
+  cursor: pointer;
+  transition: border-color 0.14s, background 0.14s;
+  text-align: left;
+
+  &__icon {
+    font-size: 14px;
+    width: 20px;
+    text-align: center;
+    flex-shrink: 0;
+  }
+
+  &__name {
+    flex: 1;
+    font-size: 13px;
+    color: #333;
+    font-weight: 500;
+  }
+
+  &__price {
+    font-size: 11px;
+    color: #aaa;
+    flex-shrink: 0;
+  }
+
+  &.active {
+    border-color: #111;
+    background: #fafafa;
+
+    .cfg-acc-btn__name  { color: #111; font-weight: 700; }
+    .cfg-acc-btn__price { color: #555; }
+  }
+}
+
+// ── 프레임 색상 ───────────────────────────────────────────────
+.cfg-frame-colors {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.cfg-frame-color-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border: 1.5px solid #e5e5e5;
+  border-radius: 9px;
+  background: none;
+  cursor: pointer;
+  transition: border-color 0.14s, background 0.14s;
+  font-size: 13px;
+  color: #333;
+  font-weight: 500;
+
+  &__dot {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 1px solid rgba(0,0,0,0.1);
+    flex-shrink: 0;
+  }
+
+  &__price {
+    margin-left: auto;
+    font-size: 11px;
+    color: #aaa;
+  }
+
+  &.active {
+    border-color: #111;
+    background: #fafafa;
+    font-weight: 700;
+  }
+}
+
+// ── 바닥 마감 ─────────────────────────────────────────────────
+.cfg-foot-types {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.cfg-foot-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  border: 1.5px solid #e5e5e5;
+  border-radius: 9px;
+  background: none;
+  cursor: pointer;
+  font-size: 13px;
+  color: #333;
+  font-weight: 500;
+  transition: border-color 0.14s, background 0.14s;
+
+  &__price {
+    font-size: 11px;
+    color: #aaa;
+  }
+
+  &.active {
+    border-color: #111;
+    background: #fafafa;
+    font-weight: 700;
+
+    .cfg-foot-btn__price { color: #555; }
   }
 }
