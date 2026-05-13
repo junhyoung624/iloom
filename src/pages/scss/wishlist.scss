@@ -22,6 +22,9 @@
     }
 }
 
+input[type="checkbox"] {
+    accent-color: #303030;
+}
 
 .wish-list {
 
@@ -74,7 +77,11 @@
     border-radius: 5px;
     border: 2px solid #ddd;
     margin: 10px;
+
+
 }
+
+
 
 // .wish-check-box:after {
 //     content: "v";
