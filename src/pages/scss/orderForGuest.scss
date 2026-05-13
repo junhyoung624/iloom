@@ -1,13 +1,63 @@
 .order-for-guest-wrap {
     margin-top: 100px;
+    padding: 0 20px 80px;
 
     .inner {
-        max-width: 1440px;
+        max-width: 1280px;
+        margin: 0 auto;
 
         .page-title {
             text-align: center;
             font-size: 1.8rem;
             font-weight: 700;
+            margin-bottom: 38px;
+
+            p {
+                margin: 0;
+            }
+        }
+
+        .order-content {
+            margin-top: 0;
+        }
+    }
+
+    .order-for-guest-tabs {
+        justify-content: flex-start;
+    }
+
+    .guest-tab-count {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 20px;
+        height: 20px;
+        margin-left: 8px;
+        padding: 0 6px;
+        border-radius: 999px;
+        background: #f1f1f1;
+        color: #777;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 1;
+    }
+
+    .order-tab-list button.active .guest-tab-count {
+        background: rgba(255, 255, 255, 0.18);
+        color: #fff;
+    }
+}
+
+@media (max-width: 768px) {
+    .order-for-guest-wrap {
+        margin-top: 72px;
+        padding: 0 14px 56px;
+
+        .inner {
+            .page-title {
+                margin-bottom: 24px;
+                font-size: 1.45rem;
+            }
         }
     }
 }
