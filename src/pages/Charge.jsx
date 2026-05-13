@@ -705,7 +705,7 @@ export default function Charge() {
                     orderData={completedOrderData}
                     onClose={() => {
                         setShowOrderComplete(false)
-                        user ? navigate('/order') : navigate(`/orderForGuest/${completedOrderData.orderNumber}`)
+                        user ? navigate('/order') : navigate(`/order/guest/${completedOrderData.orderNumber}`)
                     }}
                 />
             )}

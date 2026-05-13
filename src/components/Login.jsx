@@ -19,10 +19,7 @@ const Login = () => {
   const [guestName, setGuestName] = useState('')
   const [guestPhone, setGuestPhone] = useState('')
   const [guestOrderId, setGuestOrderId] = useState('')
-  const [orderResult, setOrderResult] = useState(null)
   const [orderError, setOrderError] = useState('')
-
-  const [showOrderModal, setShowOrderModal] = useState(false)
 
   const [showFindModal, setShowFindModal] = useState(false)
   const [findType, setFindType] = useState('password')
@@ -55,7 +52,6 @@ const Login = () => {
   const handleGuestSearch = async (e) => {
     e.preventDefault()
     setOrderError('')
-    setOrderResult(null)
 
     try {
       let result
@@ -67,8 +63,8 @@ const Login = () => {
       if (result.length === 0) {
         setOrderError('일치하는 주문 정보가 없습니다.')
       } else {
-        setOrderResult(result)
-        setShowOrderModal(true)
+        const orderNumber = result[0].orderNumber || result[0].orderId
+        navigate(`/order/guest/${encodeURIComponent(orderNumber)}`)
       }
     } catch (err) {
       setOrderError('조회 중 오류가 발생했습니다.')
@@ -198,37 +194,6 @@ const Login = () => {
 
         </div>
       </div >
-      {showOrderModal && orderResult && (
-        <div className="modal-overlay" onClick={() => setShowOrderModal(false)}>
-          <div className="order-modal" onClick={(e) => e.stopPropagation()}>
-            <button className="modal-close" onClick={() => setShowOrderModal(false)}>✕</button>
-            {orderResult.map((order) => (
-              <div className="order-result" key={order.id}>
-                <h3>주문정보</h3>
-                <div className="order-info-grid">
-                  <span>주문번호</span><span>{order.orderId}</span>
-                  <span>주문 상태</span><span>{order.status}</span>
-                  <span>택배사</span><span>{order.deliveryInfo?.carrier}</span>
-                  <span>송장번호</span><span>{order.deliveryInfo?.trackingNumber}</span>
-                  <span>배송 예정일</span><span>{order.deliveryInfo?.estimatedDate}</span>
-                </div>
-                <h3>주문 상품</h3>
-                {order.items?.map((item, i) => (
-                  <div className="order-item" key={i}>
-                    <img src={item.productImages?.[0]} alt={item.name} />
-                    <div className="order-info">
-                      <span className="item-name">{item.name}</span>
-                      <span>{item.color}</span>
-                      <span>{item.qty}개</span>
-                      <span className="item-price">{item.price.toLocaleString()}원</span>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
       {
         showFindModal && (
           <div className="modal-overlay" onClick={() => setShowFindModal(false)}>
