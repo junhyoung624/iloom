@@ -7,7 +7,7 @@ export default function OrderProductList({ orderItems, totalPrice, formatPrice }
         const idx = found.colorCd.indexOf(colorCode)
         console.log('idx:', idx, 'colorCode:', colorCode)
         if (idx === -1) return null
-         return '/images/' + found.localImgPath[idx]
+        return '/images/' + found.localImgPath[idx]
     }
     return (
         <div className="charge-section">
@@ -67,24 +67,24 @@ export default function OrderProductList({ orderItems, totalPrice, formatPrice }
                                         <h4>{item.series || '일룸'}</h4>
                                         <p>{item.name}</p>
 
-                                    {item.color && (() => {
-                                        const imgPath = getColorInfo(item.id, item.color)
-                                        return (
-                                            <div className="option-line">
-                                                <span>[필수] 색상: {item.color}</span>
-                                                <span className="color-dot"></span>
-                                                {imgPath && (
-                                                    <img
-                                                        src={imgPath}
-                                                        alt={item.color}
-                                                        className="color-dot"
-                                                        style={{ width: '20px', height: '20px', borderRadius: '50%', objectFit: 'cover' }}
-                                                    />
-                                                )}
-                                            </div>
-                                        )
-                                    })()}
-
+                                        {item.color && (() => {
+                                            const imgPath = getColorInfo(item.id, item.color)
+                                            return (
+                                                <div className="option-line">
+                                                    <span>[필수] 색상: {item.color}</span>
+                                                    <span className="color-dot"></span>
+                                                    {imgPath && (
+                                                        <img
+                                                            src={imgPath}
+                                                            alt={item.color}
+                                                            className="color-dot"
+                                                            style={{ width: '20px', height: '20px', borderRadius: '50%', objectFit: 'cover' }}
+                                                        />
+                                                    )}
+                                                </div>
+                                            )
+                                        })()}
+                                    </div>
                                 </div>
 
                                 <div className="col-price">{formatPrice(item.priceNumber)}</div>
