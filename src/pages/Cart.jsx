@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { productData } from '../data/productData'
 import { useProductStore } from '../store/useProductStore'
@@ -98,6 +98,15 @@ export default function Cart() {
       </section>
     )
   }
+
+  useEffect(() => {
+    const handleEsc = (e) => {
+      if (e.key === "Escape") setOptionModalItem();
+    }
+    document.addEventListener("keydown", handleEsc);
+    return () => document.removeEventListener("keydown", handleEsc);
+  }, [setOptionModalItem])
+
 
   return (
     <section className="cart-page">
