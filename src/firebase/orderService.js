@@ -1,5 +1,25 @@
 import { db } from './firebase'
-import { collection, addDoc, query, where, getDocs, serverTimestamp } from 'firebase/firestore'
+import { collection, addDoc, query, where, getDocs, serverTimestamp, doc, updateDoc } from 'firebase/firestore'
+
+const normalizeText = (value) => String(value || '').trim()
+const normalizePhone = (value) => normalizeText(value).replace(/-/g, '')
+
+const toOrderData = (snapshot) => snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }))
+
+const uniqueOrders = (orders) => {
+    const seen = new Set()
+    return orders.filter((order) => {
+        const key = order.id || order.orderId || order.orderNumber
+        if (seen.has(key)) return false
+        seen.add(key)
+        return true
+    })
+}
+
+const isSameGuestName = (order, name) => {
+    const targetName = normalizeText(name)
+    return normalizeText(order.name) === targetName || normalizeText(order.guestInfo?.name) === targetName
+}
 
 // 테스트용 주문
 export const addOrder = async (orderData) => {
@@ -33,20 +53,55 @@ export const addTestOrder = async () => {
 export const getOrderByPhone = async (name, phone) => {
     const q = query(
         collection(db, 'orders'),
-        where('name', '==', name),
-        where('phone', '==', phone)
+        where('phone', '==', normalizePhone(phone))
     )
     const snapshot = await getDocs(q)
-    return snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }))
+    return toOrderData(snapshot).filter((order) => isSameGuestName(order, name))
 }
 
 // 주문번호
 export const getOrderByOrderId = async (name, orderId) => {
-    const q = query(
+    const orderNumber = normalizeText(orderId)
+    const orderIdQuery = query(
         collection(db, 'orders'),
-        where('name', '==', name),
-        where('orderId', '==', orderId)
+        where('orderId', '==', orderNumber)
     )
-    const snapshot = await getDocs(q)
-    return snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }))
+    const orderNumberQuery = query(
+        collection(db, 'orders'),
+        where('orderNumber', '==', orderNumber)
+    )
+    const [orderIdSnapshot, orderNumberSnapshot] = await Promise.all([
+        getDocs(orderIdQuery),
+        getDocs(orderNumberQuery),
+    ])
+
+    return uniqueOrders([
+        ...toOrderData(orderIdSnapshot),
+        ...toOrderData(orderNumberSnapshot),
+    ]).filter((order) => isSameGuestName(order, name))
+}
+
+export const getOrderByNumber = async (orderNumber) => {
+    const normalizedOrderNumber = normalizeText(orderNumber)
+    const orderIdQuery = query(
+        collection(db, 'orders'),
+        where('orderId', '==', normalizedOrderNumber)
+    )
+    const orderNumberQuery = query(
+        collection(db, 'orders'),
+        where('orderNumber', '==', normalizedOrderNumber)
+    )
+    const [orderIdSnapshot, orderNumberSnapshot] = await Promise.all([
+        getDocs(orderIdQuery),
+        getDocs(orderNumberQuery),
+    ])
+
+    return uniqueOrders([
+        ...toOrderData(orderIdSnapshot),
+        ...toOrderData(orderNumberSnapshot),
+    ])
+}
+
+export const updateGuestOrderItemCancel = async (docId, items) => {
+    await updateDoc(doc(db, 'orders', docId), { items })
 }
