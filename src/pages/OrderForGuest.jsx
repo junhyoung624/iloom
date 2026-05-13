@@ -1,8 +1,8 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import toast from 'react-hot-toast';
 import SubPageEmptyState from '../components/SubPageEmptyState';
-import { getOrderByNumber, updateGuestOrderItemCancel } from '../firebase/orderService';
+import { getOrderByNumber, getOrderByPhone, updateGuestOrderItemCancel } from '../firebase/orderService';
 import { useProductStore } from '../store/useProductStore';
 import { formatOrderDate, formatOrderTime, getAutoDeliveryStatus } from '../utils/calcOrderDate';
 import './scss/order.scss';
@@ -33,6 +33,10 @@ const cancelReasonOptions = [
     '주문 정보 오입력',
     '단순 변심',
 ];
+
+const normalizeText = (value) => String(value || '').trim();
+const normalizePhone = (value) => normalizeText(value).replace(/-/g, '');
+const getCancelStatus = (item) => item.cancelStatus || 'none';
 
 const getOrderDateText = (order) => {
     return order?.date || formatOrderDate(order?.createdAt) || formatOrderDate(order?.orderedAt) || '';
@@ -72,103 +76,145 @@ const normalizeOrder = (order) => {
     };
 };
 
-const getCancelStatus = (item) => item.cancelStatus || 'none';
+const isSameName = (order, name) => {
+    if (!name) return true;
+    return normalizeText(order.name) === normalizeText(name)
+        || normalizeText(order.guestInfo?.name) === normalizeText(name);
+};
+
+const sortOrders = (orders) => {
+    return [...orders].sort((a, b) => {
+        const aTime = new Date(a.createdAt || a.orderedAt?.toDate?.() || a.orderedAt || 0).getTime();
+        const bTime = new Date(b.createdAt || b.orderedAt?.toDate?.() || b.orderedAt || 0).getTime();
+        return bTime - aTime;
+    });
+};
 
 export default function OrderForGuest() {
     const navigate = useNavigate();
     const { orderList, onRequestCancelOrder } = useProductStore();
-    const { orderNum } = useParams();
+    const { orderNum, phone } = useParams();
+    const [searchParams] = useSearchParams();
+    const searchName = searchParams.get('name') || '';
+
     const [activeTab, setActiveTab] = useState('delivery');
     const [detailId, setDetailId] = useState(null);
     const [cancelTarget, setCancelTarget] = useState(null);
     const [cancelReason, setCancelReason] = useState(cancelReasonOptions[0]);
-    const [remoteOrder, setRemoteOrder] = useState(null);
+    const [remoteOrders, setRemoteOrders] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
 
-    const localOrder = useMemo(() => {
-        return normalizeOrder(orderList.find((order) => {
-            return [order.orderId, order.orderNumber].includes(orderNum);
-        }));
-    }, [orderList, orderNum]);
+    const localOrders = useMemo(() => {
+        const orders = orderList
+            .map(normalizeOrder)
+            .filter(Boolean)
+            .filter((order) => {
+                if (phone) {
+                    const orderPhone = order.phone || order.guestInfo?.phone;
+                    return normalizePhone(orderPhone) === normalizePhone(phone) && isSameName(order, searchName);
+                }
+
+                return [order.orderId, order.orderNumber].includes(orderNum);
+            });
+
+        return sortOrders(orders);
+    }, [orderList, orderNum, phone, searchName]);
 
     useEffect(() => {
         let ignore = false;
 
-        const fetchGuestOrder = async () => {
-            if (localOrder) {
-                setRemoteOrder(null);
-                setIsLoading(false);
-                return;
-            }
-
+        const fetchGuestOrders = async () => {
             setIsLoading(true);
             try {
-                const result = await getOrderByNumber(orderNum);
+                const result = phone
+                    ? await getOrderByPhone(searchName, phone)
+                    : await getOrderByNumber(orderNum);
+
                 if (!ignore) {
-                    const order = result[0] ? normalizeOrder({
-                        ...result[0],
-                        firestoreDocId: result[0].id,
-                    }) : null;
-                    setRemoteOrder(order);
+                    setRemoteOrders(sortOrders(result.map((order) => normalizeOrder({
+                        ...order,
+                        firestoreDocId: order.id,
+                    })).filter(Boolean)));
                 }
             } catch (error) {
-                if (!ignore) setRemoteOrder(null);
+                if (!ignore) setRemoteOrders([]);
             } finally {
                 if (!ignore) setIsLoading(false);
             }
         };
 
-        fetchGuestOrder();
+        fetchGuestOrders();
 
         return () => {
             ignore = true;
         };
-    }, [localOrder, orderNum]);
+    }, [orderNum, phone, searchName]);
 
-    const guestOrder = localOrder || remoteOrder;
-    const orderStatus = guestOrder ? getAutoDeliveryStatus(guestOrder) : 'payment';
-    const orderDateText = getOrderDateText(guestOrder);
-    const orderTimeText = guestOrder ? formatTime(guestOrder) : '';
-    const orderItems = useMemo(() => {
-        return (guestOrder?.items || []).map((item, itemIndex) => ({
-            ...item,
-            itemIndex,
-            cancelStatus: getCancelStatus(item),
-        }));
-    }, [guestOrder]);
+    const guestOrders = remoteOrders.length > 0 ? remoteOrders : localOrders;
 
-    const visibleItems = useMemo(() => {
+    const orderRows = useMemo(() => {
+        return guestOrders.flatMap((order) => {
+            const orderStatus = getAutoDeliveryStatus(order);
+            return (order.items || []).map((item, itemIndex) => ({
+                order,
+                orderStatus,
+                item: {
+                    ...item,
+                    itemIndex,
+                    cancelStatus: getCancelStatus(item),
+                },
+            }));
+        });
+    }, [guestOrders]);
+
+    const visibleRows = useMemo(() => {
         if (activeTab === 'completed') {
-            return orderItems.filter((item) => item.cancelStatus === 'none' && orderStatus === 'done');
+            return orderRows.filter(({ item, orderStatus }) => item.cancelStatus === 'none' && orderStatus === 'done');
         }
 
         if (activeTab === 'cancel') {
-            return orderItems.filter((item) => item.cancelStatus !== 'none');
+            return orderRows.filter(({ item }) => item.cancelStatus !== 'none');
         }
 
-        return orderItems.filter((item) => item.cancelStatus === 'none' && orderStatus !== 'done');
-    }, [activeTab, orderItems, orderStatus]);
+        return orderRows.filter(({ item, orderStatus }) => item.cancelStatus === 'none' && orderStatus !== 'done');
+    }, [activeTab, orderRows]);
 
     const tabCounts = useMemo(() => {
-        return orderItems.reduce((counts, item) => {
+        return orderRows.reduce((counts, { item, orderStatus }) => {
             if (item.cancelStatus !== 'none') return { ...counts, cancel: counts.cancel + 1 };
             if (orderStatus === 'done') return { ...counts, completed: counts.completed + 1 };
             return { ...counts, delivery: counts.delivery + 1 };
         }, { delivery: 0, completed: 0, cancel: 0 });
-    }, [orderItems, orderStatus]);
+    }, [orderRows]);
+
+    const groupedVisibleRows = useMemo(() => {
+        return guestOrders
+            .map((order) => ({
+                order,
+                rows: visibleRows.filter(({ order: rowOrder }) => rowOrder.orderNumber === order.orderNumber),
+            }))
+            .filter(({ rows }) => rows.length > 0);
+    }, [guestOrders, visibleRows]);
 
     const activeTabLabel = tabOptions.find((tab) => tab.key === activeTab)?.label || '주문배송';
 
-    const openCancelRequest = (item) => {
-        setCancelTarget(item);
+    const openCancelRequest = (order, item) => {
+        setCancelTarget({ order, item });
         setCancelReason(cancelReasonOptions[0]);
     };
 
-    const submitCancelRequest = async () => {
-        if (!guestOrder || !cancelTarget) return;
+    const updateRemoteOrderItems = (orderNumber, updatedItems) => {
+        setRemoteOrders((orders) => orders.map((order) => (
+            order.orderNumber === orderNumber ? normalizeOrder({ ...order, items: updatedItems }) : order
+        )));
+    };
 
-        const updatedItems = (guestOrder.items || []).map((item, index) => (
-            index === cancelTarget.itemIndex
+    const submitCancelRequest = async () => {
+        if (!cancelTarget) return;
+
+        const { order, item: targetItem } = cancelTarget;
+        const updatedItems = (order.items || []).map((item, index) => (
+            index === targetItem.itemIndex
                 ? {
                     ...item,
                     cancelStatus: 'pending',
@@ -178,13 +224,11 @@ export default function OrderForGuest() {
                 : item
         ));
 
-        if (localOrder) {
-            await onRequestCancelOrder(guestOrder.orderNumber, cancelTarget.id, cancelReason);
-        }
+        await onRequestCancelOrder(order.orderNumber, targetItem.id, cancelReason);
 
-        if (guestOrder.firestoreDocId) {
-            await updateGuestOrderItemCancel(guestOrder.firestoreDocId, updatedItems);
-            setRemoteOrder((prev) => normalizeOrder({ ...prev, items: updatedItems }));
+        if (order.firestoreDocId) {
+            await updateGuestOrderItemCancel(order.firestoreDocId, updatedItems);
+            updateRemoteOrderItems(order.orderNumber, updatedItems);
         }
 
         setCancelTarget(null);
@@ -193,8 +237,8 @@ export default function OrderForGuest() {
         toast('주문 취소가 접수되었습니다.');
     };
 
-    const renderDetailPanel = (item) => {
-        const itemKey = `${guestOrder.orderNumber}-${item.id}-${item.itemIndex}`;
+    const renderDetailPanel = (order, orderStatus, item) => {
+        const itemKey = `${order.orderNumber}-${item.id}-${item.itemIndex}`;
         if (detailId !== itemKey) return null;
 
         return (
@@ -202,15 +246,15 @@ export default function OrderForGuest() {
                 <div className="order-detail-grid">
                     <div>
                         <span>주문번호</span>
-                        <strong>{guestOrder.orderNumber}</strong>
+                        <strong>{order.orderNumber}</strong>
                     </div>
                     <div>
                         <span>주문일시</span>
-                        <strong>{orderDateText} {orderTimeText}</strong>
+                        <strong>{getOrderDateText(order)} {formatTime(order)}</strong>
                     </div>
                     <div>
                         <span>배송 예정일</span>
-                        <strong>{formatOrderDate(guestOrder.deliveryDate) || '확인 중'}</strong>
+                        <strong>{formatOrderDate(order.deliveryDate) || '확인 중'}</strong>
                     </div>
                     <div>
                         <span>주문 금액</span>
@@ -226,7 +270,7 @@ export default function OrderForGuest() {
                     </div>
                     <div>
                         <span>주문자</span>
-                        <strong>{guestOrder.guestInfo?.name || guestOrder.name || '비회원'}</strong>
+                        <strong>{order.guestInfo?.name || order.name || '비회원'}</strong>
                     </div>
                 </div>
 
@@ -237,8 +281,8 @@ export default function OrderForGuest() {
         );
     };
 
-    const renderProductItem = (item) => {
-        const itemKey = `${guestOrder.orderNumber}-${item.id}-${item.itemIndex}`;
+    const renderProductItem = ({ order, orderStatus, item }) => {
+        const itemKey = `${order.orderNumber}-${item.id}-${item.itemIndex}`;
         const isDetailOpen = detailId === itemKey;
         const isCancelable = orderStatus === 'payment' && item.cancelStatus === 'none';
         const statusText = item.cancelStatus === 'none'
@@ -274,7 +318,7 @@ export default function OrderForGuest() {
                         </div>
 
                         <div className="right">
-                            <p>배송 예정일: {formatOrderDate(guestOrder.deliveryDate) || '확인 중'}</p>
+                            <p>배송 예정일: {formatOrderDate(order.deliveryDate) || '확인 중'}</p>
                             <div className="btn-group">
                                 <button
                                     type="button"
@@ -288,7 +332,7 @@ export default function OrderForGuest() {
                                     <button
                                         type="button"
                                         className="order-cancel-btn"
-                                        onClick={() => openCancelRequest(item)}
+                                        onClick={() => openCancelRequest(order, item)}
                                     >
                                         주문취소
                                     </button>
@@ -297,9 +341,38 @@ export default function OrderForGuest() {
                         </div>
                     </div>
 
-                    {renderDetailPanel(item)}
+                    {renderDetailPanel(order, orderStatus, item)}
                 </div>
             </li>
+        );
+    };
+
+    const renderOrderCard = ({ order, rows }) => {
+        return (
+            <article className="order-card" key={order.orderNumber}>
+                <div className="order-id-wrap">
+                    <div className="order-header-left">
+                        <span className="guest-badge">비회원 주문</span>
+
+                        <div className="order-number-box">
+                            <span className="label">주문번호</span>
+                            <strong>{order.orderNumber}</strong>
+                        </div>
+                    </div>
+
+                    <div className="order-header-right">
+                        <span className="label">주문시간</span>
+                        <p>
+                            {getOrderDateText(order)}
+                            <span className="time">{formatTime(order)}</span>
+                        </p>
+                    </div>
+                </div>
+
+                <ul className="order-list">
+                    {rows.map(renderProductItem)}
+                </ul>
+            </article>
         );
     };
 
@@ -341,7 +414,7 @@ export default function OrderForGuest() {
                                 description="잠시만 기다려 주세요."
                                 imageSrc="/images/logo-icon/order-none.svg"
                             />
-                        ) : !guestOrder ? (
+                        ) : guestOrders.length === 0 ? (
                             <SubPageEmptyState
                                 title="해당 주문을 찾을 수 없습니다."
                                 description="로그인 페이지에서 이름과 주문번호 또는 휴대폰번호로 다시 조회해 주세요."
@@ -376,11 +449,11 @@ export default function OrderForGuest() {
                                 <div className="order-summary">
                                     <div className="order-summary__title">
                                         <strong>{activeTabLabel}</strong>
-                                        <span>{visibleItems.length}개 상품</span>
+                                        <span>{visibleRows.length}개 상품</span>
                                     </div>
                                 </div>
 
-                                {visibleItems.length === 0 ? (
+                                {visibleRows.length === 0 ? (
                                     <SubPageEmptyState
                                         title={emptyContent.title}
                                         description={emptyContent.description}
@@ -392,38 +465,11 @@ export default function OrderForGuest() {
                                     <div className="order-list-wrap">
                                         <section className="order-status-section">
                                             <div className="order-status-section__head">
-                                                <h3>
-                                                    {activeTab === 'cancel'
-                                                        ? '주문취소'
-                                                        : statusLabels[orderStatus] || '주문 확인중'}
-                                                </h3>
-                                                <span>1건 주문 / {visibleItems.length}개 상품</span>
+                                                <h3>{activeTabLabel}</h3>
+                                                <span>{groupedVisibleRows.length}건 주문 / {visibleRows.length}개 상품</span>
                                             </div>
 
-                                            <article className="order-card">
-                                                <div className="order-id-wrap">
-                                                    <div className="order-header-left">
-                                                        <span className="guest-badge">비회원 주문</span>
-
-                                                        <div className="order-number-box">
-                                                            <span className="label">주문번호</span>
-                                                            <strong>{guestOrder.orderNumber}</strong>
-                                                        </div>
-                                                    </div>
-
-                                                    <div className="order-header-right">
-                                                        <span className="label">주문시간</span>
-                                                        <p>
-                                                            {orderDateText}
-                                                            <span className="time">{orderTimeText}</span>
-                                                        </p>
-                                                    </div>
-                                                </div>
-
-                                                <ul className="order-list">
-                                                    {visibleItems.map(renderProductItem)}
-                                                </ul>
-                                            </article>
+                                            {groupedVisibleRows.map(renderOrderCard)}
                                         </section>
                                     </div>
                                 )}

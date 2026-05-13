@@ -63,8 +63,12 @@ const Login = () => {
       if (result.length === 0) {
         setOrderError('일치하는 주문 정보가 없습니다.')
       } else {
-        const orderNumber = result[0].orderNumber || result[0].orderId
-        navigate(`/order/guest/${encodeURIComponent(orderNumber)}`)
+        if (searchType === 'phone') {
+          navigate(`/order/guest/phone/${encodeURIComponent(guestPhone)}?name=${encodeURIComponent(guestName)}`)
+        } else {
+          const orderNumber = result[0].orderNumber || result[0].orderId
+          navigate(`/order/guest/${encodeURIComponent(orderNumber)}`)
+        }
       }
     } catch (err) {
       setOrderError('조회 중 오류가 발생했습니다.')

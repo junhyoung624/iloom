@@ -105,6 +105,7 @@ function App() {
             <Route path="/member" element={<PageTransition><Member /></PageTransition>} />
             <Route path="/cart" element={<PageTransition><Cart /></PageTransition>} />
             <Route path="/charge" element={<PageTransition><Charge /></PageTransition>} />
+            <Route path="/order/guest/phone/:phone" element={<PageTransition><OrderForGuest /></PageTransition>} />
             <Route path="/order/guest/:orderNum" element={<PageTransition><OrderForGuest /></PageTransition>} />
             <Route path="/orderForGuest/:orderNum" element={<PageTransition><OrderForGuest /></PageTransition>} />
             <Route path="/searchpage" element={<PageTransition><SearchPage /></PageTransition>} />
