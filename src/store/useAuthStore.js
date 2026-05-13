@@ -38,6 +38,13 @@ export const useAuthStore = create((set, get) => ({
                 await useProductStore.getState().fetchOrderList({ uid: u.uid });
                 await useProductStore.getState().fetchCartItems({ uid: u.uid });
 
+                // 포인트 로드 — Firebase에 없으면 1000P 기본값
+                const { useUserAssetStore } = await import('./useUserAssetStore');
+                const savedPoint = userInfo?.iloomPoint
+                useUserAssetStore.getState().setPoint(
+                    typeof savedPoint === 'number' ? savedPoint : 1000
+                )
+
             } else {
                 const socialUid = localStorage.getItem("social_uid");
                 const socialProvider = localStorage.getItem("social_provider");
