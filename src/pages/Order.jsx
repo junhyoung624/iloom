@@ -317,7 +317,11 @@ const Order = () => {
           </div>
 
           <div className="order-item-img">
-            <img src={item.productImages?.[0]} alt={item.name || "주문 상품"} />
+            <img
+              src={item.productImages?.[0]}
+              alt={item.name || "주문 상품"}
+              style={item._custom ? { aspectRatio: 'auto', objectFit: 'contain', width: '100%' } : {}}
+            />
           </div>
 
           <div className="order-item-txt-info">
