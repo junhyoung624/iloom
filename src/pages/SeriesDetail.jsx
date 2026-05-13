@@ -6,6 +6,7 @@ import SubCard from '../components/SubCard'
 import "./scss/seriesdetail.scss"
 import "../pages/scss/subPage.scss"
 import ButtonTabs from '../components/common/ButtonTabs'
+import SubPageEmptyState from '../components/SubPageEmptyState'
 
 export default function SeriesDetail() {
     const { slug } = useParams()
@@ -23,8 +24,8 @@ export default function SeriesDetail() {
     const parsePrice = (price) => Number(String(price).replace(/[^\d]/g, ""))
 
     const priceList = baseCateItems.map(item => parsePrice(item.price))
-    const minPrice  = priceList.length ? Math.min(...priceList) : 0
-    const maxPrice  = priceList.length ? Math.max(...priceList) : 0
+    const minPrice = priceList.length ? Math.min(...priceList) : 0
+    const maxPrice = priceList.length ? Math.max(...priceList) : 0
 
     // ─── 시리즈 내 카테고리 탭 ────────────────────────────────────
     const tabMenu = useMemo(() => {
@@ -47,13 +48,13 @@ export default function SeriesDetail() {
     }, [tabFilteredItems])
 
     // ─── 필터 state ────────────────────────────────────────────────
-    const [isFilterOpen, setIsFilterOpen]   = useState(false)
+    const [isFilterOpen, setIsFilterOpen] = useState(false)
     const [selectedSeries, setSelectedSeries] = useState([])
-    const [priceRange, setPriceRange]         = useState([minPrice, maxPrice])
+    const [priceRange, setPriceRange] = useState([minPrice, maxPrice])
     const [featureFilters, setFeatureFilters] = useState({
         bestseller: false, mdPick: false, newItem: false,
     })
-    const [sortType,  setSortType]  = useState("price")
+    const [sortType, setSortType] = useState("price")
     const [sortOrder, setSortOrder] = useState("desc")
 
     useEffect(() => {
@@ -95,8 +96,8 @@ export default function SeriesDetail() {
             ip >= priceRange[0] && ip <= priceRange[1] &&
             (selectedSeries.length === 0 || selectedSeries.includes(item.series)) &&
             (!featureFilters.bestseller || Number(item.ranking) > 0) &&
-            (!featureFilters.mdPick     || item.mdPick === true) &&
-            (!featureFilters.newItem    || Number(item.new) === 1)
+            (!featureFilters.mdPick || item.mdPick === true) &&
+            (!featureFilters.newItem || Number(item.new) === 1)
         )
     })
 
@@ -108,9 +109,9 @@ export default function SeriesDetail() {
                         ? parsePrice(a.price) - parsePrice(b.price)
                         : parsePrice(b.price) - parsePrice(a.price)
                 case "ranking": return b.ranking - a.ranking
-                case "new":     return Number(b.new) - Number(a.new)
-                case "name":    return a.name.localeCompare(b.name)
-                default:        return 0
+                case "new": return Number(b.new) - Number(a.new)
+                case "name": return a.name.localeCompare(b.name)
+                default: return 0
             }
         })
     }
@@ -118,13 +119,13 @@ export default function SeriesDetail() {
     // ─── 페이지네이션 ──────────────────────────────────────────────
     const listRef = useRef(null)
     const [currentPage, setCurrentPage] = useState(1)
-    const itemPage      = 20
-    const totalPages    = Math.ceil(cateItems.length / itemPage)
+    const itemPage = 20
+    const totalPages = Math.ceil(cateItems.length / itemPage)
     const pageGroupSize = 5
-    const startPage     = Math.floor((currentPage - 1) / pageGroupSize) * pageGroupSize + 1
-    const endPage       = Math.min(startPage + pageGroupSize - 1, totalPages)
-    const visiblePages  = Array.from({ length: endPage - startPage + 1 }, (_, i) => startPage + i)
-    const pageItem      = cateItems.slice((currentPage - 1) * itemPage, currentPage * itemPage)
+    const startPage = Math.floor((currentPage - 1) / pageGroupSize) * pageGroupSize + 1
+    const endPage = Math.min(startPage + pageGroupSize - 1, totalPages)
+    const visiblePages = Array.from({ length: endPage - startPage + 1 }, (_, i) => startPage + i)
+    const pageItem = cateItems.slice((currentPage - 1) * itemPage, currentPage * itemPage)
 
     useEffect(() => {
         setCurrentPage(1)
@@ -147,8 +148,8 @@ export default function SeriesDetail() {
             onRemove: () => setPriceRange([minPrice, maxPrice]),
         }] : []),
         ...(featureFilters.bestseller ? [{ key: "feature-bestseller", label: "BESTSELLER", onRemove: () => handleFeatureFilter("bestseller") }] : []),
-        ...(featureFilters.mdPick     ? [{ key: "feature-mdpick",     label: "MD PICK",    onRemove: () => handleFeatureFilter("mdPick") }] : []),
-        ...(featureFilters.newItem    ? [{ key: "feature-new",         label: "NEW",        onRemove: () => handleFeatureFilter("newItem") }] : []),
+        ...(featureFilters.mdPick ? [{ key: "feature-mdpick", label: "MD PICK", onRemove: () => handleFeatureFilter("mdPick") }] : []),
+        ...(featureFilters.newItem ? [{ key: "feature-new", label: "NEW", onRemove: () => handleFeatureFilter("newItem") }] : []),
     ]
     const activeFilterCount = activeFilterTags.length
 
@@ -198,7 +199,7 @@ export default function SeriesDetail() {
                             <div
                                 className="sub-range-track"
                                 style={{
-                                    left:  `${maxPrice === minPrice ? 0 : ((priceRange[0] - minPrice) / (maxPrice - minPrice)) * 100}%`,
+                                    left: `${maxPrice === minPrice ? 0 : ((priceRange[0] - minPrice) / (maxPrice - minPrice)) * 100}%`,
                                     right: `${maxPrice === minPrice ? 0 : 100 - ((priceRange[1] - minPrice) / (maxPrice - minPrice)) * 100}%`,
                                 }}
                             />
@@ -369,10 +370,14 @@ export default function SeriesDetail() {
 
                         {/* ── 빈 상태 ──────────────────────────── */}
                         {pageItem.length === 0 && (
-                            <div className="subpage-empty-state">
-                                <p>조건에 맞는 상품이 없어요.</p>
-                                <button onClick={resetFilter}>필터 초기화</button>
-                            </div>
+                            <SubPageEmptyState
+                                className="subpage-empty-state"
+                                imageSrc="/images/logo-icon/no-image.svg"
+                                imageAlt="filter empty"
+                                title="조건에 맞는 상품이 없어요"
+                                actionLabel="필터 초기화"
+                                onAction={resetFilter}
+                            />
                         )}
 
                         {/* ── 상품 목록 ────────────────────────── */}
