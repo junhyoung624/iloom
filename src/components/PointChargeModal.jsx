@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react'
 import toast from 'react-hot-toast'
 import { useUserAssetStore } from '../store/useUserAssetStore'
+import { useAuthStore } from '../store/useAuthStore'
 
 export default function PointChargeModal({ iloomPoint, onClose }) {
     const { addPoint } = useUserAssetStore()
+    const { user } = useAuthStore()
     const [pointChargeAmount, setPointChargeAmount] = useState(0)
 
     const handleCharge = () => {
@@ -11,7 +13,7 @@ export default function PointChargeModal({ iloomPoint, onClose }) {
             toast('최소 1,000원 이상 충전 가능합니다')
             return
         }
-        addPoint(pointChargeAmount)
+        addPoint(pointChargeAmount, user?.uid)
         toast(`${pointChargeAmount.toLocaleString()}P 충전이 완료되었습니다!`)
         onClose()
     }

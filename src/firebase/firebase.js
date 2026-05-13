@@ -7,6 +7,7 @@ import { getAuth, GoogleAuthProvider } from "firebase/auth";
 
 // 데이터베이스 -> json형태로 저장
 import { getFirestore } from "firebase/firestore";
+import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
     apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
@@ -18,10 +19,12 @@ const firebaseConfig = {
 }
 
 const app = initializeApp(firebaseConfig);
+
 export const auth = getAuth(app);
 export const googleProvider = new GoogleAuthProvider();
 
 // 데이터 베이스 연결
 export const db = getFirestore(app);
 
-
+// storage 연결
+export const storage = getStorage(app);

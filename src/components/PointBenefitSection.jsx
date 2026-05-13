@@ -2,7 +2,7 @@ export default function PointBenefitSection({ finalPrice, earnPoint }) {
     return (
         <div className="charge-section">
             <h3 className="section-title">
-                iloom머니 혜택
+                iloom 포인트 혜택
                 <span className="point-max-badge">
                     최대 {Math.floor(finalPrice * 0.015).toLocaleString()}P
                 </span>

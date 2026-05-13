@@ -25,8 +25,24 @@
     font-weight: 500;
 }
 
-.sub-page {
+.subpage-empty-state {
+        button {
+            color: #303030;
+            background: #fff;
+            cursor: pointer;
+            padding: 12px 22px;
+            border: 1px solid #303030;
+            margin-top: 12px;
+            transition: .2s;
 
+            &:hover {
+                background: #303030;
+                color: #fff;
+            }
+        }
+    }
+
+.sub-page {
     .breadcrumb-list {
         @include g.myFlex($jc: null, $gap: 20px);
         cursor: pointer;

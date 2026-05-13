@@ -9,7 +9,7 @@ export default function MoneySection({
 }) {
     return (
         <div className="discount-row">
-            <span className="discount-label">일룸머니</span>
+            <span className="discount-label">일룸 포인트</span>
 
             <div className="discount-content">
                 <div className="money-row">
@@ -40,7 +40,7 @@ export default function MoneySection({
                 </div>
 
                 <div className="money-info-row">
-                    <span>보유 일룸머니</span>
+                    <span>보유 일룸 포인트</span>
                     <strong>{iloomMoney.toLocaleString()}원</strong>
                 </div>
             </div>

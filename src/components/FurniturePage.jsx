@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom'
 import { useProductStore } from '../store/useProductStore'
 import SubCard from '../components/SubCard'
 import "./scss/furnitureList.scss"
+import SubPageEmptyState from './SubPageEmptyState'
 
 export default function FurniturePage() {
     const { items, sortType, sortOrder, onSetSort } = useProductStore()
@@ -321,13 +322,21 @@ export default function FurniturePage() {
 
 
                         {pageItem.length === 0 && (
-                            <div className="subpage-empty-state">
-                                <p>'{rawKeyword}'에 대한 검색 결과가 없어요.</p>
-                                {activeFilterCount > 0
-                                    ? <button onClick={resetFilter}>필터 초기화</button>
-                                    : <Link to="/">홈으로 돌아가기</Link>
-                                }
-                            </div>
+                            // <div className="subpage-empty-state">
+                            //     <p>'{rawKeyword}'에 대한 검색 결과가 없어요.</p>
+                            //     {activeFilterCount > 0
+                            //         ? <button onClick={resetFilter}>필터 초기화</button>
+                            //         : <Link to="/">홈으로 돌아가기</Link>
+                            //     }
+                            // </div>
+                            <SubPageEmptyState
+                                className="subpage-empty-state"
+                                imageSrc="/images/logo-icon/no-image.svg"
+                                imageAlt="filter empty"
+                                title="조건에 맞는 상품이 없어요"
+                                actionLabel="필터 초기화"
+                                onAction={resetFilter}
+                            />
                         )}
 
 
