@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom'
 import { useProductStore } from '../store/useProductStore'
 import SubCard from '../components/SubCard'
 import "./scss/furnitureList.scss"
+import SubPageEmptyState from './SubPageEmptyState'
 
 export default function FurniturePage() {
     const { items, sortType, sortOrder, onSetSort } = useProductStore()
@@ -328,6 +329,7 @@ export default function FurniturePage() {
                                     : <Link to="/">홈으로 돌아가기</Link>
                                 }
                             </div>
+
                         )}
 
 

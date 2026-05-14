@@ -4,10 +4,11 @@ import { useProductStore } from '../store/useProductStore'
 import SubCard from '../components/SubCard'
 import "./scss/subPage.scss"
 import NewBestTabs from '../components/common/NewBestTabs'
+import SubPageEmptyState from '../components/SubPageEmptyState'
 
 const NewBestPage = () => {
     const bannerImgList = [
-        { page: "new",        imgUrl: "./images/new-best-images/new-banner.png" },
+        { page: "new", imgUrl: "./images/new-best-images/new-banner.png" },
         { page: "BestSeller", imgUrl: "./images/new-best-images/best-banner.jpg" },
     ]
 
@@ -15,12 +16,12 @@ const NewBestPage = () => {
     const { items, sortType, sortOrder, onSetSort } = useProductStore()
     const listRef = useRef(null)
 
-    const isNew        = location.pathname === "/new"
+    const isNew = location.pathname === "/new"
     const isBestSeller = location.pathname === "/BestSeller"
 
-    const pageName  = isNew ? "New Arrival" : "BestSeller"
+    const pageName = isNew ? "New Arrival" : "BestSeller"
     const bannerText = isNew ? "NEW ARRIVAL" : "BEST SELLER"
-    const bannerImg  = bannerImgList.find(ban => location.pathname === `/${ban.page}`)
+    const bannerImg = bannerImgList.find(ban => location.pathname === `/${ban.page}`)
 
     // ─── 탭 ────────────────────────────────────────────────────────
     const tabMenu = ["전체", ...new Set(items.map(item => item.originalCategory))]
@@ -32,7 +33,7 @@ const NewBestPage = () => {
     const baseCateItems = useMemo(() => {
         return items
             .filter(item => {
-                if (isNew)        return item.new === true
+                if (isNew) return item.new === true
                 if (isBestSeller) return item.BestSeller === true
                 return false
             })
@@ -43,8 +44,8 @@ const NewBestPage = () => {
     const parsePrice = (price) => Number(String(price).replace(/[^\d]/g, ""))
 
     const priceList = baseCateItems.map(item => parsePrice(item.price))
-    const minPrice  = priceList.length ? Math.min(...priceList) : 0
-    const maxPrice  = priceList.length ? Math.max(...priceList) : 0
+    const minPrice = priceList.length ? Math.min(...priceList) : 0
+    const maxPrice = priceList.length ? Math.max(...priceList) : 0
 
     // ─── 시리즈 옵션 ───────────────────────────────────────────────
     const seriesOptions = useMemo(() => {
@@ -98,12 +99,12 @@ const NewBestPage = () => {
 
     // ─── 필터 + 정렬 적용 ──────────────────────────────────────────
     let cateItems = baseCateItems.filter(item => {
-        const itemPrice   = parsePrice(item.price)
-        const matchPrice  = itemPrice >= priceRange[0] && itemPrice <= priceRange[1]
+        const itemPrice = parsePrice(item.price)
+        const matchPrice = itemPrice >= priceRange[0] && itemPrice <= priceRange[1]
         const matchSeries = selectedSeries.length === 0 || selectedSeries.includes(item.series)
-        const matchBest   = !featureFilters.bestseller || Number(item.ranking) > 0
+        const matchBest = !featureFilters.bestseller || Number(item.ranking) > 0
         const matchMdPick = !featureFilters.mdPick || item.mdPick === true
-        const matchNew    = !featureFilters.newItem || Number(item.new) === 1
+        const matchNew = !featureFilters.newItem || Number(item.new) === 1
         return matchPrice && matchSeries && matchBest && matchMdPick && matchNew
     })
 
@@ -115,22 +116,22 @@ const NewBestPage = () => {
                         ? parsePrice(a.price) - parsePrice(b.price)
                         : parsePrice(b.price) - parsePrice(a.price)
                 case "ranking": return b.ranking - a.ranking
-                case "new":     return Number(b.new) - Number(a.new)
-                case "name":    return a.name.localeCompare(b.name)
-                default:        return 0
+                case "new": return Number(b.new) - Number(a.new)
+                case "name": return a.name.localeCompare(b.name)
+                default: return 0
             }
         })
     }
 
     // ─── 페이지네이션 ──────────────────────────────────────────────
     const [currentPage, setCurrentPage] = useState(1)
-    const itemPage      = 20
-    const totalPages    = Math.ceil(cateItems.length / itemPage)
+    const itemPage = 20
+    const totalPages = Math.ceil(cateItems.length / itemPage)
     const pageGroupSize = 5
-    const startPage     = Math.floor((currentPage - 1) / pageGroupSize) * pageGroupSize + 1
-    const endPage       = Math.min(startPage + pageGroupSize - 1, totalPages)
-    const visiblePages  = Array.from({ length: endPage - startPage + 1 }, (_, i) => startPage + i)
-    const pageItem      = cateItems.slice((currentPage - 1) * itemPage, currentPage * itemPage)
+    const startPage = Math.floor((currentPage - 1) / pageGroupSize) * pageGroupSize + 1
+    const endPage = Math.min(startPage + pageGroupSize - 1, totalPages)
+    const visiblePages = Array.from({ length: endPage - startPage + 1 }, (_, i) => startPage + i)
+    const pageItem = cateItems.slice((currentPage - 1) * itemPage, currentPage * itemPage)
 
     useEffect(() => {
         setCurrentPage(1)
@@ -155,8 +156,8 @@ const NewBestPage = () => {
             onRemove: () => setPriceRange([minPrice, maxPrice]),
         }] : []),
         ...(featureFilters.bestseller ? [{ key: "feature-bestseller", label: "BESTSELLER", onRemove: () => handleFeatureFilter("bestseller") }] : []),
-        ...(featureFilters.mdPick     ? [{ key: "feature-mdpick",     label: "MD PICK",    onRemove: () => handleFeatureFilter("mdPick") }] : []),
-        ...(featureFilters.newItem    ? [{ key: "feature-new",         label: "NEW",        onRemove: () => handleFeatureFilter("newItem") }] : []),
+        ...(featureFilters.mdPick ? [{ key: "feature-mdpick", label: "MD PICK", onRemove: () => handleFeatureFilter("mdPick") }] : []),
+        ...(featureFilters.newItem ? [{ key: "feature-new", label: "NEW", onRemove: () => handleFeatureFilter("newItem") }] : []),
     ]
     const activeFilterCount = activeFilterTags.length
 
@@ -185,7 +186,7 @@ const NewBestPage = () => {
                             <div
                                 className="sub-range-track"
                                 style={{
-                                    left:  `${maxPrice === minPrice ? 0 : ((priceRange[0] - minPrice) / (maxPrice - minPrice)) * 100}%`,
+                                    left: `${maxPrice === minPrice ? 0 : ((priceRange[0] - minPrice) / (maxPrice - minPrice)) * 100}%`,
                                     right: `${maxPrice === minPrice ? 0 : 100 - ((priceRange[1] - minPrice) / (maxPrice - minPrice)) * 100}%`,
                                 }}
                             />
@@ -351,13 +352,14 @@ const NewBestPage = () => {
                                 <p>조건에 맞는 상품이 없어요.</p>
                                 <button onClick={resetFilter}>필터 초기화</button>
                             </div>
+
                         )}
 
                         {/* ── 상품 목록 ────────────────────────── */}
                         <ul className="sub-product-list">
                             {pageItem.map((item) => (
                                 <li key={item.id}>
-                                        <SubCard item={item} />
+                                    <SubCard item={item} />
                                 </li>
                             ))}
                         </ul>
