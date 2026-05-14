@@ -104,6 +104,13 @@ export default function OrderForGuest() {
     const [remoteOrders, setRemoteOrders] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
 
+    useEffect(() => {
+        const handleEsc = (e) => {
+            if (e.key === "Escape") setCancelTarget();
+        }
+        document.addEventListener("keydown", handleEsc);
+        return () => document.addEventListener("keydown", handleEsc);
+    }, [setCancelTarget])
     const localOrders = useMemo(() => {
         const orders = orderList
             .map(normalizeOrder)
