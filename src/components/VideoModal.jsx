@@ -43,12 +43,12 @@ export default function VideoModal({ isOpen, onClose }) {
   const handleHideWeek = () => {
     const now = new Date()
 
-    // 현재 시간 + 7일
-    const nextWeek = now.getTime() + 7 * 24 * 60 * 60 * 1000
+    // 현재 시간 + 1일
+    const tomorrow = now.getTime() + 1 * 24 * 60 * 60 * 1000
 
     localStorage.setItem(
       "hideVideoPopupUntil",
-      String(nextWeek)
+      String(tomorrow)
     )
 
     onClose()
@@ -96,7 +96,7 @@ export default function VideoModal({ isOpen, onClose }) {
             className={styles.btnSub}
             onClick={handleHideWeek}
           >
-            일주일간 보지 않기
+            오늘 하루 보지 않기
           </button>
 
           <button

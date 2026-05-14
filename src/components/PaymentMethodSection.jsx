@@ -69,7 +69,6 @@ export default function PaymentMethodSection({
             </h3>
 
             <div className="payment-wrap">
-                {/* 일룸포인트 */}
                 <div
                     className={`payment-option-box ${paymentMethod === 'iloom' ? 'active' : ''}`}
                     onClick={() => setPaymentMethod('iloom')}
@@ -80,7 +79,7 @@ export default function PaymentMethodSection({
                         </div>
 
                         <div className="payment-option-info">
-                            <span className="payment-option-label">일룸포인트 충전결제</span>
+                            <span className="payment-option-label">일룸 포인트 충전결제</span>
                             <span className="payment-option-sub point-green">
                                 보유 {(iloomPoint || 0).toLocaleString()}P
                             </span>

@@ -6,6 +6,8 @@ import './scss/charge.scss'
 import { useLocation, useNavigate } from 'react-router-dom'
 import { useKakaoPostcodePopup } from 'react-daum-postcode'
 import { addOrder } from '../firebase/orderService'
+import { storage } from '../firebase/firebase'
+import { ref, uploadString, getDownloadURL } from 'firebase/storage'
 import { storeInfoData } from '../data/storeInfoData'
 import { store_region } from '../data/storeRegionCode'
 import { couponData } from '../data/couponData'
@@ -33,7 +35,7 @@ import OrderCompletePopup from '../components/OrderCompletePopup'
 export default function Charge() {
     const { cartItems, items, onAddOrder, createDeliveryDate, onfetchItems } = useProductStore()
     const { user } = useAuthStore()
-    const { iloomMoney = 0, iloomPoint = 0 } = useUserAssetStore()
+    const { iloomPoint = 0, usePoint: spendPoint, addPoint: earnPointFn } = useUserAssetStore()
     const [isSubmitting, setIsSubmitting] = useState(false)
 
     const navigate = useNavigate()
@@ -300,12 +302,12 @@ export default function Charge() {
 
     const handleMoneyApply = () => {
         const val = Number(moneyInput.replace(/,/g, ''))
-        const max = Math.min(iloomMoney, totalPrice - couponDiscount - usePoint)
+        const max = Math.min(iloomPoint, totalPrice - couponDiscount - usePoint)
         setUseMoney(Math.min(val, max))
     }
 
     const handleMoneyAll = () => {
-        const max = Math.min(iloomMoney, totalPrice - couponDiscount - usePoint)
+        const max = Math.min(iloomPoint, totalPrice - couponDiscount - usePoint)
         setUseMoney(max)
         setMoneyInput(max.toLocaleString())
     }
@@ -372,6 +374,7 @@ export default function Charge() {
                 qty: item.qty,
                 price: item.priceNumber,
                 productImages: item.productImages || [],
+                _custom: item._custom || false,
             })),
             total: finalPrice,
         }
@@ -403,8 +406,45 @@ export default function Charge() {
             }
 
         try {
+
             onAddOrder(orderData, user)
             await addOrder(orderData)
+
+
+            if (useMoney > 0) {
+                spendPoint(useMoney, user?.uid)
+            }
+
+            if (earnPoint > 0) {
+                earnPointFn(earnPoint, user?.uid)
+            }
+
+
+            ; (async () => {
+                try {
+                    const customItem = orderData.items.find(
+                        item => item._custom && item.productImages?.[0]?.startsWith('data:')
+                    )
+                    if (!customItem) return
+                    const imgRef = ref(storage, `custom-previews/${orderData.orderId}.png`)
+                    await uploadString(imgRef, customItem.productImages[0], 'data_url')
+                    const url = await getDownloadURL(imgRef)
+                    // Firestore & store 업데이트
+                    const { doc, updateDoc } = await import('firebase/firestore')
+                    const { db } = await import('../firebase/firebase')
+                    // orders 컬렉션에서 해당 주문 업데이트
+                    const { collection, query, where, getDocs } = await import('firebase/firestore')
+                    const q = query(collection(db, 'orders'), where('orderId', '==', orderData.orderId))
+                    const snap = await getDocs(q)
+                    snap.forEach(d => updateDoc(d.ref, {
+                        'items': orderData.items.map(it =>
+                            it._custom ? { ...it, productImages: [url] } : it
+                        )
+                    }))
+                } catch (e) {
+                    console.warn('썸네일 백그라운드 업로드 실패:', e)
+                }
+            })()
 
             const myCanvas = document.createElement('canvas')
             myCanvas.style.position = 'fixed'
@@ -591,7 +631,7 @@ export default function Charge() {
                         />
 
                         <MoneySection
-                            iloomMoney={iloomMoney}
+                            iloomMoney={iloomPoint}
                             moneyInput={moneyInput}
                             setMoneyInput={setMoneyInput}
                             useMoney={useMoney}
@@ -601,10 +641,6 @@ export default function Charge() {
                         />
 
                         <div className="discount-summary">
-                            {/* <div className="discount-summary-row">
-                                <span>상품금액</span>
-                                <span>{formatPrice(totalPrice)}</span>
-                            </div> */}
 
                             {couponDiscount > 0 && (
                                 <div className="discount-summary-row minus">

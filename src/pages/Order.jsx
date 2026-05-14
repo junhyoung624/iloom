@@ -331,7 +331,7 @@ const Order = () => {
             <img
               src={item.productImages?.[0]}
               alt={item.name || "주문 상품"}
-              style={item._custom ? { aspectRatio: 'auto', objectFit: 'contain', width: '100%' } : {}}
+              className={item._custom ? "img-custom" : ""}
             />
           </div>
 
