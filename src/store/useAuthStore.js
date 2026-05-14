@@ -299,9 +299,14 @@ export const useAuthStore = create((set, get) => ({
 
     onNaverCallback: async (accessToken) => {
         try {
-            const res = await fetch(`/naver-api/v1/nid/me`, {
-                headers: { Authorization: `Bearer ${accessToken}` },
-            });
+            // const res = await fetch(`/naver-api/v1/nid/me`, {
+            //     headers: { Authorization: `Bearer ${accessToken}` },
+            // });
+             const res = await fetch(`/.netlify/functions/naver-user`, {
+                headers: {
+                    Authorization: `Bearer ${accessToken}`,
+                },
+            });F
             const data = await res.json();
             const profile = data.response;
 
