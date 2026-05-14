@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useRef, useState } from 'react'
+﻿import React, { useEffect, useMemo, useRef, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { useProductStore } from '../store/useProductStore'
 import SubCard from '../components/SubCard'
@@ -352,7 +352,7 @@ const NewBestPage = () => {
                                 className="subpage-empty-state"
                                 imageSrc="/images/logo-icon/no-image.svg"
                                 imageAlt="filter empty"
-                                title="조건에 맞는 상품이 없어요"
+                                title="조건에 맞는 상품이 없어요."
                                 actionLabel="필터 초기화"
                                 onAction={resetFilter}
                             />

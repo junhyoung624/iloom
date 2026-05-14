@@ -5,35 +5,103 @@
     text-align: center;
     width: 600px;
     margin: 0 auto;
-    padding: 120px 0;
+    padding: 90px 0 130px;
+
+    .inner {
+        text-align: left;
+    }
+
+    h2 {
+        margin-bottom: 38px;
+        color: #222;
+        font-size: 28px;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    form {
+        display: grid;
+        gap: 0;
+    }
 
     p {
         text-align: left;
-        font-size: 14px;
-        margin: 12px 0;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.1;
+        margin: 18px 0 10px;
         color: var(--main);
     }
-
 
     input {
         display: block;
         width: 100%;
+        height: 50px;
         line-height: 50px;
-        margin-bottom: 20px;
+        margin-bottom: 18px;
+        border: 1px solid #808080;
+        padding: 0 16px;
+        color: #222;
+        font-size: 15px;
+        outline: none;
+        transition: border-color 0.2s ease, box-shadow 0.2s ease;
 
+        &::placeholder {
+            color: #aaa;
+            font-weight: 400;
+        }
+
+        &:focus {
+            border-color: #303030;
+            box-shadow: 0 0 0 2px rgba(48, 48, 48, 0.08);
+        }
+
+        &.success {
+            border: 1.5px solid #2ecc71;
+        }
+
+        &.error {
+            border-color: #e74c3c;
+            margin-bottom: 6px;
+        }
+    }
+
+    .member-error-text {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        margin-bottom: 14px;
+        color: #e74c3c;
+        font-size: 13px;
+        font-weight: 700;
+        text-align: left;
+
+        img {
+            width: 14px;
+            height: 14px;
+            object-fit: contain;
+            flex-shrink: 0;
+        }
     }
 
     input[type="submit"],
     button {
         display: block;
         width: 100%;
-        line-height: 50px;
+        height: 52px;
+        line-height: 52px;
         background: #303030;
         border: none;
         color: #fff;
-        margin-top: 10px;
+        margin-top: 18px;
         font-size: 18px;
+        font-weight: 700;
         cursor: pointer;
+        transition: background 0.2s ease;
+
+        &:hover {
+            background: #111;
+        }
     }
 
     button {
