@@ -1,5 +1,6 @@
 import { useRef, useEffect, useState } from "react";
 import styles from "./scss/ModuleHero.module.scss"
+import { Link } from "react-router-dom";
 
 export default function ModuleHero() {
   const videoRef = useRef(null);
@@ -45,7 +46,7 @@ export default function ModuleHero() {
             크기, 컬러, 구성 — 모든 것을 당신의 라이프스타일에 맞게 설계하세요.
           </p>
 
-          <a href="/customize" className={styles.cta}>
+          <Link href="/customize" className={styles.cta}>
             <span>커스터마이즈 하러가기</span>
             <svg
               width="20"
@@ -62,7 +63,7 @@ export default function ModuleHero() {
                 strokeLinejoin="round"
               />
             </svg>
-          </a>
+          </Link>
         </div>
       </div>
     </section>
