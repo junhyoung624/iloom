@@ -46,7 +46,7 @@ export default function ModuleHero() {
             크기, 컬러, 구성 — 모든 것을 당신의 라이프스타일에 맞게 설계하세요.
           </p>
 
-          <Link href="/customize" className={styles.cta}>
+          <Link to="/customize" className={styles.cta}>
             <span>커스터마이즈 하러가기</span>
             <svg
               width="20"
