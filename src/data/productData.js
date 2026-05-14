@@ -2303,29 +2303,6 @@ export const productData = [
     "ranking": 430
   },
   {
-    "id": "HA72R10AU",
-    "series": "LDGYM/OSGYM*",
-    "name": "LDGYM/OSGYM* 일룸(공통) 라운드 사각거울 1000폭(거치대형)",
-    "material": "",
-    "price": "99,000",
-    "options": [],
-    "originalCategory": "침실",
-    "category2": "화장대",
-    "category3": "거울•액세서리",
-    "productImages": [
-      "/images/iloom_images/bedroom/vanity/HA72R10AU_a_1.jpg",
-      "/images/iloom_images/bedroom/vanity/HA72R10AU_a_GYM_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20200117/_971746a0-d7e7-4de2-ab17-bf8220a8da0b.jpg",
-      "https://www.iloom.com/upload/contents/20200117/_763e33cd-d93a-4c1f-9682-552fb52a9eec.jpg"
-    ],
-    "ranking": 1247
-  },
-  {
     "id": "HA72R10EU",
     "series": "일룸(공통)",
     "name": "일룸(공통) 라운드 사각거울 1000폭(브라켓형)",
@@ -4262,45 +4239,6 @@ export const productData = [
     "ranking": 1343
   },
   {
-    "id": "IPP10BV00A",
-    "series": "SP*/CZ*/NCC",
-    "name": "SP*/CZ*/NCC 그립 그립 3단 서랍장 1000폭",
-    "material": "",
-    "price": "399,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "SO",
-          "SP"
-        ]
-      }
-    ],
-    "originalCategory": "침실",
-    "category2": "수납장",
-    "category3": "서랍장",
-    "productImages": [
-      "/images/iloom_images/bedroom/storage/IPP10BV00A_a_1.jpg",
-      "/images/iloom_images/bedroom/storage/IPP10BV00A_a_SP_2.png",
-      "/images/iloom_images/bedroom/storage/IPP10BV00A_a_SO_3.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20231218/_0719216f-9979-4cb3-90d5-4391cfc9ef19.jpg",
-      "https://www.iloom.com/upload/contents/20241021/_a6715465-69b4-4c8b-84e5-6b6010952928.jpg",
-      "https://www.iloom.com/upload/contents/20240207/_079e5852-84b6-4b98-b61b-48a87e7f0f85.jpg",
-      "https://www.iloom.com/upload/contents/20240206/_f433c5e9-c621-49e1-8c01-0474af1adb88.gif",
-      "https://www.iloom.com/upload/contents/20240903/_e3cbc779-cd3b-4c7f-bd97-83e6fda9b81d.jpg",
-      "https://www.iloom.com/upload/contents/20231218/_e8251dda-9210-442c-87c9-3a2bff42f07c.jpg",
-      "https://www.iloom.com/upload/contents/20231218/_2ad91f2d-e39d-4625-b6fe-a09464dfb5b7.jpg",
-      "https://www.iloom.com/upload/contents/20250619/_350598c1-9216-4a07-a67f-a0acfe7a967b.jpg",
-      "https://www.iloom.com/upload/contents/20231218/_688d2f61-5dee-4660-9851-60bb62371b77.jpg"
-    ],
-    "ranking": 166
-  },
-  {
     "id": "IPP80BV02A",
     "series": "그립",
     "name": "그립 5단 서랍장 800폭",
@@ -4665,8 +4603,8 @@ export const productData = [
       }
     ],
     "originalCategory": "침실",
-    "category2": "침대",
-    "category3": "일반침대",
+    "category2": "수납장",
+    "category3": "서랍장",
     "productImages": [
       "/images/iloom_images/bedroom/bed/HW900801_a_1.jpg",
       "/images/iloom_images/wardrobe/wardrobe/HW900801_b_1.jpg",
@@ -4779,68 +4717,6 @@ export const productData = [
       "https://www.iloom.com/upload/contents/20201119/_f5f2af0b-bcd4-4c30-a133-5af8633f93e5.jpg"
     ],
     "ranking": 895
-  },
-  {
-    "id": "HC401002R",
-    "series": "SP/CZ/NCC*",
-    "name": "SP/CZ/NCC* 메이 4단 서랍장 1000폭",
-    "material": "",
-    "price": "445,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "NCC",
-          "SP"
-        ]
-      }
-    ],
-    "originalCategory": "침실",
-    "category2": "수납장",
-    "category3": "서랍장",
-    "productImages": [
-      "/images/iloom_images/bedroom/storage/HC401002R_1.jpg",
-      "/images/iloom_images/bedroom/storage/HC401002R_default_2.png",
-      "/images/iloom_images/bedroom/storage/HC401002R_default_3.png",
-      "/images/iloom_images/bedroom/storage/HC401002R_default_4.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20210106/_33cfbd34-9dcb-4bdb-8395-05228bf9bfbd.jpg",
-      "https://www.iloom.com/upload/contents/20210106/_483df256-06ee-41fa-8e55-b82c49288674.jpg"
-    ],
-    "ranking": 1548
-  },
-  {
-    "id": "HD701013N",
-    "series": "SP/CZ/NCC*",
-    "name": "SP/CZ/NCC* 메이 화장대",
-    "material": "",
-    "price": "179,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "SP"
-        ]
-      }
-    ],
-    "originalCategory": "침실",
-    "category2": "화장대",
-    "category3": "",
-    "productImages": [
-      "/images/iloom_images/bedroom/vanity/HD701013N_SP_1.png",
-      "/images/iloom_images/bedroom/vanity/HD701013N_SP_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20220114/_4d6073ef-0171-4fcd-a354-18004f592861.jpg"
-    ],
-    "ranking": 680
   },
   {
     "id": "HB721001",
@@ -10178,26 +10054,6 @@ export const productData = [
     "ranking": 396
   },
   {
-    "id": "HYC6002",
-    "series": "NGYS/SO",
-    "name": "NGYS/SO 도어 ACC 거울",
-    "material": "",
-    "price": "28,000",
-    "options": [],
-    "originalCategory": "옷장",
-    "category2": "옷장•붙박이장",
-    "category3": "",
-    "productImages": [
-      "/images/iloom_images/wardrobe/wardrobe/HYC6002_1.jpg",
-      "/images/iloom_images/wardrobe/wardrobe/HYC6002_XX_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [],
-    "ranking": 918
-  },
-  {
     "id": "IGL0018A",
     "series": "슬라이딩 (SP)",
     "name": "슬라이딩 (SP) 슬라이딩 도어 3문형 3000폭",
@@ -10450,38 +10306,6 @@ export const productData = [
       "https://www.iloom.com/upload/contents/20211026/_2612033a-a821-4236-87f9-8635b6ad2c45.jpg"
     ],
     "ranking": 1417
-  },
-  {
-    "id": "HYC993B",
-    "series": "컬렉트 *B / C 각 1개 포함",
-    "name": "컬렉트 *B / C 각 1개 포함 하부선반 정리장 900폭/1000폭",
-    "material": "",
-    "price": "383,000",
-    "options": [],
-    "originalCategory": "옷장",
-    "category2": "옷장•붙박이장",
-    "category3": "",
-    "productImages": [
-      "/images/iloom_images/wardrobe/wardrobe/HYC993B_DGC_1.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYC993B_GYC_2.png",
-      "/images/iloom_images/wardrobe/wardrobe/HYC993B_DGC_3.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20211013/_e038901a-01e2-46d5-860c-80b12a570e32.jpg",
-      "https://www.iloom.com/upload/contents/20211013/_640f6767-b187-417d-8521-a913210dcaed.png",
-      "https://www.iloom.com/upload/contents/20211013/_d275201b-59e0-43c6-985d-9e55b915f3d2.png",
-      "https://www.iloom.com/upload/contents/20211013/_41d330a2-f6c8-4895-a70e-ec6cd705947a.png",
-      "https://www.iloom.com/upload/contents/20211013/_69baa9ea-12cf-49d4-a694-f8ffbaff737a.png",
-      "https://www.iloom.com/upload/contents/20211013/_8fe56a09-5f16-453a-85d3-2377005d9393.png",
-      "https://www.iloom.com/upload/contents/20211013/_98c70839-b68d-4d73-bbfb-8392c2f489de.png",
-      "https://www.iloom.com/upload/contents/20211013/_7cad1318-8dff-401b-8839-54d8ea327abe.jpg",
-      "https://www.iloom.com/upload/contents/20211013/_c9a5b65b-7f8e-4c10-aa3e-5b30bb610a9f.jpg",
-      "https://www.iloom.com/upload/contents/20211026/_08c8d281-c888-4027-8167-7978674c9080.jpg"
-    ],
-    "ranking": 19
   },
   {
     "id": "HYC913B",
@@ -11655,7 +11479,7 @@ export const productData = [
   {
     "id": "IBB0013A",
     "series": "두들",
-    "name": "두들 벙크침대 A타입 SS(R/L,하부조명형,가드쿠 션 포함)",
+    "name": "두들 벙크침대 A타입 SS(R/L,하부조명형,가드쿠션 포함)",
     "material": "",
     "price": "1,930,000",
     "options": [
@@ -15768,36 +15592,6 @@ export const productData = [
     "ranking": 292
   },
   {
-    "id": "HSLA151N",
-    "series": "팅클팝",
-    "name": "팅클팝 화장대",
-    "material": "",
-    "price": "179,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "IVKP"
-        ]
-      }
-    ],
-    "originalCategory": "키즈룸",
-    "category2": "수납장",
-    "category3": "화장대",
-    "productImages": [
-      "/images/iloom_images/kids-room/storage/HSLA151N_1.jpg",
-      "/images/iloom_images/kids-room/storage/HSLA151N_IVKP_2(누끼따야함).jpg"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": true,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20200506/_d9928ca3-c13a-457a-8c4f-d36367bc07c7.jpg",
-      "https://www.iloom.com/upload/contents/20200506/_3b5c9dea-900b-4455-8d01-3505839edb4b.jpg"
-    ],
-    "ranking": 1569
-  },
-  {
     "id": "HSLC064N",
     "series": "팅클팝",
     "name": "팅클팝 600폭 4단 책장",
@@ -16075,36 +15869,6 @@ export const productData = [
       "https://www.iloom.com/upload/contents/20240530/_d098d32c-b82f-4a47-8618-15caeb8014cb.jpg"
     ],
     "ranking": 1219
-  },
-  {
-    "id": "HCS4400S",
-    "series": "A443D/A441D/444 D/A449PN/A472N",
-    "name": "A443D/A441D/444 D/A449PN/A472N 키즈의자 페블미니 화장대 스툴",
-    "material": "",
-    "price": "99,000",
-    "options": [
-      {
-        "name": "색상",
-        "values": [
-          "F263"
-        ]
-      }
-    ],
-    "originalCategory": "키즈룸",
-    "category2": "수납장",
-    "category3": "화장대",
-    "productImages": [
-      "/images/iloom_images/kids-room/storage/HCS4400S_1.jpg",
-      "/images/iloom_images/kids-room/storage/HCS4400S_F263_2.png"
-    ],
-    "mdPick": false,
-    "new": false,
-    "BestSeller": false,
-    "detailImg": [
-      "https://www.iloom.com/upload/contents/20180628/_061550b2-9d26-442b-bdb0-49f8823a2173.jpg",
-      "https://www.iloom.com/upload/contents/20180629/_b2d13707-1eba-47a0-abcf-71ad045ebcf0.jpg"
-    ],
-    "ranking": 1305
   },
   {
     "id": "HCH2200A",
@@ -46838,7 +46602,7 @@ export const productData = [
   {
     "id": "IBM0000B",
     "series": "다나",
-    "name": "다나 모션베드 캐주얼(바운텍스폼,베드테이블 포 함)",
+    "name": "다나 모션베드 캐주얼(바운텍스폼,베드테이블 포함)",
     "material": "폼",
     "price": "2,099,000",
     "options": [],
@@ -50061,7 +49825,7 @@ export const productData = [
   {
     "id": "HSG01A",
     "series": "모드",
-    "name": "모드 6단 h형 책상세트 (1200폭 책상,스크린 형,ACC포함)",
+    "name": "모드 6단 h형 책상세트 (1200폭 책상,스크린형,ACC포함)",
     "material": "",
     "price": "399,000",
     "options": [
