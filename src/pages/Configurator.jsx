@@ -5,9 +5,6 @@ import { Environment, ContactShadows, Html } from '@react-three/drei'
 import * as THREE from 'three'
 import './scss/configurator.scss'
 
-// ────────────────────────────────────────────────────────────
-//  상수
-// ────────────────────────────────────────────────────────────
 const COLOR_OPTIONS = [
   { id: 'golden-yellow', label: 'Golden Yellow', hex: '#E8A020', r: 0.91, g: 0.63, b: 0.13 },
   { id: 'pure-white', label: 'Pure White', hex: '#F0EEE9', r: 0.94, g: 0.93, b: 0.91 },
@@ -21,10 +18,6 @@ const COLOR_OPTIONS = [
   { id: 'olive', label: 'Olive', hex: '#7A7A3A', r: 0.48, g: 0.48, b: 0.23 },
 ]
 
-// 패널 타입 정의
-// none   = 오픈 (패널 없음, 프레임만)
-// panel  = 닫힌 패널 (고정, 도어 없음)
-// folding/dropdown/sliding/glass = 열리는 도어
 const PANEL_TYPES = [
   { id: 'none', label: '없음 (오픈)', pricePerSlot: 0 },
   { id: 'panel', label: '패널 (고정)', pricePerSlot: 89000 },
@@ -34,13 +27,11 @@ const PANEL_TYPES = [
   { id: 'glass', label: '글라스 도어', pricePerSlot: 199000 },
 ]
 
-// 프레임 색상 옵션
 const FRAME_COLORS = [
   { id: 'chrome', label: '크롬', hex: '#D4D4D4', price: 0 },
   { id: 'black', label: '매트 블랙', hex: '#1A1A1A', price: 30000 },
 ]
 
-// 바닥 옵션
 const FOOT_TYPES = [
   { id: 'chrome', label: '크롬 캡', price: 0 },
   { id: 'rubber', label: '고무 발패드', price: 15000 },
@@ -49,19 +40,17 @@ const FOOT_TYPES = [
 
 const MODULE_BASE_PRICE = 420000
 const FRAME_BASE_PRICE = 80000
-const FOOT_PAD_PRICE = 15000  // 레거시
+const FOOT_PAD_PRICE = 15000
 const MAX_COLS = 5
 const MAX_ROWS = 4
 
-// 모듈 1칸 실제 치수 (Three.js units ≈ m)
-const MW = 0.92   // width
-const MH_FULL = 0.55  // 표준 높이
-const MH_HALF = 0.275 // 슬림 높이 (절반)
-const MD = 0.46   // depth
-const FT = 0.015  // frame tube radius
-const JR = 0.024  // joint sphere radius
+const MW = 0.92
+const MH_FULL = 0.55
+const MH_HALF = 0.275
+const MD = 0.46
+const FT = 0.015
+const JR = 0.024
 
-// 모든 모듈 높이 동일 — half는 패널 크기만 절반
 const getMH = (_ht) => MH_FULL
 const MH = MH_FULL
 
@@ -70,14 +59,11 @@ const makeModule = (r, c, color = COLOR_OPTIONS[0], heightType = 'full') => ({
   panelType: 'folding',
   color,
   heightType,
-  accessory: 'none',   // 내부 악세사리
+  accessory: 'none',
 })
 
 const fmt = (n) => n.toLocaleString('ko-KR') + '원'
 
-// ────────────────────────────────────────────────────────────
-//  카메라 위치: 정면 ↔ 아이소메트릭
-// ────────────────────────────────────────────────────────────
 function getCameraPositions(cols, rows, modules) {
   const objW = cols * (MW + FT * 2)
   let objH = FT * 2
@@ -86,7 +72,7 @@ function getCameraPositions(cols, rows, modules) {
     const mh = getMH(rowMod?.heightType || 'full')
     objH += mh + FT * 2
   }
-  const midY = objH / 2   // 가구 세로 중심
+  const midY = objH / 2
   const objMax = Math.max(objW, objH)
   const rowBonus = Math.max(0, rows - 1) * 0.22
   const dist = objMax * 0.88 + 0.7 + rowBonus
@@ -98,20 +84,50 @@ function getCameraPositions(cols, rows, modules) {
   }
 }
 
-// ────────────────────────────────────────────────────────────
-//  메인 컴포넌트
-// ────────────────────────────────────────────────────────────
 export default function Configurator() {
   const navigate = useNavigate()
   const viewerRef = useRef(null)
-  const glRef = useRef(null)   // Three.js gl 인스턴스
+  const glRef = useRef(null)
 
-  const [modules, setModules] = useState([makeModule(0, 0)])
+  // ── 히스토리 관리 ──
+  const [history, setHistory] = useState([[makeModule(0, 0)]])
+  const [historyIdx, setHistoryIdx] = useState(0)
+  const historyIdxRef = useRef(0)
+  const historyRef = useRef([[makeModule(0, 0)]])
+
+  const modules = history[historyIdx]
+
+  const setModules = useCallback((updater) => {
+    const idx = historyIdxRef.current
+    const currentModules = historyRef.current[idx]
+    const next = typeof updater === 'function' ? updater(currentModules) : updater
+    const newHistory = [...historyRef.current.slice(0, idx + 1), next]
+    historyRef.current = newHistory
+    historyIdxRef.current = idx + 1
+    setHistory(newHistory)
+    setHistoryIdx(idx + 1)
+  }, [])
+
+  const undo = useCallback(() => {
+    const idx = Math.max(0, historyIdxRef.current - 1)
+    historyIdxRef.current = idx
+    setHistoryIdx(idx)
+  }, [])
+
+  const redo = useCallback(() => {
+    const idx = Math.min(historyRef.current.length - 1, historyIdxRef.current + 1)
+    historyIdxRef.current = idx
+    setHistoryIdx(idx)
+  }, [])
+
+  const canUndo = historyIdx > 0
+  const canRedo = historyIdx < history.length - 1
+
   const [selectedCell, setSelectedCell] = useState({ r: 0, c: 0 })
-  const [selectedHeightType, setSelectedHeightType] = useState('full')  // 'full' | 'half'
+  const [selectedHeightType, setSelectedHeightType] = useState('full')
   const [frameColor, setFrameColor] = useState(FRAME_COLORS[0])
   const [footType, setFootType] = useState(FOOT_TYPES[0])
-  const [scrollT, setScrollT] = useState(0)   // 0=정면, 1=아이소
+  const [scrollT, setScrollT] = useState(0)
   const [hoveredCell, setHoveredCell] = useState(null)
 
   const cols = useMemo(() => Math.max(...modules.map(m => m.c)) + 1, [modules])
@@ -121,14 +137,12 @@ export default function Configurator() {
     [modules, selectedCell]
   )
 
-  // 스크롤 감지 → scrollT 업데이트
   useEffect(() => {
     const el = viewerRef.current
     if (!el) return
     const onScroll = () => {
       const rect = el.getBoundingClientRect()
       const h = el.offsetHeight
-      // 뷰어 안에서의 스크롤 진행도 0→1
       const raw = Math.max(0, -rect.top) / (h * 0.6)
       setScrollT(Math.min(1, raw))
     }
@@ -136,7 +150,6 @@ export default function Configurator() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  // ── 모듈 관리 ──
   const addCol = useCallback(() => {
     if (cols >= MAX_COLS) return
     setModules(prev => {
@@ -165,7 +178,6 @@ export default function Configurator() {
     setSelectedCell(s => ({ ...s, r: Math.min(s.r, rows - 2) }))
   }, [rows])
 
-  // X버튼: 해당 모듈(셀) 제거 + 좌표 재정렬
   const removeModule = useCallback((r, c) => {
     if (modules.length <= 1) return
     const next = modules.filter(m => !(m.r === r && m.c === c))
@@ -180,10 +192,15 @@ export default function Configurator() {
   }, [modules])
 
   const updateSelected = useCallback((key, value) => {
-    setModules(prev => prev.map(m =>
-      m.r === selectedCell.r && m.c === selectedCell.c ? { ...m, [key]: value } : m
-    ))
-  }, [selectedCell])
+    setHistory(prev => {
+      const currentModules = prev[historyIdx]
+      const next = currentModules.map(m =>
+        m.r === selectedCell.r && m.c === selectedCell.c ? { ...m, [key]: value } : m
+      )
+      return [...prev.slice(0, historyIdx + 1), next]
+    })
+    setHistoryIdx(prev => prev + 1)
+  }, [selectedCell, historyIdx])
 
   const applyAll = useCallback(() => {
     if (!selectedModule) return
@@ -191,7 +208,6 @@ export default function Configurator() {
     setModules(prev => prev.map(m => ({ ...m, panelType, color })))
   }, [selectedModule])
 
-  // ── 가격 ──
   const totalModules = modules.length
   const modulePrice = MODULE_BASE_PRICE * totalModules
   const panelPrice = modules.reduce((acc, m) => {
@@ -203,15 +219,13 @@ export default function Configurator() {
   const footPrice = footType?.price || 0
   const totalPrice = modulePrice + panelPrice + accessoryPrice + FRAME_BASE_PRICE + frameColorPrice + footPrice
 
-  // ── 주문 ──
   const handleOrder = () => {
-    // Three.js canvas: preserveDrawingBuffer=true이므로 바로 toDataURL
     let previewImg = ''
     try {
       if (glRef.current?.domElement) {
         previewImg = glRef.current.domElement.toDataURL('image/png')
       }
-    } catch { /* noop */ }
+    } catch { }
     if (!previewImg) previewImg = generatePreviewDataUrl(modules, cols, rows)
 
     navigate('/charge', {
@@ -233,28 +247,22 @@ export default function Configurator() {
 
   return (
     <div className="cfg-page">
-
-      {/* ── 뷰어 (스크롤 트리거 영역) ── */}
       <div className="cfg-viewer-area" ref={viewerRef}>
         <div className="cfg-viewer-sticky">
-
-          {/* 라벨 */}
           <p className="cfg-viewer-label">
             {scrollT < 0.4 ? 'FRONT VIEW' : 'ISOMETRIC VIEW'}
           </p>
-
-          {/* Three.js 캔버스 */}
           <div className="cfg-canvas-wrap">
             <Canvas
               shadows
               dpr={[1, 2]}
               camera={{ fov: 55, near: 0.1, far: 100 }}
-              gl={{ antialias: true, preserveDrawingBuffer: true, toneMapping: THREE.ACESFilmicToneMapping, toneMappingExposure: 0.95 }} onCreated={({ gl }) => { gl.outputColorSpace = THREE.SRGBColorSpace; glRef.current = gl }} style={{ background: "#ffffff" }}
+              gl={{ antialias: true, preserveDrawingBuffer: true, toneMapping: THREE.ACESFilmicToneMapping, toneMappingExposure: 0.95 }}
+              onCreated={({ gl }) => { gl.outputColorSpace = THREE.SRGBColorSpace; glRef.current = gl }}
+              style={{ background: "#ffffff" }}
             >
               <Suspense fallback={null}>
-                {/* 조명 — USM 파우더코팅 새틴광택 재현 */}
                 <ambientLight intensity={0.55} />
-                {/* 키라이트 */}
                 <directionalLight
                   position={[4, 9, 5]}
                   intensity={1}
@@ -270,19 +278,8 @@ export default function Configurator() {
                 <directionalLight position={[-4, 3, -3]} intensity={0.2} color="#e8f0ff" />
                 <directionalLight position={[0, -2, 4]} intensity={0.1} color="#fff8f0" />
                 <pointLight position={[2, 4, 3]} intensity={0.05} />
-
                 <Environment preset="studio" environmentIntensity={0.3} />
-
-                {/* 바닥 그림자 */}
-                <ContactShadows
-                  position={[0, -0.01, 0]}
-                  opacity={0.14}
-                  scale={14}
-                  blur={3}
-                  far={1}
-                />
-
-                {/* 가구 */}
+                <ContactShadows position={[0, -0.01, 0]} opacity={0.14} scale={14} blur={3} far={1} />
                 <FurnitureScene
                   modules={modules}
                   cols={cols}
@@ -300,15 +297,9 @@ export default function Configurator() {
                   footType={footType}
                   scrollT={scrollT}
                 />
-
-                {/* 스크롤 카메라 */}
                 <ScrollCamera scrollT={scrollT} cols={cols} rows={rows} modules={modules} />
               </Suspense>
             </Canvas>
-
-            {/* 화살표는 Three.js 씬 내부 Html 컴포넌트로 렌더링 */}
-
-            {/* 스크롤 힌트 */}
             <div className={`cfg-scroll-hint ${scrollT > 0.05 ? 'hidden' : ''}`}>
               <span>스크롤하여 조립하기</span>
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -316,27 +307,37 @@ export default function Configurator() {
               </svg>
             </div>
           </div>
-
-          {/* 뷰 전환 인디케이터 */}
           <div className="cfg-view-indicator">
             <div className="cfg-view-indicator__bar">
               <div className="cfg-view-indicator__fill" style={{ width: `${scrollT * 100}%` }} />
             </div>
           </div>
         </div>
-
-        {/* 스크롤 공간 */}
         <div className="cfg-scroll-spacer" />
       </div>
 
-      {/* ── 사이드바 ── */}
       <aside className="cfg-sidebar">
         <div className="cfg-sidebar__top">
           <p className="cfg-sidebar__brand">ILOOM MODULE</p>
           <h2 className="cfg-sidebar__title">Configurator</h2>
         </div>
 
-        {/* 모듈 구성 */}
+        {/* ── 이전/다음 버튼 ── */}
+        <div className="cfg-history-btns">
+          <button className="cfg-history-btn" onClick={undo} disabled={!canUndo}>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <polyline points="9,2 4,7 9,12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+            이전
+          </button>
+          <button className="cfg-history-btn" onClick={redo} disabled={!canRedo}>
+            다음
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <polyline points="5,2 10,7 5,12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </button>
+        </div>
+
         <section className="cfg-section">
           <h3 className="cfg-section__label">모듈 구성</h3>
           <div className="cfg-grid-control">
@@ -360,7 +361,6 @@ export default function Configurator() {
           </div>
         </section>
 
-        {/* 추가 모듈 높이 타입 */}
         <section className="cfg-section">
           <h3 className="cfg-section__label">추가 모듈 높이</h3>
           <div className="cfg-height-btns">
@@ -382,7 +382,6 @@ export default function Configurator() {
           <p className="cfg-grid-control__hint">↑ 화살표로 행 추가 시 이 높이로 추가됩니다</p>
         </section>
 
-        {/* 선택 모듈 옵션 */}
         <section className="cfg-section">
           <div className="cfg-section__label-row">
             <h3 className="cfg-section__label">선택 모듈 옵션</h3>
@@ -392,7 +391,6 @@ export default function Configurator() {
               </span>
             )}
           </div>
-
           <div className="cfg-panel-list">
             {PANEL_TYPES.map(p => (
               <button
@@ -407,7 +405,6 @@ export default function Configurator() {
               </button>
             ))}
           </div>
-
           <div className="cfg-color-block">
             <p className="cfg-color-block__title">패널 색상</p>
             <div className="cfg-color-grid">
@@ -423,13 +420,11 @@ export default function Configurator() {
             </div>
             <p className="cfg-color-name">{selectedModule?.color.label}</p>
           </div>
-
           <div className="cfg-apply-all">
             <button onClick={applyAll}>전체 모듈에 적용</button>
           </div>
         </section>
 
-        {/* 프레임 색상 */}
         <section className="cfg-section">
           <h3 className="cfg-section__label">프레임 색상</h3>
           <div className="cfg-frame-colors">
@@ -449,7 +444,6 @@ export default function Configurator() {
           </div>
         </section>
 
-        {/* 바닥 옵션 */}
         <section className="cfg-section">
           <h3 className="cfg-section__label">바닥 마감</h3>
           <div className="cfg-foot-types">
@@ -468,7 +462,6 @@ export default function Configurator() {
           </div>
         </section>
 
-        {/* 가격 */}
         <div className="cfg-summary">
           <div className="cfg-summary__row">
             <span>모듈 ({totalModules}개)</span>
@@ -502,25 +495,18 @@ export default function Configurator() {
   )
 }
 
-// ────────────────────────────────────────────────────────────
-//  스크롤 드리븐 카메라
-// ────────────────────────────────────────────────────────────
+// ── 아래 함수들은 기존 코드 그대로 ──
 function ScrollCamera({ scrollT, cols, rows, modules }) {
   const { camera } = useThree()
   const tRef = useRef(0)
 
   useFrame(() => {
-    // scrollT 0=정면, 1=아이소 — 부드럽게 lerp
     tRef.current += (scrollT - tRef.current) * 0.07
-
     const t = tRef.current
     const { front, iso, target } = getCameraPositions(cols, rows, modules)
-
-    // easeInOutCubic
     const ease = t < 0.5
       ? 4 * t * t * t
       : 1 - Math.pow(-2 * t + 2, 3) / 2
-
     camera.position.lerpVectors(front, iso, ease)
     camera.lookAt(target)
     camera.updateProjectionMatrix()
@@ -529,11 +515,6 @@ function ScrollCamera({ scrollT, cols, rows, modules }) {
   return null
 }
 
-// ────────────────────────────────────────────────────────────
-//  가구 씬
-// ────────────────────────────────────────────────────────────
-
-// PBR 머테리얼 캐시
 const matCache = new Map()
 
 function getFrameMat(frameColor) {
@@ -570,7 +551,7 @@ function getPanelMat(color, panelType) {
   const key = `${color.id}-${panelType}`
   if (!matCache.has(key)) {
     const c = new THREE.Color()
-    c.setStyle(color.hex)          // sRGB hex → linear 자동변환
+    c.setStyle(color.hex)
     matCache.set(key, new THREE.MeshPhysicalMaterial({
       color: c,
       metalness: 0.0,
@@ -625,7 +606,6 @@ function getSelectMat() {
   return matCache.get('select')
 }
 
-// ── 기하 캐시 ──
 const geomCache = {}
 function getTubeGeom(r, h) {
   const k = `tube-${r}-${h}`
@@ -654,20 +634,15 @@ function FurnitureScene({
   onAddCol, onAddRow, canAddCol, canAddRow,
   frameColor, footType, scrollT,
 }) {
-  // 전체 가구를 중앙 정렬
   const totalW = cols * (MW + FT * 2) + FT * 2
-  // 각 행 실제 높이 계산
-  // 모든 row 동일 높이
   const rowHeights = Array.from({ length: rows }, () => MH_FULL)
   const totalH = rowHeights.reduce((s, h) => s + h + FT * 2, FT * 2)
   const offsetX = -totalW / 2
-  const offsetY = 0   // 하단 기준, y=0에서 위로
+  const offsetY = 0
 
   return (
     <group position={[offsetX, offsetY, 0]}>
-      {/* 모듈들 */}
       {modules.map(m => {
-        // 모든 row 높이 동일 (MH_FULL)
         const yOff = FT + m.r * (MH_FULL + FT * 2)
         return (
           <Module
@@ -686,14 +661,8 @@ function FurnitureScene({
           />
         )
       })}
-
-      {/* 프레임 파이프 + 조인트 */}
       <FrameStructure modules={modules} cols={cols} rows={rows} rowHeights={rowHeights} frameColor={frameColor} />
-
-      {/* 다리 (4 모서리) */}
       <Legs cols={cols} footType={footType} frameColor={frameColor} />
-
-      {/* ── 씬 내부 화살표 (오브젝트 바로 옆/위) ── */}
       <SceneArrows
         cols={cols} rows={rows}
         onAddCol={onAddCol} onAddRow={onAddRow}
@@ -704,11 +673,8 @@ function FurnitureScene({
   )
 }
 
-// 씬 좌표 기준 Html 화살표
 function SceneArrows({ cols, rows, onAddCol, onAddRow, canAddCol, canAddRow, rowHeights }) {
-  // group 이미 offset 적용됨 → 로컬좌표: (0,0)=좌하단, (totalW, totalH)=우상단
   const totalW = cols * (MW + FT * 2) + FT * 2
-  // rowHeights 없으면 폴백
   const totalH = rowHeights
     ? rowHeights.reduce((s, h) => s + h + FT * 2, FT * 2)
     : rows * (MH_FULL + FT * 2) + FT * 2
@@ -726,7 +692,6 @@ function SceneArrows({ cols, rows, onAddCol, onAddRow, canAddCol, canAddRow, row
 
   return (
     <>
-      {/* 우측 화살표 (열 추가) */}
       {canAddCol && (
         <Html position={[totalW + 0.14, midY, MD / 2]} center occlude={false} zIndexRange={[10, 20]}>
           <button style={btnStyle} onClick={onAddCol} title="열 추가">
@@ -736,10 +701,6 @@ function SceneArrows({ cols, rows, onAddCol, onAddRow, canAddCol, canAddRow, row
           </button>
         </Html>
       )}
-
-      {/* 좌측 화살표 (열 추가, 반대쪽) — 없음 */}
-
-      {/* 위쪽 화살표 (행 추가) */}
       {canAddRow && (
         <Html position={[midX, totalH + 0.14, MD / 2]} center occlude={false} zIndexRange={[10, 20]}>
           <button style={btnStyle} onClick={onAddRow} title="행 추가">
@@ -753,7 +714,6 @@ function SceneArrows({ cols, rows, onAddCol, onAddRow, canAddCol, canAddRow, row
   )
 }
 
-// ── 개별 모듈 ──
 function Module({ module, cols, rows, isSelected, isHovered, onSelect, onHover, onRemove, canRemove, yOffset, scrollT }) {
   const { r, c, panelType, color, heightType = 'full', accessory = 'none' } = module
   const mh = getMH(heightType)
@@ -763,14 +723,12 @@ function Module({ module, cols, rows, isSelected, isHovered, onSelect, onHover, 
   const PT = 0.018
   const PI = 0.010
 
-  // ── 도어 열림 상태 ──
   const [doorOpen, setDoorOpen] = useState(false)
-  const doorAngleRef = useRef(0)   // 현재 각도 (radians)
-  const doorSlideRef = useRef(0)   // 슬라이딩 offset
-  const doorDropRef = useRef(0)   // 드롭다운 angle
+  const doorAngleRef = useRef(0)
+  const doorSlideRef = useRef(0)
+  const doorDropRef = useRef(0)
   const doorGroupRef = useRef()
 
-  // 도어 있는 타입만
   const hasDoor = ['folding', 'dropdown', 'sliding', 'glass'].includes(panelType)
 
   useFrame((_, delta) => {
@@ -779,21 +737,15 @@ function Module({ module, cols, rows, isSelected, isHovered, onSelect, onHover, 
     if (panelType === 'folding' || panelType === 'glass') {
       const target = doorOpen ? -Math.PI / 2 : 0
       doorAngleRef.current += (target - doorAngleRef.current) * Math.min(1, delta * speed)
-      if (doorGroupRef.current) {
-        doorGroupRef.current.rotation.y = doorAngleRef.current
-      }
+      if (doorGroupRef.current) doorGroupRef.current.rotation.y = doorAngleRef.current
     } else if (panelType === 'dropdown') {
       const target = doorOpen ? Math.PI / 2 : 0
       doorDropRef.current += (target - doorDropRef.current) * Math.min(1, delta * speed)
-      if (doorGroupRef.current) {
-        doorGroupRef.current.rotation.x = doorDropRef.current
-      }
+      if (doorGroupRef.current) doorGroupRef.current.rotation.x = doorDropRef.current
     } else if (panelType === 'sliding') {
       const target = doorOpen ? MW * 0.85 : 0
       doorSlideRef.current += (target - doorSlideRef.current) * Math.min(1, delta * speed)
-      if (doorGroupRef.current) {
-        doorGroupRef.current.position.x = doorSlideRef.current
-      }
+      if (doorGroupRef.current) doorGroupRef.current.position.x = doorSlideRef.current
     }
   })
 
@@ -803,9 +755,7 @@ function Module({ module, cols, rows, isSelected, isHovered, onSelect, onHover, 
     onSelect()
   }
 
-  // 앞면용 머테리얼
   const frontMat = useMemo(() => getPanelMat(color, panelType), [color, panelType])
-  // 나머지 5면용 머테리얼 (같은 색, 약간 어둡게)
   const sideMat = useMemo(() => {
     const base = new THREE.Color()
     base.setStyle(color.hex)
@@ -823,7 +773,6 @@ function Module({ module, cols, rows, isSelected, isHovered, onSelect, onHover, 
   const iW = MW - PI * 2
   const iH = (heightType === 'half' ? mh / 2 : mh) - PI * 2
   const iD = MD - PI * 2
-  // half 모듈은 칸 아래쪽 절반에 위치
   const panelOffY = heightType === 'half' ? -(mh / 4) : 0
 
   const evts = {
@@ -832,117 +781,63 @@ function Module({ module, cols, rows, isSelected, isHovered, onSelect, onHover, 
     onPointerLeave: e => { e.stopPropagation(); onHover(false) },
   }
 
-  // 도어 타입 여부
-  const isDoor = ['folding', 'dropdown', 'sliding', 'glass'].includes(panelType)
-  // 닫힌 고정 패널 (앞면 있음, 도어 없음)
   const isPanel = panelType === 'panel'
-  // 오픈 (앞면 없음)
-  const isOpen = panelType === 'none'
 
   return (
     <group position={[x + MW / 2, y + mh / 2 + panelOffY, 0]}>
-
-      {/* ── 클릭 히트 영역 (전체) ── */}
       <mesh visible={false} geometry={getPanelGeom(iW, iH, MD)} {...evts} />
+      <mesh castShadow receiveShadow material={sideMat} geometry={getPanelGeom(iW, iH, PT)} position={[0, 0, -(MD / 2 - PT / 2)]} />
+      <mesh castShadow receiveShadow material={sideMat} geometry={getPanelGeom(PT, iH, iD)} position={[-(iW / 2 + PT / 2), 0, 0]} />
+      <mesh castShadow receiveShadow material={sideMat} geometry={getPanelGeom(PT, iH, iD)} position={[iW / 2 + PT / 2, 0, 0]} />
+      <mesh castShadow receiveShadow material={sideMat} geometry={getPanelGeom(iW, PT, iD)} position={[0, iH / 2 + PT / 2, 0]} />
+      <mesh castShadow receiveShadow material={sideMat} geometry={getPanelGeom(iW, PT, iD)} position={[0, -(iH / 2 + PT / 2), 0]} />
 
-      {/* ── 내부 박스 (뒷면+측면+상하면) — 항상 표시 ── */}
-      {/* 뒷면 */}
-      <mesh castShadow receiveShadow material={sideMat}
-        geometry={getPanelGeom(iW, iH, PT)}
-        position={[0, 0, -(MD / 2 - PT / 2)]}
-      />
-      {/* 좌측면 */}
-      <mesh castShadow receiveShadow material={sideMat}
-        geometry={getPanelGeom(PT, iH, iD)}
-        position={[-(iW / 2 + PT / 2), 0, 0]}
-      />
-      {/* 우측면 */}
-      <mesh castShadow receiveShadow material={sideMat}
-        geometry={getPanelGeom(PT, iH, iD)}
-        position={[iW / 2 + PT / 2, 0, 0]}
-      />
-      {/* 상단면 */}
-      <mesh castShadow receiveShadow material={sideMat}
-        geometry={getPanelGeom(iW, PT, iD)}
-        position={[0, iH / 2 + PT / 2, 0]}
-      />
-      {/* 하단면 */}
-      <mesh castShadow receiveShadow material={sideMat}
-        geometry={getPanelGeom(iW, PT, iD)}
-        position={[0, -(iH / 2 + PT / 2), 0]}
-      />
-
-      {/* ── 패널 (고정, 도어 없음) ── */}
       {isPanel && (
-        <mesh castShadow receiveShadow material={frontMat}
-          geometry={getPanelGeom(iW, iH, PT)}
-          position={[0, 0, MD / 2 - PT / 2]}
-        />
+        <mesh castShadow receiveShadow material={frontMat} geometry={getPanelGeom(iW, iH, PT)} position={[0, 0, MD / 2 - PT / 2]} />
       )}
 
-      {/* ── 선택/호버 오버레이 ── */}
       {(isSelected || isHovered) && (
-        <mesh
-          geometry={getPanelGeom(iW + 0.01, iH + 0.01, PT)}
-          position={[0, 0, MD / 2 + PT]}
-          material={isSelected ? getSelectMat() : getHoverMat()}
-        />
+        <mesh geometry={getPanelGeom(iW + 0.01, iH + 0.01, PT)} position={[0, 0, MD / 2 + PT]} material={isSelected ? getSelectMat() : getHoverMat()} />
       )}
 
-      {/* ── 폴딩 도어 (왼쪽 힌지) ── */}
       {panelType === 'folding' && (
         <group position={[-(iW / 2), 0, MD / 2 - PT / 2]}>
           <group ref={doorGroupRef}>
             <group position={[iW / 2, 0, 0]}>
-              <mesh castShadow receiveShadow material={frontMat}
-                geometry={getPanelGeom(iW, iH, PT)} />
-              <mesh castShadow geometry={getKnobGeom()} material={getKnobMat()}
-                position={[iW * 0.15, 0, PT / 2 + 0.013]} />
+              <mesh castShadow receiveShadow material={frontMat} geometry={getPanelGeom(iW, iH, PT)} />
+              <mesh castShadow geometry={getKnobGeom()} material={getKnobMat()} position={[iW * 0.15, 0, PT / 2 + 0.013]} />
             </group>
           </group>
         </group>
       )}
 
-      {/* ── 드롭다운 도어 (하단 힌지) ── */}
       {panelType === 'dropdown' && (
         <group position={[0, -(iH / 2), MD / 2 - PT / 2]}>
           <group ref={doorGroupRef}>
             <group position={[0, iH / 2, 0]}>
-              <mesh castShadow receiveShadow material={frontMat}
-                geometry={getPanelGeom(iW, iH, PT)} />
-              <mesh castShadow geometry={getKnobGeom()} material={getKnobMat()}
-                position={[0, iH * 0.3, PT / 2 + 0.013]} />
+              <mesh castShadow receiveShadow material={frontMat} geometry={getPanelGeom(iW, iH, PT)} />
+              <mesh castShadow geometry={getKnobGeom()} material={getKnobMat()} position={[0, iH * 0.3, PT / 2 + 0.013]} />
             </group>
           </group>
         </group>
       )}
 
-      {/* ── 슬라이딩 도어 (X축 이동) ── */}
       {panelType === 'sliding' && (
         <group ref={doorGroupRef}>
-          <mesh castShadow receiveShadow material={frontMat}
-            geometry={getPanelGeom(iW, iH, PT)}
-            position={[0, 0, MD / 2 - PT / 2]} />
-          <mesh castShadow material={getKnobMat()}
-            position={[0, 0, MD / 2 + 0.01]}>
+          <mesh castShadow receiveShadow material={frontMat} geometry={getPanelGeom(iW, iH, PT)} position={[0, 0, MD / 2 - PT / 2]} />
+          <mesh castShadow material={getKnobMat()} position={[0, 0, MD / 2 + 0.01]}>
             <boxGeometry args={[iW * 0.3, 0.011, 0.011]} />
           </mesh>
         </group>
       )}
 
-      {/* ── 글라스 도어 (왼쪽 힌지, 반투명) ── */}
       {panelType === 'glass' && (
         <group position={[-(iW / 2), 0, MD / 2 - 0.004]}>
           <group ref={doorGroupRef}>
             <group position={[iW / 2, 0, 0]}>
               <mesh castShadow>
                 <boxGeometry args={[iW, iH, 0.007]} />
-                <meshPhysicalMaterial
-                  color="#c8e8e0" transparent opacity={0.40}
-                  roughness={0.04} metalness={0}
-                  transmission={0.6} thickness={0.4}
-                  envMapIntensity={1.4}
-                />
+                <meshPhysicalMaterial color="#c8e8e0" transparent opacity={0.40} roughness={0.04} metalness={0} transmission={0.6} thickness={0.4} envMapIntensity={1.4} />
               </mesh>
               <mesh castShadow material={getKnobMat()} position={[iW * 0.3, 0, 0.012]}>
                 <boxGeometry args={[0.011, iH * 0.22, 0.011]} />
@@ -952,16 +847,13 @@ function Module({ module, cols, rows, isSelected, isHovered, onSelect, onHover, 
         </group>
       )}
 
-      {/* ── 악세사리 ── */}
       {accessory === 'shelf' && (
-        // 내부 선반
         <mesh receiveShadow position={[0, 0, 0]}>
           <boxGeometry args={[iW - 0.01, 0.014, iD - 0.01]} />
           <meshPhysicalMaterial color="#e8e4dc" roughness={0.6} metalness={0} />
         </mesh>
       )}
       {accessory === 'drawer2' && (
-        // 2단 서랍
         <group>
           {[-0.28, 0.08].map((dy, i) => (
             <group key={i} position={[0, dy * (mh / MH_FULL), 0.04]}>
@@ -977,7 +869,6 @@ function Module({ module, cols, rows, isSelected, isHovered, onSelect, onHover, 
         </group>
       )}
       {accessory === 'drawer5' && (
-        // 5단 서랍
         <group>
           {[-0.38, -0.19, 0, 0.19, 0.38].map((dy, i) => (
             <group key={i} position={[0, dy * (mh / MH_FULL), 0.04]}>
@@ -993,7 +884,6 @@ function Module({ module, cols, rows, isSelected, isHovered, onSelect, onHover, 
         </group>
       )}
       {accessory === 'led' && (
-        // LED 조명바
         <group position={[0, iH / 2 - 0.01, iD * 0.3]}>
           <mesh>
             <boxGeometry args={[iW * 0.85, 0.008, 0.012]} />
@@ -1003,14 +893,12 @@ function Module({ module, cols, rows, isSelected, isHovered, onSelect, onHover, 
         </group>
       )}
       {accessory === 'cable' && (
-        // 케이블 홀 (상단에 원형 홀 표시)
         <mesh position={[iW * 0.3, iH / 2 - 0.015, iD * 0.2]}>
           <torusGeometry args={[0.022, 0.006, 8, 20]} />
           <meshPhysicalMaterial color="#888" metalness={0.8} roughness={0.2} />
         </mesh>
       )}
       {accessory === 'lock' && (
-        // 잠금장치 (도어 옆에 실린더)
         <group position={[iW * 0.42, 0, MD / 2 + 0.008]}>
           <mesh castShadow material={getKnobMat()}>
             <cylinderGeometry args={[0.01, 0.01, 0.025, 10]} />
@@ -1021,18 +909,13 @@ function Module({ module, cols, rows, isSelected, isHovered, onSelect, onHover, 
         </group>
       )}
 
-      {/* ── X 버튼 ── */}
       {isHovered && canRemove && (
-        <RemoveButton
-          position={[MW / 2 - 0.04, mh / 2 - 0.04, MD / 2 + 0.02]}
-          onRemove={onRemove}
-        />
+        <RemoveButton position={[MW / 2 - 0.04, mh / 2 - 0.04, MD / 2 + 0.02]} onRemove={onRemove} />
       )}
     </group>
   )
 }
 
-// ── X 제거 버튼 (Html CSS) ──
 function RemoveButton({ position, onRemove }) {
   return (
     <Html position={position} center occlude={false} zIndexRange={[20, 30]}>
@@ -1060,7 +943,6 @@ function RemoveButton({ position, onRemove }) {
   )
 }
 
-// ── 다리 컴포넌트 ──
 const LEG_H = 0.06
 const LEG_R = FT * 1.1
 const PAD_H = 0.014
@@ -1084,39 +966,25 @@ function Legs({ cols, footType, frameColor }) {
   const WHEEL_T = 0.012
 
   return (
-    // 가구 바닥(y=0) 기준 아래로 다리 배치
     <group position={[0, -LEG_H, 0]}>
       {legXs.map(lx =>
         legZs.map(lz => (
           <group key={`leg-${lx}-${lz}`} position={[lx, LEG_H / 2, lz]}>
-            {/* 크롬 파이프 — 항상 */}
             <mesh castShadow geometry={getTubeGeom(LEG_R, LEG_H)} material={chromeMat} />
-
-            {/* 크롬 캡 */}
             {ft === 'chrome' && (
               <mesh castShadow material={chromeMat} position={[0, -(LEG_H / 2 + PAD_H * 0.25), 0]}>
                 <cylinderGeometry args={[LEG_R * 1.3, LEG_R, PAD_H * 0.5, 14]} />
               </mesh>
             )}
-
-            {/* 고무 발패드 */}
             {ft === 'rubber' && (
-              <mesh castShadow geometry={getTubeGeom(PAD_R, PAD_H)} material={rubberMat}
-                position={[0, -(LEG_H / 2 + PAD_H / 2), 0]} />
+              <mesh castShadow geometry={getTubeGeom(PAD_R, PAD_H)} material={rubberMat} position={[0, -(LEG_H / 2 + PAD_H / 2), 0]} />
             )}
-
-            {/* 캐스터: 다리 바로 아래에 딱 붙임 */}
             {ft === 'caster' && (
-              // 바퀴 중심 y = -(LEG_H/2 + WHEEL_R)
               <group position={[0, -(LEG_H / 2 + WHEEL_R), 0]}>
-                {/* 바퀴 (누워있는 실린더) */}
-                <mesh castShadow material={rubberMat}
-                  rotation={[Math.PI / 2, 0, 0]}>
+                <mesh castShadow material={rubberMat} rotation={[Math.PI / 2, 0, 0]}>
                   <cylinderGeometry args={[WHEEL_R, WHEEL_R, WHEEL_T, 16]} />
                 </mesh>
-                {/* 캐스터 브라켓 */}
-                <mesh castShadow material={casterMat}
-                  position={[0, WHEEL_R * 0.6, 0]}>
+                <mesh castShadow material={casterMat} position={[0, WHEEL_R * 0.6, 0]}>
                   <cylinderGeometry args={[LEG_R * 1.1, LEG_R * 1.1, WHEEL_R * 0.5, 12]} />
                 </mesh>
               </group>
@@ -1128,49 +996,34 @@ function Legs({ cols, footType, frameColor }) {
   )
 }
 
-// ── 프레임 구조 ──────────────────────────────────────────────
-// 모든 row 높이 = MH_FULL (유격 없음)
-// half 모듈이 있는 컬럼 경계에는 중간 Y에 추가 수평파이프+조인트
-
 function FrameStructure({ modules, cols, rows, rowHeights, frameColor }) {
   const chromeMat = useMemo(() => getFrameMat(frameColor), [frameColor])
 
-  // row r의 하단 Y (모두 MH_FULL 기준)
   const rowBotY = (r) => r * (MH_FULL + FT * 2)
   const rowTopY = (r) => rowBotY(r) + MH_FULL + FT * 2
-  const rowMidY = (r) => rowBotY(r) + MH_FULL / 2 + FT  // half 구분선
+  const rowMidY = (r) => rowBotY(r) + MH_FULL / 2 + FT
 
   const nodeX = (c) => c * (MW + FT * 2)
 
-  const cellSet = useMemo(() =>
-    new Set(modules.map(m => `${m.r},${m.c}`))
-    , [modules])
+  const cellSet = useMemo(() => new Set(modules.map(m => `${m.r},${m.c}`)), [modules])
   const hasCell = (r, c) => cellSet.has(`${r},${c}`)
   const isHalf = (r, c) => {
     const m = modules.find(mod => mod.r === r && mod.c === c)
     return m?.heightType === 'half'
   }
 
-  // ── 수직 파이프 ────────────────────────────────────────────
-  // 각 row, 각 컬럼 경계(cx)에서 MH_FULL + FT*2 높이로
   const vPipes = useMemo(() => {
     const pipes = []
     const seen = new Set()
     modules.forEach(({ r, c }) => {
       ;[c, c + 1].forEach(cx => {
         const key = `${r}-${cx}`
-        if (!seen.has(key)) {
-          seen.add(key)
-          pipes.push({ r, cx })
-        }
+        if (!seen.has(key)) { seen.add(key); pipes.push({ r, cx }) }
       })
     })
     return pipes
   }, [modules])
 
-  // ── 수평 파이프 ────────────────────────────────────────────
-  // 1) 모든 row boundary (top/bottom) — 셀 존재 범위
-  // 2) half 셀이 있는 컬럼 경계의 mid Y 추가
   const hPipes = useMemo(() => {
     const pipes = []
     const added = new Set()
@@ -1179,12 +1032,8 @@ function FrameStructure({ modules, cols, rows, rowHeights, frameColor }) {
       if (!added.has(key)) { added.add(key); pipes.push({ cx, y, len }) }
     }
 
-    // 1) row boundary 수평 파이프
     for (let r = 0; r <= rows; r++) {
-      const y = r <= rows - 1 ? rowBotY(r) : rowTopY(r - 1)
-      // 실제 y: row r의 하단 = rowBotY(r), row r-1의 상단 = rowBotY(r) 이므로 동일
       const boundY = r < rows ? rowBotY(r) : rowBotY(rows - 1) + MH_FULL + FT * 2
-
       for (let c = 0; c < cols; c++) {
         const lExists = r > 0 && hasCell(r - 1, c)
         const rExists = r < rows && hasCell(r, c)
@@ -1195,32 +1044,20 @@ function FrameStructure({ modules, cols, rows, rowHeights, frameColor }) {
       }
     }
 
-    // 2) half 셀 중간 수평 파이프
     modules.forEach(({ r, c, heightType }) => {
       if (heightType !== 'half') return
       const midY = rowMidY(r)
-
-      // 이 셀(c)의 중간선
       const len = MW + FT * 2
       add(nodeX(c) + len / 2, midY, len)
-
-      // 인접 셀(c-1, c+1)도 half면 연결
-      if (c > 0 && isHalf(r, c - 1)) {
-        add(nodeX(c - 1) + len / 2, midY, len)
-      }
-      if (c + 1 < cols && isHalf(r, c + 1)) {
-        add(nodeX(c + 1) + len / 2, midY, len)
-      }
+      if (c > 0 && isHalf(r, c - 1)) add(nodeX(c - 1) + len / 2, midY, len)
+      if (c + 1 < cols && isHalf(r, c + 1)) add(nodeX(c + 1) + len / 2, midY, len)
     })
 
     return pipes
   }, [modules, rows, cols])
 
-  // ── 조인트 ─────────────────────────────────────────────────
   const joints = useMemo(() => {
     const pts = new Map()
-
-    // 기본 조인트: 모든 셀 4 모서리
     modules.forEach(({ r, c }) => {
       const yB = rowBotY(r)
       const yT = rowBotY(r) + MH_FULL + FT * 2
@@ -1231,8 +1068,6 @@ function FrameStructure({ modules, cols, rows, rowHeights, frameColor }) {
           })
         })
     })
-
-    // half 중간 조인트
     modules.forEach(({ r, c, heightType }) => {
       if (heightType !== 'half') return
       const midY = rowMidY(r)
@@ -1241,55 +1076,40 @@ function FrameStructure({ modules, cols, rows, rowHeights, frameColor }) {
           if (!pts.has(key)) pts.set(key, { y: midY, cx })
         })
     })
-
     return [...pts.values()]
   }, [modules])
 
   return (
     <group>
-      {/* 수직 파이프 앞/뒤 */}
       {vPipes.map(({ r, cx }, i) => {
         const len = MH_FULL + FT * 2
         const yB = rowBotY(r)
         return (
           <group key={`vp-${i}`}>
-            <mesh castShadow geometry={getTubeGeom(FT, len)} material={chromeMat}
-              position={[nodeX(cx), yB + len / 2, MD / 2]} />
-            <mesh castShadow geometry={getTubeGeom(FT, len)} material={chromeMat}
-              position={[nodeX(cx), yB + len / 2, -MD / 2]} />
+            <mesh castShadow geometry={getTubeGeom(FT, len)} material={chromeMat} position={[nodeX(cx), yB + len / 2, MD / 2]} />
+            <mesh castShadow geometry={getTubeGeom(FT, len)} material={chromeMat} position={[nodeX(cx), yB + len / 2, -MD / 2]} />
           </group>
         )
       })}
-
-      {/* 수평 파이프 앞/뒤 */}
       {hPipes.map(({ cx, y, len }, i) => (
         <group key={`hp-${i}`}>
-          <mesh castShadow geometry={getTubeGeom(FT, len)} material={chromeMat}
-            position={[cx, y, MD / 2]} rotation={[0, 0, Math.PI / 2]} />
-          <mesh castShadow geometry={getTubeGeom(FT, len)} material={chromeMat}
-            position={[cx, y, -MD / 2]} rotation={[0, 0, Math.PI / 2]} />
+          <mesh castShadow geometry={getTubeGeom(FT, len)} material={chromeMat} position={[cx, y, MD / 2]} rotation={[0, 0, Math.PI / 2]} />
+          <mesh castShadow geometry={getTubeGeom(FT, len)} material={chromeMat} position={[cx, y, -MD / 2]} rotation={[0, 0, Math.PI / 2]} />
         </group>
       ))}
-
-      {/* 전후 파이프 Z축 */}
       {joints.map(({ y, cx }, i) => (
-        <mesh key={`dp-${i}`} castShadow
-          geometry={getTubeGeom(FT, MD)} material={chromeMat}
-          position={[nodeX(cx), y, 0]} rotation={[Math.PI / 2, 0, 0]} />
+        <mesh key={`dp-${i}`} castShadow geometry={getTubeGeom(FT, MD)} material={chromeMat} position={[nodeX(cx), y, 0]} rotation={[Math.PI / 2, 0, 0]} />
       ))}
-
-      {/* 조인트 구 앞/뒤 */}
       {joints.map(({ y, cx }, i) => (
         <group key={`j-${i}`}>
-          <mesh castShadow geometry={getSphereGeom(JR)} material={chromeMat}
-            position={[nodeX(cx), y, MD / 2]} />
-          <mesh castShadow geometry={getSphereGeom(JR)} material={chromeMat}
-            position={[nodeX(cx), y, -MD / 2]} />
+          <mesh castShadow geometry={getSphereGeom(JR)} material={chromeMat} position={[nodeX(cx), y, MD / 2]} />
+          <mesh castShadow geometry={getSphereGeom(JR)} material={chromeMat} position={[nodeX(cx), y, -MD / 2]} />
         </group>
       ))}
     </group>
   )
 }
+
 function generatePreviewDataUrl(modules, cols, rows) {
   try {
     const W2 = 190, H2 = 118, PIPE2 = 7, PAD2 = 20

@@ -1,6 +1,4 @@
 // ── Configurator Page ─────────────────────────────────────
-//  레이아웃: 좌측 = 스크롤 트리거 영역(sticky 3D 캔버스) / 우측 = 사이드바
-
 .cfg-page {
   display: flex;
   width: 100%;
@@ -9,9 +7,8 @@
   align-items: flex-start;
 }
 
-// ── 뷰어 영역 (스크롤 트리거) ───────────────────────────────
 .cfg-viewer-area {
-  width: calc(100% - 360px);  // 전체에서 사이드바 딱 빼기
+  width: calc(100% - 360px);
   flex-shrink: 0;
   position: relative;
   min-height: 240vh;
@@ -54,7 +51,6 @@
   }
 }
 
-// ── 화살표 오버레이 ──────────────────────────────────────────
 .cfg-canvas-arrows {
   position: absolute;
   inset: 0;
@@ -85,7 +81,6 @@
     right: 16px;
     top: 50%;
     transform: translateY(-50%);
-
     &:hover { transform: translateY(-50%) scale(1.1); }
   }
 
@@ -93,12 +88,10 @@
     top: 16px;
     left: 50%;
     transform: translateX(-50%);
-
     &:hover { transform: translateX(-50%) scale(1.1); }
   }
 }
 
-// ── 스크롤 힌트 ──────────────────────────────────────────────
 .cfg-scroll-hint {
   position: absolute;
   bottom: 20px;
@@ -124,7 +117,6 @@
   50%       { transform: translateX(-50%) translateY(5px); }
 }
 
-// ── 뷰 인디케이터 ────────────────────────────────────────────
 .cfg-view-indicator {
   width: 80px;
 
@@ -144,12 +136,10 @@
   }
 }
 
-// ── 스크롤 공간 ──────────────────────────────────────────────
 .cfg-scroll-spacer {
   height: 120vh;
 }
 
-// ── 사이드바 ─────────────────────────────────────────────────
 .cfg-sidebar {
   width: 360px;
   flex-shrink: 0;
@@ -166,7 +156,7 @@
   &::-webkit-scrollbar { width: 3px; }
   &::-webkit-scrollbar-thumb { background: #e0e0e0; border-radius: 99px; }
 
-  &__top { margin-bottom: 24px; }
+  &__top { margin-bottom: 16px; }
 
   &__brand {
     font-size: 11px;
@@ -181,11 +171,45 @@
     font-weight: 700;
     color: #111;
     letter-spacing: -0.02em;
-    margin: 0;
+    margin: 0 0 16px;
   }
 }
 
-// ── 섹션 ─────────────────────────────────────────────────────
+// ── 히스토리 버튼 ─────────────────────────────────────────────
+.cfg-history-btns {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.cfg-history-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex: 1;
+  justify-content: center;
+  height: 36px;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  background: #fff;
+  color: #333;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.14s;
+
+  &:hover:not(:disabled) {
+    border-color: #303030;
+    color: #111;
+    background: #f5f5f5;
+  }
+
+  &:disabled {
+    opacity: 0.35;
+    cursor: default;
+  }
+}
+
 .cfg-section {
   padding: 20px 0;
   border-bottom: 1px solid #f0f0f0;
@@ -217,7 +241,6 @@
   }
 }
 
-// ── 스테퍼 ───────────────────────────────────────────────────
 .cfg-grid-control {
   display: flex;
   flex-direction: column;
@@ -270,7 +293,6 @@
   }
 }
 
-// ── 패널 버튼 ────────────────────────────────────────────────
 .cfg-panel-list {
   display: flex;
   flex-direction: column;
@@ -301,7 +323,6 @@
   }
 }
 
-// ── 색상 ─────────────────────────────────────────────────────
 .cfg-color-block {
   &__title {
     font-size: 11px;
@@ -351,7 +372,6 @@
   margin: 0;
 }
 
-// ── 전체 적용 ────────────────────────────────────────────────
 .cfg-apply-all {
   margin-top: 14px;
 
@@ -370,7 +390,6 @@
   }
 }
 
-// ── 프레임 뱃지 ──────────────────────────────────────────────
 .cfg-frame-badge {
   display: inline-flex;
   align-items: center;
@@ -393,7 +412,6 @@
   }
 }
 
-// ── 가격 요약 ────────────────────────────────────────────────
 .cfg-summary {
   margin-top: 24px;
   display: flex;
@@ -422,7 +440,6 @@
   }
 }
 
-// ── 주문 버튼 ────────────────────────────────────────────────
 .cfg-order-btn {
   margin-top: 16px;
   width: 100%;
@@ -440,7 +457,6 @@
   &:hover { opacity: 0.82; }
 }
 
-// ── 높이 타입 버튼 ─────────────────────────────────────────
 .cfg-height-btns {
   display: flex;
   gap: 8px;
@@ -483,7 +499,6 @@
   &.active &__bar { background: #555; }
 }
 
-// ── 고무 발 패드 옵션 ─────────────────────────────────────────
 .cfg-foot-pad {
   margin-top: 14px;
 
@@ -503,7 +518,7 @@
       height: 15px;
     }
 
-    span:last-child { // price
+    span:last-child {
       margin-left: auto;
       color: #888;
       font-weight: 400;
@@ -518,7 +533,6 @@
   }
 }
 
-// ── 악세사리 리스트 ───────────────────────────────────────────
 .cfg-accessory-list {
   display: flex;
   flex-direction: column;
@@ -566,7 +580,6 @@
   }
 }
 
-// ── 프레임 색상 ───────────────────────────────────────────────
 .cfg-frame-colors {
   display: flex;
   flex-direction: column;
@@ -608,7 +621,6 @@
   }
 }
 
-// ── 바닥 마감 ─────────────────────────────────────────────────
 .cfg-foot-types {
   display: flex;
   flex-direction: column;

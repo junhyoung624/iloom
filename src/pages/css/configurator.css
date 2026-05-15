@@ -1,0 +1,668 @@
+.cfg-page {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 60px;
+  align-items: flex-start;
+}
+
+.cfg-viewer-area {
+  width: calc(100% - 360px);
+  flex-shrink: 0;
+  position: relative;
+  min-height: 240vh;
+}
+
+.cfg-viewer-sticky {
+  position: sticky;
+  top: 60px;
+  height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  padding: 20px 24px 16px;
+  gap: 12px;
+}
+
+.cfg-viewer-label {
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #999;
+  margin: 0;
+  text-align: center;
+  width: 100%;
+}
+
+.cfg-canvas-wrap {
+  flex: 1;
+  width: 100%;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.cfg-canvas-wrap canvas {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.cfg-canvas-arrows {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.cfg-arrow {
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(17, 17, 17, 0.72);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: all;
+  transition: background 0.15s, transform 0.15s;
+  backdrop-filter: blur(4px);
+}
+.cfg-arrow:hover {
+  background: rgba(17, 17, 17, 0.92);
+  transform: scale(1.1);
+}
+.cfg-arrow--right {
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.cfg-arrow--right:hover {
+  transform: translateY(-50%) scale(1.1);
+}
+.cfg-arrow--top {
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.cfg-arrow--top:hover {
+  transform: translateX(-50%) scale(1.1);
+}
+
+.cfg-scroll-hint {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: #888;
+  text-transform: uppercase;
+  pointer-events: none;
+  transition: opacity 0.4s;
+  animation: cfg-bounce 2s ease-in-out infinite;
+}
+.cfg-scroll-hint.hidden {
+  opacity: 0;
+}
+
+@keyframes cfg-bounce {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(5px);
+  }
+}
+.cfg-view-indicator {
+  width: 80px;
+}
+.cfg-view-indicator__bar {
+  width: 100%;
+  height: 2px;
+  background: #d8d4ce;
+  border-radius: 99px;
+  overflow: hidden;
+}
+.cfg-view-indicator__fill {
+  height: 100%;
+  background: #333;
+  border-radius: 99px;
+  transition: width 0.05s linear;
+}
+
+.cfg-scroll-spacer {
+  height: 120vh;
+}
+
+.cfg-sidebar {
+  width: 360px;
+  flex-shrink: 0;
+  height: calc(100vh - 60px);
+  position: sticky;
+  top: 60px;
+  overflow-y: auto;
+  background: #fff;
+  border-left: 1px solid #ebebeb;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 26px 40px;
+}
+.cfg-sidebar::-webkit-scrollbar {
+  width: 3px;
+}
+.cfg-sidebar::-webkit-scrollbar-thumb {
+  background: #e0e0e0;
+  border-radius: 99px;
+}
+.cfg-sidebar__top {
+  margin-bottom: 16px;
+}
+.cfg-sidebar__brand {
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  color: #aaa;
+  margin: 0 0 5px;
+  text-transform: uppercase;
+}
+.cfg-sidebar__title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #111;
+  letter-spacing: -0.02em;
+  margin: 0 0 16px;
+}
+
+.cfg-history-btns {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.cfg-history-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex: 1;
+  justify-content: center;
+  height: 36px;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  background: #fff;
+  color: #333;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.14s;
+}
+.cfg-history-btn:hover:not(:disabled) {
+  border-color: #303030;
+  color: #111;
+  background: #f5f5f5;
+}
+.cfg-history-btn:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.cfg-section {
+  padding: 20px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+.cfg-section__label-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+.cfg-section__label {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #aaa;
+  text-transform: uppercase;
+  margin: 0 0 14px;
+  font-weight: 500;
+}
+.cfg-section__cell-tag {
+  font-size: 11px;
+  font-weight: 700;
+  color: #3A80E9;
+  background: #EBF2FF;
+  padding: 3px 9px;
+  border-radius: 99px;
+  letter-spacing: 0;
+}
+
+.cfg-grid-control {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+.cfg-grid-control__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cfg-grid-control__row span {
+  font-size: 14px;
+  color: #444;
+  font-weight: 500;
+}
+.cfg-grid-control__hint {
+  font-size: 11px;
+  color: #bbb;
+  margin: 0;
+}
+
+.cfg-stepper {
+  display: flex;
+  align-items: center;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.cfg-stepper button {
+  width: 32px;
+  height: 32px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 17px;
+  color: #555;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.12s;
+}
+.cfg-stepper button:hover:not(:disabled) {
+  background: #f5f5f5;
+}
+.cfg-stepper button:disabled {
+  color: #ddd;
+  cursor: not-allowed;
+}
+.cfg-stepper span {
+  min-width: 34px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  color: #111;
+  border-left: 1px solid #e5e5e5;
+  border-right: 1px solid #e5e5e5;
+  line-height: 32px;
+}
+
+.cfg-panel-list {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-bottom: 18px;
+}
+
+.cfg-panel-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 11px 14px;
+  border: 1.5px solid #e5e5e5;
+  border-radius: 9px;
+  background: none;
+  cursor: pointer;
+  transition: border-color 0.14s, background 0.14s;
+}
+.cfg-panel-btn__name {
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+}
+.cfg-panel-btn__price {
+  font-size: 12px;
+  color: #aaa;
+}
+.cfg-panel-btn.active {
+  border-color: #111;
+  background: #fafafa;
+}
+.cfg-panel-btn.active .cfg-panel-btn__name {
+  color: #111;
+  font-weight: 700;
+}
+.cfg-panel-btn.active .cfg-panel-btn__price {
+  color: #555;
+}
+
+.cfg-color-block__title {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: #bbb;
+  text-transform: uppercase;
+  margin: 0 0 10px;
+  font-weight: 500;
+}
+
+.cfg-color-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 7px;
+  margin-bottom: 8px;
+}
+
+.cfg-color-swatch {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 6px;
+  background: var(--swatch);
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: transform 0.12s, border-color 0.12s;
+  position: relative;
+}
+.cfg-color-swatch.active {
+  border-color: #111;
+  transform: scale(1.1);
+}
+.cfg-color-swatch.active::after {
+  content: "";
+  position: absolute;
+  inset: -5px;
+  border: 1.5px solid #111;
+  border-radius: 9px;
+}
+
+.cfg-color-name {
+  font-size: 12px;
+  color: #888;
+  letter-spacing: 0.04em;
+  margin: 0;
+}
+
+.cfg-apply-all {
+  margin-top: 14px;
+}
+.cfg-apply-all button {
+  width: 100%;
+  padding: 9px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background: none;
+  font-size: 13px;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.14s;
+}
+.cfg-apply-all button:hover {
+  background: #111;
+  color: #fff;
+  border-color: #111;
+}
+
+.cfg-frame-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 13px;
+  background: #f8f8f8;
+  border-radius: 8px;
+  border: 1px solid #e5e5e5;
+  font-size: 13px;
+  color: #444;
+  font-weight: 500;
+}
+.cfg-frame-badge__dot {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ececec 25%, #aaa 100%);
+  border: 1px solid #ccc;
+  flex-shrink: 0;
+}
+
+.cfg-summary {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #f0f0f0;
+}
+.cfg-summary__row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #777;
+}
+.cfg-summary__total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 13px;
+  border-top: 1.5px solid #111;
+  margin-top: 4px;
+}
+.cfg-summary__total span {
+  font-size: 14px;
+  font-weight: 600;
+  color: #111;
+}
+.cfg-summary__total strong {
+  font-size: 21px;
+  font-weight: 700;
+  color: #111;
+  letter-spacing: -0.02em;
+}
+
+.cfg-order-btn {
+  margin-top: 16px;
+  width: 100%;
+  padding: 15px;
+  background: #111;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 0.02em;
+  transition: opacity 0.16s;
+}
+.cfg-order-btn:hover {
+  opacity: 0.82;
+}
+
+.cfg-height-btns {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.cfg-height-btn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 8px;
+  border: 1.5px solid #e5e5e5;
+  border-radius: 9px;
+  background: none;
+  cursor: pointer;
+  transition: border-color 0.14s, background 0.14s;
+  font-size: 12px;
+  color: #555;
+  font-weight: 500;
+}
+.cfg-height-btn.active {
+  border-color: #111;
+  background: #fafafa;
+  color: #111;
+  font-weight: 700;
+}
+.cfg-height-btn__bar {
+  width: 36px;
+  background: #ccc;
+  border-radius: 3px;
+  transition: background 0.14s;
+}
+.cfg-height-btn__bar--full {
+  height: 24px;
+}
+.cfg-height-btn__bar--half {
+  height: 12px;
+}
+.cfg-height-btn.active .cfg-height-btn__bar {
+  background: #555;
+}
+
+.cfg-foot-pad {
+  margin-top: 14px;
+}
+.cfg-foot-pad__label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  color: #333;
+  font-weight: 500;
+}
+.cfg-foot-pad__label input[type=checkbox] {
+  accent-color: #111;
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+}
+.cfg-foot-pad__label span:last-child {
+  margin-left: auto;
+  color: #888;
+  font-weight: 400;
+}
+.cfg-foot-pad__desc {
+  margin: 5px 0 0 23px;
+  font-size: 11px;
+  color: #bbb;
+  letter-spacing: 0.02em;
+}
+
+.cfg-accessory-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cfg-acc-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border: 1.5px solid #e5e5e5;
+  border-radius: 9px;
+  background: none;
+  cursor: pointer;
+  transition: border-color 0.14s, background 0.14s;
+  text-align: left;
+}
+.cfg-acc-btn__icon {
+  font-size: 14px;
+  width: 20px;
+  text-align: center;
+  flex-shrink: 0;
+}
+.cfg-acc-btn__name {
+  flex: 1;
+  font-size: 13px;
+  color: #333;
+  font-weight: 500;
+}
+.cfg-acc-btn__price {
+  font-size: 11px;
+  color: #aaa;
+  flex-shrink: 0;
+}
+.cfg-acc-btn.active {
+  border-color: #111;
+  background: #fafafa;
+}
+.cfg-acc-btn.active .cfg-acc-btn__name {
+  color: #111;
+  font-weight: 700;
+}
+.cfg-acc-btn.active .cfg-acc-btn__price {
+  color: #555;
+}
+
+.cfg-frame-colors {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.cfg-frame-color-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border: 1.5px solid #e5e5e5;
+  border-radius: 9px;
+  background: none;
+  cursor: pointer;
+  transition: border-color 0.14s, background 0.14s;
+  font-size: 13px;
+  color: #333;
+  font-weight: 500;
+}
+.cfg-frame-color-btn__dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+.cfg-frame-color-btn__price {
+  margin-left: auto;
+  font-size: 11px;
+  color: #aaa;
+}
+.cfg-frame-color-btn.active {
+  border-color: #111;
+  background: #fafafa;
+  font-weight: 700;
+}
+
+.cfg-foot-types {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.cfg-foot-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  border: 1.5px solid #e5e5e5;
+  border-radius: 9px;
+  background: none;
+  cursor: pointer;
+  font-size: 13px;
+  color: #333;
+  font-weight: 500;
+  transition: border-color 0.14s, background 0.14s;
+}
+.cfg-foot-btn__price {
+  font-size: 11px;
+  color: #aaa;
+}
+.cfg-foot-btn.active {
+  border-color: #111;
+  background: #fafafa;
+  font-weight: 700;
+}
+.cfg-foot-btn.active .cfg-foot-btn__price {
+  color: #555;
+}

@@ -1,4 +1,4 @@
-export const productData = [
+[
   {
     "id": "HBA501101",
     "series": "바젤 심플리화이트",
@@ -50718,4 +50718,4 @@ export const productData = [
     ],
     "ranking": 296
   }
-];
+]

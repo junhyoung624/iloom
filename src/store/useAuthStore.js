@@ -136,13 +136,10 @@ export const useAuthStore = create((set, get) => ({
                 }
             })
 
-            try {
-                const { useProductStore } = await import('./useProductStore');
-                await useProductStore.getState().fetchOrderList({ uid: u.uid });
-                await useProductStore.getState().fetchCartItems({ uid: u.uid });
-            } catch (loadErr) {
-                console.error("로그인 후 사용자 데이터 로딩 실패:", loadErr)
-            }
+            const { useProductStore } = await import('./useProductStore');
+            await useProductStore.getState().fetchOrderList({ uid: u.uid });
+            await useProductStore.getState().fetchCartItems({ uid: u.uid });
+            toast(`${u.displayName}님, 로그인 성공!`);
             return true;
         } catch (err) {
             const loginErrorMessage = {
@@ -170,6 +167,7 @@ export const useAuthStore = create((set, get) => ({
         useProductStore.getState().clearWishlist();
         useCustomWishStore.getState().clearWishFolders();
         set({ user: null })
+        toast("로그아웃 되셨습니다.")
     },
 
     // 구글 로그인
@@ -220,6 +218,7 @@ export const useAuthStore = create((set, get) => ({
             const { useProductStore } = await import('./useProductStore');
             await useProductStore.getState().fetchOrderList({ uid: user.uid });
             await useProductStore.getState().fetchCartItems({ uid: user.uid });
+            toast(`${user.displayName}님, 로그인 성공!`);
             return true;
         } catch (err) {
             toast(err.message);
@@ -321,8 +320,13 @@ export const useAuthStore = create((set, get) => ({
 
     onNaverCallback: async (accessToken) => {
         try {
-            const res = await fetch(`/naver-api/v1/nid/me`, {
-                headers: { Authorization: `Bearer ${accessToken}` },
+            // const res = await fetch(`/naver-api/v1/nid/me`, {
+            //     headers: { Authorization: `Bearer ${accessToken}` },
+            // });
+            const res = await fetch(`/.netlify/functions/naver-user`, {
+                headers: {
+                    Authorization: `Bearer ${accessToken}`,
+                },
             });
             const data = await res.json();
             const profile = data.response;
@@ -368,7 +372,7 @@ export const useAuthStore = create((set, get) => ({
             const { useProductStore } = await import('./useProductStore');
             await useProductStore.getState().fetchOrderList({ uid: productOwnerUid });
             await useProductStore.getState().fetchCartItems({ uid: productOwnerUid });
-
+            toast(`${naverUser.nickname}님, 로그인 성공!`)
             return true
         } catch (err) {
             console.error('네이버 콜백 오류:', err);
