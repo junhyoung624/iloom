@@ -6,6 +6,7 @@ export default function NewBestTabs({ tabs, activeTab, onChange }) {
             items={tabs}
             activeKey={activeTab}
             onChange={onChange}
+            className="new-best-tabs"
             ariaLabel="product category tabs"
         />
     )

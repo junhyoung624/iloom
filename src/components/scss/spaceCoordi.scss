@@ -56,10 +56,33 @@
 
             h2 {
                 font-size: 24px;
+                line-height: 1.25;
             }
 
             p {
                 font-size: 14px;
+                line-height: 1.5;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .space-coordi-wrap {
+        .inner {
+            padding: 0 12px;
+        }
+
+        .title-box {
+            margin-top: 42px;
+            margin-bottom: 22px;
+
+            h2 {
+                font-size: 22px;
+            }
+
+            p {
+                font-size: 13px;
             }
         }
     }

@@ -5,35 +5,103 @@
     text-align: center;
     width: 600px;
     margin: 0 auto;
-    padding: 120px 0;
+    padding: 90px 0 130px;
+
+    .inner {
+        text-align: left;
+    }
+
+    h2 {
+        margin-bottom: 38px;
+        color: #222;
+        font-size: 28px;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    form {
+        display: grid;
+        gap: 0;
+    }
 
     p {
         text-align: left;
-        font-size: 14px;
-        margin: 12px 0;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.1;
+        margin: 18px 0 10px;
         color: var(--main);
     }
 
-
-    input {
+    input:not([type="submit"]) {
         display: block;
         width: 100%;
+        height: 50px;
         line-height: 50px;
-        margin-bottom: 20px;
+        margin-bottom: 18px;
+        border: 1px solid #808080;
+        padding: 0 16px;
+        color: #222;
+        font-size: 15px;
+        outline: none;
+        transition: border-color 0.2s ease, box-shadow 0.2s ease;
 
+        &::placeholder {
+            color: #aaa;
+            font-weight: 400;
+        }
+
+        &:focus {
+            border-color: #303030;
+            box-shadow: 0 0 0 2px rgba(48, 48, 48, 0.08);
+        }
+
+        &.success {
+            border: 1.5px solid #2ecc71;
+        }
+
+        &.error {
+            border-color: #e74c3c;
+            margin-bottom: 6px;
+        }
+    }
+
+    .member-error-text {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        margin-bottom: 14px;
+        color: #e74c3c;
+        font-size: 13px;
+        font-weight: 700;
+        text-align: left;
+
+        img {
+            width: 14px;
+            height: 14px;
+            object-fit: contain;
+            flex-shrink: 0;
+        }
     }
 
     input[type="submit"],
     button {
         display: block;
         width: 100%;
-        line-height: 50px;
+        height: 52px;
+        line-height: 52px;
         background: #303030;
         border: none;
         color: #fff;
-        margin-top: 10px;
+        margin-top: 18px;
         font-size: 18px;
+        font-weight: 700;
         cursor: pointer;
+        transition: background 0.2s ease;
+
+        &:hover {
+            background: #111;
+        }
     }
 
     button {
@@ -55,7 +123,19 @@
 
     .inner {
         display: flex;
+        position: relative;
         gap: 100px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 1px;
+            background: #e5e5e5;
+            transform: translateX(-50%);
+        }
     }
 
     .login-left,
@@ -87,24 +167,86 @@
         form {
             p {
                 font-size: 14px;
-                margin-bottom: 5px;
+                line-height: 1.4;
+                margin: 0 0 6px;
             }
 
-            input {
+            input:not([type="checkbox"]):not([type="radio"]) {
+                box-sizing: border-box;
                 width: 100%;
                 height: 45px;
                 padding: 0 12px;
                 margin-bottom: 15px;
-                border: 1px solid #ccc;
+                border: 1px solid #808080;
+                outline: none;
+                transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+                &:focus {
+                    border-color: #303030;
+                    box-shadow: 0 0 0 2px rgba(48, 48, 48, 0.08);
+                }
             }
 
             label {
                 @include g.myFlex($gap: 6px, $jc: null);
                 font-size: 14px;
+                min-height: 22px;
+                margin: 0 0 14px;
 
-                input[type="checkbox"] {
-                    width: auto;
-                    margin: 0;
+            }
+
+            label+p {
+                margin: 0 0 22px;
+                line-height: 1.45;
+            }
+
+            .phone+p,
+            .order+p {
+                min-height: 56px;
+                margin: 0 0 22px;
+                line-height: 1.45;
+            }
+
+            input[type="checkbox"],
+            input[type="radio"] {
+                appearance: none;
+                width: 16px;
+                height: 16px;
+                flex: 0 0 16px;
+                margin: 0;
+                padding: 0;
+                border: 1px solid #b8b8b8;
+                background: #fff;
+                cursor: pointer;
+                transition: background-color 0.2s ease, border-color 0.2s ease;
+
+                &:focus {
+                    outline: none;
+                    box-shadow: none;
+                }
+
+                &:checked {
+                    border-color: #303030;
+                    background-color: #303030;
+                }
+            }
+
+            input[type="checkbox"] {
+                border-radius: 2px;
+
+                &:checked {
+                    background-image: url("data:image/svg+xml,%3Csvg width='12' height='9' viewBox='0 0 12 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 4.2L4.3 7.5L11 1' stroke='white' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: 11px 8px;
+                }
+            }
+
+            input[type="radio"] {
+                border-radius: 50%;
+
+                &:checked {
+                    background-image: radial-gradient(circle, #fff 0 35%, transparent 39%);
                 }
             }
 
@@ -128,12 +270,13 @@
             }
 
             button {
+                box-sizing: border-box;
                 width: 100%;
                 height: 45px;
                 background: #333;
                 border: none;
                 color: #fff;
-                margin-bottom: 10px;
+                margin-bottom: 14px;
                 cursor: pointer;
             }
 
@@ -161,19 +304,19 @@
 
             .radio-wrap {
                 display: flex;
+                align-items: center;
                 gap: 20px;
-                margin-bottom: 10px;
+                min-height: 20px;
+                margin: 0 0 6px;
 
                 label {
                     display: flex;
                     align-items: center;
                     gap: 5px;
-                }
-
-                input[type="radio"] {
-                    width: auto;
+                    min-height: auto;
                     margin: 0;
                 }
+
             }
         }
 
@@ -347,13 +490,15 @@
         input {
             width: 100%;
             padding: 12px;
-            border: 1px solid #ddd;
+            border: 1px solid #808080;
             font-size: 14px;
             box-sizing: border-box;
+            outline: none;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
 
             &:focus {
-                outline: none;
-                border-color: #000;
+                border-color: #303030;
+                box-shadow: 0 0 0 2px rgba(48, 48, 48, 0.08);
             }
         }
 

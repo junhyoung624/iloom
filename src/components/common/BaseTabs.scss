@@ -4,7 +4,8 @@
     align-items: center;
     gap: 32px;
     flex-wrap: wrap;
-    margin: 32px 0 64px;
+    margin: 50px auto;
+    //background-color: green;
 }
 
 .base-tabs__item {
@@ -71,15 +72,17 @@
 
 @media (max-width: 768px) {
     .base-tabs {
-        justify-content: flex-start;
-        gap: 18px;
+        justify-content: center;
+        gap: 30px;
         flex-wrap: nowrap;
         width: 100%;
         overflow-x: auto;
-        margin-top: 24px;
+        margin-top: 50px;
         margin-bottom: 42px;
         padding: 0 16px 6px;
         scrollbar-width: none;
+
+        //background-color: green;
     }
 
     .base-tabs::-webkit-scrollbar {
@@ -91,5 +94,26 @@
         padding-bottom: 9px;
         font-size: 14px;
         white-space: nowrap;
+    }
+
+    .sub-category-tabs {
+        justify-content: flex-start;
+        gap: 24px;
+        margin: 28px 0 36px;
+        padding: 0 20px 12px;
+        border-bottom: 1px solid #e5e5e5;
+        scroll-padding-left: 20px;
+    }
+
+    .sub-category-tabs .base-tabs__control {
+        min-height: 32px;
+        padding-bottom: 8px;
+    }
+
+    .new-best-tabs {
+        justify-content: flex-start;
+        padding-left: 20px;
+        padding-right: 20px;
+        scroll-padding-left: 20px;
     }
 }
