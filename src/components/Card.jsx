@@ -35,13 +35,13 @@ const SubCard = ({ item }) => {
 
                 <img
                     src={item.productImages[1]}
-                    alt="상품이미지"
+                    alt="product-image"
                     className="product-img default"
                     onLoad={() => setIsImgLoaded(true)}
                 />
                 <img
                     src={item.productImages[0]}
-                    alt="상품이미지"
+                    alt="product-image"
                     className="product-img hover"
                 />
             </div>
@@ -58,12 +58,12 @@ const SubCard = ({ item }) => {
                     >
                         <img
                             src="./images/logo-icon/heart-lined.png"
-                            alt="빈 하트"
+                            alt="empty-heart"
                             className="heart heart-line"
                         />
                         <img
                             src="./images/logo-icon/heart-filled.png"
-                            alt="찜한 하트"
+                            alt="like-heart"
                             className="heart heart-fill"
                         />
                     </button>

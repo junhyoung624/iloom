@@ -3,47 +3,30 @@ import 'swiper/css'
 
 const detectCardIssuer = (number = '') => {
     const n = number.replace(/\s/g, '')
+    if (/^1/.test(n)) return 'card1'
+    if (/^2/.test(n)) return 'card2'
+    if (/^3/.test(n)) return 'amex'
     if (/^4/.test(n)) return 'visa'
-    if (/^5[1-5]/.test(n)) return 'mastercard'
-    if (/^3[47]/.test(n)) return 'amex'
+    if (/^5/.test(n)) return 'mastercard'
+    if (/^6/.test(n)) return 'discover'
+    if (/^7/.test(n)) return 'card7'
+    if (/^8/.test(n)) return 'card8'
     if (/^9/.test(n)) return 'local'
     return 'default'
 }
 
 const CARD_STYLES = {
-    visa: { label: 'VISA', bg: ['#1a1f71', '#3b57ff'], textColor: '#fff' },
-    mastercard: { label: 'Mastercard', bg: ['#eb001b', '#f79e1b'], textColor: '#fff' },
-    amex: { label: 'AMEX', bg: ['#2e77bc', '#67b7dc'], textColor: '#fff' },
-    local: { label: '국내카드', bg: ['#111', '#555'], textColor: '#fff' },
-    default: { label: 'CARD', bg: ['#333', '#999'], textColor: '#fff' },
+    card1: { label: 'CARD', bg: ['#0f2027', '#2c5364'], textColor: '#fff' },       // 1: 딥오션 블랙
+    card2: { label: 'CARD', bg: ['#1a1a2e', '#e94560'], textColor: '#fff' },       // 2: 다크네이비+핑크레드
+    amex: { label: 'AMEX', bg: ['#007b5e', '#00b09b'], textColor: '#fff' },       // 3: Amex 그린
+    visa: { label: 'VISA', bg: ['#1a1f71', '#2d3fd4'], textColor: '#fff' },       // 4: Visa 네이비
+    mastercard: { label: 'Mastercard', bg: ['#1a1a2e', '#eb001b'], textColor: '#fff' }, // 5: Mastercard 레드
+    discover: { label: 'Discover', bg: ['#231f20', '#f76f20'], textColor: '#fff' }, // 6: Discover 오렌지
+    card7: { label: 'CARD', bg: ['#0d0d0d', '#4a4a4a'], textColor: '#fff' },       // 7: 매트블랙
+    card8: { label: 'CARD', bg: ['#1f1c2c', '#928dab'], textColor: '#fff' },       // 8: 다크퍼플
+    local: { label: '국내카드', bg: ['#1a1a1a', '#3d3d3d'], textColor: '#fff' },   // 9: 블랙
+    default: { label: 'CARD', bg: ['#2c2c2c', '#5a5a5a'], textColor: '#fff' },
 }
-
-const SIMPLE_PAY_LIST = [
-    {
-        key: 'naverpay',
-        name: '네이버페이',
-        sub: '포인트 최대 2% 적립',
-        logoSrc: './images/logo-icon/npay.png',
-        accent: '#03c75a',
-        textDark: true,
-    },
-    {
-        key: 'kakaopay',
-        name: '카카오페이',
-        sub: '카카오머니 즉시결제',
-        logoSrc: './images/logo-icon/kakaopay.png',
-        accent: '#fee500',
-        textDark: true,
-    },
-    {
-        key: 'tosspay',
-        name: '토스페이',
-        sub: '간편하게 1초 결제',
-        logoSrc: './images/logo-icon/tosspay.png',
-        accent: '#0064ff',
-        textDark: false,
-    },
-]
 
 export default function PaymentMethodSection({
     paymentMethod,

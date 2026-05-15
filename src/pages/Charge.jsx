@@ -442,7 +442,6 @@ export default function Charge() {
                         )
                     }))
                 } catch (e) {
-                    console.warn('썸네일 백그라운드 업로드 실패:', e)
                 }
             })()
 
@@ -470,7 +469,6 @@ export default function Charge() {
             setShowOrderComplete(true)
             setConfirmPay(false)
         } catch (err) {
-            console.log(err)
             toast('주문 저장 중 오류가 발생했습니다.')
         } finally {
             setIsSubmitting(false)
