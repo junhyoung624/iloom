@@ -1,30 +1,13 @@
 const OpenAI = require("openai");
-const fs = require("fs");
-const path = require("path");
 
-// ─── 상품 데이터 로드 ───────────────────────────────────────────────────────
-function loadProductData() {
-    const candidates = [
-        path.join(__dirname, "../../src/data/productData.js"),
-        path.join(__dirname, "../src/data/productData.js"),
-    ];
-    for (const filePath of candidates) {
-        if (fs.existsSync(filePath)) {
-            let content = fs.readFileSync(filePath, "utf8");
-            content = content
-                .replace(/export\s+const\s+productData\s*=\s*/, "")
-                .replace(/,(\s*[\]\}])/g, "$1")
-                .replace(/;\s*$/, "")
-                .trim();
-            return JSON.parse(content);
-        }
-    }
-    throw new Error("productData.js를 찾을 수 없습니다.");
+let rawData;
+try {
+    rawData = require("../../src/data/productData.js");
+} catch(e) {
+    rawData = require("../../../src/data/productData.js");
 }
+const productData = rawData.productData || rawData.default || rawData;
 
-const productData = loadProductData();
-
-// ─── 카테고리/재질/가격 키워드 (server.js와 동일) ───────────────────────────
 const CATEGORY_KEYWORDS = {
     거실: { originalCategory: "거실" },
     침실: { originalCategory: "침실" },
@@ -210,16 +193,13 @@ const SYSTEM_PROMPT = `당신은 일룸(iloom) 공식 가구 쇼핑몰의 친절
 6. 답변 마지막엔 "더 궁금한 점이 있으시면 말씀해주세요 😊"로 마무리하세요.
 7. 이전 대화 맥락을 참고해서 자연스럽게 대응하세요.`;
 
-// ─── Netlify Function 핸들러 ────────────────────────────────────────────────
 exports.handler = async (event) => {
-    // CORS 헤더
     const headers = {
         "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Headers": "Content-Type",
         "Content-Type": "application/json",
     };
 
-    // preflight
     if (event.httpMethod === "OPTIONS") {
         return { statusCode: 200, headers, body: "" };
     }
