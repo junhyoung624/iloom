@@ -1,9 +1,11 @@
-import React, { useEffect, useMemo, useRef, useState } from 'react'
+﻿import React, { useEffect, useMemo, useRef, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { useProductStore } from '../store/useProductStore'
 import SubCard from '../components/SubCard'
 import "./scss/furnitureList.scss"
+import "../pages/scss/subPage.scss"
 import SubPageEmptyState from './SubPageEmptyState'
+import SubSortControl from './common/SubSortControl'
 
 export default function FurniturePage() {
     const { items, sortType, sortOrder, onSetSort } = useProductStore()
@@ -258,28 +260,11 @@ export default function FurniturePage() {
                     <div className="sub-product-list-wrap">
 
                         <div className="sub-filter-sort-wrap">
-                            <div className="sub-filter-sort-btn-group">
-                                <button
-                                    className={sortType === "price" && sortOrder === "desc" ? "active" : ""}
-                                    onClick={() => onSetSort("price", "desc")}
-                                >가격 높은순</button>
-                                <button
-                                    className={sortType === "price" && sortOrder === "asc" ? "active" : ""}
-                                    onClick={() => onSetSort("price", "asc")}
-                                >가격 낮은순</button>
-                                <button
-                                    className={sortType === "ranking" ? "active" : ""}
-                                    onClick={() => onSetSort("ranking", "desc")}
-                                >인기순</button>
-                                <button
-                                    className={sortType === "new" ? "active" : ""}
-                                    onClick={() => onSetSort("new", "desc")}
-                                >신상품순</button>
-                                <button
-                                    className={sortType === "name" ? "active" : ""}
-                                    onClick={() => onSetSort("name", "asc")}
-                                >상품명순</button>
-                            </div>
+                            <SubSortControl
+                                sortType={sortType}
+                                sortOrder={sortOrder}
+                                onSetSort={onSetSort}
+                            />
 
                             <button
                                 type="button"
@@ -322,20 +307,14 @@ export default function FurniturePage() {
 
 
                         {pageItem.length === 0 && (
-                            // <div className="subpage-empty-state">
-                            //     <p>'{rawKeyword}'에 대한 검색 결과가 없어요.</p>
-                            //     {activeFilterCount > 0
-                            //         ? <button onClick={resetFilter}>필터 초기화</button>
-                            //         : <Link to="/">홈으로 돌아가기</Link>
-                            //     }
-                            // </div>
                             <SubPageEmptyState
                                 className="subpage-empty-state"
                                 imageSrc="/images/logo-icon/no-image.svg"
                                 imageAlt="filter empty"
-                                title="조건에 맞는 상품이 없어요"
-                                actionLabel="필터 초기화"
-                                onAction={resetFilter}
+                                title={`'${rawKeyword}'에 대한 검색 결과가 없어요.`}
+                                actionLabel={activeFilterCount > 0 ? "필터 초기화" : "홈으로 돌아가기"}
+                                onAction={activeFilterCount > 0 ? resetFilter : undefined}
+                                actionTo={activeFilterCount > 0 ? undefined : "/"}
                             />
                         )}
 

@@ -8,10 +8,35 @@
     }
 }
 
+.shoppable-visual {
+    position: relative;
+    width: 100%;
+    overflow: visible;
+}
+
+.shoppable-image-frame {
+    display: block;
+    width: 100%;
+
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+}
+
 .dot-and-box-wrap {
-    top: 0;
-    left: 0;
-    background: goldenrod;
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+
+    ul {
+        position: absolute;
+        inset: 0;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
 }
 
 .shop-btn-area {
@@ -21,6 +46,8 @@
     padding: 10px;
     width: 60px;
     height: 60px;
+    pointer-events: auto;
+    cursor: pointer;
 }
 
 .dot-area {
@@ -34,6 +61,7 @@
     align-items: center;
     justify-content: center;
     background: rgba(0, 0, 0, 0.5);
+    pointer-events: auto;
 }
 
 .dot-area::after {
@@ -67,6 +95,7 @@
     opacity: 1;
     visibility: visible;
     transition: opacity 0.25s ease, visibility 0.25s ease;
+    pointer-events: auto;
 }
 
 .price-tag-hidden {
@@ -75,6 +104,114 @@
     visibility: hidden;
     transition: opacity 0.25s ease, visibility 0.25s ease;
     pointer-events: none;
+}
+
+@media (max-width: 1024px) {
+    .shoppable-area-wrap {
+        .base-tabs {
+            margin-bottom: 28px;
+        }
+    }
+
+    .shop-btn-area {
+        width: 52px;
+        height: 52px;
+        padding: 8px;
+    }
+
+    .price-tag-inner {
+        width: 220px;
+    }
+}
+
+@media (max-width: 768px) {
+    .shoppable-area-wrap {
+        .base-tabs {
+            margin-top: 0;
+            margin-bottom: 22px;
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    .shoppable-visual {
+        border-radius: 6px;
+        overflow: hidden;
+    }
+
+    .shoppable-image-frame {
+        height: auto;
+
+        img {
+            height: auto;
+            border-radius: 6px;
+            object-position: center;
+        }
+    }
+
+    .dot-area {
+        width: 18px;
+        height: 18px;
+
+        &::after {
+            width: 7px;
+            height: 7px;
+        }
+    }
+
+    .price-tag-inner {
+        width: min(180px, 66vw);
+
+        .img-info {
+            width: 52px;
+            padding: 6px;
+        }
+
+        .txt-info {
+            padding: 7px 7px 7px 9px;
+
+            .item-name {
+                font-size: 9px;
+            }
+
+            .item-subname,
+            .item-price {
+                font-size: 11px;
+            }
+        }
+
+        .button-area {
+            padding: 0 7px;
+
+            .tag_arrow_btn {
+                width: 22px;
+                height: 22px;
+
+                img {
+                    width: 10px;
+                    height: 10px;
+                }
+            }
+        }
+    }
+
+    .shop-btn-area {
+        bottom: 8px;
+        left: 8px;
+        width: 46px;
+        height: 46px;
+        padding: 7px;
+    }
+}
+
+@media (max-width: 480px) {
+    .price-tag-inner {
+        width: min(168px, 72vw);
+
+        .img-info {
+            width: 48px;
+        }
+    }
 }
 
 .dot-active {
@@ -189,6 +326,54 @@
                 background: #505050;
                 transform: scale(1.08);
             }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .price-tag-inner {
+        width: min(180px, 66vw);
+
+        .img-info {
+            width: 52px;
+            padding: 6px;
+        }
+
+        .txt-info {
+            padding: 7px 7px 7px 9px;
+
+            .item-name {
+                font-size: 9px;
+            }
+
+            .item-subname,
+            .item-price {
+                font-size: 11px;
+            }
+        }
+
+        .button-area {
+            padding: 0 7px;
+
+            .tag_arrow_btn {
+                width: 22px;
+                height: 22px;
+
+                img {
+                    width: 10px;
+                    height: 10px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .price-tag-inner {
+        width: min(168px, 72vw);
+
+        .img-info {
+            width: 48px;
         }
     }
 }

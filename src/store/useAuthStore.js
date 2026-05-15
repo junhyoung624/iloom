@@ -107,19 +107,31 @@ export const useAuthStore = create((set, get) => ({
     // 이메일 로그인
     onLogin: async (email, pass) => {
         try {
-            const userLogin = await signInWithEmailAndPassword(auth, email, pass)
+            const loginEmail = email.trim()
+            const userLogin = await signInWithEmailAndPassword(auth, loginEmail, pass)
             const u = userLogin.user;
 
             const userRef = doc(db, "people", u.uid)
             const userSnap = await getDoc(userRef)
-            const userInfo = userSnap.data()
+            const userInfo = userSnap.exists()
+                ? userSnap.data()
+                : {
+                    uid: u.uid,
+                    email: u.email,
+                    name: u.displayName || '',
+                    phone: '',
+                }
+
+            if (!userSnap.exists()) {
+                await setDoc(userRef, userInfo, { merge: true })
+            }
 
             set({
                 user: {
                     uid: u.uid,
                     email: u.email,
-                    name: userInfo.name,
-                    phone: userInfo.phone,
+                    name: userInfo?.name || u.displayName || '',
+                    phone: userInfo?.phone || '',
                     providers: u.providerData.map(p => p.providerId)
                 }
             })
@@ -127,9 +139,19 @@ export const useAuthStore = create((set, get) => ({
             const { useProductStore } = await import('./useProductStore');
             await useProductStore.getState().fetchOrderList({ uid: u.uid });
             await useProductStore.getState().fetchCartItems({ uid: u.uid });
+            toast(`${u.displayName}님, 로그인 성공!`);
             return true;
         } catch (err) {
-            toast("로그인 실패" + err.message)
+            const loginErrorMessage = {
+                'auth/invalid-credential': '이메일 또는 비밀번호가 올바르지 않습니다.',
+                'auth/user-not-found': '가입된 이메일을 찾을 수 없습니다.',
+                'auth/wrong-password': '비밀번호가 올바르지 않습니다.',
+                'auth/invalid-email': '이메일 형식이 올바르지 않습니다.',
+                'auth/too-many-requests': '로그인 시도가 많습니다. 잠시 후 다시 시도해주세요.',
+            }[err.code] || err.message
+
+            toast("로그인 실패: " + loginErrorMessage)
+            return false
         }
     },
 
@@ -145,6 +167,7 @@ export const useAuthStore = create((set, get) => ({
         useProductStore.getState().clearWishlist();
         useCustomWishStore.getState().clearWishFolders();
         set({ user: null })
+        toast("로그아웃 되셨습니다.")
     },
 
     // 구글 로그인
@@ -195,6 +218,7 @@ export const useAuthStore = create((set, get) => ({
             const { useProductStore } = await import('./useProductStore');
             await useProductStore.getState().fetchOrderList({ uid: user.uid });
             await useProductStore.getState().fetchCartItems({ uid: user.uid });
+            toast(`${user.displayName}님, 로그인 성공!`);
             return true;
         } catch (err) {
             toast(err.message);
@@ -296,8 +320,13 @@ export const useAuthStore = create((set, get) => ({
 
     onNaverCallback: async (accessToken) => {
         try {
-            const res = await fetch(`/naver-api/v1/nid/me`, {
-                headers: { Authorization: `Bearer ${accessToken}` },
+            // const res = await fetch(`/naver-api/v1/nid/me`, {
+            //     headers: { Authorization: `Bearer ${accessToken}` },
+            // });
+            const res = await fetch(`/.netlify/functions/naver-user`, {
+                headers: {
+                    Authorization: `Bearer ${accessToken}`,
+                },
             });
             const data = await res.json();
             const profile = data.response;
@@ -343,7 +372,7 @@ export const useAuthStore = create((set, get) => ({
             const { useProductStore } = await import('./useProductStore');
             await useProductStore.getState().fetchOrderList({ uid: productOwnerUid });
             await useProductStore.getState().fetchCartItems({ uid: productOwnerUid });
-
+            toast(`${naverUser.nickname}님, 로그인 성공!`)
             return true
         } catch (err) {
             console.error('네이버 콜백 오류:', err);

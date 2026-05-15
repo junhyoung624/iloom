@@ -1,4 +1,4 @@
-@use '../../variables.scss' as v;
+﻿@use '../../variables.scss' as v;
 
 .card-img-box {
     position: relative;
@@ -105,11 +105,12 @@
         opacity: 1;
     }
 
-    // ---- 비교 버튼 ----
+
     .compare-btn {
         position: absolute;
         top: 50%;
-        right: 28px; // 하트(20px) + 간격(8px)
+        right: 28px;
+
         transform: translateY(-50%);
         margin-top: 20px;
 
@@ -235,7 +236,7 @@
 
     .card-text-box {
         .compare-btn {
-            right: 26px; // 모바일에서 간격 소폭 조정
+            right: 26px;
         }
 
         .product-info {
@@ -244,11 +245,19 @@
             .series-name {
                 font-size: 12px;
                 margin-bottom: 6px;
+                margin-top: 10px;
             }
 
             .product-name {
                 font-size: 13px;
-                padding-bottom: 8px;
+                line-height: 1.35;
+                height: 1.35em;
+                padding-bottom: 0;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 1;
+                line-clamp: 1;
+                overflow: hidden;
             }
 
             .price {

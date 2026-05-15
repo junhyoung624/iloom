@@ -51,6 +51,10 @@
     }
 }
 
+.dock-mobile-toggle {
+    display: none;
+}
+
 
 .dock-cart-wrap {
     position: relative;
@@ -355,20 +359,103 @@
 }
 
 @media (max-width: 768px) {
+    .dock-tab-wrap {
+        right: 16px;
+        bottom: 24px;
+        left: auto;
+        transform: none;
+        z-index: 1000;
+
+        .dock-tab {
+            position: absolute;
+            right: 62px;
+            bottom: 0;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transform: translateX(12px) scale(0.96);
+            transition: opacity 0.22s ease, transform 0.22s ease, visibility 0.22s ease;
+        }
+
+        .dock {
+            height: 42px;
+            padding: 0 6px;
+            border-radius: 999px;
+            gap: 2px !important;
+            box-shadow: 0 8px 22px rgba(0, 0, 0, 0.14);
+        }
+
+        .dock-icon {
+            width: 30px !important;
+            height: 30px !important;
+            flex: 0 0 30px;
+
+            svg {
+                width: 16px;
+                height: 16px;
+            }
+        }
+
+        .dock-separator {
+            display: none;
+        }
+
+        &.mobile-open {
+            .dock-tab {
+                opacity: 1;
+                visibility: visible;
+                pointer-events: auto;
+                transform: translateX(0) scale(1);
+            }
+        }
+    }
+
+    .dock-mobile-toggle {
+        display: flex;
+        position: relative;
+        width: 50px;
+        height: 50px;
+        padding: 6px;
+        border: none;
+        border-radius: 50%;
+        background: transparent;
+        align-items: center;
+        justify-content: center;
+        gap: 3px;
+        cursor: pointer;
+        z-index: 2;
+
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 5px;
+            border-radius: 50%;
+            background: #fff;
+            box-shadow: 0 8px 22px rgba(0, 0, 0, 0.14);
+        }
+
+        span {
+            position: relative;
+            z-index: 1;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background: #303030;
+        }
+    }
+
     .dock-cart-bridge {
-        width: calc(100vw - 32px);
+        display: none;
     }
 
     .dock-cart-preview {
-        width: calc(100vw - 32px);
-        left: 50%;
-        bottom: 82px;
-        transform: translateX(-50%) translateY(0) scale(0.96);
+        display: none;
     }
 
-    .dock-cart-wrap.active {
-        .dock-cart-preview {
-            transform: translateX(-50%) translateY(-12px) scale(1);
-        }
+    .dock-phone-toast {
+        right: 16px;
+        bottom: 148px;
+        left: auto;
+        transform: none;
     }
 }

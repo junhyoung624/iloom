@@ -101,9 +101,13 @@
 }
 
 @media (max-width: 768px) {
+    .coordi-item-list-wrap {
+        margin-top: 26px;
+    }
+
     .coordi-item-list {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 10px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px 12px;
     }
 
     .coordi-item {
@@ -116,17 +120,38 @@
 
         .name {
             font-size: 12px;
+            line-height: 1.35;
         }
 
         .subName {
             width: 100%;
             font-size: 12px;
             padding: 6px 0;
+            line-height: 1.35;
         }
 
         .price {
             font-size: 12px;
             padding-top: 4px;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .coordi-item-list {
+        gap: 16px 10px;
+    }
+
+    .coordi-item {
+        .coordi-item-img-box {
+            aspect-ratio: 1 / 1;
+        }
+
+        .subName {
+            min-height: 38px;
+            white-space: normal;
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
         }
     }
 }

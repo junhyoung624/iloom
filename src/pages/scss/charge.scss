@@ -413,9 +413,18 @@
     }
 
     .error-text {
+        display: flex;
+        align-items: center;
+        gap: 6px;
         color: red;
         font-weight: 700;
         font-size: 1rem;
+
+        .format-alert-icon {
+            width: 14px;
+            height: 14px;
+            flex: 0 0 14px;
+        }
     }
 
     .user-form {
@@ -469,9 +478,18 @@
                 gap: 34px;
 
                 .error-text {
+                    display: flex;
+                    align-items: center;
+                    gap: 6px;
                     color: red;
                     font-weight: 700;
                     font-size: 1rem;
+
+                    .format-alert-icon {
+                        width: 14px;
+                        height: 14px;
+                        flex: 0 0 14px;
+                    }
                 }
             }
 
@@ -554,9 +572,18 @@
 }
 
 .error-text-right {
+    display: flex;
+    align-items: center;
+    gap: 6px;
     color: red;
     font-weight: 700;
     font-size: 1rem;
+
+    .format-alert-icon {
+        width: 14px;
+        height: 14px;
+        flex: 0 0 14px;
+    }
 }
 
 // 할인 · 쿠폰
