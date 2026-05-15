@@ -16,8 +16,7 @@ export default function ChatBotTest() {
         setProducts([]);
 
         try {
-            const apiUrl = import.meta.env.VITE_API_URL || "/.netlify/functions/chat";
-            const res = await fetch(apiUrl, {
+            const res = await fetch("/.netlify/functions/chat", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ message }),
