@@ -8,6 +8,7 @@ export default function SubCategoryTabs({ items }) {
         <BaseTabs
             items={items}
             activeKey={activeItem?.to}
+            className="sub-category-tabs"
             ariaLabel="sub category tabs"
             renderItem={(item, { className }) => (
                 <Link to={item.to} className={className}>

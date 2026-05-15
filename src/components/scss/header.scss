@@ -1,4 +1,4 @@
-@use "../../App.scss" as g;
+﻿@use "../../App.scss" as g;
 
 header {
     padding: 20px 70px;
@@ -535,21 +535,21 @@ header {
 .cart-panel-wrap {
     position: fixed;
     top: 0;
-    right: -9999px;
+    right: 0;
     height: 100vh;
     width: 27%;
     background: #fff;
     z-index: 9999;
     border: 1px solid #ddd;
-    transition: 0.5s;
+    transform: translateX(100%);
+    transition: transform 0.5s;
 
     &.active {
-        right: 0;
-        
+        transform: translateX(0);
     }
 }
 
-// 모바일 드로어 - 기본값을 flex로, left로 숨김 처리
+// 紐⑤컮???쒕줈??- 湲곕낯媛믪쓣 flex濡? left濡??④? 泥섎━
 .mobile-menu-overlay {
     position: fixed;
     top: 0;
@@ -570,20 +570,21 @@ header {
 }
 
 .mobile-menu-drawer {
-    display: flex; // none 대신 flex - left로 숨김
+    display: flex; // none ???flex - left濡??④?
     flex-direction: column;
     position: fixed;
     top: 0;
-    left: -320px; // 평소엔 화면 밖
+    left: 0;
     width: 300px;
     height: 100vh;
     background: #fff;
     z-index: 9999;
     overflow-y: auto;
-    transition: left 0.35s ease;
+    transform: translateX(-100%);
+    transition: transform 0.35s ease;
 
     &.active {
-        left: 0; // 클릭 시 화면 안으로
+        transform: translateX(0);
     }
 }
 
@@ -669,7 +670,7 @@ header {
     }
 }
 
-// 1024px 이하 - 모바일 드로어 오버레이 활성화, 데스크탑 메뉴 숨김
+// 1024px ?댄븯 - 紐⑤컮???쒕줈???ㅻ쾭?덉씠 ?쒖꽦?? ?곗뒪?ы깙 硫붾돱 ?④?
 @media (max-width: 1024px) {
     .mobile-menu-overlay {
         display: block;
@@ -684,7 +685,7 @@ header {
     }
 }
 
-// 768px 이하
+// 768px ?댄븯
 @media (max-width: 768px) {
     header {
         padding: 16px 20px;
@@ -723,15 +724,26 @@ header {
 
                 .gnb-list {
                     display: flex;
-                    gap: 14px;
+                    gap: 12px;
                     align-items: center;
 
                     li {
                         display: block;
 
+                        .icon-btn,
+                        .user-btn,
+                        a {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: 28px;
+                            height: 28px;
+                            padding: 0;
+                        }
+
                         img {
-                            width: 20px;
-                            height: 20px;
+                            width: 19px;
+                            height: 19px;
                         }
 
                         .user-btn span {
@@ -757,6 +769,63 @@ header {
     }
 
     .user-menu-wrap {
+        width: 100%;
+
+        .user-img {
+            margin: 34px 0 0 24px;
+
+            img {
+                width: 110px;
+            }
+        }
+
+        .user-name {
+            margin: 54px 24px 0;
+            font-size: 17px;
+            line-height: 1.45;
+
+            strong {
+                font-size: 28px;
+            }
+        }
+
+        .user-point {
+            margin: 22px 24px 0;
+        }
+
+        .logout-btn {
+            margin: 18px 24px 0;
+            padding: 9px 18px;
+            font-size: 13px;
+        }
+
+        .line {
+            width: auto;
+            margin: 34px 24px 0;
+        }
+
+        .info-list {
+            margin: 28px 24px 0;
+            font-size: 17px;
+            line-height: 2.25;
+
+            .info-sub-list {
+                font-size: 14px;
+                text-indent: 14px;
+            }
+        }
+
+        .close-btn {
+            top: 27px;
+            right: 24px;
+
+            img {
+                width: 22px;
+            }
+        }
+    }
+
+    .cart-panel-wrap {
         width: 100%;
     }
 }

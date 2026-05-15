@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useCallback, useEffect, useRef, useState } from 'react'
 import { motion, useMotionValue, animate } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import "./scss/place.scss"
@@ -14,17 +14,17 @@ export default function Place() {
         { id: "7", link: "키즈룸", key: "kidsroom", image: "./images/place/kidsroom.png", message: "상상과 웃음이 자라나는 곳" },
     ]
 
-    const loopList = [...placeList, ...placeList, ...placeList]
-    const ITEM_WIDTH = 355
-    const TOTAL_WIDTH = ITEM_WIDTH * placeList.length
-
     const x = useMotionValue(0)
     const animRef = useRef(null)
+    const loopList = [...placeList, ...placeList, ...placeList]
+    const getItemWidth = () => window.matchMedia('(max-width: 768px)').matches ? 230 : 355
+    const [itemWidth, setItemWidth] = useState(() => getItemWidth())
+    const totalWidth = itemWidth * placeList.length
 
-    const startAnimation = (from) => {
-        const remaining = TOTAL_WIDTH - Math.abs(from % TOTAL_WIDTH)
+    const startAnimation = useCallback((from) => {
+        const remaining = totalWidth - Math.abs(from % totalWidth)
         const fullDuration = 60
-        const remainingDuration = (remaining / TOTAL_WIDTH) * fullDuration
+        const remainingDuration = (remaining / totalWidth) * fullDuration
 
         animRef.current = animate(x, from - remaining, {
             duration: remainingDuration,
@@ -34,12 +34,23 @@ export default function Place() {
                 startAnimation(0)
             }
         })
-    }
+    }, [totalWidth, x])
 
     useEffect(() => {
-        startAnimation(x.get())
-        return () => animRef.current?.stop()
+        const updateItemWidth = () => setItemWidth(getItemWidth())
+
+        updateItemWidth()
+        window.addEventListener('resize', updateItemWidth)
+
+        return () => window.removeEventListener('resize', updateItemWidth)
     }, [])
+
+    useEffect(() => {
+        animRef.current?.stop()
+        x.set(0)
+        startAnimation(0)
+        return () => animRef.current?.stop()
+    }, [itemWidth, startAnimation, x])
 
     const handleMouseEnter = () => animRef.current?.stop()
     const handleMouseLeave = () => startAnimation(x.get())

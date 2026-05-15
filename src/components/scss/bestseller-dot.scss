@@ -209,3 +209,49 @@
         }
     }
 }
+
+@media (max-width: 768px) {
+    .best-dot-li {
+        &::before {
+            width: 18px;
+            height: 18px;
+        }
+    }
+
+    .best-dot-area {
+        width: 18px;
+        height: 18px;
+
+        &::after {
+            width: 7px;
+            height: 7px;
+        }
+    }
+
+    .best-price-tag {
+        width: min(210px, 76vw);
+    }
+
+    .best-tag-img {
+        width: 60px;
+        padding: 7px;
+    }
+
+    .best-tag-info {
+        padding: 8px 8px 8px 10px;
+    }
+
+    .best-tag-btn-area {
+        padding: 0 9px;
+
+        .best-tag-arrow-btn {
+            width: 24px;
+            height: 24px;
+
+            img {
+                width: 11px;
+                height: 11px;
+            }
+        }
+    }
+}
