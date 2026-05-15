@@ -2,7 +2,7 @@ const OpenAI = require("openai");
 const fs = require("fs");
 const path = require("path");
 
-const filePath = path.join(__dirname, "../../src/data/productData.js");
+const filePath = path.join("/var/task", "src/data/productData.js");
 let content = fs.readFileSync(filePath, "utf8");
 content = content
     .replace(/export\s+const\s+productData\s*=\s*/, "")
