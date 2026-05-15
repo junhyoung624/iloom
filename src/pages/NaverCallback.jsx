@@ -3,7 +3,7 @@ import { useAuthStore } from '../store/useAuthStore'
 import { useNavigate } from 'react-router-dom'
 
 export default function NaverCallback() {
-    const { onNaverCallBack } = useAuthStore()
+    const { onNaverCallback } = useAuthStore()
     const navigate = useNavigate()
 
     useEffect(() => {
@@ -12,7 +12,7 @@ export default function NaverCallback() {
         const accessToken = params.get('access_token')
 
         if (accessToken) {
-            onNaverCallBack(accessToken).then(() => {
+            onNaverCallback(accessToken).then(() => {
                 navigate('/mypage')
             })
         } else {

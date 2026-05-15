@@ -7,6 +7,7 @@ import SubCard from '../components/SubCard'
 import Breadcrumb from '../components/Breadcrumb'
 import SubCategoryTabs from '../components/common/SubCategoryTabs'
 import SubPageEmptyState from '../components/SubPageEmptyState'
+import SubSortControl from '../components/common/SubSortControl'
 
 
 const SubPage = () => {
@@ -436,38 +437,11 @@ const SubPage = () => {
 
                     <div className="sub-product-list-wrap">
                         <div className="sub-filter-sort-wrap">
-                            <div className="sub-filter-sort-btn-group">
-                                <button
-                                    className={sortType === "price" && sortOrder === "desc" ? "active" : ""}
-                                    onClick={() => onSetSort("price", "desc")}
-                                >
-                                    가격 높은순
-                                </button>
-                                <button
-                                    className={sortType === "price" && sortOrder === "asc" ? "active" : ""}
-                                    onClick={() => onSetSort("price", "asc")}
-                                >
-                                    가격 낮은순
-                                </button>
-                                <button
-                                    className={sortType === "ranking" ? "active" : ""}
-                                    onClick={() => onSetSort("ranking", "desc")}
-                                >
-                                    인기순
-                                </button>
-                                <button
-                                    className={sortType === "new" ? "active" : ""}
-                                    onClick={() => onSetSort("new", "desc")}
-                                >
-                                    신상품순
-                                </button>
-                                <button
-                                    className={sortType === "name" ? "active" : ""}
-                                    onClick={() => onSetSort("name", "asc")}
-                                >
-                                    상품명순
-                                </button>
-                            </div>
+                            <SubSortControl
+                                sortType={sortType}
+                                sortOrder={sortOrder}
+                                onSetSort={onSetSort}
+                            />
 
                             <button
 

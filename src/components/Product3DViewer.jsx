@@ -600,6 +600,7 @@ export default function Product3DViewer() {
     const [activeTab, setActiveTab] = useState('viewer')
     const [selectedModelKey, setSelectedModelKey] = useState(MODEL_LIST[0].key)
     const [selectedColor, setSelectedColor] = useState(colors[0].value)
+    const [openMobileOption, setOpenMobileOption] = useState(null)
     const [showGuide, setShowGuide] = useState(true)
     const [saleTime, setSaleTime] = useState({
         day: 60,
@@ -666,6 +667,7 @@ export default function Product3DViewer() {
         if (selectedModelKey === modelKey) return
 
         setSelectedModelKey(modelKey)
+        setOpenMobileOption(null)
         setShowGuide(false)
 
         if (playCameraIntro) {
@@ -677,6 +679,7 @@ export default function Product3DViewer() {
         if (selectedColor === colorValue) return
 
         setSelectedColor(colorValue)
+        setOpenMobileOption(null)
         setShowGuide(false)
     }
 
@@ -797,8 +800,16 @@ export default function Product3DViewer() {
                 </div>
 
                 <div className="viewer-option-bar">
-                    <div className="viewer-option-group">
+                    <div className={`viewer-option-group viewer-option-dropdown ${openMobileOption === 'model' ? 'open' : ''}`}>
                         <span className="viewer-option-label">쇼룸 구성</span>
+                        <button
+                            type="button"
+                            className="viewer-mobile-select-trigger"
+                            onClick={() => setOpenMobileOption((prev) => prev === 'model' ? null : 'model')}
+                            aria-expanded={openMobileOption === 'model'}
+                        >
+                            <span>{selectedModel.name}</span>
+                        </button>
                         <div className="viewer-model-tabs">
                             {MODEL_LIST.map((model) => (
                                 <button
@@ -813,8 +824,20 @@ export default function Product3DViewer() {
                         </div>
                     </div>
 
-                    <div className="viewer-option-group">
+                    <div className={`viewer-option-group viewer-option-dropdown ${openMobileOption === 'color' ? 'open' : ''}`}>
                         <span className="viewer-option-label">패브릭 컬러</span>
+                        <button
+                            type="button"
+                            className="viewer-mobile-select-trigger"
+                            onClick={() => setOpenMobileOption((prev) => prev === 'color' ? null : 'color')}
+                            aria-expanded={openMobileOption === 'color'}
+                        >
+                            <span
+                                className="viewer-color-dot"
+                                style={{ background: selectedColorOption.value }}
+                            />
+                            <span>{selectedColorOption.name}</span>
+                        </button>
                         <div className="viewer-color-list">
                             {colors.map((color) => (
                                 <button

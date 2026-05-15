@@ -1,10 +1,11 @@
-import React, { useEffect, useMemo, useRef, useState } from 'react'
+﻿import React, { useEffect, useMemo, useRef, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { useProductStore } from '../store/useProductStore'
 import SubCard from '../components/SubCard'
 import "./scss/subPage.scss"
 import NewBestTabs from '../components/common/NewBestTabs'
 import SubPageEmptyState from '../components/SubPageEmptyState'
+import SubSortControl from '../components/common/SubSortControl'
 
 const NewBestPage = () => {
     const bannerImgList = [
@@ -284,28 +285,11 @@ const NewBestPage = () => {
 
                         {/* ── 정렬 + 필터 버튼 ─────────────────── */}
                         <div className="sub-filter-sort-wrap">
-                            <div className="sub-filter-sort-btn-group">
-                                <button
-                                    className={sortType === "price" && sortOrder === "desc" ? "active" : ""}
-                                    onClick={() => onSetSort("price", "desc")}
-                                >가격 높은순</button>
-                                <button
-                                    className={sortType === "price" && sortOrder === "asc" ? "active" : ""}
-                                    onClick={() => onSetSort("price", "asc")}
-                                >가격 낮은순</button>
-                                <button
-                                    className={sortType === "ranking" ? "active" : ""}
-                                    onClick={() => onSetSort("ranking", "desc")}
-                                >인기순</button>
-                                <button
-                                    className={sortType === "new" ? "active" : ""}
-                                    onClick={() => onSetSort("new", "desc")}
-                                >신상품순</button>
-                                <button
-                                    className={sortType === "name" ? "active" : ""}
-                                    onClick={() => onSetSort("name", "asc")}
-                                >상품명순</button>
-                            </div>
+                            <SubSortControl
+                                sortType={sortType}
+                                sortOrder={sortOrder}
+                                onSetSort={onSetSort}
+                            />
 
                             <button
                                 type="button"
@@ -352,7 +336,7 @@ const NewBestPage = () => {
                                 className="subpage-empty-state"
                                 imageSrc="/images/logo-icon/no-image.svg"
                                 imageAlt="filter empty"
-                                title="조건에 맞는 상품이 없어요"
+                                title="조건에 맞는 상품이 없어요."
                                 actionLabel="필터 초기화"
                                 onAction={resetFilter}
                             />

@@ -21,6 +21,7 @@ export default function DockTab() {
     const [showInquiry, setShowInquiry] = useState(false)
     const [showLoginPopup, setShowLoginPopup] = useState(false)
     const [showCartPreview, setShowCartPreview] = useState(false)
+    const [isMobileDockOpen, setIsMobileDockOpen] = useState(false)
 
     const cartTimerRef = useRef(null)
 
@@ -92,6 +93,10 @@ export default function DockTab() {
         setShowLoginPopup(true)
     }
 
+    const closeMobileDock = () => {
+        if (window.innerWidth <= 768) setIsMobileDockOpen(false)
+    }
+
     useEffect(() => {
         if (!showPhone) return
 
@@ -100,8 +105,10 @@ export default function DockTab() {
     }, [showPhone])
 
     return (
-        <div className='dock-tab-wrap'>
-            <div className="dock-tab">
+        <div className={`dock-tab-wrap ${isMobileDockOpen ? 'mobile-open' : ''}`}>
+            <div className="dock-tab" onClick={(event) => {
+                if (event.target.closest('a, button')) closeMobileDock()
+            }}>
                 <Dock iconSize={40} iconMagnification={40} iconDistance={0}>
                     <DockIcon>
                         <Link to="/" onClick={() => {
@@ -253,6 +260,18 @@ export default function DockTab() {
                     </DockIcon>
                 </Dock>
             </div>
+
+            <button
+                type="button"
+                className="dock-mobile-toggle"
+                aria-label="퀵 메뉴 열기"
+                aria-expanded={isMobileDockOpen}
+                onClick={() => setIsMobileDockOpen((prev) => !prev)}
+            >
+                <span />
+                <span />
+                <span />
+            </button>
 
             {showInquiry && (
                 <InquiryDock

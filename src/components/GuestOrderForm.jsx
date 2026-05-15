@@ -17,6 +17,17 @@ export default function GuestOrderForm({
     onStoreChange,
     onDeliveryReqChange,
 }) {
+    const renderError = (message, className = '') => (
+        <p className={`error-text ${className}`.trim()}>
+            <img
+                className="format-alert-icon"
+                src="/images/logo-icon/format-alert.png"
+                alt=""
+            />
+            <span>{message.replace(/^\*\*\s*/, '')}</span>
+        </p>
+    )
+
     return (
         <div className="delivery-info-area">
             <div className="title">비회원 주문정보</div>
@@ -36,9 +47,7 @@ export default function GuestOrderForm({
                                 className="unlogged_input"
                                 required
                             />
-                            {errors.name && (
-                                <p className="error-text error-text-right">{errors.name}</p>
-                            )}
+                            {errors.name && renderError(errors.name, 'error-text-right')}
                         </div>
 
                         <div className="info-row input-zone">
@@ -52,9 +61,7 @@ export default function GuestOrderForm({
                                 className={`unlogged_input ${fieldStatus.phone}`}
                                 required
                             />
-                            {errors.phone && (
-                                <p className="error-text error-text-right">{errors.phone}</p>
-                            )}
+                            {errors.phone && renderError(errors.phone, 'error-text-right')}
                         </div>
 
                         <div className="info-row input-zone">
@@ -68,9 +75,7 @@ export default function GuestOrderForm({
                                 className={`unlogged_input ${fieldStatus.email}`}
                                 required
                             />
-                            {errors.email && (
-                                <p className="error-text error-text-right">{errors.email}</p>
-                            )}
+                            {errors.email && renderError(errors.email, 'error-text-right')}
                         </div>
 
                         <div className="info-row input-zone">
@@ -143,9 +148,7 @@ export default function GuestOrderForm({
                                         </button>
                                     </div>
 
-                                    {errors.zipCode && (
-                                        <p className="error-text">{errors.zipCode}</p>
-                                    )}
+                                    {errors.zipCode && renderError(errors.zipCode)}
                                 </div>
 
                                 <div className="fixed-addr-area input-zone">
@@ -158,9 +161,7 @@ export default function GuestOrderForm({
                                         readOnly
                                         required
                                     />
-                                    {errors.address && (
-                                        <p className="error-text">{errors.address}</p>
-                                    )}
+                                    {errors.address && renderError(errors.address)}
                                 </div>
 
                                 <div className="extra-addr-info input-zone">
@@ -176,9 +177,7 @@ export default function GuestOrderForm({
                                         className="exta-addr-input unlogged_input"
                                         required
                                     />
-                                    {errors.extraAddress && (
-                                        <p className="error-text">{errors.extraAddress}</p>
-                                    )}
+                                    {errors.extraAddress && renderError(errors.extraAddress)}
                                 </div>
                             </div>
                         </div>
