@@ -267,7 +267,18 @@
     .compare-fab {
         left: 16px;
         bottom: 24px;
+        width: 50px;
+        height: 50px;
+
+        .fab-icon {
+            width: 18px;
+            height: 18px;
+            flex-shrink: 0;
+        }
+
     }
+
+
 
     .compare-sidebar {
         left: 0;

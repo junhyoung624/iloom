@@ -437,30 +437,18 @@
     }
 }
 
-@media (max-width: 768px) {
-    .quick-menu-wrap {
-        right: 16px;
-        bottom: 120px;
-        gap: 6px;
-    }
-
-    .quick-btn {
-        width: 80px;
-    }
-
-    .recent-view-hover-area {
-        display: none;
-    }
-}
-
 // 챗봇 마크다운 
 .chatbot-message.bot {
     p {
         margin: 0 0 6px;
-        &:last-child { margin-bottom: 0; }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
 
-    ul, ol {
+    ul,
+    ol {
         margin: 4px 0;
         padding-left: 16px;
 
@@ -473,5 +461,23 @@
     strong {
         font-weight: 700;
         color: #111;
+    }
+}
+
+
+//반응형
+@media (max-width: 768px) {
+    .quick-menu-wrap {
+        right: 16px;
+        bottom: 86px;
+        gap: 6px;
+    }
+
+    .quick-btn {
+        width: 50px;
+    }
+
+    .recent-view-hover-area {
+        display: none;
     }
 }

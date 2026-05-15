@@ -57,6 +57,7 @@
 
     .swiper {
         width: 1440px;
+        max-width: 100%;
     }
 
     .swiper-slide {
@@ -234,10 +235,28 @@
     }
 
     .best-swiper-wrap {
+        padding: 0 16px;
+        box-sizing: border-box;
+        overflow: hidden;
+
         .swiper {
             width: 100%;
-            padding: 0 8px;
+            padding: 0;
             box-sizing: border-box;
+        }
+
+        .swiper-slide {
+            height: auto;
+            box-sizing: border-box;
+        }
+
+        .best-img-wrap {
+            border-radius: 6px;
+
+            >img {
+                aspect-ratio: 4 / 5;
+                border-radius: 6px;
+            }
         }
 
         .best-prev {
@@ -252,14 +271,14 @@
     }
 
     .best-product-list {
-        padding: 12px 16px 0;
+        padding: 14px 4px 0;
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px 10px;
 
         a {
             flex-direction: column;
-            align-items: flex-start;
+            align-items: center;
             margin-top: 0;
 
             img {
@@ -271,8 +290,10 @@
         }
 
         .product-info {
+            width: 100%;
             padding-left: 0;
             padding-top: 8px;
+            text-align: center;
 
             .serise {
                 font-size: 11px;
@@ -281,13 +302,72 @@
             .name {
                 font-size: 13px;
                 padding-top: 4px;
+                line-height: 1.35;
+                min-height: 36px;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                line-clamp: 2;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
             }
 
             .price {
                 font-size: 13px;
-                font-weight: 700;
+                font-weight: 500;
                 padding-top: 4px;
             }
         }
     }
+
+    .section-more-wrap {
+        justify-content: center;
+        padding: 32px 16px 56px;
+    }
+
+    .section-more-btn {
+        width: 100%;
+        max-width: 260px;
+        justify-content: center;
+        padding: 13px 20px;
+        border: 1px solid var(--line);
+    }
+}
+
+@media (max-width: 480px) {
+    .best-swiper-wrap {
+        padding: 0 20px;
+    }
+
+    .best {
+        .title-box {
+            h2 {
+                font-size: 24px;
+                line-height: 1.2;
+            }
+
+            p {
+                font-size: 14px;
+                line-height: 1.45;
+            }
+        }
+    }
+
+
+    .best-product-list {
+
+
+
+        .product-info {
+
+            .serise {}
+
+            .name {
+
+                font-size: 12px;
+            }
+
+            .price {}
+        }
+    }
+
 }

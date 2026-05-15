@@ -25,8 +25,13 @@ function BestDot({ product, position }) {
     <li
       className="best-dot-li"
       style={{ left: `${position.x}%`, top: `${position.y}%` }}
-      onMouseEnter={() => setVisible(true)}
-      onMouseLeave={() => setVisible(false)}
+      onClick={() => setVisible(prev => !prev)}
+      onPointerEnter={(e) => {
+        if (e.pointerType === 'mouse') setVisible(true)
+      }}
+      onPointerLeave={(e) => {
+        if (e.pointerType === 'mouse') setVisible(false)
+      }}
     >
       <div className="best-dot-area" />
       <div
@@ -152,6 +157,23 @@ export default function Best() {
           }}
           slidesPerView={3}
           spaceBetween={30}
+          breakpoints={{
+            0: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+              centeredSlides: false,
+            },
+            640: {
+              slidesPerView: 1,
+              spaceBetween: 24,
+              centeredSlides: false,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 30,
+              centeredSlides: false,
+            },
+          }}
           loop={true}
           autoplay={{
             delay: 2500,
