@@ -1,12 +1,15 @@
 const OpenAI = require("openai");
+const fs = require("fs");
+const path = require("path");
 
-let rawData;
-try {
-    rawData = require("../../src/data/productData.js");
-} catch(e) {
-    rawData = require("../../../src/data/productData.js");
-}
-const productData = rawData.productData || rawData.default || rawData;
+const filePath = path.join(__dirname, "../../src/data/productData.js");
+let content = fs.readFileSync(filePath, "utf8");
+content = content
+    .replace(/export\s+const\s+productData\s*=\s*/, "")
+    .replace(/,(\s*[\]\}])/g, "$1")
+    .replace(/;\s*$/, "")
+    .trim();
+const productData = JSON.parse(content);
 
 const CATEGORY_KEYWORDS = {
     거실: { originalCategory: "거실" },
