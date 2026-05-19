@@ -277,8 +277,8 @@ export default function Charge() {
     }, [selectedCoupon, totalPrice])
 
     const finalPrice = useMemo(
-        () => Math.max(totalPrice - couponDiscount - useMoney - usePoint, 0),
-        [totalPrice, couponDiscount, useMoney, usePoint]
+        () => Math.max(totalPrice - couponDiscount - (user ? useMoney : 0) - usePoint, 0),
+        [totalPrice, couponDiscount, useMoney, usePoint, user]
     )
 
     const earnPoint = Math.floor(finalPrice * 0.01)
@@ -630,7 +630,7 @@ export default function Charge() {
                             formatPrice={formatPrice}
                         />
 
-                        <MoneySection
+                        {user && <MoneySection
                             iloomMoney={iloomPoint}
                             moneyInput={moneyInput}
                             setMoneyInput={setMoneyInput}
@@ -638,7 +638,7 @@ export default function Charge() {
                             onMoneyApply={handleMoneyApply}
                             onMoneyAll={handleMoneyAll}
                             formatPrice={formatPrice}
-                        />
+                        />}
 
                         <div className="discount-summary">
 
@@ -666,7 +666,7 @@ export default function Charge() {
                     </div>
                 </div>
 
-                <PointBenefitSection finalPrice={finalPrice} earnPoint={earnPoint} />
+                {user && <PointBenefitSection finalPrice={finalPrice} earnPoint={earnPoint} />}
 
                 <PaymentMethodSection
                     paymentMethod={paymentMethod}
