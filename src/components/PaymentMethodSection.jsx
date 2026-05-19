@@ -16,16 +16,31 @@ const detectCardIssuer = (number = '') => {
 }
 
 const CARD_STYLES = {
-    card1: { label: 'CARD', bg: ['#0f2027', '#2c5364'], textColor: '#fff' },       // 1: 딥오션 블랙
-    card2: { label: 'CARD', bg: ['#1a1a2e', '#e94560'], textColor: '#fff' },       // 2: 다크네이비+핑크레드
-    amex: { label: 'AMEX', bg: ['#007b5e', '#00b09b'], textColor: '#fff' },       // 3: Amex 그린
-    visa: { label: 'VISA', bg: ['#1a1f71', '#2d3fd4'], textColor: '#fff' },       // 4: Visa 네이비
-    mastercard: { label: 'Mastercard', bg: ['#1a1a2e', '#eb001b'], textColor: '#fff' }, // 5: Mastercard 레드
-    discover: { label: 'Discover', bg: ['#231f20', '#f76f20'], textColor: '#fff' }, // 6: Discover 오렌지
-    card7: { label: 'CARD', bg: ['#0d0d0d', '#4a4a4a'], textColor: '#fff' },       // 7: 매트블랙
-    card8: { label: 'CARD', bg: ['#1f1c2c', '#928dab'], textColor: '#fff' },       // 8: 다크퍼플
-    local: { label: '국내카드', bg: ['#1a1a1a', '#3d3d3d'], textColor: '#fff' },   // 9: 블랙
-    default: { label: 'CARD', bg: ['#2c2c2c', '#5a5a5a'], textColor: '#fff' },
+    visa: {
+        label: 'VISA',
+        bg: ['#1a1f71', '#3b57ff'],
+        textColor: '#fff',
+    },
+    mastercard: {
+        label: 'Mastercard',
+        bg: ['#eb001b', '#f79e1b'],
+        textColor: '#fff',
+    },
+    amex: {
+        label: 'AMEX',
+        bg: ['#2e77bc', '#67b7dc'],
+        textColor: '#fff',
+    },
+    local: {
+        label: '국내카드',
+        bg: ['#111', '#555'],
+        textColor: '#fff',
+    },
+    default: {
+        label: 'CARD',
+        bg: ['#333', '#999'],
+        textColor: '#fff',
+    },
 }
 
 export default function PaymentMethodSection({
@@ -44,25 +59,64 @@ export default function PaymentMethodSection({
     orderItems,
     onPayment,
 }) {
+    // 컴포넌트 내부에 선언하여 빌드/배포 시 누락되는 문제 방지
+    const SIMPLE_PAY_LIST = [
+        {
+            key: 'naverpay',
+            name: '네이버페이',
+            sub: '포인트 최대 2% 적립',
+            logoSrc: '/images/logo-icon/npay.png',
+            accent: '#03c75a',
+            textDark: true,
+        },
+        {
+            key: 'kakaopay',
+            name: '카카오페이',
+            sub: '카카오머니 즉시결제',
+            logoSrc: '/images/logo-icon/kakaopay.png',
+            accent: '#fee500',
+            textDark: true,
+        },
+        {
+            key: 'tosspay',
+            name: '토스페이',
+            sub: '간편하게 1초 결제',
+            logoSrc: '/images/logo-icon/tosspay.png',
+            accent: '#0064ff',
+            textDark: false,
+        },
+    ]
+
     return (
         <div className="charge-section">
             <h3 className="section-title">
                 결제 수단
-                <span className="section-title-price">{formatPrice(finalPrice)}</span>
+                <span className="section-title-price">
+                    {formatPrice(finalPrice)}
+                </span>
             </h3>
 
             <div className="payment-wrap">
+                {/* 일룸 포인트 결제 */}
                 <div
-                    className={`payment-option-box ${paymentMethod === 'iloom' ? 'active' : ''}`}
+                    className={`payment-option-box ${
+                        paymentMethod === 'iloom' ? 'active' : ''
+                    }`}
                     onClick={() => setPaymentMethod('iloom')}
                 >
                     <div className="payment-option-row">
                         <div className="payment-radio">
-                            <div className={`radio-dot ${paymentMethod === 'iloom' ? 'on' : ''}`} />
+                            <div
+                                className={`radio-dot ${
+                                    paymentMethod === 'iloom' ? 'on' : ''
+                                }`}
+                            />
                         </div>
 
                         <div className="payment-option-info">
-                            <span className="payment-option-label">일룸 포인트 충전결제</span>
+                            <span className="payment-option-label">
+                                일룸 포인트 충전결제
+                            </span>
                             <span className="payment-option-sub point-green">
                                 보유 {(iloomPoint || 0).toLocaleString()}P
                             </span>
@@ -83,14 +137,22 @@ export default function PaymentMethodSection({
 
                 {/* 카드 간편결제 */}
                 <div
-                    className={`payment-option-box ${paymentMethod === 'card' ? 'active' : ''}`}
+                    className={`payment-option-box ${
+                        paymentMethod === 'card' ? 'active' : ''
+                    }`}
                     onClick={() => setPaymentMethod('card')}
                 >
                     <div className="payment-option-row">
                         <div className="payment-radio">
-                            <div className={`radio-dot ${paymentMethod === 'card' ? 'on' : ''}`} />
+                            <div
+                                className={`radio-dot ${
+                                    paymentMethod === 'card' ? 'on' : ''
+                                }`}
+                            />
                         </div>
-                        <span className="payment-option-label">카드 간편결제</span>
+                        <span className="payment-option-label">
+                            카드 간편결제
+                        </span>
                     </div>
 
                     {paymentMethod === 'card' && (
@@ -105,19 +167,35 @@ export default function PaymentMethodSection({
                                         spaceBetween={12}
                                         className="credit-card-swiper"
                                         onSlideChange={(swiper) =>
-                                            setSelectedCardIndex(swiper.activeIndex)
+                                            setSelectedCardIndex(
+                                                swiper.activeIndex
+                                            )
                                         }
                                     >
                                         {registeredCards.map((card, idx) => {
-                                            const issuer = detectCardIssuer(card.number)
-                                            const style = CARD_STYLES[issuer]
-                                            const isSelected = selectedCardIndex === idx
+                                            const issuer = detectCardIssuer(
+                                                card.number
+                                            )
+                                            const style =
+                                                CARD_STYLES[issuer]
+                                            const isSelected =
+                                                selectedCardIndex === idx
 
                                             return (
-                                                <SwiperSlide key={`${card.number}-${idx}`}>
+                                                <SwiperSlide
+                                                    key={`${card.number}-${idx}`}
+                                                >
                                                     <div
-                                                        className={`card-list-item ${isSelected ? 'selected' : ''}`}
-                                                        onClick={() => setSelectedCardIndex(idx)}
+                                                        className={`card-list-item ${
+                                                            isSelected
+                                                                ? 'selected'
+                                                                : ''
+                                                        }`}
+                                                        onClick={() =>
+                                                            setSelectedCardIndex(
+                                                                idx
+                                                            )
+                                                        }
                                                     >
                                                         <div
                                                             className="card-list-thumb"
@@ -138,19 +216,39 @@ export default function PaymentMethodSection({
                                                         </div>
 
                                                         <div className="card-list-info">
-                                                            <p className="card-list-name">{style.label}</p>
+                                                            <p className="card-list-name">
+                                                                {style.label}
+                                                            </p>
                                                             <p className="card-list-number">
-                                                                신용 · {card.number.replace(/\s/g, '').slice(-4)}
+                                                                신용 ·{' '}
+                                                                {card.number
+                                                                    .replace(
+                                                                        /\s/g,
+                                                                        ''
+                                                                    )
+                                                                    .slice(-4)}
                                                             </p>
                                                             <select
                                                                 className="card-installment-select"
-                                                                onClick={(e) => e.stopPropagation()}
+                                                                onClick={(e) =>
+                                                                    e.stopPropagation()
+                                                                }
                                                             >
-                                                                <option>일시불</option>
-                                                                <option>2개월</option>
-                                                                <option>3개월</option>
-                                                                <option>6개월</option>
-                                                                <option>12개월</option>
+                                                                <option>
+                                                                    일시불
+                                                                </option>
+                                                                <option>
+                                                                    2개월
+                                                                </option>
+                                                                <option>
+                                                                    3개월
+                                                                </option>
+                                                                <option>
+                                                                    6개월
+                                                                </option>
+                                                                <option>
+                                                                    12개월
+                                                                </option>
                                                             </select>
                                                         </div>
                                                     </div>
@@ -174,8 +272,18 @@ export default function PaymentMethodSection({
                                                     strokeLinecap="round"
                                                     strokeLinejoin="round"
                                                 >
-                                                    <line x1="12" y1="5" x2="12" y2="19" />
-                                                    <line x1="5" y1="12" x2="19" y2="12" />
+                                                    <line
+                                                        x1="12"
+                                                        y1="5"
+                                                        x2="12"
+                                                        y2="19"
+                                                    />
+                                                    <line
+                                                        x1="5"
+                                                        y1="12"
+                                                        x2="19"
+                                                        y2="12"
+                                                    />
                                                 </svg>
                                                 <span>카드 추가</span>
                                             </button>
@@ -183,7 +291,9 @@ export default function PaymentMethodSection({
                                     </Swiper>
 
                                     <div className="card-benefit-banner">
-                                        <span>최대 5% 적립 + 일룸 제휴 혜택</span>
+                                        <span>
+                                            최대 5% 적립 + 일룸 제휴 혜택
+                                        </span>
                                         <svg
                                             width="14"
                                             height="14"
@@ -211,11 +321,13 @@ export default function PaymentMethodSection({
                     )}
                 </div>
 
-                {/* 다른 결제수단 더보기 */}
+                {/* 다른 결제수단 */}
                 <button
                     type="button"
                     className="payment-more-btn"
-                    onClick={() => setShowMorePayment((v) => !v)}
+                    onClick={() =>
+                        setShowMorePayment((prev) => !prev)
+                    }
                 >
                     다른 결제수단 보기
                     <svg
@@ -228,7 +340,9 @@ export default function PaymentMethodSection({
                         strokeLinecap="round"
                         strokeLinejoin="round"
                         style={{
-                            transform: showMorePayment ? 'rotate(180deg)' : 'none',
+                            transform: showMorePayment
+                                ? 'rotate(180deg)'
+                                : 'none',
                             transition: '0.2s',
                         }}
                     >
@@ -240,18 +354,35 @@ export default function PaymentMethodSection({
                     <div className="payment-more-wrap">
                         <div className="simplepay-grid">
                             {SIMPLE_PAY_LIST.map((pay) => {
-                                const isActive = paymentMethod === pay.key
+                                const isActive =
+                                    paymentMethod === pay.key
+
                                 return (
                                     <button
                                         key={pay.key}
                                         type="button"
-                                        className={`simplepay-card ${isActive ? 'active' : ''}`}
-                                        onClick={() => setPaymentMethod(pay.key)}
-                                        style={{ '--accent': pay.accent }}
+                                        className={`simplepay-card ${
+                                            isActive ? 'active' : ''
+                                        }`}
+                                        onClick={() =>
+                                            setPaymentMethod(pay.key)
+                                        }
+                                        style={{
+                                            '--accent': pay.accent,
+                                        }}
                                     >
-                                        <div className={`simplepay-radio ${isActive ? 'on' : ''}`}>
+                                        <div
+                                            className={`simplepay-radio ${
+                                                isActive ? 'on' : ''
+                                            }`}
+                                        >
                                             {isActive && (
-                                                <svg width="10" height="10" viewBox="0 0 12 12" fill="none">
+                                                <svg
+                                                    width="10"
+                                                    height="10"
+                                                    viewBox="0 0 12 12"
+                                                    fill="none"
+                                                >
                                                     <path
                                                         d="M2 6l3 3 5-5"
                                                         stroke="#fff"
@@ -272,10 +403,22 @@ export default function PaymentMethodSection({
                                         </div>
 
                                         <div className="simplepay-text-wrap">
-                                            <p className={`simplepay-name ${pay.textDark ? 'dark' : 'light'}`}>
+                                            <p
+                                                className={`simplepay-name ${
+                                                    pay.textDark
+                                                        ? 'dark'
+                                                        : 'light'
+                                                }`}
+                                            >
                                                 {pay.name}
                                             </p>
-                                            <p className={`simplepay-sub ${pay.textDark ? 'dark' : 'light'}`}>
+                                            <p
+                                                className={`simplepay-sub ${
+                                                    pay.textDark
+                                                        ? 'dark'
+                                                        : 'light'
+                                                }`}
+                                            >
                                                 {pay.sub}
                                             </p>
                                         </div>
@@ -289,12 +432,12 @@ export default function PaymentMethodSection({
 
             <div className="payment-notice">
                 <p>
-                    1. 고객의 단순한 변심으로 인한 교환, 반품 및 환불을 요구할 때
-                    수반되는 배송비는 고객님께서 부담하셔야합니다.
+                    1. 고객의 단순 변심으로 인한 교환·반품 및 환불 시
+                    발생하는 배송비는 고객 부담입니다.
                 </p>
                 <p>
-                    2. 상품을 개봉했거나 설치한 후에는 상품의 재판매가 불가능하므로
-                    고객님의 변심에 대한 교환, 반품이 불가능함을 양지해 주시기 바랍니다.
+                    2. 상품을 개봉하거나 설치한 후에는 재판매가
+                    불가능하여 교환·반품이 제한될 수 있습니다.
                 </p>
             </div>
 
