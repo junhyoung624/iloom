@@ -5,6 +5,9 @@ import { Environment, ContactShadows, Html } from '@react-three/drei'
 import * as THREE from 'three'
 import './scss/configurator.scss'
 
+// ────────────────────────────────────────────────────────────
+//  상수
+// ────────────────────────────────────────────────────────────
 const COLOR_OPTIONS = [
   { id: 'golden-yellow', label: 'Golden Yellow', hex: '#E8A020', r: 0.91, g: 0.63, b: 0.13 },
   { id: 'pure-white', label: 'Pure White', hex: '#F0EEE9', r: 0.94, g: 0.93, b: 0.91 },
@@ -64,6 +67,9 @@ const makeModule = (r, c, color = COLOR_OPTIONS[0], heightType = 'full') => ({
 
 const fmt = (n) => n.toLocaleString('ko-KR') + '원'
 
+// ────────────────────────────────────────────────────────────
+//  카메라 위치: 정면 ↔ 아이소메트릭
+// ────────────────────────────────────────────────────────────
 function getCameraPositions(cols, rows, modules) {
   const objW = cols * (MW + FT * 2)
   let objH = FT * 2
@@ -84,51 +90,81 @@ function getCameraPositions(cols, rows, modules) {
   }
 }
 
+// ────────────────────────────────────────────────────────────
+//  가이드 오버레이 (소파 3D뷰어와 동일한 디자인)
+// ────────────────────────────────────────────────────────────
+function ConfiguratorGuide() {
+  return (
+    <div style={{
+      position: 'absolute',
+      inset: 0,
+      zIndex: 5,
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      pointerEvents: 'none',
+      background: 'linear-gradient(to bottom, rgba(255,255,255,0.08), rgba(255,255,255,0.02))',
+    }}>
+      <div style={{
+        display: 'inline-flex',
+        alignItems: 'center',
+        gap: 14,
+        padding: '16px 20px',
+        borderRadius: 18,
+        background: 'rgba(17,17,17,0.72)',
+        backdropFilter: 'blur(10px)',
+        color: '#fff',
+        boxShadow: '0 18px 40px rgba(0,0,0,0.18)',
+      }}>
+        <div style={{
+          width: 54,
+          height: 54,
+          borderRadius: '50%',
+          background: 'rgba(255,255,255,0.12)',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          flexShrink: 0,
+        }}>
+          <svg width="34" height="34" viewBox="0 0 64 64" aria-hidden="true" fill="none"
+            stroke="currentColor" strokeWidth="2.6"
+            strokeLinecap="round" strokeLinejoin="round">
+            <path d="M28 20V12a4 4 0 1 1 8 0v8" />
+            <path d="M36 20a4 4 0 1 1 8 0v8" />
+            <path d="M28 20a4 4 0 1 0-8 0v12" />
+            <path d="M44 28a4 4 0 1 1 8 0v6c0 8-5 14-14 14h-4c-9 0-14-6-14-14v-6" />
+            <path d="M20 18l-6-6M44 18l6-6" />
+          </svg>
+        </div>
+        <div style={{ textAlign: 'left' }}>
+          <strong style={{ display: 'block', fontSize: 15, fontWeight: 800, marginBottom: 4, letterSpacing: '-0.02em' }}>
+            클릭해서 커스터마이즈하세요
+          </strong>
+          <span style={{ display: 'block', fontSize: 13, color: 'rgba(255,255,255,0.82)', lineHeight: 1.35 }}>
+            모듈을 선택하면 도어 타입과 색상을 바꿀 수 있어요
+          </span>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+// ────────────────────────────────────────────────────────────
+//  메인 컴포넌트
+// ────────────────────────────────────────────────────────────
 export default function Configurator() {
   const navigate = useNavigate()
   const viewerRef = useRef(null)
   const glRef = useRef(null)
 
-  // ── 히스토리 관리 ──
-  const [history, setHistory] = useState([[makeModule(0, 0)]])
-  const [historyIdx, setHistoryIdx] = useState(0)
-  const historyIdxRef = useRef(0)
-  const historyRef = useRef([[makeModule(0, 0)]])
-
-  const modules = history[historyIdx]
-
-  const setModules = useCallback((updater) => {
-    const idx = historyIdxRef.current
-    const currentModules = historyRef.current[idx]
-    const next = typeof updater === 'function' ? updater(currentModules) : updater
-    const newHistory = [...historyRef.current.slice(0, idx + 1), next]
-    historyRef.current = newHistory
-    historyIdxRef.current = idx + 1
-    setHistory(newHistory)
-    setHistoryIdx(idx + 1)
-  }, [])
-
-  const undo = useCallback(() => {
-    const idx = Math.max(0, historyIdxRef.current - 1)
-    historyIdxRef.current = idx
-    setHistoryIdx(idx)
-  }, [])
-
-  const redo = useCallback(() => {
-    const idx = Math.min(historyRef.current.length - 1, historyIdxRef.current + 1)
-    historyIdxRef.current = idx
-    setHistoryIdx(idx)
-  }, [])
-
-  const canUndo = historyIdx > 0
-  const canRedo = historyIdx < history.length - 1
-
+  const [modules, setModules] = useState([makeModule(0, 0)])
   const [selectedCell, setSelectedCell] = useState({ r: 0, c: 0 })
   const [selectedHeightType, setSelectedHeightType] = useState('full')
   const [frameColor, setFrameColor] = useState(FRAME_COLORS[0])
   const [footType, setFootType] = useState(FOOT_TYPES[0])
   const [scrollT, setScrollT] = useState(0)
   const [hoveredCell, setHoveredCell] = useState(null)
+  const [showCfgGuide, setShowCfgGuide] = useState(true)  // ← 추가
 
   const cols = useMemo(() => Math.max(...modules.map(m => m.c)) + 1, [modules])
   const rows = useMemo(() => Math.max(...modules.map(m => m.r)) + 1, [modules])
@@ -192,15 +228,10 @@ export default function Configurator() {
   }, [modules])
 
   const updateSelected = useCallback((key, value) => {
-    setHistory(prev => {
-      const currentModules = prev[historyIdx]
-      const next = currentModules.map(m =>
-        m.r === selectedCell.r && m.c === selectedCell.c ? { ...m, [key]: value } : m
-      )
-      return [...prev.slice(0, historyIdx + 1), next]
-    })
-    setHistoryIdx(prev => prev + 1)
-  }, [selectedCell, historyIdx])
+    setModules(prev => prev.map(m =>
+      m.r === selectedCell.r && m.c === selectedCell.c ? { ...m, [key]: value } : m
+    ))
+  }, [selectedCell])
 
   const applyAll = useCallback(() => {
     if (!selectedModule) return
@@ -225,7 +256,7 @@ export default function Configurator() {
       if (glRef.current?.domElement) {
         previewImg = glRef.current.domElement.toDataURL('image/png')
       }
-    } catch { }
+    } catch { /* noop */ }
     if (!previewImg) previewImg = generatePreviewDataUrl(modules, cols, rows)
 
     navigate('/charge', {
@@ -247,12 +278,21 @@ export default function Configurator() {
 
   return (
     <div className="cfg-page">
+
       <div className="cfg-viewer-area" ref={viewerRef}>
         <div className="cfg-viewer-sticky">
+
           <p className="cfg-viewer-label">
             {scrollT < 0.4 ? 'FRONT VIEW' : 'ISOMETRIC VIEW'}
           </p>
-          <div className="cfg-canvas-wrap">
+
+          {/* ── 가이드 오버레이 포함 캔버스 래퍼 ── */}
+          <div
+            className="cfg-canvas-wrap"
+            onPointerDown={() => setShowCfgGuide(false)}
+          >
+            {showCfgGuide && <ConfiguratorGuide />}
+
             <Canvas
               shadows
               dpr={[1, 2]}
@@ -278,8 +318,17 @@ export default function Configurator() {
                 <directionalLight position={[-4, 3, -3]} intensity={0.2} color="#e8f0ff" />
                 <directionalLight position={[0, -2, 4]} intensity={0.1} color="#fff8f0" />
                 <pointLight position={[2, 4, 3]} intensity={0.05} />
+
                 <Environment preset="studio" environmentIntensity={0.3} />
-                <ContactShadows position={[0, -0.01, 0]} opacity={0.14} scale={14} blur={3} far={1} />
+
+                <ContactShadows
+                  position={[0, -0.01, 0]}
+                  opacity={0.14}
+                  scale={14}
+                  blur={3}
+                  far={1}
+                />
+
                 <FurnitureScene
                   modules={modules}
                   cols={cols}
@@ -297,9 +346,11 @@ export default function Configurator() {
                   footType={footType}
                   scrollT={scrollT}
                 />
+
                 <ScrollCamera scrollT={scrollT} cols={cols} rows={rows} modules={modules} />
               </Suspense>
             </Canvas>
+
             <div className={`cfg-scroll-hint ${scrollT > 0.05 ? 'hidden' : ''}`}>
               <span>스크롤하여 조립하기</span>
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -307,12 +358,14 @@ export default function Configurator() {
               </svg>
             </div>
           </div>
+
           <div className="cfg-view-indicator">
             <div className="cfg-view-indicator__bar">
               <div className="cfg-view-indicator__fill" style={{ width: `${scrollT * 100}%` }} />
             </div>
           </div>
         </div>
+
         <div className="cfg-scroll-spacer" />
       </div>
 
@@ -320,22 +373,6 @@ export default function Configurator() {
         <div className="cfg-sidebar__top">
           <p className="cfg-sidebar__brand">ILOOM MODULE</p>
           <h2 className="cfg-sidebar__title">Configurator</h2>
-        </div>
-
-        {/* ── 이전/다음 버튼 ── */}
-        <div className="cfg-history-btns">
-          <button className="cfg-history-btn" onClick={undo} disabled={!canUndo}>
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-              <polyline points="9,2 4,7 9,12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-            이전
-          </button>
-          <button className="cfg-history-btn" onClick={redo} disabled={!canRedo}>
-            다음
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-              <polyline points="5,2 10,7 5,12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-          </button>
         </div>
 
         <section className="cfg-section">
@@ -391,6 +428,7 @@ export default function Configurator() {
               </span>
             )}
           </div>
+
           <div className="cfg-panel-list">
             {PANEL_TYPES.map(p => (
               <button
@@ -405,6 +443,7 @@ export default function Configurator() {
               </button>
             ))}
           </div>
+
           <div className="cfg-color-block">
             <p className="cfg-color-block__title">패널 색상</p>
             <div className="cfg-color-grid">
@@ -420,6 +459,7 @@ export default function Configurator() {
             </div>
             <p className="cfg-color-name">{selectedModule?.color.label}</p>
           </div>
+
           <div className="cfg-apply-all">
             <button onClick={applyAll}>전체 모듈에 적용</button>
           </div>
@@ -495,7 +535,9 @@ export default function Configurator() {
   )
 }
 
-// ── 아래 함수들은 기존 코드 그대로 ──
+// ────────────────────────────────────────────────────────────
+//  스크롤 드리븐 카메라
+// ────────────────────────────────────────────────────────────
 function ScrollCamera({ scrollT, cols, rows, modules }) {
   const { camera } = useThree()
   const tRef = useRef(0)
@@ -515,6 +557,9 @@ function ScrollCamera({ scrollT, cols, rows, modules }) {
   return null
 }
 
+// ────────────────────────────────────────────────────────────
+//  가구 씬
+// ────────────────────────────────────────────────────────────
 const matCache = new Map()
 
 function getFrameMat(frameColor) {
@@ -661,6 +706,7 @@ function FurnitureScene({
           />
         )
       })}
+
       <FrameStructure modules={modules} cols={cols} rows={rows} rowHeights={rowHeights} frameColor={frameColor} />
       <Legs cols={cols} footType={footType} frameColor={frameColor} />
       <SceneArrows
@@ -714,6 +760,7 @@ function SceneArrows({ cols, rows, onAddCol, onAddRow, canAddCol, canAddRow, row
   )
 }
 
+// ── 개별 모듈 ──
 function Module({ module, cols, rows, isSelected, isHovered, onSelect, onHover, onRemove, canRemove, yOffset, scrollT }) {
   const { r, c, panelType, color, heightType = 'full', accessory = 'none' } = module
   const mh = getMH(heightType)
@@ -775,37 +822,72 @@ function Module({ module, cols, rows, isSelected, isHovered, onSelect, onHover, 
   const iD = MD - PI * 2
   const panelOffY = heightType === 'half' ? -(mh / 4) : 0
 
+  // ── 수정: evts + keepHover ──
   const evts = {
     onClick: handleClick,
     onPointerEnter: e => { e.stopPropagation(); onHover(true) },
     onPointerLeave: e => { e.stopPropagation(); onHover(false) },
   }
+  const keepHover = () => onHover(true)
 
   const isPanel = panelType === 'panel'
+  const isOpen = panelType === 'none'
 
   return (
     <group position={[x + MW / 2, y + mh / 2 + panelOffY, 0]}>
-      <mesh visible={false} geometry={getPanelGeom(iW, iH, MD)} {...evts} />
-      <mesh castShadow receiveShadow material={sideMat} geometry={getPanelGeom(iW, iH, PT)} position={[0, 0, -(MD / 2 - PT / 2)]} />
-      <mesh castShadow receiveShadow material={sideMat} geometry={getPanelGeom(PT, iH, iD)} position={[-(iW / 2 + PT / 2), 0, 0]} />
-      <mesh castShadow receiveShadow material={sideMat} geometry={getPanelGeom(PT, iH, iD)} position={[iW / 2 + PT / 2, 0, 0]} />
-      <mesh castShadow receiveShadow material={sideMat} geometry={getPanelGeom(iW, PT, iD)} position={[0, iH / 2 + PT / 2, 0]} />
-      <mesh castShadow receiveShadow material={sideMat} geometry={getPanelGeom(iW, PT, iD)} position={[0, -(iH / 2 + PT / 2), 0]} />
+
+      {/* ── 클릭 히트 영역 — 슬림 모듈도 MH_FULL 높이로 덮음 ── */}
+      <mesh visible={false} geometry={getPanelGeom(iW, MH_FULL, MD)} {...evts} />
+
+      {/* 뒷면 */}
+      <mesh castShadow receiveShadow material={sideMat}
+        geometry={getPanelGeom(iW, iH, PT)}
+        position={[0, 0, -(MD / 2 - PT / 2)]}
+      />
+      {/* 좌측면 */}
+      <mesh castShadow receiveShadow material={sideMat}
+        geometry={getPanelGeom(PT, iH, iD)}
+        position={[-(iW / 2 + PT / 2), 0, 0]}
+      />
+      {/* 우측면 */}
+      <mesh castShadow receiveShadow material={sideMat}
+        geometry={getPanelGeom(PT, iH, iD)}
+        position={[iW / 2 + PT / 2, 0, 0]}
+      />
+      {/* 상단면 */}
+      <mesh castShadow receiveShadow material={sideMat}
+        geometry={getPanelGeom(iW, PT, iD)}
+        position={[0, iH / 2 + PT / 2, 0]}
+      />
+      {/* 하단면 */}
+      <mesh castShadow receiveShadow material={sideMat}
+        geometry={getPanelGeom(iW, PT, iD)}
+        position={[0, -(iH / 2 + PT / 2), 0]}
+      />
 
       {isPanel && (
-        <mesh castShadow receiveShadow material={frontMat} geometry={getPanelGeom(iW, iH, PT)} position={[0, 0, MD / 2 - PT / 2]} />
+        <mesh castShadow receiveShadow material={frontMat}
+          geometry={getPanelGeom(iW, iH, PT)}
+          position={[0, 0, MD / 2 - PT / 2]}
+        />
       )}
 
       {(isSelected || isHovered) && (
-        <mesh geometry={getPanelGeom(iW + 0.01, iH + 0.01, PT)} position={[0, 0, MD / 2 + PT]} material={isSelected ? getSelectMat() : getHoverMat()} />
+        <mesh
+          geometry={getPanelGeom(iW + 0.01, iH + 0.01, PT)}
+          position={[0, 0, MD / 2 + PT]}
+          material={isSelected ? getSelectMat() : getHoverMat()}
+        />
       )}
 
       {panelType === 'folding' && (
         <group position={[-(iW / 2), 0, MD / 2 - PT / 2]}>
           <group ref={doorGroupRef}>
             <group position={[iW / 2, 0, 0]}>
-              <mesh castShadow receiveShadow material={frontMat} geometry={getPanelGeom(iW, iH, PT)} />
-              <mesh castShadow geometry={getKnobGeom()} material={getKnobMat()} position={[iW * 0.15, 0, PT / 2 + 0.013]} />
+              <mesh castShadow receiveShadow material={frontMat}
+                geometry={getPanelGeom(iW, iH, PT)} />
+              <mesh castShadow geometry={getKnobGeom()} material={getKnobMat()}
+                position={[iW * 0.15, 0, PT / 2 + 0.013]} />
             </group>
           </group>
         </group>
@@ -815,8 +897,10 @@ function Module({ module, cols, rows, isSelected, isHovered, onSelect, onHover, 
         <group position={[0, -(iH / 2), MD / 2 - PT / 2]}>
           <group ref={doorGroupRef}>
             <group position={[0, iH / 2, 0]}>
-              <mesh castShadow receiveShadow material={frontMat} geometry={getPanelGeom(iW, iH, PT)} />
-              <mesh castShadow geometry={getKnobGeom()} material={getKnobMat()} position={[0, iH * 0.3, PT / 2 + 0.013]} />
+              <mesh castShadow receiveShadow material={frontMat}
+                geometry={getPanelGeom(iW, iH, PT)} />
+              <mesh castShadow geometry={getKnobGeom()} material={getKnobMat()}
+                position={[0, iH * 0.3, PT / 2 + 0.013]} />
             </group>
           </group>
         </group>
@@ -824,8 +908,11 @@ function Module({ module, cols, rows, isSelected, isHovered, onSelect, onHover, 
 
       {panelType === 'sliding' && (
         <group ref={doorGroupRef}>
-          <mesh castShadow receiveShadow material={frontMat} geometry={getPanelGeom(iW, iH, PT)} position={[0, 0, MD / 2 - PT / 2]} />
-          <mesh castShadow material={getKnobMat()} position={[0, 0, MD / 2 + 0.01]}>
+          <mesh castShadow receiveShadow material={frontMat}
+            geometry={getPanelGeom(iW, iH, PT)}
+            position={[0, 0, MD / 2 - PT / 2]} />
+          <mesh castShadow material={getKnobMat()}
+            position={[0, 0, MD / 2 + 0.01]}>
             <boxGeometry args={[iW * 0.3, 0.011, 0.011]} />
           </mesh>
         </group>
@@ -837,7 +924,12 @@ function Module({ module, cols, rows, isSelected, isHovered, onSelect, onHover, 
             <group position={[iW / 2, 0, 0]}>
               <mesh castShadow>
                 <boxGeometry args={[iW, iH, 0.007]} />
-                <meshPhysicalMaterial color="#c8e8e0" transparent opacity={0.40} roughness={0.04} metalness={0} transmission={0.6} thickness={0.4} envMapIntensity={1.4} />
+                <meshPhysicalMaterial
+                  color="#c8e8e0" transparent opacity={0.40}
+                  roughness={0.04} metalness={0}
+                  transmission={0.6} thickness={0.4}
+                  envMapIntensity={1.4}
+                />
               </mesh>
               <mesh castShadow material={getKnobMat()} position={[iW * 0.3, 0, 0.012]}>
                 <boxGeometry args={[0.011, iH * 0.22, 0.011]} />
@@ -909,18 +1001,26 @@ function Module({ module, cols, rows, isSelected, isHovered, onSelect, onHover, 
         </group>
       )}
 
+      {/* ── 수정: MH_FULL 기준 위치 + onKeepHover 전달 ── */}
       {isHovered && canRemove && (
-        <RemoveButton position={[MW / 2 - 0.04, mh / 2 - 0.04, MD / 2 + 0.02]} onRemove={onRemove} />
+        <RemoveButton
+          position={[MW / 2 - 0.04, MH_FULL / 2 - 0.04, MD / 2 + 0.02]}
+          onRemove={onRemove}
+          onKeepHover={keepHover}
+        />
       )}
     </group>
   )
 }
 
-function RemoveButton({ position, onRemove }) {
+// ── 수정: onKeepHover prop 추가 ──
+function RemoveButton({ position, onRemove, onKeepHover }) {
   return (
     <Html position={position} center occlude={false} zIndexRange={[20, 30]}>
       <button
         onClick={e => { e.stopPropagation(); onRemove() }}
+        onPointerEnter={onKeepHover}
+        onPointerLeave={onKeepHover}
         style={{
           width: 22, height: 22,
           borderRadius: '50%',
@@ -943,6 +1043,7 @@ function RemoveButton({ position, onRemove }) {
   )
 }
 
+// ── 다리 컴포넌트 ──
 const LEG_H = 0.06
 const LEG_R = FT * 1.1
 const PAD_H = 0.014
@@ -977,7 +1078,8 @@ function Legs({ cols, footType, frameColor }) {
               </mesh>
             )}
             {ft === 'rubber' && (
-              <mesh castShadow geometry={getTubeGeom(PAD_R, PAD_H)} material={rubberMat} position={[0, -(LEG_H / 2 + PAD_H / 2), 0]} />
+              <mesh castShadow geometry={getTubeGeom(PAD_R, PAD_H)} material={rubberMat}
+                position={[0, -(LEG_H / 2 + PAD_H / 2), 0]} />
             )}
             {ft === 'caster' && (
               <group position={[0, -(LEG_H / 2 + WHEEL_R), 0]}>
@@ -996,16 +1098,18 @@ function Legs({ cols, footType, frameColor }) {
   )
 }
 
+// ── 프레임 구조 ──
 function FrameStructure({ modules, cols, rows, rowHeights, frameColor }) {
   const chromeMat = useMemo(() => getFrameMat(frameColor), [frameColor])
 
   const rowBotY = (r) => r * (MH_FULL + FT * 2)
   const rowTopY = (r) => rowBotY(r) + MH_FULL + FT * 2
   const rowMidY = (r) => rowBotY(r) + MH_FULL / 2 + FT
-
   const nodeX = (c) => c * (MW + FT * 2)
 
-  const cellSet = useMemo(() => new Set(modules.map(m => `${m.r},${m.c}`)), [modules])
+  const cellSet = useMemo(() =>
+    new Set(modules.map(m => `${m.r},${m.c}`))
+    , [modules])
   const hasCell = (r, c) => cellSet.has(`${r},${c}`)
   const isHalf = (r, c) => {
     const m = modules.find(mod => mod.r === r && mod.c === c)
@@ -1086,24 +1190,32 @@ function FrameStructure({ modules, cols, rows, rowHeights, frameColor }) {
         const yB = rowBotY(r)
         return (
           <group key={`vp-${i}`}>
-            <mesh castShadow geometry={getTubeGeom(FT, len)} material={chromeMat} position={[nodeX(cx), yB + len / 2, MD / 2]} />
-            <mesh castShadow geometry={getTubeGeom(FT, len)} material={chromeMat} position={[nodeX(cx), yB + len / 2, -MD / 2]} />
+            <mesh castShadow geometry={getTubeGeom(FT, len)} material={chromeMat}
+              position={[nodeX(cx), yB + len / 2, MD / 2]} />
+            <mesh castShadow geometry={getTubeGeom(FT, len)} material={chromeMat}
+              position={[nodeX(cx), yB + len / 2, -MD / 2]} />
           </group>
         )
       })}
       {hPipes.map(({ cx, y, len }, i) => (
         <group key={`hp-${i}`}>
-          <mesh castShadow geometry={getTubeGeom(FT, len)} material={chromeMat} position={[cx, y, MD / 2]} rotation={[0, 0, Math.PI / 2]} />
-          <mesh castShadow geometry={getTubeGeom(FT, len)} material={chromeMat} position={[cx, y, -MD / 2]} rotation={[0, 0, Math.PI / 2]} />
+          <mesh castShadow geometry={getTubeGeom(FT, len)} material={chromeMat}
+            position={[cx, y, MD / 2]} rotation={[0, 0, Math.PI / 2]} />
+          <mesh castShadow geometry={getTubeGeom(FT, len)} material={chromeMat}
+            position={[cx, y, -MD / 2]} rotation={[0, 0, Math.PI / 2]} />
         </group>
       ))}
       {joints.map(({ y, cx }, i) => (
-        <mesh key={`dp-${i}`} castShadow geometry={getTubeGeom(FT, MD)} material={chromeMat} position={[nodeX(cx), y, 0]} rotation={[Math.PI / 2, 0, 0]} />
+        <mesh key={`dp-${i}`} castShadow
+          geometry={getTubeGeom(FT, MD)} material={chromeMat}
+          position={[nodeX(cx), y, 0]} rotation={[Math.PI / 2, 0, 0]} />
       ))}
       {joints.map(({ y, cx }, i) => (
         <group key={`j-${i}`}>
-          <mesh castShadow geometry={getSphereGeom(JR)} material={chromeMat} position={[nodeX(cx), y, MD / 2]} />
-          <mesh castShadow geometry={getSphereGeom(JR)} material={chromeMat} position={[nodeX(cx), y, -MD / 2]} />
+          <mesh castShadow geometry={getSphereGeom(JR)} material={chromeMat}
+            position={[nodeX(cx), y, MD / 2]} />
+          <mesh castShadow geometry={getSphereGeom(JR)} material={chromeMat}
+            position={[nodeX(cx), y, -MD / 2]} />
         </group>
       ))}
     </group>
