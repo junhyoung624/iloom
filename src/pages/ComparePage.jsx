@@ -2,6 +2,7 @@ import React from 'react'
 import { useCompareStore } from '../store/useCompareStore'
 import { Link, useNavigate } from 'react-router-dom'
 import './scss/ComparePage.scss'
+import { colorData } from '../data/colorData'
 
 const FALLBACK = '/images/no-image.png'
 
@@ -45,14 +46,32 @@ const ComparePage = () => {
 
             case 'colors':
                 const colorValues = item.options?.find(opt => opt.name === '색상')?.values || []
+
+                // colorData에서 해당 상품의 색상 정보 찾기
+                const colorEntry = colorData.find(c => c.productCd === item.id)
+                const colorMap = {}
+                colorEntry?.colorCd?.forEach((cd, i) => {
+                    colorMap[cd] = colorEntry.localImgPath?.[i]
+                })
+
                 return (
                     <div className="color-swatches">
                         {colorValues.length > 0
-                            ? colorValues.map((code, i) => (
-                                <span key={i} className="color-badge">
-                                    {code}
-                                </span>
-                            ))
+                            ? colorValues.map((code, i) => {
+                                const imgPath = colorMap[code]
+                                return imgPath
+                                    ? (
+                                        <img
+                                            key={i}
+                                            src={`images/${imgPath}`}
+                                            alt={code}
+                                            title={code}
+                                            className="color-swatch-img"
+                                        />
+                                    ) : (
+                                        <span key={i} className="color-badge">{code}</span>
+                                    )
+                            })
                             : <span className="no-data">-</span>
                         }
                     </div>

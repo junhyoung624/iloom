@@ -167,12 +167,12 @@ export default function PaymentMethodSection({
                                             )
                                         }
                                     >
-                                        {registeredCards.map((card, idx) => {
+                                        {registeredCards.filter(Boolean).map((card, idx) => {
                                             const issuer = detectCardIssuer(
                                                 card.number
                                             )
                                             const style =
-                                                CARD_STYLES[issuer]
+                                                CARD_STYLES[issuer] ?? CARD_STYLES['default']
                                             const isSelected =
                                                 selectedCardIndex === idx
 
