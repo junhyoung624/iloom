@@ -109,6 +109,15 @@
         background: #fafafa;
         letter-spacing: 0.5px;
     }
+
+    .color-swatch-img {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 1px solid #ddd;
+        margin: 2px;
+    }
 }
 
 .no-data {
