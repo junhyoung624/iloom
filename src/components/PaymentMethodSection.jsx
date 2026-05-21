@@ -3,9 +3,14 @@ import 'swiper/css'
 
 const detectCardIssuer = (number = '') => {
     const n = number.replace(/\s/g, '')
+    if (/^1/.test(n)) return 'card1'
+    if (/^2/.test(n)) return 'card2'
+    if (/^3/.test(n)) return 'amex'
     if (/^4/.test(n)) return 'visa'
-    if (/^5[1-5]/.test(n)) return 'mastercard'
-    if (/^3[47]/.test(n)) return 'amex'
+    if (/^5/.test(n)) return 'mastercard'
+    if (/^6/.test(n)) return 'discover'
+    if (/^7/.test(n)) return 'card7'
+    if (/^8/.test(n)) return 'card8'
     if (/^9/.test(n)) return 'local'
     return 'default'
 }

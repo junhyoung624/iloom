@@ -39,7 +39,7 @@ export default function GuestAgreement({ isAgree, setIsAgree }) {
                             ? './images/logo-icon/order-isChecked-true.png'
                             : './images/logo-icon/order-isChecked-false.png'
                     }
-                    alt="동의 체크"
+                    alt="agree-check"
                 />
                 <span>비회원 구매 약관에 동의합니다.</span>
             </div>
