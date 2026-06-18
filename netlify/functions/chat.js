@@ -218,12 +218,17 @@ exports.handler = async (event) => {
             { role: "user", content: `[일룸 상품 데이터]\n${formatProductsForGPT(relatedProducts)}\n\n---\n고객 질문: ${message}` },
         ];
 
-        const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+        // ─── Groq 클라이언트 (OpenAI SDK 호환) ───────────────────────────
+        const client = new OpenAI({
+            apiKey: process.env.GROQ_API_KEY,
+            baseURL: "https://api.groq.com/openai/v1",
+        });
+
         const response = await client.chat.completions.create({
-            model: "gpt-4o-mini",
+            model: process.env.GROQ_MODEL || "llama-3.3-70b-versatile",
             messages: gptMessages,
             temperature: 0.7,
-            max_tokens: 800,
+            max_tokens: 800, // Groq는 max_completion_tokens 대신 max_tokens 사용
         });
 
         const answer = response.choices[0]?.message?.content || "답변을 생성할 수 없습니다.";
