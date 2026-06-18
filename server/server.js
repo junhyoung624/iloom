@@ -305,8 +305,15 @@ function formatProductsForGPT(products) {
     }).join("\n\n");
 }
 
-// ─── OpenAI 클라이언트 ───────────────────────────────────────────────────────
-const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+// ─── Groq 클라이언트 (OpenAI SDK 호환) ───────────────────────────────────────
+// Groq는 OpenAI SDK와 호환되는 엔드포인트를 제공하므로 baseURL만 바꿔서 사용합니다.
+const client = new OpenAI({
+    apiKey: process.env.GROQ_API_KEY,
+    baseURL: "https://api.groq.com/openai/v1",
+});
+
+// 사용할 Groq 모델명 (필요하면 .env로 빼서 관리해도 됩니다)
+const GROQ_MODEL = process.env.GROQ_MODEL || "llama-3.3-70b-versatile";
 
 const SYSTEM_PROMPT = `당신은 일룸(iloom) 공식 가구 쇼핑몰의 친절한 상담 챗봇입니다.
 아래 규칙을 반드시 따르세요:
@@ -352,12 +359,12 @@ app.post("/api/chat", async (req, res) => {
             },
         ];
 
-        // 4. GPT 호출
+        // 4. Groq 호출 (OpenAI SDK와 동일한 방식)
         const response = await client.chat.completions.create({
-            model: "gpt-5.4",
+            model: GROQ_MODEL,
             messages: gptMessages,
             temperature: 0.7,
-            max_completion_tokens: 800,
+            max_tokens: 800, // Groq는 max_completion_tokens 대신 max_tokens 사용
         });
 
         const answer = response.choices[0]?.message?.content || "답변을 생성할 수 없습니다.";
