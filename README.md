@@ -15,4 +15,4 @@
 - **데이터 전처리 및 기능 구현:** 이미지 일괄 크롤링 및 배경 제거로 데이터 품질을 개선하고, 비회원 주문/배송조회 및 아이디/비밀번호 찾기 등 서비스 핵심 기능을 구현했습니다.
 
 ## 🔗 코드 확인하기
-[프로젝트 코드 바로가기] ("https://github.com/junhyoung624/iloom/tree/juyeon")
+[프로젝트 코드 바로가기] (https://github.com/kimjuy7678-beep/iloom/tree/juyeon)
